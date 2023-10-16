@@ -1,0 +1,60 @@
+```{r}
+library(tidyverse)
+library(janitor)
+```
+
+```{r}
+rosters <- read_csv("rosters_2023-24.csv")
+geocoded <- read_csv("hometowns_geocodio.csv") |> clean_names()
+```
+```{r}
+geocoded_rosters <- rosters |> left_join(geocoded, join_by(hometown)) |> select(-count, -accuracy_score, -accuracy_type)
+```
+
+```{r}
+needs_parsing <- geocoded_rosters |> filter(is.na(city)) |> distinct(hometown)
+```
+
+```{r}
+needs_parsing <- needs_parsing |> mutate(country = case_when(
+  str_detect(hometown,"Russia") ~ "Russia",
+  str_detect(hometown,"Italy") ~ "Italy",
+  str_detect(hometown,"Sweden") ~ "Sweden",
+  str_detect(hometown,"Ukraine") ~ "Ukraine",
+  str_detect(hometown,"Poland") ~ "Poland",
+  str_detect(hometown,"Czech") ~ "Czech Republic",
+  str_detect(hometown,"Slovakia") ~ "Slovakia",
+  str_detect(hometown,"Mexico") ~ "Mexico",
+  str_detect(hometown,"Brazil") ~ "Brazil",
+  str_detect(hometown,"Chile") ~ "Chile",
+  str_detect(hometown,"France") ~ "France",
+  str_detect(hometown,"Japan") ~ "Japan",
+  str_detect(hometown,"Ghana") ~ "Ghana",
+  str_detect(hometown,"Colombia") ~ "Colombia",
+  str_detect(hometown,"Netherlands") ~ "Netherlands",
+  str_detect(hometown,"Spain") ~ "Spain",
+  str_detect(hometown,"Serbia") ~ "Serbia",
+  str_detect(hometown,"Türkiye") ~ "Turkey",
+  str_detect(hometown,"Turkey") ~ "Turkey",
+  str_detect(hometown,"Slovenia") ~ "Slovenia",
+  str_detect(hometown,"Germany") ~ "Germany",
+  str_detect(hometown,"Australia") ~ "Australia",
+  str_detect(hometown,"Ontario") ~ "Canada",
+  str_detect(hometown,"Canada") ~ "Canada",
+  str_detect(hometown,"Argentina") ~ "Argentina",
+  str_detect(hometown,"Bolivia") ~ "Bolivia",
+  str_detect(hometown,"Korea") ~ "South Korea",
+  str_detect(hometown,"New Zealand") ~ "New Zealand",
+  str_detect(hometown,"Finland") ~ "Finland",
+  str_detect(hometown,"Israel") ~ "Israel",
+  str_detect(hometown,"China") ~ "China",
+  str_detect(hometown,"Switzerland") ~ "Switzerland",
+  str_detect(hometown,"Latvia") ~ "Latvia",
+  .default = NA
+))
+```
+
+```{r}
+needs_parsing |> mutate(hometown_copy = hometown) |> separate(hometown, into=c('city', 'state'), sep=",") |> mutate(city = trimws(city), state=trimws(state)) |> mutate(state = gsub('\\.','', state))
+```
+
