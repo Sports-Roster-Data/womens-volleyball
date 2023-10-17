@@ -20,27 +20,45 @@ needs_parsing <- needs_parsing |> mutate(country = case_when(
   str_detect(hometown,"Russia") ~ "Russia",
   str_detect(hometown,"Italy") ~ "Italy",
   str_detect(hometown,"Sweden") ~ "Sweden",
+  str_detect(hometown,"Sweeden") ~ "Sweden",
+  str_detect(hometown,"Stockholm") ~ "Sweden",
   str_detect(hometown,"Ukraine") ~ "Ukraine",
+  str_detect(hometown,"Belgium") ~ "Belgium",
+  str_detect(hometown,"Norway") ~ "Norway",
+  str_detect(hometown,"Estonia") ~ "Estonia",
   str_detect(hometown,"Poland") ~ "Poland",
   str_detect(hometown,"Czech") ~ "Czech Republic",
   str_detect(hometown,"Slovakia") ~ "Slovakia",
   str_detect(hometown,"Mexico") ~ "Mexico",
+  str_detect(hometown,"México") ~ "Mexico",
+  str_detect(hometown,"Costa Rica") ~ "Costa Rica",
+  str_detect(hometown,", DR") ~ "Dominican Republic",
   str_detect(hometown,"Brazil") ~ "Brazil",
+  str_detect(hometown,"Brazil") ~ "Venezuela",
+  str_detect(hometown,"Ecuador") ~ "Ecuador",
+  str_detect(hometown,"Panama") ~ "Panama",
   str_detect(hometown,"Chile") ~ "Chile",
   str_detect(hometown,"France") ~ "France",
   str_detect(hometown,"Japan") ~ "Japan",
   str_detect(hometown,"Ghana") ~ "Ghana",
+  str_detect(hometown,"Kenya") ~ "Kenya",
   str_detect(hometown,"Colombia") ~ "Colombia",
+  str_detect(hometown,"Medellin") ~ "Colombia",
   str_detect(hometown,"Netherlands") ~ "Netherlands",
   str_detect(hometown,"Spain") ~ "Spain",
   str_detect(hometown,"Serbia") ~ "Serbia",
   str_detect(hometown,"Türkiye") ~ "Turkey",
   str_detect(hometown,"Turkey") ~ "Turkey",
+  str_detect(hometown,"Istanbul") ~ "Turkey",
   str_detect(hometown,"Slovenia") ~ "Slovenia",
   str_detect(hometown,"Germany") ~ "Germany",
   str_detect(hometown,"Australia") ~ "Australia",
+  str_detect(hometown,"Proserpine") ~ "Australia",
   str_detect(hometown,"Ontario") ~ "Canada",
   str_detect(hometown,"Canada") ~ "Canada",
+  str_detect(hometown,"Saskatoon") ~ "Canada",
+  str_detect(hometown,"B.C.") ~ "Canada",
+  str_detect(hometown,", AB") ~ "Canada",
   str_detect(hometown,"Argentina") ~ "Argentina",
   str_detect(hometown,"Bolivia") ~ "Bolivia",
   str_detect(hometown,"Korea") ~ "South Korea",
@@ -50,11 +68,29 @@ needs_parsing <- needs_parsing |> mutate(country = case_when(
   str_detect(hometown,"China") ~ "China",
   str_detect(hometown,"Switzerland") ~ "Switzerland",
   str_detect(hometown,"Latvia") ~ "Latvia",
-  .default = NA
+  str_detect(hometown,"Greece") ~ "Greece",
+  str_detect(hometown,"Cyprus") ~ "Cyprus",
+  str_detect(hometown,"Egypt") ~ "Egypt",
+  str_detect(hometown,"Bulgaria") ~ "Bulgaria",
+  str_detect(hometown,"Portugal") ~ "Portugal",
+  str_detect(hometown,"Austria") ~ "Austria",
+  str_detect(hometown,"Hungary") ~ "Hungary",
+  str_detect(hometown,"Thailand") ~ "Thailand",
+  str_detect(hometown,"Singapore") ~ "Singapore",
+  str_detect(hometown,"Bosnia") ~ "Bosnia and Herzegovina",
+  .default = 'USA'
 ))
 ```
 
 ```{r}
-needs_parsing |> mutate(hometown_copy = hometown) |> separate(hometown, into=c('city', 'state'), sep=",") |> mutate(city = trimws(city), state=trimws(state)) |> mutate(state = gsub('\\.','', state))
+international <- needs_parsing |> filter(country != 'USA')
+domestic <- needs_parsing |> filter(country == 'USA')
+```
+
+
+
+
+```{r}
+domestic |> mutate(hometown_copy = hometown) |> separate(hometown, into=c('city', 'state'), sep=",") |> mutate(city = trimws(city), state=trimws(state)) |> mutate(state = gsub('\\.','', state))
 ```
 
