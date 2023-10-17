@@ -94,7 +94,7 @@ domestic <- needs_parsing |> filter(country == 'USA')
 
 ```{r}
 domestic |> 
-  left_join(us_cities, join_by(hometown))
+  left_join(us_cities, join_by(hometown, country)) |>
   
   #mutate(hometown_copy = hometown) |> separate(hometown_copy, into=c('city', 'state'), sep=",") |> mutate(city = trimws(city), state=trimws(state)) |> mutate(state = gsub('\\.','', state))
 ```
