@@ -15,6 +15,8 @@ geocoded_rosters <- rosters |> left_join(geocoded, join_by(hometown)) |> select(
 
 ```{r}
 needs_parsing <- geocoded_rosters |> filter(is.na(city)) |> distinct(hometown)
+parsed_rosters <- geocoded_rosters |> filter(!is.na(city))
+to_be_parsed <- geocoded_rosters |> filter(is.na(city)) |> select(-city, -state, -county, -country, -latitude, -longitude)
 ```
 
 ```{r}
@@ -93,9 +95,68 @@ domestic <- needs_parsing |> filter(country == 'USA')
 
 
 ```{r}
-domestic |> 
-  left_join(us_cities, join_by(hometown, country)) |>
+
+us_cities_state <- us_cities |> 
+  mutate(state = case_when(
+    str_detect(hometown, ", Minn") ~ 'MN',
+    str_detect(hometown, ", Ga.") ~ 'GA',
+    str_detect(hometown, ", Md.") ~ 'MD',
+    str_detect(hometown, ", Colo.") ~ 'CO',
+    str_detect(hometown, ", Ill.") ~ 'IL',
+    str_detect(hometown, ", Miss.") ~ 'MS',
+    str_detect(hometown, ", W.Va.") ~ 'WV',
+    str_detect(hometown, ", Penn.") ~ 'PA',
+    str_detect(hometown, ", Wis.") ~ 'WI',
+    str_detect(hometown, ", Ind.") ~ 'IN',
+    str_detect(hometown, ", Ohio") ~ 'OH',
+    str_detect(hometown, ", Pa.") ~ 'PA',
+    str_detect(hometown, ", N.Y.") ~ 'NY',
+    str_detect(hometown, ", Calif.") ~ 'CA',
+    str_detect(hometown, ", Puerto Rico") ~ 'PR',
+    str_detect(hometown, ", Tenn.") ~ 'TN',
+    str_detect(hometown, ", Okla.") ~ 'OK',
+    str_detect(hometown, ", N.C.") ~ 'NC',
+    str_detect(hometown, ", S.C.") ~ 'SC',
+    str_detect(hometown, ", Mo.") ~ 'MO',
+    str_detect(hometown, ", Fla.") ~ 'FL',
+    str_detect(hometown, ", W. Va.") ~ 'WV',
+    str_detect(hometown, ", Mich.") ~ 'MI',
+    str_detect(hometown, ", Texas") ~ 'TX',
+    str_detect(hometown, ", Ala.") ~ 'AL',
+    str_detect(hometown, ", N.J.") ~ 'NJ',
+    str_detect(hometown, ", Utah") ~ 'UT',
+    str_detect(hometown, ", La.") ~ 'LA',
+    str_detect(hometown, ", GA") ~ 'GA',
+    str_detect(hometown, ", NC") ~ 'NC',
+    str_detect(hometown, ", SC") ~ 'SC',
+    str_detect(hometown, ", CO") ~ 'CO',
+    str_detect(hometown, ", Va.") ~ 'VA',
+    str_detect(hometown, ", WI") ~ 'WI',
+    str_detect(hometown, ", PA") ~ 'PA',
+    str_detect(hometown, ", NY") ~ 'NY',
+    str_detect(hometown, ", NJ") ~ 'NJ',
+    str_detect(hometown, ", FL") ~ 'FL',
+    str_detect(hometown, ", Conn.") ~ 'CT',
+    str_detect(hometown, ", W.Va") ~ 'WV',
+    hometown == "Port Washington" ~ 'WI',
+    hometown == 'Puerto Rico' ~ 'PR',
+    hometown == 'Hartland' ~ 'WI',
+    hometown == 'Fontana' ~ 'CA',
+    .default = state
+  ))
+
+us_cities_state |> 
+  filter(is.na(state)) |> distinct(hometown)
+
+domestic_with_state <- domestic |> 
+ left_join(us_cities_state, join_by(hometown, country)) |> select(-accuracy_score, -accuracy_type, -number, -street, -unit_type, -unit_number) 
+
+parsed <- needs_parsing |> left_join(domestic_with_state, join_by(hometown, country))
   
-  #mutate(hometown_copy = hometown) |> separate(hometown_copy, into=c('city', 'state'), sep=",") |> mutate(city = trimws(city), state=trimws(state)) |> mutate(state = gsub('\\.','', state))
+parsed_with_state <- to_be_parsed |> left_join(parsed, join_by(hometown))
+
+finished_rosters <- bind_rows(parsed_rosters, parsed_with_state)
+
+write_csv(finished_rosters, "finished_rosters.csv")
 ```
 
