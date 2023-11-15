@@ -525,7 +525,7 @@
   {
     "team": "Central Florida",
     "twitter": "ucf_wbb",
-    "url": "https://ucfknights.com/sports/womens-volleyball",
+    "url": "https://ucfknights.com/sports/volleyball",
     "ncaa_id": 128,
     "stats_name": "Ucf"
   },
@@ -1736,13 +1736,6 @@
     "url": "https://gofrogs.com/sports/womens-volleyball",
     "ncaa_id": 698,
     "stats_name": "Tcu"
-  },
-  {
-    "team": "Boston",
-    "twitter": "terrierwbb",
-    "url": "https://goterriers.com/sports/womens-volleyball",
-    "ncaa_id": 68,
-    "stats_name": "Boston U."
   },
   {
     "team": "Towson",

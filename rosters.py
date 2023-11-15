@@ -7,11 +7,16 @@ import argparse
 import requests
 from requests_html import HTMLSession
 import tldextract
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 
-HEADERS = {'No.': 'jersey', 'Name': 'name', 'NAME': 'name', 'Cl.': 'academic_year', 'Pos.': 'position', 'Ht.': 'height', 'Hometown/High School': 'town', 'Hometown/Last School': 'town', 'Num': 'jersey', 'Yr': 'academic_year', 'Ht': 'height', 'Hometown': 'town', 'High School/Previous School': 'high_school', 'Pos': 'position', 'Hometown/Previous School': 'town', 'Exp.': 'academic_year', 'Number': 'jersey', 'Position': 'position', 'HT.': 'height', 'YEAR': 'academic_year', 'HOMETOWN': 'town', 'LAST SCHOOL': 'high_school', 'Yr.': 'academic_year', 'Hometown/High School/Last School': 'town', 'Class': 'academic_year', 'High school': 'high_school', 'Previous College': 'previous_school', 'Cl.-Exp.': 'academic_year', '#': 'jersey', 'High School': 'high_school', 'Hometown / Previous School': 'town', 'No': "jersey", 'Hometown/High School/Previous School': 'town', 'Hometown / High School / Last College': 'town', 'Year': 'academic_year', 'Height': 'height', 'Previous School': 'high_school', 'Cl': 'academic_year', 'Prev. Coll.': 'previous_school', 'Hgt.': 'height', 'Hometown/ High School': 'town', 'Hometown/High School (Last School)': 'town', 'Hometown/High School (Former School)': 'town', 'Hometown / High School': 'town', 'YR': 'academic_year', 'POS': 'position', 'HT': 'height', 'Player': 'name', 'Hometown/High School/Previous College': 'town', 'Last School/Hometown': 'town', 'NO.': 'jersey', 'NAME': 'name', 'YR.': 'academic_year', 'POS.': 'position', 'HIGH SCHOOL': 'high_school', 'NO': 'jersey', 'HOMETOWN/HIGH SCHOOL': 'town', 'Academic Yr.': 'academic_year', 'Full Name': 'name', 'POSITION': 'position', 'Hometown / Previous School / High School': 'town', 'High School / Previous School': 'high_school'}
+driver = webdriver.Firefox()
 
-SEASONS = ['2022-23', '2021-22', '2020-21', '2019-20', '2018-19', '2017-18', '2016-17', '2015-16', '2014-15', '2013-14',
+HEADERS = {'No.': 'jersey', 'Name': 'name', 'NAME': 'name', 'Cl.': 'academic_year', 'Pos.': 'position', 'Ht.': 'height', 'Hometown/High School': 'town', 'Hometown/Last School': 'town', 'Num': 'jersey', 'Yr': 'academic_year', 'Ht': 'height', 'Hometown': 'town', 'High School/Previous School': 'high_school', 'Pos': 'position', 'Hometown/Previous School': 'town', 'Exp.': 'academic_year', 'Number': 'jersey', 'Position': 'position', 'HT.': 'height', 'YEAR': 'academic_year', 'HOMETOWN': 'town', 'LAST SCHOOL': 'high_school', 'Yr.': 'academic_year', 'Hometown/High School/Last School': 'town', 'Class': 'academic_year', 'High school': 'high_school', 'Previous College': 'previous_school', 'Cl.-Exp.': 'academic_year', '#': 'jersey', 'High School': 'high_school', 'Hometown / Previous School': 'town', 'No': "jersey", 'Hometown/High School/Previous School': 'town', 'Hometown / High School / Last College': 'town', 'Year': 'academic_year', 'Height': 'height', 'Previous School': 'high_school', 'Cl': 'academic_year', 'Prev. Coll.': 'previous_school', 'Hgt.': 'height', 'Hometown/ High School': 'town', 'Hometown/High School (Last School)': 'town', 'Hometown/High School (Former School)': 'town', 'Hometown / High School': 'town', 'YR': 'academic_year', 'POS': 'position', 'HT': 'height', 'Player': 'name', 'Hometown/High School/Previous College': 'town', 'Last School/Hometown': 'town', 'NO.': 'jersey', 'NAME': 'name', 'YR.': 'academic_year', 'POS.': 'position', 'HIGH SCHOOL': 'high_school', 'NO': 'jersey', 'HOMETOWN/HIGH SCHOOL': 'town', 'Academic Yr.': 'academic_year', 'Full Name': 'name', 'POSITION': 'position', 'Hometown / Previous School / High School': 'town', 'High School / Previous School': 'high_school', 'Hometown/High School (Previous School)': 'town', 'Hometown/Previous School/Club Team': 'town'}
+
+SEASONS = ['2023-24', '2022-23', '2021-22', '2020-21', '2019-20', '2018-19', '2017-18', '2016-17', '2015-16', '2014-15', '2013-14',
 '2012-13', '2011-12', '2010-11', '2009-10', '2008-09', '2007-08', '2006-07', '2005-06', '2004-05', '2003-04',
 '2002-03', '2001-02', '2000-01', '1999-00', '1998-99', '1997-98', '1996-97', '1995-96', '1994-95', '1993-94', '1992-93', '1991-92', '1990-91']
 
@@ -36,7 +41,7 @@ def fetch_roster(base_url, season):
 #        return None
     return BeautifulSoup(r.text, features="html.parser")
 
-def fetch_vball_roster(base_url, season):
+def fetch_wbkb_roster(base_url, season):
     url = base_url.replace('index',season+'/roster?view=list')
     headers = {
         "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
@@ -48,10 +53,10 @@ def fetch_vball_roster(base_url, season):
         html = BeautifulSoup(r.text, features="html.parser")
     return html
 
-def fetch_volley_roster(base_url, season):
+def fetch_baskbl_roster(base_url, season):
     if 'index' in base_url:
         url = base_url.replace('index','roster/?season='+season)
-    elif base_url.endswith('w-volley'):
+    elif base_url.endswith('w-baskbl'):
         url = base_url+"/"+season+"/roster"
     else:
         url = base_url + 'roster/?season='+season
@@ -64,7 +69,7 @@ def fetch_volley_roster(base_url, season):
         r = requests.get(url, headers=headers)
     return BeautifulSoup(r.text, features="html.parser")
 
-def parse_roster_volley(team, html, season):
+def parse_roster_baskbl(team, html, season):
     roster = []
     er = tldextract.extract(team['url'])
     cols = [x.text.strip() for x in html.find('thead').find_all('th') if x.text.strip() if x.text.strip() != '']
@@ -101,7 +106,7 @@ def parse_roster_volley(team, html, season):
         })
     return roster
 
-def parse_roster_vball(team, html, season):
+def parse_roster_wbkb(team, html, season):
     roster = []
     er = tldextract.extract(team['url'])
     if team['ncaa_id'] == 30164:
@@ -113,6 +118,8 @@ def parse_roster_vball(team, html, season):
     cols = [x.text.strip() for x in headers if x.text.strip() != '']
     if 'Pronounciation' in cols:
         cols.remove('Pronounciation')
+    if 'Club Team' in cols:
+        cols.remove('Club Team')
     if 'Major' in cols:
         cols.remove('Major')
     if 'MAJOR' in cols:
@@ -139,6 +146,11 @@ def parse_roster_vball(team, html, season):
             continue
         if team['ncaa_id'] == 114 or team['ncaa_id'] == 1050 or team['ncaa_id'] == 1059 or team['ncaa_id'] == 1199 or team['ncaa_id'] == 22626 or team['ncaa_id'] == 24317 or team['ncaa_id'] == 30037 or team['ncaa_id'] == 341 or team['ncaa_id'] == 1315 or team['ncaa_id'] == 46 or team['ncaa_id'] == 641 or team['ncaa_id'] == 730 or team['ncaa_id'] == 75 or team['ncaa_id'] == 806 or team['ncaa_id'] == 817 or team['ncaa_id'] == 89 or team['ncaa_id'] == 145 or team['ncaa_id'] == 217 or team['ncaa_id'] == 247 or team['ncaa_id'] == 2713 or team['ncaa_id'] == 2798 or team['ncaa_id'] == 28594 or team['ncaa_id'] == 30002 or team['ncaa_id'] == 30225 or team['ncaa_id'] == 467 or team['ncaa_id'] == 567 or team['ncaa_id'] == 569 or team['ncaa_id'] == 137 or team['ncaa_id'] == 715 or team['ncaa_id'] == 779 or team['ncaa_id'] == 808 or team['ncaa_id'] == 8688 or team['ncaa_id'] == 379 or team['ncaa_id'] == 1461:
             raw_player_list = [x.text.strip() for x in raw_player.find_all('td')]
+        if len(raw_player_list) == 4:
+            raw_player_list = [None] + raw_player_list
+        elif len(raw_player_list) < 4:
+            print(f"skipping {raw_player_list}")
+            continue
         raw_player_list[4] = " ".join([x for x in raw_player_list[4].split()])
         if team['ncaa_id'] == 1036:
             if len(raw_player_list) == len(new_cols):
@@ -212,6 +224,44 @@ def fetch_and_parse_clemson(team, season):
         })
     return roster
 
+def fetch_and_parse_vandy(team, season):
+    name = team['team']
+    ncaa_id = team['ncaa_id']
+
+    # JavaScript to be executed by shot-scraper
+    javascript_code = """
+    Array.from(document.querySelectorAll('#players-table tbody tr'), el => {
+     const id = '';
+     const name = el.querySelectorAll('td')[1].innerText;
+     const year = el.querySelectorAll('td')[3].innerText;
+     const height = el.querySelectorAll('td')[4].innerText;
+     const position = el.querySelectorAll('td')[2].innerText;
+     const hometown = el.querySelectorAll('td')[5].innerText;
+     hs_el = el.querySelectorAll('td')[6];
+     const high_school = hs_el ? hs_el.innerText : '';
+     const previous_school = '';
+     const jersey = el.querySelectorAll('td')[0].innerText;
+     const url = el.querySelectorAll('td')[1].querySelector('a')['href']
+     return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    roster = []
+    url = team['url'] + "/roster/season/" + season
+    # Execute shot-scraper with the given JavaScript
+    try:
+        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
+        parsed_data = json.loads(result)
+
+        for player in parsed_data:
+            player['team_id'] = ncaa_id
+            player['team'] = name
+            player['season'] = season
+
+        return parsed_data
+    except:
+        raise
+
 def fetch_and_parse_miami(team, season):
     name = team['team']
     ncaa_id = team['ncaa_id']
@@ -257,17 +307,16 @@ def fetch_and_parse_byu(team, season):
 
     # JavaScript to be executed by shot-scraper
     javascript_code = """
-    Array.from(document.querySelectorAll('.roster__players .roster-card-item'), el => {
+    Array.from(document.querySelectorAll('div.roster-players__group table tbody tr'), el => {
      const id = '';
      const name = el.querySelector('a').innerText;
-     const year = el.querySelectorAll('.roster-card-item__profile-field')[1].innerText;
-     const height = el.querySelectorAll('.roster-card-item__profile-field')[0].innerText;
-     const position = el.querySelector('.roster-card-item__position').innerText;
-     const hometown = el.querySelector(".roster-player-card-profile-field__value--hometown").innerText;
-     hs_el = el.querySelector(".roster-player-card-profile-field__value--previous-school");
-     const high_school = hs_el ? hs_el.innerText : '';
+     const year = el.querySelectorAll('td')[4].innerText;
+     const height = el.querySelectorAll('td')[3].innerText;
+     const position = el.querySelectorAll('td')[2].innerText;
+     const hometown = el.querySelectorAll('td')[5].innerText;
+     const high_school = el.querySelectorAll('td')[6].innerText;
      const previous_school = '';
-     const jersey = el.querySelector(".roster-card-item__jersey-number").innerText;
+     const jersey = el.querySelectorAll('td')[0].innerText;
      const url =el.querySelector("a")['href'];
      return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
@@ -432,14 +481,14 @@ def fetch_and_parse_wyoming(team, season):
             'team_id': team['ncaa_id'],
             'team': team['team'],
             'id': None,
-            'name': player.find('a', first=True).text,
+            'name': player.find('a', first=True).attrs['title'],
             'year': player.find('span.sidearm-roster-list-item-year', first=True).text,
-            'hometown': player.find('div.sidearm-roster-list-item-hometown', first=True).text,
+            'hometown': player.find('span.sidearm-roster-list-item-hometown', first=True).text,
             'high_school': player.find('span.sidearm-roster-list-item-highschool', first=True).text if player.find('span.sidearm-roster-list-item-highschool', first=True) else None,
             'previous_school': None,
             'height': player.find('span.sidearm-roster-list-item-height', first=True).text,
             'position': player.find('span.sidearm-roster-list-item-position', first=True).text,
-            'jersey': player.find('span')[0].text,
+            'jersey': player.find('div.sidearm-roster-list-item-number', first=True).text,
             'url': "https://www."+er.domain+"."+er.suffix+player.find('a', first=True).attrs['href'],
             'season': season
         })
@@ -649,6 +698,44 @@ def fetch_and_parse_kansas_state(team, season):
     except:
         raise
 
+def fetch_and_parse_valpo(team, season):
+    ncaa_id = team['ncaa_id']
+    name = team['team']
+
+    # JavaScript to be executed by shot-scraper
+    javascript_code = """
+    Array.from(document.querySelector('table').querySelectorAll('tr:not(:first-child)'), el => {
+        const id = '';
+        const name = el.querySelectorAll('td')[1].innerText;
+        const year = el.querySelectorAll('td')[4].innerText;
+        const height = el.querySelectorAll('td')[3].innerText;
+        const position = el.querySelectorAll('td')[2].innerText;
+        const hometown = el.querySelectorAll('td')[5].innerText;
+        const high_school = el.querySelectorAll('td')[6].innerText;
+        const previous_school = "";
+        const jersey = el.querySelectorAll('td')[0].innerText;
+        const url = el.querySelectorAll('td')[1].querySelector('a')['href'];
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    roster = []
+    url = team['url'] + "/roster/" + season + "/?view=list"
+    # Execute shot-scraper with the given JavaScript
+    try:
+        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
+        parsed_data = json.loads(result)
+
+        for player in parsed_data:
+            player['team_id'] = ncaa_id
+            player['team'] = name
+            player['season'] = season
+
+        return parsed_data
+    except:
+        raise
+
+
 def fetch_and_parse_illinois(team, season):
     ncaa_id = team['ncaa_id']
     name = team['team']
@@ -732,20 +819,20 @@ def shotscraper_list_item(team, season):
 
     # JavaScript to be executed by shot-scraper
     javascript_code = """
-    Array.from(document.querySelectorAll('.sidearm-roster-list-item'), el => {
-     const id = '';
-     const name = el.querySelector('.sidearm-roster-player-name').innerText;
-     const year = el.querySelector('.sidearm-roster-list-item-year').innerText;
-     const height = el.querySelector('.sidearm-roster-list-item-height').innerText;
-     const position = el.querySelector('.sidearm-roster-list-item-position').innerText;
-     const hometown = el.querySelector('.sidearm-roster-list-item-hometown').innerText;
-     const high_school = el.querySelector('.sidearm-roster-list-item-highschool').innerText;
-     let prev_school = el.querySelector('.sidearm-roster-list-item-previous-school');
-     const previous_school = prev_school ? prev_school.innerText : '';
-     const jersey = el.querySelector('.sidearm-roster-list-item-photo-number').innerText;
-     const url = el.querySelector('.sidearm-roster-player-name a')['href'];
-     return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
-    })
+        Array.from(document.querySelectorAll('.sidearm-roster-list-item'), el => {
+         const id = '';
+         const name = el.querySelector('.sidearm-roster-player-name').innerText;
+         const year = el.querySelector('.sidearm-roster-list-item-year').innerText;
+         const height = el.querySelector('.sidearm-roster-list-item-height').innerText;
+         const position = el.querySelector('.sidearm-roster-list-item-position').innerText;
+         const hometown = el.querySelector('.sidearm-roster-list-item-hometown').innerText;
+         const high_school = el.querySelector('.sidearm-roster-list-item-highschool').innerText;
+         let prev_school = el.querySelector('.sidearm-roster-list-item-previous-school');
+         const previous_school = prev_school ? prev_school.innerText : '';
+         const jersey = el.querySelector('.sidearm-roster-list-item-photo-number').innerText;
+         const url = el.querySelector('.sidearm-roster-player-name a')['href'];
+         return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+        })
     """
 
     roster = []
@@ -779,8 +866,7 @@ def shotscraper_data_tables(team, season):
      const hometown = el.querySelector(".hometownhighschool").innerText.split('/')[0].trim();
      let hs = el.querySelector(".hometownhighschool").innerText.split('/');
      const high_school = hs[1] ? hs[1].trim() : '';
-     let ps = el.querySelector(".player_previous_school");
-     const previous_school = ps ? ps.innerText : '';
+     const previous_school = el.querySelector(".player_previous_school").innerText;
      const jersey = el.querySelector(".roster_jerseynum").innerText;
      const url = el.querySelector(".sidearm-table-player-name a")['href'];
      return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
@@ -789,6 +875,45 @@ def shotscraper_data_tables(team, season):
 
     roster = []
     url = team['url'] + "/roster/" + season
+    # Execute shot-scraper with the given JavaScript
+    try:
+        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
+        parsed_data = json.loads(result)
+
+        for player in parsed_data:
+            player['team_id'] = ncaa_id
+            player['team'] = name
+            player['season'] = season
+
+        return parsed_data
+    except:
+        raise
+
+def shotscraper_arkansas(team, season):
+    name = team['team']
+    ncaa_id = team['ncaa_id']
+
+    # JavaScript to be executed by shot-scraper
+    javascript_code = """
+    Array.from(document.querySelectorAll('table[data-init="datatable_roster"] tbody tr'), el => {
+     const cols = el.querySelectorAll('td');
+     const id = '';
+     const jersey = cols[0].textContent.trim();
+     const nameLink = cols[1].querySelector('a');
+     const name = nameLink.textContent.trim();
+     const url = nameLink.href;
+     const position = cols[2].textContent.trim();
+     const year = cols[3].textContent.trim();
+     const height = cols[4].textContent.trim();
+     const hometown = cols[5].textContent.trim();
+     const high_school = cols[6].textContent.trim();
+     const previous_school = '';
+     return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    roster = []
+    url = team['url'] + "/roster/?season=" + season
     # Execute shot-scraper with the given JavaScript
     try:
         result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
@@ -820,6 +945,43 @@ def fetch_and_parse_tennessee(team, season):
      const high_school = el.children[6].innerText.split('/')[0];
      let prev_school = el.children[6].innerText.split('/');
      const previous_school = prev_school[1] ? prev_school[1].innerText : '';
+     const jersey = el.children[0].innerText;
+     const url = el.children[1].querySelector('a')['href']
+     return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    roster = []
+    url = team['url'] + "/roster/" + season
+    # Execute shot-scraper with the given JavaScript
+    try:
+        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
+        parsed_data = json.loads(result)
+
+        for player in parsed_data:
+            player['team_id'] = ncaa_id
+            player['team'] = name
+            player['season'] = season
+
+        return parsed_data
+    except:
+        raise
+
+def fetch_and_parse_bradley(team, season):
+    name = team['team']
+    ncaa_id = team['ncaa_id']
+
+    # JavaScript to be executed by shot-scraper
+    javascript_code = """
+    Array.from(document.querySelectorAll('.sidearm-roster-table tbody tr'), el => {
+     const id = '';
+     const name = el.children[1].innerText;
+     const year = el.children[4].innerText;
+     const height = el.children[3].innerText;
+     const position = el.children[2].innerText;
+     const hometown = el.children[5].innerText.split('/')[0].trim();
+     const high_school = el.children[5].innerText.split('/')[1].trim();
+     const previous_school = '';
      const jersey = el.children[0].innerText;
      const url = el.children[1].querySelector('a')['href']
      return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
@@ -915,15 +1077,14 @@ def parse_roster(team, html, season):
         })
     return roster
 
-def get_all_rosters(season, team = None):
+def get_all_rosters(season, teams = []):
     unparsed = []
     skipped = []
-    teams_json = json.loads(open('teams.json').read())
-    if team:
-        idx = [i for i,_ in enumerate(teams_json) if _['ncaa_id'] == team][0]
-        teams_json = teams_json[idx:-1]
+    teams_json = json.loads(open('/Users/dpwillis/code/womens-volleyball/teams.json').read())
+    if len(teams) > 0:
+        teams_json = [t for t in teams_json if t['ncaa_id'] in teams]
     teams_with_urls = [x for x in teams_json if "url" in x]
-    with open(f"rosters_{season}.csv", 'w') as output_file:
+    with open(f"/Users/dpwillis/code/womens-volleyball/rosters_{season}.csv", 'w') as output_file:
         csv_file = csv.writer(output_file)
         csv_file.writerow(['ncaa_id', 'team', 'player_id', 'name', 'year', 'hometown', 'high_school', 'previous_school', 'height', 'position', 'jersey', 'url', 'season'])
         for team in teams_with_urls:
@@ -933,22 +1094,22 @@ def get_all_rosters(season, team = None):
                 if 'roster' in team:
                     continue
                 print(team['team'])
-                if team['ncaa_id'] in [308, 388, 497, 528, 554]:
+                if team['ncaa_id'] in [5, 308, 497, 554]:
                     roster = shotscraper_table(team, season)
-                elif team['ncaa_id'] in [5]:
-                    roster = shotscraper_table(team, season.split('-')[0])
-                elif team['ncaa_id'] in [721]:
-                    roster = shotscraper_card(team, season.split('-')[0])
-                elif team['ncaa_id'] in [9, 71, 83, 96, 99, 156, 173, 180, 191, 234, 249, 257, 301, 306, 367, 387, 392, 400, 404, 418, 428, 441, 490, 521, 522, 559, 574, 603, 635, 664, 671, 688, 690, 749]:
+                elif team['ncaa_id'] in [9, 71, 83, 96, 99, 156, 173, 180, 191, 234, 249, 257, 301, 306, 367, 387, 392, 400, 404, 418, 428, 441, 490, 521, 522, 559, 574, 603, 635, 664, 671, 676, 688, 690, 700, 719, 749, 758]:
                     roster = shotscraper_card(team, season)
-                elif team['ncaa_id'] in [51, 248]:
+                elif team['ncaa_id'] == 128:
+                    roster = shotscraper_ucf(team, season)
+                elif team['ncaa_id'] in [51, 248, 731]:
                     roster = shotscraper_list_item(team, season)
-                elif team['ncaa_id'] in [47, 175, 316, 430]:
+                elif team['ncaa_id'] in [175, 316, 430]:
                     roster = shotscraper_roster_player(team, season)
-                elif team['ncaa_id'] in [67]:
-                    roster = shotscraper_data_tables(team, season.split('-')[0])
                 elif team['ncaa_id'] in [556]:
                     roster = shotscraper_data_tables(team, season)
+                elif team['ncaa_id'] in [31]:
+                    roster = shotscraper_arkansas(team, season)
+                elif team['ncaa_id'] in [706]:
+                    roster = shotscraper_table_plain(team, season)
                 elif team['ncaa_id'] == 77:
                     if str(season[0:1]):
                         season = f"{str(season)[0:5]}20{str(season[5:7])}"
@@ -965,32 +1126,52 @@ def get_all_rosters(season, team = None):
                     roster = fetch_and_parse_iowa_state(team, season)
                 elif team['ncaa_id'] == 312:
                     roster = fetch_and_parse_iowa(team, season)
+                elif team['ncaa_id'] in [326, 449, 569, 762, 8981, 30225]:
+                    roster = shotscraper_table_wbkb(team, season)
                 elif team['ncaa_id'] == 327:
                     roster = fetch_and_parse_kansas_state(team, season)
                 elif team['ncaa_id'] == 334:
                     roster = fetch_and_parse_kentucky(team, season)
+                elif team['ncaa_id'] == 388:
+                    roster = shotscraper_marshall(team, season)
                 elif team['ncaa_id'] == 463:
                     roster = fetch_and_parse_nebraska(team, season)
                 elif team['ncaa_id'] == 513:
                     roster = fetch_and_parse_notre_dame(team, season)
+                elif team['ncaa_id'] == 528:
+                    roster = shotscraper_oregon_state(team, season)
+                elif team['ncaa_id'] == 532:
+                    roster = shotscraper_wbkb_elms(team, season)
+                elif team['ncaa_id'] == 623:
+                    roster = shotscraper_wbkb_salve(team, season)
                 elif team['ncaa_id'] == 648:
                     roster = fetch_and_parse_south_carolina(team, season)
-                elif team['ncaa_id'] == 694 or team['ncaa_id'] == 72:
+                elif team['ncaa_id'] == 694:
                     roster = fetch_and_parse_tennessee(team, season)
+                elif team['ncaa_id'] == 72:
+                    roster = fetch_and_parse_bradley(team, season)
+                elif team['ncaa_id'] in [721, 80]:
+                    roster = shotscraper_airforce(team, season)
+                elif team['ncaa_id'] == 735:
+                    roster = fetch_and_parse_valpo(team, season)
+                elif team['ncaa_id'] == 736:
+                    roster = fetch_and_parse_vandy(team, season)
                 elif team['ncaa_id'] == 742:
                     roster = fetch_and_parse_virginia_tech(team, season)
+                elif team['ncaa_id'] == 809:
+                    roster = shotscraper_table_worc(team, season)
                 elif team['ncaa_id'] == 811:
                     roster = fetch_and_parse_wyoming(team, season)
                 elif team['ncaa_id'] == 532:
                     continue
-                elif 'vball' in team['url']:
-                    html = fetch_vball_roster(team['url'], season)
+                elif 'wvball' in team['url']:
+                    html = fetch_wbkb_roster(team['url'], season)
                     roster = None
                     if html:
-                        roster = parse_roster_vball(team, html, season)
-                elif 'w-volley' in team['url']:
-                    html = fetch_volley_roster(team['url'], season)
-                    roster = parse_roster_volley(team, html, season)
+                        roster = parse_roster_wbkb(team, html, season)
+                elif 'w-baskbl' in team['url']:
+                    html = fetch_baskbl_roster(team['url'], season)
+                    roster = parse_roster_baskbl(team, html, season)
                 else:
                     html = fetch_roster(team['url'], season)
                     roster = parse_roster(team, html, season)
@@ -1006,26 +1187,63 @@ def get_all_rosters(season, team = None):
                 continue
     return [unparsed, skipped]
 
-def get_all_rosters_volley(season):
-    teams_json = json.loads(open('teams.json').read())
+def get_all_rosters_baskbl(season):
+    teams_json = json.loads(open('/Users/dpwillis/code/womens-volleyball/teams.json').read())
     teams_with_urls = [x for x in teams_json if "url" in x]
-    teams_with_volley = [x for x in teams_with_urls if 'w-volley' in x['url']]
-    with open(f"rosters_{season}_volley.csv", 'w') as output_file:
+    teams_with_baskbl = [x for x in teams_with_urls if 'w-baskbl' in x['url']]
+    with open(f"/Users/dpwillis/code/wbb/ncaa/rosters_{season}_baskbl.csv", 'w') as output_file:
         csv_file = csv.writer(output_file)
         csv_file.writerow(['ncaa_id', 'team', 'player_id', 'name', 'year', 'hometown', 'high_school', 'previous_school', 'height', 'position', 'jersey', 'url', 'season'])
-        for team in teams_with_volley:
+        for team in teams_with_baskbl:
             print(team['team'])
-            html = fetch_volley_roster(team['url'], season)
-            roster = parse_roster_volley(team, html, season)
+            html = fetch_baskbl_roster(team['url'], season)
+            roster = parse_roster_baskbl(team, html, season)
             if roster:
                 for player in roster:
                     csv_file.writerow(list(player.values()))
 
 def write_one_team(roster, season):
-    with open(f"rosters_{season}.csv", 'a') as output_file:
+    with open(f"/Users/dpwillis/code/womens-volleyball/rosters_{season}_adds.csv", 'a') as output_file:
         csv_file = csv.writer(output_file)
         for player in roster:
             csv_file.writerow([player['team_id'], player['team'], player['id'], player['name'], player['year'], player['hometown'], player['high_school'], player['previous_school'], player['height'], player['position'], player['jersey'], player['url'], season])
+
+def shotscraper_airforce(team, season):
+    ncaa_id = team['ncaa_id']
+    name = team['team']
+
+    # JavaScript to be executed by shot-scraper
+    javascript_code = """
+    Array.from(document.querySelectorAll('.s-person-card'), el => {
+        const id = '';
+        const name = el.querySelector('.s-person-details__personal-single-line').innerText;
+        const year = el.querySelectorAll('.s-person-details__bio-stats span')[2].innerText.split('\n')[1].trim();
+        const height = el.querySelectorAll('.s-person-details__bio-stats span')[4].innerText.split('\n')[1].trim();
+        const position = el.querySelectorAll('.s-person-details__bio-stats span')[0].innerText.split('\n')[1].trim();
+        const hometown = el.querySelectorAll('span.s-person-card__content__person__location-item')[0].innerText.replace("Hometown\n","");
+        const high_school = el.querySelectorAll('span.s-person-card__content__person__location-item')[1].innerText.split('\n')[1];
+        const previous_school = '';
+        const jersey = el.querySelector('span.s-stamp__text').innerText;
+        const url = el.querySelector('a')['href'];
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    roster = []
+    url = team['url'] + "/roster/" + season
+    # Execute shot-scraper with the given JavaScript
+    try:
+        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
+        parsed_data = json.loads(result)
+
+        for player in parsed_data:
+            player['team_id'] = ncaa_id
+            player['team'] = name
+            player['season'] = season
+
+        return parsed_data
+    except:
+        raise
 
 def shotscraper_card(team, season):
     ncaa_id = team['ncaa_id']
@@ -1046,7 +1264,124 @@ def shotscraper_card(team, season):
         const previous_school = '';
         let j = el.querySelector('.s-stamp__text');
         const jersey = j ? j.innerText : '';
-        const url = el.querySelector('a')['href'];
+        const url = el.querySelector('a')['href']
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    roster = []
+    url = team['url'] + "/roster/" + season
+    # Execute shot-scraper with the given JavaScript
+    try:
+        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
+        parsed_data = json.loads(result)
+
+        for player in parsed_data:
+            player['team_id'] = ncaa_id
+            player['team'] = name
+            player['season'] = season
+
+        return parsed_data
+    except:
+        raise
+
+def shotscraper_card_image(team, season):
+    ncaa_id = team['ncaa_id']
+    name = team['team']
+
+    # JavaScript to be executed by shot-scraper
+    javascript_code = """
+    Array.from(document.querySelectorAll('.s-person-card__content'), el => {
+        const id = '';
+        const name = el.querySelector('.s-person-card__header__person-details-personal').innerText;
+        const year = el.querySelectorAll('.s-person-details__bio-stats-item')[1].innerText;
+        let ht = el.querySelectorAll('.s-person-details__bio-stats-item')[2];
+        const height = ht ? ht.innerText : '';
+        const position = el.querySelectorAll('.s-person-details__bio-stats-item')[0].innerText;
+        const hometown = el.querySelectorAll('.s-person-card__content__person__location-item')[0].innerText;
+        let hs_el = el.querySelectorAll('.s-person-card__content__person__location-item')[1];
+        const high_school = hs_el ? hs_el.innerText : '';
+        const previous_school = '';
+        let j = el.querySelector('.s-stamp__text');
+        const jersey = j ? j.innerText : '';
+        const url = el.querySelector('a')['href']
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    roster = []
+    url = team['url'] + "/roster/" + season
+    # Execute shot-scraper with the given JavaScript
+    try:
+        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
+        parsed_data = json.loads(result)
+
+        for player in parsed_data:
+            player['team_id'] = ncaa_id
+            player['team'] = name
+            player['season'] = season
+
+        return parsed_data
+    except:
+        raise
+
+def shotscraper_marshall(team, season):
+
+    ncaa_id = team['ncaa_id']
+    name = team['team']
+
+    # JavaScript to be executed by shot-scraper
+    javascript_code = """
+    Array.from(document.querySelectorAll('.s-table-body__row'), el => {
+        const id = '';
+        const name = el.querySelectorAll('td')[1].innerText;
+        const year = el.querySelectorAll('td')[4].innerText;
+        const height = el.querySelectorAll('td')[2].innerText;
+        const position = el.querySelectorAll('td')[3].innerText;
+        const hometown = el.querySelectorAll('td')[5].innerText.split(' / ')[0];
+        const high_school = el.querySelectorAll('td')[5].innerText.split(' / ')[1];
+        const previous_school = '';
+        const jersey = el.querySelectorAll('td')[0].innerText;
+        const url = el.querySelectorAll('td')[1].querySelector('a')['href']
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    roster = []
+    url = team['url'] + "/roster/" + season
+    # Execute shot-scraper with the given JavaScript
+    try:
+        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
+        parsed_data = json.loads(result)
+
+        for player in parsed_data:
+            player['team_id'] = ncaa_id
+            player['team'] = name
+            player['season'] = season
+
+        return parsed_data
+    except:
+        raise
+
+def shotscraper_oregon_state(team, season):
+    # oregon state
+
+    ncaa_id = team['ncaa_id']
+    name = team['team']
+
+    # JavaScript to be executed by shot-scraper
+    javascript_code = """
+    Array.from(document.querySelectorAll('.s-table-body__row'), el => {
+        const id = '';
+        const name = el.querySelectorAll('td')[1].innerText;
+        const year = el.querySelectorAll('td')[4].innerText;
+        const height = el.querySelectorAll('td')[3].innerText;
+        const position = el.querySelectorAll('td')[2].innerText;
+        const hometown = el.querySelectorAll('td')[5].innerText;
+        const high_school = '';
+        const previous_school = '';
+        const jersey = el.querySelectorAll('td')[0].innerText;
+        const url = el.querySelectorAll('td')[1].querySelector('a')['href']
         return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
@@ -1093,6 +1428,244 @@ def shotscraper_table(team, season):
 
     roster = []
     url = team['url'] + "/roster/" + season
+    # Execute shot-scraper with the given JavaScript
+    try:
+        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
+        parsed_data = json.loads(result)
+
+        for player in parsed_data:
+            player['team_id'] = ncaa_id
+            player['team'] = name
+            player['season'] = season
+
+        return parsed_data
+    except:
+        raise
+
+def shotscraper_ucf(team, season):
+    # akron
+
+    ncaa_id = team['ncaa_id']
+    name = team['team']
+
+    # JavaScript to be executed by shot-scraper
+    javascript_code = """
+    Array.from(document.querySelector('div.table tbody').querySelectorAll('tr'), el => {
+        const id = '';
+        const name = el.querySelectorAll('td')[1].innerText;
+        const year = el.querySelectorAll('td')[4].innerText;
+        const height = el.querySelectorAll('td')[3].innerText;
+        const position = el.querySelectorAll('td')[2].innerText;
+        const hometown = el.querySelectorAll('td')[5].innerText;
+        hs_el = el.querySelectorAll('td')[6];
+        const high_school = hs_el ? hs_el.innerText : '';
+        ps_el = el.querySelectorAll('td')[7];
+        const previous_school = ps_el ? ps_el.innerText : '';
+        const jersey = el.querySelectorAll('td')[0].innerText;
+        const url = el.querySelectorAll('td')[1].querySelector('a')['href']
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    roster = []
+    url = team['url'] + "/roster/" + season
+    # Execute shot-scraper with the given JavaScript
+    try:
+        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
+        parsed_data = json.loads(result)
+
+        for player in parsed_data:
+            player['team_id'] = ncaa_id
+            player['team'] = name
+            player['season'] = season
+
+        return parsed_data
+    except:
+        raise
+
+def shotscraper_wbkb_salve(team, season):
+    # Salve Regina
+
+    ncaa_id = team['ncaa_id']
+    name = team['team']
+
+    # JavaScript to be executed by shot-scraper
+    javascript_code = """
+    Array.from(document.querySelectorAll('.roster-data table tbody tr'), el => {
+        const id = '';
+        const name = el.querySelector('a').innerText.trim();
+        const year = el.querySelectorAll('td')[4].innerText;
+        const height = el.querySelectorAll('td')[3].innerText;
+        const position = el.querySelectorAll('td')[2].innerText;
+        const hometown = el.querySelectorAll('td')[5].innerText.split(' / ')[0];
+        const high_school = el.querySelectorAll('td')[5].innerText.split(' / ')[1];
+        const previous_school = '';
+        const jersey = el.querySelectorAll('td')[1].innerText;
+        const url = el.querySelector('a')['href'];
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    roster = []
+    url = team['url'].replace("index", season) + "/roster"
+    # Execute shot-scraper with the given JavaScript
+    try:
+        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
+        parsed_data = json.loads(result)
+
+        for player in parsed_data:
+            player['team_id'] = ncaa_id
+            player['team'] = name
+            player['season'] = season
+
+        return parsed_data
+    except:
+        raise
+
+def shotscraper_wbkb_elms(team, season):
+    # Elms
+
+    ncaa_id = team['ncaa_id']
+    name = team['team']
+
+    # JavaScript to be executed by shot-scraper
+    javascript_code = """
+    Array.from(document.querySelectorAll('.roster-data table tbody tr'), el => {
+        const id = '';
+        const name = el.querySelector('a').innerText.trim();
+        const year = el.querySelectorAll('td')[2].innerText;
+        const height = el.querySelectorAll('td')[3].innerText;
+        const position = el.querySelectorAll('td')[1].innerText;
+        const hometown = el.querySelectorAll('td')[4].innerText.split(' / ')[0];
+        const high_school = el.querySelectorAll('td')[4].innerText.split(' / ')[1];
+        const previous_school = '';
+        const jersey = el.querySelectorAll('td')[0].innerText;
+        const url = el.querySelector('a')['href'];
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    roster = []
+    url = team['url'].replace("index", season) + "/roster"
+    # Execute shot-scraper with the given JavaScript
+    try:
+        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
+        parsed_data = json.loads(result)
+
+        for player in parsed_data:
+            player['team_id'] = ncaa_id
+            player['team'] = name
+            player['season'] = season
+
+        return parsed_data
+    except:
+        raise
+
+def shotscraper_table_worc(team, season):
+    # Worcester State
+
+    ncaa_id = team['ncaa_id']
+    name = team['team']
+
+    # JavaScript to be executed by shot-scraper
+    javascript_code = """
+    Array.from(document.querySelectorAll('.roster table tbody tr'), el => {
+        const id = '';
+        const name = el.querySelector('a').innerText.trim();
+        const year = el.querySelectorAll('td')[3].innerText;
+        const height = el.querySelectorAll('td')[4].innerText;
+        const position = el.querySelectorAll('td')[2].innerText;
+        const hometown = el.querySelectorAll('td')[5].innerText.split(' / ')[0];
+        const high_school = el.querySelectorAll('td')[5].innerText.split(' / ')[1];
+        const previous_school = '';
+        const jersey = el.querySelectorAll('td')[1].innerText;
+        const url = el.querySelector('a')['href'];
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    roster = []
+    url = team['url'].replace("index", season) + "/roster"
+    # Execute shot-scraper with the given JavaScript
+    try:
+        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
+        parsed_data = json.loads(result)
+
+        for player in parsed_data:
+            player['team_id'] = ncaa_id
+            player['team'] = name
+            player['season'] = season
+
+        return parsed_data
+    except:
+        raise
+
+def shotscraper_table_wbkb(team, season):
+    # Kalamazoo
+
+    ncaa_id = team['ncaa_id']
+    name = team['team']
+
+    # JavaScript to be executed by shot-scraper
+    javascript_code = """
+    Array.from(document.querySelectorAll('.roster table tbody tr'), el => {
+        const id = '';
+        const name = el.querySelector('a').innerText.trim();
+        const year = el.querySelectorAll('td')[2].innerText;
+        const height = el.querySelectorAll('td')[3].innerText;
+        const position = el.querySelectorAll('td')[1].innerText;
+        const hometown = el.querySelectorAll('td')[4].innerText.split(' / ')[0];
+        const high_school = el.querySelectorAll('td')[4].innerText.split(' / ')[1];
+        const previous_school = '';
+        const jersey = el.querySelectorAll('td')[0].innerText;
+        const url = el.querySelector('a')['href'];
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    roster = []
+    url = team['url'].replace("index", season) + "/roster"
+    # Execute shot-scraper with the given JavaScript
+    try:
+        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
+        parsed_data = json.loads(result)
+
+        for player in parsed_data:
+            player['team_id'] = ncaa_id
+            player['team'] = name
+            player['season'] = season
+
+        return parsed_data
+    except:
+        raise
+
+def shotscraper_table_plain(team, season):
+    # utsa
+
+    ncaa_id = team['ncaa_id']
+    name = team['team']
+
+    # JavaScript to be executed by shot-scraper
+    javascript_code = """
+    Array.from(document.querySelectorAll('.roster-players__group tbody tr'), el => {
+        const id = '';
+        const name = el.querySelectorAll('td')[1].innerText;
+        const year = el.querySelectorAll('td')[4].innerText;
+        const height = el.querySelectorAll('td')[3].innerText;
+        const position = el.querySelectorAll('td')[2].innerText;
+        const hometown = el.querySelectorAll('td')[5].innerText;
+        hs_el = el.querySelectorAll('td')[6];
+        const high_school = hs_el ? hs_el.innerText : '';
+        ps_el = el.querySelectorAll('td')[7];
+        const previous_school = ps_el ? ps_el.innerText : '';
+        const jersey = el.querySelectorAll('td')[0].innerText;
+        const url = el.querySelectorAll('td')[1].querySelector('a')['href']
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    roster = []
+    url = team['url'] + "/roster/season/" + season
     # Execute shot-scraper with the given JavaScript
     try:
         result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
@@ -1157,10 +1730,11 @@ def shotscraper_roster_player2(team, season):
         const id = '';
         const name = el.querySelector('h3').innerText;
         const year = el.querySelector('.sidearm-roster-player-academic-year').innerText;
-        const height = el.querySelector('.sidearm-roster-player-height').innerText;
+        ht_el = el.querySelector('span.sidearm-roster-player-height');
+        const height = ht_el ? ht_el.innerText : '';
         const position = el.querySelector('.sidearm-roster-player-position').innerText.split(' ')[0];
         const hometown = el.querySelector('.sidearm-roster-player-hometown').innerText;
-        const high_school = el.querySelector('.sidearm-roster-player-custom2').innerText;
+        const high_school = el.querySelector('.sidearm-roster-player-highschool').innerText;
         ps_el = el.querySelector('.sidearm-roster-player-previous-school');
         const previous_school = ps_el ? ps_el.innerText : '';
         const jersey = el.querySelector('.sidearm-roster-player-jersey-number').innerText;
