@@ -83,13 +83,6 @@
     "ncaa_id": 14927
   },
   {
-    "team": "St. Bonaventure",
-    "twitter": "bonnieswbb",
-    "url": "https://gobonnies.com/sports/womens-volleyball",
-    "ncaa_id": 596,
-    "stats_name": "St. Bonaventure"
-  },
-  {
     "team": "California",
     "twitter": "calwvball",
     "url": "https://calbears.com/sports/womens-volleyball",
@@ -246,7 +239,7 @@
   {
     "team": "Nebraska",
     "twitter": "huskerswbb",
-    "url": "https://huskers.com/sports/womens-volleyball",
+    "url": "https://huskers.com/sports/volleyball",
     "ncaa_id": 463,
     "stats_name": "Nebraska"
   },
@@ -347,13 +340,6 @@
     "url": "https://mutigers.com/sports/womens-volleyball",
     "ncaa_id": 434,
     "stats_name": "Missouri"
-  },
-  {
-    "team": "Mount St. Mary's",
-    "twitter": "mount_wbb",
-    "url": "https://mountathletics.com/sports/womens-volleyball",
-    "ncaa_id": 450,
-    "stats_name": "Mount St. Mary's"
   },
   {
     "team": "Middle Tennessee",
@@ -719,13 +705,6 @@
     "stats_name": "Binghamton"
   },
   {
-    "team": "Maine",
-    "twitter": "blackbearswbb",
-    "url": "https://goblackbears.com/sports/womens-volleyball",
-    "ncaa_id": 380,
-    "stats_name": "Maine"
-  },
-  {
     "team": "Presbyterian College",
     "twitter": "bluehosewbb",
     "url": "https://gobluehose.com/sports/womens-volleyball",
@@ -883,20 +862,6 @@
     "url": "https://depaulbluedemons.com/sports/womens-volleyball",
     "ncaa_id": 176,
     "stats_name": "DePaul"
-  },
-  {
-    "team": "Detroit Mercy",
-    "twitter": "detroit_wbb",
-    "url": "https://detroittitans.com/sports/womens-volleyball",
-    "ncaa_id": 184,
-    "stats_name": "Detroit Mercy"
-  },
-  {
-    "team": "Drexel",
-    "twitter": "drexelwbb",
-    "url": "https://drexeldragons.com/sports/womens-volleyball",
-    "ncaa_id": 191,
-    "stats_name": "Drexel"
   },
   {
     "team": "Delaware State",
@@ -1254,13 +1219,6 @@
     "stats_name": "Liu"
   },
   {
-    "team": "Longwood",
-    "twitter": "longwoodwbb",
-    "url": "https://longwoodlancers.com/sports/womens-volleyball",
-    "ncaa_id": 363,
-    "stats_name": "Longwood"
-  },
-  {
     "team": "Loyola-Maryland",
     "twitter": "loyolawbb",
     "url": "https://loyolagreyhounds.com/sports/womens-volleyball",
@@ -1356,13 +1314,6 @@
     "url": "https://msueagles.com/sports/womens-volleyball",
     "ncaa_id": 444,
     "stats_name": "Morehead St."
-  },
-  {
-    "team": "Monmouth",
-    "twitter": "muhawkswbb",
-    "url": "https://monmouthhawks.com/sports/womens-volleyball",
-    "ncaa_id": 439,
-    "stats_name": "Monmouth"
   },
   {
     "team": "Navy",
@@ -1484,16 +1435,9 @@
     "stats_name": "North Florida"
   },
   {
-    "team": "Oklahoma State",
-    "twitter": "osuwbb",
-    "url": "https://okstate.com/sports/womens-volleyball",
-    "ncaa_id": 521,
-    "stats_name": "Oklahoma St."
-  },
-  {
     "team": "Oklahoma",
     "twitter": "ou_wvball",
-    "url": "https://soonersports.com/sports/womens-volleyball",
+    "url": "https://soonersports.com/sports/volleyball",
     "ncaa_id": 522,
     "stats_name": "Oklahoma"
   },
@@ -1667,13 +1611,6 @@
     "stats_name": "Saint Francis (PA)"
   },
   {
-    "team": "Saint Joseph's (PA)",
-    "twitter": "sjuhawks_wbb",
-    "url": "https://sjuhawks.com/sports/womens-volleyball",
-    "ncaa_id": 606,
-    "stats_name": "Saint Joseph's"
-  },
-  {
     "team": "Southern Methodist",
     "twitter": "smuwbb",
     "url": "https://smumustangs.com/sports/womens-volleyball",
@@ -1686,13 +1623,6 @@
     "url": "https://southernmiss.com/sports/womens-volleyball",
     "ncaa_id": 664,
     "stats_name": "Southern Miss."
-  },
-  {
-    "team": "Richmond",
-    "twitter": "spiderwvball",
-    "url": "https://richmondspiders.com/sports/womens-volleyball",
-    "ncaa_id": 575,
-    "stats_name": "Richmond"
   },
   {
     "team": "Fairfield",
@@ -1851,13 +1781,6 @@
     "stats_name": "La.-Monroe"
   },
   {
-    "team": "Massachusetts",
-    "twitter": "umasswbb",
-    "url": "https://umassathletics.com/sports/womens-volleyball",
-    "ncaa_id": 400,
-    "stats_name": "Massachusetts"
-  },
-  {
     "team": "UMBC",
     "twitter": "umbcwbb",
     "url": "https://umbcretrievers.com/sports/womens-volleyball",
@@ -1958,16 +1881,9 @@
   {
     "team": "UT-San Antonio",
     "twitter": "utsawbb",
-    "url": "https://goutsa.com/sports/womens-volleyball",
+    "url": "https://goutsa.com/sports/volleyball",
     "ncaa_id": 706,
     "stats_name": "Utsa"
-  },
-  {
-    "team": "Vermont",
-    "twitter": "uvmwbb",
-    "url": "https://uvmathletics.com/sports/womens-volleyball",
-    "ncaa_id": 738,
-    "stats_name": "Vermont"
   },
   {
     "team": "Utah Valley",
@@ -1993,7 +1909,7 @@
   {
     "team": "Vanderbilt",
     "twitter": "vandywbb",
-    "url": "https://vucommodores.com/sports/wvball",
+    "url": "https://vucommodores.com/sports/wvolley",
     "ncaa_id": 736,
     "stats_name": "Vanderbilt"
   },
@@ -4460,7 +4376,7 @@
   {
     "team": "LSU",
     "twitter": "LSUwvball",
-    "url": "https://lsusports.net/sports/wvball/",
+    "url": "https://lsusports.net/sports/vb/",
     "ncaa_id": 365,
     "stats_name": "Lsu"
   },
@@ -4875,7 +4791,7 @@
   {
     "team": "North Alabama",
     "twitter": "UNAHOOPS",
-    "url": "http://www.roarlions.com/sports/womens-volleyball",
+    "url": "http://www.roarlions.com/sports/wvball",
     "ncaa_id": 487,
     "stats_name": "North Ala."
   },
@@ -5747,13 +5663,6 @@
     "url": "https://virginiasports.com/sports/wvball/",
     "ncaa_id": 746,
     "stats_name": "Virginia"
-  },
-  {
-    "team": "Wagner",
-    "twitter": "WagnerWHoops",
-    "url": "https://wagnerathletics.com/sports/womens-volleyball",
-    "ncaa_id": 748,
-    "stats_name": "Wagner"
   },
   {
     "team": "Bridgewater (VA)",

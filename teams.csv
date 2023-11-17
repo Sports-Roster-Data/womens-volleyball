@@ -214,12 +214,10 @@ Denver,https://denverpioneers.com/sports/womens-volleyball,183,CO,Summit League,
 DePaul,https://depaulbluedemons.com/sports/womens-volleyball,176,IL,Big East,I
 DePauw,https://depauwtigers.com/sports/womens-volleyball/,177,IN,NCAC,III
 DeSales,https://athletics.desales.edu/sports/womens-volleyball,20,PA,MAC Freedom,III
-Detroit Mercy,https://detroittitans.com/sports/womens-volleyball,184,MI,Horizon,I
 Dickinson,https://www.dickinsonathletics.com/sports/wvball/index,185,PA,Centennial,III
 Dist. Columbia,https://www.udcfirebirds.com/sports/wvball/index,186,DC,ECC,II
 Drake,https://godrakebulldogs.com/sports/womens-volleyball/,189,IA,MVC,I
 Drew,https://drewrangers.com/sports/womens-volleyball,190,NJ,Landmark,III
-Drexel,https://drexeldragons.com/sports/womens-volleyball,191,PA,CAA,I
 Drury,https://drurypanthers.com/sports/womens-volleyball,1057,MO,GLVC,II
 Dubuque,https://udspartans.com/sports/womens-volleyball,192,IA,American Rivers,III
 Duke,https://goduke.com/sports/womens-volleyball,193,NC,ACC,I
@@ -422,7 +420,6 @@ Lipscomb,https://lipscombsports.com/sports/womens-volleyball,28600,TN,ASUN,I
 Lock Haven,https://www.golhu.com/sports/womens-volleyball,360,PA,PSAC,II
 Long Beach State,https://longbeachstate.com/sports/womens-volleyball,99,CA,Big West,I
 Long Island,https://www.liuathletics.com/sports/womens-volleyball,361,NY,NEC,I
-Longwood,https://longwoodlancers.com/sports/womens-volleyball,363,VA,Big South,I
 Loras,https://duhawks.com/sports/womens-volleyball,364,IA,American Rivers,III
 Louisiana,https://ragincajuns.com/sports/womens-volleyball,671,LA,Sun Belt,I
 Louisiana Monroe,https://ulmwarhawks.com/sports/womens-volleyball,498,LA,Sun Belt,I
@@ -431,13 +428,12 @@ Louisville,https://gocards.com/sports/womens-volleyball,367,KY,ACC,I
 Loyola Marymount,https://lmulions.com/sports/womens-volleyball,370,CA,WCC,I
 Loyola-Chicago,https://loyolaramblers.com/sports/womens-volleyball,371,IL,Atlantic 10,I
 Loyola-Maryland,https://loyolagreyhounds.com/sports/womens-volleyball,369,MD,Patriot,I
-LSU,https://lsusports.net/sports/wvball/,365,LA,SEC,I
+LSU,https://lsusports.net/sports/vb/,365,LA,SEC,I
 Lubbock Christian,https://lcuchaps.com/sports/womens-volleyball,30177,TX,Lone Star,II
 Luther,https://luthernorse.com/sports/womens-volleyball,372,IA,American Rivers,III
 Lycoming,https://lycomingathletics.com/sports/womens-volleyball,373,PA,MAC Freedom,III
 Lynchburg,https://www.lynchburgsports.com/sports/wvball/index,374,VA,ODAC,III
 Macalester,https://athletics.macalester.edu/sports/womens-volleyball,376,MN,MIAC,III
-Maine,https://goblackbears.com/sports/womens-volleyball,380,ME,America East,I
 Manhattan,https://gojaspers.com/sports/womens-volleyball,381,NY,MAAC,I
 Manhattanville,https://govaliants.com/sports/womens-volleyball,382,NY,Skyline,III
 Mansfield,https://gomounties.com/sports/womens-volleyball,384,PA,PSAC,II
@@ -455,7 +451,6 @@ Maryland-Eastern Shore,https://easternshorehawks.com/sports/womens-volleyball,39
 Marymount (VA),https://www.marymountsaints.com/sports/wvball/index,394,VA,Atlantic East,III
 Maryville (MO),https://maryvillesaints.com/sports/womens-volleyball,395,MO,GLVC,II
 Marywood,https://marywoodpacers.com/sports/womens-volleyball,397,PA,Atlantic East,III
-Massachusetts,https://umassathletics.com/sports/womens-volleyball,400,MA,Atlantic 10,I
 McDaniel,https://mcdanielathletics.com/sports/womens-volleyball,773,MD,Centennial,III
 McKendree,https://mckbearcats.com/sports/womens-volleyball,30138,IL,GLVC,II
 MCLA,https://athletics.mcla.edu/sports/wvball/index,486,MA,MASCAC,III
@@ -500,7 +495,6 @@ Missouri-St. Louis,https://umsltritons.com/sports/womens-volleyball,436,MO,GLVC,
 MIT,https://mitathletics.com/sports/womens-volleyball,398,MA,NEWMAC,III
 Mitchell,https://www.mitchellathletics.com/sports/wvball/index,30042,CT,NECC,III
 Mo. Southern St.,https://mssulions.com/sports/womens-volleyball,9012,MO,Mid-America Intercollegiate,II
-Monmouth,https://monmouthhawks.com/sports/womens-volleyball,439,NJ,CAA,I
 Monmouth (IL),https://monmouthscots.com/sports/womens-volleyball,438,IL,MWC,III
 Mont. St. Billings,https://msubsports.com/sports/womens-volleyball,205,MT,Great Northwest,II
 Montana,https://gogriz.com/sports/womens-volleyball,441,MT,Big Sky,I
@@ -514,7 +508,6 @@ Mount Aloysius,https://mountieathletics.com/sports/womens-volleyball,30036,PA,AM
 Mount Holyoke,https://athletics.mtholyoke.edu/sports/wvball/index,449,MA,NEWMAC,III
 Mount Olive,https://umotrojans.com/sports/womens-volleyball,1245,NC,Conference Carolinas,II
 Mount St. Joseph,https://msjlions.com/sports/womens-volleyball,8567,OH,Heartland,III
-Mount St. Mary's,https://mountathletics.com/sports/womens-volleyball,450,MD,MAAC,I
 Mount Union,https://athletics.mountunion.edu/sports/womens-volleyball,452,OH,OAC,III
 MSOE,https://www.go-raiders.com/sports/wvball/index,20220,WI,NACC,III
 MSU Denver,https://roadrunnersathletics.com/sports/womens-volleyball,413,MN,RMAC,II
@@ -529,7 +522,7 @@ Nazareth,https://nazathletics.com/sports/womens-volleyball,461,NY,Empire 8,III
 NC State,https://gopack.com/sports/womens-volleyball,490,NC,ACC,I
 Neb. Wesleyan,https://nwusports.com/sports/womens-volleyball,462,NE,American Rivers,III
 Neb.-Kearney,https://lopers.com/sports/womens-volleyball,1156,NE,Mid-America Intercollegiate,II
-Nebraska,https://huskers.com/sports/womens-volleyball,463,NE,Big Ten,I
+Nebraska,https://huskers.com/sports/volleyball,463,NE,Big Ten,I
 Neumann,https://www.neumannathletics.com/sports/womens-volleyball,1254,PA,Atlantic East,III
 Nevada,https://nevadawolfpack.com/sports/womens-volleyball,466,NV,Mountain West,I
 New England Col.,https://athletics.nec.edu/sports/wvball/index,467,NH,NECC,III
@@ -545,7 +538,7 @@ Niagara,https://purpleeagles.com/sports/womens-volleyball,482,NY,MAAC,I
 Nicholls State,https://geauxcolonels.com/sports/womens-volleyball,483,LA,Southland,I
 Nichols,https://nicholsathletics.com/sports/womens-volleyball,484,MA,CCC,III
 Norfolk State,https://nsuspartans.com/sports/womens-volleyball,485,VA,MEAC,I
-North Alabama,http://www.roarlions.com/sports/womens-volleyball,487,AL,ASUN,I
+North Alabama,http://www.roarlions.com/sports/wvball,487,AL,ASUN,I
 North Carolina,https://goheels.com/sports/womens-volleyball,457,NC,ACC,I
 North Carolina Central,https://nccueaglepride.com/sports/womens-volleyball,489,NC,MEAC,I
 North Central (MN),https://ncurams.com/sports/womens-volleyball,30039,MN,UMAC,III
@@ -587,8 +580,7 @@ Ohio Dominican,https://www.ohiodominicanpanthers.com/sports/wvball/index,30119,O
 Ohio Northern,https://www.onusports.com/sports/wvball/index,517,OH,OAC,III
 Ohio State,https://ohiostatebuckeyes.com/sports/womens-volleyball,518,OH,Big Ten,I
 Okla. Baptist,https://obubison.com/sports/womens-volleyball,30202,OK,GAC,II
-Oklahoma,https://soonersports.com/sports/womens-volleyball,522,OK,Big 12,I
-Oklahoma State,https://okstate.com/sports/womens-volleyball,521,OK,Big 12,I
+Oklahoma,https://soonersports.com/sports/volleyball,522,OK,Big 12,I
 Old Dominion,https://odusports.com/sports/womens-volleyball,523,VA,Sun Belt,I
 Olivet,https://www.olivetcomets.com/sports/wvball/index,525,MI,Michigan Intercol. Ath. Assn.,III
 Omaha,https://omavs.com/sports/womens-volleyball,464,NE,Summit League,I
@@ -646,7 +638,6 @@ Rhode Island,https://gorhody.com/sports/womens-volleyball,572,RI,Atlantic 10,I
 Rhode Island College,https://goanchormen.com/sports/womens-volleyball,571,RI,Little East,III
 Rhodes,https://rhodeslynx.com/sports/womens-volleyball,573,TN,SAA,III
 Rice,https://riceowls.com/sports/womens-volleyball,574,TX,C-USA,I
-Richmond,https://richmondspiders.com/sports/womens-volleyball,575,VA,Atlantic 10,I
 Rider,https://gobroncs.com/sports/womens-volleyball,576,NJ,MAAC,I
 Ripon,https://riponredhawks.com/sports/womens-volleyball,577,WI,MWC,III
 Robert Morris,https://rmucolonials.com/sports/womens-volleyball,579,PA,Horizon,I
@@ -668,7 +659,6 @@ Sage Colleges,https://www.sagegators.com/sports/wvball/index,11036,NY,Empire 8,I
 Saginaw Valley,https://www.svsucardinals.com/sports/wvball/index,591,MI,GLIAC,II
 Saint Benedict,https://gobennies.com/sports/womens-volleyball,595,MN,MIAC,III
 Saint Francis (PA),https://sfuathletics.com/sports/womens-volleyball,600,PA,NEC,I
-Saint Joseph's (PA),https://sjuhawks.com/sports/womens-volleyball,606,PA,Atlantic 10,I
 Saint Leo,https://saintleolions.com/sports/womens-volleyball,608,FL,Sunshine State,II
 Saint Louis,https://slubillikens.com/sports/womens-volleyball,609,MO,Atlantic 10,I
 Saint Martin's,https://smusaints.com/sports/womens-volleyball,1343,WA,Great Northwest,II
@@ -738,7 +728,6 @@ Southwestern (TX),https://www.southwesternpirates.com/sports/w-volley/index,8746
 Southwestern Okla.,https://swosuathletics.com/sports/womens-volleyball,8744,OK,GAC,II
 Springfield,https://springfieldcollegepride.com/sports/wvball/index,673,MA,NEWMAC,III
 St. Anselm,https://saintanselmhawks.com/sports/womens-volleyball,593,NH,NE10,II
-St. Bonaventure,https://gobonnies.com/sports/womens-volleyball,596,NY,Atlantic 10,I
 St. Catherine,https://stkatesathletics.com/sports/womens-volleyball,597,MN,MIAC,III
 St. Cloud St.,https://scsuhuskies.com/sports/womens-volleyball,598,MN,NSIC,II
 St. Edward's,https://gohilltoppers.com/sports/womens-volleyball,1334,TX,Lone Star,II
@@ -842,7 +831,7 @@ USC Upstate,https://upstatespartans.com/sports/womens-volleyball,10411,SC,Big So
 USciences,https://www.devilsathletics.com/sports/wvball/index,28594,PA,CACC,II
 UT Martin,https://utmsports.com/sports/womens-volleyball,695,TN,OVC,I
 UT-Rio Grande Valley,https://goutrgv.com/sports/womens-volleyball,536,TX,WAC,I
-UT-San Antonio,https://goutsa.com/sports/womens-volleyball,706,TX,C-USA,I
+UT-San Antonio,https://goutsa.com/sports/volleyball,706,TX,C-USA,I
 Utah,https://utahutes.com/sports/womens-volleyball,732,UT,Pac-12,I
 Utah St.,https://utahstateaggies.com/sports/womens-volleyball,731,UT,Mountain West,I
 Utah Tech,https://utahtechtrailblazers.com/sports/womens-volleyball,30095,UT,WAC,I
@@ -852,14 +841,12 @@ Va. Wesleyan,https://vwuathletics.com/sports/womens-volleyball,745,VA,ODAC,III
 Valdosta St.,https://vstateblazers.com/sports/womens-volleyball,734,GA,Gulf South,II
 Valley Forge,https://uvfpatriots.com/sports/womens-volleyball,30166,PA,CSAC,III
 Valparaiso,https://www.valpoathletics.com/volleyball,735,IN,MVC,I
-Vanderbilt,https://vucommodores.com/sports/wvball,736,TN,SEC,I
+Vanderbilt,https://vucommodores.com/sports/wvolley,736,TN,SEC,I
 Vassar,https://www.vassarathletics.com/sports/womens-volleyball,737,NY,Liberty League,III
-Vermont,https://uvmathletics.com/sports/womens-volleyball,738,VT,America East,I
 Villanova,https://villanova.com/sports/womens-volleyball,739,PA,Big East,I
 Virginia,https://virginiasports.com/sports/wvball/,746,VA,ACC,I
 Virginia Commonwealth,https://vcuathletics.com/sports/womens-volleyball,740,VA,Atlantic 10,I
 Virginia Tech,https://hokiesports.com/sports/womens-volleyball,742,VA,ACC,I
-Wagner,https://wagnerathletics.com/sports/womens-volleyball,748,NY,NEC,I
 Wake Forest,https://godeacs.com/sports/womens-volleyball,749,NC,ACC,I
 Walsh,https://www.athletics.walsh.edu/sports/wvball/index,30141,OH,G-MAC,II
 Wartburg,https://go-knights.net/sports/womens-volleyball,750,IA,American Rivers,III

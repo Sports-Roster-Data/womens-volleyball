@@ -233,11 +233,11 @@ def fetch_and_parse_vandy(team, season):
     Array.from(document.querySelectorAll('#players-table tbody tr'), el => {
      const id = '';
      const name = el.querySelectorAll('td')[1].innerText;
-     const year = el.querySelectorAll('td')[3].innerText;
-     const height = el.querySelectorAll('td')[4].innerText;
+     const year = el.querySelectorAll('td')[4].innerText;
+     const height = el.querySelectorAll('td')[3].innerText;
      const position = el.querySelectorAll('td')[2].innerText;
-     const hometown = el.querySelectorAll('td')[5].innerText;
-     hs_el = el.querySelectorAll('td')[6];
+     const hometown = el.querySelectorAll('td')[6].innerText;
+     hs_el = el.querySelectorAll('td')[5];
      const high_school = hs_el ? hs_el.innerText : '';
      const previous_school = '';
      const jersey = el.querySelectorAll('td')[0].innerText;
@@ -609,9 +609,9 @@ def fetch_and_parse_south_carolina(team, season):
             'team': team['team'],
             'id': None,
             'name': player.find_all('td')[1].text.strip(),
-            'year': player.find_all('td')[5].text,
-            'hometown': player.find_all('td')[6].text.strip(),
-            'high_school': player.find_all('td')[7].text.strip(),
+            'year': player.find_all('td')[4].text,
+            'hometown': player.find_all('td')[5].text.strip(),
+            'high_school': player.find_all('td')[6].text.strip(),
             'previous_school': player.find_all('td')[8].text.strip(),
             'height': player.find_all('td')[3].text,
             'position': player.find_all('td')[2].text,
@@ -637,7 +637,7 @@ def fetch_and_parse_virginia_tech(team, season):
      const high_school = el.querySelector('.sidearm-roster-list-item-highschool').innerText;
      let prev_school = el.querySelector('.sidearm-roster-list-item-previous-school');
      const previous_school = prev_school ? prev_school.innerText : '';
-     const jersey = el.querySelector('.sidearm-roster-list-item-number').innerText;
+     const jersey = el.querySelector('.sidearm-roster-list-item-photo-number').innerText;
      const url = el.querySelector('a')['href'];
      return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
@@ -889,6 +889,44 @@ def shotscraper_data_tables(team, season):
     except:
         raise
 
+def shotscraper_miss_state(team, season):
+    name = team['team']
+    ncaa_id = team['ncaa_id']
+
+    # JavaScript to be executed by shot-scraper
+    javascript_code = """
+    Array.from(document.querySelectorAll('#DataTables_Table_0 tbody tr'), el => {
+     const id = '';
+     const name = el.querySelector(".sidearm-table-player-name").innerText;
+     const year = el.querySelector(".roster_class").innerText;
+     const height = el.querySelector(".height").innerText;
+     const position = el.querySelector(".rp_position_short").innerText;
+     const hometown = el.querySelector(".hometownhighschool").innerText.split('/')[0].trim();
+     let hs = el.querySelector(".hometownhighschool").innerText.split('/');
+     const high_school = hs[1] ? hs[1].split('(')[0].trim() : '';
+     const previous_school = hs[1].split('(')[1] ? hs[1].split('(')[1].trim().replace(')','') : '';
+     const jersey = el.querySelector(".roster_jerseynum").innerText;
+     const url = el.querySelector(".sidearm-table-player-name a")['href'];
+     return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    roster = []
+    url = team['url'] + "/roster/" + season
+    # Execute shot-scraper with the given JavaScript
+    try:
+        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
+        parsed_data = json.loads(result)
+
+        for player in parsed_data:
+            player['team_id'] = ncaa_id
+            player['team'] = name
+            player['season'] = season
+
+        return parsed_data
+    except:
+        raise
+
 def shotscraper_arkansas(team, season):
     name = team['team']
     ncaa_id = team['ncaa_id']
@@ -1102,8 +1140,10 @@ def get_all_rosters(season, teams = []):
                     roster = shotscraper_ucf(team, season)
                 elif team['ncaa_id'] in [51, 248, 731]:
                     roster = shotscraper_list_item(team, season)
-                elif team['ncaa_id'] in [175, 316, 430]:
+                elif team['ncaa_id'] in [175, 316, 487]:
                     roster = shotscraper_roster_player(team, season)
+                elif team['ncaa_id'] == 430:
+                    roster = shotscraper_miss_state(team, season)
                 elif team['ncaa_id'] in [556]:
                     roster = shotscraper_data_tables(team, season)
                 elif team['ncaa_id'] in [31]:
@@ -1224,7 +1264,7 @@ def shotscraper_airforce(team, season):
         const high_school = el.querySelectorAll('span.s-person-card__content__person__location-item')[1].innerText.split('\n')[1];
         const previous_school = '';
         const jersey = el.querySelector('span.s-stamp__text').innerText;
-        const url = el.querySelector('a')['href'];
+        const url = el.querySelector('a')['href']
         return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
@@ -1237,8 +1277,8 @@ def shotscraper_airforce(team, season):
         parsed_data = json.loads(result)
 
         for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
+            player['team_id'] = team['ncaa_id']
+            player['team'] = team['team']
             player['season'] = season
 
         return parsed_data
@@ -1373,15 +1413,15 @@ def shotscraper_oregon_state(team, season):
     javascript_code = """
     Array.from(document.querySelectorAll('.s-table-body__row'), el => {
         const id = '';
-        const name = el.querySelectorAll('td')[1].innerText;
-        const year = el.querySelectorAll('td')[4].innerText;
-        const height = el.querySelectorAll('td')[3].innerText;
-        const position = el.querySelectorAll('td')[2].innerText;
-        const hometown = el.querySelectorAll('td')[5].innerText;
-        const high_school = '';
-        const previous_school = '';
+        const name = el.querySelectorAll('td')[2].innerText;
+        const year = el.querySelectorAll('td')[5].innerText;
+        const height = el.querySelectorAll('td')[4].innerText;
+        const position = el.querySelectorAll('td')[3].innerText;
+        const hometown = el.querySelectorAll('td')[6].innerText;
+        const high_school = el.querySelectorAll('td')[7].innerText;
+        const previous_school = el.querySelectorAll('td')[8].innerText;
         const jersey = el.querySelectorAll('td')[0].innerText;
-        const url = el.querySelectorAll('td')[1].querySelector('a')['href']
+        const url = el.querySelector('a')['href'];
         return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
@@ -1419,7 +1459,7 @@ def shotscraper_table(team, season):
         const hometown = el.querySelectorAll('td')[5].innerText;
         hs_el = el.querySelectorAll('td')[6];
         const high_school = hs_el ? hs_el.innerText : '';
-        const previous_school = '';
+        const previous_school = el.querySelectorAll('td')[7].innerText;
         const jersey = el.querySelectorAll('td')[0].innerText;
         const url = el.querySelectorAll('td')[1].querySelector('a')['href']
         return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
