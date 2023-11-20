@@ -335,6 +335,8 @@ rosters <- rosters %>%
     TRUE ~ pm.state
   ))
 
+
+
 ```
 
 # Foreign Nation Cleaning
@@ -387,8 +389,9 @@ rosters <- rosters %>%
 rosters <- rosters %>% 
   mutate(country = case_when(
     country %in% c('BC', 'QUEBEC', 'BRITISH COLUMBIA', 'ALBERTA', 'ONTARIO', 'NOVA SCOTIA', 'ONT', 'QUÉBEC', 'MANITOBA', 'QUE', 'ON', 'QC', 'ALBERTA (AB)', 'ONT CANADA', 'BC CANADA', 'BC,CANADA', 'ON CANADA', 'ALBERTA CANADA', 'SASKATCHEWAN') ~ "CANADA", 
-    country %in% c('VICTORIA', 'SOUTH AUSTRALIA', 'WESTERN AUSTRALIA', 'TASMANIA', 'AUSTRAILA', 'AU', 'QUEENSLAND AUSTRALIA') ~ 'AUSTRALIA',
+    country %in% c('VICTORIA', 'SOUTH AUSTRALIA', 'WESTERN AUSTRALIA', 'TASMANIA', 'AUSTRAILA', 'AU', 'QUEENSLAND AUSTRALIA', 'AUS', 'AUSTRAILIA') ~ 'AUSTRALIA',
     country == 'BARCELONA' ~ 'SPAIN',
+    country == 'BRASIL' ~ 'BRAZIL',
     country == "HAWAI'I" ~ 'USA',
     country == "SWEEDEN" ~ "SWEDEN",
     country == 'CZECHIA' ~ 'CZECH REPUBLIC',
@@ -397,7 +400,8 @@ rosters <- rosters %>%
     country == "UK" ~ "UNITED KINGDOM",
     country == "WEST AFRICA" ~ "SENEGAL",
     country == 'BOSNIA' ~ 'BOSNIA & HERZEGOVINA',
-    country == 'BOSNIA' ~ 'BOSNIA AND HERZEGOVINA',
+    country == 'BOSNIA AND HERZEGOVINA' ~ 'BOSNIA & HERZEGOVINA',
+    country == 'BOSNIA HERZEGOVINA' ~ 'BOSNIA & HERZEGOVINA',
     country == 'TAURANGA BAY OF PLENTY' ~ 'NEW ZEALAND',
     country == 'THE NETHERLANDS' ~ 'NETHERLANDS',
     country == 'TÜRKIYE' ~ 'TURKEY',
@@ -407,10 +411,13 @@ rosters <- rosters %>%
 
 rosters %>% group_by(country) %>% summarize(count = n()) %>% arrange(country)
 
+rosters |> filter(country == 'SASK')
 
 # drop temp
 rosters <- subset(rosters, select = -c(temp) )
 ```
+
+
 
 # Rename Cleaned Columns, Remove Unneeded Columns and Write Out Final CSV File
 

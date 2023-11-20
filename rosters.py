@@ -1490,7 +1490,7 @@ def shotscraper_ucf(team, season):
 
     # JavaScript to be executed by shot-scraper
     javascript_code = """
-    Array.from(document.querySelector('div.table tbody').querySelectorAll('tr'), el => {
+    Array.from(document.querySelector('table tbody').querySelectorAll('tr'), el => {
         const id = '';
         const name = el.querySelectorAll('td')[1].innerText;
         const year = el.querySelectorAll('td')[4].innerText;
