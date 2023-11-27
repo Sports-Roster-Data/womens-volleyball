@@ -12,7 +12,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 
-driver = webdriver.Firefox()
+#driver = webdriver.Firefox()
 
 HEADERS = {'No.': 'jersey', 'Name': 'name', 'NAME': 'name', 'Cl.': 'academic_year', 'Pos.': 'position', 'Ht.': 'height', 'Hometown/High School': 'town', 'Hometown/Last School': 'town', 'Num': 'jersey', 'Yr': 'academic_year', 'Ht': 'height', 'Hometown': 'town', 'High School/Previous School': 'high_school', 'Pos': 'position', 'Hometown/Previous School': 'town', 'Exp.': 'academic_year', 'Number': 'jersey', 'Position': 'position', 'HT.': 'height', 'YEAR': 'academic_year', 'HOMETOWN': 'town', 'LAST SCHOOL': 'high_school', 'Yr.': 'academic_year', 'Hometown/High School/Last School': 'town', 'Class': 'academic_year', 'High school': 'high_school', 'Previous College': 'previous_school', 'Cl.-Exp.': 'academic_year', '#': 'jersey', 'High School': 'high_school', 'Hometown / Previous School': 'town', 'No': "jersey", 'Hometown/High School/Previous School': 'town', 'Hometown / High School / Last College': 'town', 'Year': 'academic_year', 'Height': 'height', 'Previous School': 'high_school', 'Cl': 'academic_year', 'Prev. Coll.': 'previous_school', 'Hgt.': 'height', 'Hometown/ High School': 'town', 'Hometown/High School (Last School)': 'town', 'Hometown/High School (Former School)': 'town', 'Hometown / High School': 'town', 'YR': 'academic_year', 'POS': 'position', 'HT': 'height', 'Player': 'name', 'Hometown/High School/Previous College': 'town', 'Last School/Hometown': 'town', 'NO.': 'jersey', 'NAME': 'name', 'YR.': 'academic_year', 'POS.': 'position', 'HIGH SCHOOL': 'high_school', 'NO': 'jersey', 'HOMETOWN/HIGH SCHOOL': 'town', 'Academic Yr.': 'academic_year', 'Full Name': 'name', 'POSITION': 'position', 'Hometown / Previous School / High School': 'town', 'High School / Previous School': 'high_school', 'Hometown/High School (Previous School)': 'town', 'Hometown/Previous School/Club Team': 'town'}
 
@@ -844,11 +844,11 @@ def parse_roster(team, html, season):
 def get_all_rosters(season, teams = []):
     unparsed = []
     skipped = []
-    teams_json = json.loads(open('/Users/dwillis/code/womens-volleyball/teams.json').read())
+    teams_json = json.loads(open('teams.json').read())
     if len(teams) > 0:
         teams_json = [t for t in teams_json if t['ncaa_id'] in teams]
     teams_with_urls = [x for x in teams_json if "url" in x]
-    with open(f"/Users/dwillis/code/womens-volleyball/rosters_{season}_new.csv", 'w') as output_file:
+    with open(f"rosters_{season}.csv", 'w') as output_file:
         csv_file = csv.writer(output_file)
         csv_file.writerow(['ncaa_id', 'team', 'player_id', 'name', 'year', 'hometown', 'high_school', 'previous_school', 'height', 'position', 'jersey', 'url', 'season'])
         for team in teams_with_urls:
@@ -956,10 +956,10 @@ def get_all_rosters(season, teams = []):
     return [unparsed, skipped]
 
 def get_all_rosters_baskbl(season):
-    teams_json = json.loads(open('/Users/dpwillis/code/womens-volleyball/teams.json').read())
+    teams_json = json.loads(open('teams.json').read())
     teams_with_urls = [x for x in teams_json if "url" in x]
     teams_with_baskbl = [x for x in teams_with_urls if 'w-baskbl' in x['url']]
-    with open(f"/Users/dpwillis/code/wbb/ncaa/rosters_{season}_baskbl.csv", 'w') as output_file:
+    with open(f"~/code/wbb/ncaa/rosters_{season}_baskbl.csv", 'w') as output_file:
         csv_file = csv.writer(output_file)
         csv_file.writerow(['ncaa_id', 'team', 'player_id', 'name', 'year', 'hometown', 'high_school', 'previous_school', 'height', 'position', 'jersey', 'url', 'season'])
         for team in teams_with_baskbl:
@@ -971,7 +971,7 @@ def get_all_rosters_baskbl(season):
                     csv_file.writerow(list(player.values()))
 
 def write_one_team(roster, season):
-    with open(f"/Users/dpwillis/code/womens-volleyball/rosters_{season}_adds.csv", 'a') as output_file:
+    with open(f"~/code/womens-volleyball/rosters_{season}_adds.csv", 'a') as output_file:
         csv_file = csv.writer(output_file)
         for player in roster:
             csv_file.writerow([player['team_id'], player['team'], player['id'], player['name'], player['year'], player['hometown'], player['high_school'], player['previous_school'], player['height'], player['position'], player['jersey'], player['url'], season])
@@ -1134,7 +1134,7 @@ def shotscraper_table(team, season):
 def shotscraper_ucf(team, season):
 
     javascript_code = """
-    Array.from(document.querySelector('div.table tbody').querySelectorAll('tr'), el => {
+    Array.from(document.querySelector('table tbody').querySelectorAll('tr'), el => {
         const id = '';
         const name = el.querySelectorAll('td')[1].innerText;
         const year = el.querySelectorAll('td')[4].innerText;
