@@ -6,7 +6,7 @@ library(janitor)
 ```{r}
 teams <- read_csv("teams.csv")
 
-rosters <- read_csv("rosters_2023.csv")
+rosters <- read_csv("rosters_2023_24.csv")
 
 teams_without_rosters <- teams |> left_join(rosters, join_by(ncaa_id, team)) |> filter(is.na(name))
 
@@ -387,7 +387,7 @@ rosters <- rosters %>%
 rosters <- rosters %>% 
   mutate(country = case_when(
     country %in% c('BC', 'QUEBEC', 'BRITISH COLUMBIA', 'ALBERTA', 'ONTARIO', 'NOVA SCOTIA', 'ONT', 'QUÉBEC', 'MANITOBA', 'QUE', 'ON', 'QC', 'ALBERTA (AB)', 'ONT CANADA', 'BC CANADA', 'BC,CANADA', 'ON CANADA', 'ALBERTA CANADA', 'SASKATCHEWAN') ~ "CANADA", 
-    country %in% c('VICTORIA', 'SOUTH AUSTRALIA', 'WESTERN AUSTRALIA', 'TASMANIA', 'AUSTRAILA', 'AU', 'QUEENSLAND AUSTRALIA') ~ 'AUSTRALIA',
+    country %in% c('VICTORIA', 'SOUTH AUSTRALIA', 'WESTERN AUSTRALIA', 'TASMANIA', 'AUSTRAILA', 'AU', 'QUEENSLAND AUSTRALIA', 'AUSTRAILIA') ~ 'AUSTRALIA',
     country == 'BARCELONA' ~ 'SPAIN',
     country == "HAWAI'I" ~ 'USA',
     country == "SWEEDEN" ~ "SWEDEN",
