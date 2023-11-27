@@ -225,10 +225,7 @@ def fetch_and_parse_clemson(team, season):
     return roster
 
 def fetch_and_parse_vandy(team, season):
-    name = team['team']
-    ncaa_id = team['ncaa_id']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('#players-table tbody tr'), el => {
      const id = '';
@@ -246,27 +243,12 @@ def fetch_and_parse_vandy(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/season/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def fetch_and_parse_miami(team, season):
-    name = team['team']
-    ncaa_id = team['ncaa_id']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('#players-table tbody tr'), el => {
      const id = '';
@@ -285,27 +267,12 @@ def fetch_and_parse_miami(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/season/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def fetch_and_parse_byu(team, season):
-    name = team['team']
-    ncaa_id = team['ncaa_id']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('div.roster-players__group table tbody tr'), el => {
      const id = '';
@@ -322,27 +289,12 @@ def fetch_and_parse_byu(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/season/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def fetch_and_parse_sanjose(team, season):
-    name = team['team']
-    ncaa_id = team['ncaa_id']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.roster__players .roster-card-item'), el => {
      const id = '';
@@ -361,21 +313,9 @@ def fetch_and_parse_sanjose(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/season/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def fetch_and_parse_iowa_state(team, season):
     roster = []
@@ -431,10 +371,7 @@ def fetch_and_parse_temple(team, season):
     return roster
 
 def fetch_and_parse_boise_state(team, season):
-    ncaa_id = team['ncaa_id']
-    name = team['team']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.s-person-card'), el => {
         const id = '';
@@ -452,21 +389,9 @@ def fetch_and_parse_boise_state(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def fetch_and_parse_wyoming(team, season):
     roster = []
@@ -495,10 +420,7 @@ def fetch_and_parse_wyoming(team, season):
     return roster
 
 def fetch_and_parse_nebraska(team, season):
-    name = team['team']
-    ncaa_id = team['ncaa_id']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('#players .table--roster tbody tr'), el => {
      const id = '';
@@ -516,27 +438,12 @@ def fetch_and_parse_nebraska(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/season/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def fetch_and_parse_notre_dame(team, season):
-    name = team['team']
-    ncaa_id = team['ncaa_id']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('#players-table tbody tr'), el => {
      const id = '';
@@ -554,21 +461,9 @@ def fetch_and_parse_notre_dame(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/season/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def fetch_and_parse_iowa(team, season):
     roster = []
@@ -622,10 +517,6 @@ def fetch_and_parse_south_carolina(team, season):
     return roster
 
 def fetch_and_parse_virginia_tech(team, season):
-    name = team['team']
-    ncaa_id = team['ncaa_id']
-
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.sidearm-roster-list-item'), el => {
      const id = '';
@@ -642,28 +533,12 @@ def fetch_and_parse_virginia_tech(team, season):
      return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
-
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def fetch_and_parse_kansas_state(team, season):
-    ncaa_id = team['ncaa_id']
-    name = team['team']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('li.sidearm-roster-player'), el => {
         const id = el.attributes['data-player-id'].textContent;
@@ -682,27 +557,12 @@ def fetch_and_parse_kansas_state(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def fetch_and_parse_valpo(team, season):
-    ncaa_id = team['ncaa_id']
-    name = team['team']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelector('table').querySelectorAll('tr:not(:first-child)'), el => {
         const id = '';
@@ -719,28 +579,12 @@ def fetch_and_parse_valpo(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/" + season + "/?view=list"
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
-
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def fetch_and_parse_illinois(team, season):
-    ncaa_id = team['ncaa_id']
-    name = team['team']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.s-table-body__row'), el => {
         const id = '';
@@ -757,28 +601,12 @@ def fetch_and_parse_illinois(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
-
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def fetch_and_parse_kentucky(team, season):
-    name = team['team']
-    ncaa_id = team['ncaa_id']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('div[itemprop="athlete"]') , el => {
      const id = '';
@@ -795,29 +623,14 @@ def fetch_and_parse_kentucky(team, season):
      return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
-
-    roster = []
     url = team['url'] + "/roster/season/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_list_item(team, season):
     # baylor
-    name = team['team']
-    ncaa_id = team['ncaa_id']
 
-    # JavaScript to be executed by shot-scraper
+
     javascript_code = """
         Array.from(document.querySelectorAll('.sidearm-roster-list-item'), el => {
          const id = '';
@@ -835,27 +648,12 @@ def shotscraper_list_item(team, season):
         })
     """
 
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_data_tables(team, season):
-    name = team['team']
-    ncaa_id = team['ncaa_id']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('#DataTables_Table_0 tbody tr'), el => {
      const id = '';
@@ -873,27 +671,12 @@ def shotscraper_data_tables(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_miss_state(team, season):
-    name = team['team']
-    ncaa_id = team['ncaa_id']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('#DataTables_Table_0 tbody tr'), el => {
      const id = '';
@@ -911,27 +694,12 @@ def shotscraper_miss_state(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_arkansas(team, season):
-    name = team['team']
-    ncaa_id = team['ncaa_id']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('table[data-init="datatable_roster"] tbody tr'), el => {
      const cols = el.querySelectorAll('td');
@@ -950,28 +718,13 @@ def shotscraper_arkansas(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/?season=" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
-
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def fetch_and_parse_tennessee(team, season):
-    name = team['team']
-    ncaa_id = team['ncaa_id']
 
-    # JavaScript to be executed by shot-scraper
+
     javascript_code = """
     Array.from(document.querySelectorAll('.sidearm-roster-table tbody tr'), el => {
      const id = '';
@@ -989,27 +742,12 @@ def fetch_and_parse_tennessee(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def fetch_and_parse_bradley(team, season):
-    name = team['team']
-    ncaa_id = team['ncaa_id']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.sidearm-roster-table tbody tr'), el => {
      const id = '';
@@ -1026,21 +764,9 @@ def fetch_and_parse_bradley(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def parse_roster(team, html, season):
     roster = []
@@ -1118,11 +844,11 @@ def parse_roster(team, html, season):
 def get_all_rosters(season, teams = []):
     unparsed = []
     skipped = []
-    teams_json = json.loads(open('/Users/dpwillis/code/womens-volleyball/teams.json').read())
+    teams_json = json.loads(open('/Users/dwillis/code/womens-volleyball/teams.json').read())
     if len(teams) > 0:
         teams_json = [t for t in teams_json if t['ncaa_id'] in teams]
     teams_with_urls = [x for x in teams_json if "url" in x]
-    with open(f"/Users/dpwillis/code/womens-volleyball/rosters_{season}.csv", 'w') as output_file:
+    with open(f"/Users/dwillis/code/womens-volleyball/rosters_{season}_new.csv", 'w') as output_file:
         csv_file = csv.writer(output_file)
         csv_file.writerow(['ncaa_id', 'team', 'player_id', 'name', 'year', 'hometown', 'high_school', 'previous_school', 'height', 'position', 'jersey', 'url', 'season'])
         for team in teams_with_urls:
@@ -1140,8 +866,10 @@ def get_all_rosters(season, teams = []):
                     roster = shotscraper_ucf(team, season)
                 elif team['ncaa_id'] in [51, 248, 731]:
                     roster = shotscraper_list_item(team, season)
-                elif team['ncaa_id'] in [175, 316, 487]:
+                elif team['ncaa_id'] in [37, 52, 175, 316, 487]:
                     roster = shotscraper_roster_player(team, season)
+                elif team['ncaa_id'] in [8, 725]:
+                    roster = shotscraper_roster_player2(team, season)
                 elif team['ncaa_id'] == 430:
                     roster = shotscraper_miss_state(team, season)
                 elif team['ncaa_id'] in [556]:
@@ -1248,11 +976,25 @@ def write_one_team(roster, season):
         for player in roster:
             csv_file.writerow([player['team_id'], player['team'], player['id'], player['name'], player['year'], player['hometown'], player['high_school'], player['previous_school'], player['height'], player['position'], player['jersey'], player['url'], season])
 
-def shotscraper_airforce(team, season):
-    ncaa_id = team['ncaa_id']
-    name = team['team']
+def shotscraper_caller(team, season, url, javascript_code):
+    roster = []
+    # Execute shot-scraper with the given JavaScript
+    try:
+        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
+        parsed_data = json.loads(result)
 
-    # JavaScript to be executed by shot-scraper
+        for player in parsed_data:
+            player['team_id'] = team['ncaa_id']
+            player['team'] = team['team']
+            player['season'] = season
+
+        return parsed_data
+    except:
+        raise
+
+
+def shotscraper_airforce(team, season):
+
     javascript_code = """
     Array.from(document.querySelectorAll('.s-person-card'), el => {
         const id = '';
@@ -1268,28 +1010,13 @@ def shotscraper_airforce(team, season):
         return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
-
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
 
-        for player in parsed_data:
-            player['team_id'] = team['ncaa_id']
-            player['team'] = team['team']
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_card(team, season):
-    ncaa_id = team['ncaa_id']
-    name = team['team']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.s-person-card__content'), el => {
         const id = '';
@@ -1309,27 +1036,12 @@ def shotscraper_card(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_card_image(team, season):
-    ncaa_id = team['ncaa_id']
-    name = team['team']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.s-person-card__content'), el => {
         const id = '';
@@ -1349,28 +1061,12 @@ def shotscraper_card_image(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_marshall(team, season):
 
-    ncaa_id = team['ncaa_id']
-    name = team['team']
-
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.s-table-body__row'), el => {
         const id = '';
@@ -1387,29 +1083,12 @@ def shotscraper_marshall(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_oregon_state(team, season):
-    # oregon state
 
-    ncaa_id = team['ncaa_id']
-    name = team['team']
-
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.s-table-body__row'), el => {
         const id = '';
@@ -1425,30 +1104,12 @@ def shotscraper_oregon_state(team, season):
         return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
-
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_table(team, season):
-    # akron
 
-    ncaa_id = team['ncaa_id']
-    name = team['team']
-
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.s-table-body__row'), el => {
         const id = '';
@@ -1466,29 +1127,12 @@ def shotscraper_table(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_ucf(team, season):
-    # akron
 
-    ncaa_id = team['ncaa_id']
-    name = team['team']
-
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelector('div.table tbody').querySelectorAll('tr'), el => {
         const id = '';
@@ -1507,29 +1151,12 @@ def shotscraper_ucf(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_wbkb_salve(team, season):
-    # Salve Regina
 
-    ncaa_id = team['ncaa_id']
-    name = team['team']
-
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.roster-data table tbody tr'), el => {
         const id = '';
@@ -1546,29 +1173,12 @@ def shotscraper_wbkb_salve(team, season):
     })
     """
 
-    roster = []
     url = team['url'].replace("index", season) + "/roster"
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_wbkb_elms(team, season):
-    # Elms
 
-    ncaa_id = team['ncaa_id']
-    name = team['team']
-
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.roster-data table tbody tr'), el => {
         const id = '';
@@ -1585,29 +1195,12 @@ def shotscraper_wbkb_elms(team, season):
     })
     """
 
-    roster = []
     url = team['url'].replace("index", season) + "/roster"
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_table_worc(team, season):
-    # Worcester State
 
-    ncaa_id = team['ncaa_id']
-    name = team['team']
-
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.roster table tbody tr'), el => {
         const id = '';
@@ -1624,29 +1217,12 @@ def shotscraper_table_worc(team, season):
     })
     """
 
-    roster = []
     url = team['url'].replace("index", season) + "/roster"
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_table_wbkb(team, season):
-    # Kalamazoo
 
-    ncaa_id = team['ncaa_id']
-    name = team['team']
-
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.roster table tbody tr'), el => {
         const id = '';
@@ -1663,29 +1239,12 @@ def shotscraper_table_wbkb(team, season):
     })
     """
 
-    roster = []
     url = team['url'].replace("index", season) + "/roster"
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_table_plain(team, season):
-    # utsa
 
-    ncaa_id = team['ncaa_id']
-    name = team['team']
-
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.roster-players__group tbody tr'), el => {
         const id = '';
@@ -1704,27 +1263,12 @@ def shotscraper_table_plain(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/season/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_roster_player(team, season):
-    ncaa_id = team['ncaa_id']
-    name = team['team']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.sidearm-roster-player-container'), el => {
         const id = '';
@@ -1744,27 +1288,12 @@ def shotscraper_roster_player(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 def shotscraper_roster_player2(team, season):
-    ncaa_id = team['ncaa_id']
-    name = team['team']
 
-    # JavaScript to be executed by shot-scraper
     javascript_code = """
     Array.from(document.querySelectorAll('.sidearm-roster-player-container'), el => {
         const id = '';
@@ -1783,21 +1312,9 @@ def shotscraper_roster_player2(team, season):
     })
     """
 
-    roster = []
     url = team['url'] + "/roster/" + season
-    # Execute shot-scraper with the given JavaScript
-    try:
-        result = subprocess.check_output(['shot-scraper', 'javascript', url, javascript_code, "--user-agent", "Firefox"])
-        parsed_data = json.loads(result)
-
-        for player in parsed_data:
-            player['team_id'] = ncaa_id
-            player['team'] = name
-            player['season'] = season
-
-        return parsed_data
-    except:
-        raise
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
 
 # Example usage: python rosters.py -season 2021-22 -url https://baylorbears.com/sports/womens-basketball/
 
