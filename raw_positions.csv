@@ -1,0 +1,241 @@
+position,count,cleaned_position
+outside,1,OH
+middle,2,MB
+Utility,6,UT
+UTL,1,UT
+UT/S,1,UT/S
+UT,4,UT
+Setter/Rightside,1,S/RS
+Setter/Right-Side Attacker,1,S/RS
+Setter/Right-Side,5,S/RS
+Setter/Right Side,2,S/RS
+Setter/Right,41,S/RS
+Setter/Outside Hitter,1,S/OH
+Setter/Outside,11,S/OH
+Setter/Opposite,25,S/OPP
+Setter/Middle,1,S/MB
+Setter/Libero,5,S/L
+Setter/Hitter,4,S/OH
+Setter/Defensive Specialist,6,S/DS
+Setter/Defensive,68,S/DS
+Setter/,2,S
+Setter-Right,1,S/RS
+Setter / Right Side,1,S/RS
+Setter,1221,S
+Setteer,1,S
+SETTER/RIGHT,1,S/RS
+SETTER,6,S
+SET/RS,1,S/RS
+SET,3,S
+S/RS/OH,1,S/RS/OH
+S/RS,43,S/RS
+S/RH,2,S/RS
+S/OPP/MB,1,S/OPP/MB
+S/OPP,19,S/OPP
+S/OP,1,S/OPP
+S/OH,11,S/OH
+S/MB,1,S/MB
+S/L/DS,1,S/L/DS
+S/L,6,S/L
+S/H,1,S/OH
+S/DS/OH,1,S/DS/OH
+S/DS,51,S/DS
+S | DS,1,S/DS
+S,826,S
+Rightside/Outside,2,RS/OH
+Rightside/,1,RS
+Rightside Hitter,2,RS
+Rightside,27,RS
+Right-side,5,RS
+Right-Side Hitter/Middle Blocker,1,RS/MB
+Right-Side,45,RS
+Right side/Defensive specialist,1,RS/DS
+Right Side/Outside Hitter,3,RS/OH
+Right Side/Middle Blocker,1,RS/MB
+Right Side Hitter,3,RS
+Right Side,6,RS
+Right,356,RS
+RSH,5,RS
+RS/S,11,RS/S
+RS/OPP,4,RS/OPP
+RS/OH,38,RS/OH
+RS/MH,10,RS/MB
+RS/MB,8,RS/MB
+RS/M,4,RS/MB
+RS/DS,5,RS/DS
+RS,285,RS
+RIGHT,3,RS
+RH/MB,1,RS/MB
+RH,9,RS
+Pin,54,PH
+PIN/MB,1,PH/MB
+PIN/DS,1,PH/DS
+PIN,6,PH
+PH,2,PH
+P,2,PH
+Outside/Setter,1,OH/S
+Outside/Rightside,11,OH/RS
+Outside/Right-Side,1,OH/RS
+Outside/Right,14,OH/RS
+Outside/Opposite,26,OH/OPP
+Outside/Defensive,2,OH/DS
+Outside/,1,OH
+Outside Hitter/left Side,4,OH/LS
+Outside Hitter/Right Side,6,OH/RS
+Outside Hitter/Opposite Hitter,6,OH/OPP
+Outside Hitter/Opposite,4,OH/OPP
+Outside Hitter/Middle,2,OH/MB
+Outside Hitter/Libero,2,OH/L
+Outside Hitter/Defensive Specialist,3,OH/DS
+Outside Hitter/ Right Side,1,OH/RS
+Outside Hitter/ Defensive Specialist,1,OH/DS
+Outside Hitter / Right Side,3,OH/RS
+Outside Hitter,140,OH
+Outside / Opposite,1,OH/OPP
+Outside,2353,OH
+Outsdie,1,OH
+Oppostie/Outside,1,OPP/OH
+Opposite/Setter,3,OPP/S
+Opposite/RS,1,OPP/RS
+Opposite/Outside Hitter,1,OPP/OH
+Opposite/Outside,9,OPP/OH
+Opposite/Middle Blocker,1,OPP/MB
+Opposite/Middle,8,OPP/MB
+Opposite/Defensive,1,OPP/DS
+Opposite Side Hitter,1,OPP
+Opposite Hitter/Right Side,1,OPP/RS
+Opposite Hitter/Middle Blocker,2,OPP/MB
+Opposite Hitter,4,OPP
+Opposite,218,OPP
+Opp/MB,1,OPP/MB
+Opp,2,OPP
+OUTSIDE,6,OH
+OS,1,OH
+OPP/S,5,OPP/S
+OPP/RS,1,OPP/RS
+OPP/OH,18,OPP/OH
+OPP/MH,6,OPP/MH
+OPP/MB,5,OPP/MB
+OPP/DS,2,OPP/DS
+OPP,125,OPP
+OP,5,OPP
+OH/S,4,OH/S
+OH/RSH,1,OH/RS
+OH/RS/MH,1,OH/RS/MH
+OH/RS/L/DS,1,OH/RS/L/DS
+OH/RS,161,OH/RS
+OH/RH,8,OH/RS
+OH/OPP/DS,1,OH/OPP/DS
+OH/OPP,69,OH/OPP
+OH/OP,2,OH/OPP
+OH/MH,17,OH/MB
+OH/MB/RS,1,OH/MB/RS
+OH/MB,21,OH/MB
+OH/L/DS,1,OH/L/DS
+OH/L,6,OH/L
+OH/DS/L,2,OH/DS/L
+OH/DS,109,OH/DS
+OH/DH,1,OH/DH
+"OH, OPP",3,OH/OPP
+"OH, DS",1,OH/DS
+OH | MB,2,OH/MB
+OH | DS,3,OH/DS
+OH / RS,1,OH/RS
+OH,1361,OH
+O/RS,1,OH/RS
+O,4,OH
+Middlie,1,MB
+Middle/Rightside,1,MB/RS
+Middle/Right-Side,1,MB/RS
+Middle/Right Side,1,MB/RS
+Middle/Right,13,MB/RS
+Middle/Outside,4,MB/OH
+Middle/Opposite,4,MB/OPP
+Middle-Blocker,1,MB
+Middle Hitter,12,MB
+Middle Blocker/Right Side,2,MB/RS
+Middle Blocker/Outside Hitter,2,MB/OH
+Middle Blocker/Opposite Hitter,3,MB/OPP
+Middle Blocker / Outside Hitter,2,MB/OH
+Middle Blocker,108,MB
+Middle,1835,MB
+MIddle,1,MB
+MIDDLE,4,MB
+MH/RS,34,MB/RS
+MH/OPP,5,MB/OPP
+MH/OH,13,MB/OH
+MH/DS,1,MB/DS
+MH,302,MB
+MB/RSH,1,MB/RS
+MB/RS/OH,1,MB/RS/OH
+MB/RS,73,MB/RS
+MB/RH,3,MB/RS
+MB/PIN,1,MB/PIN
+MB/OPP,25,MB/OPP
+MB/OP,1,MB/OPP
+MB/OH,24,MB/OH
+MB/O,1,MB/OH
+MB / OPP,1,MB/OPP
+MB,843,MB
+M/RS,7,MB/RS
+M/OPP,2,MB/OPP
+M/OH/RH,1,MB/OH/RS
+M/OH,2,MB/OH
+M/DS,1,MB/DS
+M,18,MB
+Liebro/Defensive,1,L/DS
+Libero/Setter,1,L/S
+Libero/Outside Hitter,1,L/OH
+Libero/Outside,6,L/OH
+Libero/Middle,1,L/MB
+Libero/Defensive Specialist,18,L/DS
+Libero/Defensive,248,L/DS
+Libero/Def.,3,L/DS
+Libero/DS,19,L/DS
+Libero/,5,L
+Libero-Defensive,3,L/DS
+Libero / Outside Hitter,1,L/OH
+Libero / Defensive Specialist,3,L/DS
+Libero / DS,1,L/DS
+Libero,382,L
+Lib,2,L
+LIBERO,1,L
+LIB,8,L
+LH,1,L
+LB/DS,4,L/DS
+LB,6,L
+L/S,4,L/S
+L/OH,6,L/OH
+L/DS/OH,1,L/DS/OH
+L/DS,233,L/DS
+L / DS,2,L/DS
+L,155,L
+Hitter/Defensive,1,
+Hitter,6,
+H,15,
+Diagonal/Opposite,1,
+Defesnive,1,DS
+Defensive Specialists/Libero,1,DS/L
+Defensive Specialist/libero,2,DS/L
+Defensive Specialist/Setter,2,DS/S
+Defensive Specialist/Outside Hitter,3,DS/OH
+Defensive Specialist/Libero,32,DS/L
+Defensive Specialist / Libero,2,DS/L
+Defensive Specialist,31,DS
+Defensive,1055,DS
+Defense Specialist,1,DS
+Def.,8,DS
+DS/SS,1,DS/S
+DS/S,19,DS/S
+DS/RS,1,DS/RS
+DS/OPP/OH,1,DS/OPP/OH
+DS/OP,1,DS/OP
+DS/OH,28,DS/OH
+DS/Libero,8,DS/L
+DS/Liberio,1,DS/L
+DS/Lib.,1,DS/L
+DS/LB,9,DS/L
+DS/L,304,DS/L
+"DS, S",1,DS/S
+DS,531,DS
+DEFENSIVE,4,DS

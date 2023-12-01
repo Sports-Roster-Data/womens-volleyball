@@ -1,173 +1,6 @@
 ```{r}
 library(tidyverse)
 library(janitor)
-```
-
-```{r}
-teams <- read_csv("teams.csv")
-
-rosters <- read_csv("rosters_2023_24.csv")
-
-teams_without_rosters <- teams |> left_join(rosters, join_by(ncaa_id, team)) |> filter(is.na(name))
-
-#geocoded <- read_csv("hometowns_geocodio.csv") |> clean_names()
-
-#us_cities <- read_csv("us_cities_geocodio.csv") |> clean_names()
-```
-```{r}
-geocoded_rosters <- rosters |> left_join(geocoded, join_by(hometown)) |> select(-count, -accuracy_score, -accuracy_type)
-```
-
-```{r}
-needs_parsing <- geocoded_rosters |> filter(is.na(city)) |> distinct(hometown)
-parsed_rosters <- geocoded_rosters |> filter(!is.na(city))
-to_be_parsed <- geocoded_rosters |> filter(is.na(city)) |> select(-city, -state, -county, -country, -latitude, -longitude)
-```
-
-```{r}
-needs_parsing <- needs_parsing |> mutate(country = case_when(
-  str_detect(hometown,"Russia") ~ "Russia",
-  str_detect(hometown,"Italy") ~ "Italy",
-  str_detect(hometown,"Sweden") ~ "Sweden",
-  str_detect(hometown,"Sweeden") ~ "Sweden",
-  str_detect(hometown,"Stockholm") ~ "Sweden",
-  str_detect(hometown,"Ukraine") ~ "Ukraine",
-  str_detect(hometown,"Belgium") ~ "Belgium",
-  str_detect(hometown,"Norway") ~ "Norway",
-  str_detect(hometown,"Estonia") ~ "Estonia",
-  str_detect(hometown,"Poland") ~ "Poland",
-  str_detect(hometown,"Czech") ~ "Czech Republic",
-  str_detect(hometown,"Slovakia") ~ "Slovakia",
-  str_detect(hometown,"Mexico") ~ "Mexico",
-  str_detect(hometown,"México") ~ "Mexico",
-  str_detect(hometown,"Costa Rica") ~ "Costa Rica",
-  str_detect(hometown,", DR") ~ "Dominican Republic",
-  str_detect(hometown,"Brazil") ~ "Brazil",
-  str_detect(hometown,"Brazil") ~ "Venezuela",
-  str_detect(hometown,"Ecuador") ~ "Ecuador",
-  str_detect(hometown,"Panama") ~ "Panama",
-  str_detect(hometown,"Chile") ~ "Chile",
-  str_detect(hometown,"France") ~ "France",
-  str_detect(hometown,"Japan") ~ "Japan",
-  str_detect(hometown,"Ghana") ~ "Ghana",
-  str_detect(hometown,"Kenya") ~ "Kenya",
-  str_detect(hometown,"Colombia") ~ "Colombia",
-  str_detect(hometown,"Medellin") ~ "Colombia",
-  str_detect(hometown,"Netherlands") ~ "Netherlands",
-  str_detect(hometown,"Spain") ~ "Spain",
-  str_detect(hometown,"Serbia") ~ "Serbia",
-  str_detect(hometown,"Türkiye") ~ "Turkey",
-  str_detect(hometown,"Turkey") ~ "Turkey",
-  str_detect(hometown,"Istanbul") ~ "Turkey",
-  str_detect(hometown,"Slovenia") ~ "Slovenia",
-  str_detect(hometown,"Germany") ~ "Germany",
-  str_detect(hometown,"Australia") ~ "Australia",
-  str_detect(hometown,"Proserpine") ~ "Australia",
-  str_detect(hometown,"Ontario") ~ "Canada",
-  str_detect(hometown,"Canada") ~ "Canada",
-  str_detect(hometown,"Saskatoon") ~ "Canada",
-  str_detect(hometown,"B.C.") ~ "Canada",
-  str_detect(hometown,", AB") ~ "Canada",
-  str_detect(hometown,"Argentina") ~ "Argentina",
-  str_detect(hometown,"Bolivia") ~ "Bolivia",
-  str_detect(hometown,"Korea") ~ "South Korea",
-  str_detect(hometown,"New Zealand") ~ "New Zealand",
-  str_detect(hometown,"Finland") ~ "Finland",
-  str_detect(hometown,"Israel") ~ "Israel",
-  str_detect(hometown,"China") ~ "China",
-  str_detect(hometown,"Switzerland") ~ "Switzerland",
-  str_detect(hometown,"Latvia") ~ "Latvia",
-  str_detect(hometown,"Greece") ~ "Greece",
-  str_detect(hometown,"Cyprus") ~ "Cyprus",
-  str_detect(hometown,"Egypt") ~ "Egypt",
-  str_detect(hometown,"Bulgaria") ~ "Bulgaria",
-  str_detect(hometown,"Portugal") ~ "Portugal",
-  str_detect(hometown,"Austria") ~ "Austria",
-  str_detect(hometown,"Hungary") ~ "Hungary",
-  str_detect(hometown,"Thailand") ~ "Thailand",
-  str_detect(hometown,"Singapore") ~ "Singapore",
-  str_detect(hometown,"Bosnia") ~ "Bosnia and Herzegovina",
-  .default = 'USA'
-))
-```
-
-```{r}
-international <- needs_parsing |> filter(country != 'USA')
-domestic <- needs_parsing |> filter(country == 'USA')
-```
-
-
-
-
-```{r}
-
-us_cities_state <- us_cities |>
-  mutate(state = case_when(
-    str_detect(hometown, ", Minn") ~ 'MN',
-    str_detect(hometown, ", Ga.") ~ 'GA',
-    str_detect(hometown, ", Md.") ~ 'MD',
-    str_detect(hometown, ", Colo.") ~ 'CO',
-    str_detect(hometown, ", Ill.") ~ 'IL',
-    str_detect(hometown, ", Miss.") ~ 'MS',
-    str_detect(hometown, ", W.Va.") ~ 'WV',
-    str_detect(hometown, ", Penn.") ~ 'PA',
-    str_detect(hometown, ", Wis.") ~ 'WI',
-    str_detect(hometown, ", Ind.") ~ 'IN',
-    str_detect(hometown, ", Ohio") ~ 'OH',
-    str_detect(hometown, ", Pa.") ~ 'PA',
-    str_detect(hometown, ", N.Y.") ~ 'NY',
-    str_detect(hometown, ", Calif.") ~ 'CA',
-    str_detect(hometown, ", Puerto Rico") ~ 'PR',
-    str_detect(hometown, ", Tenn.") ~ 'TN',
-    str_detect(hometown, ", Okla.") ~ 'OK',
-    str_detect(hometown, ", N.C.") ~ 'NC',
-    str_detect(hometown, ", S.C.") ~ 'SC',
-    str_detect(hometown, ", Mo.") ~ 'MO',
-    str_detect(hometown, ", Fla.") ~ 'FL',
-    str_detect(hometown, ", W. Va.") ~ 'WV',
-    str_detect(hometown, ", Mich.") ~ 'MI',
-    str_detect(hometown, ", Texas") ~ 'TX',
-    str_detect(hometown, ", Ala.") ~ 'AL',
-    str_detect(hometown, ", N.J.") ~ 'NJ',
-    str_detect(hometown, ", Utah") ~ 'UT',
-    str_detect(hometown, ", La.") ~ 'LA',
-    str_detect(hometown, ", GA") ~ 'GA',
-    str_detect(hometown, ", NC") ~ 'NC',
-    str_detect(hometown, ", SC") ~ 'SC',
-    str_detect(hometown, ", CO") ~ 'CO',
-    str_detect(hometown, ", Va.") ~ 'VA',
-    str_detect(hometown, ", WI") ~ 'WI',
-    str_detect(hometown, ", PA") ~ 'PA',
-    str_detect(hometown, ", NY") ~ 'NY',
-    str_detect(hometown, ", NJ") ~ 'NJ',
-    str_detect(hometown, ", FL") ~ 'FL',
-    str_detect(hometown, ", Conn.") ~ 'CT',
-    str_detect(hometown, ", W.Va") ~ 'WV',
-    hometown == "Port Washington" ~ 'WI',
-    hometown == 'Puerto Rico' ~ 'PR',
-    hometown == 'Hartland' ~ 'WI',
-    hometown == 'Fontana' ~ 'CA',
-    .default = state
-  ))
-
-us_cities_state |>
-  filter(is.na(state)) |> distinct(hometown)
-
-domestic_with_state <- domestic |>
- left_join(us_cities_state, join_by(hometown, country)) |> select(-accuracy_score, -accuracy_type, -number, -street, -unit_type, -unit_number)
-
-parsed <- needs_parsing |> left_join(domestic_with_state, join_by(hometown, country))
-
-parsed_with_state <- to_be_parsed |> left_join(parsed, join_by(hometown))
-
-finished_rosters <- bind_rows(parsed_rosters, parsed_with_state)
-
-write_csv(finished_rosters, "finished_rosters.csv")
-```
-
-
-```{r}
-library(tidyverse)
 library(postmastr)
 library(usdata)
 library(rvest)
@@ -175,7 +8,13 @@ library(rvest)
 
 # Load the Source Data
 
+```{r}
+teams <- read_csv("teams.csv")
 
+rosters <- read_csv("rosters_2023.csv")
+
+teams_without_rosters <- teams |> left_join(rosters, join_by(ncaa_id, team)) |> filter(is.na(name))
+```
 
 # Height Cleaning
 
@@ -196,38 +35,29 @@ rosters <- rosters %>%
 
 # Positions Cleaning
 
-Describe the source data and what you needed to do to make it usable, and then what you did to make it possible to standardize the positions.
 
 ```{r}
-positions_cleaned <- read_csv("https://raw.githubusercontent.com/dwillis/jour479x_fall_2022/main/data/vb_positions.csv") %>%
+
+raw_positions <- rosters |> 
+  group_by(position) |> 
+  summarise(count = n()) |> 
+  arrange(desc(position))
+
+
+positions_cleaned <- read_csv("cleaned_positions.csv") %>%
   select(-count)
-
-# replace Ball State's position column with NAs
-rosters <- rosters %>% mutate(position = ifelse(ncaa_id == 47, NA, position))
-
-# need to fix rows where the height is also in the position column
-# in many of those cases we used information from biography pages and/or previous teams or news coverage to assign the position.
-
-position_fixes <- rosters %>% left_join(positions_cleaned, by = "position") %>% filter(position == height)
 
 rosters <- rosters %>% left_join(positions_cleaned, by = "position")
 
-rosters %>% distinct(position_clean)
+rosters %>% distinct(cleaned_position)
 
 ## Primary/Secondary positions based on order of position_clean
 
-rosters <- rosters %>% mutate(position_full = position_clean)
-rosters <- rosters %>% mutate(position_clean = na_if(position_clean, "N/A"))
-rosters <- rosters %>% separate(position_clean, c('primary_position', 'secondary_position'), sep='/', extra='merge')
-rosters <- rosters %>% mutate(primary_position = case_when((primary_position == "G") ~ "Guard", (primary_position == "C") ~ "Center", (primary_position == "F") ~ "Forward", TRUE ~ primary_position))
-rosters <- rosters %>% mutate(secondary_position = case_when((secondary_position == "G") ~ "Guard", (secondary_position == "C") ~ "Center", (secondary_position == "F") ~ "Forward", TRUE ~ secondary_position))
-rosters <- rosters %>% mutate(primary_position = case_when((primary_position == "G") ~ "Guard", (primary_position == "C") ~ "Center", (primary_position == "F") ~ "Forward", TRUE ~ primary_position))
-rosters <- rosters %>% filter(!grepl("'", rosters$primary_position))
-rosters <- rosters %>% filter(!grepl("5", rosters$primary_position))
-rosters <- rosters %>% filter(!grepl("6", rosters$primary_position))
-rosters <- rosters %>% filter(!grepl("'", rosters$secondary_position))
-rosters <- rosters %>% filter(!grepl("5", rosters$secondary_position))
-rosters <- rosters %>% filter(!grepl("6", rosters$secondary_position))
+rosters <- rosters %>% mutate(position_full = cleaned_position)
+rosters <- rosters %>% mutate(cleaned_position = na_if(cleaned_position, "N/A"))
+rosters <- rosters %>% separate(cleaned_position, c('primary_position', 'secondary_position'), sep='/', extra='merge')
+
+#write_csv(raw_positions, "raw_positions.csv")
 
 ```
 
@@ -431,5 +261,5 @@ distinct_countries <- rosters %>% distinct(country_clean)
 
 rosters |> filter(is.na(country_clean))
 
-write_csv(rosters, "rosters_2023_24.csv", quote="all", na="")
+write_csv(rosters, "rosters_2023_cleaned.csv", quote="all", na="")
 ```
