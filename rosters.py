@@ -930,6 +930,8 @@ def get_all_rosters(season, teams = []):
                     roster = shotscraper_table_worc(team, season)
                 elif team['ncaa_id'] == 811:
                     roster = fetch_and_parse_wyoming(team, season)
+                elif team['ncaa_id'] == 1000:
+                    roster = shotscraper_table_wvolley(team, season)
                 elif team['ncaa_id'] == 532:
                     continue
                 elif 'wvball' in team['url']:
@@ -1212,6 +1214,28 @@ def shotscraper_table_worc(team, season):
         const high_school = el.querySelectorAll('td')[5].innerText.split(' / ')[1];
         const previous_school = '';
         const jersey = el.querySelectorAll('td')[1].innerText;
+        const url = el.querySelector('a')['href'];
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    url = team['url'].replace("index", season) + "/roster"
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
+
+def shotscraper_table_wvolley(team, season):
+
+    javascript_code = """
+    Array.from(document.querySelectorAll('.roster table tbody tr'), el => {
+        const id = '';
+        const name = el.querySelector('a').innerText.trim();
+        const year = el.querySelectorAll('td')[2].innerText;
+        const height = el.querySelectorAll('td')[3].innerText;
+        const position = el.querySelectorAll('td')[1].innerText;
+        const hometown = el.querySelectorAll('td')[4].innerText;
+        const high_school = el.querySelectorAll('td')[5].innerText;
+        const previous_school = '';
+        const jersey = el.querySelectorAll('td')[0].innerText;
         const url = el.querySelector('a')['href'];
         return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
