@@ -971,7 +971,7 @@ def get_all_rosters_baskbl(season):
                     csv_file.writerow(list(player.values()))
 
 def write_one_team(roster, season):
-    with open(f"~/code/womens-volleyball/rosters_{season}_adds.csv", 'a') as output_file:
+    with open(f"rosters_{season}_adds.csv", 'a') as output_file:
         csv_file = csv.writer(output_file)
         for player in roster:
             csv_file.writerow([player['team_id'], player['team'], player['id'], player['name'], player['year'], player['hometown'], player['high_school'], player['previous_school'], player['height'], player['position'], player['jersey'], player['url'], season])

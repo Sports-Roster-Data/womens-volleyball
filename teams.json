@@ -2901,7 +2901,7 @@
   {
     "team": "Cornell College",
     "twitter": "CornellRamsWBB",
-    "url": "https://cornellrams.com/sports/womens-volleyball",
+    "url": "https://cornellrams.com/sports/volleyball",
     "ncaa_id": 166
   },
   {
@@ -2980,7 +2980,7 @@
   {
     "team": "Drew",
     "twitter": "Rangers_WBB",
-    "url": "https://drewrangers.com/sports/womens-volleyball",
+    "url": "https://drewrangers.com/sports/wvball",
     "ncaa_id": 190,
     "stats_name": "Drew"
   },
@@ -3550,12 +3550,6 @@
     "stats_name": "Birmingham-Southern"
   },
   {
-    "team": "USciences",
-    "twitter": "USciencesWBB",
-    "url": "https://www.devilsathletics.com/sports/wvball/index",
-    "ncaa_id": 28594
-  },
-  {
     "team": "Hiram",
     "twitter": "HiramCollegeWBB",
     "url": "https://hiramterriers.com/sports/womens-volleyball",
@@ -3720,13 +3714,6 @@
     "url": "https://uisprairiestars.com/sports/womens-volleyball",
     "ncaa_id": 30050,
     "stats_name": "Ill. Springfield"
-  },
-  {
-    "team": "North Georgia",
-    "twitter": "UNGWBB",
-    "url": "https://ungathletics.com/sports/womens-volleyball",
-    "ncaa_id": 30052,
-    "stats_name": "University of North GeorgiaW"
   },
   {
     "team": "Newman",
@@ -4040,13 +4027,6 @@
     "ncaa_id": 30174
   },
   {
-    "team": "Holy Names",
-    "twitter": "HNUWBB",
-    "url": "https://hnuhawks.com/sports/womens-volleyball",
-    "ncaa_id": 30175,
-    "stats_name": "Holy Names"
-  },
-  {
     "team": "Lubbock Christian",
     "twitter": "LCUWomensBball",
     "url": "https://lcuchaps.com/sports/womens-volleyball",
@@ -4059,13 +4039,6 @@
     "url": "https://riderangersride.com/sports/womens-volleyball",
     "ncaa_id": 30178,
     "stats_name": "Northwestern Okla."
-  },
-  {
-    "team": "Rogers St.",
-    "twitter": "rsuwbb",
-    "url": "https://rsuhillcats.com/sports/womens-volleyball",
-    "ncaa_id": 30180,
-    "stats_name": "Rogers St."
   },
   {
     "team": "UVa-Wise",
@@ -4450,13 +4423,6 @@
     "twitter": "MinnStWBB",
     "url": "https://msumavericks.com/sports/womens-volleyball",
     "ncaa_id": 383
-  },
-  {
-    "team": "Mansfield",
-    "twitter": "MansfieldWBB",
-    "url": "https://gomounties.com/sports/womens-volleyball",
-    "ncaa_id": 384,
-    "stats_name": "Mansfield"
   },
   {
     "team": "Marietta",
@@ -4968,7 +4934,7 @@
   {
     "team": "Bemidji St.",
     "twitter": "BSUBeaversWBB",
-    "url": "https://www.bsubeavers.com/wbasketball/",
+    "url": "https://bsubeavers.com/sports/volleyball",
     "ncaa_id": 54,
     "stats_name": "Bemidji St."
   },
@@ -6122,12 +6088,6 @@
     "ncaa_id": 93
   },
   {
-    "team": "Alderson Broaddus",
-    "twitter": "ABUWBB",
-    "url": "https://gobattlers.com/sports/womens-volleyball",
-    "ncaa_id": 934
-  },
-  {
     "team": "Alvernia",
     "twitter": "AlverniaWbb",
     "url": "https://auwolves.com/sports/womens-volleyball",
@@ -6247,7 +6207,7 @@
   },
   {
     "team": "Edward Waters",
-    "url": "https://ewutigerpride.com/sports/womens-volleyball",
+    "url": "https://ewutigerpride.com/sports/wvball",
     "ncaa_id": 30244,
     "stats_name": "Edward Waters"
   },
