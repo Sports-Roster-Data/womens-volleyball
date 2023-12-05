@@ -2292,7 +2292,7 @@
   {
     "team": "Calvin",
     "twitter": "Calvinwvball",
-    "url": "https://calvinknights.com/sports/wvball/index",
+    "url": "https://calvinknights.com/sports/womens-volleyball",
     "ncaa_id": 114
   },
   {
@@ -2443,7 +2443,7 @@
   {
     "team": "CWRU",
     "twitter": "CWRUWBB",
-    "url": "https://athletics.case.edu/sports/wvball/index",
+    "url": "https://athletics.case.edu/sports/womens-volleyball",
     "ncaa_id": 122
   },
   {
@@ -2531,13 +2531,6 @@
     "url": "https://wucardinals.com/sports/womens-volleyball",
     "ncaa_id": 12799,
     "stats_name": "Wheeling"
-  },
-  {
-    "team": "Northeastern St.",
-    "twitter": "RiverHawksWBK",
-    "url": "https://goriverhawksgo.com/sports/womens-volleyball",
-    "ncaa_id": 12810,
-    "stats_name": "Northeastern St."
   },
   {
     "team": "Tusculum",
@@ -2823,7 +2816,7 @@
   {
     "team": "Catholic",
     "twitter": "CatholicU_WBB",
-    "url": "https://www.catholicathletics.com/sports/wvball/index",
+    "url": "https://catholicathletics.com/sports/womens-volleyball",
     "ncaa_id": 124
   },
   {
@@ -2936,13 +2929,6 @@
     "twitter": "AU_WBB",
     "url": "https://gosaxons.com/sports/womens-volleyball",
     "ncaa_id": 18
-  },
-  {
-    "team": "Delta St.",
-    "twitter": "DeltaStateWBB",
-    "url": "https://gostatesmen.com/sports/womens-volleyball",
-    "ncaa_id": 181,
-    "stats_name": "Delta St."
   },
   {
     "team": "DePauw",
@@ -3640,7 +3626,7 @@
   {
     "team": "Northwestern-St. Paul",
     "twitter": "unwwbb",
-    "url": "https://unweagles.com/sports/womens-volleyball",
+    "url": "https://unweagles.com/sports/volleyball",
     "ncaa_id": 30031
   },
   {
@@ -5112,7 +5098,7 @@
   {
     "team": "Rollins",
     "twitter": "RollinsWBB",
-    "url": "https://rollinssports.com/sports/womens-volleyball",
+    "url": "https://rollinssports.com/sports/wvball",
     "ncaa_id": 584,
     "stats_name": "Rollins"
   },

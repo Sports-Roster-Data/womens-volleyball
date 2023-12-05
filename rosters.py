@@ -870,7 +870,7 @@ def get_all_rosters(season, teams = []):
                     roster = shotscraper_roster_player(team, season)
                 elif team['ncaa_id'] in [8, 725]:
                     roster = shotscraper_roster_player2(team, season)
-                elif team['ncaa_id'] == 430:
+                elif team['ncaa_id'] in [430, 584]:
                     roster = shotscraper_miss_state(team, season)
                 elif team['ncaa_id'] in [556]:
                     roster = shotscraper_data_tables(team, season)
