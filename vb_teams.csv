@@ -1,0 +1,923 @@
+team,ncaa_id,team_state,conference,division
+Air Force,721,CO,Mountain West,I
+Texas A&M,697,TX,SEC,I
+Alabama,8,AL,SEC,I
+Arizona,29,AZ,Pac-12,I
+Army,725,NY,Patriot,I
+Auburn,37,AL,SEC,I
+Wisconsin,796,WI,Big Ten,I
+Baylor,51,TX,Big 12,I
+Bellarmine,52,KY,ASUN,I
+Boston College,67,MA,ACC,I
+Oregon State,528,OR,Pac-12,I
+Belmont,14927,TN,MVC,I
+California,107,CA,Pac-12,I
+Miami,415,FL,ACC,I
+California Baptist,30135,CA,WAC,I
+Chicago State,136,IL,DI Independent,I
+Clemson,147,SC,ACC,I
+Central Michigan,129,MI,MAC,I
+Creighton,169,NE,Big East,I
+Colorado,157,CO,Pac-12,I
+Coppin State,165,MD,MEAC,I
+Syracuse,688,NY,ACC,I
+Iowa State,311,IA,Big 12,I
+Dayton,175,OH,Atlantic 10,I
+Drake,189,IA,MVC,I
+Duke,193,NC,ACC,I
+Duquesne,194,PA,Atlantic 10,I
+South Carolina,648,SC,SEC,I
+Green Bay,794,WI,Horizon,I
+Georgetown,251,DC,Big East,I
+South Dakota State,649,SD,Summit League,I
+George Washington,249,DC,Atlantic 10,I
+Mississippi State,430,MS,SEC,I
+Virginia Tech,742,VA,ACC,I
+Nebraska,463,NE,Big Ten,I
+Illinois,301,IL,Big Ten,I
+Indiana,306,IN,Big Ten,I
+Iona,310,NY,MAAC,I
+Iowa,312,IA,Big Ten,I
+Kentucky,334,KY,SEC,I
+Kansas State,327,KS,Big 12,I
+Hampton,270,VA,CAA,I
+Tennessee,694,TN,SEC,I
+LaSalle,340,PA,Atlantic 10,I
+Manhattan,381,NY,MAAC,I
+Marquette,387,WI,Big East,I
+Memphis,404,TN,AAC,I
+Mercer,406,NJ,SoCon,I
+Missouri,434,MO,SEC,I
+Middle Tennessee,419,TN,C-USA,I
+Northern Arizona,501,AZ,Big Sky,I
+Notre Dame,513,IN,ACC,I
+Nevada,466,NV,Mountain West,I
+Villanova,739,PA,Big East,I
+Southeast Missouri State,654,MO,OVC,I
+Oregon,529,OR,Pac-12,I
+Saint Peter's,617,NJ,MAAC,I
+Pennsylvania,540,PA,Ivy League,I
+Pittsburgh,545,PA,ACC,I
+Princeton,554,NJ,Ivy League,I
+Providence,556,RI,Big East,I
+Purdue,559,IN,Big Ten,I
+Arkansas,31,AR,SEC,I
+Robert Morris,579,PA,Horizon,I
+Rutgers,587,NJ,Big Ten,I
+Seton Hall,635,NJ,Big East,I
+St. John's,603,NY,Big East,I
+Arizona State,28,AZ,Pac-12,I
+Temple,690,PA,AAC,I
+Texas,703,TX,Big 12,I
+Toledo,709,OH,MAC,I
+Troy,716,AL,Sun Belt,I
+Albany,14,NY,America East,I
+Central Florida,128,FL,AAC,I
+UCLA,110,CA,Pac-12,I
+UConn,164,CT,Big East,I
+Michigan,418,MI,Big Ten,I
+Louisville,367,KY,ACC,I
+San Francisco,629,CA,WCC,I
+South Florida,651,FL,AAC,I
+Utah,732,UT,Pac-12,I
+Texas-Arlington,702,TX,WAC,I
+Idaho,295,ID,Big Sky,I
+Virginia Commonwealth,740,VA,Atlantic 10,I
+Wake Forest,749,NC,ACC,I
+Western Illinois,771,IL,Summit League,I
+Washington State,754,WA,Pac-12,I
+Wyoming,811,WY,Mountain West,I
+Xavier,812,OH,Big East,I
+Abilene Christian,2,TX,WAC,I
+Alcorn State,17,MS,SWAC,I
+Appalachian State,27,NC,Sun Belt,I
+Austin Peay,43,TN,ASUN,I
+San Diego State,626,CA,Mountain West,I
+Ball State,47,IN,MAC,I
+Alabama State,7,AL,SWAC,I
+Bethune-Cookman,61,FL,SWAC,I
+Long Beach State,99,CA,Big West,I
+Sam Houston State,624,TX,WAC,I
+Bowling Green,71,KY,MAC,I
+Binghamton,62,NY,America East,I
+Presbyterian College,1320,SC,Big South,I
+Bradley,72,IL,MVC,I
+Boise State,66,ID,Mountain West,I
+Bryant,81,RI,America East,I
+Bucknell,83,PA,Patriot,I
+Butler,87,IN,Big East,I
+Brigham Young,77,UT,WCC,I
+Cal Poly,90,CA,Big West,I
+Western Carolina,769,NC,SoCon,I
+Central Connecticut,127,CT,NEC,I
+Charlotte,458,NC,C-USA,I
+Cleveland State,148,OH,Horizon,I
+Coastal Carolina,149,SC,Sun Belt,I
+College of Charleston,1014,SC,CAA,I
+Colgate,153,NY,Patriot,I
+Cornell,167,NY,Ivy League,I
+Cal State Bakersfield,94,CA,Big West,I
+Charleston Southern,48,SC,Big South,I
+Columbia,158,NY,Ivy League,I
+Dartmouth,172,VT,Ivy League,I
+Davidson,173,NC,Atlantic 10,I
+Delaware,180,DE,CAA,I
+DePaul,176,IL,Big East,I
+Delaware State,178,DE,MEAC,I
+Eastern Illinois,201,IL,OVC,I
+Eastern Kentucky,202,KY,ASUN,I
+Eastern Michigan,204,MI,MAC,I
+Maryland-Eastern Shore,393,MD,MEAC,I
+East Tennessee State,198,TN,SoCon,I
+Eastern Washington,207,WA,Big Sky,I
+Florida Atlantic,229,FL,C-USA,I
+Fairleigh Dickinson,222,NJ,NEC,I
+Florida Gulf Coast,28755,FL,ASUN,I
+Fordham,236,NY,Atlantic 10,I
+Fresno State,96,CA,Mountain West,I
+Cal State Fullerton,97,CA,Big West,I
+Furman,244,SC,SoCon,I
+Saint Mary's (CA),610,CA,WCC,I
+Grand Canyon,1104,AZ,WAC,I
+Cincinnati,140,OH,AAC,I
+Campbell,115,NC,Big South,I
+Northern Illinois,503,IL,MAC,I
+Minnesota,428,MN,Big Ten,I
+Wichita State,782,KS,AAC,I
+Tulane,718,LA,AAC,I
+Canisius,116,NY,MAAC,I
+Georgia Southern,253,GA,Sun Belt,I
+Georgia State,254,GA,Sun Belt,I
+Georgia Tech,255,GA,ACC,I
+Hartford,272,CT,DI Independent,I
+Harvard,275,MA,Ivy League,I
+Hawaii,277,HI,Big West,I
+Houston Christian,287,TX,Southland,I
+Holy Cross,285,MA,Patriot,I
+Marshall,388,WV,Sun Belt,I
+Hofstra,283,NY,CAA,I
+Howard,290,DC,MEAC,I
+High Point,19651,NC,Big South,I
+Indiana State,305,IN,MVC,I
+Southern,665,LA,SWAC,I
+Jacksonville,316,FL,ASUN,I
+Kent State,331,OH,MAC,I
+Kennesaw State,1157,GA,ASUN,I
+Kansas,328,KS,Big 12,I
+Texas Tech,700,TX,Big 12,I
+Lafayette,342,PA,Patriot,I
+Lamar,346,TX,Southland,I
+Lehigh,352,PA,Patriot,I
+Liberty,355,VA,ASUN,I
+Southeastern Louisiana,655,LA,Southland,I
+Lipscomb,28600,TN,ASUN,I
+Arkansas-Little Rock,32,AR,OVC,I
+Long Island,361,NY,NEC,I
+Loyola-Maryland,369,MD,Patriot,I
+Marist,386,NY,MAAC,I
+George Mason,248,VA,Atlantic 10,I
+Purdue-Fort Wayne,308,IN,Horizon,I
+McNeese State,402,LA,Southland,I
+North Texas,497,TX,C-USA,I
+Merrimack,410,MA,NEC,I
+Miami Ohio,414,OH,MAC,I
+Milwaukee,797,WI,Horizon,I
+Montana,441,MT,Big Sky,I
+Mount St. Joseph,8567,OH,Heartland,III
+Michigan State,416,MI,Big Ten,I
+Montana State,440,MT,Big Sky,I
+Morehead State,444,KY,OVC,I
+Navy,726,MD,Patriot,I
+North Carolina Central,489,NC,MEAC,I
+North Dakota State,493,ND,Summit League,I
+Niagara,482,NY,MAAC,I
+Nicholls State,483,LA,Southland,I
+New Jersey Institute of Technology,471,NJ,America East,I
+Northern Kentucky,505,KY,Horizon,I
+New Mexico State,472,NM,WAC,I
+Norfolk State,485,VA,MEAC,I
+Northwestern State,508,LA,Southland,I
+Northwestern,509,IL,Big Ten,I
+Old Dominion,523,VA,Sun Belt,I
+Ohio State,518,OH,Big Ten,I
+Mississippi,433,MS,SEC,I
+Omaha,464,NE,Summit League,I
+Oral Roberts,527,OK,Summit League,I
+North Florida,2711,FL,ASUN,I
+Oklahoma,522,OK,Big 12,I
+Penn State,539,PA,Big Ten,I
+Portland,551,OR,WCC,I
+New Orleans,474,LA,Southland,I
+Portland State,550,OR,Big Sky,I
+Quinnipiac,562,CT,MAAC,I
+Murray State,454,KY,MVC,I
+Radford,563,VA,Big South,I
+Louisiana,671,LA,Sun Belt,I
+Loyola-Chicago,371,IL,Atlantic 10,I
+Illinois State,299,IL,MVC,I
+Rhode Island,572,RI,Atlantic 10,I
+Rice,574,TX,C-USA,I
+Rider,576,NJ,MAAC,I
+UMass Lowell,368,MA,America East,I
+Sacred Heart,590,CT,NEC,I
+Sacramento State,102,CA,Big Sky,I
+Saint Louis,609,MO,Atlantic 10,I
+Samford,625,AL,SoCon,I
+San Jose State,630,CA,Mountain West,I
+Santa Clara,631,CA,WCC,I
+South Dakota,650,SD,Summit League,I
+Stephen F. Austin,676,TX,WAC,I
+St. Francis College Brooklyn,599,NY,NEC,I
+Saint Francis (PA),600,PA,NEC,I
+Southern Methodist,663,TX,AAC,I
+Southern Miss,664,MS,Sun Belt,I
+Fairfield,220,CT,MAAC,I
+Stanford,674,CA,Pac-12,I
+Stetson,678,FL,ASUN,I
+Stony Brook,683,NY,CAA,I
+Seattle,1356,WA,WAC,I
+Texas Christian,698,TX,Big 12,I
+Towson,711,MD,CAA,I
+Tennessee Tech,692,TN,OVC,I
+Texas State,670,TX,Sun Belt,I
+UAB,9,AL,C-USA,I
+Arkansas-Pine Bluff,2678,AR,SWAC,I
+Central Arkansas,1004,AR,ASUN,I
+UC Davis,108,CA,Big West,I
+UC Irvine,109,CA,Big West,I
+UC Riverside,111,CA,Big West,I
+UC Santa Barbara,104,CA,Big West,I
+Evansville,219,IN,MVC,I
+Georgia,257,GA,SEC,I
+Houston,288,TX,AAC,I
+Illinois-Chicago,302,IL,MVC,I
+Incarnate Word,2743,TX,Southland,I
+Louisiana Monroe,498,LA,Sun Belt,I
+UMBC,391,MD,America East,I
+Maryland,392,MD,Big Ten,I
+Northern Colorado,502,CO,Big Sky,I
+UNC Asheville,456,NC,Big South,I
+UNC Greensboro,459,NC,SoCon,I
+North Carolina,457,NC,ACC,I
+New Hampshire,469,NH,America East,I
+Northern Iowa,504,IA,MVC,I
+New Mexico,473,NM,Mountain West,I
+Southern Cal,657,CA,Pac-12,I
+San Diego,627,CA,WCC,I
+Texas-El Paso,704,TX,C-USA,I
+UT Martin,695,TN,OVC,I
+UT-Rio Grande Valley,536,TX,WAC,I
+UT-San Antonio,706,TX,C-USA,I
+Utah Valley,30024,UT,WAC,I
+Washington,756,WA,Pac-12,I
+Valparaiso,735,IN,MVC,I
+Vanderbilt,736,TN,SEC,I
+Weber State,758,UT,Big Sky,I
+Winthrop,792,SC,Big South,I
+William & Mary,786,VA,CAA,I
+Western Michigan,774,MI,MAC,I
+Wofford,2915,SC,SoCon,I
+West Virginia,768,WV,Big 12,I
+Gonzaga,260,WA,WCC,I
+Akron,5,OH,MAC,I
+Cal State LA,100,CA,CCAA,II
+Carson-Newman,1000,TN,SAC,II
+Catawba,1001,NC,SAC,II
+Central Okla.,1009,OK,Mid-America Intercollegiate,II
+CSUN,101,CA,Big West,I
+Central Wash.,1010,WA,Great Northwest,II
+Chadron St.,1012,NE,RMAC,II
+Charleston (WV),1013,WV,MEC,II
+Christian Brothers,1015,TN,Gulf South,II
+Coker,1023,SC,SAC,II
+Concord,1028,WV,MEC,II
+Concordia Wisconsin,1036,WI,NACC,III
+USC Upstate,10411,SC,Big South,I
+Defiance,1050,OH,HCAC,III
+Drury,1057,MO,GLVC,II
+D'Youville,1059,NY,ECC,II
+Cal U (PA),106,PA,PSAC,II
+East Tex. Baptist,1062,TX,ASC,III
+Eastern Nazarene,1064,MA,NECC,III
+Edgewood,1066,WI,NACC,III
+Elon,1068,NC,CAA,I
+Emporia St.,1071,KS,Mid-America Intercollegiate,II
+Erskine,1072,SC,Conference Carolinas,II
+Fairmont St.,1076,WV,MEC,II
+Findlay,1079,OH,G-MAC,II
+Fort Lewis,1083,CO,RMAC,II
+Francis Marion,1085,SC,Conference Carolinas,II
+Shepherd,10870,WV,PSAC,II
+Gardner-Webb,1092,NC,Big South,I
+George Fox,1094,OR,NWC,III
+Georgia College,1096,GA,Peach Belt,II
+Chatham,10972,PA,PAC,III
+Glenville St.,1098,WV,MEC,II
+Alas. Anchorage,11,AK,Great Northwest,II
+Sage Colleges,11036,NY,Empire 8,III
+Greenville,1111,IL,SLIAC,III
+Guilford,1112,NC,ODAC,III
+Hanover,1115,IN,HCAC,III
+Harding,1116,AR,GAC,II
+UC San Diego,112,CA,Big West,I
+Henderson St.,1123,AR,GAC,II
+Hendrix,1124,AR,SAA,III
+Holy Family,1126,PA,CACC,II
+S.C. Aiken,11276,SC,Peach Belt,II
+UC Santa Cruz,113,CA,C2C,III
+Huntingdon,1130,AL,CCS,III
+Husson,1133,ME,North Atlantic,III
+Calvin,114,MI,Michigan Intercol. Ath. Assn.,III
+Colo. Christian,11403,CO,RMAC,II
+Colorado Mesa,11416,CO,RMAC,II
+Queens (NC),11504,NC,ASUN,I
+Fontbonne,11538,MO,SLIAC,III
+Neb.-Kearney,1156,NE,Mid-America Intercollegiate,II
+Keuka,1159,NY,Empire 8,III
+LaGrange,1162,GA,CCS,III
+Lakeland,1164,WI,NACC,III
+Lander,1167,NY,Peach Belt,II
+Capital,117,OH,OAC,III
+Lenoir-Rhyne,1170,NC,SAC,II
+Limestone,1174,SC,SAC,II
+West Florida,11740,FL,Gulf South,II
+Linfield,1179,OR,NWC,III
+Carleton,118,MN,MIAC,III
+Pitt.-Greensburg,11839,PA,AMCC,III
+Carnegie Mellon,119,PA,UAA,III
+Marian (WI),1196,WI,NACC,III
+Mars Hill,1199,NC,SAC,II
+Alas. Fairbanks,12,AK,Great Northwest,II
+Carroll (WI),120,WI,CCIW,III
+Mary Hardin-Baylor,1203,TX,ASC,III
+Cabrini,88,PA,Atlantic East,III
+CWRU,122,OH,UAA,III
+Albion,15,MI,Michigan Intercol. Ath. Assn.,III
+Montevallo,1238,AL,Gulf South,II
+Allegheny,19,PA,PAC,III
+MSU Moorhead,1240,MN,NSIC,II
+Mount Olive,1245,NC,Conference Carolinas,II
+Centenary (LA),125,LA,SCAC,III
+Neumann,1254,PA,Atlantic East,III
+Newberry,1257,SC,SAC,II
+Northern St.,1266,SD,NSIC,II
+Northland,1267,WI,UMAC,III
+Northwest Nazarene,1274,ID,Great Northwest,II
+Alliance,1277,NY,CACC,II
+Wheeling,12799,WV,MEC,II
+Tusculum,12830,TN,SAC,II
+Centenary (NJ),12884,NJ,Atlantic East,III
+Ouachita Baptist,1289,AR,GAC,II
+Central Mo.,130,MO,Mid-America Intercollegiate,II
+Anderson (SC),13028,SC,SAC,II
+Cairn,1305,PA,CSAC,III
+Pittsburg St.,1314,KS,Mid-America Intercollegiate,II
+Benedictine (IL),296,IL,NACC,III
+Post,1318,CT,CACC,II
+Centre,132,KY,SAA,III
+Rockhurst,1328,MO,GLVC,II
+Lees-McRae,13302,NC,Conference Carolinas,II
+St. Edward's,1334,TX,Lone Star,II
+St. Joseph's (L.I.),1340,NY,Skyline,III
+Saint Martin's,1343,WA,Great Northwest,II
+St. Mary's (TX),1346,TX,Lone Star,II
+St. Thomas Aquinas,1348,NY,ECC,II
+Schreiner,1355,TX,SCAC,III
+Blackburn,64,IL,SLIAC,III
+Southeastern Okla.,1371,OK,GAC,II
+Southern Ark.,1376,AR,GAC,II
+Chris. Newport,139,VA,C2C,III
+Sul Ross St.,1390,TX,ASC,III
+Tarleton St.,1395,TX,WAC,I
+Brockport,78,NY,SUNYAC,III
+Tiffin,1403,OH,G-MAC,II
+Whitworth,1454,WA,NWC,III
+Wayne St. (NE),1433,NE,NSIC,II
+Waynesburg,1434,PA,PAC,III
+West Liberty,1438,WV,MEC,II
+West Virginia St.,1439,WV,MEC,II
+Clark Atlanta,144,GA,SIAC,II
+Western N.M.,1445,NM,Lone Star,II
+Western Ore.,1446,OR,Great Northwest,II
+Western Wash.,1448,WA,Great Northwest,II
+Clark (MA),145,MA,NEWMAC,III
+Carthage,121,WI,CCIW,III
+Castleton,123,VT,Little East,III
+Clarkson,146,NY,Liberty League,III
+Wilmington (OH),1461,OH,OAC,III
+Wingate,1462,NC,SAC,II
+Goucher,1467,MD,Landmark,III
+Cedar Crest,14795,PA,CSAC,III
+Catholic,124,DC,Landmark,III
+Coe,150,IA,American Rivers,III
+Colby,151,ME,NESCAC,III
+Colorado Col.,154,CO,SCAC,III
+Colo. Sch. of Mines,155,CO,RMAC,II
+Colorado St.,156,CO,Mountain West,I
+Rosemont,15882,PA,CSAC,III
+Columbus St.,159,GA,Peach Belt,II
+Albright,16,PA,MAC Commonwealth,III
+Concordia Chicago,160,IL,NACC,III
+Misericordia,16142,PA,MAC Freedom,III
+Connecticut Col.,163,CT,NESCAC,III
+Cornell College,166,IA,MWC,III
+William Peace,17094,NC,USA South,III
+Davis & Elkins,174,WV,MEC,II
+Claremont-M-S,142,CA,SCIAC,III
+Delaware Valley,179,PA,MAC Freedom,III
+Alfred,18,NY,Empire 8,III
+DePauw,177,IN,NCAC,III
+Denver,183,CO,Summit League,I
+Dickinson,185,PA,Centennial,III
+Dist. Columbia,186,DC,ECC,II
+Denison,182,OH,NCAC,III
+Drew,190,NJ,Landmark,III
+Salem (WV),19117,WV,DII Independent,II
+Dubuque,192,IA,American Rivers,III
+Earlham,195,IN,HCAC,III
+East Carolina,196,NC,AAC,I
+East Stroudsburg,197,PA,PSAC,II
+Tex. A&M-Commerce,199,TX,Southland,I
+DeSales,20,PA,MAC Freedom,III
+Eastern Conn. St.,200,CT,Little East,III
+MSOE,20220,WI,NACC,III
+East. Mennonite,203,VA,ODAC,III
+Mont. St. Billings,205,MT,Great Northwest,II
+Eastern N.M.,206,NM,Lone Star,II
+Eckerd,208,FL,Sunshine State,II
+Edinboro,209,PA,PSAC,II
+Alma,21,MI,Michigan Intercol. Ath. Assn.,III
+Elizabethtown,211,PA,Landmark,III
+Elmhurst,212,IL,CCIW,III
+Elmira,213,NY,Empire 8,III
+Chestnut Hill,21323,PA,CACC,II
+Emerson,214,MA,NEWMAC,III
+Emmanuel (MA),215,MA,Great Northeast,III
+Emory & Henry,216,VA,SAC,II
+Emory,217,GA,UAA,III
+Eureka,218,IL,SLIAC,III
+Piedmont,21830,GA,CCS,III
+Stevenson,21852,MD,MAC Commonwealth,III
+American International,22,MA,NE10,II
+FDU-Florham,221,NJ,MAC Freedom,III
+Ferris St.,224,MI,GLIAC,II
+Ferrum,225,VA,ODAC,III
+JWU (Providence),22626,RI,Great Northeast,III
+Fitchburg St.,227,MA,MASCAC,III
+Florida A&M,228,FL,SWAC,I
+American,23,DC,Patriot,I
+Florida Tech,230,FL,Sunshine State,II
+FIU,231,FL,C-USA,I
+Texas-Dallas,23121,TX,ASC,III
+Felician,23157,NJ,CACC,II
+Fla. Southern,233,FL,Sunshine State,II
+Florida,235,FL,SEC,I
+Medaille,23725,NY,Empire 8,III
+Franklin & Marshall,239,PA,Centennial,III
+Franklin Pierce,241,NH,NE10,II
+Fredonia,242,NY,SUNYAC,III
+Frostburg St.,243,MD,MEC,II
+Lesley,24317,MA,NECC,III
+Concordia (TX),24400,TX,ASC,III
+Gannon,246,PA,PSAC,II
+Nova Southeastern,24639,FL,Sunshine State,II
+SUNY Geneseo,247,NY,SUNYAC,III
+Angelo St.,25,TX,Lone Star,II
+Penn St.-Altoona,25719,PA,AMCC,III
+Gettysburg,258,PA,Centennial,III
+Rowan,259,NJ,NJAC,III
+Grambling,261,LA,SWAC,I
+Becker,26107,MA,NECC,III
+A&M-Corpus Christi,26172,TX,Southland,I
+Grand Valley St.,262,MI,GLIAC,II
+Grinnell,264,IA,MWC,III
+Grove City,265,PA,PAC,III
+Gust. Adolphus,266,MN,MIAC,III
+Geneva,30084,PA,PAC,III
+Hamline,268,MN,MIAC,III
+Belmont Abbey,2683,NC,Conference Carolinas,II
+Franklin,2694,IN,HCAC,III
+IUPUI,2699,IN,Horizon,I
+Kansas City,2707,MO,Summit League,I
+Hardin-Simmons,271,TX,ASC,III
+Oglethorpe,2713,GA,SAA,III
+Colorado St.-Pueblo,2720,CO,RMAC,II
+Hartwick,273,NY,Empire 8,III
+Howard Payne,2741,TX,ASC,III
+Lake Erie,2746,OH,G-MAC,II
+Pacific (OR),2751,OR,NWC,III
+Southwest Baptist,2755,MO,GLVC,II
+Western Colo.,2759,CO,RMAC,II
+Heidelberg,278,OH,OAC,III
+Minn.-Crookston,27854,MN,NSIC,II
+Farmingdale St.,27892,NY,Skyline,III
+Albertus Magnus,2798,CT,Great Northeast,III
+Hillsdale,280,MI,G-MAC,II
+Hamilton,267,NY,NESCAC,III
+St. Thomas (TX),2810,TX,SCAC,III
+Washburn,2814,KS,Mid-America Intercollegiate,II
+Hollins,284,VA,ODAC,III
+Birmingham-Southern,28593,AL,SAA,III
+Hiram,281,OH,NCAC,III
+Transylvania,28749,KY,HCAC,III
+Cal Poly Humboldt,291,CA,CCAA,II
+Hunter,292,NY,CUNYAC,III
+Idaho St.,294,ID,Big Sky,I
+Hope,286,MI,Michigan Intercol. Ath. Assn.,III
+Illinois Col.,297,IL,MWC,III
+Adelphi,3,NY,NE10,II
+Arkansas St.,30,AR,Sun Belt,I
+Ill. Wesleyan,300,IL,CCIW,III
+Trevecca Nazarene,30002,TN,G-MAC,II
+Lee,30013,TN,Gulf South,II
+Texas-Tyler,30028,TX,Lone Star,II
+Northwestern-St. Paul,30031,MN,UMAC,III
+Finlandia,30032,MI,C2C,III
+Crown (MN),30035,MN,UMAC,III
+Mount Aloysius,30036,PA,AMCC,III
+Trine,30037,IN,Michigan Intercol. Ath. Assn.,III
+Bethany Lutheran,30038,MN,UMAC,III
+North Central (MN),30039,MN,UMAC,III
+Mitchell,30042,CT,NECC,III
+Palm Beach Atl.,30045,FL,Sunshine State,II
+Keystone,30047,PA,CSAC,III
+Ill. Springfield,30050,IL,GLVC,II
+Newman,30054,KS,Mid-America Intercollegiate,II
+Cal St. Monterey Bay,30055,CA,CCAA,II
+Seton Hill,30063,PA,PSAC,II
+Saint Vincent,30064,PA,PAC,III
+NVU-Lyndon,30065,VT,North Atlantic,III
+SUNY Morrisville,30067,NY,United East,III
+Franciscan,30069,OH,PAC,III
+William Smith,30073,NY,Liberty League,III
+Penn St. Harrisburg,30081,PA,United East,III
+Montclair St.,442,NJ,NJAC,III
+Lancaster Bible,30085,PA,United East,III
+Tex. Permian Basin,30088,TX,Lone Star,II
+Flagler,30092,FL,Peach Belt,II
+AUM,30093,AL,Gulf South,II
+Utah Tech,30095,UT,WAC,I
+Ark.-Fort Smith,30105,AR,Lone Star,II
+Covenant,30111,GA,CCS,III
+Moravian,443,PA,Landmark,III
+Ohio Dominican,30119,OH,G-MAC,II
+William Jewell,30120,MO,GLVC,II
+Academy of Art,30123,CA,PacWest,II
+Cedarville,30124,OH,G-MAC,II
+Minot St.,30125,ND,NSIC,II
+Notre Dame (OH),30126,OH,MEC,II
+Simon Fraser,30127,NA,Great Northwest,II
+Sioux Falls,30128,SD,NSIC,II
+Black Hills St.,30134,SD,RMAC,II
+Lindenwood (MO),30136,MO,OVC,I
+McKendree,30138,IL,GLVC,II
+South Dakota Mines,30139,SD,RMAC,II
+Ursuline,30140,OH,G-MAC,II
+Walsh,30141,OH,G-MAC,II
+Fresno Pacific,30147,CA,PacWest,II
+Point Loma,30149,CA,PacWest,II
+Shorter,30151,GA,Gulf South,II
+Southern Nazarene,30152,OK,GAC,II
+Union (TN),30153,TN,Gulf South,II
+Young Harris,30154,GA,Peach Belt,II
+Houghton,30160,NY,Empire 8,III
+Sarah Lawrence,30163,NY,Skyline,III
+Southern Va.,30164,VA,USA South,III
+SUNY Canton,30165,NY,North Atlantic,III
+Berea,30171,KY,CCS,III
+Iowa Wesleyan,30173,IA,NA,NAIA
+Daemen,30174,NY,ECC,II
+Lubbock Christian,30177,TX,Lone Star,II
+Northwestern Okla.,30178,OK,GAC,II
+UVa-Wise,30181,VA,SAC,II
+Bryn Athyn,30188,PA,CSAC,III
+Penn College,30190,PA,United East,III
+Southern Wesleyan,30192,SC,Conference Carolinas,II
+Belhaven,30197,MS,CCS,III
+Cal St. San Marcos,30198,CA,CCAA,II
+Concordia (CA),30199,CA,PacWest,II
+Concordia Portland,30200,OR,NA,NA
+Okla. Baptist,30202,OK,GAC,II
+Westminster (UT),30209,UT,RMAC,II
+Dean,30219,MA,Great Northeast,III
+Biola,30220,CA,PacWest,II
+Davenport,30221,MI,GLIAC,II
+Purdue Northwest,30222,IN,GLIAC,II
+SUNY Delhi,30225,NY,North Atlantic,III
+Indiana (PA),307,PA,PSAC,II
+UIndy,309,IN,GLVC,II
+Ithaca,313,NY,Liberty League,III
+Jackson St.,314,MS,SWAC,I
+Jacksonville St.,315,AL,ASUN,I
+James Madison,317,VA,Sun Belt,I
+John Carroll,320,OH,OAC,III
+John Jay,321,NY,CUNYAC,III
+Johns Hopkins,322,MD,Centennial,III
+Johnson C. Smith,323,NC,CIAA,II
+Juniata,325,PA,Landmark,III
+Kalamazoo,326,MI,Michigan Intercol. Ath. Assn.,III
+Keene St.,330,NH,Little East,III
+Kentucky St.,332,KY,SIAC,II
+Ky. Wesleyan,333,KY,G-MAC,II
+Kenyon,335,OH,NCAC,III
+King's (PA),336,PA,MAC Freedom,III
+Knox,337,IL,MWC,III
+Kutztown,339,PA,PSAC,II
+La Verne,341,CA,SCIAC,III
+Lake Forest,344,IL,MWC,III
+Lake Superior St.,345,MI,GLIAC,II
+Lawrence,348,WI,MWC,III
+Le Moyne,349,NY,NE10,II
+Ashland,35,OH,G-MAC,II
+Lebanon Valley,351,PA,MAC Commonwealth,III
+Lewis,354,IL,GLVC,II
+West Alabama,358,AL,Gulf South,II
+Assumption,36,MA,NE10,II
+Lock Haven,360,PA,PSAC,II
+Loras,364,IA,American Rivers,III
+LSU,365,LA,SEC,I
+Louisiana Tech,366,LA,C-USA,I
+Loyola Marymount,370,CA,WCC,I
+Luther,372,IA,American Rivers,III
+Lycoming,373,PA,MAC Freedom,III
+Lynchburg,374,VA,ODAC,III
+Macalester,376,MN,MIAC,III
+MacMurray,377,IL,NA,NA
+Me.-Farmington,379,ME,North Atlantic,III
+Augsburg,38,MN,MIAC,III
+Manhattanville,382,NY,Skyline,III
+Minnesota St.,383,MN,NSIC,II
+Marietta,385,OH,OAC,III
+Mary Baldwin,389,VA,USA South,III
+Augusta,39,GA,Peach Belt,II
+Mary Washington,390,VA,C2C,III
+Marymount (VA),394,VA,Atlantic East,III
+Maryville (MO),395,MO,GLVC,II
+Marywood,397,PA,Atlantic East,III
+MIT,398,MA,NEWMAC,III
+Augustana (IL),40,IL,CCIW,III
+Mercy,407,NY,ECC,II
+Mercyhurst,408,PA,PSAC,II
+Meredith,409,NC,USA South,III
+Augustana (SD),41,SD,NSIC,II
+Messiah,411,PA,MAC Commonwealth,III
+MSU Denver,413,MN,RMAC,II
+Michigan Tech,417,MI,GLIAC,II
+Aurora,42,IL,NACC,III
+Middlebury,420,VT,NESCAC,III
+Miles,422,AL,SIAC,II
+Millersville,423,PA,PSAC,II
+Millikin,424,IL,CCIW,III
+Millsaps,426,MS,SAA,III
+Minn. Duluth,427,MN,NSIC,II
+Mississippi College,429,MS,Gulf South,II
+Mississippi Valley State,432,MS,SWAC,I
+Missouri S&T,435,MO,GLVC,II
+Missouri-St. Louis,436,MO,GLVC,II
+Monmouth (IL),438,IL,MWC,III
+Averett,44,VA,ODAC,III
+Pitt.-Bradford,1315,PA,AMCC,III
+Penn St.-Abington,30114,PA,United East,III
+Morgan St.,446,MD,MEAC,I
+Mount Holyoke,449,MA,NEWMAC,III
+Babson,45,MA,NEWMAC,III
+CMSV,451,NY,Skyline,III
+Mount Union,452,OH,OAC,III
+Muhlenberg,453,PA,Centennial,III
+Muskingum,455,OH,OAC,III
+Baldwin Wallace,46,OH,OAC,III
+UNCW,460,NC,CAA,I
+Nazareth,461,NY,Empire 8,III
+Neb. Wesleyan,462,NE,American Rivers,III
+UNLV,465,NV,Mountain West,I
+New England Col.,467,NH,NECC,III
+Southern N.H.,468,NH,NE10,II
+New Haven,470,CT,NE10,II
+NYU,479,NY,UAA,III
+CCNY,480,NY,CUNYAC,III
+Nichols,484,MA,CCC,III
+MCLA,486,MA,MASCAC,III
+North Alabama,487,AL,ASUN,I
+N.C. A&T,488,NC,CAA,I
+Barry,49,FL,Sunshine State,II
+NC State,490,NC,ACC,I
+N.C. Wesleyan,491,NC,USA South,III
+North Dakota,494,ND,Summit League,I
+North Park,496,IL,CCIW,III
+Truman State,499,MO,GLVC,II
+Bates,50,ME,NESCAC,III
+Northeastern,500,MA,CAA,I
+Northern Michigan,506,MI,GLIAC,II
+Northwest Missouri State,507,MO,Mid-America Intercollegiate,II
+Northwood,510,MI,G-MAC,II
+Norwich,511,VT,Great Northeast,III
+Oakland,514,MI,Horizon,I
+Oberlin,515,OH,NCAC,III
+Occidental,516,CA,SCIAC,III
+Ohio Northern,517,OH,OAC,III
+Ohio,519,OH,MAC,I
+Olivet,525,MI,Michigan Intercol. Ath. Assn.,III
+SUNY Oneonta,526,NY,SUNYAC,III
+Oswego St.,530,NY,SUNYAC,III
+Otterbein,531,OH,OAC,III
+Elms,532,MA,Great Northeast,III
+Pace,533,NY,NE10,II
+UNC Pembroke,537,NC,Conference Carolinas,II
+Penn St.-Behrend,538,PA,AMCC,III
+Bemidji St.,54,MN,NSIC,II
+Pepperdine,541,CA,WCC,I
+Jefferson,543,PA,CACC,II
+Pine Manor,544,MA,DIII Independent,III
+Pitt.-Johnstown,546,PA,PSAC,II
+Plattsburgh St.,547,NY,SUNYAC,III
+Pomona-Pitzer,549,CA,SCIAC,III
+Benedict,55,SC,SIAC,II
+SUNY Potsdam,552,NY,SUNYAC,III
+Prairie View A&M,553,TX,SWAC,I
+Puget Sound,557,WA,NWC,III
+Bentley,56,MA,NE10,II
+Queens (NY),560,NY,ECC,II
+Quincy,561,IL,GLVC,II
+Ramapo,564,NJ,NJAC,III
+Randolph-Macon,565,VA,ODAC,III
+Randolph,566,VA,ODAC,III
+Redlands,567,CA,SCIAC,III
+Regis (CO),568,CO,RMAC,II
+Regis (MA),569,MA,Great Northeast,III
+Rhode Island College,571,RI,Little East,III
+Rhodes,573,TN,SAA,III
+Ripon,577,WI,MWC,III
+Baruch,58,NY,CUNYAC,III
+Rochester (NY),581,NY,UAA,III
+Rockford,582,IL,NACC,III
+Roger Williams,583,RI,CCC,III
+Rollins,584,FL,Sunshine State,II
+Rose-Hulman,585,IN,HCAC,III
+Rutgers-Newark,589,NJ,NJAC,III
+Bethany (WV),59,WV,PAC,III
+Saginaw Valley,591,MI,GLIAC,II
+St. Anselm,593,NH,NE10,II
+Saint Benedict,595,MN,MIAC,III
+St. Catherine,597,MN,MIAC,III
+St. Cloud St.,598,MN,NSIC,II
+Alabama A&M,6,AL,SWAC,I
+Bethel (MN),60,MN,MIAC,III
+St. John Fisher,601,NY,Empire 8,III
+St. Lawrence,607,NY,Liberty League,III
+Saint Leo,608,FL,Sunshine State,II
+St. Mary's (MD),611,MD,United East,III
+Saint Mary's (MN),612,MN,MIAC,III
+Saint Michael's,613,VT,NE10,II
+St. Norbert,614,WI,NACC,III
+Stevens,679,NJ,MAC Freedom,III
+St. Scholastica,618,MN,MIAC,III
+St. Olaf,615,MN,MIAC,III
+Salisbury,622,MD,C2C,III
+Salve Regina,623,RI,CCC,III
+San Fran. St.,628,CA,CCAA,II
+Scranton,633,PA,Landmark,III
+Seattle Pacific,634,WA,Great Northwest,II
+Shenandoah,637,VA,ODAC,III
+Shippensburg,638,PA,PSAC,II
+Siena,639,NY,MAAC,I
+TCNJ,712,NJ,NJAC,III
+Simpson,641,CA,American Rivers,III
+Skidmore,642,NY,Liberty League,III
+Smith,644,MA,NEWMAC,III
+Sonoma St.,645,CA,CCAA,II
+South Alabama,646,AL,Sun Belt,I
+South Carolina St.,647,SC,MEAC,I
+Bloomsburg,65,PA,PSAC,II
+Sewanee,652,TN,SAA,III
+UMass Dartmouth,656,MA,Little East,III
+Southern Conn. St.,658,CT,NE10,II
+Southern Ill.,659,IL,MVC,I
+SIUE,660,IL,OVC,I
+Southern Ind.,661,IN,OVC,I
+Southern Me.,662,ME,Little East,III
+Southern Utah,667,UT,WAC,I
+Missouri St.,669,MO,MVC,I
+Springfield,673,MA,NEWMAC,III
+Staten Island,675,NY,ECC,II
+Texas Lutheran,1400,TX,SCAC,III
+Stonehill,682,MA,NEC,I
+Suffolk,684,MA,CCC,III
+Susquehanna,685,PA,Landmark,III
+Swarthmore,686,PA,Centennial,III
+Tampa,689,FL,Sunshine State,II
+Bowdoin,69,ME,NESCAC,III
+Tennessee St.,691,TN,OVC,I
+Chattanooga,693,TN,SoCon,I
+Tex. A&M-Kingsville,696,TX,Lone Star,II
+Texas Southern,699,TX,SWAC,I
+Bowie St.,70,MD,CIAA,II
+Texas Woman's,701,TX,Lone Star,II
+Thiel,707,PA,PAC,III
+Chicago,137,IL,UAA,III
+Trinity (CT),713,CT,NESCAC,III
+Trinity (TX),715,TX,SCAC,III
+Tufts,717,MA,NESCAC,III
+Tulsa,719,OK,AAC,I
+Tuskegee,720,AL,SIAC,II
+Coast Guard,722,CT,NEWMAC,III
+Union (NY),727,NY,Liberty League,III
+Upper Iowa,728,IA,NSIC,II
+Brandeis,73,MA,UAA,III
+Ursinus,730,PA,Centennial,III
+Utah St.,731,UT,Mountain West,I
+Valdosta St.,734,GA,Gulf South,II
+Vassar,737,NY,Liberty League,III
+Bridgeport,74,CT,CACC,II
+Va. Wesleyan,745,VA,ODAC,III
+Virginia,746,VA,ACC,I
+Bridgewater (VA),75,VA,ODAC,III
+Wartburg,750,IA,American Rivers,III
+Washington & Jefferson,751,PA,PAC,III
+Washington Col.,753,MD,Centennial,III
+WashU,755,MO,UAA,III
+Wayne St. (MI),757,MI,GLIAC,II
+Webster,759,MO,SLIAC,III
+Wellesley,760,MA,NEWMAC,III
+Wentworth,762,MA,CCC,III
+Wesleyan (CT),764,CT,NESCAC,III
+West Texas A&M,767,TX,Lone Star,II
+Western Connecticut St.,770,CT,Little East,III
+Western Ky.,772,KY,C-USA,I
+McDaniel,773,MD,Centennial,III
+Western New Eng.,775,MA,CCC,III
+Wheaton (IL),778,IL,CCIW,III
+Wheaton (MA),779,MA,NEWMAC,III
+St. Thomas (MN),620,MN,Summit League,I
+Whitman,780,WA,NWC,III
+Widener,783,PA,MAC Freedom,III
+Wilkes,784,PA,MAC Freedom,III
+Willamette,785,OR,NWC,III
+William Paterson,787,NJ,NJAC,III
+Winona St.,790,MN,NSIC,II
+Winston-Salem,791,NC,CIAA,II
+Wis.-Eau Claire,793,WI,WIAC,III
+Wisconsin-La Crosse,795,WI,WIAC,III
+Wis.-Oshkosh,798,WI,WIAC,III
+Wisconsin-Parkside,799,WI,GLIAC,II
+Brown,80,RI,Ivy League,I
+Wis.-Platteville,800,WI,WIAC,III
+Wisconsin-River Falls,801,WI,WIAC,III
+Wisconsin-Stevens Point,802,WI,WIAC,III
+Wisconsin-Stout,803,WI,WIAC,III
+Wisconsin-Superior,804,WI,UMAC,III
+Wisconsin-Whitewater,805,WI,WIAC,III
+Wittenberg,806,OH,NCAC,III
+Wooster,807,OH,NCAC,III
+WPI,808,MA,NEWMAC,III
+Westminster (PA),1451,PA,PAC,III
+Wright St.,810,OH,Horizon,I
+Yale,813,CT,Ivy League,I
+York (PA),815,PA,MAC Commonwealth,III
+Youngstown St.,817,OH,Horizon,I
+Hilbert,8398,NY,AMCC,III
+Buena Vista,84,IA,American Rivers,III
+Hood,8404,MD,MAC Commonwealth,III
+Ark.-Monticello,8411,AR,GAC,II
+LeTourneau,8490,TX,ASC,III
+McMurry,8530,TX,ASC,III
+Buffalo,86,NY,MAC,I
+St. Mary's (IN),8688,IN,Michigan Intercol. Ath. Assn.,III
+Southwest Minn. St.,8736,MN,NSIC,II
+Southwestern Okla.,8744,OK,GAC,II
+Southwestern (TX),8746,TX,SCAC,III
+Worcester St.,809,MA,MASCAC,III
+Chowan,8875,NC,Conference Carolinas,II
+Caltech,89,CA,SCIAC,III
+Wis. Lutheran,8911,WI,NACC,III
+Converse,8935,SC,Conference Carolinas,II
+East Central,8965,OK,GAC,II
+Endicott,8981,MA,CCC,III
+Georgian Court,9004,NJ,CACC,II
+Fort Hays St.,9011,KS,Mid-America Intercollegiate,II
+Mo. Southern St.,9012,MO,Mid-America Intercollegiate,II
+Missouri Western,9013,MO,Mid-America Intercollegiate,II
+Concordia-St. Paul,9081,MN,NSIC,II
+Cal Poly Pomona,91,CA,CCAA,II
+Cal St. Dom. Hills,92,CA,CCAA,II
+Adams St.,929,CO,RMAC,II
+Cal St. San Bernardino,93,CA,CCAA,II
+Alvernia,938,PA,MAC Commonwealth,III
+Anderson (IN),939,IN,HCAC,III
+Arkansas Tech,947,AR,GAC,II
+Chico St.,95,CA,CCAA,II
+Austin,953,TX,SCAC,III
+Bard,962,NY,Liberty League,III
+West Va. Wesleyan,9630,WV,MEC,II
+Arcadia,966,PA,MAC Freedom,III
+Embry-Riddle (FL),9680,FL,Sunshine State,II
+St. Elizabeth,9684,NJ,CSAC,III
+Berry,973,GA,SAA,III
+UC-Colo. Springs,9754,CA,RMAC,II
+Cal St. East Bay,98,CA,CCAA,II
+Bluefield St.,985,WV,DII Independent,II
+Caldwell,995,NJ,CACC,II
+Cameron,996,OK,Lone Star,II
+Valley Forge,30166,PA,CSAC,III
+Talladega,505160,AL,NA,NAIA
+Edward Waters,30244,FL,SIAC,II
+Pfeiffer,542,NC,USA South,III
