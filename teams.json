@@ -2946,15 +2946,8 @@
   {
     "team": "Dickinson",
     "twitter": "DickinsonWBB",
-    "url": "https://www.dickinsonathletics.com/sports/wvball/index",
+    "url": "https://dickinsonathletics.com/sports/womens-volleyball",
     "ncaa_id": 185
-  },
-  {
-    "team": "Dist. Columbia",
-    "twitter": "UDC_WBB",
-    "url": "https://www.udcfirebirds.com/sports/wvball/index",
-    "ncaa_id": 186,
-    "roster": "skip"
   },
   {
     "team": "Denison",
@@ -3026,13 +3019,13 @@
   {
     "team": "MSOE",
     "twitter": "MSOEwbb",
-    "url": "https://www.go-raiders.com/sports/wvball/index",
+    "url": "https://msoeraiders.com/sports/womens-volleyball",
     "ncaa_id": 20220
   },
   {
     "team": "East. Mennonite",
     "twitter": "emu_wbb",
-    "url": "https://www.emuroyals.com/sports/wvball/index",
+    "url": "https://emuroyals.com/sports/womens-volleyball",
     "ncaa_id": 203
   },
   {
@@ -3066,7 +3059,7 @@
   {
     "team": "Alma",
     "twitter": "AlmaScotsWBB",
-    "url": "https://almascots.com/sports/wvball/index",
+    "url": "https://almascots.com/sports/womens-volleyball",
     "ncaa_id": 21
   },
   {
@@ -3099,15 +3092,14 @@
   {
     "team": "Emerson",
     "twitter": "Emersonwvball",
-    "url": "https://www.emersonlions.com/sports/wvball/index",
+    "url": "https://emersonlions.com/sports/womens-volleyball",
     "ncaa_id": 214
   },
   {
     "team": "Emmanuel (MA)",
     "twitter": "EmmanuelHoops",
     "url": "https://www.goecsaints.com/sports/w-volley/index",
-    "ncaa_id": 215,
-    "private": true
+    "ncaa_id": 215
   },
   {
     "team": "Emory & Henry",
