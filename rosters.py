@@ -1267,6 +1267,28 @@ def shotscraper_table_wbkb(team, season):
     roster = shotscraper_caller(team, season, url, javascript_code)
     return roster
 
+def shotscraper_table_wooster(team, season):
+
+    javascript_code = """
+    Array.from(document.querySelectorAll('.roster table tbody tr'), el => {
+        const id = '';
+        const name = el.querySelector('a').innerText.trim();
+        const year = el.querySelectorAll('td')[1].innerText;
+        const height = el.querySelectorAll('td')[3].innerText;
+        const position = el.querySelectorAll('td')[2].innerText;
+        const hometown = el.querySelectorAll('td')[4].innerText;
+        const high_school = el.querySelectorAll('td')[5].innerText;
+        const previous_school = '';
+        const jersey = el.querySelectorAll('td')[0].innerText;
+        const url = el.querySelector('a')['href'];
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    url = team['url'].replace("index", season) + "/roster"
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
+
 def shotscraper_table_plain(team, season):
 
     javascript_code = """
