@@ -561,6 +561,35 @@ def fetch_and_parse_kansas_state(team, season):
     roster = shotscraper_caller(team, season, url, javascript_code)
     return roster
 
+
+def fetch_and_parse_laverne(team, season):
+
+    javascript_code = """
+    Array.from(document.querySelectorAll('li.sidearm-roster-player'), el => {
+        const id = el.attributes['data-player-id'].textContent;
+        const name = el.querySelector('h3').innerText;
+        const year = el.querySelector('.sidearm-roster-player-academic-year').innerText;
+        let ht_el = el.querySelector('.sidearm-roster-player-height');
+        const height = ht_el ? ht_el.innerText : '';
+        let pos_el = el.querySelector('.sidearm-roster-player-position');
+        const position = pos_el ? pos_el.innerText.trim() : '';
+        let hm_el = el.querySelector('.sidearm-roster-player-hometown');
+        const hometown = hm_el ? hm_el.innerText : '';
+        hs_el = el.querySelector('.sidearm-roster-player-highschool');
+        const high_school = hs_el ? hs_el.innerText : '';
+        ps_el = el.querySelector('.sidearm-roster-player-previous-school');
+        const previous_school = ps_el ? ps_el.innerText : '';
+        let j_el = el.querySelector('.sidearm-roster-player-jersey-number');
+        const jersey = j_el ? j_el.innerText : '';
+        const url = 'https://www.kstatesports.com' + el.attributes['data-player-url'].textContent;
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    url = team['url'] + "/roster/" + season
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
+
 def fetch_and_parse_valpo(team, season):
 
     javascript_code = """
@@ -900,6 +929,8 @@ def get_all_rosters(season, teams = []):
                     roster = fetch_and_parse_kansas_state(team, season)
                 elif team['ncaa_id'] == 334:
                     roster = fetch_and_parse_kentucky(team, season)
+                elif team['ncaa_id'] == 341:
+                    roster = fetch_and_parse_laverne(team, season)
                 elif team['ncaa_id'] == 388:
                     roster = shotscraper_marshall(team, season)
                 elif team['ncaa_id'] == 463:
@@ -1047,7 +1078,7 @@ def shotscraper_card_image(team, season):
     javascript_code = """
     Array.from(document.querySelectorAll('.s-person-card__content'), el => {
         const id = '';
-        const name = el.querySelector('.s-person-card__header__person-details-personal').innerText;
+        const name = el.querySelector('#s-person-card__header__person-details-personal').innerText;
         const year = el.querySelectorAll('.s-person-details__bio-stats-item')[1].innerText;
         let ht = el.querySelectorAll('.s-person-details__bio-stats-item')[2];
         const height = ht ? ht.innerText : '';
@@ -1254,6 +1285,28 @@ def shotscraper_table_wbkb(team, season):
         const year = el.querySelectorAll('td')[2].innerText;
         const height = el.querySelectorAll('td')[3].innerText;
         const position = el.querySelectorAll('td')[1].innerText;
+        const hometown = el.querySelectorAll('td')[4].innerText.split(' / ')[0];
+        const high_school = el.querySelectorAll('td')[4].innerText.split(' / ')[1];
+        const previous_school = '';
+        const jersey = el.querySelectorAll('td')[0].innerText;
+        const url = el.querySelector('a')['href'];
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+
+    url = team['url'].replace("index", season) + "/roster"
+    roster = shotscraper_caller(team, season, url, javascript_code)
+    return roster
+
+def shotscraper_table_wbkb2(team, season):
+
+    javascript_code = """
+    Array.from(document.querySelectorAll('.roster table tbody tr'), el => {
+        const id = '';
+        const name = el.querySelector('a').innerText.trim();
+        const year = el.querySelectorAll('td')[1].innerText;
+        const height = el.querySelectorAll('td')[3].innerText;
+        const position = el.querySelectorAll('td')[2].innerText;
         const hometown = el.querySelectorAll('td')[4].innerText.split(' / ')[0];
         const high_school = el.querySelectorAll('td')[4].innerText.split(' / ')[1];
         const previous_school = '';
