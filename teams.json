@@ -4612,9 +4612,7 @@
     "team": "Mount Holyoke",
     "twitter": "mhc_basketball",
     "url": "https://athletics.mtholyoke.edu/sports/wvball/index",
-    "ncaa_id": 449,
-    "private": true,
-    "roster": "skip"
+    "ncaa_id": 449
   },
   {
     "team": "Babson",
@@ -5271,12 +5269,6 @@
     "url": "https://sienasaints.com/sports/womens-volleyball",
     "ncaa_id": 639,
     "stats_name": "Siena"
-  },
-  {
-    "team": "TCNJ",
-    "twitter": "tcnjwb",
-    "url": "https://tcnjathletics.com/sports/womens-volleyball",
-    "ncaa_id": 712
   },
   {
     "team": "Simpson",
