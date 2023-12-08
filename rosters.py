@@ -919,6 +919,8 @@ def get_all_rosters(season, teams = []):
                     roster = fetch_and_parse_miami(team, season)
                 elif team['ncaa_id'] == 147:
                     roster = fetch_and_parse_clemson(team, season)
+                elif team['ncaa_id'] == 224:
+                    roster = shotscraper_ferris(team, season)
                 elif team['ncaa_id'] == 311:
                     roster = fetch_and_parse_iowa_state(team, season)
                 elif team['ncaa_id'] == 312:
@@ -958,11 +960,13 @@ def get_all_rosters(season, teams = []):
                 elif team['ncaa_id'] == 742:
                     roster = fetch_and_parse_virginia_tech(team, season)
                 elif team['ncaa_id'] == 809:
-                    roster = shotscraper_table_worc(team, season)
+                    roster = shotscraper_table_wbkb2(team, season)
                 elif team['ncaa_id'] == 811:
                     roster = fetch_and_parse_wyoming(team, season)
                 elif team['ncaa_id'] == 1000:
                     roster = shotscraper_table_wvolley(team, season)
+                elif team['ncaa_id'] in [807, 746]:
+                    roster = shotscraper_table_wooster(team, season)
                 elif team['ncaa_id'] == 532:
                     continue
                 elif 'wvball' in team['url']:
@@ -1163,6 +1167,27 @@ def shotscraper_table(team, season):
     url = team['url'] + "/roster/" + season
     roster = shotscraper_caller(team, season, url, javascript_code)
     return roster
+
+def shotscraper_ferris(team, season):
+    javascript_code = """
+    Array.from(document.querySelector('table').querySelectorAll('tr:not(:first-child)'), el => {
+          const id = '';
+          const name = el.querySelector('a').innerText.trim();
+          const year = el.querySelectorAll('td')[3].innerText;
+          const height = el.querySelectorAll('td')[4].innerText;
+          const position = el.querySelectorAll('td')[2].innerText;
+          const hometown = el.querySelectorAll('td')[5].innerText.split('/')[0];
+          const high_school = el.querySelectorAll('td')[5].innerText.split('/')[1];
+          const previous_school = '';
+          const jersey = el.querySelectorAll('td')[0].innerText;
+          const url = el.querySelector('a')['href'];
+          return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+      })
+      """
+
+      url = team['url'] + "/roster/" + season
+      roster = shotscraper_caller(team, season, url, javascript_code)
+      return roster
 
 def shotscraper_ucf(team, season):
 

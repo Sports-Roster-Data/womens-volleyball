@@ -2480,7 +2480,7 @@
   {
     "team": "Centenary (LA)",
     "twitter": "CentenaryWBB",
-    "url": "https://centenarycyclones.com/sports/womens-volleyball",
+    "url": "https://www.gocentenary.com/sports/wvball/index",
     "ncaa_id": 125,
     "stats_name": "Centenary (LA)"
   },
@@ -2541,6 +2541,7 @@
   {
     "team": "Centenary (NJ)",
     "twitter": "CyclonesWBB",
+    "url": "https://centenarycyclones.com/sports/womens-volleyball",
     "ncaa_id": 12884
   },
   {
@@ -3400,7 +3401,7 @@
   {
     "team": "Hardin-Simmons",
     "twitter": "cowgirl_bball",
-    "url": "https://www.hsuathletics.com/sports/w-volley/index",
+    "url": "https://hsuathletics.com/sports/womens-volleyball",
     "ncaa_id": 271
   },
   {
@@ -5965,9 +5966,8 @@
   {
     "team": "Caltech",
     "twitter": "caltechwbb",
-    "url": "https://www.gocaltech.com/sports/wvball/index",
-    "ncaa_id": 89,
-    "roster": "skip"
+    "url": "https://gocaltech.com/sports/womens-volleyball",
+    "ncaa_id": 89
   },
   {
     "team": "Wis. Lutheran",

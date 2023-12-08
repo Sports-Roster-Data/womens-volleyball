@@ -13,7 +13,8 @@ teams <- read_csv("teams.csv")
 
 rosters <- read_csv("rosters_2023.csv")
 
-teams_without_rosters <- teams |> left_join(rosters, join_by(ncaa_id, team)) |> filter(is.na(name))
+teams_without_rosters <- teams |> left_join(rosters, join_by(ncaa_id)) |> filter(is.na(name))
+
 ```
 
 # Height Cleaning
