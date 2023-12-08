@@ -4915,14 +4915,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 1245,Mount Olive,5463,Gracie Payne,Freshman,"Fuquay, N.C.",Middle Creek,NA,"5'4""",Defensive,24,https://www.umotrojans.com/sports/womens-volleyball/roster/gracie-payne/5463,202320
 1245,Mount Olive,5464,Zoe Deese,Freshman,"Sanford, N.C.",Lee Christian,NA,"5'3""",Defensive,25,https://www.umotrojans.com/sports/womens-volleyball/roster/zoe-deese/5464,202320
 1245,Mount Olive,5455,Sam Widelski,Sophomore,"Wake Forest, N.C.",Wake Forest,NA,"5'6""",Outside,28,https://www.umotrojans.com/sports/womens-volleyball/roster/sam-widelski/5455,202320
-125,Centenary (LA),5483,Jenny Thistlethwaite,Freshman,"Norco, CA.",Norco High School,NA,"5'9""",Middle,1,https://www.centenarycyclones.com/sports/womens-volleyball/roster/jenny-thistlethwaite/5483,202320
-125,Centenary (LA),5482,Kim Stallworth,Sophomore,"Jackson, N.J.",Jackson Liberty,NA,NA,S/RS,8,https://www.centenarycyclones.com/sports/womens-volleyball/roster/kim-stallworth/5482,202320
-125,Centenary (LA),5478,Isabel Moreira,Junior,"San Juan, Puerto Rico",Academia Adventista Metropolitana,NA,"5'0""",L/DS,9,https://www.centenarycyclones.com/sports/womens-volleyball/roster/isabel-moreira/5478,202320
-125,Centenary (LA),5475,Cameron Fulcher,Sophomore,"Paterson, N.J.",Immaculate Conception,NA,NA,MB/RS,12,https://www.centenarycyclones.com/sports/womens-volleyball/roster/cameron-fulcher/5475,202320
-125,Centenary (LA),5476,Asia Logan,Sophomore,"Hi Nella, N.J.",Sterling,NA,NA,Libero,16,https://www.centenarycyclones.com/sports/womens-volleyball/roster/asia-logan/5476,202320
-125,Centenary (LA),5474,Alyssa Bizzarro,Senior,"Hackettstown, N.J.",Hackettstown,NA,NA,MB/OH,17,https://www.centenarycyclones.com/sports/womens-volleyball/roster/alyssa-bizzarro/5474,202320
-125,Centenary (LA),5480,Vanessa Pagano,Sophomore,"Flemington, N.J.",Hunterdon Central Regional,NA,NA,S/RS,18,https://www.centenarycyclones.com/sports/womens-volleyball/roster/vanessa-pagano/5480,202320
-125,Centenary (LA),5481,Poppy Skjonnemand,Freshman,"Southampton, UK",West Morris Mendham HS,NA,"5'10""",Middle,19,https://www.centenarycyclones.com/sports/womens-volleyball/roster/poppy-skjonnemand/5481,202320
 1254,Neumann,15206,Naye Cruz,First Year,"Carolina, Puerto Rico",St. Francis,NA,"5'8""",Middle,1,https://www.neumannathletics.com/sports/womens-volleyball/roster/naye-cruz/15206,202320
 1254,Neumann,15198,Jules Dill,Senior,"Middletown, Del.",Appoquinimink,NA,"5'11""",Middle,2,https://www.neumannathletics.com/sports/womens-volleyball/roster/jules-dill/15198,202320
 1254,Neumann,15197,Tori Burgess,Senior,"Delray Beach, Fla.",Grandview Prep,NA,"5'6""",Libero,4,https://www.neumannathletics.com/sports/womens-volleyball/roster/tori-burgess/15197,202320
@@ -13543,33 +13535,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 623,Salve Regina,NA,Sydney Ramsey,Sr.,"Garden City, N.Y.",H. Frank Carey,NA,5'10,Middle Hitter,16,https://www.salveathletics.com/sports/wvball/2023-24/bios/ramsey_sydney_ydsc,2023-24
 623,Salve Regina,NA,Cecelia Bronson,Fr.,"Vadnais Hts, Minn. /",NA,NA,5'9,Middle Hitter,17,https://www.salveathletics.com/sports/wvball/2023-24/bios/bronson_cecelia_jnuu,2023-24
 623,Salve Regina,NA,Emma Cate,Fr.,"Henniker, N.H. /",NA,NA,5'6,Opposite,18,https://www.salveathletics.com/sports/wvball/2023-24/bios/cate_emma_2whu,2023-24
-641,Simpson,NA,1,Fr.,"Montezuma, Iowa",New Mahaska,NA,5-6,DS,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/shipley_jalayna_tah9,2023-24
-641,Simpson,NA,2,Sr.,"Glenwood, Iowa",Glenwood,NA,5-8,S,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/bertini_taryn_ld6k,2023-24
-641,Simpson,NA,3,Sr.,"Irving, Texas",Ranchview,NA,5-3,DS,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/ghalibaf_iman_tqyj,2023-24
-641,Simpson,NA,4,Sr.,"Cedar Falls, Iowa",Cedar Falls,NA,5-10,OH,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/campbell_teria_s0db,2023-24
-641,Simpson,NA,5,Jr.,"Durand, Ill.",Durand,NA,6-1,MH,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/conroy_elizabeth_sd25,2023-24
-641,Simpson,NA,6,Jr.,"North Liberty, Iowa",Iowa City Liberty,NA,6-1,MH,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/roman_lauren_a8pz,2023-24
-641,Simpson,NA,7,So.,"Carroll, Iowa",Carroll,NA,5-9,OH,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/ayala_josie_1832,2023-24
-641,Simpson,NA,8,Fr.,"Ankeny, Iowa",Centennial,NA,5-11,OH/RS,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/schmidt_jada_b2at,2023-24
-641,Simpson,NA,10,Fr.,"Boone, Iowa",Boone,NA,5-11,MH/OH,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/danner_natalee_cqa0,2023-24
-641,Simpson,NA,11,So.,"Ankeny, Iowa",Ankeny Centennial,NA,5-8,S,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/denbeste_morgan_58et,2023-24
-641,Simpson,NA,12,So.,"Ankeny, Iowa",Ankeny Centennial,NA,6-1,MH/OH,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/mitchell_peyton_a9sw,2023-24
-641,Simpson,NA,13,Jr.,"Pella, Iowa",Pella,NA,6-0,OH,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/paxton_courtney_wvws,2023-24
-641,Simpson,NA,14,Sr.,"Allen, Texas",Allen,NA,5-7,DS,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/hardwick_rachel_cxyo,2023-24
-641,Simpson,NA,15,Jr.,"Des Moines, Iowa",East,NA,5-6,DS,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/holmes-mcfadden_caitlyn_a4mi,2023-24
-641,Simpson,NA,16,Fr.,"Omaha, Neb.",Westside,NA,5-7,S/DS,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/behrens_audrey_5ycq,2023-24
-641,Simpson,NA,17,Jr.,"Des Moines, Iowa",East,NA,5-4,DS,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/stemsrud_alaina_algh,2023-24
-641,Simpson,NA,18,Fr.,"Council Bluffs, Iowa",Abraham Lincoln,NA,5-2,S/DS,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/rodriguez-lara_elena_tqz7,2023-24
-641,Simpson,NA,19,Jr.,"St. Ansgar, Iowa",St. Ansgar,NA,5-8,OH,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/koster_blayne_nl1c,2023-24
-641,Simpson,NA,20,Jr.,"Pleasantville, Iowa",Pleasantville,NA,5-4,DS,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/benge_breanna_x9da,2023-24
-641,Simpson,NA,21,Jr.,"Irving, Texas",Ranchview,NA,5-9,MH,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/johnson_aaliyah_37p5,2023-24
-641,Simpson,NA,23,Sr.,"Austin, Texas",McNeil,NA,5-6,S,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/shelgren_ragan_2jru,2023-24
-641,Simpson,NA,26,Fr.,"Malvern, Iowa",East Mills,NA,5-8,OH,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/williams_emily_bcu0,2023-24
-641,Simpson,NA,28,Jr.,"Indianola, Iowa",Indianola,NA,5-6,DS,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/mcvey_kylie_z4af,2023-24
-641,Simpson,NA,30,Fr.,"Maplewood, Minn.",North,NA,5-10,DS/OH,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/joy_shelby_q6vi,2023-24
-641,Simpson,NA,32,Sr.,"Stillman Valley, Ill.",Stillman Valley,NA,5-4,S,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/king_haylee_8fx9,2023-24
-641,Simpson,NA,34,So.,"Des Moines, Iowa",East,NA,5-7,DS,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/rounds_emma_r0qw,2023-24
-641,Simpson,NA,NA,Fr.,"Madrid, Spain",Tallulah Falls,NA,5-3,S,NA,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/rodenas_cristina_qyp5,2023-24
 1400,Texas Lutheran,NA,Ridley Kelly,SO.,"Missouri City, Texas",Elkins,NA,5-2,DS/L,1,https://www.tlubulldogs.com/sports/wvball/2023-24/bios/kelly_ridley_hdp6,2023-24
 1400,Texas Lutheran,NA,Regan Schmidt,FR.,"Seguin, Texas",Seguin,NA,5-11,MB,3,https://www.tlubulldogs.com/sports/wvball/2023-24/bios/schmidt_regan_yvw0,2023-24
 1400,Texas Lutheran,NA,Addison Lewis,FR.,"El Campo, Texas",Louise,NA,5-11,MB,5,https://www.tlubulldogs.com/sports/wvball/2023-24/bios/lewis_addison_h786,2023-24
@@ -15717,3 +15682,171 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 641,Simpson,,Haylee King,Sr.,"Stillman Valley, Ill.",Stillman Valley,,5-4,S,32,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/king_haylee_8fx9,2023
 641,Simpson,,Emma Rounds,So.,"Des Moines, Iowa",East,,5-7,DS,34,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/rounds_emma_r0qw,2023
 641,Simpson,,Cristina Rodenas,Fr.,"Madrid, Spain",Tallulah Falls,,5-3,S,,https://www.simpsonathletics.com/sports/wvball/2023-24/bios/rodenas_cristina_qyp5,2023
+673,Springfield,,Hailey Deguire,Jr.,"Schenectady, N.Y.",Mohonasen,,5-2,L/DS,1,https://springfieldcollegepride.com/sports/wvball/2023-24/bios/deguire_hailey_3yhl,2023
+673,Springfield,,Emily Keaveney,So.,"Massapequa Park, N.Y.",Massapequa,,5-8,OH,4,https://springfieldcollegepride.com/sports/wvball/2023-24/bios/keaveney_emily_qm91,2023
+673,Springfield,,Rachel Hegarty,Fy.,"Manhasset, N.Y.",Paul D. Schreiber,,5-8,OH,5,https://springfieldcollegepride.com/sports/wvball/2023-24/bios/hegarty_rachel_6195,2023
+673,Springfield,,Olivia Nealy,Fy.,"Athens, Ga.",Athens Academy,,5-9,OH,6,https://springfieldcollegepride.com/sports/wvball/2023-24/bios/nealy_olivia_5to8,2023
+673,Springfield,,Riley Donahue,Jr.,"South Windsor, Conn.",South Windsor,,5-11,OH,7,https://springfieldcollegepride.com/sports/wvball/2023-24/bios/donahue_riley_8vfj,2023
+673,Springfield,,Morgan Stafford,Jr.,"Corbett, Ore.",Corbett,,5-7,L/DS,9,https://springfieldcollegepride.com/sports/wvball/2023-24/bios/stafford_morgan_20qs,2023
+673,Springfield,,Tori Colosimo,Fy.,"Fairport, N.Y.",The Harley School,,5-11,S,10,https://springfieldcollegepride.com/sports/wvball/2023-24/bios/colosimo_victoria_o9f5,2023
+673,Springfield,,Natalie Billet,Jr.,"Commack, N.Y.",Commack,,5-11,OH,11,https://springfieldcollegepride.com/sports/wvball/2023-24/bios/billet_natalie_mnul,2023
+673,Springfield,,Megan Kirtyan,So.,"Massapequa Park, N.Y.",Massapequa,,5-9,S,12,https://springfieldcollegepride.com/sports/wvball/2023-24/bios/kirtyan_megan_vf06,2023
+673,Springfield,,Ally Townsend,Gr.,"Hummelstown, Pa.",Lower Dauphin,,5-5,L,16,https://springfieldcollegepride.com/sports/wvball/2023-24/bios/townsend_ally_seye,2023
+673,Springfield,,Jodi Saelua,Fy.,"Mililani, Hawaii",Punahou School,,6-0,MB,17,https://springfieldcollegepride.com/sports/wvball/2023-24/bios/saelua_jodi_z20w,2023
+673,Springfield,,Aurissa Boardman,So.,"Brooklyn, Conn.",Woodstock Academy,,5-10,OH,19,https://springfieldcollegepride.com/sports/wvball/2023-24/bios/boardman_aurissa_b7m1,2023
+673,Springfield,,Kylie Wixted,Jr.,"Ronkonkoma, N.Y.",Connetquot,,6-3,RS,21,https://springfieldcollegepride.com/sports/wvball/2023-24/bios/wixted_kylie_uov0,2023
+673,Springfield,,Olivia Gentry,So.,"Cincinnati, Ohio",Milford,,6-1,MB,22,https://springfieldcollegepride.com/sports/wvball/2023-24/bios/gentry_olivia_l42j,2023
+673,Springfield,,Maeve Voltz,So.,"Bay Shore, N.Y.",Bay Shore Senior,,6-1,MB,23,https://springfieldcollegepride.com/sports/wvball/2023-24/bios/voltz_maeve_zcq6,2023
+271,Hardin-Simmons,6764,Jadyn Hernandez,Freshman,"Abilene, Texas",Abilene,,"6'2""",MB,1,https://www.hsuathletics.com/sports/womens-volleyball/roster/jadyn-hernandez/6764,2023
+271,Hardin-Simmons,6758,Ali Meyer,Junior,"Cedar Park, Texas",Vista Ridge,,"5'2""",S/DS,2,https://www.hsuathletics.com/sports/womens-volleyball/roster/ali-meyer/6758,2023
+271,Hardin-Simmons,6768,Brylee Pursley,Freshman,"Abilene, Texas",Wylie,,"5'7""",DS/L,4,https://www.hsuathletics.com/sports/womens-volleyball/roster/brylee-pursley/6768,2023
+271,Hardin-Simmons,6769,Keatyn Rodgers,Freshman,"Roanoke, Texas",Byron Nelson,,"5'8""",S,6,https://www.hsuathletics.com/sports/womens-volleyball/roster/keatyn-rodgers/6769,2023
+271,Hardin-Simmons,6767,Rachel Nordt,Freshman,"Fulshear, Texas",Fulshear,,"6'0""",OH,8,https://www.hsuathletics.com/sports/womens-volleyball/roster/rachel-nordt/6767,2023
+271,Hardin-Simmons,6763,Ari Villanueva,Sophomore,"New Braunfels, Texas",Canyon,,"5'4""",L/DS,10,https://www.hsuathletics.com/sports/womens-volleyball/roster/ari-villanueva/6763,2023
+271,Hardin-Simmons,6761,Liz Underwood,Sophomore,"Clyde, Texas",Clyde,,"6'0""",OH,11,https://www.hsuathletics.com/sports/womens-volleyball/roster/liz-underwood/6761,2023
+271,Hardin-Simmons,6759,Rylee Ortega,Sophomore,"Farmersville, Texas",Farmersville,,"6'0""",OH/RS,12,https://www.hsuathletics.com/sports/womens-volleyball/roster/rylee-ortega/6759,2023
+271,Hardin-Simmons,6757,Gabby Jones,Sophomore,"Waco, Texas",Midway,,"5'11""",MB,13,https://www.hsuathletics.com/sports/womens-volleyball/roster/gabby-jones/6757,2023
+271,Hardin-Simmons,6755,Jacee Childers,Junior,"Gunter, Texas",Gunter,,"5'7""",S,14,https://www.hsuathletics.com/sports/womens-volleyball/roster/jacee-childers/6755,2023
+271,Hardin-Simmons,6762,Helena Vazquez,Senior,"Mansfield, Texas",Lake Ridge,,"5'10""",S/RS,16,https://www.hsuathletics.com/sports/womens-volleyball/roster/helena-vazquez/6762,2023
+271,Hardin-Simmons,6756,Lydia Headley,Senior,"Round Rock, Texas",Round Rock Christian Academy,,"5'6""",DS,17,https://www.hsuathletics.com/sports/womens-volleyball/roster/lydia-headley/6756,2023
+271,Hardin-Simmons,6760,Lauren Sullivan,Junior,"Plano, Texas",Lebanon Trail,,"5'10""",OH/RS,19,https://www.hsuathletics.com/sports/womens-volleyball/roster/lauren-sullivan/6760,2023
+271,Hardin-Simmons,6765,Kat Martinez,Freshman,"Abilene, Texas",Wylie,,"5'3""",DS/L,20,https://www.hsuathletics.com/sports/womens-volleyball/roster/kat-martinez/6765,2023
+271,Hardin-Simmons,6754,Abbi Allen,Junior,"Coleman, Texas",Coleman,,"6'0""",MB,21,https://www.hsuathletics.com/sports/womens-volleyball/roster/abbi-allen/6754,2023
+271,Hardin-Simmons,6770,Avery Tumlinson,Freshman,"Johnson City, Texas",LBJ,,"5'10""",MB,23,https://www.hsuathletics.com/sports/womens-volleyball/roster/avery-tumlinson/6770,2023
+271,Hardin-Simmons,6766,Sabrina Nelson,Freshman,"North Richland Hills, Texas",Birdville,,"6'2""",RS,24,https://www.hsuathletics.com/sports/womens-volleyball/roster/sabrina-nelson/6766,2023
+224,Ferris St.,,Tatum Outlaw,Sophomore,"Springfield, Ill.",Rochester,,5-10,Outside Hitter,1,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/outlaw_tatum_52ho,2023
+224,Ferris St.,,Emily May,Freshman,"Coopersville, Mich.",Coopersville,,6-1,Outside Hitter,2,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/may_emily_p06o,2023
+224,Ferris St.,,Hayley Wegener,Freshman,"Ravenna, Mich.",Coopersville,,6-0,Setter,3,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/wegener_hayley_77u1,2023
+224,Ferris St.,,Claire Nowicki,Junior,"Clarkston, Mich.",Clarkston,,5-11,Outside Hitter,4,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/nowicki_claire_nl95,2023
+224,Ferris St.,,Olivia Henneman-Dallape,Junior,"Oregon, Ohio",Clay,,6-2,Middle Hitter,5,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/henneman-dallape_olivia_e90e,2023
+224,Ferris St.,,Morgan Lockhart,Sophomore,"Detroit, Mich.",Country Day,,6-0,Outside Hitter,6,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/lockhart_morgan_8bn4,2023
+224,Ferris St.,,Emma Bleecher,Sophomore,"Champaign, Ill.",Unity,,6-0,Outside Hitter,7,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/bleecher_emma_6ixg,2023
+224,Ferris St.,,Chelsie Freeman,Senior,"Amarillo, Texas",Amarillo (Angelo State),,6-0,Middle Hitter,8,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/freeman_chelsie_71nr,2023
+224,Ferris St.,,Lyndsey Urick,Freshman,"Chicago, Ill.",Wiesbaden - Germany,,6-5,Middle Hitter,9,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/urick_lyndsey_593p,2023
+224,Ferris St.,,Haley Robinson,Freshman,"New Carlisle, Ind.",New Prairie,,5-11,Outside Hitter,10,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/robinson_haley_12j7,2023
+224,Ferris St.,,Ivy Schoditsch,RFreshman,"LaGrange Park, Ill",Nazareth Academy,,5-10,Middle Hitter,11,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/schoditsch_ivy_584f,2023
+224,Ferris St.,,Kaylee Maat,Junior,"Hudsonville, Mich.",Hudsonville,,5-11,Setter,12,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/maat_kaylee_tuko,2023
+224,Ferris St.,,Kenzy Corstange,Grad. Senior,"Richland, Mich.",Gull Lake (Davenport),,5-9,Libero,13,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/corstange_kenzy_qxc6,2023
+224,Ferris St.,,Syann Fairfield,Junior,"North Muskegon, Mich.",North Muskegon,,6-0,Middle Hitter,14,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/fairfield_syann_m9u3,2023
+224,Ferris St.,,Corrie Wisser,Freshman,"Hopkins, Mich.",Hopkins,,5-10,Setter,15,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/wisser_corrie_7b6q,2023
+224,Ferris St.,,Leah Bylut,Junior,"Palos Heights, Ill.",Alan B. Shepard,,5-6,Libero,16,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/bylut_leah_cgdf,2023
+224,Ferris St.,,Hannah Tecumseh,Junior,"Battle Creek, Mich.",Lakeview,,5-9,Outside Hitter,17,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/tecumseh_hannah_u5a1,2023
+224,Ferris St.,,Logyn Geren,Sophomore,"Fort Myers, Fla.",Riverdale,,5-11,Outside Hitter,19,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/geren_logyn_1kc5,2023
+224,Ferris St.,,Bailey Torpey,Junior,"Barryton, Mich.",Beal City,,5-9,Setter,20,https://www.ferrisstatebulldogs.com/sports/wvball/2023-24/bios/torpey_bailey_f0yr,2023
+8746,Southwestern (TX),,Geneva Nedrow,Jr.,"Cedar Park, Texas",Vista Ridge HS,,5’6,DS/L,1,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/nedrow_geneva_m51p,2023
+8746,Southwestern (TX),,Kacy Miller,So.,"Austin, TX",Anderson HS,,5'10,OH,2,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/miller_kacy_e7xq,2023
+8746,Southwestern (TX),,Lauren McIntyre,Fy.,"Cypress, Texas",Bridgeland HS,,5'9,L/DS/S,3,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/mcintyre_lauren_hwok,2023
+8746,Southwestern (TX),,Annelise Castillo,Fy.,"San Antonio, Texas",Southwest HS,,5'3,L/DS,4,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/castillo_annelise_doau,2023
+8746,Southwestern (TX),,Emily Marks,So.,"Cypress, Texas",Bridgeland HS,,5'10,MB/OH,5,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/marks_emily_3i4z,2023
+8746,Southwestern (TX),,Alex Husen,Sr.,"Graham, Texas",Graham HS,,5'9,OH/DS,6,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/husen_alex_fn3q,2023
+8746,Southwestern (TX),,Carly Berkman,So.,"Houston, Texas",Memorial HS,,5'11,OH/OPP,7,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/berkman_carly_sm25,2023
+8746,Southwestern (TX),,Claire Bauer,Fy.,"Austin, Texas",Anderson HS,,6'0,MB/OPP,8,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/bauer_claire_7i2m,2023
+8746,Southwestern (TX),,Erica Otto,Jr.,"Schulenburg, Texas",Schulenburg HS,,5'9,RS,9,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/otto_erica_4pd5,2023
+8746,Southwestern (TX),,Kylie Intfen,Fy.,"Fort Worth, Texas",Brewer HS,,6'1,MB,10,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/intfen_kylie_qy65,2023
+8746,Southwestern (TX),,Annika Flora,So.,"Georgetown, Texas",Georgetown HS,,5'10,S,11,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/flora_annika_zlfe,2023
+8746,Southwestern (TX),,Riley Hackett,Fy.,"Portland, Oregon",International School of Beaverton/Westview HS,,6'0,OH/OPP,12,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/hackett_riley_wovs,2023
+8746,Southwestern (TX),,Madison Ingram,Fy.,"Tomball, Texas",Tomball Memorial HS,,6'2,MB/OPP,13,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/ingram_madison_sn1j,2023
+8746,Southwestern (TX),,Christina Kuras,Jr.,"Phoenix, Ariz.",Seton Catholic Prep,,5'9,OH,14,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/kuras_christina_5gzy,2023
+8746,Southwestern (TX),,Lily McWhorter,So.,"The Woodlands, Texas",The Woodlands High School,,6'0,MB,15,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/mcwhorter_lily_sip1,2023
+8746,Southwestern (TX),,Stratton Sneed,Fy.,"League City, Texas",Clear Creek HS,,5'11,OH/OPP,16,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/sneed_stratton_8z0d,2023
+8746,Southwestern (TX),,Andie Valenzuela,Sr.,"San Jose, California",Presentation HS,,5'11,MB,17,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/valenzuela_andie_9xx0,2023
+8746,Southwestern (TX),,Claire Romo,Jr.,"Garland, Texas",Sachse HS,,5’7,S,19,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/romo_claire_uxdo,2023
+8746,Southwestern (TX),,Alyssa Gatlin,Fy.,"Houston, Texas",Providence Classical School,,5'9,OH/OPP,22,https://www.southwesternpirates.com/sports/w-volley/2023-24/bios/gatlin_alyssa_abri,2023
+809,Worcester St.,,Kathleen Russo,Fy.,"Upton, MA",Blackstone Valley Tech,,"5'6""",Libero/Defensive Specialist,1,https://www.wsulancers.com/sports/wvball/2023-24/bios/russo_kathleen_k41v,2023
+809,Worcester St.,,Maeve Cadogan,Sr.,"Wilmington, Mass.",Wilmington,,"6'0""",Middle Blocker,3,https://www.wsulancers.com/sports/wvball/2023-24/bios/cadogan_maeve_28kp,2023
+809,Worcester St.,,Emily Dardinski,Sr.,"Mansfield, Mass.",Mansfield,,"5'7""",Outside Hitter/Right Side,4,https://www.wsulancers.com/sports/wvball/2023-24/bios/dardinski_emily_53ic,2023
+809,Worcester St.,,Katie Cueva,So.,Tewksbury,Tewksbury Memorial,,"5'8""",Outside Hitter,5,https://www.wsulancers.com/sports/wvball/2023-24/bios/cueva_kaitlin_2v3r,2023
+809,Worcester St.,,Jess Rancourt,Sr./Jr.,"Grafton, MA",Grafton,,"5'5""",Setter/Defensive Specialist,8,https://www.wsulancers.com/sports/wvball/2023-24/bios/rancourt_jessica_lcy2,2023
+809,Worcester St.,,Angela Colonis,Jr.,"Waterford, CT",Waterford,,"5'8""",Setter,9,https://www.wsulancers.com/sports/wvball/2023-24/bios/colonis_angela_knnp,2023
+809,Worcester St.,,Kate Stedronsky,So.,"Sea Girt, NJ",Wall,,"5'10""",Middle Hitter/Blocker,11,https://www.wsulancers.com/sports/wvball/2023-24/bios/stedronsky_kate_4gi2,2023
+809,Worcester St.,,Megan Bardis,Jr.,"Rutland, Mass.",Wachusett Regional,,"5'7""",Setter,12,https://www.wsulancers.com/sports/wvball/2023-24/bios/bardis_megan_7tkl,2023
+809,Worcester St.,,Jillian Gross,So.,"Millville, MA",Blackstone-Millville Regional,,"5'5""",Defensive Specialist,13,https://www.wsulancers.com/sports/wvball/2023-24/bios/gross_jillian_j092,2023
+809,Worcester St.,,Cassie Millea,So.,"Orange, CT",Amity Regional,,"5'10""",Outside Hitter/Libero,14,https://www.wsulancers.com/sports/wvball/2023-24/bios/millea_cassandra_76w3,2023
+809,Worcester St.,,Camryn Burgio,GS./Sr.,"Quincy, Mass.",North Quincy,,"5'8""",Outside Hitter/Libero,15,https://www.wsulancers.com/sports/wvball/2023-24/bios/burgio_camryn_4j5d,2023
+809,Worcester St.,,Beatrice Gamboa-Estrella,Fy.,"Simi Valley, CA",Royal,,"5'10""",Outside Hitter,16,https://www.wsulancers.com/sports/wvball/2023-24/bios/gamboa_estrella_beatrice_9csk,2023
+809,Worcester St.,,Cassidy D'Esposito,So.,"Medford, NY",Patchogue Medford High School,,"5'11""",Right Side,17,https://www.wsulancers.com/sports/wvball/2023-24/bios/d-esposito_cassidy_9l9y,2023
+809,Worcester St.,,Erin Gaffney,GS.,"Worcester, Mass.",Worcester Tech,,"6'2""",Middle Blocker,18,https://www.wsulancers.com/sports/wvball/2023-24/bios/gaffney_erin_43o2,2023
+809,Worcester St.,,Michelle Iannacito,Fy.,"Bronx, NY",The Ursuline School,,"5'6""",Setter,19,https://www.wsulancers.com/sports/wvball/2023-24/bios/iannacito_michelle_b2py,2023
+89,Caltech,5345,Marissa Till,Sophomore,"Woodinville, Wash.",Woodinville,,"5'11""",Outside,1,https://www.gocaltech.com/sports/womens-volleyball/roster/marissa-till/5345,2023
+89,Caltech,5349,Jeylin Lee,Freshman,"Albertson, N.Y.",Herricks,,"5'2""",Defensive,2,https://www.gocaltech.com/sports/womens-volleyball/roster/jeylin-lee/5349,2023
+89,Caltech,5346,Gabriella Twombly,Senior,"Weston, Fla.",Archbishop McCarthy,,"5'10""",Middle,3,https://www.gocaltech.com/sports/womens-volleyball/roster/gabriella-twombly/5346,2023
+89,Caltech,5348,Alize Bakker,Freshman,"Portland, Ore.",Westview,,"5'7""",Outside,4,https://www.gocaltech.com/sports/womens-volleyball/roster/alize-bakker/5348,2023
+89,Caltech,5350,Shreeya Thuppul,Freshman,"Alpharetta, Ga.",Fulton Science Academy,,"5'8""",Setter,6,https://www.gocaltech.com/sports/womens-volleyball/roster/shreeya-thuppul/5350,2023
+89,Caltech,5351,Celine Wu,Freshman,"Potomac, Md.",Montgomery Blair,,"5'6""",Libero,7,https://www.gocaltech.com/sports/womens-volleyball/roster/celine-wu/5351,2023
+89,Caltech,5337,Halle Blend,Senior,"Farmers Branch, Texas",Hockaday,,"5'7""",Setter,9,https://www.gocaltech.com/sports/womens-volleyball/roster/halle-blend/5337,2023
+89,Caltech,5343,Claire Perhach,Senior,"Carlsbad, Calif.",Sage Creek,,"6'0""",Outside,10,https://www.gocaltech.com/sports/womens-volleyball/roster/claire-perhach/5343,2023
+89,Caltech,5338,Helen Brackney,Senior,"Aurora, Colo.",Regis Jesuit,,"5'11""",Middle,13,https://www.gocaltech.com/sports/womens-volleyball/roster/helen-brackney/5338,2023
+89,Caltech,5340,Carolyn Lu,Senior,"Saratoga, Calif.",The Harker School,,"5'9""",Setter,15,https://www.gocaltech.com/sports/womens-volleyball/roster/carolyn-lu/5340,2023
+89,Caltech,5341,Giulia Murgia,Sophomore,"Iglesias, Italy",Istituto di Istruzione Superiore G. Asproni,,"5'7""",Setter,16,https://www.gocaltech.com/sports/womens-volleyball/roster/giulia-murgia/5341,2023
+89,Caltech,5342,Sophia Parker,Sophomore,"Palmdale, Calif.",William J. Pete Knight,,"5'9""",Outside,17,https://www.gocaltech.com/sports/womens-volleyball/roster/sophia-parker/5342,2023
+215,Emmanuel (MA),,Logan Williams,Fy.,"Ellsworth, Maine",Ellsworth,,5'4,DS,1,https://www.goecsaints.com/sports/w-volley/2023-24/bios/williams_logan_0egg,2023
+215,Emmanuel (MA),,Sasha Hyacinthe,Sr.,"Stoughton, Mass.",Stoughton,,5'8,RS,2,https://www.goecsaints.com/sports/w-volley/2023-24/bios/hyacinthe_sasha_k8pi,2023
+215,Emmanuel (MA),,Isabella Marquez,So.,"Pembroke Pines, Fla.",West Broward,,5'8,OH,3,https://www.goecsaints.com/sports/w-volley/2023-24/bios/marquez_isabella_k5u7,2023
+215,Emmanuel (MA),,Paula Tanguilig,Jr.,"Sandwich, Mass.",Sandwich,,5'4,L/DS,4,https://www.goecsaints.com/sports/w-volley/2023-24/bios/tanguilig_paula_hkq9,2023
+215,Emmanuel (MA),,Camila Moreno-Bo,Sr.,"Miami, Fla.",Immaculata La-Salle,,5'3,L/DS,5,https://www.goecsaints.com/sports/w-volley/2023-24/bios/moreno-bo_camila_hp26,2023
+215,Emmanuel (MA),,Allie Flewelling,Fy.,"Peabody, Mass.",Peabody Veterans Memorial,,5'5,DS,6,https://www.goecsaints.com/sports/w-volley/2023-24/bios/flewelling_allison_mwnh,2023
+215,Emmanuel (MA),,Brigid Moriarty,Sr.,"Westfield, Mass.",Westfield,,5'9,S,7,https://www.goecsaints.com/sports/w-volley/2023-24/bios/moriarty_brigid_qse2,2023
+215,Emmanuel (MA),,Sydnie Germain,So.,"Ludlow, Mass.",Ludlow,,5'8,RS,8,https://www.goecsaints.com/sports/w-volley/2023-24/bios/germain_sydnie_snwm,2023
+215,Emmanuel (MA),,Wiktoria Galazyn,So.,"Plainville, Conn.",Plainville,,5'10,OH,10,https://www.goecsaints.com/sports/w-volley/2023-24/bios/galazyn_wiktoria_5y8w,2023
+215,Emmanuel (MA),,Seana Phillips,Sr.,"Middleboro, Mass.",Abington,,5'9,MB,11,https://www.goecsaints.com/sports/w-volley/2023-24/bios/phillips_seana_mx6t,2023
+215,Emmanuel (MA),,Rachael Crowe,Fy.,"Fairfield, Conn.",Fairfield Warde,,6'1,MB,12,https://www.goecsaints.com/sports/w-volley/2023-24/bios/crowe_rachael_q9zm,2023
+215,Emmanuel (MA),,Jaiden Greaves,Jr.,"Wells, Maine",Wells,,6'1,MB,13,https://www.goecsaints.com/sports/w-volley/2023-24/bios/greaves_jaiden_ua1j,2023
+215,Emmanuel (MA),,Dejaliyah Srimouksavanh,Jr.,"Portsmouth, N.H.",Portsmouth,,5'7,RS,14,https://www.goecsaints.com/sports/w-volley/2023-24/bios/srimouksavanh_deja_50k4,2023
+215,Emmanuel (MA),,Jasmine Maradiaga,Fy.,"Randolph, Mass.",Chelsea,,5'7,OH,15,https://www.goecsaints.com/sports/w-volley/2023-24/bios/maradiaga_verela_jasmine_v3gb,2023
+215,Emmanuel (MA),,Maeve Gaffny,So.,"North Andover, Mass.",North Andover,,5'10,MB,16,https://www.goecsaints.com/sports/w-volley/2023-24/bios/gaffny_maeve_eb8h,2023
+215,Emmanuel (MA),,Sophia Rose,Fy.,"Bethpage, N.Y.",Plainedge,,5'10,MB,17,https://www.goecsaints.com/sports/w-volley/2023-24/bios/rose_sophia_pfwv,2023
+215,Emmanuel (MA),,Maya Barthel,Fy.,"Nottingham, N.H.",Coe-Brown Northwood Academy,,5'5,S/DS,18,https://www.goecsaints.com/sports/w-volley/2023-24/bios/barthel_maya_qz3p,2023
+215,Emmanuel (MA),,Brielle Hardy,Fy.,"Billerica, Mass.",Notre Dame Academy (Tyngsboro),,5'7,OH,23,https://www.goecsaints.com/sports/w-volley/2023-24/bios/hardy_gabriel_e3cx,2023
+215,Emmanuel (MA),,Kason Huynh,Fy.,"Mission Viejo, Calif.",Capistrano Valley,,5'9,S,28,https://www.goecsaints.com/sports/w-volley/2023-24/bios/huynh_kason_rn5a,2023
+215,Emmanuel (MA),,RyLee Salamone,So.,"Plymouth, Mass.",Plymouth South,,5'5,DS/L,44,https://www.goecsaints.com/sports/w-volley/2023-24/bios/salamone_rylee_q5u2,2023
+12884,Centenary (NJ),5483,Jenny Thistlethwaite,Freshman,"Norco, CA.",Norco High School,,"5'9""",Middle,1,https://www.centenarycyclones.com/sports/womens-volleyball/roster/jenny-thistlethwaite/5483,2023
+12884,Centenary (NJ),5482,Kim Stallworth,Sophomore,"Jackson, N.J.",Jackson Liberty,,,S/RS,8,https://www.centenarycyclones.com/sports/womens-volleyball/roster/kim-stallworth/5482,2023
+12884,Centenary (NJ),5478,Isabel Moreira,Junior,"San Juan, Puerto Rico",Academia Adventista Metropolitana,,"5'0""",L/DS,9,https://www.centenarycyclones.com/sports/womens-volleyball/roster/isabel-moreira/5478,2023
+12884,Centenary (NJ),5475,Cameron Fulcher,Sophomore,"Paterson, N.J.",Immaculate Conception,,,MB/RS,12,https://www.centenarycyclones.com/sports/womens-volleyball/roster/cameron-fulcher/5475,2023
+12884,Centenary (NJ),5476,Asia Logan,Sophomore,"Hi Nella, N.J.",Sterling,,,Libero,16,https://www.centenarycyclones.com/sports/womens-volleyball/roster/asia-logan/5476,2023
+12884,Centenary (NJ),5474,Alyssa Bizzarro,Senior,"Hackettstown, N.J.",Hackettstown,,,MB/OH,17,https://www.centenarycyclones.com/sports/womens-volleyball/roster/alyssa-bizzarro/5474,2023
+12884,Centenary (NJ),5480,Vanessa Pagano,Sophomore,"Flemington, N.J.",Hunterdon Central Regional,,,S/RS,18,https://www.centenarycyclones.com/sports/womens-volleyball/roster/vanessa-pagano/5480,2023
+12884,Centenary (NJ),5481,Poppy Skjonnemand,Freshman,"Southampton, UK",West Morris Mendham HS,,"5'10""",Middle,19,https://www.centenarycyclones.com/sports/womens-volleyball/roster/poppy-skjonnemand/5481,2023
+125,Centenary (LA),,Victoria Larson,Fr.,"Royse City, Texas",Royse City HS,,6-3,RS/S,1,https://www.gocentenary.com/sports/wvball/2023-24/bios/larson_victoria_2wjm,2023
+125,Centenary (LA),,Hannah Dimmel,Fr.,"Navasota, Texas",Navasota HS,,5-4,S/DS,2,https://www.gocentenary.com/sports/wvball/2023-24/bios/dimmel_hannah_xyqk,2023
+125,Centenary (LA),,Yadneli Molina,Fr.,"Vinton, La.",Vinton HS,,5-7,UT,3,https://www.gocentenary.com/sports/wvball/2023-24/bios/molina_yadneli_ym8f,2023
+125,Centenary (LA),,Allana Scott-Daniels,Jr.,"Spring, Texas",Klein Cain HS,,5-6,DS,4,https://www.gocentenary.com/sports/wvball/2023-24/bios/scott-daniels_allana_z10g,2023
+125,Centenary (LA),,Meadow Smith,So.,"Mansfield, Texas",Mansfield HS,,5-6,S,7,https://www.gocentenary.com/sports/wvball/2023-24/bios/smith_meadow_pgd0,2023
+125,Centenary (LA),,Kiara Liedy,Jr.,"Sugar Land, Texas",Stephen F. Austin HS,,5-7,DS/L,8,https://www.gocentenary.com/sports/wvball/2023-24/bios/liedy_kiara_glxb,2023
+125,Centenary (LA),,Hailey Hill,Fr.,"La Grange, Texas",La Grange HS,,5-7,S,9,https://www.gocentenary.com/sports/wvball/2023-24/bios/hill_hailey_rjqz,2023
+125,Centenary (LA),,Robin Lemelle,Sr.,"Liberty, Texas",Liberty HS,,5-8,MB/OH,10,https://www.gocentenary.com/sports/wvball/2023-24/bios/lemelle_robin_unte,2023
+125,Centenary (LA),,Daly Nagot,So.,"Benton, La.",Benton HS,,5-4,DS/L,11,https://www.gocentenary.com/sports/wvball/2023-24/bios/nagot_daly_o9n9,2023
+125,Centenary (LA),,Mackenzie Haley,Fr.,"Orange, Texas",Orangefield HS,,5-7,OH/DS,16,https://www.gocentenary.com/sports/wvball/2023-24/bios/haley_mackenzie_deie,2023
+125,Centenary (LA),,Elizabeth Canady,Jr.,"League City, Texas",Clear Springs HS,,5-10,MB,17,https://www.gocentenary.com/sports/wvball/2023-24/bios/canady_elizabeth_tny3,2023
+125,Centenary (LA),,Madison Schonberg,Sr.,"Harbor City, Calif.",Redondo Union HS,,5-11,OH,18,https://www.gocentenary.com/sports/wvball/2023-24/bios/schonberg_madison_mfmu,2023
+125,Centenary (LA),,Reign McArthur,Fr.,"Midlothian, Texas",Midlothian HS,,5-8,MB/OH,19,https://www.gocentenary.com/sports/wvball/2023-24/bios/mcarthur_reign_7zkq,2023
+125,Centenary (LA),,Maia Kraft,Fr.,"Galveston, Texas",Ball HS,,5-10,RS,21,https://www.gocentenary.com/sports/wvball/2023-24/bios/kraft_maia_n9iu,2023
+125,Centenary (LA),,Bailee Henderson,Fr.,"Monroe, La.",Spring HS,,5-10,MB,22,https://www.gocentenary.com/sports/wvball/2023-24/bios/henderson_bailee_mkt8,2023
+125,Centenary (LA),,April Jones,Sr.,"Longview, Texas",St. Mary's Catholic School,,5-7,OH/RS,24,https://www.gocentenary.com/sports/wvball/2023-24/bios/jones_april_xtmp,2023
+125,Centenary (LA),,Jaylin St. Martin,Jr.,"New Orleans, La.",Cabrini High School,,5-10,RS,27,https://www.gocentenary.com/sports/wvball/2023-24/bios/st._martin_jaylin_r25t,2023
+125,Centenary (LA),,Kahlan Johnson,Fr.,"Haughton, La.",Homeschool,,5-5,UT,31,https://www.gocentenary.com/sports/wvball/2023-24/bios/johnson_kahlan_b3z1,2023
+1196,Marian (WI),,Logan Smith,Jr.,"Garrett, Ind.",Garrett HS,Jacksonville State,"5'8""",S,1,https://muknights.com/sports/volleyball/roster/logan-smith/10574,2023
+1196,Marian (WI),,Averi Lanman,Sr.,"Pendleton, Ind.",Pendleton Heights HS,,"6'1""",MH,2,https://muknights.com/sports/volleyball/roster/averi-lanman/10570,2023
+1196,Marian (WI),,Emma Hirchak,R-So.,"Auburn, Ind.",Garrett HS,,"5'11""",OH,3,https://muknights.com/sports/volleyball/roster/emma-hirchak/10567,2023
+1196,Marian (WI),,Grace Hunter,Sr.,"Fishers, Ind.",Hamilton Southeastern HS,,"5'11""",OH,4,https://muknights.com/sports/volleyball/roster/grace-hunter/10568,2023
+1196,Marian (WI),,Maddie Ellis,R-Sr.,"Fort Wayne, Ind.",Bishop Dwenger,,"6'0""",MH,5,https://muknights.com/sports/volleyball/roster/maddie-ellis/10562,2023
+1196,Marian (WI),,Gabby Fish,Jr.,"Huntertown, Ind.",FW Carroll HS,,"5'10""",RS,6,https://muknights.com/sports/volleyball/roster/gabby-fish/10564,2023
+1196,Marian (WI),,Nicole Wilkinson,R-So.,"New Castle, Ind.",New Castle HS,Rider University,"5'11""",MH,7,https://muknights.com/sports/volleyball/roster/nicole-wilkinson/10779,2023
+1196,Marian (WI),,Ainsley Neighbors,Sr.,"Newburgh, Ind.",Evansville Reitz Memorial HS,,"5'6""",S/DS,8,https://muknights.com/sports/volleyball/roster/ainsley-neighbors/10572,2023
+1196,Marian (WI),,Madison Brooks,Jr.,"Fort Wayne, Ind.",FW Northrop HS,,"6'1""",OH,9,https://muknights.com/sports/volleyball/roster/madison-brooks/10560,2023
+1196,Marian (WI),,Katie Hardegree,Sr.,"Brownsburg, Ind.",Brownsburg HS,,"5'9""",S,10,https://muknights.com/sports/volleyball/roster/katie-hardegree/10565,2023
+1196,Marian (WI),,Jaymison Summers,Jr.,"Louisville, Ky.",Our Lady of Mercy Academy,,"5'11""",MH,11,https://muknights.com/sports/volleyball/roster/jaymison-summers/10575,2023
+1196,Marian (WI),,Emma Lyons,So.,"Fort Wayne, Ind.",Bishop Dwenger HS,,"5'8""",DS/L,12,https://muknights.com/sports/volleyball/roster/emma-lyons/10571,2023
+1196,Marian (WI),,Sydney Schaffer,Jr.,"Louisville, Ky.",Our Lady of Mercy Academy,,"5'8""",DS/L,13,https://muknights.com/sports/volleyball/roster/sydney-schaffer/10573,2023
+1196,Marian (WI),,Alison Dreves,Jr.,"Vancouver, Wash.",Columbia River HS,,"5'11""",OH,14,https://muknights.com/sports/volleyball/roster/alison-dreves/10561,2023
+1196,Marian (WI),,Mikayla Christiansen,Jr.,"Fishers, Ind.",Fishers HS,McNeese State University,"6'1""",OH,15,https://muknights.com/sports/volleyball/roster/mikayla-christiansen/10780,2023
+1196,Marian (WI),,Sydney Henke,Sr.,"Moro, Ill.",Civic Memorial HS,,"6'1""",RS,16,https://muknights.com/sports/volleyball/roster/sydney-henke/10566,2023
+1196,Marian (WI),,Avery Toole,So.,"Rockford, Mich.",Rockford HS,,"5'11""",OH/RS,17,https://muknights.com/sports/volleyball/roster/avery-toole/10576,2023
+1196,Marian (WI),,Gianna Feld,Sr.,"Grafton, Wis.",Kettle Moraine Lutheran HS,,"5'8""",DS/L,18,https://muknights.com/sports/volleyball/roster/gianna-feld/10563,2023
+1196,Marian (WI),,Sarah Bennett,So.,"Columbus, Ind.",Columbus North HS,,"6'0""",MH,19,https://muknights.com/sports/volleyball/roster/sarah-bennett/10559,2023
+1196,Marian (WI),,Chloe Cook,Fr.,"Muncie, Ind.",Wapahani HS,,"5'9""",OH,20,https://muknights.com/sports/volleyball/roster/chloe-cook/10795,2023
+1196,Marian (WI),,Caroline Kubacki,R-Fr.,"Indianapolis, Ind.",Cathedral HS,,"5'6""",DS/L,21,https://muknights.com/sports/volleyball/roster/caroline-kubacki/10569,2023
+1196,Marian (WI),,Khori Dryden,Fr.,"Indianapolis, Ind.",Pike HS,,"5'9""",OH,22,https://muknights.com/sports/volleyball/roster/khori-dryden/10784,2023
+1196,Marian (WI),,Sami Luttel,Fr.,"Greensburg, Ind.",North Decatur HS,,"5'6""",S,23,https://muknights.com/sports/volleyball/roster/sami-luttel/10783,2023
+1196,Marian (WI),,Lexa Zimmerman,Fr.,"Fort Wayne, Ind.",Bishop Dwenger HS,,"5'8""",OH/DS,24,https://muknights.com/sports/volleyball/roster/lexa-zimmerman/10782,2023
+1196,Marian (WI),,Emerson Evans,Fr.,"Carmel, Ind.",Carmel HS,,"5'10""",S,25,https://muknights.com/sports/volleyball/roster/emerson-evans/10781,2023
