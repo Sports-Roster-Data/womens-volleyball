@@ -9,9 +9,10 @@ library(rvest)
 # Load the Source Data
 
 ```{r}
-teams <- read_csv("teams.csv")
+teams <- read_csv("vb_teams.csv")
 
 rosters <- read_csv("rosters_2023.csv")
+
 
 teams_without_rosters <- teams |> left_join(rosters, join_by(ncaa_id)) |> filter(is.na(name))
 
@@ -262,5 +263,18 @@ distinct_countries <- rosters %>% distinct(country_clean)
 
 rosters |> filter(is.na(country_clean))
 
-write_csv(rosters, "rosters_2023_cleaned.csv", quote="all", na="")
+#write_csv(rosters, "rosters_2023_cleaned.csv", quote="all", na="")
 ```
+
+## Exploration
+
+```{r}
+
+colleges <- read_csv("~/Downloads/Most-Recent-Cohorts-Institution.csv") |> clean_names() |> select(unitid, opeid, opeid6, instnm, city, stabbr, zip, insturl, st_fips, region, latitude, longitude)
+
+
+rosters |> group_by(previous_school_clean) |> 
+  summarise(count = n()) |> 
+  arrange(previous_school_clean)
+```
+
