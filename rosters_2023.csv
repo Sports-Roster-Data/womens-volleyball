@@ -418,29 +418,29 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 251,Georgetown,14434,Minnie Purcell,Junior,"New York, N.Y.",Convent of the Sacred Heart,,"6'1""",Right,18,https://www.guhoyas.com/sports/womens-volleyball/roster/minnie-purcell/14434,2023
 251,Georgetown,14429,Lilly Costigan,Junior,"Fort Lauderdale, Fla.",St. Thomas Aquinas,,"6'1""",Setter,19,https://www.guhoyas.com/sports/womens-volleyball/roster/lilly-costigan/14429,2023
 251,Georgetown,14439,Giselle Williams,Junior,"Las Vegas, Nev.",Bishop Gorman,,"6'0""",Outside,21,https://www.guhoyas.com/sports/womens-volleyball/roster/giselle-williams/14439,2023
-649,South Dakota State,12316,Raegen Reilly,Junior,"Sioux Falls, S.D.",,North Dakota State,"5'10""",Setter,1,https://www.gojacks.com/sports/womens-volleyball/roster/raegen-reilly/12316,2023
-649,South Dakota State,12317,Faith Saewert,Junior,"Woodbury, Minn.",,East Ridge H.S.,"5'8""",Defensive,2,https://www.gojacks.com/sports/womens-volleyball/roster/faith-saewert/12317,2023
-649,South Dakota State,12318,Masa Scheierman,Sophomore,"Aurora, Neb.",,York H.S.,"6'1""",Outside,3,https://www.gojacks.com/sports/womens-volleyball/roster/masa-scheierman/12318,2023
-649,South Dakota State,12325,Rylee Martin,Freshman,"Eaton, Colo.",,Eaton H.S.,"5'8""",Setter,5,https://www.gojacks.com/sports/womens-volleyball/roster/rylee-martin/12325,2023
-649,South Dakota State,12326,McKenna Moehrle,Freshman,"Eden Valley, Minn.",,Eden Valley Watkins H.S.,"6'2""",Middle,6,https://www.gojacks.com/sports/womens-volleyball/roster/mckenna-moehrle/12326,2023
-649,South Dakota State,12327,Stella Winterfeld,Freshman,"Sioux Center, Iowa",,Western Christian H.S.,"5'9""",Outside,7,https://www.gojacks.com/sports/womens-volleyball/roster/stella-winterfeld/12327,2023
-649,South Dakota State,12315,Akeela Jefferson,Fifth Year,"Cedar Rapids, Iowa",,Xavier H.S.,"5'10""",Outside,8,https://www.gojacks.com/sports/womens-volleyball/roster/akeela-jefferson/12315,2023
-649,South Dakota State,12328,Sylvie Zgonc,Freshman,"Hartford, Wis.",,Sussex Hamilton H.S.,"5'11""",Outside,10,https://www.gojacks.com/sports/womens-volleyball/roster/sylvie-zgonc/12328,2023
-649,South Dakota State,12330,Sydni Schetnan,Redshirt Sophomore,"Sioux Falls, S.D.",,Louisville,"6'5""",Outside,11,https://www.gojacks.com/sports/womens-volleyball/roster/sydni-schetnan/12330,2023
-649,South Dakota State,12321,Annalee Ventling-Brown,Junior,"Lincoln, Neb.",,Lincoln East H.S.,"6'1""",Middle,12,https://www.gojacks.com/sports/womens-volleyball/roster/annalee-ventling-brown/12321,2023
-649,South Dakota State,12319,Alia Schlimgen,Sophomore,"Sauk City, Wis.",,Sauk Prairie H.S.,"5'5""",Defensive,14,https://www.gojacks.com/sports/womens-volleyball/roster/alia-schlimgen/12319,2023
-649,South Dakota State,12320,Katie Van Egdom,Sophomore,"Sioux Falls, S.D.",,Sioux Falls Christian H.S.,"6'2""",Outside,16,https://www.gojacks.com/sports/womens-volleyball/roster/katie-van-egdom/12320,2023
-649,South Dakota State,12329,Joslyn Richardson,Freshman,"Sioux Falls, S.D",,Washington H.S.,"5'9""",Defensive,17,https://www.gojacks.com/sports/womens-volleyball/roster/joslyn-richardson/12329,2023
-649,South Dakota State,12322,Elyse Winter,Junior,"Cedar Rapids, Iowa",,Xavier H.S.,"6'0""",Outside,18,https://www.gojacks.com/sports/womens-volleyball/roster/elyse-winter/12322,2023
-649,South Dakota State,12324,Brogan Beck,Freshman,"Sioux Falls, S.D",,O'Gorman H.S.,"6'4""",Middle,20,https://www.gojacks.com/sports/womens-volleyball/roster/brogan-beck/12324,2023
+649,South Dakota State,12316,Raegen Reilly,Junior,"Sioux Falls, S.D.",O'Gorman H.S.,North Dakota State,"5'10""",Setter,1,https://www.gojacks.com/sports/womens-volleyball/roster/raegen-reilly/12316,2023
+649,South Dakota State,12317,Faith Saewert,Junior,"Woodbury, Minn.",East Ridge H.S.,,"5'8""",Defensive,2,https://www.gojacks.com/sports/womens-volleyball/roster/faith-saewert/12317,2023
+649,South Dakota State,12318,Masa Scheierman,Sophomore,"Aurora, Neb.",York H.S.,,"6'1""",Outside,3,https://www.gojacks.com/sports/womens-volleyball/roster/masa-scheierman/12318,2023
+649,South Dakota State,12325,Rylee Martin,Freshman,"Eaton, Colo.",Eaton H.S.,,"5'8""",Setter,5,https://www.gojacks.com/sports/womens-volleyball/roster/rylee-martin/12325,2023
+649,South Dakota State,12326,McKenna Moehrle,Freshman,"Eden Valley, Minn.",Eden Valley Watkins H.S.,,"6'2""",Middle,6,https://www.gojacks.com/sports/womens-volleyball/roster/mckenna-moehrle/12326,2023
+649,South Dakota State,12327,Stella Winterfeld,Freshman,"Sioux Center, Iowa",Western Christian H.S.,,"5'9""",Outside,7,https://www.gojacks.com/sports/womens-volleyball/roster/stella-winterfeld/12327,2023
+649,South Dakota State,12315,Akeela Jefferson,Fifth Year,"Cedar Rapids, Iowa",Xavier H.S.,,"5'10""",Outside,8,https://www.gojacks.com/sports/womens-volleyball/roster/akeela-jefferson/12315,2023
+649,South Dakota State,12328,Sylvie Zgonc,Freshman,"Hartford, Wis.",Sussex Hamilton H.S.,,"5'11""",Outside,10,https://www.gojacks.com/sports/womens-volleyball/roster/sylvie-zgonc/12328,2023
+649,South Dakota State,12330,Sydni Schetnan,Redshirt Sophomore,"Sioux Falls, S.D.",Washington H.S.,Louisville,"6'5""",Outside,11,https://www.gojacks.com/sports/womens-volleyball/roster/sydni-schetnan/12330,2023
+649,South Dakota State,12321,Annalee Ventling-Brown,Junior,"Lincoln, Neb.",Lincoln East H.S.,,"6'1""",Middle,12,https://www.gojacks.com/sports/womens-volleyball/roster/annalee-ventling-brown/12321,2023
+649,South Dakota State,12319,Alia Schlimgen,Sophomore,"Sauk City, Wis.",Sauk Prairie H.S.,,"5'5""",Defensive,14,https://www.gojacks.com/sports/womens-volleyball/roster/alia-schlimgen/12319,2023
+649,South Dakota State,12320,Katie Van Egdom,Sophomore,"Sioux Falls, S.D.",Sioux Falls Christian H.S.,,"6'2""",Outside,16,https://www.gojacks.com/sports/womens-volleyball/roster/katie-van-egdom/12320,2023
+649,South Dakota State,12329,Joslyn Richardson,Freshman,"Sioux Falls, S.D.",Washington H.S.,,"5'9""",Defensive,17,https://www.gojacks.com/sports/womens-volleyball/roster/joslyn-richardson/12329,2023
+649,South Dakota State,12322,Elyse Winter,Junior,"Cedar Rapids, Iowa",Xavier H.S.,,"6'0""",Outside,18,https://www.gojacks.com/sports/womens-volleyball/roster/elyse-winter/12322,2023
+649,South Dakota State,12324,Brogan Beck,Freshman,"Sioux Falls, S.D",O'Gorman H.S.,,"6'4""",Middle,20,https://www.gojacks.com/sports/womens-volleyball/roster/brogan-beck/12324,2023
 249,George Washington,,Salem Yohannes,Jr.,"Woodbridge, VA",Osbourn Park,,5' 10'',OH,1,https://gwsports.com/sports/womens-volleyball/roster/salem-yohannes/8627,2023
 249,George Washington,,Sydney Stewart,So.,"Philadelphia, Pa.",Friends' Central School,,6' 1'',MB,2,https://gwsports.com/sports/womens-volleyball/roster/sydney-stewart/8625,2023
 249,George Washington,,Kelsey Watkins,Gr.,"Chicago, IL",Latin School of Chicago,,5' 11'',,3,https://gwsports.com/sports/womens-volleyball/roster/kelsey-watkins/8631,2023
 249,George Washington,,Loukia Papadakos,Fr.,"Richmond Hill, Canada",Cardinal Gibbons High School,,6' 3'',MB,4,https://gwsports.com/sports/womens-volleyball/roster/loukia%20-papadakos/8630,2023
 249,George Washington,,Grace Wiczek,Gr.,"Park City, Utah",Park City High School,,6' 2'',OH,6,https://gwsports.com/sports/womens-volleyball/roster/grace-wiczek/8632,2023
 249,George Washington,,Dilara Elmacioglu,So.,"Gaziantep, Turkey",Okyanus,,6' 0'',S,7,https://gwsports.com/sports/womens-volleyball/roster/dilara-elmacioglu/8619,2023
-249,George Washington,,Maeve Loughran,So.,"Los Angeles, Calif.",,,6' 0'',S,8,https://gwsports.com/sports/womens-volleyball/roster/maeve-loughran/8622,2023
-249,George Washington,,Penelope Hiepler,So.,"Naperville, Ill.",,,5' 10'',Libero,9,https://gwsports.com/sports/womens-volleyball/roster/penelope-hiepler/8620,2023
+249,George Washington,,Maeve Loughran,So.,"Los Angeles, Calif.",Marlborough,,6' 0'',S,8,https://gwsports.com/sports/womens-volleyball/roster/maeve-loughran/8622,2023
+249,George Washington,,Penelope Hiepler,So.,"Naperville, Ill.",Urbana (MD),,5' 10'',Libero,9,https://gwsports.com/sports/womens-volleyball/roster/penelope-hiepler/8620,2023
 249,George Washington,,Liv Womble,Sr.,"Wilmington, NC",Robinson Secondary (VA),,6' 1'',OPP,10,https://gwsports.com/sports/womens-volleyball/roster/liv-womble/8626,2023
 249,George Washington,,Markella Lanara,Sr.,"Athens, Greece",The Moraitis School,,5' 11'',MB,11,https://gwsports.com/sports/womens-volleyball/roster/markella-lanara/8621,2023
 249,George Washington,,Amina Robinson,So.,"Detroit, Mich.",Farmington Hills Mercy High School,,5' 6'',Libero,12,https://gwsports.com/sports/womens-volleyball/roster/amina-robinson/8624,2023
@@ -512,7 +512,7 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 327,Kansas State,11278,Makinsey Jones,Fr.,"Topeka, Kan.",Topeka West,,"6'1""",Middle Blocker,6,https://www.kstatesports.com/sports/womens-volleyball/roster/makinsey-jones/11278,2023
 327,Kansas State,11276,Symone Sims,Fr.,"Frisco, Texas",Lebanon Trail,,"5'5""",Defensive Specialist/Libero,7,https://www.kstatesports.com/sports/womens-volleyball/roster/symone-sims/11276,2023
 327,Kansas State,11277,Lauren Schneider,Fr.,"Corinth, Texas",Guyer,,"5'9""",Outside Hitter/Opposite Hitter,9,https://www.kstatesports.com/sports/womens-volleyball/roster/lauren-schneider/11277,2023
-327,Kansas State,11053,Dalia Wilson,So.,"Manisa, Turkiye",,Radnicki Blasters,"6'4""",Opposite Hitter/Middle Blocker,10,https://www.kstatesports.com/sports/womens-volleyball/roster/dalia-wilson/11053,2023
+327,Kansas State,11053,Dalia Wilson,So.,"Manisa, Turkiye",,,"6'4""",Opposite Hitter/Middle Blocker,10,https://www.kstatesports.com/sports/womens-volleyball/roster/dalia-wilson/11053,2023
 327,Kansas State,11048,Ava LeGrand,So.,"Papillion, Neb.",Papillion-La Vista South,,"6'0""",Setter,11,https://www.kstatesports.com/sports/womens-volleyball/roster/ava-legrand/11048,2023
 327,Kansas State,11047,Loren Hinkle,Sr.,"Shawnee, Kan.",De Soto,,"5'9""",Setter,12,https://www.kstatesports.com/sports/womens-volleyball/roster/loren-hinkle/11047,2023
 327,Kansas State,11050,Shaylee Myers,So.,"Lincoln, Neb.",Lincoln Southwest,,"6'0""",Outside Hitter/Opposite Hitter,14,https://www.kstatesports.com/sports/womens-volleyball/roster/shaylee-myers/11050,2023
@@ -521,15 +521,15 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 327,Kansas State,11297,Reagan Fox,Fr.,"Kansas City, Mo.",St. Teresa’s Academy,,"6'2""",Outside Hitter/Opposite Hitter,17,https://www.kstatesports.com/sports/womens-volleyball/roster/reagan-fox/11297,2023
 327,Kansas State,11052,Brenna Schmidt,So.,"Eagle, Neb.",Elmwood-Murdock,,"6'6""",Middle Blocker,18,https://www.kstatesports.com/sports/womens-volleyball/roster/brenna-schmidt/11052,2023
 327,Kansas State,11049,Mackenzie Morris,Sr.,"Dallas, Texas",Ursuline Academy,,"5'7""",Libero,20,https://www.kstatesports.com/sports/womens-volleyball/roster/mackenzie-morris/11049,2023
-270,Hampton,6581,Simge Korkmaz,Sophomore,"Ankara, Turkey",,Hofstra University,"5'8""",Outside,1,https://www.hamptonpirates.com/sports/womens-volleyball/roster/simge-korkmaz/6581,2023
-270,Hampton,6575,Cortni Adams,Junior,"Aubrey, Texas",,Cisco College,"5'11""",Middle,2,https://www.hamptonpirates.com/sports/womens-volleyball/roster/cortni-adams/6575,2023
-270,Hampton,6579,Kylah Hunter,Junior,"Plano, Texas",,Norfolk St.,"5'1""",Defensive,3,https://www.hamptonpirates.com/sports/womens-volleyball/roster/kylah-hunter/6579,2023
+270,Hampton,6581,Simge Korkmaz,Sophomore,"Ankara, Turkey",,Hofstra,"5'8""",Outside,1,https://www.hamptonpirates.com/sports/womens-volleyball/roster/simge-korkmaz/6581,2023
+270,Hampton,6575,Cortni Adams,Junior,"Aubrey, Texas",Ray Braswell High School,Cisco College,"5'11""",Middle,2,https://www.hamptonpirates.com/sports/womens-volleyball/roster/cortni-adams/6575,2023
+270,Hampton,6579,Kylah Hunter,Junior,"Plano, Texas",Poteet HS,Norfolk St.,"5'1""",Defensive,3,https://www.hamptonpirates.com/sports/womens-volleyball/roster/kylah-hunter/6579,2023
 270,Hampton,6577,Kalyn Pierre,Senior,"Atlanta, GA",Woodward Academy,,"5'10""",Setter,4,https://www.hamptonpirates.com/sports/womens-volleyball/roster/kalyn-pierre/6577,2023
 270,Hampton,6693,Rhisen Davis,Freshman,"Marriot, Md.",Marriot's Ridge,,"5'5""",,5,https://www.hamptonpirates.com/sports/womens-volleyball/roster/rhisen-davis/6693,2023
 270,Hampton,6576,Madison Clark,Junior,"Hampton, VA",Peninsula Catholic HS,,"6'1""",Opposite,6,https://www.hamptonpirates.com/sports/womens-volleyball/roster/madison-clark/6576,2023
-270,Hampton,6653,Tyller Williams,Sophomore,"Columbia, Md.",,Delaware State,"5'11""",Middle,7,https://www.hamptonpirates.com/sports/womens-volleyball/roster/tyller-williams/6653,2023
+270,Hampton,6653,Tyller Williams,Sophomore,"Columbia, Md.",Howard HS,Delaware State,"5'11""",Middle,7,https://www.hamptonpirates.com/sports/womens-volleyball/roster/tyller-williams/6653,2023
 270,Hampton,6694,Shachia Lamb,Junior,"Yorktown, Va.",Grafton High,Norfolk St.,"5'10""",Middle,9,https://www.hamptonpirates.com/sports/womens-volleyball/roster/shachia-lamb/6694,2023
-270,Hampton,6582,Kristine Teivane,Senior,"Daugavpils, Latvia",,New Mexico JC,"5'9""",Outside,10,https://www.hamptonpirates.com/sports/womens-volleyball/roster/kristine-teivane/6582,2023
+270,Hampton,6582,Kristine Teivane,Senior,"Daugavpils, Latvia",Daugavpils State Gymnasium,New Mexico JC,"5'9""",Outside,10,https://www.hamptonpirates.com/sports/womens-volleyball/roster/kristine-teivane/6582,2023
 270,Hampton,6583,Maria Eduarda Rodrigues,Senior,"Belo Horizonte, Brazil",,University of Texas Rio Grande Valley,"6'3""",Right,13,https://www.hamptonpirates.com/sports/womens-volleyball/roster/maria-eduarda-rodrigues/6583,2023
 270,Hampton,6578,Rickelle Wescott,Senior,"Philadelphia, PA",Harboro Horsham HS,,"5'10""",Middle,14,https://www.hamptonpirates.com/sports/womens-volleyball/roster/rickelle-wescott/6578,2023
 270,Hampton,6584,Ada Bulgur,Junior,"Istanbul, Turkey",,University of Texas Rio Grande Valley,"6'1""",Outside,17,https://www.hamptonpirates.com/sports/womens-volleyball/roster/ada-bulgur/6584,2023
@@ -1062,12 +1062,12 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 651,South Florida,14282,Lia Schneider,Freshman,"St. Charles, Ill.",St. Charles HS,,"5'8""",Defensive,1,https://www.gousfbulls.com/sports/womens-volleyball/roster/lia-schneider/14282,2023
 651,South Florida,14283,Jalynn Brown,Freshman,"New Smyrna Beach, Fla.",New Smyrna Beach HS,,"6'0""",Outside,2,https://www.gousfbulls.com/sports/womens-volleyball/roster/jalynn-brown/14283,2023
 651,South Florida,14284,Miya Thomas,Freshman,"Gainesville, Fla.",Santa Fe HS,,"5'3""",Defensive,3,https://www.gousfbulls.com/sports/womens-volleyball/roster/miya-thomas/14284,2023
-651,South Florida,14287,Caroline Dykes,Junior,"Flower Mound, Texas",,ETSU,"5'10""",Setter,4,https://www.gousfbulls.com/sports/womens-volleyball/roster/caroline-dykes/14287,2023
+651,South Florida,14287,Caroline Dykes,Junior,"Flower Mound, Texas",Flower Mound HS,ETSU,"5'10""",Setter,4,https://www.gousfbulls.com/sports/womens-volleyball/roster/caroline-dykes/14287,2023
 651,South Florida,14130,Tatiana Johnson,Sophomore,"Frederick, Md.",Urbana HS,,"5'9""",Setter,5,https://www.gousfbulls.com/sports/womens-volleyball/roster/tatiana-johnson/14130,2023
 651,South Florida,14126,Amanda DeWitt,Junior,"Jupiter, Fla.",Jupiter Community HS,,"6'1""",Right,6,https://www.gousfbulls.com/sports/womens-volleyball/roster/amanda-dewitt/14126,2023
 651,South Florida,14132,Ragan Kinard,Junior,"Lynn Haven, Fla.",A. Crawford Mosley HS,,"6'2""",Outside,7,https://www.gousfbulls.com/sports/womens-volleyball/roster/ragan-kinard/14132,2023
 651,South Florida,14134,Tizi Puljiz,Junior,"Resistencia, Argentina",Colegio Don Bosco,,"5'10""",Middle,8,https://www.gousfbulls.com/sports/womens-volleyball/roster/tizi-puljiz/14134,2023
-651,South Florida,14285,Niki Khoshatefeh,Senior,"Temecula, Calif.",,North Carolina,"6'1""",Middle,9,https://www.gousfbulls.com/sports/womens-volleyball/roster/niki-khoshatefeh/14285,2023
+651,South Florida,14285,Niki Khoshatefeh,Senior,"Temecula, Calif.",Great Oak HS,North Carolina,"6'1""",Middle,9,https://www.gousfbulls.com/sports/womens-volleyball/roster/niki-khoshatefeh/14285,2023
 651,South Florida,14128,Buse Hazan,Sophomore,"Istanbul, Turkey",Atacan Egitim Kurumlari,,"5'11""",Outside,12,https://www.gousfbulls.com/sports/womens-volleyball/roster/buse-hazan/14128,2023
 651,South Florida,14110,Marta Cvitkovic,Senior,"Rijeka, Croatia",First Croatian Gymnasium of Susak,,"6'1""",Outside,13,https://www.gousfbulls.com/sports/womens-volleyball/roster/marta-cvitkovic/14110,2023
 651,South Florida,14288,Lauren Lewis,Freshman,"Tarpon Springs, Fla.",Osceola Fundamental HS,,"6'1""",Middle,14,https://www.gousfbulls.com/sports/womens-volleyball/roster/lauren-lewis/14288,2023
@@ -1830,8 +1830,8 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 222,Fairleigh Dickinson,6743,Megan Bushnell,Junior,"Bend, Ore.",Bend Senior,,"5'11""",Setter,2,https://www.fduknights.com/sports/womens-volleyball/roster/megan-bushnell/6743,2023
 222,Fairleigh Dickinson,6906,Avery Bain,Freshman,"Pittsburgh, Pa.",Burrell,,"5'11""",Outside,3,https://www.fduknights.com/sports/womens-volleyball/roster/avery-bain/6906,2023
 222,Fairleigh Dickinson,6753,Samantha Wittholz,Sophomore,"Orlando, Fla.",Olympia,,"5'11""",Setter,4,https://www.fduknights.com/sports/womens-volleyball/roster/samantha-wittholz/6753,2023
-222,Fairleigh Dickinson,6747,Sofia Rampazzo,Senior,"Padova, Italy",Istituto Barbarigo,Scuola Media Ruzante,"6'0""",Outside,5,https://www.fduknights.com/sports/womens-volleyball/roster/sofia-rampazzo/6747,2023
-222,Fairleigh Dickinson,6903,Rebeka Fucka,Graduate Student,"Bologna, Italy",Liceo Artemisia Gentilaschi,Costal Carolina,"6'3""",Middle,6,https://www.fduknights.com/sports/womens-volleyball/roster/rebeka-fucka/6903,2023
+222,Fairleigh Dickinson,6747,Sofia Rampazzo,Senior,"Padova, Italy","Istituto Barbarigo,Scuola Media Ruzante",,"6'0""",Outside,5,https://www.fduknights.com/sports/womens-volleyball/roster/sofia-rampazzo/6747,2023
+222,Fairleigh Dickinson,6903,Rebeka Fucka,Graduate Student,"Bologna, Italy",Liceo Artemisia Gentilaschi,Coastal Carolina,"6'3""",Middle,6,https://www.fduknights.com/sports/womens-volleyball/roster/rebeka-fucka/6903,2023
 222,Fairleigh Dickinson,6752,Giorgia Vaschetti,Sophomore,"Carmagnola, Italy",Baldessano Roccati,,"6'2""",Outside,8,https://www.fduknights.com/sports/womens-volleyball/roster/giorgia-vaschetti/6752,2023
 222,Fairleigh Dickinson,6742,Vittoria Bertoli,Sophomore,"Torino, Italy",Liceo Scientifico Carlo Cattaneo,,"6'2""",Middle,9,https://www.fduknights.com/sports/womens-volleyball/roster/vittoria-bertoli/6742,2023
 222,Fairleigh Dickinson,6750,Hannah Schmidt,Junior,"Frisco, Texas",Frisco Memorial,,"5'10""",Setter,10,https://www.fduknights.com/sports/womens-volleyball/roster/hannah-schmidt/6750,2023
