@@ -4781,7 +4781,7 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 12,Alas. Fairbanks,3586,Cynphany Henderson,RS-FR,"Otsego, Minn.",St. Michael-Albertville High School,,"5'9""",Setter,11,https://www.alaskananooks.com/sports/womens-volleyball/roster/cynphany-henderson/3586,2023
 12,Alas. Fairbanks,3593,McKenna Smith,FR,"North Pole, Alaska",North Pole High School,,"5'5""",Libero,13,https://www.alaskananooks.com/sports/womens-volleyball/roster/mckenna-smith/3593,2023
 12,Alas. Fairbanks,3582,Ella Bines,SO,"Orlando, Fla.",Bishop Moore Catholic High School,,"6'3""",Right,14,https://www.alaskananooks.com/sports/womens-volleyball/roster/ella-bines/3582,2023
-12,Alas. Fairbanks,3585,Kristina Head,JR,"Lyons, Kan.",,Hutchinson Community College,"6'0""",Middle,15,https://www.alaskananooks.com/sports/womens-volleyball/roster/kristina-head/3585,2023
+12,Alas. Fairbanks,3585,Kristina Head,JR,"Lyons, Kan.",Lyons HS,Hutchinson Community College,"6'0""",Middle,15,https://www.alaskananooks.com/sports/womens-volleyball/roster/kristina-head/3585,2023
 12,Alas. Fairbanks,3589,Ainsley Smith,R-SO,"North Pole, Alaska",North Pole High School,,"5'10""",Setter,17,https://www.alaskananooks.com/sports/womens-volleyball/roster/ainsley-smith/3589,2023
 12,Alas. Fairbanks,3634,Emma McWilliam,FR,"Cape Coral, Fla.",Island Coast HS,Indian River State College,"5'5""",Libero/Defensive,21,https://www.alaskananooks.com/sports/womens-volleyball/roster/emma-mcwilliam/3634,2023
 120,Carroll (WI),14778,Lindsey Christman,Sophomore,"Oconomowoc, Wis.",Oconomowoc,,"5'9""",Outside,2,https://www.gopios.com/sports/womens-volleyball/roster/lindsey-christman/14778,2023
@@ -5117,31 +5117,31 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 1318,Post,11876,Alyssa Groves,Sophomore,"Phoenix, Ariz.",Mountain Point,,"5'6""",Libero,3,https://www.posteagles.com/sports/womens-volleyball/roster/alyssa-groves/11876,2023
 1318,Post,11879,Izabella Rae,Senior,"Sarasota, Fla.",Cardinal Mooney HS,Indian River State College,"5'5""",Setter,5,https://www.posteagles.com/sports/womens-volleyball/roster/izabella-rae/11879,2023
 1318,Post,11877,Kaitlyn Lemmon,Senior,"Sparks, Nev.",Spanish Springs,,"5'10""",Middle,6,https://www.posteagles.com/sports/womens-volleyball/roster/kaitlyn-lemmon/11877,2023
-1318,Post,12004,Kaila Sandy,Junior,"Palm Desert, Calif.",,College of the Desert,"5'8""",Outside,7,https://www.posteagles.com/sports/womens-volleyball/roster/kaila-sandy/12004,2023
-1318,Post,12005,Caley Harper,Junior,"Castle Rock, Colo.",,Northeastern Jr. College,"5'10""",Outside,9,https://www.posteagles.com/sports/womens-volleyball/roster/caley-harper/12005,2023
+1318,Post,12004,Kaila Sandy,Junior,"Palm Desert, Calif.",La Quinta HS,College of the Desert,"5'8""",Outside,7,https://www.posteagles.com/sports/womens-volleyball/roster/kaila-sandy/12004,2023
+1318,Post,12005,Caley Harper,Junior,"Castle Rock, Colo.",Castle View HS,Northeastern Jr. College,"5'10""",Outside,9,https://www.posteagles.com/sports/womens-volleyball/roster/caley-harper/12005,2023
 1318,Post,11882,Keyah Sinclair,Senior,"Mississauga, Ontario",T.L. Kennedy Secondary,,"5'10""",Middle,10,https://www.posteagles.com/sports/womens-volleyball/roster/keyah-sinclair/11882,2023
 1318,Post,11881,Kaitlyn Sharkey,Redshirt Sophomore,"Lodi, Wisc.",Lodi,,"5'11""",Outside,11,https://www.posteagles.com/sports/womens-volleyball/roster/kaitlyn-sharkey/11881,2023
 1318,Post,12006,Tamara Radovanov,Junior,"Pancevo, Serbia",,Pratt CC,"6'1""",Outside,16,https://www.posteagles.com/sports/womens-volleyball/roster/tamara-radovanov/12006,2023
-1318,Post,11878,Niah Mesidor,Junior,"Oxford, Conn.",,Southern Connecticut State,"5'10""",Middle,19,https://www.posteagles.com/sports/womens-volleyball/roster/niah-mesidor/11878,2023
+1318,Post,11878,Niah Mesidor,Junior,"Oxford, Conn.",Oxford HS,Southern Connecticut State,"5'10""",Middle,19,https://www.posteagles.com/sports/womens-volleyball/roster/niah-mesidor/11878,2023
 1318,Post,11880,Colleen Romero,Junior,"Wallkill, N.Y.",Wallkill Senior,,"6'0""",Setter,21,https://www.posteagles.com/sports/womens-volleyball/roster/colleen-romero/11880,2023
 1318,Post,12008,Hannah Brandt,Junior,"Oschersleban, Germany",,Garden City CC,"6'1""",Middle,24,https://www.posteagles.com/sports/womens-volleyball/roster/hannah-brandt/12008,2023
-132,Centre,7377,Amery Galan,Freshman,"Foxfield, Colo.",,,"5'2""",DS,4,https://www.centrecolonels.com/sports/womens-volleyball/roster/amery-galan/7377,2023
-132,Centre,7343,Ally Knueven,Sophomore,"Mt. Juliet, Tenn.",,,"5'10""",OH,5,https://www.centrecolonels.com/sports/womens-volleyball/roster/ally-knueven/7343,2023
-132,Centre,7341,Lily Hendricks,Senior,"Hopkinsville, Ky.",,,"5'2""",DS,6,https://www.centrecolonels.com/sports/womens-volleyball/roster/lily-hendricks/7341,2023
-132,Centre,7347,Emily Sullivan,Sophomore,"Highlands Ranch, Colo.",,,"5'10""",OH,7,https://www.centrecolonels.com/sports/womens-volleyball/roster/emily-sullivan/7347,2023
-132,Centre,7345,June Padilla,Junior,"Murfreesboro, Tenn.",,,"5'5""",DS,8,https://www.centrecolonels.com/sports/womens-volleyball/roster/june-padilla/7345,2023
+132,Centre,7377,Amery Galan,Freshman,"Foxfield, Colo.",Regis Jesuit HS,,"5'2""",DS,4,https://www.centrecolonels.com/sports/womens-volleyball/roster/amery-galan/7377,2023
+132,Centre,7343,Ally Knueven,Sophomore,"Mt. Juliet, Tenn.",Wilson Central HS,,"5'10""",OH,5,https://www.centrecolonels.com/sports/womens-volleyball/roster/ally-knueven/7343,2023
+132,Centre,7341,Lily Hendricks,Senior,"Hopkinsville, Ky.",University Heights Academy,,"5'2""",DS,6,https://www.centrecolonels.com/sports/womens-volleyball/roster/lily-hendricks/7341,2023
+132,Centre,7347,Emily Sullivan,Sophomore,"Highlands Ranch, Colo.",Denver Christian HS,,"5'10""",OH,7,https://www.centrecolonels.com/sports/womens-volleyball/roster/emily-sullivan/7347,2023
+132,Centre,7345,June Padilla,Junior,"Murfreesboro, Tenn.",Siegel HS,,"5'5""",DS,8,https://www.centrecolonels.com/sports/womens-volleyball/roster/june-padilla/7345,2023
 132,Centre,7342,Emma Howell,Junior,"Greensburg, Ky.",Green County HS,,"6'0""",OPP/OH,10,https://www.centrecolonels.com/sports/womens-volleyball/roster/emma-howell/7342,2023
-132,Centre,7378,Olivia Chojnacki,Freshman,"The Woodlands, Texas",,,"5'7""",S,11,https://www.centrecolonels.com/sports/womens-volleyball/roster/olivia-chojnacki/7378,2023
-132,Centre,7346,Brooke Palmer,Senior,"Lexington, Ky.",,,"5'8""",OH,13,https://www.centrecolonels.com/sports/womens-volleyball/roster/brooke-palmer/7346,2023
-132,Centre,7340,Emily Goddin,Junior,"Prospect, Ky.",,,"5'11""",MB,16,https://www.centrecolonels.com/sports/womens-volleyball/roster/emily-goddin/7340,2023
+132,Centre,7378,Olivia Chojnacki,Freshman,"The Woodlands, Texas",The Woodlands HS,,"5'7""",S,11,https://www.centrecolonels.com/sports/womens-volleyball/roster/olivia-chojnacki/7378,2023
+132,Centre,7346,Brooke Palmer,Senior,"Lexington, Ky.",Tates Creek HS,,"5'8""",OH,13,https://www.centrecolonels.com/sports/womens-volleyball/roster/brooke-palmer/7346,2023
+132,Centre,7340,Emily Goddin,Junior,"Prospect, Ky.",North Oldham HS,,"5'11""",MB,16,https://www.centrecolonels.com/sports/womens-volleyball/roster/emily-goddin/7340,2023
 132,Centre,7338,Madi Barron,Senior,"North Fort Myers, Fla.",Gulfside,,"5'5""",DS/OH,17,https://www.centrecolonels.com/sports/womens-volleyball/roster/madi-barron/7338,2023
-132,Centre,7379,Abby Swartz,Freshman,"Franklin, Tenn.",,,"5'10""",MB/OPP,18,https://www.centrecolonels.com/sports/womens-volleyball/roster/abby-swartz/7379,2023
-132,Centre,7380,Syd Bietz,Freshman,"Versailles, Ky.",,,"5'9""",OH/OPP,19,https://www.centrecolonels.com/sports/womens-volleyball/roster/syd-bietz/7380,2023
+132,Centre,7379,Abby Swartz,Freshman,"Franklin, Tenn.",Franklin HS,,"5'10""",MB/OPP,18,https://www.centrecolonels.com/sports/womens-volleyball/roster/abby-swartz/7379,2023
+132,Centre,7380,Syd Bietz,Freshman,"Versailles, Ky.",Woodford County HS,,"5'9""",OH/OPP,19,https://www.centrecolonels.com/sports/womens-volleyball/roster/syd-bietz/7380,2023
 132,Centre,7350,Madi Winfield,Sophomore,"Louisville, Ky.",Union,,"5'8""",S,22,https://www.centrecolonels.com/sports/womens-volleyball/roster/madi-winfield/7350,2023
-132,Centre,7381,Mack Turner,Freshman,"Knoxville, Tenn.",,,"6'1""",MB/OPP,23,https://www.centrecolonels.com/sports/womens-volleyball/roster/mack-turner/7381,2023
-132,Centre,7349,Isabel Thornton,Junior,"Murfreesboro, Tenn.",,,"5'11""",OPP,26,https://www.centrecolonels.com/sports/womens-volleyball/roster/isabel-thornton/7349,2023
-132,Centre,7348,Hollye Tate,Sophomore,"Brentwood, Tenn.",,,"5'11""",OPP,33,https://www.centrecolonels.com/sports/womens-volleyball/roster/hollye-tate/7348,2023
-132,Centre,7339,Emily Gardner,Junior,"Brentwood, Tenn.",,,"5'8""",S,59,https://www.centrecolonels.com/sports/womens-volleyball/roster/emily-gardner/7339,2023
+132,Centre,7381,Mack Turner,Freshman,"Knoxville, Tenn.",Farragut HS,,"6'1""",MB/OPP,23,https://www.centrecolonels.com/sports/womens-volleyball/roster/mack-turner/7381,2023
+132,Centre,7349,Isabel Thornton,Junior,"Murfreesboro, Tenn.",Siegel HS,,"5'11""",OPP,26,https://www.centrecolonels.com/sports/womens-volleyball/roster/isabel-thornton/7349,2023
+132,Centre,7348,Hollye Tate,Sophomore,"Brentwood, Tenn.",Brentwood HS,,"5'11""",OPP,33,https://www.centrecolonels.com/sports/womens-volleyball/roster/hollye-tate/7348,2023
+132,Centre,7339,Emily Gardner,Junior,"Brentwood, Tenn.",Franklin Road Academy,,"5'8""",S,59,https://www.centrecolonels.com/sports/womens-volleyball/roster/emily-gardner/7339,2023
 1328,Rockhurst,6780,Gracey Janes,Sophomore,"DeSoto, Kan.",DeSoto,,"5'8""",Libero/Defensive,1,https://www.rockhursthawks.com/sports/womens-volleyball/roster/gracey-janes/6780,2023
 1328,Rockhurst,6777,Logan Gronewold,Senior,"Lincoln, Neb.",Lincoln Northeast,,"5'11""",Middle,2,https://www.rockhursthawks.com/sports/womens-volleyball/roster/logan-gronewold/6777,2023
 1328,Rockhurst,6786,Sarah Pyle,Sophomore,"Overland Park, Kan.",St. Thomas Aquinas,,"5'9""",Outside,3,https://www.rockhursthawks.com/sports/womens-volleyball/roster/sarah-pyle/6786,2023
@@ -5195,20 +5195,20 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 1334,St. Edward's,3487,Lauren Scott,Senior,"Pearland, Texas",Glenda Dawson HS,,"6'2""",MB/RS,20,https://www.gohilltoppers.com/sports/womens-volleyball/roster/lauren-scott/3487,2023
 1334,St. Edward's,3611,Addy Badley,Redshirt Sophomore,"Keller, Texas",Fort Worth Christian,,"6'0""",M/RS,21,https://www.gohilltoppers.com/sports/womens-volleyball/roster/addy-badley/3611,2023
 1334,St. Edward's,3488,Lourdes Gomez,Senior,"San Antonio, Texas",Churchill HS,,"5'10""",OH/RS,25,https://www.gohilltoppers.com/sports/womens-volleyball/roster/lourdes-gomez/3488,2023
-1343,Saint Martin's,5262,Sirena Peredo,Freshman,"Tacoma, WA",,,"5'7""",Defensive,1,https://www.smusaints.com/sports/womens-volleyball/roster/sirena-peredo/5262,2023
+1343,Saint Martin's,5262,Sirena Peredo,Freshman,"Tacoma, WA",Washington HS,,"5'7""",Defensive,1,https://www.smusaints.com/sports/womens-volleyball/roster/sirena-peredo/5262,2023
 1343,Saint Martin's,5179,Abigail Halstead,Junior,"San Antonio, TX",Louis D. Brandeis,,"5'7""",Defensive,2,https://www.smusaints.com/sports/womens-volleyball/roster/abigail-halstead/5179,2023
-1343,Saint Martin's,5184,Karla Soto,Senior,"Nogales, Sonora",,Pima CC,"5'7""",Setter,3,https://www.smusaints.com/sports/womens-volleyball/roster/karla-soto/5184,2023
-1343,Saint Martin's,5263,Ashley Tuiaanna,Senior,"Carson, CA",,Evergreen State College,"5'9""",OH,6,https://www.smusaints.com/sports/womens-volleyball/roster/ashley-tuiaanna/5263,2023
+1343,Saint Martin's,5184,Karla Soto,Senior,"Nogales, Mexico",,Pima CC,"5'7""",Setter,3,https://www.smusaints.com/sports/womens-volleyball/roster/karla-soto/5184,2023
+1343,Saint Martin's,5263,Ashley Tuiaana,Senior,"Carson, CA",Timberline HS,Evergreen State College,"5'9""",OH,6,https://www.smusaints.com/sports/womens-volleyball/roster/ashley-tuiaanna/5263,2023
 1343,Saint Martin's,5264,Tiffany Lam,Freshman,"Frisco, TX",Lone Star HS,,"5'3""",DS/L,9,https://www.smusaints.com/sports/womens-volleyball/roster/tiffany-lam/5264,2023
 1343,Saint Martin's,5175,Zoey Crimin,Sophomore,"Yakima, WA",West Valley HS,,"6'4""",Middle,10,https://www.smusaints.com/sports/womens-volleyball/roster/zoey-crimin/5175,2023
 1343,Saint Martin's,5265,Tehani Yamashita,Freshman,"Aiea, HI",Aiea HS,,"5'5""",DS/L,14,https://www.smusaints.com/sports/womens-volleyball/roster/tehani-yamashita/5265,2023
-1343,Saint Martin's,5266,Emily Garten,Freshman,"Placentia, CA",,,"5'10""",Outside,15,https://www.smusaints.com/sports/womens-volleyball/roster/emily-garten/5266,2023
+1343,Saint Martin's,5266,Emily Garten,Freshman,"Placentia, CA",El Dorado HS,,"5'10""",Outside,15,https://www.smusaints.com/sports/womens-volleyball/roster/emily-garten/5266,2023
 1343,Saint Martin's,5178,Maddy Gooding,Senior,"Renton, WA",Kentridge HS,,"6'1""",Middle,19,https://www.smusaints.com/sports/womens-volleyball/roster/maddy-gooding/5178,2023
 1343,Saint Martin's,5180,Emmy Hansen,Sophomore,"Camas, WA",Camas HS,,"5'11""",Outside,20,https://www.smusaints.com/sports/womens-volleyball/roster/emmy-hansen/5180,2023
 1343,Saint Martin's,5183,Jennifer Soha,Junior,"Henderson, NV",Green Valley HS,,"6'0""",Middle,21,https://www.smusaints.com/sports/womens-volleyball/roster/jennifer-soha/5183,2023
-1343,Saint Martin's,5267,Peyton Griffin,Junior,"Tigard, OR",,Cal State-Eastbay,"6'0""",S,23,https://www.smusaints.com/sports/womens-volleyball/roster/peyton-griffin/5267,2023
+1343,Saint Martin's,5267,Peyton Griffin,Junior,"Tigard, OR",Jesuit HS,Cal State-Eastbay,"6'0""",S,23,https://www.smusaints.com/sports/womens-volleyball/roster/peyton-griffin/5267,2023
 1343,Saint Martin's,5182,Kayla May,Senior,"Fairview, OR",Reynolds HS,,"5'5""",Defensive,26,https://www.smusaints.com/sports/womens-volleyball/roster/kayla-may/5182,2023
-1343,Saint Martin's,5268,Kamara White,Freshman,"San Diego, CA",,,"5'8""",Setter,32,https://www.smusaints.com/sports/womens-volleyball/roster/kamara-white/5268,2023
+1343,Saint Martin's,5268,Kamara White,Freshman,"San Diego, CA",Mt. Carmel HS,,"5'8""",Setter,32,https://www.smusaints.com/sports/womens-volleyball/roster/kamara-white/5268,2023
 1346,St. Mary's (TX),3541,Haleigh Wilk,Freshman,"Salado, Texas",Salado HS,,"6'0""",Setter,1,https://www.rattlerathletics.com/sports/womens-volleyball/roster/haleigh-wilk/3541,2023
 1346,St. Mary's (TX),3537,Abbey Stiffler,Sophomore,"York, Pa.",Central York HS,,"5'8""",Setter,2,https://www.rattlerathletics.com/sports/womens-volleyball/roster/abbey-stiffler/3537,2023
 1346,St. Mary's (TX),3532,Aislan Lennon,Senior,Houston,Cinco Ranch HS,,"5'10""",Setter,3,https://www.rattlerathletics.com/sports/womens-volleyball/roster/aislan-lennon/3532,2023
@@ -5230,13 +5230,13 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 1346,St. Mary's (TX),3545,Landry Cate,Junior,"Hot Springs, Ark.",Fountain Lake HS,Cowley JC,"6'0""",Middle,21,https://www.rattlerathletics.com/sports/womens-volleyball/roster/landry-cate/3545,2023
 1371,Southeastern Okla.,4785,Amaya Constantino,Sophomore,"Arlington, Texas",Kennedale HS,,"5'6""",DS/L,1,https://www.gosoutheastern.com/sports/womens-volleyball/roster/amaya-constantino/4785,2023
 1371,Southeastern Okla.,4792,Michera Moffett,Junior,"Pflugerville, Texas",Lincoln Memorial,,"5'9""",OH/MB,3,https://www.gosoutheastern.com/sports/womens-volleyball/roster/michera-moffett/4792,2023
-1371,Southeastern Okla.,4794,Noelia Rocha,Redshirt Junior,"San Antonio, Texas",,Hill College,"5'11""",OH,4,https://www.gosoutheastern.com/sports/womens-volleyball/roster/noelia-rocha/4794,2023
-1371,Southeastern Okla.,4789,Avynn La Rose,Senior,"Falcon, Colo.",,Fort Lewis,"5'11""",MB,5,https://www.gosoutheastern.com/sports/womens-volleyball/roster/avynn-la-rose/4789,2023
+1371,Southeastern Okla.,4794,Noelia Rocha,Redshirt Junior,"San Antonio, Texas",Holy Cross HS,Hill College,"5'11""",OH,4,https://www.gosoutheastern.com/sports/womens-volleyball/roster/noelia-rocha/4794,2023
+1371,Southeastern Okla.,4789,Avynn La Rose,Senior,"Falcon, Colo.",The Classical Academy,Fort Lewis,"5'11""",MB,5,https://www.gosoutheastern.com/sports/womens-volleyball/roster/avynn-la-rose/4789,2023
 1371,Southeastern Okla.,4795,Emmy Summers,Sophomore,"Plano, Texas",Plano HS,,"5'10""",OH/RS,6,https://www.gosoutheastern.com/sports/womens-volleyball/roster/emmy-summers/4795,2023
 1371,Southeastern Okla.,4786,Ruthie Forson,Senior,"Denton, TX",Lake Dallas HS,,"5'10""",S,7,https://www.gosoutheastern.com/sports/womens-volleyball/roster/ruthie-forson/4786,2023
 1371,Southeastern Okla.,4788,Faith Kruebbe,Sophomore,"Carthage, Texas",Carthage HS,,"6'0""",RS,8,https://www.gosoutheastern.com/sports/womens-volleyball/roster/faith-kruebbe/4788,2023
 1371,Southeastern Okla.,4791,D'Nari Mills,Sophomore,"Cypress, Texas",Cypress Woods HS,,"5'7""",OH,10,https://www.gosoutheastern.com/sports/womens-volleyball/roster/d-nari-mills/4791,2023
-1371,Southeastern Okla.,4874,Alaina Armstrong,Sophomore,"Richardson, Texas",,Alcorn State,,OH,11,https://www.gosoutheastern.com/sports/womens-volleyball/roster/alaina-armstrong/4874,2023
+1371,Southeastern Okla.,4874,Alaina Armstrong,Sophomore,"Richardson, Texas",Richardson HS,Alcorn State,,OH,11,https://www.gosoutheastern.com/sports/womens-volleyball/roster/alaina-armstrong/4874,2023
 1371,Southeastern Okla.,4790,Patience Lewis,Sophomore,"Pearland, Texas",Glenda Dawson HS,,"5'2""",DS/L,12,https://www.gosoutheastern.com/sports/womens-volleyball/roster/patience-lewis/4790,2023
 1371,Southeastern Okla.,4793,Maci Morrison,Sophomore,"Bandera, Texas",Bandera HS,,"6'0""",RS/S,13,https://www.gosoutheastern.com/sports/womens-volleyball/roster/maci-morrison/4793,2023
 1371,Southeastern Okla.,4787,Peyton Kriegel,Senior,"Center Point, Iowa",Sioux Falls,,"5'4""",DS/L,14,https://www.gosoutheastern.com/sports/womens-volleyball/roster/peyton-kriegel/4787,2023
@@ -5245,24 +5245,24 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 1371,Southeastern Okla.,4868,Rhayan Earl,Freshman,"Arlington, Texas",Mansfield Timberview HS,,"5'9""",MH/RS,17,https://www.gosoutheastern.com/sports/womens-volleyball/roster/rhayan-earl/4868,2023
 1371,Southeastern Okla.,4869,Caitlin Isely,Freshman,"Atkins, Ark.",Atkins HS,,"6'0""",MH/RS,19,https://www.gosoutheastern.com/sports/womens-volleyball/roster/caitlin-isely/4869,2023
 1371,Southeastern Okla.,4870,Maddie Wilson,Freshman,"Canton, Texas",Canton HS,,"5'4""",DS/L,21,https://www.gosoutheastern.com/sports/womens-volleyball/roster/maddie-wilson/4870,2023
-1371,Southeastern Okla.,4875,Andrea Urzua,Sophomore,"Carthage, Texas",,Panola College,,DS/L,24,https://www.gosoutheastern.com/sports/womens-volleyball/roster/andrea-urzua/4875,2023
-1371,Southeastern Okla.,4876,Lekariss Gillespie,Junior,"Killeen, Texas",,Ranger College,,RS,25,https://www.gosoutheastern.com/sports/womens-volleyball/roster/lekariss-gillespie/4876,2023
+1371,Southeastern Okla.,4875,Andrea Urzua,Sophomore,"Carthage, Texas",Seven Lakes HS,Panola College,,DS/L,24,https://www.gosoutheastern.com/sports/womens-volleyball/roster/andrea-urzua/4875,2023
+1371,Southeastern Okla.,4876,Lekariss Gillespie,Junior,"Killeen, Texas",Ellison HS,Ranger College,,RS,25,https://www.gosoutheastern.com/sports/womens-volleyball/roster/lekariss-gillespie/4876,2023
 1376,Southern Ark.,5623,Brinklee Dauenhauer,Freshman,"Springtown, Texas",Springtown HS,,"5'7""",Outside,1,https://www.muleriderathletics.com/sports/womens-volleyball/roster/brinklee-dauenhauer/5623,2023
 1376,Southern Ark.,5624,Alyssa Magness,Freshman,"Frisco, Texas",Frisco Liberty HS,,"5'9""",Middle,2,https://www.muleriderathletics.com/sports/womens-volleyball/roster/alyssa-magness/5624,2023
-1376,Southern Ark.,5774,Jada Hudson,Junior,"Grand View, Texas",,North Central Texas College,"5'10""",Outside,3,https://www.muleriderathletics.com/sports/womens-volleyball/roster/jada-hudson/5774,2023
+1376,Southern Ark.,5774,Jada Hudson,Junior,"Grand View, Texas",Grandview HS,North Central Texas College,"5'10""",Outside,3,https://www.muleriderathletics.com/sports/womens-volleyball/roster/jada-hudson/5774,2023
 1376,Southern Ark.,5617,Morgan Schuster,Senior,"Arlington, Texas",Nolan Catholic HS,,"5'11""",Setter,4,https://www.muleriderathletics.com/sports/womens-volleyball/roster/morgan-schuster/5617,2023
 1376,Southern Ark.,5615,Landry Rogers,Junior,"Salado, Texas",Salado HS,,"5'10""",Outside,5,https://www.muleriderathletics.com/sports/womens-volleyball/roster/landry-rogers/5615,2023
 1376,Southern Ark.,5773,Francesca Giovane,Junior,"Bellinzago Novarese, Italy",,Odessa College,"5'11""",Right,6,https://www.muleriderathletics.com/sports/womens-volleyball/roster/francesca-giovane/5773,2023
-1376,Southern Ark.,5613,Lauryn Moultrie,Junior,"Fairburn, Ga.",,Georgia State,"5'11""",Middle,7,https://www.muleriderathletics.com/sports/womens-volleyball/roster/lauryn-moultrie/5613,2023
+1376,Southern Ark.,5613,Lauryn Moultrie,Junior,"Fairburn, Ga.",Westlake HS,Georgia State,"5'11""",Middle,7,https://www.muleriderathletics.com/sports/womens-volleyball/roster/lauryn-moultrie/5613,2023
 1376,Southern Ark.,5622,Mary Insalaco,Junior,"North Little Rock, Ark.",Champion Christian,,"5'2""",Defensive,8,https://www.muleriderathletics.com/sports/womens-volleyball/roster/mary-insalaco/5622,2023
 1376,Southern Ark.,5618,Ava Tanner,Junior,"Brock, Texas",Brock HS,,"5'10""",Middle,9,https://www.muleriderathletics.com/sports/womens-volleyball/roster/ava-tanner/5618,2023
 1376,Southern Ark.,5616,Kendall Sadler,Sophomore,"Montgomery, Texas",Montgomery HS,,"5'7""",Defensive,10,https://www.muleriderathletics.com/sports/womens-volleyball/roster/kendall-sadler/5616,2023
 1376,Southern Ark.,5614,Isla Olivas,Junior,"Fort Worth, Texas",Fossil Ridge HS,,"5'10""",Middle,11,https://www.muleriderathletics.com/sports/womens-volleyball/roster/isla-olivas/5614,2023
-1376,Southern Ark.,5621,Macie Shaver,Junior,"Prosper, Texas",,Butler CC,"5'9""",Setter,12,https://www.muleriderathletics.com/sports/womens-volleyball/roster/macie-shaver/5621,2023
+1376,Southern Ark.,5621,Macie Shaver,Junior,"Prosper, Texas",Leadership Prep School,Butler CC,"5'9""",Setter,12,https://www.muleriderathletics.com/sports/womens-volleyball/roster/macie-shaver/5621,2023
 1376,Southern Ark.,5775,Alessia Sonzini,Junior,"Bellinzago Novarese, Italy",,Navarro College,"5'7""",Defensive,13,https://www.muleriderathletics.com/sports/womens-volleyball/roster/alessia-sonzini/5775,2023
 1376,Southern Ark.,5610,Allie Cooper,Sophomore,"Brownsboro, Texas",Brownsboro HS,,"5'10""",Middle,15,https://www.muleriderathletics.com/sports/womens-volleyball/roster/allie-cooper/5610,2023
 1376,Southern Ark.,5612,Kayte Delong,Junior,"Overland Park, Kan.",Blue Valley North HS,,"6'1""",Outside,17,https://www.muleriderathletics.com/sports/womens-volleyball/roster/kayte-delong/5612,2023
-1376,Southern Ark.,5776,Samantha Ward,Sophomore,"Round Rock, Texas",,Coastal Bend College,"5'3""",Defensive,18,https://www.muleriderathletics.com/sports/womens-volleyball/roster/samantha-ward/5776,2023
+1376,Southern Ark.,5776,Samantha Ward,Sophomore,"Round Rock, Texas",Round Rock HS,Coastal Bend College,"5'3""",Defensive,18,https://www.muleriderathletics.com/sports/womens-volleyball/roster/samantha-ward/5776,2023
 1376,Southern Ark.,5620,Carlin Whaley,Junior,"Magnolia, Ark.",Magnolia HS,,"6'0""",Outside,20,https://www.muleriderathletics.com/sports/womens-volleyball/roster/carlin-whaley/5620,2023
 1376,Southern Ark.,5772,Alexa Heard,Junior,"Little Rock, Ark.",Homeschool,,"5'3""",Defensive,21,https://www.muleriderathletics.com/sports/womens-volleyball/roster/alexa-heard/5772,2023
 139,Chris. Newport,18824,Noelle Starr,Junior,"Virginia Beach, Va.",Princess Anne,,"5'6""",Defensive,2,https://www.cnusports.com/sports/womens-volleyball/roster/noelle-starr/18824,2023
@@ -5553,23 +5553,23 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 146,Clarkson,8205,Emma Cortez,Freshman,"Fairfax, VA",Robinson Secondary,,"5'3""",Defensive,17,https://www.clarksonathletics.com/sports/womens-volleyball/roster/emma-cortez/8205,2023
 146,Clarkson,8192,Haley Currier,Sophomore,"Minooka, IL",Minooka,,"5'7""",Defensive,18,https://www.clarksonathletics.com/sports/womens-volleyball/roster/haley-currier/8192,2023
 146,Clarkson,8200,Tess Sorel,Sophomore,"Grand Island, NY",Grand Island,,"6'1""",Middle,19,https://www.clarksonathletics.com/sports/womens-volleyball/roster/tess-sorel/8200,2023
-1462,Wingate,11427,Taryn Pryce,Senior,"Clemmons, N.C.",,Reagan HS,"5'5""",DS/L,3,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/taryn-pryce/11427,2023
-1462,Wingate,11432,Taylor Robertson,Graduate Student,"Roanoake, Va.",,UNC Greensboro,"6'0""",OH,4,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/taylor-robertson/11432,2023
-1462,Wingate,11420,Rayah Givens,Senior,"Charlotte, N.C.",,Cox Mill HS,"6'0""",MB,5,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/rayah-givens/11420,2023
-1462,Wingate,11433,Alanna Vavao,Freshman,"Bellbrook, Ohio",,Bellbrook HS,"5'10""",OH,6,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/alanna-vavao/11433,2023
-1462,Wingate,11434,Analiese Baldauf,Freshman,"Apex, N.C.",,Apex Friendship HS,"6'0""",OH,7,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/analiese-baldauf/11434,2023
-1462,Wingate,11430,Lorna Stacherski,Senior,"Lexington, S.C.",,River Bluff HS,"6'1""",OH,8,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/lorna-stacherski/11430,2023
-1462,Wingate,11431,Maggie Young,Graduate Student,"Waxhaw, N.C.",,Marvin Ridge HS,"5'10""",MB,9,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/maggie-young/11431,2023
-1462,Wingate,11422,Katie Jamerson,Junior,"Charlotte, N.C.",,Marvin Ridge HS,"5'7""",S,10,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/katie-jamerson/11422,2023
-1462,Wingate,11435,Amber Rowoldt,Graduate Student,"Watertown, Wisc.",,Palm Beach Atlantic,"5'10""",OH,11,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/amber-rowoldt/11435,2023
-1462,Wingate,11428,Gabby Saye,Sophomore,"Edwardsville, Ill.",,Edwardsville HS,"6'3""",RS,12,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/gabby-saye/11428,2023
-1462,Wingate,11421,Maddie Hoffman,Sophomore,"Fenton, Mo.",,Cor Jesu Academy,"5'7""",DS/L,13,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/maddie-hoffman/11421,2023
-1462,Wingate,11436,Maya Van Heyst,Freshman,"Tampa, Fla.",,Tampa Preparatory HS,"5'11""",S,14,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/maya-van-heyst/11436,2023
-1462,Wingate,11423,Emily Johnson,Sophomore,"Fort Collins, Colo.",,Fort Collins HS,"6'0""",MB,15,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/emily-johnson/11423,2023
-1462,Wingate,11429,Clare Sheedy,Sophomore,"Plymouth, Ind.",,Plymouth HS,"6'0""",S,16,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/clare-sheedy/11429,2023
-1462,Wingate,11424,Sydney Morland,Redshirt Freshman,"Colorado Springs, Colo.",,Cheyenne Mountain HS,"6'0""",MB,18,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/sydney-morland/11424,2023
-1462,Wingate,11425,Meagan Mowrey,Redshirt Freshman,"Denver, N.C.",,North Lincoln HS,"5'4""",L,19,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/meagan-mowrey/11425,2023
-1462,Wingate,11426,Maggie Mullen,Graduate Student,"Harrisburg, N.C.",,Hickory Ridge HS,"5'10""",L/DS,20,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/maggie-mullen/11426,2023
+1462,Wingate,11427,Taryn Pryce,Senior,"Clemmons, N.C.",Reagan HS,,"5'5""",DS/L,3,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/taryn-pryce/11427,2023
+1462,Wingate,11432,Taylor Robertson,Graduate Student,"Roanoake, Va.",Lord Botetourt HS,UNC Greensboro,"6'0""",OH,4,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/taylor-robertson/11432,2023
+1462,Wingate,11420,Rayah Givens,Senior,"Charlotte, N.C.",Cox Mill HS,,"6'0""",MB,5,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/rayah-givens/11420,2023
+1462,Wingate,11433,Alanna Vavao,Freshman,"Bellbrook, Ohio",Bellbrook HS,,"5'10""",OH,6,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/alanna-vavao/11433,2023
+1462,Wingate,11434,Analiese Baldauf,Freshman,"Apex, N.C.",Apex Friendship HS,,"6'0""",OH,7,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/analiese-baldauf/11434,2023
+1462,Wingate,11430,Lorna Stacherski,Senior,"Lexington, S.C.",River Bluff HS,,"6'1""",OH,8,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/lorna-stacherski/11430,2023
+1462,Wingate,11431,Maggie Young,Graduate Student,"Waxhaw, N.C.",Marvin Ridge HS,,"5'10""",MB,9,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/maggie-young/11431,2023
+1462,Wingate,11422,Katie Jamerson,Junior,"Charlotte, N.C.",Marvin Ridge HS,,"5'7""",S,10,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/katie-jamerson/11422,2023
+1462,Wingate,11435,Amber Rowoldt,Graduate Student,"Watertown, Wisc.",Lakeside Lutheran HS,Palm Beach Atlantic,"5'10""",OH,11,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/amber-rowoldt/11435,2023
+1462,Wingate,11428,Gabby Saye,Sophomore,"Edwardsville, Ill.",Edwardsville HS,,"6'3""",RS,12,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/gabby-saye/11428,2023
+1462,Wingate,11421,Maddie Hoffman,Sophomore,"Fenton, Mo.",Cor Jesu Academy,,"5'7""",DS/L,13,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/maddie-hoffman/11421,2023
+1462,Wingate,11436,Maya Van Heyst,Freshman,"Tampa, Fla.",Tampa Preparatory HS,,"5'11""",S,14,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/maya-van-heyst/11436,2023
+1462,Wingate,11423,Emily Johnson,Sophomore,"Fort Collins, Colo.",Fort Collins HS,,"6'0""",MB,15,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/emily-johnson/11423,2023
+1462,Wingate,11429,Clare Sheedy,Sophomore,"Plymouth, Ind.",Plymouth HS,,"6'0""",S,16,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/clare-sheedy/11429,2023
+1462,Wingate,11424,Sydney Morland,Redshirt Freshman,"Colorado Springs, Colo.",Cheyenne Mountain HS,,"6'0""",MB,18,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/sydney-morland/11424,2023
+1462,Wingate,11425,Meagan Mowrey,Redshirt Freshman,"Denver, N.C.",North Lincoln HS,,"5'4""",L,19,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/meagan-mowrey/11425,2023
+1462,Wingate,11426,Maggie Mullen,Graduate Student,"Harrisburg, N.C.",Hickory Ridge HS,,"5'10""",L/DS,20,https://www.wingatebulldogs.com/sports/womens-volleyball/roster/maggie-mullen/11426,2023
 14795,Cedar Crest,2819,Maddie Forbes,First Year,"Perkasie, Pa.",Pennridge,,"5'2""",Defensive,2,https://www.cedarcrestathletics.com/sports/womens-volleyball/roster/maddie-forbes/2819,2023
 14795,Cedar Crest,2814,Ziah Melton,Senior,"Allentown, Pa.",William Allen,,"5'7""",Outside,4,https://www.cedarcrestathletics.com/sports/womens-volleyball/roster/ziah-melton/2814,2023
 14795,Cedar Crest,2811,Leilani Yang,First Year,"El Dorado Hills, Calif.",Oak Ridge,,"5'5""",Setter/Right,7,https://www.cedarcrestathletics.com/sports/womens-volleyball/roster/leilani-yang/2811,2023
@@ -5623,28 +5623,28 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 151,Colby,7021,Azariah Love,Freshman,"McKinney, Texas",Rockhill High School,,"6'0""",RS,24,https://www.colbyathletics.com/sports/womens-volleyball/roster/azariah-love/7021,2023
 151,Colby,7011,Issy Pribisich,Freshman,"Westlake, Ohio",Hathaway Brown School,,"6'0""",RS,26,https://www.colbyathletics.com/sports/womens-volleyball/roster/issy-pribisich/7011,2023
 151,Colby,7014,Kamalani Enomoto,Freshman,"Federal Way, Wash.",Annie Wright Schools,,"5'3""",DS,29,https://www.colbyathletics.com/sports/womens-volleyball/roster/kamalani-enomoto/7014,2023
-154,Colorado Col.,7073,Emma Faraon,Junior,"Arlington, VA",,,"5'3""",Defensive,1,https://www.cctigers.com/sports/womens-volleyball/roster/emma-faraon/7073,2023
-154,Colorado Col.,7079,Kelli Miller,Junior,"Miami Beach, FL",,,"5'2""",Defensive,2,https://www.cctigers.com/sports/womens-volleyball/roster/kelli-miller/7079,2023
-154,Colorado Col.,7077,Keeley Kandziora,Senior,"Lake Forest, IL",,,"5'11""",Opposite,3,https://www.cctigers.com/sports/womens-volleyball/roster/keeley-kandziora/7077,2023
-154,Colorado Col.,7072,Carolyn Dormady,Sophomore,"Los Altos, CA",,,"6'0""",Outside,4,https://www.cctigers.com/sports/womens-volleyball/roster/carolyn-dormady/7072,2023
-154,Colorado Col.,7070,Evan Arvizu,Junior,"Skokie, IL",,,"5'8""",Setter/Defensive,5,https://www.cctigers.com/sports/womens-volleyball/roster/evan-arvizu/7070,2023
-154,Colorado Col.,7076,Jenny Jenks,Senior,"Hermosa Beach, CA",,,"5'10""",Setter,6,https://www.cctigers.com/sports/womens-volleyball/roster/jenny-jenks/7076,2023
-154,Colorado Col.,7074,Nyah Flores,Sophomore,"Aurora, CO",,,"5'4""",Defensive,7,https://www.cctigers.com/sports/womens-volleyball/roster/nyah-flores/7074,2023
-154,Colorado Col.,7080,Libby Ochs,Sophomore,"Indianapolis, IN",,,"5'6""",Setter/Defensive,8,https://www.cctigers.com/sports/womens-volleyball/roster/libby-ochs/7080,2023
-154,Colorado Col.,7078,Isabella Lipacis,Senior,"Piedmont, CA",,,"6'0""",Outside,9,https://www.cctigers.com/sports/womens-volleyball/roster/isabella-lipacis/7078,2023
-154,Colorado Col.,7084,Camille Sherrill,Freshman,"Missoula, MT",,,"5'9""",Outside,10,https://www.cctigers.com/sports/womens-volleyball/roster/camille-sherrill/7084,2023
-154,Colorado Col.,7082,Annie Steger,Junior,"El Granada, CA",,,"5'8""",Setter,11,https://www.cctigers.com/sports/womens-volleyball/roster/annie-steger/7082,2023
-154,Colorado Col.,7086,Annie Joo,Freshman,"San Jose, CA",,,"5'7""",Setter,13,https://www.cctigers.com/sports/womens-volleyball/roster/annie-joo/7086,2023
-154,Colorado Col.,7088,Meghan Gannon,Freshman,"Cleveland, OH",,,"5'6""",Defensive,14,https://www.cctigers.com/sports/womens-volleyball/roster/meghan-gannon/7088,2023
-154,Colorado Col.,7081,Delaney Rach,Junior,"Chatsworth, CA",,,"6'2""",Outside,16,https://www.cctigers.com/sports/womens-volleyball/roster/delaney-rach/7081,2023
-154,Colorado Col.,7075,Kellie Hopper,Junior,"Denver, CO",,,"5'11""",Outside,17,https://www.cctigers.com/sports/womens-volleyball/roster/kellie-hopper/7075,2023
-154,Colorado Col.,7071,Steph Brown,Junior,"Worcester, MA",,,"5'10""",Middle,18,https://www.cctigers.com/sports/womens-volleyball/roster/steph-brown/7071,2023
-154,Colorado Col.,7089,Coco Barton,Freshman,"Portsmouth, NH",,,"6'1""",Middle,19,https://www.cctigers.com/sports/womens-volleyball/roster/coco-barton/7089,2023
-154,Colorado Col.,7083,Kaylie Stuteville,Junior,"Green Oaks, IL",,,"6'2""",Middle,21,https://www.cctigers.com/sports/womens-volleyball/roster/kaylie-stuteville/7083,2023
-154,Colorado Col.,7085,Brooke Brilliant,Freshman,"San Rafael, CA",,,"5'9""",Middle,22,https://www.cctigers.com/sports/womens-volleyball/roster/brooke-brilliant/7085,2023
-154,Colorado Col.,7091,Liv Beckish,Freshman,"Golden, CO",,,"6'0""",Outside,23,https://www.cctigers.com/sports/womens-volleyball/roster/liv-beckish/7091,2023
-154,Colorado Col.,7087,Alanna Jones,Freshman,"Redondo Beach, CA",,,"5'10""",Middle,24,https://www.cctigers.com/sports/womens-volleyball/roster/alanna-jones/7087,2023
-154,Colorado Col.,7090,Julia Reusch,Freshman,"Seal Beach, CA",,,,Opposite Hitter,25,https://www.cctigers.com/sports/womens-volleyball/roster/julia-reusch/7090,2023
+154,Colorado Col.,7073,Emma Faraon,Junior,"Arlington, VA",The Madeira School,,"5'3""",Defensive,1,https://www.cctigers.com/sports/womens-volleyball/roster/emma-faraon/7073,2023
+154,Colorado Col.,7079,Kelli Miller,Junior,"Miami Beach, FL",Ransom Everglades School,,"5'2""",Defensive,2,https://www.cctigers.com/sports/womens-volleyball/roster/kelli-miller/7079,2023
+154,Colorado Col.,7077,Keeley Kandziora,Senior,"Lake Forest, IL",Loyola Academy,,"5'11""",Opposite,3,https://www.cctigers.com/sports/womens-volleyball/roster/keeley-kandziora/7077,2023
+154,Colorado Col.,7072,Carolyn Dormady,Sophomore,"Los Altos, CA",Los Altos HS,,"6'0""",Outside,4,https://www.cctigers.com/sports/womens-volleyball/roster/carolyn-dormady/7072,2023
+154,Colorado Col.,7070,Evan Arvizu,Junior,"Skokie, IL",Niles West HS,,"5'8""",Setter/Defensive,5,https://www.cctigers.com/sports/womens-volleyball/roster/evan-arvizu/7070,2023
+154,Colorado Col.,7076,Jenny Jenks,Senior,"Hermosa Beach, CA",Mira Costa HS,,"5'10""",Setter,6,https://www.cctigers.com/sports/womens-volleyball/roster/jenny-jenks/7076,2023
+154,Colorado Col.,7074,Nyah Flores,Sophomore,"Aurora, CO",Cherokee Trail HS,,"5'4""",Defensive,7,https://www.cctigers.com/sports/womens-volleyball/roster/nyah-flores/7074,2023
+154,Colorado Col.,7080,Libby Ochs,Sophomore,"Indianapolis, IN",North Central HS,,"5'6""",Setter/Defensive,8,https://www.cctigers.com/sports/womens-volleyball/roster/libby-ochs/7080,2023
+154,Colorado Col.,7078,Isabella Lipacis,Senior,"Piedmont, CA",Head Royce School,,"6'0""",Outside,9,https://www.cctigers.com/sports/womens-volleyball/roster/isabella-lipacis/7078,2023
+154,Colorado Col.,7084,Camille Sherrill,Freshman,"Missoula, MT",Hellgate HS,,"5'9""",Outside,10,https://www.cctigers.com/sports/womens-volleyball/roster/camille-sherrill/7084,2023
+154,Colorado Col.,7082,Annie Steger,Junior,"El Granada, CA",Half Moon Bay HS,,"5'8""",Setter,11,https://www.cctigers.com/sports/womens-volleyball/roster/annie-steger/7082,2023
+154,Colorado Col.,7086,Annie Joo,Freshman,"San Jose, CA",Valley Christian HS,,"5'7""",Setter,13,https://www.cctigers.com/sports/womens-volleyball/roster/annie-joo/7086,2023
+154,Colorado Col.,7088,Meghan Gannon,Freshman,"Cleveland, OH",Shaker Heights HS,,"5'6""",Defensive,14,https://www.cctigers.com/sports/womens-volleyball/roster/meghan-gannon/7088,2023
+154,Colorado Col.,7081,Delaney Rach,Junior,"Chatsworth, CA",Louisville HS,,"6'2""",Outside,16,https://www.cctigers.com/sports/womens-volleyball/roster/delaney-rach/7081,2023
+154,Colorado Col.,7075,Kellie Hopper,Junior,"Denver, CO",Libertyville HS,,"5'11""",Outside,17,https://www.cctigers.com/sports/womens-volleyball/roster/kellie-hopper/7075,2023
+154,Colorado Col.,7071,Steph Brown,Junior,"Worcester, MA",Worcester Academy,,"5'10""",Middle,18,https://www.cctigers.com/sports/womens-volleyball/roster/steph-brown/7071,2023
+154,Colorado Col.,7089,Coco Barton,Freshman,"Portsmouth, NH",Phillips Exeter Academy,,"6'1""",Middle,19,https://www.cctigers.com/sports/womens-volleyball/roster/coco-barton/7089,2023
+154,Colorado Col.,7083,Kaylie Stuteville,Junior,"Green Oaks, IL",Libertyville HS,,"6'2""",Middle,21,https://www.cctigers.com/sports/womens-volleyball/roster/kaylie-stuteville/7083,2023
+154,Colorado Col.,7085,Brooke Brilliant,Freshman,"San Rafael, CA",Marin Catholic HS,,"5'9""",Middle,22,https://www.cctigers.com/sports/womens-volleyball/roster/brooke-brilliant/7085,2023
+154,Colorado Col.,7091,Liv Beckish,Freshman,"Golden, CO",Mullen HS,,"6'0""",Outside,23,https://www.cctigers.com/sports/womens-volleyball/roster/liv-beckish/7091,2023
+154,Colorado Col.,7087,Alanna Jones,Freshman,"Redondo Beach, CA",Redondo Union HS,,"5'10""",Middle,24,https://www.cctigers.com/sports/womens-volleyball/roster/alanna-jones/7087,2023
+154,Colorado Col.,7090,Julia Reusch,Freshman,"Seal Beach, CA",Saint Joseph HS,,,Opposite Hitter,25,https://www.cctigers.com/sports/womens-volleyball/roster/julia-reusch/7090,2023
 155,Colo. Sch. of Mines,13789,Meghan Slaninka,Sophomore,"Fishers, Ind.",Hamilton Southeastern,,"5'5""",DS,1,https://www.minesathletics.com/sports/womens-volleyball/roster/meghan-slaninka/13789,2023
 155,Colo. Sch. of Mines,13786,Morgan McChesney,Sophomore,"Arvada, Colo.",Ralston Valley,,"6'0""",MB,4,https://www.minesathletics.com/sports/womens-volleyball/roster/morgan-mcchesney/13786,2023
 155,Colo. Sch. of Mines,13788,Jada Price,Sophomore,"Argyle, Texas",Argyle,,"5'4""",DS,5,https://www.minesathletics.com/sports/womens-volleyball/roster/jada-price/13788,2023
@@ -5674,23 +5674,23 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 15882,Rosemont,4208,Madison Morton,Freshman,,,,"5'9""",,13,https://www.rosemont-ravens.com/sports/womens-volleyball/roster/madison-morton/4208,2023
 15882,Rosemont,4127,Jana Ehnot,Sophomore,"Aldan, PA",Padua Academy,,"5'3""",DS,14,https://www.rosemont-ravens.com/sports/womens-volleyball/roster/jana-ehnot/4127,2023
 15882,Rosemont,4130,Evora Kaiwi,Senior,"Pearl City, HI",Pearl City High School,,"5'7""",OUTSIDE,15,https://www.rosemont-ravens.com/sports/womens-volleyball/roster/evora-kaiwi/4130,2023
-159,Columbus St.,1573,Savannah Miller,Sophomore,"Perrysburg, Ohio",,Perrysburg High School,"5'10""",OH,2,https://www.csucougars.com/sports/womens-volleyball/roster/savannah-miller/1573,2023
-159,Columbus St.,1574,Sabrina Rodgers,Junior,"Iowa City, Iowa",,City High School,"5'6""",DS,4,https://www.csucougars.com/sports/womens-volleyball/roster/sabrina-rodgers/1574,2023
-159,Columbus St.,1575,Whitney Coles,Freshman,"Flowery Branch, Ga.",,Flowery Branch High School,"5'9""",S,5,https://www.csucougars.com/sports/womens-volleyball/roster/whitney-coles/1575,2023
-159,Columbus St.,1576,Jordan Screen,Sophomore,"Lawrenceville, Ga.",,Georgia State University,"6'4""",OH/RS,6,https://www.csucougars.com/sports/womens-volleyball/roster/jordan-screen/1576,2023
-159,Columbus St.,1577,Megan Frame,Senior,"Sylvania, Ohio",,Sylvania Northview High School,"6'0""",MB,7,https://www.csucougars.com/sports/womens-volleyball/roster/megan-frame/1577,2023
-159,Columbus St.,1578,Abby King,Sophomore,"Ann Arbor, Mich.",,Pioneer High School,"5'10""",S,8,https://www.csucougars.com/sports/womens-volleyball/roster/abby-king/1578,2023
-159,Columbus St.,1579,Ashley Smith,Junior,"Coral Springs, Fla.",,St. John's River State College,"6'0""",RS/OH,9,https://www.csucougars.com/sports/womens-volleyball/roster/ashley-smith/1579,2023
-159,Columbus St.,1580,Nicole Pollzzie,Freshman,"Monroe, Mich.",,Saint Mary Catholic Central,"6'2""",RS,10,https://www.csucougars.com/sports/womens-volleyball/roster/nicole-pollzzie/1580,2023
-159,Columbus St.,1581,Melissa Murray,Junior,"Crandall, Texas",,Paris Junior College,"5'10""",OH,11,https://www.csucougars.com/sports/womens-volleyball/roster/melissa-murray/1581,2023
+159,Columbus St.,1573,Savannah Miller,Sophomore,"Perrysburg, Ohio",Perrysburg High School,,"5'10""",OH,2,https://www.csucougars.com/sports/womens-volleyball/roster/savannah-miller/1573,2023
+159,Columbus St.,1574,Sabrina Rodgers,Junior,"Iowa City, Iowa",City High School,,"5'6""",DS,4,https://www.csucougars.com/sports/womens-volleyball/roster/sabrina-rodgers/1574,2023
+159,Columbus St.,1575,Whitney Coles,Freshman,"Flowery Branch, Ga.",Flowery Branch High School,,"5'9""",S,5,https://www.csucougars.com/sports/womens-volleyball/roster/whitney-coles/1575,2023
+159,Columbus St.,1576,Jordan Screen,Sophomore,"Lawrenceville, Ga.",Mountain View HS,Georgia State,"6'4""",OH/RS,6,https://www.csucougars.com/sports/womens-volleyball/roster/jordan-screen/1576,2023
+159,Columbus St.,1577,Megan Frame,Senior,"Sylvania, Ohio",Sylvania Northview High School,,"6'0""",MB,7,https://www.csucougars.com/sports/womens-volleyball/roster/megan-frame/1577,2023
+159,Columbus St.,1578,Abby King,Sophomore,"Ann Arbor, Mich.",Pioneer High School,,"5'10""",S,8,https://www.csucougars.com/sports/womens-volleyball/roster/abby-king/1578,2023
+159,Columbus St.,1579,Ashley Smith,Junior,"Coral Springs, Fla.",J.P. Taravella HS,St. John's River State College,"6'0""",RS/OH,9,https://www.csucougars.com/sports/womens-volleyball/roster/ashley-smith/1579,2023
+159,Columbus St.,1580,Nicole Pollzzie,Freshman,"Monroe, Mich.",Saint Mary Catholic Central,,"6'2""",RS,10,https://www.csucougars.com/sports/womens-volleyball/roster/nicole-pollzzie/1580,2023
+159,Columbus St.,1581,Melissa Murray,Junior,"Crandall, Texas",Crandall HS,Paris Junior College,"5'10""",OH,11,https://www.csucougars.com/sports/womens-volleyball/roster/melissa-murray/1581,2023
 159,Columbus St.,1582,Dayanna Barbosa,Junior,"Belo Horizonte, Brazil",,Polk State College,"5'10""",OH,13,https://www.csucougars.com/sports/womens-volleyball/roster/dayanna-barbosa/1582,2023
 159,Columbus St.,1583,Zoemy Barreto Pereira,Junior,"Caguas, Puerto Rico",,Polk State College,"5'9""",OH,15,https://www.csucougars.com/sports/womens-volleyball/roster/zoemy-barreto-pereira/1583,2023
-159,Columbus St.,1584,Kendall Smith,Freshman,"Columbus, Ga.",,Northside High School,"5'7""",DS,16,https://www.csucougars.com/sports/womens-volleyball/roster/kendall-smith/1584,2023
-159,Columbus St.,1585,Kylie Beaubien,Senior,"Birmingham, Ala.",,Spain Park High School,"5'11""",MB,17,https://www.csucougars.com/sports/womens-volleyball/roster/kylie-beaubien/1585,2023
-159,Columbus St.,1586,Malaisia Stallworth,Sophomore,"Loganville, Ga.",,South Gwinnett High School,"5'11""",MB,18,https://www.csucougars.com/sports/womens-volleyball/roster/malaisia-stallworth/1586,2023
-159,Columbus St.,1587,Caytlin Merritt,Senior,"Columbus, Ga.",,Calvary Christian School,"5'5""",L,19,https://www.csucougars.com/sports/womens-volleyball/roster/caytlin-merritt/1587,2023
-159,Columbus St.,1588,Mary McCarty,Senior,"Columbus, Ga.",,Calvary Christian School,"6'2""",OH,22,https://www.csucougars.com/sports/womens-volleyball/roster/mary-mccarty/1588,2023
-159,Columbus St.,1589,Andrea Skipor,Senior,"West Chicago, Ill.",,West Chicago Community High School,"6'3""",RS,24,https://www.csucougars.com/sports/womens-volleyball/roster/andrea-skipor/1589,2023
+159,Columbus St.,1584,Kendall Smith,Freshman,"Columbus, Ga.",Northside High School,,"5'7""",DS,16,https://www.csucougars.com/sports/womens-volleyball/roster/kendall-smith/1584,2023
+159,Columbus St.,1585,Kylie Beaubien,Senior,"Birmingham, Ala.",Spain Park High School,,"5'11""",MB,17,https://www.csucougars.com/sports/womens-volleyball/roster/kylie-beaubien/1585,2023
+159,Columbus St.,1586,Malaisia Stallworth,Sophomore,"Loganville, Ga.",South Gwinnett High School,,"5'11""",MB,18,https://www.csucougars.com/sports/womens-volleyball/roster/malaisia-stallworth/1586,2023
+159,Columbus St.,1587,Caytlin Merritt,Senior,"Columbus, Ga.",Calvary Christian School,,"5'5""",L,19,https://www.csucougars.com/sports/womens-volleyball/roster/caytlin-merritt/1587,2023
+159,Columbus St.,1588,Mary McCarty,Senior,"Columbus, Ga.",Calvary Christian School,,"6'2""",OH,22,https://www.csucougars.com/sports/womens-volleyball/roster/mary-mccarty/1588,2023
+159,Columbus St.,1589,Andrea Skipor,Senior,"West Chicago, Ill.",West Chicago Community High School,,"6'3""",RS,24,https://www.csucougars.com/sports/womens-volleyball/roster/andrea-skipor/1589,2023
 16,Albright,8683,Rachel Etim,Sophomore,"Reading, PA",Wilson High School,,"5'6""",Outside,1,https://www.albrightathletics.com/sports/womens-volleyball/roster/rachel-etim/8683,2023
 16,Albright,8698,Kimberly Seeney,First Year,"Viola, Del",Polytech,,"5'3""",Setter,3,https://www.albrightathletics.com/sports/womens-volleyball/roster/kimberly-seeney/8698,2023
 16,Albright,8701,Lindsey Korn,First Year,"Richboro, Pa.",Council Rock South,,"5'5""",Libero/Defensive,4/7,https://www.albrightathletics.com/sports/womens-volleyball/roster/lindsey-korn/8701,2023
@@ -5793,7 +5793,7 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 174,Davis & Elkins,4328,Brittany Portley,Fifth Year,"Plano, Texas",Plano West,,"6'2""",Middle,12,https://www.senatornation.com/sports/womens-volleyball/roster/brittany-portley/4328,2023
 174,Davis & Elkins,4329,Gracjana Rozanska,Junior,"Swinoujscie, Poland",,,"6'2""",Middle,17,https://www.senatornation.com/sports/womens-volleyball/roster/gracjana-rozanska/4329,2023
 174,Davis & Elkins,4320,Katie Beth Caudill,Senior,"Huntington, W.Va.",Spring Valley,,"6'0""",Middle,20,https://www.senatornation.com/sports/womens-volleyball/roster/katie-beth-caudill/4320,2023
-174,Davis & Elkins,4323,Maddie Edicola,Redshirt Freshman,"Richmond, Va.",,,"5'5""",Defensive,22,https://www.senatornation.com/sports/womens-volleyball/roster/maddie-edicola/4323,2023
+174,Davis & Elkins,4323,Maddie Edicola,Redshirt Freshman,"Richmond, Va.",Seton Home Study School,,"5'5""",Defensive,22,https://www.senatornation.com/sports/womens-volleyball/roster/maddie-edicola/4323,2023
 174,Davis & Elkins,4322,Reanne DeBose,Junior,"Shawnee, Kan.",Shawnee Mission Northwest,Iowa Western CC,"5'11""",Outside/Right,23/23,https://www.senatornation.com/sports/womens-volleyball/roster/reanne-debose/4322,2023
 174,Davis & Elkins,4337,Braelyn Brenneman,Freshman,"Accident, Md.",Northern Garrett,,"6'1""",Middle,24,https://www.senatornation.com/sports/womens-volleyball/roster/braelyn-brenneman/4337,2023
 179,Delaware Valley,8822,Grace Kane,Junior,"Elverson, PA",Twin Valley,,"5'6""",OH,3,https://www.delval.edu/sports/womens-volleyball/roster/grace-kane/8822,2023
@@ -6024,21 +6024,20 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 200,Eastern Conn. St.,4641,Haley Jo Bridges,First Year,"Montebello, NY",Suffern,,"5'10""",Middle,17,https://www.gowarriorathletics.com/sports/womens-volleyball/roster/haley-jo-bridges/4641,2023
 200,Eastern Conn. St.,4629,Sadie Blackwell,Sophomore,"Southbury, CT",Pomperaug,,"5'9""",Pin,18,https://www.gowarriorathletics.com/sports/womens-volleyball/roster/sadie-blackwell/4629,2023
 200,Eastern Conn. St.,4636,Paige Savitsky,Senior,"Centereach, NY",St. Anthony's,,"5'10""",Pin,19,https://www.gowarriorathletics.com/sports/womens-volleyball/roster/paige-savitsky/4636,2023
-205,Mont. St. Billings,5492,Christine Funk,,"Choteau, Montana",Choteau High School,,"5'4""",Defensive,1,https://www.msubsports.com/sports/womens-volleyball/roster/christine-funk/5492,2023
-205,Mont. St. Billings,5500,Aubrey Allison,,"Billings, MT",Shepherd High School,,"5'8""",Outside,2,https://www.msubsports.com/sports/womens-volleyball/roster/aubrey-allison/5500,2023
-205,Mont. St. Billings,5494,Kennedy Juranek,,"Wilsonville, Oregon",Wilsonville High School,,"5'9""",Defensive,3,https://www.msubsports.com/sports/womens-volleyball/roster/kennedy-juranek/5494,2023
-205,Mont. St. Billings,5490,Hailey Carroll,,"Las Vegas, Nevada",Faith Lutheran High School,,"5'5""",Defensive,4,https://www.msubsports.com/sports/womens-volleyball/roster/hailey-carroll/5490,2023
-205,Mont. St. Billings,5497,Kenzie Nealon,,"Richland, WA",Richland High School,,"6'0""",Outside,5,https://www.msubsports.com/sports/womens-volleyball/roster/kenzie-nealon/5497,2023
-205,Mont. St. Billings,5499,Avarey Stuff,,"Great Falls, MT",Charles M. Russell High School,,"5'6""",Defensive,6,https://www.msubsports.com/sports/womens-volleyball/roster/avarey-stuff/5499,2023
-205,Mont. St. Billings,5484,Jahsita Fa'ali'i,,"Lathrop, California",Lathrop High School,,"5'9""",Outside,7,https://www.msubsports.com/sports/womens-volleyball/roster/jahsita-fa-ali-i/5484,2023
-205,Mont. St. Billings,5498,Julia Gordon,,"Farmington, MN",Farmington High School,,"6'1""",Middle,8,https://www.msubsports.com/sports/womens-volleyball/roster/julia-gordon/5498,2023
-205,Mont. St. Billings,5502,Bailey Nichols,,"Castle Rock, CO",Douglas County High School,,"5'10""",Opposite,9,https://www.msubsports.com/sports/womens-volleyball/roster/bailey-nichols/5502,2023
-205,Mont. St. Billings,5503,Grace Offill-Jackson,,"Claremont, CA",Claremont High School,,"5'10""",Opposite,10,https://www.msubsports.com/sports/womens-volleyball/roster/grace-offill-jackson/5503,2023
-205,Mont. St. Billings,5538,Emma Fa'alogo,,"Harbor City, CA",St. Joseph High School,,"5'8""",Setter,11,https://www.msubsports.com/sports/womens-volleyball/roster/emma-fa-alogo/5538,2023
-205,Mont. St. Billings,5496,Olivia Schwartz,,"Spokane, Washington",Joel E. Ferris High School,,"5'10""",Outside,12,https://www.msubsports.com/sports/womens-volleyball/roster/olivia-schwartz/5496,2023
-205,Mont. St. Billings,5486,Hannah Hayden,,"Lakewood, Colorado",Lakewood High School,,"6'2""",Middle,13,https://www.msubsports.com/sports/womens-volleyball/roster/hannah-hayden/5486,2023
-205,Mont. St. Billings,5501,Marissa Allen,,"Pocatello, ID",Century High School,,"6'2""",Middle,14,https://www.msubsports.com/sports/womens-volleyball/roster/marissa-allen/5501,2023
-205,Mont. St. Billings,5488,Paiten Langston,,"West Jordan, Utah",,Yavapai College,"6'1""",Middle,15,https://www.msubsports.com/sports/womens-volleyball/roster/paiten-langston/5488,2023
+205,Mont. St. Billings,5492,Christine Funk,JR,"Choteau, Montana",Choteau High School,,"5'4""",Defensive,1,https://www.msubsports.com/sports/womens-volleyball/roster/christine-funk/5492,2023
+205,Mont. St. Billings,5494,Kennedy Juranek,SR,"Wilsonville, Oregon",Wilsonville High School,,"5'9""",Defensive,3,https://www.msubsports.com/sports/womens-volleyball/roster/kennedy-juranek/5494,2023
+205,Mont. St. Billings,5490,Hailey Carroll,SR,"Las Vegas, Nevada",Faith Lutheran High School,,"5'5""",Defensive,4,https://www.msubsports.com/sports/womens-volleyball/roster/hailey-carroll/5490,2023
+205,Mont. St. Billings,5497,Kenzie Nealon,FR,"Richland, WA",Richland High School,,"6'0""",Outside,5,https://www.msubsports.com/sports/womens-volleyball/roster/kenzie-nealon/5497,2023
+205,Mont. St. Billings,5499,Avarey Stuff,FR,"Great Falls, MT",Charles M. Russell High School,,"5'6""",Defensive,6,https://www.msubsports.com/sports/womens-volleyball/roster/avarey-stuff/5499,2023
+205,Mont. St. Billings,5484,Jahsita Fa'ali'i,SR,"Lathrop, California",Lathrop High School,,"5'9""",Outside,7,https://www.msubsports.com/sports/womens-volleyball/roster/jahsita-fa-ali-i/5484,2023
+205,Mont. St. Billings,5498,Julia Gordon,FR,"Farmington, MN",Farmington High School,,"6'1""",Middle,8,https://www.msubsports.com/sports/womens-volleyball/roster/julia-gordon/5498,2023
+205,Mont. St. Billings,5502,Bailey Nichols,FR,"Castle Rock, CO",Douglas County High School,,"5'10""",Opposite,9,https://www.msubsports.com/sports/womens-volleyball/roster/bailey-nichols/5502,2023
+205,Mont. St. Billings,5503,Grace Offill-Jackson,FR,"Claremont, CA",Claremont High School,,"5'10""",Opposite,10,https://www.msubsports.com/sports/womens-volleyball/roster/grace-offill-jackson/5503,2023
+205,Mont. St. Billings,5538,Emma Fa'alogo,FR,"Harbor City, CA",St. Joseph High School,,"5'8""",Setter,11,https://www.msubsports.com/sports/womens-volleyball/roster/emma-fa-alogo/5538,2023
+205,Mont. St. Billings,5496,Olivia Schwartz,SR,"Spokane, Washington",Joel E. Ferris High School,,"5'10""",Outside,12,https://www.msubsports.com/sports/womens-volleyball/roster/olivia-schwartz/5496,2023
+205,Mont. St. Billings,5486,Hannah Hayden,SR,"Lakewood, Colorado",Lakewood High School,,"6'2""",Middle,13,https://www.msubsports.com/sports/womens-volleyball/roster/hannah-hayden/5486,2023
+205,Mont. St. Billings,5501,Marissa Allen,FR,"Pocatello, ID",Century High School,,"6'2""",Middle,14,https://www.msubsports.com/sports/womens-volleyball/roster/marissa-allen/5501,2023
+205,Mont. St. Billings,5488,Paiten Langston,SR,"West Jordan, Utah",Copper Hills HS,Yavapai College,"6'1""",Middle,15,https://www.msubsports.com/sports/womens-volleyball/roster/paiten-langston/5488,2023
 206,Eastern N.M.,17583,Kayla Ison,Sophomore,"Albuquerque, N.M.",Cibola HS,,"5'8""",Setter,1,https://www.goeasternathletics.com/sports/womens-volleyball/roster/kayla-ison/17583,2023
 206,Eastern N.M.,17579,Kinzie Davis,Senior,"Portales, N.M.",Portales High School,,"5'10""",Outside,2,https://www.goeasternathletics.com/sports/womens-volleyball/roster/kinzie-davis/17579,2023
 206,Eastern N.M.,17578,Getsemani Carrasco,Senior,"Amarillo, Texas",Cap Rock HS,Otero J.C.,"5'0""",Libero,6,https://www.goeasternathletics.com/sports/womens-volleyball/roster/getsemani-carrasco/17578,2023
