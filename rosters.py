@@ -25,6 +25,9 @@ from requests_html import HTMLSession
 from bs4 import BeautifulSoup
 import tldextract
 
+# Configure tldextract to not fetch updates (to avoid 403 errors)
+tldextract.extract = tldextract.TLDExtract(suffix_list_urls=None)
+
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -447,13 +450,43 @@ class LazyDecoder(json.JSONDecoder):
 # SCRAPER UTILITIES
 # ============================================================================
 
+def fetch_url_with_curl(url: str) -> str:
+    """Fetch URL using curl as a fallback when requests fails"""
+    try:
+        result = subprocess.check_output([
+            'curl', '-s', '-L', url,
+            '-H', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            '-H', 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            '--compressed'
+        ], timeout=30)
+        return result.decode('utf-8', errors='ignore')
+    except Exception as e:
+        logger.error(f"curl fetch error for {url}: {e}")
+        return ""
+
+
 def fetch_url(url: str, headers: Optional[Dict] = None) -> requests.Response:
-    """Fetch URL with standard headers"""
+    """Fetch URL with standard headers, with curl fallback for 403 errors"""
     if headers is None:
         headers = {
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
         }
-    return requests.get(url, headers=headers)
+
+    r = requests.get(url, headers=headers)
+
+    # If we get 403, try curl as fallback
+    if r.status_code == 403:
+        logger.warning(f"Got 403 for {url}, trying curl fallback")
+        content = fetch_url_with_curl(url)
+        if content:
+            # Create a mock response object
+            class MockResponse:
+                def __init__(self, text, status_code=200):
+                    self.text = text
+                    self.status_code = status_code
+            return MockResponse(content, 200)
+
+    return r
 
 
 def fetch_roster(base_url: str, season: str) -> Optional[BeautifulSoup]:
@@ -470,6 +503,14 @@ def fetch_wbkb_roster(base_url: str, season: str) -> Optional[BeautifulSoup]:
         "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
     }
     r = requests.get(url, headers=headers)
+
+    # Try curl fallback on 403
+    if r.status_code == 403:
+        logger.warning(f"Got 403 for {url}, trying curl fallback")
+        content = fetch_url_with_curl(url)
+        if content:
+            return BeautifulSoup(content, features="html.parser")
+
     if r.status_code == 404:
         return None
     return BeautifulSoup(r.text, features="html.parser")
@@ -488,9 +529,24 @@ def fetch_baskbl_roster(base_url: str, season: str) -> BeautifulSoup:
         "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
     }
     r = requests.get(url, headers=headers)
+
+    # Try curl fallback on 403
+    if r.status_code == 403:
+        logger.warning(f"Got 403 for {url}, trying curl fallback")
+        content = fetch_url_with_curl(url)
+        if content:
+            return BeautifulSoup(content, features="html.parser")
+
     if r.status_code == 404:
         url = base_url.replace('index', f"/{season}/roster")
         r = requests.get(url, headers=headers)
+        # Try curl fallback on 403 for the retry URL too
+        if r.status_code == 403:
+            logger.warning(f"Got 403 for {url}, trying curl fallback")
+            content = fetch_url_with_curl(url)
+            if content:
+                return BeautifulSoup(content, features="html.parser")
+
     return BeautifulSoup(r.text, features="html.parser")
 
 
