@@ -25,6 +25,9 @@ from requests_html import HTMLSession
 from bs4 import BeautifulSoup
 import tldextract
 
+# Configure tldextract to not fetch updates (to avoid 403 errors)
+tldextract.extract = tldextract.TLDExtract(suffix_list_urls=None)
+
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -447,13 +450,83 @@ class LazyDecoder(json.JSONDecoder):
 # SCRAPER UTILITIES
 # ============================================================================
 
+def fetch_url_with_javascript(url: str, timeout: int = 45) -> Optional[BeautifulSoup]:
+    """
+    Fetch URL with JavaScript rendering using shot-scraper
+
+    This uses 'uv run shot-scraper html' to render JavaScript-heavy pages
+    and return the rendered HTML for parsing.
+
+    Args:
+        url: URL to fetch
+        timeout: Timeout in seconds (default 45)
+
+    Returns:
+        BeautifulSoup object or None if failed
+    """
+    try:
+        # Use shot-scraper via uv to render JavaScript
+        result = subprocess.run(
+            ['uv', 'run', 'shot-scraper', 'html', url, '--wait', '3000'],
+            capture_output=True,
+            text=True,
+            timeout=timeout
+        )
+
+        if result.returncode == 0:
+            return BeautifulSoup(result.stdout, 'html.parser')
+        else:
+            logger.warning(f"shot-scraper returned code {result.returncode}: {result.stderr[:200]}")
+            return None
+
+    except subprocess.TimeoutExpired:
+        logger.warning(f"shot-scraper timeout after {timeout}s for {url}")
+        return None
+    except FileNotFoundError:
+        logger.error("shot-scraper or uv not found. Install with: uv sync")
+        return None
+    except Exception as e:
+        logger.error(f"shot-scraper error: {e}")
+        return None
+
+
+def fetch_url_with_curl(url: str) -> str:
+    """Fetch URL using curl as a fallback when requests fails"""
+    try:
+        result = subprocess.check_output([
+            'curl', '-s', '-L', url,
+            '-H', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            '-H', 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            '--compressed'
+        ], timeout=30)
+        return result.decode('utf-8', errors='ignore')
+    except Exception as e:
+        logger.error(f"curl fetch error for {url}: {e}")
+        return ""
+
+
 def fetch_url(url: str, headers: Optional[Dict] = None) -> requests.Response:
-    """Fetch URL with standard headers"""
+    """Fetch URL with standard headers, with curl fallback for 403 errors"""
     if headers is None:
         headers = {
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
         }
-    return requests.get(url, headers=headers)
+
+    r = requests.get(url, headers=headers)
+
+    # If we get 403, try curl as fallback
+    if r.status_code == 403:
+        logger.warning(f"Got 403 for {url}, trying curl fallback")
+        content = fetch_url_with_curl(url)
+        if content:
+            # Create a mock response object
+            class MockResponse:
+                def __init__(self, text, status_code=200):
+                    self.text = text
+                    self.status_code = status_code
+            return MockResponse(content, 200)
+
+    return r
 
 
 def fetch_roster(base_url: str, season: str) -> Optional[BeautifulSoup]:
@@ -470,6 +543,14 @@ def fetch_wbkb_roster(base_url: str, season: str) -> Optional[BeautifulSoup]:
         "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
     }
     r = requests.get(url, headers=headers)
+
+    # Try curl fallback on 403
+    if r.status_code == 403:
+        logger.warning(f"Got 403 for {url}, trying curl fallback")
+        content = fetch_url_with_curl(url)
+        if content:
+            return BeautifulSoup(content, features="html.parser")
+
     if r.status_code == 404:
         return None
     return BeautifulSoup(r.text, features="html.parser")
@@ -488,9 +569,24 @@ def fetch_baskbl_roster(base_url: str, season: str) -> BeautifulSoup:
         "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
     }
     r = requests.get(url, headers=headers)
+
+    # Try curl fallback on 403
+    if r.status_code == 403:
+        logger.warning(f"Got 403 for {url}, trying curl fallback")
+        content = fetch_url_with_curl(url)
+        if content:
+            return BeautifulSoup(content, features="html.parser")
+
     if r.status_code == 404:
         url = base_url.replace('index', f"/{season}/roster")
         r = requests.get(url, headers=headers)
+        # Try curl fallback on 403 for the retry URL too
+        if r.status_code == 403:
+            logger.warning(f"Got 403 for {url}, trying curl fallback")
+            content = fetch_url_with_curl(url)
+            if content:
+                return BeautifulSoup(content, features="html.parser")
+
     return BeautifulSoup(r.text, features="html.parser")
 
 
@@ -1146,7 +1242,16 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
                 # Route to appropriate scraper based on team ID
                 roster = []
 
-                if team['ncaa_id'] in [5, 308, 497, 554]:
+                # For JS-rendered teams, use shot-scraper to get HTML then parse
+                if TeamConfig.requires_javascript(team['ncaa_id']):
+                    url = f"{team['url']}/roster/{season}"
+                    html = fetch_url_with_javascript(url)
+                    if html:
+                        roster = parse_roster(team, html, season)
+                    else:
+                        logger.warning(f"Failed to fetch JS-rendered page for {team['team']}, skipping")
+                        roster = []
+                elif team['ncaa_id'] in [5, 308, 497, 554]:
                     roster = shotscraper_table(team, season)
                 elif team['ncaa_id'] in [9, 71, 83, 96, 99, 156, 173, 180, 191, 234, 249, 257,
                                         301, 306, 367, 387, 392, 400, 404, 418, 428, 441, 490,
@@ -1160,17 +1265,11 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
                     roster = shotscraper_list_item(team, season)
                 elif team['ncaa_id'] in [37, 52, 175, 316, 487]:
                     roster = shotscraper_roster_player(team, season)
-                elif team['ncaa_id'] in [8, 725]:
-                    roster = shotscraper_roster_player2(team, season)
                 elif team['ncaa_id'] in [430, 584]:
                     # Mississippi State - would need shotscraper_miss_state function
                     roster = []
                 elif team['ncaa_id'] == 556:
                     roster = shotscraper_data_tables(team, season)
-                elif team['ncaa_id'] in [721, 80]:
-                    roster = shotscraper_airforce(team, season)
-                elif team['ncaa_id'] == 528:
-                    roster = shotscraper_oregon_state(team, season)
                 elif team['ncaa_id'] == 77:
                     if str(season[0:1]):
                         season = f"{str(season)[0:5]}20{str(season[5:7])}"
