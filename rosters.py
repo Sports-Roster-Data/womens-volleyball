@@ -920,8 +920,69 @@ def fetch_and_parse_iowa_state(team: Dict, season: str) -> List[Player]:
     return roster
 
 
-# Additional JS-rendered scrapers would be included here (abbreviated for length)
-# ... (temple, boise_state, wyoming, nebraska, notre_dame, iowa, etc.)
+def shotscraper_airforce(team: Dict, season: str) -> List[Dict]:
+    """Air Force - JavaScript rendered with s-person-card format"""
+    javascript_code = """
+    Array.from(document.querySelectorAll('.s-person-card'), el => {
+        const id = '';
+        const name = el.querySelector('.s-person-details__personal-single-line').innerText;
+        const year = el.querySelectorAll('.s-person-details__bio-stats span')[2].innerText.split('\\n')[1].trim();
+        const height = el.querySelectorAll('.s-person-details__bio-stats span')[4].innerText.split('\\n')[1].trim();
+        const position = el.querySelectorAll('.s-person-details__bio-stats span')[0].innerText.split('\\n')[1].trim();
+        const hometown = el.querySelectorAll('span.s-person-card__content__person__location-item')[0].innerText.replace("Hometown\\n","");
+        const high_school = el.querySelectorAll('span.s-person-card__content__person__location-item')[1].innerText.split('\\n')[1];
+        const previous_school = '';
+        const jersey = el.querySelector('span.s-stamp__text').innerText;
+        const url = el.querySelector('a')['href']
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+    url = f"{team['url']}/roster/{season}"
+    return shotscraper_caller(team, season, url, javascript_code)
+
+
+def shotscraper_oregon_state(team: Dict, season: str) -> List[Dict]:
+    """Oregon State - JavaScript rendered with s-table-body__row format"""
+    javascript_code = """
+    Array.from(document.querySelectorAll('.s-table-body__row'), el => {
+        const id = '';
+        const name = el.querySelectorAll('td')[2].innerText;
+        const year = el.querySelectorAll('td')[5].innerText;
+        const height = el.querySelectorAll('td')[4].innerText;
+        const position = el.querySelectorAll('td')[3].innerText;
+        const hometown = el.querySelectorAll('td')[6].innerText;
+        const high_school = el.querySelectorAll('td')[7].innerText;
+        const previous_school = el.querySelectorAll('td')[8].innerText;
+        const jersey = el.querySelectorAll('td')[0].innerText;
+        const url = el.querySelector('a')['href'];
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+    url = f"{team['url']}/roster/{season}"
+    return shotscraper_caller(team, season, url, javascript_code)
+
+
+def shotscraper_roster_player2(team: Dict, season: str) -> List[Dict]:
+    """Scraper for .sidearm-roster-player-container format (variant 2)"""
+    javascript_code = """
+    Array.from(document.querySelectorAll('.sidearm-roster-player-container'), el => {
+        const id = '';
+        const name = el.querySelector('h3').innerText;
+        const year = el.querySelector('.sidearm-roster-player-academic-year').innerText;
+        ht_el = el.querySelector('span.sidearm-roster-player-height');
+        const height = ht_el ? ht_el.innerText : '';
+        const position = el.querySelector('.sidearm-roster-player-position').innerText.split(' ')[0];
+        const hometown = el.querySelector('.sidearm-roster-player-hometown').innerText;
+        const high_school = el.querySelector('.sidearm-roster-player-highschool').innerText;
+        ps_el = el.querySelector('.sidearm-roster-player-previous-school');
+        const previous_school = ps_el ? ps_el.innerText : '';
+        const jersey = el.querySelector('.sidearm-roster-player-jersey-number').innerText;
+        const url = el.querySelector('a')['href']
+        return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
+    })
+    """
+    url = f"{team['url']}/roster/{season}"
+    return shotscraper_caller(team, season, url, javascript_code)
 
 
 # ============================================================================
@@ -1099,11 +1160,17 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
                     roster = shotscraper_list_item(team, season)
                 elif team['ncaa_id'] in [37, 52, 175, 316, 487]:
                     roster = shotscraper_roster_player(team, season)
+                elif team['ncaa_id'] in [8, 725]:
+                    roster = shotscraper_roster_player2(team, season)
                 elif team['ncaa_id'] in [430, 584]:
                     # Mississippi State - would need shotscraper_miss_state function
                     roster = []
                 elif team['ncaa_id'] == 556:
                     roster = shotscraper_data_tables(team, season)
+                elif team['ncaa_id'] in [721, 80]:
+                    roster = shotscraper_airforce(team, season)
+                elif team['ncaa_id'] == 528:
+                    roster = shotscraper_oregon_state(team, season)
                 elif team['ncaa_id'] == 77:
                     if str(season[0:1]):
                         season = f"{str(season)[0:5]}20{str(season[5:7])}"
