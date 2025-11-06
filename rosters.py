@@ -450,6 +450,46 @@ class LazyDecoder(json.JSONDecoder):
 # SCRAPER UTILITIES
 # ============================================================================
 
+def fetch_url_with_javascript(url: str, timeout: int = 45) -> Optional[BeautifulSoup]:
+    """
+    Fetch URL with JavaScript rendering using shot-scraper
+
+    This uses 'uv run shot-scraper html' to render JavaScript-heavy pages
+    and return the rendered HTML for parsing.
+
+    Args:
+        url: URL to fetch
+        timeout: Timeout in seconds (default 45)
+
+    Returns:
+        BeautifulSoup object or None if failed
+    """
+    try:
+        # Use shot-scraper via uv to render JavaScript
+        result = subprocess.run(
+            ['uv', 'run', 'shot-scraper', 'html', url, '--wait', '3000'],
+            capture_output=True,
+            text=True,
+            timeout=timeout
+        )
+
+        if result.returncode == 0:
+            return BeautifulSoup(result.stdout, 'html.parser')
+        else:
+            logger.warning(f"shot-scraper returned code {result.returncode}: {result.stderr[:200]}")
+            return None
+
+    except subprocess.TimeoutExpired:
+        logger.warning(f"shot-scraper timeout after {timeout}s for {url}")
+        return None
+    except FileNotFoundError:
+        logger.error("shot-scraper or uv not found. Install with: uv sync")
+        return None
+    except Exception as e:
+        logger.error(f"shot-scraper error: {e}")
+        return None
+
+
 def fetch_url_with_curl(url: str) -> str:
     """Fetch URL using curl as a fallback when requests fails"""
     try:
@@ -1202,7 +1242,16 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
                 # Route to appropriate scraper based on team ID
                 roster = []
 
-                if team['ncaa_id'] in [5, 308, 497, 554]:
+                # For JS-rendered teams, use shot-scraper to get HTML then parse
+                if TeamConfig.requires_javascript(team['ncaa_id']):
+                    url = f"{team['url']}/roster/{season}"
+                    html = fetch_url_with_javascript(url)
+                    if html:
+                        roster = parse_roster(team, html, season)
+                    else:
+                        logger.warning(f"Failed to fetch JS-rendered page for {team['team']}, skipping")
+                        roster = []
+                elif team['ncaa_id'] in [5, 308, 497, 554]:
                     roster = shotscraper_table(team, season)
                 elif team['ncaa_id'] in [9, 71, 83, 96, 99, 156, 173, 180, 191, 234, 249, 257,
                                         301, 306, 367, 387, 392, 400, 404, 418, 428, 441, 490,
@@ -1216,17 +1265,11 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
                     roster = shotscraper_list_item(team, season)
                 elif team['ncaa_id'] in [37, 52, 175, 316, 487]:
                     roster = shotscraper_roster_player(team, season)
-                elif team['ncaa_id'] in [8, 725]:
-                    roster = shotscraper_roster_player2(team, season)
                 elif team['ncaa_id'] in [430, 584]:
                     # Mississippi State - would need shotscraper_miss_state function
                     roster = []
                 elif team['ncaa_id'] == 556:
                     roster = shotscraper_data_tables(team, season)
-                elif team['ncaa_id'] in [721, 80]:
-                    roster = shotscraper_airforce(team, season)
-                elif team['ncaa_id'] == 528:
-                    roster = shotscraper_oregon_state(team, season)
                 elif team['ncaa_id'] == 77:
                     if str(season[0:1]):
                         season = f"{str(season)[0:5]}20{str(season[5:7])}"
