@@ -377,12 +377,21 @@ class TeamConfig:
     """Team-specific configuration and categorization"""
 
     # Teams requiring JavaScript rendering
+    # These teams use fetch_url_with_javascript() + parse_roster()
+    # Note: Teams with specific shotscraper_* functions are NOT in this list
     JS_TEAMS = [
-        5, 8, 9, 31, 37, 51, 52, 66, 71, 72, 77, 80, 83, 96, 99, 128, 147, 156, 173, 175,
-        180, 191, 224, 234, 248, 249, 257, 301, 306, 311, 316, 327, 334, 367, 387, 392,
-        400, 404, 415, 418, 428, 430, 441, 463, 487, 490, 497, 513, 521, 522, 528, 532,
-        554, 556, 559, 574, 584, 603, 623, 630, 635, 648, 664, 671, 676, 688, 690, 694,
-        700, 706, 719, 721, 725, 731, 735, 736, 742, 749, 758, 809, 811, 1000
+        # Original JS teams (non-overlapping with specific scrapers)
+        8, 31, 66, 72, 80, 224, 327, 334, 463, 513, 528, 623, 648, 694, 706, 721, 725,
+        735, 742, 809, 811, 1000,
+        # Previously uncategorized teams (adding as fallback to attempt scraping)
+        22, 28, 46, 47, 56, 59, 67, 81, 86, 90, 101, 110, 129, 140, 142, 148, 157, 158,
+        164, 166, 169, 172, 176, 193, 196, 204, 215, 217, 229, 235, 241, 255, 280, 288,
+        317, 326, 331, 345, 352, 355, 365, 388, 390, 406, 414, 416, 417, 419, 433, 434,
+        440, 454, 456, 457, 458, 469, 502, 504, 509, 518, 523, 529, 539, 545, 562, 598,
+        599, 610, 626, 649, 657, 659, 673, 674, 682, 695, 697, 698, 703, 716, 718, 732,
+        756, 760, 768, 772, 796, 798, 800, 807, 812, 1001, 1014, 1036, 1104, 1162, 1174,
+        1196, 1340, 1356, 1400, 1403, 1461, 2707, 2711, 2810, 8688, 8746, 11538, 13028,
+        23725, 30031, 30037, 30135, 30173, 505160
     ]
 
     # Team-specific URL formats
@@ -1242,15 +1251,33 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
                 # Route to appropriate scraper based on team ID
                 roster = []
 
-                # For JS-rendered teams, use shot-scraper to get HTML then parse
-                if TeamConfig.requires_javascript(team['ncaa_id']):
-                    url = f"{team['url']}/roster/{season}"
-                    html = fetch_url_with_javascript(url)
-                    if html:
-                        roster = parse_roster(team, html, season)
-                    else:
-                        logger.warning(f"Failed to fetch JS-rendered page for {team['team']}, skipping")
-                        roster = []
+                # Skip specific teams
+                if team['ncaa_id'] == 532:
+                    continue
+
+                # SPECIFIC FUNCTION SCRAPERS (must come first!)
+                # BYU - Custom season format
+                if team['ncaa_id'] == 77:
+                    if str(season[0:1]):
+                        season = f"{str(season)[0:5]}20{str(season[5:7])}"
+                        roster = fetch_and_parse_byu(team, season)
+                # San Jose State
+                elif team['ncaa_id'] == 630:
+                    roster = fetch_and_parse_sanjose(team, season)
+                # Miami
+                elif team['ncaa_id'] == 415:
+                    roster = fetch_and_parse_miami(team, season)
+                # Clemson
+                elif team['ncaa_id'] == 147:
+                    roster = fetch_and_parse_clemson(team, season)
+                # Iowa State
+                elif team['ncaa_id'] == 311:
+                    roster = fetch_and_parse_iowa_state(team, season)
+                # Vanderbilt
+                elif team['ncaa_id'] == 736:
+                    roster = fetch_and_parse_vandy(team, season)
+
+                # SHOTSCRAPER WITH JAVASCRIPT EXTRACTION
                 elif team['ncaa_id'] in [5, 308, 497, 554]:
                     roster = shotscraper_table(team, season)
                 elif team['ncaa_id'] in [9, 71, 83, 96, 99, 156, 173, 180, 191, 234, 249, 257,
@@ -1258,34 +1285,24 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
                                         521, 522, 559, 574, 603, 635, 664, 671, 676, 688, 690,
                                         700, 719, 749, 758]:
                     roster = shotscraper_card(team, season)
-                elif team['ncaa_id'] == 128:
-                    # UCF - would need shotscraper_ucf function
-                    roster = []
                 elif team['ncaa_id'] in [51, 248, 731]:
                     roster = shotscraper_list_item(team, season)
                 elif team['ncaa_id'] in [37, 52, 175, 316, 487]:
                     roster = shotscraper_roster_player(team, season)
-                elif team['ncaa_id'] in [430, 584]:
-                    # Mississippi State - would need shotscraper_miss_state function
-                    roster = []
                 elif team['ncaa_id'] == 556:
                     roster = shotscraper_data_tables(team, season)
-                elif team['ncaa_id'] == 77:
-                    if str(season[0:1]):
-                        season = f"{str(season)[0:5]}20{str(season[5:7])}"
-                        roster = fetch_and_parse_byu(team, season)
-                elif team['ncaa_id'] == 630:
-                    roster = fetch_and_parse_sanjose(team, season)
-                elif team['ncaa_id'] == 415:
-                    roster = fetch_and_parse_miami(team, season)
-                elif team['ncaa_id'] == 147:
-                    roster = fetch_and_parse_clemson(team, season)
-                elif team['ncaa_id'] == 311:
-                    roster = fetch_and_parse_iowa_state(team, season)
-                elif team['ncaa_id'] == 736:
-                    roster = fetch_and_parse_vandy(team, season)
-                elif team['ncaa_id'] == 532:
-                    continue
+
+                # TEAMS NEEDING JAVASCRIPT RENDERING (fetch HTML then parse with BeautifulSoup)
+                elif TeamConfig.requires_javascript(team['ncaa_id']):
+                    url = f"{team['url']}/roster/{season}"
+                    html = fetch_url_with_javascript(url)
+                    if html:
+                        roster = parse_roster(team, html, season)
+                    else:
+                        logger.warning(f"Failed to fetch JS-rendered page for {team['team']}, skipping")
+                        roster = []
+
+                # URL-BASED ROUTING
                 elif 'wvball' in team['url']:
                     html = fetch_wbkb_roster(team['url'], season)
                     roster = []
@@ -1294,6 +1311,8 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
                 elif 'w-baskbl' in team['url']:
                     html = fetch_baskbl_roster(team['url'], season)
                     roster = parse_roster_baskbl(team, html, season)
+
+                # DEFAULT: Standard roster page
                 else:
                     html = fetch_roster(team['url'], season)
                     roster = parse_roster(team, html, season)
