@@ -38,7 +38,7 @@ logger = logging.getLogger(__name__)
 # ============================================================================
 
 SEASONS = [
-    '2023-24', '2022-23', '2021-22', '2020-21', '2019-20', '2018-19', '2017-18', '2016-17',
+    '2025-26', '2024-25', '2023-24', '2022-23', '2021-22', '2020-21', '2019-20', '2018-19', '2017-18', '2016-17',
     '2015-16', '2014-15', '2013-14', '2012-13', '2011-12', '2010-11', '2009-10', '2008-09',
     '2007-08', '2006-07', '2005-06', '2004-05', '2003-04', '2002-03', '2001-02', '2000-01',
     '1999-00', '1998-99', '1997-98', '1996-97', '1995-96', '1994-95', '1993-94', '1992-93',
@@ -1218,13 +1218,13 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
     skipped = []
 
     # Load teams
-    teams_json = json.loads(open('teams.json').read())
+    teams_json = json.loads(open('data/teams.json').read())
     if len(teams) > 0:
         teams_json = [t for t in teams_json if t['ncaa_id'] in teams]
     teams_with_urls = [x for x in teams_json if "url" in x]
 
     # Open CSV for writing
-    with open(f"rosters_{season}.csv", 'w') as output_file:
+    with open(f"data/rosters_{season}.csv", 'w') as output_file:
         csv_file = csv.writer(output_file)
         csv_file.writerow(['ncaa_id', 'team', 'player_id', 'name', 'year', 'hometown',
                           'high_school', 'previous_school', 'height', 'position', 'jersey',
