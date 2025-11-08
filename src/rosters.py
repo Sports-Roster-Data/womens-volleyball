@@ -381,7 +381,7 @@ class TeamConfig:
     # Note: Teams with specific shotscraper_* functions are NOT in this list
     JS_TEAMS = [
         # Original JS teams (non-overlapping with specific scrapers)
-        8, 31, 66, 72, 80, 224, 327, 334, 463, 513, 528, 623, 648, 694, 706, 721, 725,
+        8, 31, 66, 72, 80, 224, 327, 334, 463, 513, 528, 623, 648, 694, 706, 725,
         735, 742, 809, 811, 1000,
         # Previously uncategorized teams (adding as fallback to attempt scraping)
         22, 28, 46, 47, 56, 59, 67, 81, 86, 90, 101, 110, 129, 140, 142, 148, 157, 158,
@@ -391,7 +391,18 @@ class TeamConfig:
         599, 610, 626, 649, 657, 659, 673, 674, 682, 695, 697, 698, 703, 716, 718, 732,
         756, 760, 768, 772, 796, 798, 800, 807, 812, 1001, 1014, 1036, 1104, 1162, 1174,
         1196, 1340, 1356, 1400, 1403, 1461, 2707, 2711, 2810, 8688, 8746, 11538, 13028,
-        23725, 30031, 30037, 30135, 30173, 505160
+        23725, 30031, 30037, 30135, 30173, 505160,
+        # Big conference teams with heavy JavaScript rendering
+        312,  # Iowa
+        328,  # Kansas
+        473,  # New Mexico
+        746,  # Virginia (has malformed table)
+        # Small schools needing JavaScript
+        620,  # St. Thomas (MN)
+        1064,  # Eastern Nazarene
+        1111,  # Greenville
+        30081,  # Penn St. Harrisburg
+        30244,  # Edward Waters
     ]
 
     # Team-specific URL formats
@@ -634,11 +645,41 @@ def parse_roster_baskbl(team: Dict, html: BeautifulSoup, season: str) -> List[Pl
     """Parse basketball-style roster"""
     roster = []
     er = tldextract.extract(team['url'])
-    cols = [x.text.strip() for x in html.find('thead').find_all('th') if x.text.strip() if x.text.strip() != '']
+
+    thead = html.find('thead')
+    if not thead:
+        logger.warning(f"No thead found for {team['team']}")
+        return roster
+
     if team['ncaa_id'] == 255:
-        cols = [x.text.strip() for x in html.find('thead').find_all('th') if x.text.strip() != 'Social']
-    new_cols = [HEADERS[c] for c in cols]
-    raw_players = [x for x in html.find('tbody').find_all('tr')]
+        cols = [x.text.strip() for x in thead.find_all('th') if x.text.strip() != 'Social']
+    else:
+        cols = [x.text.strip() for x in thead.find_all('th') if x.text.strip() if x.text.strip() != '']
+
+    # Filter out unmapped columns and log warning
+    mapped_cols = []
+    unmapped_cols = []
+    for c in cols:
+        if c in HEADERS:
+            mapped_cols.append(c)
+        else:
+            unmapped_cols.append(c)
+
+    if unmapped_cols:
+        logger.warning(f"Unmapped columns for {team['team']}: {unmapped_cols}")
+
+    if not mapped_cols:
+        logger.warning(f"No valid columns found for {team['team']}")
+        return roster
+
+    new_cols = [HEADERS[c] for c in mapped_cols]
+    cols = mapped_cols  # Update cols to only include mapped ones
+
+    tbody = html.find('tbody')
+    if not tbody:
+        logger.warning(f"No tbody found for {team['team']}")
+        return roster
+    raw_players = [x for x in tbody.find_all('tr')]
 
     for raw_player in raw_players:
         [x.span.decompose() for x in raw_player.find_all('td') if x.find('span')]
@@ -678,11 +719,27 @@ def parse_roster_wbkb(team: Dict, html: BeautifulSoup, season: str) -> List[Play
 
     # Find headers
     if team['ncaa_id'] == 30164:
-        headers = html.find_all('table')[1].find_all('tr')[0]
+        tables = html.find_all('table')
+        if len(tables) < 2:
+            logger.warning(f"No table found for {team['team']} (expected at least 2 tables)")
+            return roster
+        headers = tables[1].find_all('tr')[0]
     elif team['ncaa_id'] == 326:
-        headers = html.find_all('table')[12].find_all('tr')[0]
+        tables = html.find_all('table')
+        if len(tables) < 13:
+            logger.warning(f"No table found for {team['team']} (expected at least 13 tables)")
+            return roster
+        headers = tables[12].find_all('tr')[0]
     else:
-        headers = html.find('table').find_all('tr')[0]
+        table = html.find('table')
+        if not table:
+            logger.warning(f"No table found for {team['team']}")
+            return roster
+        table_rows = table.find_all('tr')
+        if not table_rows:
+            logger.warning(f"No table rows found for {team['team']}")
+            return roster
+        headers = table_rows[0]
 
     cols = [x.text.strip() for x in headers if x.text.strip() != '']
 
@@ -693,8 +750,29 @@ def parse_roster_wbkb(team: Dict, html: BeautifulSoup, season: str) -> List[Play
         if col in cols:
             cols.remove(col)
 
-    new_cols = [HEADERS[c] for c in cols]
-    raw_players = [x for x in html.find('tbody').find_all('tr')]
+    # Filter out unmapped columns and log warning
+    mapped_cols = []
+    unmapped_cols = []
+    for c in cols:
+        if c in HEADERS:
+            mapped_cols.append(c)
+        else:
+            unmapped_cols.append(c)
+
+    if unmapped_cols:
+        logger.warning(f"Unmapped columns for {team['team']}: {unmapped_cols}")
+
+    if not mapped_cols:
+        logger.warning(f"No valid columns found for {team['team']}")
+        return roster
+
+    new_cols = [HEADERS[c] for c in mapped_cols]
+    cols = mapped_cols  # Update cols to only include mapped ones
+    tbody = html.find('tbody')
+    if not tbody:
+        logger.warning(f"No tbody found for {team['team']}")
+        return roster
+    raw_players = [x for x in tbody.find_all('tr')]
 
     # Major list for filtering (extensive list from original code)
     major_list = [
@@ -1282,6 +1360,13 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
                 # Vanderbilt
                 elif team['ncaa_id'] == 736:
                     roster = fetch_and_parse_vandy(team, season)
+                # Air Force
+                elif team['ncaa_id'] == 721:
+                    roster = shotscraper_airforce(team, season)
+                    if not roster:
+                        logger.info(f"Shotscraper failed for {team['team']}, trying standard fetch")
+                        html = fetch_roster(team['url'], season)
+                        roster = parse_roster(team, html, season)
 
                 # SHOTSCRAPER WITH JAVASCRIPT EXTRACTION
                 elif team['ncaa_id'] in [5, 308, 497, 554]:
@@ -1323,19 +1408,39 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
                     url = f"{team['url']}/roster/{season}"
                     html = fetch_url_with_javascript(url)
                     if html:
-                        roster = parse_roster(team, html, season)
+                        # Use appropriate parser based on URL pattern
+                        if 'wvball' in team['url']:
+                            roster = parse_roster_wbkb(team, html, season)
+                        elif 'w-baskbl' in team['url']:
+                            roster = parse_roster_baskbl(team, html, season)
+                        else:
+                            roster = parse_roster(team, html, season)
                     else:
                         # If JS rendering fails, try standard fetching as fallback
                         logger.info(f"JS rendering failed for {team['team']}, trying standard fetch as fallback")
-                        html = fetch_roster(team['url'], season)
-                        roster = parse_roster(team, html, season)
+                        if 'wvball' in team['url']:
+                            html = fetch_wbkb_roster(team['url'], season)
+                            if html:
+                                roster = parse_roster_wbkb(team, html, season)
+                        elif 'w-baskbl' in team['url']:
+                            html = fetch_baskbl_roster(team['url'], season)
+                            roster = parse_roster_baskbl(team, html, season)
+                        else:
+                            html = fetch_roster(team['url'], season)
+                            roster = parse_roster(team, html, season)
 
                 # URL-BASED ROUTING
                 elif 'wvball' in team['url']:
-                    html = fetch_wbkb_roster(team['url'], season)
+                    # wvball teams can use either standard Sidearm or table format
+                    # Try standard fetch first
+                    html = fetch_roster(team['url'], season)
                     roster = []
                     if html:
-                        roster = parse_roster_wbkb(team, html, season)
+                        # Try standard Sidearm parser first (most common)
+                        roster = parse_roster(team, html, season)
+                        # If standard parser returns nothing, try wbkb table parser
+                        if not roster:
+                            roster = parse_roster_wbkb(team, html, season)
                 elif 'w-baskbl' in team['url']:
                     html = fetch_baskbl_roster(team['url'], season)
                     roster = parse_roster_baskbl(team, html, season)
