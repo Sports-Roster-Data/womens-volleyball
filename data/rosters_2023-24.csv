@@ -1,60 +1,68 @@
 ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,position,jersey,url,season
-1115,Hanover,6229,Ryleigh Plunkitt,Freshman,"Indianapolis, IN",Cathedral High School,,"5'9""",Setter,1,https://www.hanover.edu/sports/womens-volleyball/roster/ryleigh-plunkitt/6229,2023-24
-1115,Hanover,6230,Kinzee Dean,Freshman,"Brownstown, IN",Brownstown High School,,"5'8""",Middle,2,https://www.hanover.edu/sports/womens-volleyball/roster/kinzee-dean/6230,2023-24
-1115,Hanover,6177,Natalie West,Sophomore,"Evansville, Ind.",Reitz Memorial,,"5'3""",Defensive,3,https://www.hanover.edu/sports/womens-volleyball/roster/natalie-west/6177,2023-24
-1115,Hanover,6178,Eden Myers,Junior,"Greenwood, Ind.",Indian Creek,,"5'10""",Middle,6,https://www.hanover.edu/sports/womens-volleyball/roster/eden-myers/6178,2023-24
-1115,Hanover,6193,Kelsey Waggoner,Senior,"Indianapolis, Ind.",Cardinal Ritter,,"5'8""",Defensive,7,https://www.hanover.edu/sports/womens-volleyball/roster/kelsey-waggoner/6193,2023-24
-1115,Hanover,6179,Madison Schicker,Sophomore,"Fishers, Ind.",Hamilton Southeastern,,"5'6""",Defensive,9,https://www.hanover.edu/sports/womens-volleyball/roster/madison-schicker/6179,2023-24
-1115,Hanover,6180,Brooke Gervers,Sophomore,"Grand Blanc, Mich.",Grand Blanc,,"5'7""",Setter,10,https://www.hanover.edu/sports/womens-volleyball/roster/brooke-gervers/6180,2023-24
-1115,Hanover,6181,Elliot Mays,Senior,"Jeffersonville, Ind.",Jeffersonville,,"5'9""",Outside,12,https://www.hanover.edu/sports/womens-volleyball/roster/elliot-mays/6181,2023-24
-1115,Hanover,6182,Abbey McCoy,Junior,"Indianapolis, Ind.",Scecina,,"5'10""",Outside,13,https://www.hanover.edu/sports/womens-volleyball/roster/abbey-mccoy/6182,2023-24
-1115,Hanover,6183,Megan Vogel,Junior,"North Vernon, Ind.",Jennings County,,"5'11""",Setter,16,https://www.hanover.edu/sports/womens-volleyball/roster/megan-vogel/6183,2023-24
-1115,Hanover,6184,Maddie Robertson,Senior,"Mitchell, Ind.",Mitchell,,"6'2""",Middle,17,https://www.hanover.edu/sports/womens-volleyball/roster/maddie-robertson/6184,2023-24
-1115,Hanover,6231,Brooklyn Borden,Freshman,"Sellersburg, IN",Our Lady of Providence High School,,"5'9""",Defensive,20,https://www.hanover.edu/sports/womens-volleyball/roster/brooklyn-borden/6231,2023-24
-1115,Hanover,6185,Brooklyn York,Sophomore,"Franklin, Ind.",Franklin Community,,"5'11""",Right,22,https://www.hanover.edu/sports/womens-volleyball/roster/brooklyn-york/6185,2023-24
-1115,Hanover,6232,Molly Welborn,Freshman,"Indianapolis, IN",Scecina High School,,"5'8""",Outside,26,https://www.hanover.edu/sports/womens-volleyball/roster/molly-welborn/6232,2023-24
-1167,Lander,9339,Ryleigh Willard,Sophomore,"Roebuck, S.C.",,Dorman HS,"6'0""",Outside,1,https://www.landerbearcats.com/sports/womens-volleyball/roster/ryleigh-willard/9339,2023-24
-1167,Lander,9332,Emmi Cheek,Sophomore,"West Jefferson, N.C.",,Ashe County HS,"5'4""",Libero/Defensive,2,https://www.landerbearcats.com/sports/womens-volleyball/roster/emmi-cheek/9332,2023-24
-1167,Lander,9341,Enisilina Savelio,Junior,"Henderson, Nev.",,East Tennessee State University,"5'11""",Setter,6,https://www.landerbearcats.com/sports/womens-volleyball/roster/enisilina-savelio/9341,2023-24
-1167,Lander,9342,Krista Lauck,Freshman,"Warsaw, Ind.",,Warsaw HS,"5'10""",Opposite,7,https://www.landerbearcats.com/sports/womens-volleyball/roster/krista-lauck/9342,2023-24
-1167,Lander,9330,Sam Alwardt,Sophomore,"Summerville, S.C.",,Ashley Ridge HS,"5'4""",Libero/Defensive,8,https://www.landerbearcats.com/sports/womens-volleyball/roster/sam-alwardt/9330,2023-24
-1167,Lander,9331,Karson Browning,Sophomore,"Boiling Springs, S.C.",,Boiling Springs HS,"6'1""",Middle,9,https://www.landerbearcats.com/sports/womens-volleyball/roster/karson-browning/9331,2023-24
-1167,Lander,9338,Alyssa Tegeler,Senior,"Blairstown, Iowa",,Kirkwood CC,"6'1""",Middle,10,https://www.landerbearcats.com/sports/womens-volleyball/roster/alyssa-tegeler/9338,2023-24
-1167,Lander,9343,Quinn Butler,Freshman,"Madison, Ga.",,Morgan County HS,"5'9""",Outside,11,https://www.landerbearcats.com/sports/womens-volleyball/roster/quinn-butler/9343,2023-24
-1167,Lander,9337,Sophia Schneider,Junior,"Waterloo, Wis.",,Waterloo HS,"5'10""",Opposite,13,https://www.landerbearcats.com/sports/womens-volleyball/roster/sophia-schneider/9337,2023-24
-1167,Lander,9336,Katie Miller,Senior,"Sugar City, Idaho",,Sugar Salem HS,"6'1""",Outside,15,https://www.landerbearcats.com/sports/womens-volleyball/roster/katie-miller/9336,2023-24
-1167,Lander,9335,Amelia May,Sophomore,"Vale, N.C.",,West Lincoln HS,"6'1""",Opposite,16,https://www.landerbearcats.com/sports/womens-volleyball/roster/amelia-may/9335,2023-24
-1167,Lander,9334,Kamaria Curry,Senior,"Anderson, S.C.",,Westside HS,"5'9""",Outside,21,https://www.landerbearcats.com/sports/womens-volleyball/roster/kamaria-curry/9334,2023-24
-1167,Lander,9344,Tyra Listenbee,Freshman,"Wake Forest, N.C.",,North Raleigh Christian Academy,"6'0""",Middle,22,https://www.landerbearcats.com/sports/womens-volleyball/roster/tyra-listenbee/9344,2023-24
-1167,Lander,9333,Andrea Crawford,Junior,"Lexington, S.C.",,Lexington HS,"5'6""",Libero/Defensive,23,https://www.landerbearcats.com/sports/womens-volleyball/roster/andrea-crawford/9333,2023-24
-190,Drew,9398,Skyler Ribitzki,Sophomore,"West Milford, N.J.",West Milford,,"5'9""",Outside,2,https://www.drewrangers.com/sports/womens-volleyball/roster/skyler-ribitzki/9398,2023-24
-190,Drew,9405,Maddy Baker,Freshman,"Lasalle, Colo.",University,,"5'7""",Defensive,3,https://www.drewrangers.com/sports/womens-volleyball/roster/maddy-baker/9405,2023-24
-190,Drew,9396,Abigail Pereira,Senior,"Berkeley Heights, N.J.",Governor Livingston,,"5'9""",Opposite,4,https://www.drewrangers.com/sports/womens-volleyball/roster/abigail-pereira/9396,2023-24
-190,Drew,9404,Lilyan Ahlers,Freshman,"Sherrills Ford, N.C.",Community School of Davidson,,"5'6""",Setter,5,https://www.drewrangers.com/sports/womens-volleyball/roster/lilyan-ahlers/9404,2023-24
-190,Drew,9409,Meghan Pullen,Junior,"Oxon Hill, Md.",Oxon Hill,,"5'10""",Middle,6,https://www.drewrangers.com/sports/womens-volleyball/roster/meghan-pullen/9409,2023-24
-190,Drew,9406,Jasmine Brewer,Freshman,"Odenton, Md.",Indian Creek,,"5'10""",Outside,7,https://www.drewrangers.com/sports/womens-volleyball/roster/jasmine-brewer/9406,2023-24
-190,Drew,9397,Alyssa Rachwal,Junior,"Bethlehem, Pa.",Liberty,,"5'9""",Setter,8,https://www.drewrangers.com/sports/womens-volleyball/roster/alyssa-rachwal/9397,2023-24
-190,Drew,9407,Cristina Coombs,Freshman,"Suffolk, Va.",Kings Fork,,"5'7""",Setter,10,https://www.drewrangers.com/sports/womens-volleyball/roster/cristina-coombs/9407,2023-24
-190,Drew,9408,Coco Otto,Freshman,"Seattle, Wash.",Ballard,,"5'7""",Libero,11,https://www.drewrangers.com/sports/womens-volleyball/roster/coco-otto/9408,2023-24
-190,Drew,9402,Aidyn Stone,Sophomore,"Dover, N.H.",Dover,,"5'3""",Libero/Defensive,13,https://www.drewrangers.com/sports/womens-volleyball/roster/aidyn-stone/9402,2023-24
-190,Drew,9400,Emily Shirk,Senior,"Wyomissing, Pa.",Wyomissing,,"5'8""",Outside,15,https://www.drewrangers.com/sports/womens-volleyball/roster/emily-shirk/9400,2023-24
-190,Drew,9401,Inaya Stanford,Senior,"Avenel, N.J.",Colonia,,"5'6""",Middle,16,https://www.drewrangers.com/sports/womens-volleyball/roster/inaya-stanford/9401,2023-24
-190,Drew,9403,Melissa Zack,Sophomore,"New Cumberland, Pa.",Trinity,,"5'11""",Middle,17,https://www.drewrangers.com/sports/womens-volleyball/roster/melissa-zack/9403,2023-24
-190,Drew,9395,Lindsey Millis,Sophomore,"Kinnelon, N.J.",Kinnelon,,"5'6""",Outside,18,https://www.drewrangers.com/sports/womens-volleyball/roster/lindsey-millis/9395,2023-24
-190,Drew,9399,Camille Schiralli,Sophomore,"Bloomfield, N.J.",Bloomfield,,"5'9""",Outside,19,https://www.drewrangers.com/sports/womens-volleyball/roster/camille-schiralli/9399,2023-24
-190,Drew,9394,Marissa Guajardo,Senior,"South Elgin, Ill.",St. Charles North,,"5'10""",Middle,20,https://www.drewrangers.com/sports/womens-volleyball/roster/marissa-guajardo/9394,2023-24
-247,SUNY Geneseo,7466,Zooey Gagnier,Junior,"Penfield, NY",Penfield,,"5'3""",DS/L,1,https://www.geneseoknights.com/sports/womens-volleyball/roster/zooey-gagnier/7466,2023-24
-247,SUNY Geneseo,7463,McKenna Callari,Sophomore,"Rochester, NY",West Irondequoit,,"5'5""",DS/L,2,https://www.geneseoknights.com/sports/womens-volleyball/roster/mckenna-callari/7463,2023-24
-247,SUNY Geneseo,7471,Daphne Paul-LaRonca,Sophomore,"New Paltz, NY",New Paltz,,"5'6""",DS/L,3,https://www.geneseoknights.com/sports/womens-volleyball/roster/daphne-paul-laronca/7471,2023-24
-247,SUNY Geneseo,7472,Ellie McLennan,Junior,"Trumansburg, NY",Charles O. Dickerson,,"5'5""",DS/L,4,https://www.geneseoknights.com/sports/womens-volleyball/roster/ellie-mclennan/7472,2023-24
-247,SUNY Geneseo,7469,Carolyn Mack,Senior,"Rochester, NY",Webster Thomas,,"5'7""",S,5,https://www.geneseoknights.com/sports/womens-volleyball/roster/carolyn-mack/7469,2023-24
-247,SUNY Geneseo,7465,Cory Elder,Junior,"Rochester, NY",Brighton,,"5'8""",MB,6,https://www.geneseoknights.com/sports/womens-volleyball/roster/cory-elder/7465,2023-24
-247,SUNY Geneseo,7473,Molly McKinney,Freshman,"Rochester, NY",Spencerport,,"5'10""",S,8,https://www.geneseoknights.com/sports/womens-volleyball/roster/molly-mckinney/7473,2023-24
-247,SUNY Geneseo,7474,Sophie Hunter,Freshman,"West Seneca, NY",West Seneca,,"5'8""",OH,9,https://www.geneseoknights.com/sports/womens-volleyball/roster/sophie-hunter/7474,2023-24
-247,SUNY Geneseo,7475,Emily Lupini,Freshman,"Amherst, N.Y.",Amherst,,"5'9""",OH/OPP,12,https://www.geneseoknights.com/sports/womens-volleyball/roster/emily-lupini/7475,2023-24
-247,SUNY Geneseo,7462,Kate Barba,Sophomore,"Huntington, NY",Huntington,,"5'8""",OH,13,https://www.geneseoknights.com/sports/womens-volleyball/roster/kate-barba/7462,2023-24
-247,SUNY Geneseo,7464,Peyton Cole,Junior,"Lowville, NY",Lowville Academy,,"5'9""",OPP,15,https://www.geneseoknights.com/sports/womens-volleyball/roster/peyton-cole/7464,2023-24
-247,SUNY Geneseo,7467,Sydney Leigh-Manuell,Junior,"Blue Point, NY",Bayport-Blue Point,,"5'7""",OH,16,https://www.geneseoknights.com/sports/womens-volleyball/roster/sydney-leigh-manuell/7467,2023-24
-247,SUNY Geneseo,7468,Gianna Lucchi,Sophomore,"Merrick, NY",Sanford H Calhoun,,"5'10""",S,17,https://www.geneseoknights.com/sports/womens-volleyball/roster/gianna-lucchi/7468,2023-24
-247,SUNY Geneseo,7476,Finnly Pas'cal,Freshman,"Skaneateles, NY",Skaneatles,,"5'10""",MB,19,https://www.geneseoknights.com/sports/womens-volleyball/roster/finnly-pas-cal/7476,2023-24
-247,SUNY Geneseo,7470,Ayla Pas'cal,Sophomore,"Skaneateles, NY",Skaneatles,,"6'0""",MB,20,https://www.geneseoknights.com/sports/womens-volleyball/roster/ayla-pas-cal/7470,2023-24
+420,Middlebury,19129,Devin McCormack,Sophomore,"Southport, Conn.",Greens Farms Academy,,"5'11""",OH,1,https://www.middlebury.edu/sports/womens-volleyball/roster/devin-mccormack/19129,2023-24
+420,Middlebury,19128,Campbell Keller,Senior,"Perry, Kan.",Perry-Lecompton,,"5'7""",DS,2,https://www.middlebury.edu/sports/womens-volleyball/roster/campbell-keller/19128,2023-24
+420,Middlebury,19136,Molly MacDonald,First Year,"Sewickley, Pa.",Quaker Valley,,"5'10""",OH,3,https://www.middlebury.edu/sports/womens-volleyball/roster/molly-macdonald/19136,2023-24
+420,Middlebury,19124,Lillian Caldwell,Senior,"Wayne, Pa.",Conestoga,,"5'9""",OH,4,https://www.middlebury.edu/sports/womens-volleyball/roster/lillian-caldwell/19124,2023-24
+420,Middlebury,19122,Lauren Baxter,Junior,"Berkeley, Calif.",Head-Royce School,,"5'10""",OH,5,https://www.middlebury.edu/sports/womens-volleyball/roster/lauren-baxter/19122,2023-24
+420,Middlebury,19132,Ava Tuccio,Senior,"Milford, Conn.",St. Joseph,,"6'2""",MH,6,https://www.middlebury.edu/sports/womens-volleyball/roster/ava-tuccio/19132,2023-24
+420,Middlebury,19126,Molly Harrison,Junior,"Tiburon, Calif.",Marin Catholic,,"6'0""",RH,8,https://www.middlebury.edu/sports/womens-volleyball/roster/molly-harrison/19126,2023-24
+420,Middlebury,19125,Sophie Fisher,Sophomore,"Larchmont, N.Y.",Mamaroneck,,"6'0""",MH,9,https://www.middlebury.edu/sports/womens-volleyball/roster/sophie-fisher/19125,2023-24
+420,Middlebury,19134,Kinaree Eichner,First Year,"Denver, Colo.",Kent Denver School,,"5'5""",S,10,https://www.middlebury.edu/sports/womens-volleyball/roster/kinaree-eichner/19134,2023-24
+420,Middlebury,19130,Gabby Pribisich,Junior,"Cleveland, Ohio",Hathaway Brown School,,"6'0""",MH,11,https://www.middlebury.edu/sports/womens-volleyball/roster/gabby-pribisich/19130,2023-24
+420,Middlebury,19121,Campbell Bartley,Sophomore,"Austin, Texas",Austin,,"5'10""",S,12,https://www.middlebury.edu/sports/womens-volleyball/roster/campbell-bartley/19121,2023-24
+420,Middlebury,19127,Sophie Horn,Junior,"Portola Valley, Calif.",Brentwood College School (British Columbia),,"5'11""",OH,13,https://www.middlebury.edu/sports/womens-volleyball/roster/sophie-horn/19127,2023-24
+420,Middlebury,19131,Annabella Rando,Sophomore,"San Jose, Calif.",Archbishop Mitty,,"5'3""",DS,15,https://www.middlebury.edu/sports/womens-volleyball/roster/annabella-rando/19131,2023-24
+420,Middlebury,19133,Ella Beebe,First Year,"Burlingame, Calif.",Crystal Springs Uplands,,"6'0""",MH,16,https://www.middlebury.edu/sports/womens-volleyball/roster/ella-beebe/19133,2023-24
+420,Middlebury,19135,Nora Harapat,First Year,"Rogers, Minn.",Rogers,,"5'4""",DS,17,https://www.middlebury.edu/sports/womens-volleyball/roster/nora-harapat/19135,2023-24
+420,Middlebury,19123,Caroline Byrne,Sophomore,"Carmel, Calif.",Carmel,,"5'11""",OH,19,https://www.middlebury.edu/sports/womens-volleyball/roster/caroline-byrne/19123,2023-24
+519,Ohio,5514,Kendall Hickey,Junior,"Fishers, Ind.",Heritage Christian,,"5'4""",DS/L,2,https://www.ohiobobcats.com/sports/wvball/roster/kendall-hickey/5514,2023-24
+519,Ohio,5693,Gentry Brown,Junior,"Shadyside, Ohio",Shadyside,,"5'9""",OH,3,https://www.ohiobobcats.com/sports/wvball/roster/gentry-brown/5693,2023-24
+519,Ohio,5519,Torre Kildow,Junior,"Bethesda, Ohio",Union,,"6'1""",OPP,4,https://www.ohiobobcats.com/sports/wvball/roster/torre-kildow/5519,2023-24
+519,Ohio,5692,Mady Long,Freshman,"Vincent, Ohio",Warren H.S.,,"5'10""",OH,5,https://www.ohiobobcats.com/sports/wvball/roster/mady-long/5692,2023-24
+519,Ohio,5510,Caroline Curran,Junior,"Wexford, Pa.",North Allegheny,,"5'8""",DS/L,6,https://www.ohiobobcats.com/sports/wvball/roster/caroline-curran/5510,2023-24
+519,Ohio,5694,Cienna Lapsley,Freshman,"Columbia City, Ind.",Concordia Lutheran H.S.,,"6'0""",MB/OH,8,https://www.ohiobobcats.com/sports/wvball/roster/cienna-lapsley/5694,2023-24
+519,Ohio,5513,Lexi Grissett,Sophomore,"Albany, Ohio",Alexander,,"5'10""",S,9,https://www.ohiobobcats.com/sports/wvball/roster/lexi-grissett/5513,2023-24
+519,Ohio,5522,Leah Rogers,Senior,"Hudsonville, Mich.",Hudsonville,,"6'2""",MB,10,https://www.ohiobobcats.com/sports/wvball/roster/leah-rogers/5522,2023-24
+519,Ohio,5525,Emily Waddell,Junior,"Carmel, Ind.",Carmel,,"6'0""",MB,11,https://www.ohiobobcats.com/sports/wvball/roster/emily-waddell/5525,2023-24
+519,Ohio,5526,Kendall White,Senior,"Gahanna, Ohio",Gahanna Jefferson,,"6'0""",Setter,12,https://www.ohiobobcats.com/sports/wvball/roster/kendall-white/5526,2023-24
+519,Ohio,5517,Bryn Janke,Sophomore,"Westfield, Wis.",Wisconsin Dells,,"5'11""",S,13,https://www.ohiobobcats.com/sports/wvball/roster/bryn-janke/5517,2023-24
+519,Ohio,5511,Sierra Evans,Sophomore,"Silver Spring, Md.",John F. Kennedy,,"6'1""",OH,15,https://www.ohiobobcats.com/sports/wvball/roster/sierra-evans/5511,2023-24
+519,Ohio,5521,Darbi Ricketts,Sophomore,"Cincinnati, Ohio",Little Miami,,"5'7""",OH/DS,16,https://www.ohiobobcats.com/sports/wvball/roster/darbi-ricketts/5521,2023-24
+519,Ohio,5695,Bailey Blair,Freshman,"Louisville, Ky.",Assumption H.S.,,"6'0""",MB,17,https://www.ohiobobcats.com/sports/wvball/roster/bailey-blair/5695,2023-24
+519,Ohio,5696,Lacy Marx,Freshman,"Evansville, Ind.",Mater Dei H.S.,,"5'8""",DS/L,22,https://www.ohiobobcats.com/sports/wvball/roster/lacy-marx/5696,2023-24
+519,Ohio,5512,Olivia Gardner,Junior,"Macomb, Mich.",Dakota,,"6'1""",MB/OPP,23,https://www.ohiobobcats.com/sports/wvball/roster/olivia-gardner/5512,2023-24
+537,UNC Pembroke,13935,Isabella Dillman,Junior,"Ormond Beach, Fla.",Riverbend Academy,Daytona State College,"5'5""",Defensive,1,https://www.uncpbraves.com/sports/womens-volleyball/roster/isabella-dillman/13935,2023-24
+537,UNC Pembroke,13924,McKenna Hayes,Senior,"Chattanooga, Tenn.",East Hamilton,Chattanooga State CC,"5'11""",Middle,2,https://www.uncpbraves.com/sports/womens-volleyball/roster/mckenna-hayes/13924,2023-24
+537,UNC Pembroke,13933,Emily Collings,Sophomore,"Jacksonville, Fla.",Providence School of Jacksonville,Jacksonville University,"5'5""",Setter,3,https://www.uncpbraves.com/sports/womens-volleyball/roster/emily-collings/13933,2023-24
+537,UNC Pembroke,13929,Savannah Whaley,Sophomore,"Farmville, N.C.",Farmville Central HS,,"5'9""",Outside,5,https://www.uncpbraves.com/sports/womens-volleyball/roster/savannah-whaley/13929,2023-24
+537,UNC Pembroke,13923,Brette Doile,Senior,"McPherson, KS",McPherson HS,Cloud County CC,"5'5""",Libero/Defensive,6,https://www.uncpbraves.com/sports/womens-volleyball/roster/brette-doile/13923,2023-24
+537,UNC Pembroke,13921,Anaya Carter,Junior,"Durham, N.C.",Cedar Ridge HS,,"5'7""",Outside,8,https://www.uncpbraves.com/sports/womens-volleyball/roster/anaya-carter/13921,2023-24
+537,UNC Pembroke,13930,Ivana Coker,Freshman,"Kennesaw, Ga.",Kennesaw Mountain HS,,"5'9""",Setter/Right,9,https://www.uncpbraves.com/sports/womens-volleyball/roster/ivana-coker/13930,2023-24
+537,UNC Pembroke,13927,Abby Peduzzi,Junior,"Hilton Head, S.C.",Hilton Head Christian Academy,,"5'9""",Outside,10,https://www.uncpbraves.com/sports/womens-volleyball/roster/abby-peduzzi/13927,2023-24
+537,UNC Pembroke,13934,Caterina Coronelli,Freshman,"Bologna, Italy",Liceo Ginnasio Luigi Galvani,,"6'0""",Outside,13,https://www.uncpbraves.com/sports/womens-volleyball/roster/caterina-coronelli/13934,2023-24
+537,UNC Pembroke,13928,Katelynn Swain,Junior,"Hope Mills, N.C.",South View HS,,"5'9""",Right,14,https://www.uncpbraves.com/sports/womens-volleyball/roster/katelynn-swain/13928,2023-24
+537,UNC Pembroke,13932,Deorri Gaines,Freshman,"Summerville, S.C.",Summerville HS,,"5'10""",Middle,15,https://www.uncpbraves.com/sports/womens-volleyball/roster/deorri-gaines/13932,2023-24
+537,UNC Pembroke,13922,Addie Decker,Redshirt Freshman,"Indianapolis, Ind.",North Central HS,,"6'1""",Right,16,https://www.uncpbraves.com/sports/womens-volleyball/roster/addie-decker/13922,2023-24
+537,UNC Pembroke,13979,Savannah Jackson,Freshman,"Fleming Island, Fla.",Fleming Island HS,,"5'9""",Right,17,https://www.uncpbraves.com/sports/womens-volleyball/roster/savannah-jackson/13979,2023-24
+537,UNC Pembroke,13926,Tyler Patterson,Junior,"Jacksonville, Fla.",Creekside HS,,"5'10""",Setter,18,https://www.uncpbraves.com/sports/womens-volleyball/roster/tyler-patterson/13926,2023-24
+537,UNC Pembroke,13925,Alexandria Mills,Sophomore,"Jackson, Ga.",Jackson HS,,"5'11""",Middle,24,https://www.uncpbraves.com/sports/womens-volleyball/roster/alexandria-mills/13925,2023-24
+584,Rollins,9469,Cameron Grange,Junior,"Ithaca, N.Y.",Ithaca,,"5'11""",OH,1,https://www.rollinssports.com/sports/womens-volleyball/roster/cameron-grange/9469,2023-24
+584,Rollins,9467,Jenna Garza,Junior,"San Antonio, Texas",Sandra Day O'Connor,,"5'6""",S,2,https://www.rollinssports.com/sports/womens-volleyball/roster/jenna-garza/9467,2023-24
+584,Rollins,9466,Morgan Coughlin,Sophomore,"Windermere, Fla.",Windermere Prep,,"5'8""",L,3,https://www.rollinssports.com/sports/womens-volleyball/roster/morgan-coughlin/9466,2023-24
+584,Rollins,9475,Kyla Krimmel,Freshman,"Chesterfield, Mo.",Lafayette,,"5'9""",OH/DS,4,https://www.rollinssports.com/sports/womens-volleyball/roster/kyla-krimmel/9475,2023-24
+584,Rollins,9471,Molly Morris,Sophomore,"Charleston, S.C.",Lucy Beckham,,"5'11""",S,5,https://www.rollinssports.com/sports/womens-volleyball/roster/molly-morris/9471,2023-24
+584,Rollins,9474,Marta Tsaneva,Senior,"Sofia, Bulgaria",Uwekind International School,,"5'11""",RS/OH,6,https://www.rollinssports.com/sports/womens-volleyball/roster/marta-tsaneva/9474,2023-24
+584,Rollins,9476,Lelolai Paulino-Dinzey,Freshman,"Brooklyn, NY",Avenues: The World School,,"5'9""",L,7,https://www.rollinssports.com/sports/womens-volleyball/roster/lelolai-paulino-dinzey/9476,2023-24
+584,Rollins,9477,Addilyn Kegerreis,Freshman,"Chambersburg, Pa.",The Baylor School,,"6'2""",OH/RS,8,https://www.rollinssports.com/sports/womens-volleyball/roster/addilyn-kegerreis/9477,2023-24
+584,Rollins,9478,Kai Hazelett,Freshman,"Apex, NC",Apex,,"5'10""",OH,9,https://www.rollinssports.com/sports/womens-volleyball/roster/kai-hazelett/9478,2023-24
+584,Rollins,9479,Vivian Scuteri,Freshman,"Jacksonville, Fla.",Creekside,,"5'11""",MB,10,https://www.rollinssports.com/sports/womens-volleyball/roster/vivian-scuteri/9479,2023-24
+584,Rollins,9472,Robinson Repass,Junior,"Jacksonville, Fla.",Providence School,,"6'2""",MB,11,https://www.rollinssports.com/sports/womens-volleyball/roster/robinson-repass/9472,2023-24
+584,Rollins,9480,Kendra Nachtrieb,Junior,"Dunlap, Ill.",Dunlap,,"5'10""",RS,12,https://www.rollinssports.com/sports/womens-volleyball/roster/kendra-nachtrieb/9480,2023-24
+584,Rollins,9481,Kayla Goodloe,Freshman,"Lake City, Fla.",Columbia,,"6'2""",RS/MB,13,https://www.rollinssports.com/sports/womens-volleyball/roster/kayla-goodloe/9481,2023-24
+584,Rollins,9468,Emma Gongora,Sophomore,"Orlando, Fla.",Lake Nona,,"5'11""",OH,14,https://www.rollinssports.com/sports/womens-volleyball/roster/emma-gongora/9468,2023-24
+584,Rollins,9470,Makayla Moran,Senior,"Atlanta, Ga.",The Lovett School,,"6'2""",MB,15,https://www.rollinssports.com/sports/womens-volleyball/roster/makayla-moran/9470,2023-24
+584,Rollins,9482,Tawnee Shaw,Freshman,"Merritt Island, Fla.",Merritt Island Christian,,"5'5""",L,16,https://www.rollinssports.com/sports/womens-volleyball/roster/tawnee-shaw/9482,2023-24
+584,Rollins,9473,Sarah Seabrooke,Junior,"Jacksonville, Fla.",Bishop Kenny,,"5'9""",L,17,https://www.rollinssports.com/sports/womens-volleyball/roster/sarah-seabrooke/9473,2023-24
+584,Rollins,9465,Willow Barron,Sophomore,"Dunedin, Fla.",Dunedin Senior,,"6'1""",MB,18,https://www.rollinssports.com/sports/womens-volleyball/roster/willow-barron/9465,2023-24
+584,Rollins,9483,Elena Arnold,Junior,"Wexford, Pa.",Eden Christian,,"6'1""",RS,21,https://www.rollinssports.com/sports/womens-volleyball/roster/elena-arnold/9483,2023-24
+584,Rollins,9484,Rylee Yarborough,Freshman,"Oviedo, Fla.",Oviedo,,"6'0""",OH,83,https://www.rollinssports.com/sports/womens-volleyball/roster/rylee-yarborough/9484,2023-24

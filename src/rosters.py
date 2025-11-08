@@ -396,9 +396,13 @@ class TeamConfig:
         312,  # Iowa
         328,  # Kansas
         473,  # New Mexico
+        746,  # Virginia (has malformed table)
         # Small schools needing JavaScript
+        620,  # St. Thomas (MN)
         1064,  # Eastern Nazarene
         1111,  # Greenville
+        30081,  # Penn St. Harrisburg
+        30244,  # Edward Waters
     ]
 
     # Team-specific URL formats
@@ -652,7 +656,24 @@ def parse_roster_baskbl(team: Dict, html: BeautifulSoup, season: str) -> List[Pl
     else:
         cols = [x.text.strip() for x in thead.find_all('th') if x.text.strip() if x.text.strip() != '']
 
-    new_cols = [HEADERS[c] for c in cols]
+    # Filter out unmapped columns and log warning
+    mapped_cols = []
+    unmapped_cols = []
+    for c in cols:
+        if c in HEADERS:
+            mapped_cols.append(c)
+        else:
+            unmapped_cols.append(c)
+
+    if unmapped_cols:
+        logger.warning(f"Unmapped columns for {team['team']}: {unmapped_cols}")
+
+    if not mapped_cols:
+        logger.warning(f"No valid columns found for {team['team']}")
+        return roster
+
+    new_cols = [HEADERS[c] for c in mapped_cols]
+    cols = mapped_cols  # Update cols to only include mapped ones
 
     tbody = html.find('tbody')
     if not tbody:
@@ -729,7 +750,24 @@ def parse_roster_wbkb(team: Dict, html: BeautifulSoup, season: str) -> List[Play
         if col in cols:
             cols.remove(col)
 
-    new_cols = [HEADERS[c] for c in cols]
+    # Filter out unmapped columns and log warning
+    mapped_cols = []
+    unmapped_cols = []
+    for c in cols:
+        if c in HEADERS:
+            mapped_cols.append(c)
+        else:
+            unmapped_cols.append(c)
+
+    if unmapped_cols:
+        logger.warning(f"Unmapped columns for {team['team']}: {unmapped_cols}")
+
+    if not mapped_cols:
+        logger.warning(f"No valid columns found for {team['team']}")
+        return roster
+
+    new_cols = [HEADERS[c] for c in mapped_cols]
+    cols = mapped_cols  # Update cols to only include mapped ones
     tbody = html.find('tbody')
     if not tbody:
         logger.warning(f"No tbody found for {team['team']}")
