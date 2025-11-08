@@ -381,7 +381,7 @@ class TeamConfig:
     # Note: Teams with specific shotscraper_* functions are NOT in this list
     JS_TEAMS = [
         # Original JS teams (non-overlapping with specific scrapers)
-        8, 31, 66, 72, 80, 224, 327, 334, 463, 513, 528, 623, 648, 694, 706, 721, 725,
+        8, 31, 66, 72, 80, 224, 327, 334, 463, 513, 528, 623, 648, 694, 706, 725,
         735, 742, 809, 811, 1000,
         # Previously uncategorized teams (adding as fallback to attempt scraping)
         22, 28, 46, 47, 56, 59, 67, 81, 86, 90, 101, 110, 129, 140, 142, 148, 157, 158,
@@ -1360,6 +1360,13 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
                 # Vanderbilt
                 elif team['ncaa_id'] == 736:
                     roster = fetch_and_parse_vandy(team, season)
+                # Air Force
+                elif team['ncaa_id'] == 721:
+                    roster = shotscraper_airforce(team, season)
+                    if not roster:
+                        logger.info(f"Shotscraper failed for {team['team']}, trying standard fetch")
+                        html = fetch_roster(team['url'], season)
+                        roster = parse_roster(team, html, season)
 
                 # SHOTSCRAPER WITH JAVASCRIPT EXTRACTION
                 elif team['ncaa_id'] in [5, 308, 497, 554]:
