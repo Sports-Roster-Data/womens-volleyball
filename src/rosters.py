@@ -606,7 +606,7 @@ def shotscraper_caller(team: Dict, season: str, url: str, javascript_code: str) 
         result = subprocess.check_output([
             'shot-scraper', 'javascript', url, javascript_code,
             "--user-agent", "Firefox"
-        ])
+        ], timeout=60)
         parsed_data = json.loads(result)
 
         for player in parsed_data:
@@ -615,9 +615,15 @@ def shotscraper_caller(team: Dict, season: str, url: str, javascript_code: str) 
             player['season'] = season
 
         return parsed_data
+    except subprocess.TimeoutExpired:
+        logger.error(f"shot-scraper timeout for {team.get('team', 'unknown')}")
+        return []
+    except FileNotFoundError:
+        logger.error(f"shot-scraper not found in PATH for {team.get('team', 'unknown')}")
+        return []
     except Exception as e:
         logger.error(f"shot-scraper error for {team.get('team', 'unknown')}: {e}")
-        raise
+        return []
 
 
 # ============================================================================
@@ -1280,17 +1286,37 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
                 # SHOTSCRAPER WITH JAVASCRIPT EXTRACTION
                 elif team['ncaa_id'] in [5, 308, 497, 554]:
                     roster = shotscraper_table(team, season)
+                    if not roster:
+                        logger.info(f"Shotscraper failed for {team['team']}, trying standard fetch")
+                        html = fetch_roster(team['url'], season)
+                        roster = parse_roster(team, html, season)
                 elif team['ncaa_id'] in [9, 71, 83, 96, 99, 156, 173, 180, 191, 234, 249, 257,
                                         301, 306, 367, 387, 392, 400, 404, 418, 428, 441, 490,
                                         521, 522, 559, 574, 603, 635, 664, 671, 676, 688, 690,
                                         700, 719, 749, 758]:
                     roster = shotscraper_card(team, season)
+                    if not roster:
+                        logger.info(f"Shotscraper failed for {team['team']}, trying standard fetch")
+                        html = fetch_roster(team['url'], season)
+                        roster = parse_roster(team, html, season)
                 elif team['ncaa_id'] in [51, 248, 731]:
                     roster = shotscraper_list_item(team, season)
+                    if not roster:
+                        logger.info(f"Shotscraper failed for {team['team']}, trying standard fetch")
+                        html = fetch_roster(team['url'], season)
+                        roster = parse_roster(team, html, season)
                 elif team['ncaa_id'] in [37, 52, 175, 316, 487]:
                     roster = shotscraper_roster_player(team, season)
+                    if not roster:
+                        logger.info(f"Shotscraper failed for {team['team']}, trying standard fetch")
+                        html = fetch_roster(team['url'], season)
+                        roster = parse_roster(team, html, season)
                 elif team['ncaa_id'] == 556:
                     roster = shotscraper_data_tables(team, season)
+                    if not roster:
+                        logger.info(f"Shotscraper failed for {team['team']}, trying standard fetch")
+                        html = fetch_roster(team['url'], season)
+                        roster = parse_roster(team, html, season)
 
                 # TEAMS NEEDING JAVASCRIPT RENDERING (fetch HTML then parse with BeautifulSoup)
                 elif TeamConfig.requires_javascript(team['ncaa_id']):
@@ -1299,8 +1325,10 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
                     if html:
                         roster = parse_roster(team, html, season)
                     else:
-                        logger.warning(f"Failed to fetch JS-rendered page for {team['team']}, skipping")
-                        roster = []
+                        # If JS rendering fails, try standard fetching as fallback
+                        logger.info(f"JS rendering failed for {team['team']}, trying standard fetch as fallback")
+                        html = fetch_roster(team['url'], season)
+                        roster = parse_roster(team, html, season)
 
                 # URL-BASED ROUTING
                 elif 'wvball' in team['url']:
