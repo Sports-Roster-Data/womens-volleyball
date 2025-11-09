@@ -1113,6 +1113,10 @@ def shotscraper_airforce(team: Dict, season: str) -> List[Dict]:
     """Air Force - JavaScript rendered with s-person-card format"""
     javascript_code = """
     Array.from(document.querySelectorAll('.s-person-card'), el => {
+        // Skip coaches - they don't have jersey numbers
+        const jerseyEl = el.querySelector('span.s-stamp__text');
+        if (!jerseyEl) return null;
+
         const id = '';
         const name = el.querySelector('.s-person-details__personal-single-line').innerText;
         const year = el.querySelectorAll('.s-person-details__bio-stats span')[2].innerText.split('\\n')[1].trim();
@@ -1121,10 +1125,10 @@ def shotscraper_airforce(team: Dict, season: str) -> List[Dict]:
         const hometown = el.querySelectorAll('span.s-person-card__content__person__location-item')[0].innerText.replace("Hometown\\n","");
         const high_school = el.querySelectorAll('span.s-person-card__content__person__location-item')[1].innerText.split('\\n')[1];
         const previous_school = '';
-        const jersey = el.querySelector('span.s-stamp__text').innerText;
+        const jersey = jerseyEl.innerText;
         const url = el.querySelector('a')['href']
         return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
-    })
+    }).filter(item => item !== null)
     """
     url = f"{team['url']}/roster/{season}"
     return shotscraper_caller(team, season, url, javascript_code)
