@@ -58,6 +58,20 @@ def test_parse_roster_missing_elements_does_not_crash():
     assert dana.position == "N/A"  # empty position div
 
 
+def test_parse_roster_name_div_variant():
+    # Newer Sidearm layout: name only in .sidearm-roster-player-name, with a
+    # jersey-number prefix that must be stripped (Portland State, Yale).
+    html = load("parse_roster", "sidearm_name_div.html")
+    roster = rosters.parse_roster(TEAM, html, "2025-26")
+
+    assert len(roster) == 1
+    p = roster[0]
+    assert p.name == "Kalyssa Taggart"      # "1 Kalyssa Taggart" -> name only
+    assert p.jersey == "1"
+    assert p.hometown == "Tampa, Fla."
+    assert p.high_school == "Berkeley Prep"
+
+
 def test_parse_roster_skips_nameless_card():
     html = load("parse_roster", "sidearm_nameless_card.html")
     # A card with no aria-label and no <h3> must be skipped, not raise and
@@ -103,6 +117,24 @@ def test_parse_iowa_state_cards():
     assert pam.jersey == "1"
     assert pam.hometown == "Upper Marlboro, Md."
     assert pam.high_school == "St. John's"
+
+
+def test_parse_clemson_cards():
+    team = {"ncaa_id": 147, "team": "Clemson", "url": "https://clemsontigers.com/sports/volleyball/"}
+    html = load("parse_clemson", "clemson.html")
+    roster = rosters.parse_clemson_cards(html, team, "2025-26")
+
+    assert len(roster) == 16
+    assert all(p.name for p in roster)
+    assert all(p.jersey for p in roster)
+
+    ozoh = next(p for p in roster if p.name == "Ihuoma Ozoh")
+    assert ozoh.jersey == "1"                    # "#1" -> "1"
+    assert ozoh.position == "Middle Hitter"
+    assert ozoh.year == "Freshman"
+    assert ozoh.height == "6′3″"
+    assert ozoh.hometown == "Haze Crest, Ill."
+    assert ozoh.high_school == "Homewood-Flossmoor HS"
 
 
 @pytest.mark.parametrize("town,expected", [

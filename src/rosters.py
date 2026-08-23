@@ -652,13 +652,18 @@ def parse_roster(team: Dict, html: BeautifulSoup, season: str) -> List[Player]:
         except (IndexError, AttributeError):
             academic_year = None
 
-        # Extract name: prefer the anchor's aria-label, fall back to <h3>.
-        # A card with neither should be skipped, not abort the whole team.
+        # Extract name: prefer the anchor's aria-label, then <h3>, then the
+        # newer .sidearm-roster-player-name div (which prefixes the jersey
+        # number, e.g. "1 Jane Smith"). A card with none is skipped, not fatal.
         h3 = player.find('h3')
         h3_name = h3.text.strip() if h3 else ''
         name = aria_label.split(' - ')[0].strip() if aria_label else ''
         if not name or 'Instagram' in name:
             name = h3_name
+        if not name:
+            name_div = player.find(class_='sidearm-roster-player-name')
+            if name_div:
+                name = re.sub(r'^\s*\d+\s+', '', name_div.get_text(' ', strip=True))
         if not name:
             logger.info(f"Skipping player card with no name for {team['team']}")
             continue
@@ -688,45 +693,81 @@ def parse_roster(team: Dict, html: BeautifulSoup, season: str) -> List[Player]:
 # These functions use shot-scraper to handle JavaScript-rendered content
 # Each function targets specific team websites with custom selectors
 
-def fetch_and_parse_clemson(team: Dict, season: str) -> List[Dict]:
-    """Clemson - Custom table format"""
-    roster = []
-    er = tldextract.extract(team['url'])
-    url = f"{team['url']}/roster/season/{season[0:4]}"
-    r = fetch_url(url)
-    html = BeautifulSoup(r.text, features="html.parser")
-    table = html.find('table')
-    if table is None:
-        logger.warning(f"Clemson: no roster table at {url}")
-        return []
-    cols = [x.text for x in html.find_all('th') if x.text not in ['MAJOR']]
-    cols = cols[0:-4]
-    unmapped = [c for c in cols if c not in HEADERS]
-    if unmapped:
-        logger.warning(f"Clemson: unmapped columns {unmapped}, skipping")
-        return []
-    new_cols = [HEADERS[c] for c in cols]
-    players = table.find_all('tr')[1:]
+_YEAR_WORDS = {
+    'freshman', 'sophomore', 'junior', 'senior', 'graduate', 'redshirt',
+    'first year', 'fifth year', 'grad student', 'r-freshman', 'r-sophomore',
+    'r-junior', 'r-senior',
+}
 
-    for player in players:
-        raw_player_list = [x.text.strip() for x in player.find_all('td')][0:-2]
-        player_dict = dict(zip(new_cols, raw_player_list))
-        roster.append({
-            'team_id': team['ncaa_id'],
-            'team': team['team'],
-            'id': None,
-            'name': player_dict['name'],
-            'year': player_dict['academic_year'],
-            'hometown': player_dict['town'],
-            'high_school': None,
-            'previous_school': None,
-            'height': player_dict['height'],
-            'position': player_dict['position'],
-            'jersey': player_dict['jersey'],
-            'url': f"https://www.{er.domain}.{er.suffix}{player.find('a')['href']}",
-            'season': season
-        })
+
+def parse_clemson_cards(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
+    """Parse Clemson's rendered roster-card layout.
+
+    Only player cards carry a jersey number, so staff cards are skipped. The
+    bio fields (height, hometown, high school, class) share one repeated
+    `info-item` class, so each is classified by its content rather than its
+    position, which tolerates a missing field. Split from fetching so it is
+    testable offline against a saved rendered-HTML fixture.
+    """
+    er = tldextract.extract(team['url'])
+    roster, seen = [], set()
+    for card in html.select('.roster-card'):
+        jersey_el = card.select_one('.roster-card__jersey-number')
+        if jersey_el is None:
+            continue
+        anchor = card.find('a')
+        href = anchor.get('href', '') if anchor else ''
+        if href and href in seen:
+            continue
+        seen.add(href)
+
+        height = hometown = high_school = year = ''
+        for item in card.select('.roster-players-cards-item__info-item'):
+            text = item.get_text(' ', strip=True)
+            if not text:
+                continue
+            if re.search(r"\d\s*['′\"″]", text):        # 6'3" / 6′3″
+                height = text
+            elif text.lower() in _YEAR_WORDS:
+                year = text
+            elif ',' in text and not hometown:          # City, ST
+                hometown = text
+            elif not high_school:
+                high_school = text
+
+        name_el = card.select_one('.roster-card__title-link')
+        pos_el = card.select_one('.roster-card__position')
+        url = href if href.startswith('http') else f"https://www.{er.domain}.{er.suffix}{href}"
+        roster.append(Player(
+            team_id=team['ncaa_id'],
+            team=team['team'],
+            player_id=None,
+            name=name_el.get_text(strip=True) if name_el else '',
+            year=year,
+            hometown=hometown,
+            high_school=high_school or None,
+            previous_school=None,
+            height=height,
+            position=pos_el.get_text(' ', strip=True) if pos_el else '',
+            jersey=jersey_el.get_text(strip=True).lstrip('#'),
+            url=url,
+            season=season,
+        ))
     return roster
+
+
+def fetch_and_parse_clemson(team: Dict, season: str) -> List[Player]:
+    """Clemson - modern Nuxt site (roster-card layout).
+
+    Like Iowa State, the roster is client-rendered and only served at `/roster`
+    (a `/roster/{season}` path 404s), so it is fetched through shot-scraper and
+    parsed from the rendered HTML.
+    """
+    url = team['url'].rstrip('/') + '/roster'
+    html = fetch_url_with_javascript(url)
+    if html is None:
+        return []
+    return parse_clemson_cards(html, team, season)
 
 
 def fetch_and_parse_vandy(team: Dict, season: str) -> List[Dict]:
