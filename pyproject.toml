@@ -12,3 +12,11 @@ dependencies = [
     "lxml-html-clean>=0.4.3",
     "shot-scraper>=1.8",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

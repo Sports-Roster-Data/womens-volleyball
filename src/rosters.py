@@ -666,6 +666,20 @@ def shotscraper_caller(team: Dict, season: str, url: str, javascript_code: str) 
 # PARSER FUNCTIONS
 # ============================================================================
 
+def split_town_high_school(town: Optional[str]) -> tuple:
+    """Split a combined 'Hometown / High School' cell.
+
+    Tolerates a missing '/' (returns the whole string as the town and None for
+    the high school) and a missing/None cell, so a malformed row never raises.
+    """
+    if not town:
+        return '', None
+    parts = [x.strip() for x in town.split('/', maxsplit=1)]
+    if len(parts) == 2:
+        return parts[0], parts[1]
+    return parts[0], None
+
+
 def parse_roster_baskbl(team: Dict, html: BeautifulSoup, season: str) -> List[Player]:
     """Parse basketball-style roster"""
     roster = []
@@ -709,13 +723,16 @@ def parse_roster_baskbl(team: Dict, html: BeautifulSoup, season: str) -> List[Pl
     for raw_player in raw_players:
         [x.span.decompose() for x in raw_player.find_all('td') if x.find('span')]
         raw_player_list = [x.text.strip() for x in raw_player.find_all('td')]
+        if len(raw_player_list) <= 4:
+            logger.info(f"Skipping short row {raw_player_list}")
+            continue
         raw_player_list[4] = " ".join([x for x in raw_player_list[4].split()])
         if len(raw_player_list) < len(new_cols):
             name = " ".join([x.strip() for x in raw_player.find('a').text.replace("  ", "").strip().split()])
             raw_player_list.insert(1, name)
         player_dict = dict(zip(new_cols, raw_player_list))
         if 'high_school' not in player_dict:
-            player_dict['town'], player_dict['high_school'] = [x.strip() for x in player_dict['town'].split('/', maxsplit=1)]
+            player_dict['town'], player_dict['high_school'] = split_town_high_school(player_dict.get('town'))
         if 'previous_school' not in player_dict:
             player_dict['previous_school'] = None
 
@@ -860,7 +877,7 @@ def parse_roster_wbkb(team: Dict, html: BeautifulSoup, season: str) -> List[Play
             if team['ncaa_id'] == 2713:
                 player_dict['high_school'] = None
             else:
-                player_dict['town'], player_dict['high_school'] = [x.strip() for x in player_dict['town'].split('/', maxsplit=1)]
+                player_dict['town'], player_dict['high_school'] = split_town_high_school(player_dict.get('town'))
 
         if 'previous_school' not in player_dict:
             player_dict['previous_school'] = None
@@ -896,8 +913,11 @@ def parse_roster(team: Dict, html: BeautifulSoup, season: str) -> List[Player]:
     for player in players:
         position = None
 
-        # Skip specific known bad entries
-        if player.find('a')['aria-label'].split(' - ')[0].strip() == 'Addison Jeansonne':
+        # Skip specific known bad entries. Addison Jeansonne appears as a
+        # duplicate/placeholder card on one team's page.
+        anchor = player.find('a')
+        aria_label = anchor.get('aria-label', '') if anchor else ''
+        if aria_label.split(' - ')[0].strip() == 'Addison Jeansonne':
             continue
 
         # Extract previous school
@@ -923,20 +943,21 @@ def parse_roster(team: Dict, html: BeautifulSoup, season: str) -> List[Player]:
             hometown = None
 
         # Extract position (with multiple fallback strategies)
-        if player.find('div', {'class': 'sidearm-roster-player-position'}).text.strip() == '':
-            position = 'N/A'
-        if not position and '"' in player.find('div', {'class': 'sidearm-roster-player-position'}).text.strip():
-            position = player.find('div', {'class': 'sidearm-roster-player-position'}).text.strip().split()[0]
-        if not position and player.find('div', {'class': 'sidearm-roster-player-position'}).find('span', {'class': 'text-bold'}).find('span', {'class': 'sidearm-roster-player-position-long-short hide-on-small-down'}):
-            try:
-                position = player.find('div', {'class': 'sidearm-roster-player-position'}).find('span', {'class': 'text-bold'}).find('span', {'class': 'sidearm-roster-player-position-long-short hide-on-small-down'}).text.strip()
-            except AttributeError:
-                position = None
-        if not position and player.find('div', {'class': 'sidearm-roster-player-position'}).find('span', {'class': 'text-bold'}):
-            try:
-                position = player.find('div', {'class': 'sidearm-roster-player-position'}).find('span', {'class': 'text-bold'}).text.strip()
-            except AttributeError:
-                position = None
+        position_div = player.find('div', {'class': 'sidearm-roster-player-position'})
+        if position_div is not None:
+            position_text = position_div.text.strip()
+            if position_text == '':
+                position = 'N/A'
+            if not position and '"' in position_text:
+                position = position_text.split()[0]
+            text_bold = position_div.find('span', {'class': 'text-bold'})
+            if not position and text_bold is not None:
+                long_short = text_bold.find(
+                    'span', {'class': 'sidearm-roster-player-position-long-short hide-on-small-down'})
+                if long_short is not None:
+                    position = long_short.text.strip()
+                else:
+                    position = text_bold.text.strip()
 
         # Extract jersey
         try:
@@ -970,7 +991,7 @@ def parse_roster(team: Dict, html: BeautifulSoup, season: str) -> List[Player]:
             height=height,
             position=position,
             jersey=jersey,
-            url=f"https://www.{er.domain}.{er.suffix}{player.find('a')['href']}",
+            url=f"https://www.{er.domain}.{er.suffix}{anchor.get('href', '') if anchor else ''}",
             season=season
         ))
     return roster
@@ -1220,16 +1241,15 @@ def shotscraper_list_item(team: Dict, season: str) -> List[Dict]:
     javascript_code = """
     Array.from(document.querySelectorAll('.sidearm-roster-list-item'), el => {
      const id = '';
-     const name = el.querySelector('.sidearm-roster-player-name').innerText;
-     const year = el.querySelector('.sidearm-roster-list-item-year').innerText;
-     const height = el.querySelector('.sidearm-roster-list-item-height').innerText;
-     const position = el.querySelector('.sidearm-roster-list-item-position').innerText;
-     const hometown = el.querySelector('.sidearm-roster-list-item-hometown').innerText;
-     const high_school = el.querySelector('.sidearm-roster-list-item-highschool').innerText;
-     let prev_school = el.querySelector('.sidearm-roster-list-item-previous-school');
-     const previous_school = prev_school ? prev_school.innerText : '';
-     const jersey = el.querySelector('.sidearm-roster-list-item-photo-number').innerText;
-     const url = el.querySelector('.sidearm-roster-player-name a')['href'];
+     const name = el.querySelector('.sidearm-roster-player-name')?.innerText ?? '';
+     const year = el.querySelector('.sidearm-roster-list-item-year')?.innerText ?? '';
+     const height = el.querySelector('.sidearm-roster-list-item-height')?.innerText ?? '';
+     const position = el.querySelector('.sidearm-roster-list-item-position')?.innerText ?? '';
+     const hometown = el.querySelector('.sidearm-roster-list-item-hometown')?.innerText ?? '';
+     const high_school = el.querySelector('.sidearm-roster-list-item-highschool')?.innerText ?? '';
+     const previous_school = el.querySelector('.sidearm-roster-list-item-previous-school')?.innerText ?? '';
+     const jersey = el.querySelector('.sidearm-roster-list-item-photo-number')?.innerText ?? '';
+     const url = el.querySelector('.sidearm-roster-player-name a')?.href ?? '';
      return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
@@ -1242,16 +1262,17 @@ def shotscraper_data_tables(team: Dict, season: str) -> List[Dict]:
     javascript_code = """
     Array.from(document.querySelectorAll('#DataTables_Table_0 tbody tr'), el => {
      const id = '';
-     const name = el.querySelector(".sidearm-table-player-name").innerText;
-     const year = el.querySelector(".roster_class").innerText;
-     const height = el.querySelector(".height").innerText;
-     const position = el.querySelector(".rp_position_short").innerText;
-     const hometown = el.querySelector(".hometownhighschool").innerText.split('/')[0].trim();
-     let hs = el.querySelector(".hometownhighschool").innerText.split('/');
+     const name = el.querySelector(".sidearm-table-player-name")?.innerText ?? '';
+     const year = el.querySelector(".roster_class")?.innerText ?? '';
+     const height = el.querySelector(".height")?.innerText ?? '';
+     const position = el.querySelector(".rp_position_short")?.innerText ?? '';
+     const hometownhs = el.querySelector(".hometownhighschool")?.innerText ?? '';
+     const hometown = hometownhs.split('/')[0].trim();
+     const hs = hometownhs.split('/');
      const high_school = hs[1] ? hs[1].trim() : '';
-     const previous_school = el.querySelector(".player_previous_school").innerText;
-     const jersey = el.querySelector(".roster_jerseynum").innerText;
-     const url = el.querySelector(".sidearm-table-player-name a")['href'];
+     const previous_school = el.querySelector(".player_previous_school")?.innerText ?? '';
+     const jersey = el.querySelector(".roster_jerseynum")?.innerText ?? '';
+     const url = el.querySelector(".sidearm-table-player-name a")?.href ?? '';
      return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
@@ -1264,18 +1285,17 @@ def shotscraper_card(team: Dict, season: str) -> List[Dict]:
     javascript_code = """
     Array.from(document.querySelectorAll('.s-person-card__content'), el => {
         const id = '';
-        const name = el.querySelector('.s-person-details__personal-single-line').innerText;
-        const year = el.querySelectorAll('.s-person-details__bio-stats-item')[1].innerText.replace('Academic Year\\n ','');
-        let ht = el.querySelectorAll('.s-person-details__bio-stats-item')[2];
-        const height = ht ? ht.innerText.replace('Height\\n ','') : '';
-        const position = el.querySelectorAll('.s-person-details__bio-stats-item')[0].innerText.replace('Position\\n','');
-        const hometown = el.querySelectorAll('.s-person-card__content__person__location-item')[0].innerText.replace('Hometown\\n','');
-        let hs_el = el.querySelectorAll('.s-person-card__content__person__location-item')[1];
-        const high_school = hs_el ? hs_el.innerText.replace('Last School\\n','') : '';
+        const bioStats = el.querySelectorAll('.s-person-details__bio-stats-item');
+        const locationItems = el.querySelectorAll('.s-person-card__content__person__location-item');
+        const name = el.querySelector('.s-person-details__personal-single-line')?.innerText ?? '';
+        const year = bioStats[1]?.innerText?.replace('Academic Year\\n ','') ?? '';
+        const height = bioStats[2]?.innerText?.replace('Height\\n ','') ?? '';
+        const position = bioStats[0]?.innerText?.replace('Position\\n','') ?? '';
+        const hometown = locationItems[0]?.innerText?.replace('Hometown\\n','') ?? '';
+        const high_school = locationItems[1]?.innerText?.replace('Last School\\n','') ?? '';
         const previous_school = '';
-        let j = el.querySelector('.s-stamp__text');
-        const jersey = j ? j.innerText : '';
-        const url = el.querySelector('a')['href']
+        const jersey = el.querySelector('.s-stamp__text')?.innerText ?? '';
+        const url = el.querySelector('a')?.href ?? '';
         return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
@@ -1288,16 +1308,16 @@ def shotscraper_table(team: Dict, season: str) -> List[Dict]:
     javascript_code = """
     Array.from(document.querySelectorAll('.s-table-body__row'), el => {
         const id = '';
-        const name = el.querySelectorAll('td')[1].innerText;
-        const year = el.querySelectorAll('td')[2].innerText;
-        const height = el.querySelectorAll('td')[3].innerText;
-        const position = el.querySelectorAll('td')[4].innerText;
-        const hometown = el.querySelectorAll('td')[5].innerText;
-        hs_el = el.querySelectorAll('td')[6];
-        const high_school = hs_el ? hs_el.innerText : '';
-        const previous_school = el.querySelectorAll('td')[7].innerText;
-        const jersey = el.querySelectorAll('td')[0].innerText;
-        const url = el.querySelectorAll('td')[1].querySelector('a')['href']
+        const cells = el.querySelectorAll('td');
+        const name = cells[1]?.innerText ?? '';
+        const year = cells[2]?.innerText ?? '';
+        const height = cells[3]?.innerText ?? '';
+        const position = cells[4]?.innerText ?? '';
+        const hometown = cells[5]?.innerText ?? '';
+        const high_school = cells[6]?.innerText ?? '';
+        const previous_school = cells[7]?.innerText ?? '';
+        const jersey = cells[0]?.innerText ?? '';
+        const url = cells[1]?.querySelector('a')?.href ?? '';
         return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
@@ -1310,18 +1330,15 @@ def shotscraper_roster_player(team: Dict, season: str) -> List[Dict]:
     javascript_code = """
     Array.from(document.querySelectorAll('.sidearm-roster-player-container'), el => {
         const id = '';
-        const name = el.querySelector('h3').innerText;
-        const year = el.querySelector('.sidearm-roster-player-academic-year').innerText;
-        const height = el.querySelector('.sidearm-roster-player-height').innerText;
-        const position = el.querySelector('.sidearm-roster-player-position-long-short').innerText.trim();
-        const hometown = el.querySelector('.sidearm-roster-player-hometown').innerText;
-        hs_el = el.querySelector('.sidearm-roster-player-highschool');
-        const high_school = hs_el ? hs_el.innerText : '';
-        ps_el = el.querySelector('.sidearm-roster-player-previous-school');
-        const previous_school = ps_el ? ps_el.innerText : '';
-        j = el.querySelector('.sidearm-roster-player-jersey-number');
-        const jersey = j ? j.innerText : '';
-        const url = el.querySelector('a')['href']
+        const name = el.querySelector('h3')?.innerText ?? '';
+        const year = el.querySelector('.sidearm-roster-player-academic-year')?.innerText ?? '';
+        const height = el.querySelector('.sidearm-roster-player-height')?.innerText ?? '';
+        const position = el.querySelector('.sidearm-roster-player-position-long-short')?.innerText?.trim() ?? '';
+        const hometown = el.querySelector('.sidearm-roster-player-hometown')?.innerText ?? '';
+        const high_school = el.querySelector('.sidearm-roster-player-highschool')?.innerText ?? '';
+        const previous_school = el.querySelector('.sidearm-roster-player-previous-school')?.innerText ?? '';
+        const jersey = el.querySelector('.sidearm-roster-player-jersey-number')?.innerText ?? '';
+        const url = el.querySelector('a')?.href ?? '';
         return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """

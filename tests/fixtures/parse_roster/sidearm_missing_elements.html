@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<body>
+<ul>
+  <!-- Player with no anchor, no position div, no jersey, no highschool:
+       every optional field is absent. The parser must not raise. -->
+  <li class="sidearm-roster-player" data-player-id="2001">
+    <h3>Chris Nolan</h3>
+    <span class="sidearm-roster-player-hometown">Reno, Nevada</span>
+  </li>
+  <!-- Player with an empty position div (position should become N/A). -->
+  <li class="sidearm-roster-player" data-player-id="2002">
+    <a aria-label="Dana Lee - #7" href="/roster/dana-lee/2002">Dana Lee</a>
+    <h3>Dana Lee</h3>
+    <span class="sidearm-roster-player-height">5-11</span>
+    <span class="sidearm-roster-player-hometown">Miami, Florida</span>
+    <div class="sidearm-roster-player-position"></div>
+  </li>
+</ul>
+</body>
+</html>
