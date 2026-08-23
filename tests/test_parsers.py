@@ -137,6 +137,23 @@ def test_parse_clemson_cards():
     assert ozoh.high_school == "Homewood-Flossmoor HS"
 
 
+def test_parse_nebraska_table():
+    team = {"ncaa_id": 463, "team": "Nebraska", "url": "https://huskers.com/sports/volleyball"}
+    html = load("parse_nebraska", "huskers.html")
+    roster = rosters.parse_nebraska_table(html, team, "2025-26")
+
+    assert len(roster) == 16
+    assert all(p.name and p.jersey for p in roster)
+
+    reilly = next(p for p in roster if p.name == "Bergen Reilly")
+    assert reilly.jersey == "2"
+    assert reilly.position == "Setter"
+    assert reilly.year == "Senior"
+    assert reilly.height == "6-1"
+    assert reilly.hometown == "Sioux Falls, S.D."
+    assert reilly.high_school == "O'Gorman"
+
+
 @pytest.mark.parametrize("town,expected", [
     ("Austin, Texas / Westlake HS", ("Austin, Texas", "Westlake HS")),
     ("Denver, Colorado", ("Denver, Colorado", None)),

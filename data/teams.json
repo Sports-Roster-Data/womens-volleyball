@@ -266,7 +266,7 @@
     "url": "https://huskers.com/sports/volleyball",
     "ncaa_id": 463,
     "stats_name": "Nebraska",
-    "scraper": "js_render"
+    "scraper": "nebraska"
   },
   {
     "team": "Illinois",

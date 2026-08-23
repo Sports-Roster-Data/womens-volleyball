@@ -910,6 +910,57 @@ def parse_iowa_state_cards(html: BeautifulSoup, team: Dict, season: str) -> List
     return roster
 
 
+def parse_nebraska_table(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
+    """Parse Nebraska's rendered roster-table layout.
+
+    Player rows are identified by a jersey-number cell (staff rows have none),
+    and each field has its own dedicated `roster-table-cell--*` class. Split
+    from fetching so it is testable offline against a saved rendered fixture.
+    """
+    def cell(row, cls):
+        el = row.select_one('.' + cls)
+        return el.get_text(' ', strip=True) if el else ''
+
+    er = tldextract.extract(team['url'])
+    roster = []
+    for row in html.select('table tbody tr'):
+        jersey = cell(row, 'roster-table-cell--jersey-number-label')
+        if not jersey:
+            continue
+        anchor = row.select_one('a[href*="/roster/"]')
+        href = anchor.get('href', '') if anchor else ''
+        url = href if href.startswith('http') else f"https://www.{er.domain}.{er.suffix}{href}"
+        roster.append(Player(
+            team_id=team['ncaa_id'],
+            team=team['team'],
+            player_id=None,
+            name=cell(row, 'roster-table-cell--full-name') or cell(row, 'table__roster-name'),
+            year=cell(row, 'roster-table-cell--class-level-name'),
+            hometown=cell(row, 'roster-table-cell--hometown'),
+            high_school=cell(row, 'roster-table-cell--high-school') or None,
+            previous_school=None,
+            height=cell(row, 'roster-table-cell--height-text'),
+            position=cell(row, 'roster-table-cell--player-position-name'),
+            jersey=jersey,
+            url=url,
+            season=season,
+        ))
+    return roster
+
+
+def fetch_and_parse_nebraska(team: Dict, season: str) -> List[Player]:
+    """Nebraska - modern Nuxt site (roster-table layout).
+
+    Client-rendered and only served at `/roster` (a `/roster/{season}` path
+    404s), so it is fetched through shot-scraper and parsed from the render.
+    """
+    url = team['url'].rstrip('/') + '/roster'
+    html = fetch_url_with_javascript(url)
+    if html is None:
+        return []
+    return parse_nebraska_table(html, team, season)
+
+
 def fetch_and_parse_iowa_state(team: Dict, season: str) -> List[Player]:
     """Iowa State - modern Nuxt site (s-person-card layout).
 
@@ -1145,6 +1196,7 @@ SCRAPERS = {
     'miami': fetch_and_parse_miami,
     'clemson': fetch_and_parse_clemson,
     'iowa_state': fetch_and_parse_iowa_state,
+    'nebraska': fetch_and_parse_nebraska,
     'vandy': fetch_and_parse_vandy,
     'airforce': _with_fallback(shotscraper_airforce),
     'shotscraper_table': _with_fallback(shotscraper_table),
