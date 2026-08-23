@@ -1149,18 +1149,54 @@ def _scrape_byu(team: Dict, season: str) -> List:
     return fetch_and_parse_byu(team, byu_season)
 
 
+# Candidate parsers tried, in order, against rendered HTML. Each looks for a
+# distinct marker (Sidearm <li>, s-person-card, roster-card, roster-table, then
+# the table parsers), so a page matches at most one. Ordered most- to
+# least-specific to avoid a generic table parser claiming a card page. All are
+# normalized to (html, team, season) -> List[Player].
+RENDERED_PARSERS = [
+    ('sidearm', lambda html, team, season: parse_roster(team, html, season)),
+    ('s-person-card', parse_iowa_state_cards),
+    ('roster-card', parse_clemson_cards),
+    ('roster-table', parse_nebraska_table),
+    ('sidearm-table', lambda html, team, season: parse_roster_wbkb(team, html, season)),
+    ('baskbl-table', lambda html, team, season: parse_roster_baskbl(team, html, season)),
+]
+
+
+def _best_parse(html: BeautifulSoup, team: Dict, season: str) -> List:
+    """Return the first non-empty roster any candidate parser produces."""
+    for name, parser in RENDERED_PARSERS:
+        try:
+            roster = parser(html, team, season)
+        except Exception as e:
+            logger.debug(f"{team['team']}: parser {name} raised {e}")
+            continue
+        if roster:
+            logger.info(f"{team['team']}: matched layout '{name}' ({len(roster)} players)")
+            return roster
+    return []
+
+
 def _scrape_js_render(team: Dict, season: str) -> List:
-    """Render the page with JavaScript, then parse by URL pattern."""
-    url = f"{team['url']}/roster/{season}"
-    html = fetch_url_with_javascript(url)
-    if html:
-        if 'wvball' in team['url']:
-            return parse_roster_wbkb(team, html, season)
-        elif 'w-baskbl' in team['url']:
-            return parse_roster_baskbl(team, html, season)
-        return parse_roster(team, html, season)
-    # If JS rendering fails, try a standard fetch as a fallback.
-    logger.info(f"JS rendering failed for {team['team']}, trying standard fetch as fallback")
+    """Render the page and self-heal across roster layouts.
+
+    Sidearm sites have migrated to several client-rendered layouts, some of
+    which only serve the current roster at `/roster` (a `/roster/{season}` path
+    404s). So try both URL forms, and against each render try every known
+    layout parser, using the first that finds players.
+    """
+    base = team['url'].rstrip('/')
+    for path in (f"/roster/{season}", "/roster"):
+        html = fetch_url_with_javascript(base + path)
+        if html is None:
+            continue
+        roster = _best_parse(html, team, season)
+        if roster:
+            return roster
+
+    # If JS rendering yielded nothing, fall back to a plain fetch + parse.
+    logger.info(f"JS rendering found no players for {team['team']}, trying standard fetch")
     if 'wvball' in team['url']:
         html = fetch_wbkb_roster(team['url'], season)
         return parse_roster_wbkb(team, html, season) if html else []
