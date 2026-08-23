@@ -10,7 +10,7 @@
   {
     "team": "Texas A&M",
     "twitter": "aggiewbb",
-    "url": "https://12thman.com/sports/womens-volleyball",
+    "url": "https://12thman.com/sports/volleyball",
     "ncaa_id": 697,
     "stats_name": "Texas A&M",
     "scraper": "js_render"
@@ -255,7 +255,7 @@
   {
     "team": "Virginia Tech",
     "twitter": "hokieswbb",
-    "url": "https://hokiesports.com/sports/womens-volleyball",
+    "url": "https://hokiesports.com/sports/volleyball",
     "ncaa_id": 742,
     "stats_name": "Virginia Tech",
     "scraper": "js_render"
@@ -469,7 +469,7 @@
   {
     "team": "Purdue",
     "twitter": "purduewbb",
-    "url": "https://purduesports.com/sports/womens-volleyball",
+    "url": "https://purduesports.com/sports/volleyball",
     "ncaa_id": 559,
     "stats_name": "Purdue",
     "scraper": "shotscraper_card"

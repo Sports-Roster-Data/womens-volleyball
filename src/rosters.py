@@ -1136,17 +1136,21 @@ def parse_s_table_row(html: BeautifulSoup, team: Dict, season: str) -> List[Play
 
 
 def parse_roster_card_item(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
-    """Parse Nuxt roster-card-item layout (Penn State, …).
+    """Parse Nuxt roster-card-item layout (Penn State, Stanford, Virginia Tech, …).
 
-    Rendered DOM: <div class="roster-card-item"> with profile-field-content pairs
-    for Height, Class, Hometown, High School.
+    Two variants share the div.roster-card-item container:
+    - Penn State: roster-card-jersey-number (with '#'), roster-card-item__title-link,
+      div.roster-card-item__position, profile-field-content spans
+    - Stanford/VT: roster-card-item__jersey-number (no '#'), roster-card-item__title,
+      strong.roster-card-item__position, roster-player-card-profile-field divs
     """
     er = tldextract.extract(team['url'])
     players = []
     for card in html.find_all('div', class_='roster-card-item'):
-        a = card.find('a', class_='roster-card-item__title-link')
+        # Name: Penn State uses __title-link, Stanford uses __title (also matches __title--link)
+        a = (card.find('a', class_='roster-card-item__title-link') or
+             card.find('a', class_='roster-card-item__title'))
         if not a:
-            # Fallback: name from image alt
             img = card.find('img')
             name = img.get('alt', '').strip() if img else ''
         else:
@@ -1159,18 +1163,34 @@ def parse_roster_card_item(html: BeautifulSoup, team: Dict, season: str) -> List
         url = f"https://www.{er.domain}.{er.suffix}{href}" if href else ''
         player_id = href.rstrip('/').split('/')[-1] if href else None
 
-        jersey_el = card.find('strong', class_='roster-card-jersey-number')
+        # Jersey: Penn State has roster-card-jersey-number (with '#'); Stanford has roster-card-item__jersey-number
+        jersey_el = (card.find('strong', class_='roster-card-jersey-number') or
+                     card.find('strong', class_='roster-card-item__jersey-number'))
         jersey = jersey_el.get_text(strip=True).lstrip('#') if jersey_el else ''
 
-        pos_el = card.find('div', class_='roster-card-item__position')
+        # Position: Penn State uses div, Stanford/VT use strong
+        pos_el = (card.find('div', class_='roster-card-item__position') or
+                  card.find('strong', class_='roster-card-item__position'))
         position = pos_el.get_text(strip=True) if pos_el else 'N/A'
 
         fields: Dict[str, str] = {}
+        # Penn State: span.profile-field-content with strong title + span value
         for field in card.find_all('span', class_='profile-field-content'):
             title_el = field.find('strong', class_='profile-field-content__title')
             value_el = field.find('span', class_='profile-field-content__value')
             if title_el and value_el:
                 fields[title_el.get_text(strip=True)] = value_el.get_text(strip=True)
+        # Stanford/VT: div.roster-player-card-profile-field with strong label + span value
+        for field in card.find_all('div', class_='roster-player-card-profile-field'):
+            label_el = field.find('strong', class_='roster-player-card-profile-field__label')
+            value_el = field.find('span', class_='roster-player-card-profile-field__value')
+            if label_el and value_el:
+                fields[label_el.get_text(strip=True)] = value_el.get_text(strip=True)
+        # Stanford: unlabeled height in the "basic" profile fields section
+        if 'Height' not in fields:
+            basic = card.find('span', class_='roster-player-card-profile-field__value--basic')
+            if basic:
+                fields['Height'] = basic.get_text(strip=True)
 
         players.append(Player(
             team_id=team['ncaa_id'],
@@ -1386,9 +1406,9 @@ def _scrape_js_render(team: Dict, season: str) -> List:
     layout parser, using the first that finds players.
     """
     base = team['url'].rstrip('/')
-    # Some Nuxt sites use /roster/season/{year} (e.g. Penn State, Nebraska).
+    # Some Nuxt sites use /roster/season/{year} or /roster/{year} (e.g. Penn State, Nebraska, Wyoming).
     year = season.split('-')[0]
-    for path in (f"/roster/{season}", f"/roster/season/{year}", "/roster"):
+    for path in (f"/roster/{season}", f"/roster/season/{year}", f"/roster/{year}", "/roster"):
         html = fetch_url_with_javascript(base + path)
         if html is None:
             continue
