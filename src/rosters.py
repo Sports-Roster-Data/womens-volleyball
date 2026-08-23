@@ -189,7 +189,7 @@ def fetch_url_with_javascript(url: str, timeout: int = 45) -> Optional[Beautiful
     try:
         # Use shot-scraper via uv to render JavaScript
         result = subprocess.run(
-            ['uv', 'run', 'shot-scraper', 'html', url, '--wait', '3000'],
+            ['uv', 'run', 'shot-scraper', 'html', url, '--wait', '5000'],
             capture_output=True,
             text=True,
             timeout=timeout
@@ -1135,6 +1135,61 @@ def parse_s_table_row(html: BeautifulSoup, team: Dict, season: str) -> List[Play
     return players
 
 
+def parse_roster_card_item(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
+    """Parse Nuxt roster-card-item layout (Penn State, …).
+
+    Rendered DOM: <div class="roster-card-item"> with profile-field-content pairs
+    for Height, Class, Hometown, High School.
+    """
+    er = tldextract.extract(team['url'])
+    players = []
+    for card in html.find_all('div', class_='roster-card-item'):
+        a = card.find('a', class_='roster-card-item__title-link')
+        if not a:
+            # Fallback: name from image alt
+            img = card.find('img')
+            name = img.get('alt', '').strip() if img else ''
+        else:
+            name = a.get_text(strip=True)
+        if not name:
+            continue
+
+        href_el = card.find('a', class_='roster-card-item__image-wrapper') or card.find('a', href=True)
+        href = href_el.get('href', '') if href_el else ''
+        url = f"https://www.{er.domain}.{er.suffix}{href}" if href else ''
+        player_id = href.rstrip('/').split('/')[-1] if href else None
+
+        jersey_el = card.find('strong', class_='roster-card-jersey-number')
+        jersey = jersey_el.get_text(strip=True).lstrip('#') if jersey_el else ''
+
+        pos_el = card.find('div', class_='roster-card-item__position')
+        position = pos_el.get_text(strip=True) if pos_el else 'N/A'
+
+        fields: Dict[str, str] = {}
+        for field in card.find_all('span', class_='profile-field-content'):
+            title_el = field.find('strong', class_='profile-field-content__title')
+            value_el = field.find('span', class_='profile-field-content__value')
+            if title_el and value_el:
+                fields[title_el.get_text(strip=True)] = value_el.get_text(strip=True)
+
+        players.append(Player(
+            team_id=team['ncaa_id'],
+            team=team['team'],
+            player_id=player_id,
+            name=name,
+            year=fields.get('Class', ''),
+            hometown=fields.get('Hometown', ''),
+            high_school=fields.get('High School') or None,
+            previous_school=fields.get('Previous School', ''),
+            height=fields.get('Height', ''),
+            position=position,
+            jersey=jersey,
+            url=url,
+            season=season,
+        ))
+    return players
+
+
 # ============================================================================
 # SHOT-SCRAPER HELPERS
 # ============================================================================
@@ -1302,6 +1357,7 @@ RENDERED_PARSERS = [
     ('roster-table', parse_nebraska_table),
     ('roster-list-item', parse_roster_list_item),
     ('s-table-row', parse_s_table_row),
+    ('roster-card-item', parse_roster_card_item),
     ('sidearm-table', lambda html, team, season: parse_roster_wbkb(team, html, season)),
     ('baskbl-table', lambda html, team, season: parse_roster_baskbl(team, html, season)),
 ]
@@ -1330,7 +1386,9 @@ def _scrape_js_render(team: Dict, season: str) -> List:
     layout parser, using the first that finds players.
     """
     base = team['url'].rstrip('/')
-    for path in (f"/roster/{season}", "/roster"):
+    # Some Nuxt sites use /roster/season/{year} (e.g. Penn State, Nebraska).
+    year = season.split('-')[0]
+    for path in (f"/roster/{season}", f"/roster/season/{year}", "/roster"):
         html = fetch_url_with_javascript(base + path)
         if html is None:
             continue

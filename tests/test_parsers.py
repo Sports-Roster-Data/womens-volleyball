@@ -204,6 +204,33 @@ def test_parse_s_table_row():
     assert ginder.previous_school == ""
 
 
+def test_parse_roster_card_item():
+    # Nuxt roster-card-item layout: Penn State, …
+    team = {"ncaa_id": 531, "team": "Penn State", "url": "https://gopsusports.com/sports/womens-volleyball"}
+    html = load("parse_roster_card_item", "roster_card_item.html")
+    roster = rosters.parse_roster_card_item(html, team, "2026-27")
+
+    assert len(roster) == 2
+    assert all(p.name for p in roster)
+
+    northern = next(p for p in roster if p.name == "Kendall Northern")
+    assert northern.jersey == "1"
+    assert northern.position == "MB"
+    assert northern.year == "Freshman"
+    assert northern.height == "6′1″"
+    assert northern.hometown == "Cincinnati, Ohio"
+    assert northern.high_school == "Summit Country Day School"
+    assert northern.previous_school == ""
+    assert "kendall-northern" in northern.url
+
+    falduto = next(p for p in roster if p.name == "Ava Falduto")
+    assert falduto.jersey == "2"
+    assert falduto.position == "L/DS"
+    assert falduto.year == "Junior"
+    assert falduto.previous_school == "Ohio State"
+    assert "ava-falduto" in falduto.url
+
+
 @pytest.mark.parametrize("town,expected", [
     ("Austin, Texas / Westlake HS", ("Austin, Texas", "Westlake HS")),
     ("Denver, Colorado", ("Denver, Colorado", None)),
