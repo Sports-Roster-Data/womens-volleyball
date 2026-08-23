@@ -1362,99 +1362,89 @@ def standard_fallback(team: Dict, season: str) -> List:
     return parse_roster(team, html, season)
 
 
-def scrape_team_roster(team: Dict, season: str) -> List:
-    """
-    Route a single team to the appropriate scraper and return its roster.
+def _with_fallback(scraper):
+    """Wrap a shot-scraper so an empty result falls back to a standard fetch."""
+    def run(team, season):
+        return scraper(team, season) or standard_fallback(team, season)
+    return run
 
-    Returns a list of Player objects or dicts (both are accepted downstream).
-    Skip decisions (teams to omit entirely) are handled by the caller.
-    """
-    # SPECIFIC FUNCTION SCRAPERS (must come first!)
-    # BYU - Custom season format (e.g. "2025-26" -> "2025-2026").
-    # Use a local variable so we don't corrupt `season`.
-    if team['ncaa_id'] == 77:
-        byu_season = f"{season[0:5]}20{season[5:7]}"
-        return fetch_and_parse_byu(team, byu_season)
-    # San Jose State
-    elif team['ncaa_id'] == 630:
-        return fetch_and_parse_sanjose(team, season)
-    # Miami
-    elif team['ncaa_id'] == 415:
-        return fetch_and_parse_miami(team, season)
-    # Clemson
-    elif team['ncaa_id'] == 147:
-        return fetch_and_parse_clemson(team, season)
-    # Iowa State
-    elif team['ncaa_id'] == 311:
-        return fetch_and_parse_iowa_state(team, season)
-    # Vanderbilt
-    elif team['ncaa_id'] == 736:
-        return fetch_and_parse_vandy(team, season)
-    # Air Force
-    elif team['ncaa_id'] == 721:
-        roster = shotscraper_airforce(team, season)
-        return roster or standard_fallback(team, season)
 
-    # SHOTSCRAPER WITH JAVASCRIPT EXTRACTION
-    elif team['ncaa_id'] in [5, 308, 497, 554]:
-        roster = shotscraper_table(team, season)
-        return roster or standard_fallback(team, season)
-    elif team['ncaa_id'] in [9, 71, 83, 96, 99, 156, 173, 180, 191, 234, 249, 257,
-                             301, 306, 367, 387, 392, 400, 404, 418, 428, 441, 490,
-                             521, 522, 559, 574, 603, 635, 664, 671, 676, 688, 690,
-                             700, 719, 749, 758]:
-        roster = shotscraper_card(team, season)
-        return roster or standard_fallback(team, season)
-    elif team['ncaa_id'] in [51, 248, 731]:
-        roster = shotscraper_list_item(team, season)
-        return roster or standard_fallback(team, season)
-    elif team['ncaa_id'] in [37, 52, 175, 316, 487]:
-        roster = shotscraper_roster_player(team, season)
-        return roster or standard_fallback(team, season)
-    elif team['ncaa_id'] == 556:
-        roster = shotscraper_data_tables(team, season)
-        return roster or standard_fallback(team, season)
+def _scrape_byu(team: Dict, season: str) -> List:
+    # BYU uses a four-digit end year (e.g. "2025-26" -> "2025-2026").
+    byu_season = f"{season[0:5]}20{season[5:7]}"
+    return fetch_and_parse_byu(team, byu_season)
 
-    # TEAMS NEEDING JAVASCRIPT RENDERING (fetch HTML then parse with BeautifulSoup)
-    elif TeamConfig.requires_javascript(team['ncaa_id']):
-        url = f"{team['url']}/roster/{season}"
-        html = fetch_url_with_javascript(url)
-        if html:
-            if 'wvball' in team['url']:
-                return parse_roster_wbkb(team, html, season)
-            elif 'w-baskbl' in team['url']:
-                return parse_roster_baskbl(team, html, season)
-            else:
-                return parse_roster(team, html, season)
-        # If JS rendering fails, try standard fetching as fallback
-        logger.info(f"JS rendering failed for {team['team']}, trying standard fetch as fallback")
+
+def _scrape_js_render(team: Dict, season: str) -> List:
+    """Render the page with JavaScript, then parse by URL pattern."""
+    url = f"{team['url']}/roster/{season}"
+    html = fetch_url_with_javascript(url)
+    if html:
         if 'wvball' in team['url']:
-            html = fetch_wbkb_roster(team['url'], season)
-            return parse_roster_wbkb(team, html, season) if html else []
+            return parse_roster_wbkb(team, html, season)
         elif 'w-baskbl' in team['url']:
-            html = fetch_baskbl_roster(team['url'], season)
             return parse_roster_baskbl(team, html, season)
-        else:
-            html = fetch_roster(team['url'], season)
-            return parse_roster(team, html, season)
+        return parse_roster(team, html, season)
+    # If JS rendering fails, try a standard fetch as a fallback.
+    logger.info(f"JS rendering failed for {team['team']}, trying standard fetch as fallback")
+    if 'wvball' in team['url']:
+        html = fetch_wbkb_roster(team['url'], season)
+        return parse_roster_wbkb(team, html, season) if html else []
+    elif 'w-baskbl' in team['url']:
+        html = fetch_baskbl_roster(team['url'], season)
+        return parse_roster_baskbl(team, html, season)
+    html = fetch_roster(team['url'], season)
+    return parse_roster(team, html, season)
 
-    # URL-BASED ROUTING
-    elif 'wvball' in team['url']:
-        # wvball teams can use either standard Sidearm or table format.
+
+def _scrape_default(team: Dict, season: str) -> List:
+    """URL-pattern routing for teams without an explicit `scraper` strategy."""
+    if 'wvball' in team['url']:
+        # wvball teams use either standard Sidearm or a table format.
         html = fetch_roster(team['url'], season)
         if not html:
             return []
-        # Try standard Sidearm parser first (most common); fall back to table.
         roster = parse_roster(team, html, season)
         return roster if roster else parse_roster_wbkb(team, html, season)
     elif 'w-baskbl' in team['url']:
         html = fetch_baskbl_roster(team['url'], season)
         return parse_roster_baskbl(team, html, season)
+    # DEFAULT: standard roster page.
+    html = fetch_roster(team['url'], season)
+    return parse_roster(team, html, season)
 
-    # DEFAULT: Standard roster page
-    else:
-        html = fetch_roster(team['url'], season)
-        return parse_roster(team, html, season)
+
+# Maps a team's optional `scraper` key (in data/teams.json) to its handler.
+# Teams with no `scraper` key fall through to _scrape_default (URL routing).
+SCRAPERS = {
+    'byu': _scrape_byu,
+    'sanjose': fetch_and_parse_sanjose,
+    'miami': fetch_and_parse_miami,
+    'clemson': fetch_and_parse_clemson,
+    'iowa_state': fetch_and_parse_iowa_state,
+    'vandy': fetch_and_parse_vandy,
+    'airforce': _with_fallback(shotscraper_airforce),
+    'shotscraper_table': _with_fallback(shotscraper_table),
+    'shotscraper_card': _with_fallback(shotscraper_card),
+    'shotscraper_list_item': _with_fallback(shotscraper_list_item),
+    'shotscraper_roster_player': _with_fallback(shotscraper_roster_player),
+    'shotscraper_data_tables': _with_fallback(shotscraper_data_tables),
+    'js_render': _scrape_js_render,
+}
+
+
+def scrape_team_roster(team: Dict, season: str) -> List:
+    """
+    Route a single team to the appropriate scraper and return its roster.
+
+    The strategy comes from the team's `scraper` key in data/teams.json;
+    teams without one use URL-pattern routing. Returns a list of Player
+    objects or dicts (both are accepted downstream). Skip decisions are
+    handled by the caller.
+    """
+    strategy = team.get('scraper')
+    handler = SCRAPERS.get(strategy, _scrape_default)
+    return handler(team, season)
 
 
 def player_to_row(player, season: str) -> List:
@@ -1524,12 +1514,12 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
 
     for team in teams_with_urls:
         try:
-            if team['ncaa_id'] == 26107 and season == '2021-22':
+            # Skip decisions come from data/teams.json config keys.
+            if team.get('scraper') == 'skip':
+                continue
+            if season in team.get('skip_seasons', []):
                 continue
             if 'roster' in team:
-                continue
-            # Skip specific teams
-            if team['ncaa_id'] == 532:
                 continue
 
             logger.info(f"Processing {team['team']}")
