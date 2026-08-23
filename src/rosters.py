@@ -322,12 +322,20 @@ def shotscraper_caller(team: Dict, season: str, url: str, javascript_code: str) 
         ], timeout=60)
         parsed_data = json.loads(result)
 
+        seen_urls: set = set()
+        deduped = []
         for player in parsed_data:
             player['team_id'] = team['ncaa_id']
             player['team'] = team['team']
             player['season'] = season
+            url_key = player.get('url', '')
+            if url_key and url_key in seen_urls:
+                continue
+            if url_key:
+                seen_urls.add(url_key)
+            deduped.append(player)
 
-        return parsed_data
+        return deduped
     except subprocess.TimeoutExpired:
         logger.error(f"shot-scraper timeout for {team.get('team', 'unknown')}")
         return []
@@ -1006,6 +1014,123 @@ def shotscraper_airforce(team: Dict, season: str) -> List[Dict]:
     return shotscraper_caller(team, season, url, javascript_code)
 
 
+def parse_roster_list_item(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
+    """Parse Nuxt roster-list-item layout (Iowa, Notre Dame, Missouri, Northwestern, …).
+
+    Rendered DOM: <li class="roster-list-item"> with nested profile-field spans.
+    """
+    er = tldextract.extract(team['url'])
+    players = []
+    seen_urls: set = set()
+    for li in html.find_all('li', class_='roster-list-item'):
+        a_title = li.find('a', class_='roster-list-item__title')
+        if not a_title:
+            continue
+        name = a_title.get_text(strip=True)
+        if not name:
+            continue
+        href = a_title.get('href', '')
+        url = f"https://www.{er.domain}.{er.suffix}{href}"
+        if url in seen_urls:
+            continue
+        seen_urls.add(url)
+        player_id = href.rstrip('/').split('/')[-1] if href else None
+
+        jersey_el = li.find('strong', class_='roster-list-item__jersey-number')
+        jersey = jersey_el.get_text(strip=True) if jersey_el else ''
+
+        year_el = li.find('strong', class_='roster-player-list-profile-field--class-level')
+        year = year_el.get_text(strip=True) if year_el else ''
+
+        height_el = li.find('span', class_='roster-player-list-profile-field--height')
+        if height_el:
+            inner = height_el.find('span')
+            height = inner.get_text(strip=True) if inner else height_el.get_text(strip=True)
+        else:
+            height = ''
+
+        pos_el = li.find('strong', class_='roster-player-list-profile-field--position')
+        position = pos_el.get_text(strip=True) if pos_el else 'N/A'
+
+        ht_el = li.find('span', class_='roster-player-list-profile-field--hometown')
+        hometown = ht_el.get_text(strip=True) if ht_el else ''
+
+        hs_el = li.find('span', class_='roster-player-list-profile-field--high-school')
+        high_school = hs_el.get_text(strip=True) if hs_el else None
+
+        ps_el = li.find('span', class_='roster-player-list-profile-field--previous-school')
+        previous_school = ps_el.get_text(strip=True) if ps_el else ''
+
+        players.append(Player(
+            team_id=team['ncaa_id'],
+            team=team['team'],
+            player_id=player_id,
+            name=name,
+            year=year,
+            hometown=hometown,
+            high_school=high_school,
+            previous_school=previous_school,
+            height=height,
+            position=position,
+            jersey=jersey,
+            url=url,
+            season=season,
+        ))
+    return players
+
+
+def parse_s_table_row(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
+    """Parse Nuxt s-table-body__row layout (Arizona, Mississippi State, Rutgers, Toledo, …).
+
+    Rendered DOM: <tr class="s-table-body__row"> with fixed column order:
+    photo | jersey | name | position | height | year | hometown | hs | prev_school
+    """
+    er = tldextract.extract(team['url'])
+    players = []
+    for row in html.find_all('tr', class_='s-table-body__row'):
+        cells = row.find_all('td')
+        if len(cells) < 5:
+            continue
+        jersey = cells[1].get_text(strip=True) if len(cells) > 1 else ''
+        if not jersey.isdigit():
+            continue  # skip header / staff rows
+        name_cell = cells[2] if len(cells) > 2 else None
+        if not name_cell:
+            continue
+        a = name_cell.find('a')
+        name = a.get_text(strip=True) if a else name_cell.get_text(strip=True)
+        if not name:
+            continue
+        href = a.get('href', '') if a else ''
+        url = f"https://www.{er.domain}.{er.suffix}{href}" if href else ''
+        player_id = href.rstrip('/').split('/')[-1] if href else None
+
+        position = cells[3].get_text(strip=True) if len(cells) > 3 else 'N/A'
+        height = cells[4].get_text(strip=True) if len(cells) > 4 else ''
+        year = cells[5].get_text(strip=True) if len(cells) > 5 else ''
+        hometown = cells[6].get_text(strip=True) if len(cells) > 6 else ''
+        hs_text = cells[7].get_text(strip=True) if len(cells) > 7 else ''
+        high_school = hs_text if hs_text else None
+        previous_school = cells[8].get_text(strip=True) if len(cells) > 8 else ''
+
+        players.append(Player(
+            team_id=team['ncaa_id'],
+            team=team['team'],
+            player_id=player_id,
+            name=name,
+            year=year,
+            hometown=hometown,
+            high_school=high_school,
+            previous_school=previous_school,
+            height=height,
+            position=position,
+            jersey=jersey,
+            url=url,
+            season=season,
+        ))
+    return players
+
+
 # ============================================================================
 # SHOT-SCRAPER HELPERS
 # ============================================================================
@@ -1027,8 +1152,10 @@ def shotscraper_list_item(team: Dict, season: str) -> List[Dict]:
      return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
-    url = f"{team['url']}/roster/{season}"
-    return shotscraper_caller(team, season, url, javascript_code)
+    result = shotscraper_caller(team, season, f"{team['url']}/roster/{season}", javascript_code)
+    if not result:
+        result = shotscraper_caller(team, season, f"{team['url']}/roster", javascript_code)
+    return result
 
 
 def shotscraper_data_tables(team: Dict, season: str) -> List[Dict]:
@@ -1050,8 +1177,10 @@ def shotscraper_data_tables(team: Dict, season: str) -> List[Dict]:
      return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
-    url = f"{team['url']}/roster/{season}"
-    return shotscraper_caller(team, season, url, javascript_code)
+    result = shotscraper_caller(team, season, f"{team['url']}/roster/{season}", javascript_code)
+    if not result:
+        result = shotscraper_caller(team, season, f"{team['url']}/roster", javascript_code)
+    return result
 
 
 def shotscraper_card(team: Dict, season: str) -> List[Dict]:
@@ -1068,13 +1197,17 @@ def shotscraper_card(team: Dict, season: str) -> List[Dict]:
         const hometown = locationItems[0]?.innerText?.replace('Hometown\\n','') ?? '';
         const high_school = locationItems[1]?.innerText?.replace('Last School\\n','') ?? '';
         const previous_school = '';
-        const jersey = el.querySelector('.s-stamp__text')?.innerText ?? '';
-        const url = el.querySelector('a')?.href ?? '';
+        const stampText = el.querySelector('.s-stamp__text')?.innerText ?? '';
+        const jersey = stampText.split('\\n').pop()?.trim() ?? stampText.trim();
+        const url = el.querySelector('a[href*="/roster/"]')?.href ?? el.querySelector('a')?.href ?? '';
+        if (!jersey || !/^\\d+$/.test(jersey)) return null;
         return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
-    })
+    }).filter(Boolean)
     """
-    url = f"{team['url']}/roster/{season}"
-    return shotscraper_caller(team, season, url, javascript_code)
+    result = shotscraper_caller(team, season, f"{team['url']}/roster/{season}", javascript_code)
+    if not result:
+        result = shotscraper_caller(team, season, f"{team['url']}/roster", javascript_code)
+    return result
 
 
 def shotscraper_table(team: Dict, season: str) -> List[Dict]:
@@ -1095,8 +1228,10 @@ def shotscraper_table(team: Dict, season: str) -> List[Dict]:
         return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
-    url = f"{team['url']}/roster/{season}"
-    return shotscraper_caller(team, season, url, javascript_code)
+    result = shotscraper_caller(team, season, f"{team['url']}/roster/{season}", javascript_code)
+    if not result:
+        result = shotscraper_caller(team, season, f"{team['url']}/roster", javascript_code)
+    return result
 
 
 def shotscraper_roster_player(team: Dict, season: str) -> List[Dict]:
@@ -1116,8 +1251,10 @@ def shotscraper_roster_player(team: Dict, season: str) -> List[Dict]:
         return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
-    url = f"{team['url']}/roster/{season}"
-    return shotscraper_caller(team, season, url, javascript_code)
+    result = shotscraper_caller(team, season, f"{team['url']}/roster/{season}", javascript_code)
+    if not result:
+        result = shotscraper_caller(team, season, f"{team['url']}/roster", javascript_code)
+    return result
 
 
 # ============================================================================
@@ -1159,6 +1296,8 @@ RENDERED_PARSERS = [
     ('s-person-card', parse_iowa_state_cards),
     ('roster-card', parse_clemson_cards),
     ('roster-table', parse_nebraska_table),
+    ('roster-list-item', parse_roster_list_item),
+    ('s-table-row', parse_s_table_row),
     ('sidearm-table', lambda html, team, season: parse_roster_wbkb(team, html, season)),
     ('baskbl-table', lambda html, team, season: parse_roster_baskbl(team, html, season)),
 ]
@@ -1207,6 +1346,12 @@ def _scrape_js_render(team: Dict, season: str) -> List:
     return parse_roster(team, html, season)
 
 
+def _is_nuxt_page(html: BeautifulSoup) -> bool:
+    """Return True when the static HTML is a client-rendered Nuxt app skeleton."""
+    raw = str(html)
+    return '__NUXT_DATA__' in raw or 'window.__NUXT__' in raw
+
+
 def _scrape_default(team: Dict, season: str) -> List:
     """URL-pattern routing for teams without an explicit `scraper` strategy."""
     if 'wvball' in team['url']:
@@ -1215,13 +1360,27 @@ def _scrape_default(team: Dict, season: str) -> List:
         if not html:
             return []
         roster = parse_roster(team, html, season)
-        return roster if roster else parse_roster_wbkb(team, html, season)
+        if roster:
+            return roster
+        roster = parse_roster_wbkb(team, html, season)
+        if roster:
+            return roster
+        if _is_nuxt_page(html):
+            return _scrape_js_render(team, season)
+        return []
     elif 'w-baskbl' in team['url']:
         html = fetch_baskbl_roster(team['url'], season)
         return parse_roster_baskbl(team, html, season)
     # DEFAULT: standard roster page.
     html = fetch_roster(team['url'], season)
-    return parse_roster(team, html, season)
+    if not html:
+        return []
+    roster = parse_roster(team, html, season)
+    if roster:
+        return roster
+    if _is_nuxt_page(html):
+        return _scrape_js_render(team, season)
+    return []
 
 
 # Maps a team's optional `scraper` key (in data/teams.json) to its handler.

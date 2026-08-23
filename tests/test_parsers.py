@@ -154,6 +154,56 @@ def test_parse_nebraska_table():
     assert reilly.high_school == "O'Gorman"
 
 
+def test_parse_roster_list_item():
+    # Nuxt roster-list-item layout: Iowa, Notre Dame, Missouri, Northwestern, …
+    team = {"ncaa_id": 312, "team": "Iowa", "url": "https://hawkeyesports.com/sports/wvball"}
+    html = load("parse_iowa_roster_list", "roster_list_item.html")
+    roster = rosters.parse_roster_list_item(html, team, "2026-27")
+
+    assert len(roster) == 2
+    assert all(p.name for p in roster)
+
+    berent = next(p for p in roster if p.name == "Allison Berent")
+    assert berent.jersey == "0"
+    assert berent.position == "L"
+    assert berent.year == "4th"
+    assert berent.hometown == "Rochester Hills, Mich."
+    assert berent.high_school == "Notre Dame Prep"
+    assert berent.previous_school == "Alabama"
+    assert berent.url.endswith("/sports/wvball/roster/player/allison-berent")
+
+    young = next(p for p in roster if p.name == "Peyton Young")
+    assert young.jersey == "1"
+    assert young.position == "MH"
+    assert young.high_school == "Hoffman Estates"
+    assert young.previous_school == ""
+
+
+def test_parse_s_table_row():
+    # Nuxt s-table-body__row layout: Arizona, Mississippi State, Rutgers, Toledo, …
+    team = {"ncaa_id": 29, "team": "Arizona", "url": "https://arizonawildcats.com/sports/womens-volleyball"}
+    html = load("parse_s_table_row", "s_table.html")
+    roster = rosters.parse_s_table_row(html, team, "2026-27")
+
+    # Staff row (non-numeric jersey) is filtered out
+    assert len(roster) == 2
+    assert all(p.name and p.jersey for p in roster)
+
+    siapani = next(p for p in roster if p.name == "Maria Olga Siapani")
+    assert siapani.jersey == "1"
+    assert siapani.position == "S"
+    assert siapani.year == "Jr."
+    assert siapani.hometown == "Limassol, Cyprus"
+    assert siapani.high_school == "Grammar School of Limassol"
+    assert siapani.previous_school == "UAlbany"
+    assert siapani.url.endswith("/sports/womens-volleyball/roster/maria-olga-siapani/19423")
+
+    ginder = next(p for p in roster if p.name == "Brenna Ginder")
+    assert ginder.jersey == "5"
+    assert ginder.high_school == "Central High School"
+    assert ginder.previous_school == ""
+
+
 @pytest.mark.parametrize("town,expected", [
     ("Austin, Texas / Westlake HS", ("Austin, Texas", "Westlake HS")),
     ("Denver, Colorado", ("Denver, Colorado", None)),
