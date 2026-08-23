@@ -1,7 +1,7 @@
 [project]
 name = "womens-volleyball"
 version = "0.1.0"
-description = "Add your description here"
+description = "Scraper and cleaned dataset for NCAA women's volleyball rosters"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
