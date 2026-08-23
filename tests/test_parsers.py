@@ -86,6 +86,25 @@ def test_parse_roster_baskbl_basic():
     assert roster[1].high_school is None
 
 
+def test_parse_iowa_state_cards():
+    team = {"ncaa_id": 311, "team": "Iowa State", "url": "https://cyclones.com/sports/womens-volleyball"}
+    html = load("parse_iowa_state", "cyclones.html")
+    roster = rosters.parse_iowa_state_cards(html, team, "2025-26")
+
+    # 50 rendered cards (card + list view, plus staff) -> 19 unique players.
+    assert len(roster) == 19
+    assert all(p.name for p in roster)          # no coach/empty cards leak in
+    assert all(p.jersey for p in roster)        # every player has a jersey stamp
+    assert len({p.url for p in roster}) == 19   # de-duplicated by URL
+
+    pam = next(p for p in roster if p.name == "Pam McCune")
+    assert pam.position == "MB"
+    assert pam.year == "Sr."
+    assert pam.jersey == "1"
+    assert pam.hometown == "Upper Marlboro, Md."
+    assert pam.high_school == "St. John's"
+
+
 @pytest.mark.parametrize("town,expected", [
     ("Austin, Texas / Westlake HS", ("Austin, Texas", "Westlake HS")),
     ("Denver, Colorado", ("Denver, Colorado", None)),

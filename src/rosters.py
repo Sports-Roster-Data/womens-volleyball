@@ -818,6 +818,71 @@ def fetch_and_parse_sanjose(team: Dict, season: str) -> List[Dict]:
     return shotscraper_caller(team, season, url, javascript_code)
 
 
+def parse_iowa_state_cards(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
+    """Parse Iowa State's rendered s-person-card roster.
+
+    Only player cards carry a jersey stamp, so coach/staff cards are skipped.
+    The page renders each player twice (card + list view), so players are
+    de-duplicated by URL. Split out from fetching so it is testable offline
+    against a saved rendered-HTML fixture.
+    """
+    def strip_label(node, label):
+        if node is None:
+            return ''
+        text = node.get_text(' ', strip=True)
+        return text[len(label):].strip() if text.startswith(label) else text
+
+    roster, seen = [], set()
+    for card in html.select('.s-person-card__content'):
+        jersey_el = card.select_one('.s-stamp__text')
+        if jersey_el is None:
+            continue
+        anchor = card.find('a')
+        url = anchor.get('href', '') if anchor else ''
+        if url and url in seen:
+            continue
+        seen.add(url)
+
+        bio = {}
+        for item in card.select('.s-person-details__bio-stats-item'):
+            text = item.get_text(' ', strip=True)
+            for label in ('Position', 'Academic Year', 'Height'):
+                if text.startswith(label):
+                    bio[label] = text[len(label):].strip()
+
+        name_el = card.select_one('.s-person-details__personal-single-line')
+        roster.append(Player(
+            team_id=team['ncaa_id'],
+            team=team['team'],
+            player_id=None,
+            name=name_el.get_text(strip=True) if name_el else '',
+            year=bio.get('Academic Year', ''),
+            hometown=strip_label(card.select_one('.s-person-card__content__person__location-item'), 'Hometown'),
+            high_school=strip_label(card.select_one('.s-person-card__content__person__high-school-item'), 'Last School'),
+            previous_school=None,
+            height=bio.get('Height', ''),
+            position=bio.get('Position', ''),
+            jersey=strip_label(jersey_el, 'Jersey Number'),
+            url=url,
+            season=season,
+        ))
+    return roster
+
+
+def fetch_and_parse_iowa_state(team: Dict, season: str) -> List[Player]:
+    """Iowa State - modern Nuxt site (s-person-card layout).
+
+    The site only serves the current roster at `/roster`; a `/roster/{season}`
+    path renders an unresolved template and 404s. The page is client-rendered,
+    so it is fetched through shot-scraper and parsed from the rendered HTML.
+    """
+    url = f"{team['url']}/roster"
+    html = fetch_url_with_javascript(url)
+    if html is None:
+        return []
+    return parse_iowa_state_cards(html, team, season)
+
+
 def shotscraper_airforce(team: Dict, season: str) -> List[Dict]:
     """Air Force - JavaScript rendered with s-person-card format"""
     javascript_code = """
@@ -1038,6 +1103,7 @@ SCRAPERS = {
     'sanjose': fetch_and_parse_sanjose,
     'miami': fetch_and_parse_miami,
     'clemson': fetch_and_parse_clemson,
+    'iowa_state': fetch_and_parse_iowa_state,
     'vandy': fetch_and_parse_vandy,
     'airforce': _with_fallback(shotscraper_airforce),
     'shotscraper_table': _with_fallback(shotscraper_table),
