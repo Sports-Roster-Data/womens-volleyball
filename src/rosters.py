@@ -12,6 +12,7 @@ Usage:
 import os
 import re
 import csv
+import time
 import json
 import argparse
 import logging
@@ -21,6 +22,8 @@ from dataclasses import dataclass, asdict
 from pathlib import Path
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 from requests_html import HTMLSession
 from bs4 import BeautifulSoup
 import tldextract
@@ -31,6 +34,28 @@ tldextract.extract = tldextract.TLDExtract(suffix_list_urls=None)
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+
+# Network settings shared by all requests-based fetchers.
+REQUEST_TIMEOUT = 15  # seconds
+RATE_LIMIT_SECONDS = 0.5  # polite delay between teams in a bulk run
+
+
+def _build_session() -> requests.Session:
+    """A requests session with retry/backoff on transient HTTP failures."""
+    session = requests.Session()
+    retry = Retry(
+        total=3,
+        backoff_factor=1,
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=frozenset(['GET']),
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount('http://', adapter)
+    session.mount('https://', adapter)
+    return session
+
+
+SESSION = _build_session()
 
 
 # ============================================================================
@@ -532,7 +557,7 @@ def fetch_url(url: str, headers: Optional[Dict] = None) -> requests.Response:
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
         }
 
-    r = requests.get(url, headers=headers)
+    r = SESSION.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
 
     # If we get 403, try curl as fallback
     if r.status_code == 403:
@@ -562,7 +587,7 @@ def fetch_wbkb_roster(base_url: str, season: str) -> Optional[BeautifulSoup]:
     headers = {
         "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
     }
-    r = requests.get(url, headers=headers)
+    r = SESSION.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
 
     # Try curl fallback on 403
     if r.status_code == 403:
@@ -588,7 +613,7 @@ def fetch_baskbl_roster(base_url: str, season: str) -> BeautifulSoup:
     headers = {
         "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
     }
-    r = requests.get(url, headers=headers)
+    r = SESSION.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
 
     # Try curl fallback on 403
     if r.status_code == 403:
@@ -599,7 +624,7 @@ def fetch_baskbl_roster(base_url: str, season: str) -> BeautifulSoup:
 
     if r.status_code == 404:
         url = base_url.replace('index', f"/{season}/roster")
-        r = requests.get(url, headers=headers)
+        r = SESSION.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
         # Try curl fallback on 403 for the retry URL too
         if r.status_code == 403:
             logger.warning(f"Got 403 for {url}, trying curl fallback")
@@ -967,6 +992,10 @@ def fetch_and_parse_clemson(team: Dict, season: str) -> List[Dict]:
     html = BeautifulSoup(r.text, features="html.parser")
     cols = [x.text for x in html.find_all('th') if x.text not in ['MAJOR']]
     cols = cols[0:-4]
+    unmapped = [c for c in cols if c not in HEADERS]
+    if unmapped:
+        logger.warning(f"Clemson: unmapped columns {unmapped}, skipping")
+        return []
     new_cols = [HEADERS[c] for c in cols]
     players = html.find('table').find_all('tr')[1:]
 
@@ -1304,6 +1333,153 @@ def shotscraper_roster_player(team: Dict, season: str) -> List[Dict]:
 # MAIN SCRAPING LOGIC
 # ============================================================================
 
+CSV_HEADER = ['ncaa_id', 'team', 'player_id', 'name', 'year', 'hometown',
+              'high_school', 'previous_school', 'height', 'position', 'jersey',
+              'url', 'season']
+
+
+def standard_fallback(team: Dict, season: str) -> List:
+    """Standard fetch + parse, used when a shot-scraper strategy returns nothing."""
+    logger.info(f"Shotscraper failed for {team['team']}, trying standard fetch")
+    html = fetch_roster(team['url'], season)
+    return parse_roster(team, html, season)
+
+
+def scrape_team_roster(team: Dict, season: str) -> List:
+    """
+    Route a single team to the appropriate scraper and return its roster.
+
+    Returns a list of Player objects or dicts (both are accepted downstream).
+    Skip decisions (teams to omit entirely) are handled by the caller.
+    """
+    # SPECIFIC FUNCTION SCRAPERS (must come first!)
+    # BYU - Custom season format (e.g. "2025-26" -> "2025-2026").
+    # Use a local variable so we don't corrupt `season`.
+    if team['ncaa_id'] == 77:
+        byu_season = f"{season[0:5]}20{season[5:7]}"
+        return fetch_and_parse_byu(team, byu_season)
+    # San Jose State
+    elif team['ncaa_id'] == 630:
+        return fetch_and_parse_sanjose(team, season)
+    # Miami
+    elif team['ncaa_id'] == 415:
+        return fetch_and_parse_miami(team, season)
+    # Clemson
+    elif team['ncaa_id'] == 147:
+        return fetch_and_parse_clemson(team, season)
+    # Iowa State
+    elif team['ncaa_id'] == 311:
+        return fetch_and_parse_iowa_state(team, season)
+    # Vanderbilt
+    elif team['ncaa_id'] == 736:
+        return fetch_and_parse_vandy(team, season)
+    # Air Force
+    elif team['ncaa_id'] == 721:
+        roster = shotscraper_airforce(team, season)
+        return roster or standard_fallback(team, season)
+
+    # SHOTSCRAPER WITH JAVASCRIPT EXTRACTION
+    elif team['ncaa_id'] in [5, 308, 497, 554]:
+        roster = shotscraper_table(team, season)
+        return roster or standard_fallback(team, season)
+    elif team['ncaa_id'] in [9, 71, 83, 96, 99, 156, 173, 180, 191, 234, 249, 257,
+                             301, 306, 367, 387, 392, 400, 404, 418, 428, 441, 490,
+                             521, 522, 559, 574, 603, 635, 664, 671, 676, 688, 690,
+                             700, 719, 749, 758]:
+        roster = shotscraper_card(team, season)
+        return roster or standard_fallback(team, season)
+    elif team['ncaa_id'] in [51, 248, 731]:
+        roster = shotscraper_list_item(team, season)
+        return roster or standard_fallback(team, season)
+    elif team['ncaa_id'] in [37, 52, 175, 316, 487]:
+        roster = shotscraper_roster_player(team, season)
+        return roster or standard_fallback(team, season)
+    elif team['ncaa_id'] == 556:
+        roster = shotscraper_data_tables(team, season)
+        return roster or standard_fallback(team, season)
+
+    # TEAMS NEEDING JAVASCRIPT RENDERING (fetch HTML then parse with BeautifulSoup)
+    elif TeamConfig.requires_javascript(team['ncaa_id']):
+        url = f"{team['url']}/roster/{season}"
+        html = fetch_url_with_javascript(url)
+        if html:
+            if 'wvball' in team['url']:
+                return parse_roster_wbkb(team, html, season)
+            elif 'w-baskbl' in team['url']:
+                return parse_roster_baskbl(team, html, season)
+            else:
+                return parse_roster(team, html, season)
+        # If JS rendering fails, try standard fetching as fallback
+        logger.info(f"JS rendering failed for {team['team']}, trying standard fetch as fallback")
+        if 'wvball' in team['url']:
+            html = fetch_wbkb_roster(team['url'], season)
+            return parse_roster_wbkb(team, html, season) if html else []
+        elif 'w-baskbl' in team['url']:
+            html = fetch_baskbl_roster(team['url'], season)
+            return parse_roster_baskbl(team, html, season)
+        else:
+            html = fetch_roster(team['url'], season)
+            return parse_roster(team, html, season)
+
+    # URL-BASED ROUTING
+    elif 'wvball' in team['url']:
+        # wvball teams can use either standard Sidearm or table format.
+        html = fetch_roster(team['url'], season)
+        if not html:
+            return []
+        # Try standard Sidearm parser first (most common); fall back to table.
+        roster = parse_roster(team, html, season)
+        return roster if roster else parse_roster_wbkb(team, html, season)
+    elif 'w-baskbl' in team['url']:
+        html = fetch_baskbl_roster(team['url'], season)
+        return parse_roster_baskbl(team, html, season)
+
+    # DEFAULT: Standard roster page
+    else:
+        html = fetch_roster(team['url'], season)
+        return parse_roster(team, html, season)
+
+
+def player_to_row(player, season: str) -> List:
+    """Build a CSV row from a Player object or a JS-scraper dict."""
+    if isinstance(player, Player):
+        d = player.to_dict()
+        return [d['team_id'], d['team'], d['player_id'], d['name'], d['year'],
+                d['hometown'], d['high_school'], d['previous_school'], d['height'],
+                d['position'], d['jersey'], d['url'], season]
+    return [player['team_id'], player['team'], player.get('id'), player['name'],
+            player['year'], player['hometown'], player['high_school'],
+            player['previous_school'], player['height'], player['position'],
+            player['jersey'], player['url'], season]
+
+
+def write_rosters_csv(path: str, new_rows: List[List], replace_ids: set = None):
+    """
+    Write roster rows to `path` atomically (temp file + rename), so a crash
+    mid-run never leaves a truncated CSV.
+
+    If `replace_ids` is None, the file is fully overwritten (full-season run).
+    Otherwise, existing rows are preserved except those whose ncaa_id is in
+    `replace_ids` (the teams we just re-scraped), and `new_rows` is appended.
+    """
+    existing_rows = []
+    if replace_ids is not None and os.path.exists(path):
+        with open(path, newline='') as f:
+            reader = csv.reader(f)
+            rows = list(reader)
+        # Drop the header if present, keep rows for teams we did not re-scrape.
+        data_rows = rows[1:] if rows and rows[0] == CSV_HEADER else rows
+        existing_rows = [r for r in data_rows if r and r[0] not in replace_ids]
+
+    tmp_path = f"{path}.tmp"
+    with open(tmp_path, 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(CSV_HEADER)
+        writer.writerows(existing_rows)
+        writer.writerows(new_rows)
+    os.replace(tmp_path, path)
+
+
 def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
     """
     Main function to scrape all rosters for a season
@@ -1324,167 +1500,46 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
         teams_json = [t for t in teams_json if t['ncaa_id'] in teams]
     teams_with_urls = [x for x in teams_json if "url" in x]
 
-    # Open CSV for writing
-    with open(f"data/rosters_{season}.csv", 'w') as output_file:
-        csv_file = csv.writer(output_file)
-        csv_file.writerow(['ncaa_id', 'team', 'player_id', 'name', 'year', 'hometown',
-                          'high_school', 'previous_school', 'height', 'position', 'jersey',
-                          'url', 'season'])
+    # Accumulate rows in memory, then write atomically at the end so an
+    # interrupted run can never truncate the season file.
+    new_rows = []
+    scraped_ids = set()
 
-        for team in teams_with_urls:
-            try:
-                if team['ncaa_id'] == 26107 and season == '2021-22':
-                    continue
-                if 'roster' in team:
-                    continue
-
-                logger.info(f"Processing {team['team']}")
-
-                # Route to appropriate scraper based on team ID
-                roster = []
-
-                # Skip specific teams
-                if team['ncaa_id'] == 532:
-                    continue
-
-                # SPECIFIC FUNCTION SCRAPERS (must come first!)
-                # BYU - Custom season format
-                if team['ncaa_id'] == 77:
-                    if str(season[0:1]):
-                        season = f"{str(season)[0:5]}20{str(season[5:7])}"
-                        roster = fetch_and_parse_byu(team, season)
-                # San Jose State
-                elif team['ncaa_id'] == 630:
-                    roster = fetch_and_parse_sanjose(team, season)
-                # Miami
-                elif team['ncaa_id'] == 415:
-                    roster = fetch_and_parse_miami(team, season)
-                # Clemson
-                elif team['ncaa_id'] == 147:
-                    roster = fetch_and_parse_clemson(team, season)
-                # Iowa State
-                elif team['ncaa_id'] == 311:
-                    roster = fetch_and_parse_iowa_state(team, season)
-                # Vanderbilt
-                elif team['ncaa_id'] == 736:
-                    roster = fetch_and_parse_vandy(team, season)
-                # Air Force
-                elif team['ncaa_id'] == 721:
-                    roster = shotscraper_airforce(team, season)
-                    if not roster:
-                        logger.info(f"Shotscraper failed for {team['team']}, trying standard fetch")
-                        html = fetch_roster(team['url'], season)
-                        roster = parse_roster(team, html, season)
-
-                # SHOTSCRAPER WITH JAVASCRIPT EXTRACTION
-                elif team['ncaa_id'] in [5, 308, 497, 554]:
-                    roster = shotscraper_table(team, season)
-                    if not roster:
-                        logger.info(f"Shotscraper failed for {team['team']}, trying standard fetch")
-                        html = fetch_roster(team['url'], season)
-                        roster = parse_roster(team, html, season)
-                elif team['ncaa_id'] in [9, 71, 83, 96, 99, 156, 173, 180, 191, 234, 249, 257,
-                                        301, 306, 367, 387, 392, 400, 404, 418, 428, 441, 490,
-                                        521, 522, 559, 574, 603, 635, 664, 671, 676, 688, 690,
-                                        700, 719, 749, 758]:
-                    roster = shotscraper_card(team, season)
-                    if not roster:
-                        logger.info(f"Shotscraper failed for {team['team']}, trying standard fetch")
-                        html = fetch_roster(team['url'], season)
-                        roster = parse_roster(team, html, season)
-                elif team['ncaa_id'] in [51, 248, 731]:
-                    roster = shotscraper_list_item(team, season)
-                    if not roster:
-                        logger.info(f"Shotscraper failed for {team['team']}, trying standard fetch")
-                        html = fetch_roster(team['url'], season)
-                        roster = parse_roster(team, html, season)
-                elif team['ncaa_id'] in [37, 52, 175, 316, 487]:
-                    roster = shotscraper_roster_player(team, season)
-                    if not roster:
-                        logger.info(f"Shotscraper failed for {team['team']}, trying standard fetch")
-                        html = fetch_roster(team['url'], season)
-                        roster = parse_roster(team, html, season)
-                elif team['ncaa_id'] == 556:
-                    roster = shotscraper_data_tables(team, season)
-                    if not roster:
-                        logger.info(f"Shotscraper failed for {team['team']}, trying standard fetch")
-                        html = fetch_roster(team['url'], season)
-                        roster = parse_roster(team, html, season)
-
-                # TEAMS NEEDING JAVASCRIPT RENDERING (fetch HTML then parse with BeautifulSoup)
-                elif TeamConfig.requires_javascript(team['ncaa_id']):
-                    url = f"{team['url']}/roster/{season}"
-                    html = fetch_url_with_javascript(url)
-                    if html:
-                        # Use appropriate parser based on URL pattern
-                        if 'wvball' in team['url']:
-                            roster = parse_roster_wbkb(team, html, season)
-                        elif 'w-baskbl' in team['url']:
-                            roster = parse_roster_baskbl(team, html, season)
-                        else:
-                            roster = parse_roster(team, html, season)
-                    else:
-                        # If JS rendering fails, try standard fetching as fallback
-                        logger.info(f"JS rendering failed for {team['team']}, trying standard fetch as fallback")
-                        if 'wvball' in team['url']:
-                            html = fetch_wbkb_roster(team['url'], season)
-                            if html:
-                                roster = parse_roster_wbkb(team, html, season)
-                        elif 'w-baskbl' in team['url']:
-                            html = fetch_baskbl_roster(team['url'], season)
-                            roster = parse_roster_baskbl(team, html, season)
-                        else:
-                            html = fetch_roster(team['url'], season)
-                            roster = parse_roster(team, html, season)
-
-                # URL-BASED ROUTING
-                elif 'wvball' in team['url']:
-                    # wvball teams can use either standard Sidearm or table format
-                    # Try standard fetch first
-                    html = fetch_roster(team['url'], season)
-                    roster = []
-                    if html:
-                        # Try standard Sidearm parser first (most common)
-                        roster = parse_roster(team, html, season)
-                        # If standard parser returns nothing, try wbkb table parser
-                        if not roster:
-                            roster = parse_roster_wbkb(team, html, season)
-                elif 'w-baskbl' in team['url']:
-                    html = fetch_baskbl_roster(team['url'], season)
-                    roster = parse_roster_baskbl(team, html, season)
-
-                # DEFAULT: Standard roster page
-                else:
-                    html = fetch_roster(team['url'], season)
-                    roster = parse_roster(team, html, season)
-
-                # Write to CSV
-                if len(roster) > 0:
-                    for player in roster:
-                        if isinstance(player, Player):
-                            player_dict = player.to_dict()
-                            csv_file.writerow([
-                                player_dict['team_id'], player_dict['team'], player_dict['player_id'],
-                                player_dict['name'], player_dict['year'], player_dict['hometown'],
-                                player_dict['high_school'], player_dict['previous_school'],
-                                player_dict['height'], player_dict['position'], player_dict['jersey'],
-                                player_dict['url'], season
-                            ])
-                        else:
-                            # Handle dict format from JS scrapers
-                            csv_file.writerow([
-                                player['team_id'], player['team'], player.get('id'),
-                                player['name'], player['year'], player['hometown'],
-                                player['high_school'], player['previous_school'],
-                                player['height'], player['position'], player['jersey'],
-                                player['url'], season
-                            ])
-                else:
-                    unparsed.append(team['ncaa_id'])
-            except Exception as e:
-                logger.error(f"Error processing {team['team']}: {e}")
-                skipped.append(team['ncaa_id'])
+    for team in teams_with_urls:
+        try:
+            if team['ncaa_id'] == 26107 and season == '2021-22':
                 continue
+            if 'roster' in team:
+                continue
+            # Skip specific teams
+            if team['ncaa_id'] == 532:
+                continue
+
+            logger.info(f"Processing {team['team']}")
+
+            roster = scrape_team_roster(team, season)
+
+            if roster:
+                scraped_ids.add(str(team['ncaa_id']))
+                for player in roster:
+                    new_rows.append(player_to_row(player, season))
+            else:
+                unparsed.append(team['ncaa_id'])
+            if RATE_LIMIT_SECONDS:
+                time.sleep(RATE_LIMIT_SECONDS)
+        except Exception as e:
+            logger.error(f"Error processing {team['team']}: {e}")
+            skipped.append(team['ncaa_id'])
+            continue
+
+    # A full-season run overwrites the file; a targeted `-teams` run merges the
+    # newly scraped teams into the existing file, replacing only those teams.
+    path = f"data/rosters_{season}.csv"
+    if teams:
+        write_rosters_csv(path, new_rows, replace_ids=scraped_ids)
+    else:
+        write_rosters_csv(path, new_rows, replace_ids=None)
+    logger.info(f"Wrote {len(new_rows)} rows to {path}")
 
     return [unparsed, skipped]
 
