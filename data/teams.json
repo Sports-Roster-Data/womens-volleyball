@@ -472,7 +472,8 @@
     "url": "https://purduesports.com/sports/volleyball",
     "ncaa_id": 559,
     "stats_name": "Purdue",
-    "scraper": "shotscraper_card"
+    "scraper": "js_render",
+    "wait_ms": 15000
   },
   {
     "team": "Arkansas",
@@ -667,7 +668,7 @@
     "url": "https://gowyo.com/sports/womens-volleyball",
     "ncaa_id": 811,
     "stats_name": "Wyoming",
-    "scraper": "js_render"
+    "scraper": "wyoming"
   },
   {
     "team": "Xavier",

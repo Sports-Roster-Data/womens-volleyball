@@ -172,7 +172,7 @@ class FieldExtractors:
 # SCRAPER UTILITIES
 # ============================================================================
 
-def fetch_url_with_javascript(url: str, timeout: int = 45) -> Optional[BeautifulSoup]:
+def fetch_url_with_javascript(url: str, timeout: int = 45, wait_ms: int = 5000) -> Optional[BeautifulSoup]:
     """
     Fetch URL with JavaScript rendering using shot-scraper
 
@@ -182,6 +182,7 @@ def fetch_url_with_javascript(url: str, timeout: int = 45) -> Optional[Beautiful
     Args:
         url: URL to fetch
         timeout: Timeout in seconds (default 45)
+        wait_ms: Milliseconds to wait after page load (default 5000)
 
     Returns:
         BeautifulSoup object or None if failed
@@ -189,7 +190,7 @@ def fetch_url_with_javascript(url: str, timeout: int = 45) -> Optional[Beautiful
     try:
         # Use shot-scraper via uv to render JavaScript
         result = subprocess.run(
-            ['uv', 'run', 'shot-scraper', 'html', url, '--wait', '5000'],
+            ['uv', 'run', 'shot-scraper', 'html', url, '--wait', str(wait_ms)],
             capture_output=True,
             text=True,
             timeout=timeout
@@ -743,6 +744,30 @@ def parse_clemson_cards(html: BeautifulSoup, team: Dict, season: str) -> List[Pl
             elif not high_school:
                 high_school = text
 
+        # Purdue / newer Nuxt variant: labeled profile fields and/or unlabeled
+        # "basic" spans (first=height, second=year) when info-items are absent.
+        if not height and not year:
+            for field in card.select('.roster-player-card-profile-field'):
+                label_el = field.select_one('.roster-player-card-profile-field__label')
+                value_el = field.select_one('.roster-player-card-profile-field__value')
+                if label_el and value_el:
+                    key = label_el.get_text(strip=True)
+                    val = value_el.get_text(strip=True)
+                    if key == 'Height':
+                        height = val
+                    elif key == 'Class':
+                        year = val
+                    elif key == 'Hometown':
+                        hometown = val
+                    elif key == 'High School':
+                        high_school = val
+            if not height:
+                basics = card.select('.roster-player-card-profile-field__value--basic')
+                if basics:
+                    height = basics[0].get_text(strip=True)
+                if not year and len(basics) > 1:
+                    year = basics[1].get_text(strip=True)
+
         name_el = card.select_one('.roster-card__title-link')
         pos_el = card.select_one('.roster-card__position')
         url = href if href.startswith('http') else f"https://www.{er.domain}.{er.suffix}{href}"
@@ -1210,6 +1235,66 @@ def parse_roster_card_item(html: BeautifulSoup, team: Dict, season: str) -> List
     return players
 
 
+def parse_roster_card_div(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
+    """Parse Nuxt div.roster-card layout (Purdue, …).
+
+    Distinct from parse_clemson_cards which targets li.roster-card. Here the
+    container is a <div> with basic unlabeled fields: first=height, second=year.
+    """
+    er = tldextract.extract(team['url'])
+    players = []
+    for card in html.find_all('div', class_='roster-card'):
+        a = card.find('a', class_='roster-card__title-link')
+        if not a:
+            img = card.find('img')
+            name = img.get('alt', '').strip() if img else ''
+        else:
+            name = a.get_text(strip=True)
+        if not name:
+            continue
+
+        href_el = card.find('a', class_='roster-card__image-wrapper') or card.find('a', href=True)
+        href = href_el.get('href', '') if href_el else ''
+        url = f"https://www.{er.domain}.{er.suffix}{href}" if href else ''
+        player_id = href.rstrip('/').split('/')[-1] if href else None
+
+        jersey_el = card.find('strong', class_='roster-card__jersey-number')
+        jersey = jersey_el.get_text(strip=True).lstrip('#') if jersey_el else ''
+        if jersey and not jersey.isdigit():
+            continue  # skip staff rows
+
+        pos_el = card.find('span', class_='roster-card__position')
+        position = pos_el.get_text(strip=True) if pos_el else 'N/A'
+
+        basics = card.find_all('span', class_='roster-player-card-profile-field__value--basic')
+        height = basics[0].get_text(strip=True) if len(basics) > 0 else ''
+        year = basics[1].get_text(strip=True) if len(basics) > 1 else ''
+
+        fields: Dict[str, str] = {}
+        for field in card.find_all('div', class_='roster-player-card-profile-field'):
+            label_el = field.find('strong', class_='roster-player-card-profile-field__label')
+            value_el = field.find('span', class_='roster-player-card-profile-field__value')
+            if label_el and value_el:
+                fields[label_el.get_text(strip=True)] = value_el.get_text(strip=True)
+
+        players.append(Player(
+            team_id=team['ncaa_id'],
+            team=team['team'],
+            player_id=player_id,
+            name=name,
+            year=fields.get('Class', year),
+            hometown=fields.get('Hometown', ''),
+            high_school=fields.get('High School') or None,
+            previous_school=fields.get('Previous School', ''),
+            height=fields.get('Height', height),
+            position=position,
+            jersey=jersey,
+            url=url,
+            season=season,
+        ))
+    return players
+
+
 # ============================================================================
 # SHOT-SCRAPER HELPERS
 # ============================================================================
@@ -1408,8 +1493,9 @@ def _scrape_js_render(team: Dict, season: str) -> List:
     base = team['url'].rstrip('/')
     # Some Nuxt sites use /roster/season/{year} or /roster/{year} (e.g. Penn State, Nebraska, Wyoming).
     year = season.split('-')[0]
+    wait_ms = team.get('wait_ms', 5000)
     for path in (f"/roster/{season}", f"/roster/season/{year}", f"/roster/{year}", "/roster"):
-        html = fetch_url_with_javascript(base + path)
+        html = fetch_url_with_javascript(base + path, wait_ms=wait_ms)
         if html is None:
             continue
         roster = _best_parse(html, team, season)
@@ -1467,6 +1553,85 @@ def _scrape_default(team: Dict, season: str) -> List:
 
 # Maps a team's optional `scraper` key (in data/teams.json) to its handler.
 # Teams with no `scraper` key fall through to _scrape_default (URL routing).
+def _scrape_wyoming(team: Dict, season: str) -> List[Player]:
+    """Wyoming is behind Incapsula WAF that blocks headless browsers.
+
+    Plain requests works fine. The roster list page embeds player names +
+    profile URLs in schema.org JSON-LD; individual profile pages hold jersey,
+    position, class, height, and hometown in dl/dt/dd pairs.
+    """
+    year = season.split('-')[0]
+    base = team['url'].rstrip('/')
+    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'}
+
+    try:
+        r = requests.get(f"{base}/roster/{year}", headers=headers, timeout=15)
+        r.raise_for_status()
+    except requests.RequestException as e:
+        logger.warning(f"Wyoming: roster list fetch failed: {e}")
+        return []
+
+    html = BeautifulSoup(r.text, 'html.parser')
+    player_links: List[tuple] = []
+    for s in html.find_all('script'):
+        t = s.get_text()
+        if '@type' not in t or 'Person' not in t:
+            continue
+        m = re.search(r'\{.*\}', t, re.DOTALL)
+        if not m:
+            continue
+        try:
+            data = json.loads(m.group(0))
+            for item in data.get('item', []):
+                if item.get('@type') == 'Person':
+                    name = item.get('name', '').strip()
+                    url = item.get('url', '').strip()
+                    if name and url:
+                        player_links.append((name, url))
+        except (json.JSONDecodeError, KeyError, AttributeError):
+            pass
+
+    players = []
+    for name, profile_url in player_links:
+        try:
+            pr = requests.get(profile_url, headers=headers, timeout=15)
+            pr.raise_for_status()
+        except requests.RequestException:
+            continue
+
+        phtml = BeautifulSoup(pr.text, 'html.parser')
+        jersey_el = phtml.find(class_='sidearm-roster-player-jersey-number')
+        jersey = jersey_el.get_text(strip=True).lstrip('#') if jersey_el else ''
+
+        fields: Dict[str, str] = {}
+        for dl in phtml.find_all('dl'):
+            for dt, dd in zip(dl.find_all('dt'), dl.find_all('dd')):
+                fields[dt.get_text(strip=True)] = dd.get_text(strip=True)
+
+        rp_id_m = re.search(r'rp_id=(\d+)', profile_url)
+        player_id = rp_id_m.group(1) if rp_id_m else None
+        hometown_raw = fields.get('Hometown', '')
+        hometown, high_school = split_town_high_school(hometown_raw)
+
+        players.append(Player(
+            team_id=team['ncaa_id'],
+            team=team['team'],
+            player_id=player_id,
+            name=name,
+            year=fields.get('Class', ''),
+            hometown=hometown,
+            high_school=fields.get('High School') or high_school or None,
+            previous_school=fields.get('Previous School', ''),
+            height=fields.get('Height', ''),
+            position=fields.get('Position', 'N/A'),
+            jersey=jersey,
+            url=profile_url,
+            season=season,
+        ))
+
+    return players
+
+
 SCRAPERS = {
     'byu': _scrape_byu,
     'sanjose': fetch_and_parse_sanjose,
@@ -1482,6 +1647,7 @@ SCRAPERS = {
     'shotscraper_roster_player': _with_fallback(shotscraper_roster_player),
     'shotscraper_data_tables': _with_fallback(shotscraper_data_tables),
     'js_render': _scrape_js_render,
+    'wyoming': _scrape_wyoming,
 }
 
 
