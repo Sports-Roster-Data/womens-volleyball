@@ -1004,14 +1004,18 @@ def shotscraper_airforce(team: Dict, season: str) -> List[Dict]:
         const high_school = locationItems[1]?.innerText?.split('\\n')?.[1] ?? '';
         
         const previous_school = '';
-        const jersey = jerseyEl?.innerText ?? '';
+        const stampText = jerseyEl?.innerText ?? '';
+        const jersey = stampText.split('\\n').pop()?.trim() ?? stampText.trim();
+        if (!jersey || !/^\\d+$/.test(jersey)) return null;
         const url = el.querySelector('a')?.href ?? '';
         
         return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     }).filter(item => item !== null)
     """
-    url = f"{team['url']}/roster/{season}"
-    return shotscraper_caller(team, season, url, javascript_code)
+    result = shotscraper_caller(team, season, f"{team['url']}/roster/{season}", javascript_code)
+    if not result:
+        result = shotscraper_caller(team, season, f"{team['url']}/roster", javascript_code)
+    return result
 
 
 def parse_roster_list_item(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
