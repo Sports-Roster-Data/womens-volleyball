@@ -58,6 +58,16 @@ def test_parse_roster_missing_elements_does_not_crash():
     assert dana.position == "N/A"  # empty position div
 
 
+def test_parse_roster_skips_nameless_card():
+    html = load("parse_roster", "sidearm_nameless_card.html")
+    # A card with no aria-label and no <h3> must be skipped, not raise and
+    # abort the whole team (regression: Yale, ncaa_id 813).
+    roster = rosters.parse_roster(TEAM, html, "2025-26")
+
+    assert len(roster) == 1
+    assert roster[0].name == "Real Player"
+
+
 def test_parse_roster_baskbl_basic():
     team = {"ncaa_id": 999, "team": "Test University", "url": "https://example.com/sports/w-baskbl"}
     html = load("parse_roster_baskbl", "table_basic.html")

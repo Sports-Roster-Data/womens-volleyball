@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<body>
+<ul>
+  <!-- A card whose anchor has no aria-label and there is no <h3>: it has no
+       usable name and must be skipped, not abort the whole team (Yale, 813). -->
+  <li class="sidearm-roster-player" data-player-id="3001">
+    <a href="/roster/nobody/3001">photo</a>
+    <span class="sidearm-roster-player-hometown">Nowhere, USA</span>
+  </li>
+  <!-- A normal card after the bad one still parses. -->
+  <li class="sidearm-roster-player" data-player-id="3002">
+    <a aria-label="Real Player - #3" href="/roster/real-player/3002">Real Player</a>
+    <h3>Real Player</h3>
+    <span class="sidearm-roster-player-hometown">Boise, Idaho</span>
+  </li>
+</ul>
+</body>
+</html>

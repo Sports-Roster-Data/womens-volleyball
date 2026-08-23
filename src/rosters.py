@@ -24,7 +24,6 @@ from pathlib import Path
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-from requests_html import HTMLSession
 from bs4 import BeautifulSoup
 import tldextract
 
@@ -653,18 +652,21 @@ def parse_roster(team: Dict, html: BeautifulSoup, season: str) -> List[Player]:
         except (IndexError, AttributeError):
             academic_year = None
 
-        # Extract name
-        try:
-            name = player.find('a')['aria-label'].split(' - ')[0].strip()
-        except (TypeError, KeyError, AttributeError):
-            name = player.find('h3').text.strip()
-        if 'Instagram' in name:
-            name = player.find('h3').text.strip()
+        # Extract name: prefer the anchor's aria-label, fall back to <h3>.
+        # A card with neither should be skipped, not abort the whole team.
+        h3 = player.find('h3')
+        h3_name = h3.text.strip() if h3 else ''
+        name = aria_label.split(' - ')[0].strip() if aria_label else ''
+        if not name or 'Instagram' in name:
+            name = h3_name
+        if not name:
+            logger.info(f"Skipping player card with no name for {team['team']}")
+            continue
 
         roster.append(Player(
             team_id=team['ncaa_id'],
             team=team['team'],
-            player_id=player['data-player-id'],
+            player_id=player.get('data-player-id'),
             name=name,
             year=academic_year,
             hometown=hometown,
@@ -693,6 +695,10 @@ def fetch_and_parse_clemson(team: Dict, season: str) -> List[Dict]:
     url = f"{team['url']}/roster/season/{season[0:4]}"
     r = fetch_url(url)
     html = BeautifulSoup(r.text, features="html.parser")
+    table = html.find('table')
+    if table is None:
+        logger.warning(f"Clemson: no roster table at {url}")
+        return []
     cols = [x.text for x in html.find_all('th') if x.text not in ['MAJOR']]
     cols = cols[0:-4]
     unmapped = [c for c in cols if c not in HEADERS]
@@ -700,7 +706,7 @@ def fetch_and_parse_clemson(team: Dict, season: str) -> List[Dict]:
         logger.warning(f"Clemson: unmapped columns {unmapped}, skipping")
         return []
     new_cols = [HEADERS[c] for c in cols]
-    players = html.find('table').find_all('tr')[1:]
+    players = table.find_all('tr')[1:]
 
     for player in players:
         raw_player_list = [x.text.strip() for x in player.find_all('td')][0:-2]
@@ -811,34 +817,6 @@ def fetch_and_parse_sanjose(team: Dict, season: str) -> List[Dict]:
     url = f"{team['url']}/roster/season/{season}"
     return shotscraper_caller(team, season, url, javascript_code)
 
-
-def fetch_and_parse_iowa_state(team: Dict, season: str) -> List[Player]:
-    """Iowa State - HTMLSession rendered"""
-    roster = []
-    er = tldextract.extract(team['url'])
-    url = f"{team['url']}/roster/{season}"
-    session = HTMLSession()
-    r = session.get(url)
-    r.html.render(timeout=30)
-    players = r.html.find('li.sidearm-roster-list-item')
-
-    for player in players:
-        roster.append(Player(
-            team_id=team['ncaa_id'],
-            team=team['team'],
-            player_id=None,
-            name=player.find('a', first=True).text,
-            year=player.find('span.sidearm-roster-list-item-year', first=True).text,
-            hometown=player.find('div.sidearm-roster-list-item-hometown', first=True).text,
-            high_school=player.find('span.sidearm-roster-list-item-highschool', first=True).text,
-            previous_school=None,
-            height=player.find('span.sidearm-roster-list-item-height', first=True).text,
-            position=player.find('span.sidearm-roster-list-item-position', first=True).text,
-            jersey=player.find('span')[0].text,
-            url=f"https://www.{er.domain}.{er.suffix}{player.find('a', first=True).attrs['href']}",
-            season=season
-        ))
-    return roster
 
 def shotscraper_airforce(team: Dict, season: str) -> List[Dict]:
     """Air Force - JavaScript rendered with s-person-card format"""
@@ -1060,7 +1038,6 @@ SCRAPERS = {
     'sanjose': fetch_and_parse_sanjose,
     'miami': fetch_and_parse_miami,
     'clemson': fetch_and_parse_clemson,
-    'iowa_state': fetch_and_parse_iowa_state,
     'vandy': fetch_and_parse_vandy,
     'airforce': _with_fallback(shotscraper_airforce),
     'shotscraper_table': _with_fallback(shotscraper_table),

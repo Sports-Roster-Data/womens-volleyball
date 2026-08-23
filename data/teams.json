@@ -175,7 +175,7 @@
     "url": "https://cyclones.com/sports/womens-volleyball",
     "ncaa_id": 311,
     "stats_name": "Iowa St.",
-    "scraper": "iowa_state"
+    "scraper": "js_render"
   },
   {
     "team": "Dayton",
