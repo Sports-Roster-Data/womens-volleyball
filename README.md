@@ -60,7 +60,17 @@ uv run python src/rosters.py -season 2025-26
 uv run python src/rosters.py -season 2025-26 -teams 721 5
 ```
 
-A full-season run overwrites `data/rosters_<season>.csv`. A targeted `-teams` run **merges** into the existing file, replacing only the teams it re-scraped and leaving every other team's rows intact. Both writes are atomic (temp file + rename), so an interrupted run never truncates the season file.
+```bash
+# Resume an interrupted run: teams already scraped successfully for this
+# season are served from cache instead of re-fetched
+uv run python src/rosters.py -season 2025-26 -resume
+```
+
+A full-season run overwrites `data/rosters_<season>.csv`. A targeted `-teams` run **merges** into the existing file, replacing only the teams it re-scraped and leaving every other team's rows intact. Both writes are atomic (temp file + rename), so an interrupted run never truncates the season file. Every successful team's rows are also cached to `data/cache/rosters_<season>/`; `-resume` reads that cache, and deleting the directory forces a full re-scrape. Failed and empty teams are never cached, so a resumed run still retries them.
+
+### Season verification
+
+Pages fetched at a current-roster URL (e.g. bare `/roster` on JavaScript-rendered sites, which a `/roster/<season>` path 404s on) are checked for year evidence in the page title and headings. A page that positively identifies a *different* season is rejected rather than scraped under the requested season's label; pages with no year evidence are accepted. This prevents, say, a November run for `2026-27` from silently recording a site's stale `2025-26` roster as current.
 
 ### How team routing works
 

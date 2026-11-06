@@ -122,6 +122,11 @@ class Player:
             if isinstance(v, str):
                 d[k] = FieldExtractors.clean_text(v)
 
+        # Move high-school-like values out of previous_school, then drop a
+        # previous_school that merely repeats high_school.
+        reclassify_high_school_from_previous(d)
+        dedupe_school_fields(d)
+
         return d
 
 
@@ -349,6 +354,134 @@ def shotscraper_caller(team: Dict, season: str, url: str, javascript_code: str) 
 
 
 # ============================================================================
+# SEASON VERIFICATION
+# ============================================================================
+
+class SeasonVerifier:
+    """Classify whether a fetched roster page identifies the requested season.
+
+    Ported from the field-hockey scraper. Sites that only serve a current-roster
+    page (bare ``/roster`` on the Nuxt layouts) would otherwise be scraped and
+    silently labeled with the requested season even when the page still shows
+    last season's team. This checks the page title and h1/h2/h3 headings for
+    year evidence.
+
+    A season string such as "2025-26" is identified by its starting year, so
+    "2025 Volleyball Roster" and the ranges "2025-26" / "2025-2026" all match;
+    the trailing year ("26" or "2026") alone never counts as evidence.
+    """
+
+    @staticmethod
+    def classify(html, season: str) -> str:
+        candidates = []
+        if html.title and html.title.get_text():
+            candidates.append(('title', html.title.get_text()))
+        for tag in html.find_all(['h1', 'h2', 'h3']):
+            candidates.append(('heading', tag.get_text()))
+        if not any(text.strip() for _kind, text in candidates):
+            return 'unknown'
+        try:
+            expected = int(season[0:4])
+        except (ValueError, TypeError):
+            return 'unknown'
+
+        def year_evidence(raw_text):
+            text = re.sub(r'[–—]', '-', FieldExtractors.clean_text(raw_text))
+            ranges = list(re.finditer(r'\b(20\d{2})\s*-\s*(20\d{2}|\d{2})\b', text))
+            if any(int(match.group(1)) == expected for match in ranges):
+                return 'matched'
+            # Remove academic-year ranges before looking for a standalone year,
+            # so the "26" in "2025-26" cannot satisfy a 2026-27 request.
+            without_ranges = re.sub(r'\b20\d{2}\s*-\s*(?:20\d{2}|\d{2})\b', ' ', text)
+            if re.search(rf'(?<!\d){expected}(?!\d)', without_ranges):
+                return 'matched'
+            if ranges or re.search(r'\b20\d{2}\b', without_ranges):
+                return 'mismatch'
+            return 'unknown'
+
+        # An explicitly dated page title outweighs unrelated schedule/nav
+        # headings carrying another year.
+        title_evidence = year_evidence(candidates[0][1]) if candidates[0][0] == 'title' else 'unknown'
+        if title_evidence in ('matched', 'mismatch'):
+            return title_evidence
+
+        if any(year_evidence(text) == 'matched' for _kind, text in candidates):
+            return 'matched'
+        if any(year_evidence(text) == 'mismatch' for _kind, text in candidates):
+            return 'mismatch'
+        return 'unknown'
+
+
+def verify_roster_season(html, season: str, team: Dict) -> bool:
+    """Reject a fetched roster page only when it positively shows another season.
+
+    A 'mismatch' page (e.g. a current-roster page still stamped "2025 Volleyball
+    Roster" while scraping "2026-27") returns False, so the caller moves on —
+    or reports the team unparsed — instead of scraping last season's players
+    under this season's label. Pages with 'unknown' verification are accepted:
+    unlike the field-hockey scraper, positive season evidence is not required,
+    because many volleyball roster pages carry no year in their headings and
+    the fetched URL is usually season-qualified already.
+    """
+    verdict = SeasonVerifier.classify(html, season)
+    if verdict != 'mismatch':
+        return True
+    logger.warning(f"Season mismatch for {team['team']}: page does not identify {season}")
+    return False
+
+
+# ============================================================================
+# SCHOOL-FIELD HYGIENE
+# ============================================================================
+
+# A school-name marker that (unambiguously enough) identifies a high school.
+# Ambiguous bare names and generic colleges are deliberately left alone.
+_HS_MARKER = (
+    r'(?:\bH\.?S\.?\b|High School|Secondary School|Grammar School|'
+    r'Preparatory School|Prep School|Academy|Gymnasium|\bSchool\b)'
+)
+
+
+def _school_value_key(value: str) -> str:
+    """Normalize a school value for duplicate comparison."""
+    return re.sub(r'\W+', '', FieldExtractors.clean_text(value).casefold(), flags=re.UNICODE)
+
+
+def reclassify_high_school_from_previous(row: Dict) -> bool:
+    """Move an explicitly high-school-like previous_school value to high_school.
+
+    Only fires when high_school is empty. Combined values keep the transfer
+    institution in previous_school, e.g. "Twin Valley HS / Liberty".
+    Ported from the field-hockey scraper.
+    """
+    if row.get('high_school') or not row.get('previous_school'):
+        return False
+    value = FieldExtractors.clean_text(row['previous_school'])
+    if not re.search(_HS_MARKER, value, re.IGNORECASE):
+        return False
+
+    slash = re.match(rf'^(.+?{_HS_MARKER})\s*/\s*(.+)$', value, re.IGNORECASE)
+    if slash:
+        row['high_school'] = FieldExtractors.clean_text(slash.group(1))
+        row['previous_school'] = FieldExtractors.clean_text(slash.group(2))
+        return True
+
+    row['high_school'] = value
+    row['previous_school'] = ''
+    return True
+
+
+def dedupe_school_fields(row: Dict) -> bool:
+    """Clear previous_school when it duplicates high_school."""
+    if not row.get('high_school') or not row.get('previous_school'):
+        return False
+    if _school_value_key(row['high_school']) != _school_value_key(row['previous_school']):
+        return False
+    row['previous_school'] = ''
+    return True
+
+
+# ============================================================================
 # PARSER FUNCTIONS
 # ============================================================================
 
@@ -407,36 +540,41 @@ def parse_roster_baskbl(team: Dict, html: BeautifulSoup, season: str) -> List[Pl
     raw_players = [x for x in tbody.find_all('tr')]
 
     for raw_player in raw_players:
-        [x.span.decompose() for x in raw_player.find_all('td') if x.find('span')]
-        raw_player_list = [x.text.strip() for x in raw_player.find_all('td')]
-        if len(raw_player_list) <= 4:
-            logger.info(f"Skipping short row {raw_player_list}")
-            continue
-        raw_player_list[4] = " ".join([x for x in raw_player_list[4].split()])
-        if len(raw_player_list) < len(new_cols):
-            name = " ".join([x.strip() for x in raw_player.find('a').text.replace("  ", "").strip().split()])
-            raw_player_list.insert(1, name)
-        player_dict = dict(zip(new_cols, raw_player_list))
-        if 'high_school' not in player_dict:
-            player_dict['town'], player_dict['high_school'] = split_town_high_school(player_dict.get('town'))
-        if 'previous_school' not in player_dict:
-            player_dict['previous_school'] = None
+        try:
+            [x.span.decompose() for x in raw_player.find_all('td') if x.find('span')]
+            raw_player_list = [x.text.strip() for x in raw_player.find_all('td')]
+            if len(raw_player_list) <= 4:
+                logger.info(f"Skipping short row {raw_player_list}")
+                continue
+            raw_player_list[4] = " ".join([x for x in raw_player_list[4].split()])
+            if len(raw_player_list) < len(new_cols):
+                name = " ".join([x.strip() for x in raw_player.find('a').text.replace("  ", "").strip().split()])
+                raw_player_list.insert(1, name)
+            player_dict = dict(zip(new_cols, raw_player_list))
+            if 'high_school' not in player_dict:
+                player_dict['town'], player_dict['high_school'] = split_town_high_school(player_dict.get('town'))
+            if 'previous_school' not in player_dict:
+                player_dict['previous_school'] = None
 
-        roster.append(Player(
-            team_id=team['ncaa_id'],
-            team=team['team'],
-            player_id=None,
-            name=player_dict['name'],
-            year=player_dict['academic_year'],
-            hometown=player_dict['town'],
-            high_school=player_dict['high_school'],
-            previous_school=player_dict['previous_school'],
-            height=player_dict['height'],
-            position=player_dict['position'],
-            jersey=player_dict['jersey'],
-            url=f"https://www.{er.domain}.{er.suffix}{raw_player.find('a')['href']}",
-            season=season
-        ))
+            roster.append(Player(
+                team_id=team['ncaa_id'],
+                team=team['team'],
+                player_id=None,
+                name=player_dict['name'],
+                year=player_dict['academic_year'],
+                hometown=player_dict['town'],
+                high_school=player_dict['high_school'],
+                previous_school=player_dict['previous_school'],
+                height=player_dict['height'],
+                position=player_dict['position'],
+                jersey=player_dict['jersey'],
+                url=f"https://www.{er.domain}.{er.suffix}{raw_player.find('a')['href']}",
+                season=season
+            ))
+        except Exception as e:
+            # One malformed row should skip itself, not abort the whole team.
+            logger.warning(f"Error parsing baskbl-style row for {team['team']}: {e}")
+            continue
     return roster
 
 
@@ -517,76 +655,81 @@ def parse_roster_wbkb(team: Dict, html: BeautifulSoup, season: str) -> List[Play
     ]
 
     for raw_player in raw_players:
-        [x.span.decompose() for x in raw_player.find_all('td') if x.find('span')]
-        raw_player_list = [x.text.strip() for x in raw_player.find_all('td')
-                          if x.text.replace('*', '').replace('(she/her/hers)', '').replace('she/her/hers', '').strip() != '']
+        try:
+            [x.span.decompose() for x in raw_player.find_all('td') if x.find('span')]
+            raw_player_list = [x.text.strip() for x in raw_player.find_all('td')
+                              if x.text.replace('*', '').replace('(she/her/hers)', '').replace('she/her/hers', '').strip() != '']
 
-        # Team-specific name insertion logic
-        if team['ncaa_id'] in [1340, 760, 510, 227]:
-            raw_name = raw_player.find('a').text.strip().replace("  ", " ").replace("\t", "").replace("\r", "").replace("\n", "").split(' ')
-            raw_player_list.insert(1, " ".join([x.strip() for x in raw_name if x != '']))
+            # Team-specific name insertion logic
+            if team['ncaa_id'] in [1340, 760, 510, 227]:
+                raw_name = raw_player.find('a').text.strip().replace("  ", " ").replace("\t", "").replace("\r", "").replace("\n", "").split(' ')
+                raw_player_list.insert(1, " ".join([x.strip() for x in raw_name if x != '']))
 
-        # Skip specific problematic entries
-        if team['ncaa_id'] == 73 and len(raw_player_list) > 0 and raw_player_list[0] == '43':
-            continue
+            # Skip specific problematic entries
+            if team['ncaa_id'] == 73 and len(raw_player_list) > 0 and raw_player_list[0] == '43':
+                continue
 
-        # Special handling for specific teams
-        if team['ncaa_id'] in [114, 1050, 1059, 1199, 22626, 24317, 30037, 341, 1315, 46, 641, 730, 75, 806, 817, 89, 145, 217, 247, 2713, 2798, 28594, 30002, 30225, 467, 567, 569, 137, 715, 779, 808, 8688, 379, 1461]:
-            raw_player_list = [x.text.strip() for x in raw_player.find_all('td')]
+            # Special handling for specific teams
+            if team['ncaa_id'] in [114, 1050, 1059, 1199, 22626, 24317, 30037, 341, 1315, 46, 641, 730, 75, 806, 817, 89, 145, 217, 247, 2713, 2798, 28594, 30002, 30225, 467, 567, 569, 137, 715, 779, 808, 8688, 379, 1461]:
+                raw_player_list = [x.text.strip() for x in raw_player.find_all('td')]
 
-        if len(raw_player_list) == 4:
-            raw_player_list = [None] + raw_player_list
-        elif len(raw_player_list) < 4:
-            logger.info(f"Skipping {raw_player_list}")
-            continue
+            if len(raw_player_list) == 4:
+                raw_player_list = [None] + raw_player_list
+            elif len(raw_player_list) < 4:
+                logger.info(f"Skipping {raw_player_list}")
+                continue
 
-        raw_player_list[4] = " ".join([x for x in raw_player_list[4].split()])
+            raw_player_list[4] = " ".join([x for x in raw_player_list[4].split()])
 
-        # Team-specific adjustments
-        if team['ncaa_id'] == 1036 and len(raw_player_list) == len(new_cols):
-            raw_player_list.pop()
-        if team['ncaa_id'] == 1096 and len(raw_player_list) >= len(new_cols):
-            raw_player_list.pop()
-        if team['ncaa_id'] == 142:
-            del raw_player_list[2]
-
-        # Filter out major column if present
-        if any(major in raw_player_list for major in major_list):
-            if team['ncaa_id'] == 186:
-                del raw_player_list[4]
-            else:
+            # Team-specific adjustments
+            if team['ncaa_id'] == 1036 and len(raw_player_list) == len(new_cols):
                 raw_player_list.pop()
+            if team['ncaa_id'] == 1096 and len(raw_player_list) >= len(new_cols):
+                raw_player_list.pop()
+            if team['ncaa_id'] == 142:
+                del raw_player_list[2]
 
-        if len(raw_player_list) < len(new_cols):
-            name = " ".join([x.strip() for x in raw_player.find('a').text.replace("  ", "").strip().split()])
-            raw_player_list.insert(1, name)
+            # Filter out major column if present
+            if any(major in raw_player_list for major in major_list):
+                if team['ncaa_id'] == 186:
+                    del raw_player_list[4]
+                else:
+                    raw_player_list.pop()
 
-        player_dict = dict(zip(new_cols, raw_player_list))
+            if len(raw_player_list) < len(new_cols):
+                name = " ".join([x.strip() for x in raw_player.find('a').text.replace("  ", "").strip().split()])
+                raw_player_list.insert(1, name)
 
-        if 'high_school' not in player_dict:
-            if team['ncaa_id'] == 2713:
-                player_dict['high_school'] = None
-            else:
-                player_dict['town'], player_dict['high_school'] = split_town_high_school(player_dict.get('town'))
+            player_dict = dict(zip(new_cols, raw_player_list))
 
-        if 'previous_school' not in player_dict:
-            player_dict['previous_school'] = None
+            if 'high_school' not in player_dict:
+                if team['ncaa_id'] == 2713:
+                    player_dict['high_school'] = None
+                else:
+                    player_dict['town'], player_dict['high_school'] = split_town_high_school(player_dict.get('town'))
 
-        roster.append(Player(
-            team_id=team['ncaa_id'],
-            team=team['team'],
-            player_id=None,
-            name=player_dict['name'],
-            year=player_dict['academic_year'],
-            hometown=player_dict['town'],
-            high_school=player_dict['high_school'],
-            previous_school=player_dict['previous_school'],
-            height=player_dict['height'],
-            position=player_dict['position'],
-            jersey=player_dict['jersey'],
-            url=f"https://www.{er.domain}.{er.suffix}{raw_player.find('a')['href']}",
-            season=season
-        ))
+            if 'previous_school' not in player_dict:
+                player_dict['previous_school'] = None
+
+            roster.append(Player(
+                team_id=team['ncaa_id'],
+                team=team['team'],
+                player_id=None,
+                name=player_dict['name'],
+                year=player_dict['academic_year'],
+                hometown=player_dict['town'],
+                high_school=player_dict['high_school'],
+                previous_school=player_dict['previous_school'],
+                height=player_dict['height'],
+                position=player_dict['position'],
+                jersey=player_dict['jersey'],
+                url=f"https://www.{er.domain}.{er.suffix}{raw_player.find('a')['href']}",
+                season=season
+            ))
+        except Exception as e:
+            # One malformed row should skip itself, not abort the whole team.
+            logger.warning(f"Error parsing wbkb-style row for {team['team']}: {e}")
+            continue
     return roster
 
 
@@ -800,6 +943,8 @@ def fetch_and_parse_clemson(team: Dict, season: str) -> List[Player]:
     html = fetch_url_with_javascript(url)
     if html is None:
         return []
+    if not verify_roster_season(html, season, team):
+        return []
     return parse_clemson_cards(html, team, season)
 
 
@@ -991,6 +1136,8 @@ def fetch_and_parse_nebraska(team: Dict, season: str) -> List[Player]:
     html = fetch_url_with_javascript(url)
     if html is None:
         return []
+    if not verify_roster_season(html, season, team):
+        return []
     return parse_nebraska_table(html, team, season)
 
 
@@ -1004,6 +1151,8 @@ def fetch_and_parse_iowa_state(team: Dict, season: str) -> List[Player]:
     url = f"{team['url']}/roster"
     html = fetch_url_with_javascript(url)
     if html is None:
+        return []
+    if not verify_roster_season(html, season, team):
         return []
     return parse_iowa_state_cards(html, team, season)
 
@@ -1434,6 +1583,8 @@ def standard_fallback(team: Dict, season: str) -> List:
     """Standard fetch + parse, used when a shot-scraper strategy returns nothing."""
     logger.info(f"Shotscraper failed for {team['team']}, trying standard fetch")
     html = fetch_roster(team['url'], season)
+    if html is None or not verify_roster_season(html, season, team):
+        return []
     return parse_roster(team, html, season)
 
 
@@ -1498,6 +1649,8 @@ def _scrape_js_render(team: Dict, season: str) -> List:
         html = fetch_url_with_javascript(base + path, wait_ms=wait_ms)
         if html is None:
             continue
+        if not verify_roster_season(html, season, team):
+            continue
         roster = _best_parse(html, team, season)
         if roster:
             return roster
@@ -1506,11 +1659,17 @@ def _scrape_js_render(team: Dict, season: str) -> List:
     logger.info(f"JS rendering found no players for {team['team']}, trying standard fetch")
     if 'wvball' in team['url']:
         html = fetch_wbkb_roster(team['url'], season)
-        return parse_roster_wbkb(team, html, season) if html else []
+        if html is None or not verify_roster_season(html, season, team):
+            return []
+        return parse_roster_wbkb(team, html, season)
     elif 'w-baskbl' in team['url']:
         html = fetch_baskbl_roster(team['url'], season)
+        if html is None or not verify_roster_season(html, season, team):
+            return []
         return parse_roster_baskbl(team, html, season)
     html = fetch_roster(team['url'], season)
+    if html is None or not verify_roster_season(html, season, team):
+        return []
     return parse_roster(team, html, season)
 
 
@@ -1527,6 +1686,8 @@ def _scrape_default(team: Dict, season: str) -> List:
         html = fetch_roster(team['url'], season)
         if not html:
             return []
+        if not verify_roster_season(html, season, team):
+            return []
         roster = parse_roster(team, html, season)
         if roster:
             return roster
@@ -1538,10 +1699,14 @@ def _scrape_default(team: Dict, season: str) -> List:
         return []
     elif 'w-baskbl' in team['url']:
         html = fetch_baskbl_roster(team['url'], season)
+        if html is None or not verify_roster_season(html, season, team):
+            return []
         return parse_roster_baskbl(team, html, season)
     # DEFAULT: standard roster page.
     html = fetch_roster(team['url'], season)
     if not html:
+        return []
+    if not verify_roster_season(html, season, team):
         return []
     roster = parse_roster(team, html, season)
     if roster:
@@ -1572,6 +1737,8 @@ def _scrape_wyoming(team: Dict, season: str) -> List[Player]:
         return []
 
     html = BeautifulSoup(r.text, 'html.parser')
+    if not verify_roster_season(html, season, team):
+        return []
     player_links: List[tuple] = []
     for s in html.find_all('script'):
         t = s.get_text()
@@ -1672,10 +1839,25 @@ def player_to_row(player, season: str) -> List:
         return [d['team_id'], d['team'], d['player_id'], d['name'], d['year'],
                 d['hometown'], d['high_school'], d['previous_school'], d['height'],
                 d['position'], d['jersey'], d['url'], season]
-    return [player['team_id'], player['team'], player.get('id'), player['name'],
-            player['year'], player['hometown'], player['high_school'],
-            player['previous_school'], player['height'], player['position'],
-            player['jersey'], player['url'], season]
+    # JS-scraper dicts get the same string cleaning and school-field hygiene
+    # that Player.to_dict applies.
+    d = {
+        'team_id': player['team_id'], 'team': player['team'],
+        'player_id': player.get('id'), 'name': player['name'],
+        'year': player['year'], 'hometown': player['hometown'],
+        'high_school': player.get('high_school') or '',
+        'previous_school': player.get('previous_school') or '',
+        'height': player['height'], 'position': player['position'],
+        'jersey': player['jersey'], 'url': player['url'],
+    }
+    for k, v in list(d.items()):
+        if isinstance(v, str):
+            d[k] = FieldExtractors.clean_text(v)
+    reclassify_high_school_from_previous(d)
+    dedupe_school_fields(d)
+    return [d['team_id'], d['team'], d['player_id'], d['name'], d['year'],
+            d['hometown'], d['high_school'], d['previous_school'], d['height'],
+            d['position'], d['jersey'], d['url'], season]
 
 
 def write_rosters_csv(path: str, new_rows: List[List], replace_ids: set = None):
@@ -1705,13 +1887,58 @@ def write_rosters_csv(path: str, new_rows: List[List], replace_ids: set = None):
     os.replace(tmp_path, path)
 
 
-def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
+# ============================================================================
+# PER-TEAM RESUME CACHE
+# ============================================================================
+
+def _cache_file_for(season: str, ncaa_id: Any) -> str:
+    """Per-team cache file holding that team's CSV rows for a season."""
+    return f"data/cache/rosters_{season}/{ncaa_id}.json"
+
+
+def _write_cached_rows(season: str, ncaa_id: Any, rows: List[List]) -> None:
+    """Atomically cache one team's CSV rows so an interrupted run can resume.
+
+    Only successful (non-empty) rosters are cached, so re-running with resume
+    still retries the teams that failed or parsed empty. Delete
+    ``data/cache/rosters_<season>/`` to force a full re-scrape.
+    """
+    path = _cache_file_for(season, ncaa_id)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    tmp_path = f"{path}.tmp"
+    try:
+        with open(tmp_path, 'w') as f:
+            json.dump({'ncaa_id': ncaa_id, 'season': season, 'rows': rows}, f)
+        os.replace(tmp_path, path)
+    except OSError as e:
+        logger.warning(f"Cache write failed for ncaa_id {ncaa_id}: {e}")
+
+
+def _read_cached_rows(season: str, ncaa_id: Any) -> Optional[List[List]]:
+    """Return a team's cached CSV rows, or None when absent/corrupt."""
+    path = _cache_file_for(season, ncaa_id)
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path) as f:
+            rows = json.load(f).get('rows')
+        if isinstance(rows, list) and rows:
+            return rows
+    except (json.JSONDecodeError, OSError) as e:
+        logger.warning(f"Cache read failed for ncaa_id {ncaa_id}: {e}")
+    return None
+
+
+def get_all_rosters(season: str, teams: List[int] = [], resume: bool = False) -> tuple:
     """
     Main function to scrape all rosters for a season
 
     Args:
         season: Season string (e.g., '2023-24')
         teams: Optional list of team IDs to scrape (if empty, scrapes all)
+        resume: When True, teams already scraped successfully for this season
+            (present in data/cache/rosters_<season>/) are served from cache
+            instead of being re-fetched
 
     Returns:
         Tuple of (unparsed_team_ids, skipped_team_ids)
@@ -1742,12 +1969,22 @@ def get_all_rosters(season: str, teams: List[int] = []) -> tuple:
 
             logger.info(f"Processing {team['team']}")
 
+            # Resume: serve teams with a settled cache instead of re-fetching.
+            if resume:
+                cached_rows = _read_cached_rows(season, team['ncaa_id'])
+                if cached_rows:
+                    logger.info(f"{team['team']}: serving {len(cached_rows)} players from cache")
+                    scraped_ids.add(str(team['ncaa_id']))
+                    new_rows.extend(cached_rows)
+                    continue
+
             roster = scrape_team_roster(team, season)
 
             if roster:
+                rows = [player_to_row(player, season) for player in roster]
                 scraped_ids.add(str(team['ncaa_id']))
-                for player in roster:
-                    new_rows.append(player_to_row(player, season))
+                new_rows.extend(rows)
+                _write_cached_rows(season, team['ncaa_id'], rows)
             else:
                 unparsed.append(team['ncaa_id'])
             if RATE_LIMIT_SECONDS:
@@ -1796,6 +2033,10 @@ Examples:
                        help='Base URL for a single team')
     parser.add_argument('-teams', nargs='+', type=int, dest='teams',
                        help='List of team IDs to scrape (space-separated)')
+    parser.add_argument('-resume', action='store_true', dest='resume',
+                       help='Reuse cached per-team results from a previous run '
+                            'of this season (data/cache/rosters_<season>/) instead '
+                            'of re-fetching teams that already succeeded')
 
     results = parser.parse_args()
 
@@ -1813,7 +2054,7 @@ Examples:
         logger.info(f"Starting bulk scrape for season {results.season}")
         if teams_to_scrape:
             logger.info(f"Scraping specific teams: {teams_to_scrape}")
-        unparsed, skipped = get_all_rosters(results.season, teams_to_scrape)
+        unparsed, skipped = get_all_rosters(results.season, teams_to_scrape, resume=results.resume)
         logger.info(f"✓ Scraping complete")
         logger.info(f"Unparsed teams: {unparsed}")
         logger.info(f"Skipped teams: {skipped}")
