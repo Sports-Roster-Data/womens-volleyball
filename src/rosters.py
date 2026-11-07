@@ -435,6 +435,32 @@ def verify_roster_season(html, season: str, team: Dict) -> bool:
     return False
 
 
+def season_url_slugs(season: str) -> List[str]:
+    """Return the season slugs to embed in roster URL paths, best first.
+
+    Volleyball seasons span an academic year, and many sites index rosters
+    under the full slug ('2025-26') even when the requested season is
+    year-only ('2025', the convention used in data/rosters_<year>.csv names).
+    For a year-only season, derive the academic slug (fall sport: end year is
+    start + 1) and try it before the bare year. A season that already carries
+    its end year also yields its bare-start-year form, which the Nuxt
+    /roster/season/<year> sites require.
+
+    >>> season_url_slugs('2025')
+    ['2025-26', '2025']
+    >>> season_url_slugs('2026-27')
+    ['2026-27', '2026']
+    """
+    year = season.split('-')[0]
+    if re.fullmatch(r'\d{4}', season):
+        slugs = [f"{season}-{(int(season) + 1) % 100:02d}"]
+    else:
+        slugs = [season]
+    if year and year not in slugs:
+        slugs.append(year)
+    return slugs
+
+
 # ============================================================================
 # SCHOOL-FIELD HYGIENE
 # ============================================================================
@@ -1040,8 +1066,12 @@ def fetch_and_parse_vandy(team: Dict, season: str) -> List[Dict]:
      return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
-    url = f"{team['url']}/roster/season/{season}"
-    return shotscraper_caller(team, season, url, javascript_code)
+    for slug in season_url_slugs(season):
+        result = shotscraper_caller(
+            team, season, f"{team['url']}/roster/season/{slug}", javascript_code)
+        if result:
+            return result
+    return []
 
 
 def fetch_and_parse_miami(team: Dict, season: str) -> List[Dict]:
@@ -1063,8 +1093,12 @@ def fetch_and_parse_miami(team: Dict, season: str) -> List[Dict]:
      return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
-    url = f"{team['url']}/roster/season/{season}"
-    return shotscraper_caller(team, season, url, javascript_code)
+    for slug in season_url_slugs(season):
+        result = shotscraper_caller(
+            team, season, f"{team['url']}/roster/season/{slug}", javascript_code)
+        if result:
+            return result
+    return []
 
 
 def fetch_and_parse_byu(team: Dict, season: str) -> List[Dict]:
@@ -1084,8 +1118,12 @@ def fetch_and_parse_byu(team: Dict, season: str) -> List[Dict]:
      return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
-    url = f"{team['url']}/roster/season/{season}"
-    return shotscraper_caller(team, season, url, javascript_code)
+    for slug in season_url_slugs(season):
+        result = shotscraper_caller(
+            team, season, f"{team['url']}/roster/season/{slug}", javascript_code)
+        if result:
+            return result
+    return []
 
 
 def fetch_and_parse_sanjose(team: Dict, season: str) -> List[Dict]:
@@ -1107,8 +1145,12 @@ def fetch_and_parse_sanjose(team: Dict, season: str) -> List[Dict]:
      return {id, name, year, hometown, high_school, previous_school, height, position, jersey, url};
     })
     """
-    url = f"{team['url']}/roster/season/{season}"
-    return shotscraper_caller(team, season, url, javascript_code)
+    for slug in season_url_slugs(season):
+        result = shotscraper_caller(
+            team, season, f"{team['url']}/roster/season/{slug}", javascript_code)
+        if result:
+            return result
+    return []
 
 
 def parse_iowa_state_cards(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
@@ -1877,8 +1919,12 @@ def _with_fallback(scraper):
 
 
 def _scrape_byu(team: Dict, season: str) -> List:
-    # BYU uses a four-digit end year (e.g. "2025-26" -> "2025-2026").
-    byu_season = f"{season[0:5]}20{season[5:7]}"
+    # BYU uses a four-digit end year (e.g. "2025-26" -> "2025-2026"); derive
+    # it when the season is year-only (rosters_2025.csv convention).
+    if re.fullmatch(r'\d{4}', season):
+        byu_season = f"{season}-{int(season) + 1}"
+    else:
+        byu_season = f"{season[0:5]}20{season[5:7]}"
     return fetch_and_parse_byu(team, byu_season)
 
 
@@ -1931,13 +1977,29 @@ def _scrape_js_render(team: Dict, season: str) -> List:
     bases = [base]
     if base.endswith('/index'):
         bases.append(base[:-len('/index')])
+    # Sites that reorganize their sport slugs leave stale team URLs redirecting
+    # to the new path. Season-qualified archive URLs only exist under the new
+    # slug (the bare /roster redirect is what current-season runs used to get
+    # by on), so resolve the redirect and sweep there too.
+    resolved = _resolved_roster_base(base)
+    if resolved:
+        bases.append(resolved)
+    bases = list(dict.fromkeys(bases))
     # Some Nuxt sites use /roster/season/{year} or /roster/{year} (e.g. Penn State, Nebraska, Wyoming).
     # PrestoSport sites (roster behind a /index homepage) use /{season}/roster.
-    year = season.split('-')[0]
+    # Both also exist under the full academic-year slug (2025-26), which the
+    # year-only "2025" season forms miss entirely on archival pages.
     wait_ms = team.get('wait_ms', 5000)
+    paths: List[str] = []
+    for slug in season_url_slugs(season):
+        paths.append(f"/roster/{slug}")
+    for slug in season_url_slugs(season):
+        paths.append(f"/roster/season/{slug}")
+    for slug in season_url_slugs(season):
+        paths.append(f"/{slug}/roster")
+    paths.append("/roster")
     for base in bases:
-        for path in (f"/roster/{season}", f"/roster/season/{year}", f"/roster/{year}",
-                     f"/{season}/roster", "/roster"):
+        for path in dict.fromkeys(paths):
             html = fetch_url_with_javascript(base + path, wait_ms=wait_ms)
             if html is None:
                 continue
@@ -1959,6 +2021,16 @@ def _scrape_js_render(team: Dict, season: str) -> List:
         if html is None or not verify_roster_season(html, season, team):
             return []
         return parse_roster_baskbl(team, html, season)
+    # Plain fetches over both base forms and every season slug — the browser
+    # render can come back empty (a site that wipes its server HTML on load),
+    # and a year-only fetch here would miss academic-slug archives entirely.
+    roster = _scrape_plain_urls(
+        team, season,
+        [base.rstrip('/') + f"/roster/{slug}"
+         for base in bases for slug in season_url_slugs(season)])
+    if roster:
+        return roster
+    # Last resort: the original single-URL behavior.
     html = fetch_roster(team['url'], season)
     if html is None or not verify_roster_season(html, season, team):
         return []
@@ -1969,6 +2041,27 @@ def _is_nuxt_page(html: BeautifulSoup) -> bool:
     """Return True when the static HTML is a client-rendered Nuxt app skeleton."""
     raw = str(html)
     return '__NUXT_DATA__' in raw or 'window.__NUXT__' in raw
+
+
+def _resolved_roster_base(base: str) -> Optional[str]:
+    """Follow the ``/roster`` redirect to catch reorganized sport slugs.
+
+    Returns the base the site actually serves roster pages under, or None
+    when the original URL does not redirect somewhere new. A plain request is
+    enough for this — redirects are resolved by the server.
+    """
+    try:
+        r = requests.head(f"{base}/roster", allow_redirects=True,
+                          timeout=REQUEST_TIMEOUT)
+        resolved = r.url.rstrip('/')
+    except requests.RequestException:
+        return None
+    if not resolved.endswith('/roster'):
+        return None
+    resolved_base = resolved[:-len('/roster')]
+    if resolved_base == base:
+        return None
+    return resolved_base
 
 
 def _scrape_plain_urls(team: Dict, season: str, urls: List[str]) -> List:
@@ -1992,12 +2085,36 @@ def _scrape_legacy_index(team: Dict, season: str) -> List:
     fetches work, and the JS-render pass catches client-rendered holdouts.
     """
     base = team['url'].rstrip('/')[:-len('/index')]
-    roster = _scrape_plain_urls(team, season, [
-        f"{base}/{season}/roster", f"{base}/roster/{season}", f"{base}/roster",
-    ])
+    slugs = season_url_slugs(season)
+    roster = _scrape_plain_urls(team, season,
+                                 [f"{base}/{slug}/roster" for slug in slugs] +
+                                 [f"{base}/roster/{slug}" for slug in slugs] +
+                                 [f"{base}/roster"])
     if roster:
         return roster
     return _scrape_js_render(team, season)
+
+
+def _prefer_named_roster(roster: List, html: BeautifulSoup,
+                         team: Dict, season: str) -> List:
+    """Replace a fully blank-named roster when another parser names every row.
+
+    Some wvball pages (e.g. Ohio 2025) hold the roster in one table of a
+    multi-table page (coaching/support staff follow). The wbkb table parser
+    reads <th> page-wide, so the staff tables' Name columns pollute the
+    header list; the row-name compensation then grabs the first anchor — an
+    icon link — producing empty names. The layout parsers in RENDERED_PARSERS
+    handle that markup correctly, so prefer their output over rows that all
+    have blank names.
+    """
+    if not roster or any(p.name for p in roster):
+        return roster
+    better = _best_parse(html, team, season)
+    if better and all(p.name for p in better):
+        logger.info(f"{team['team']}: replacing {len(roster)} blank-name rows "
+                    f"with {len(better)} named rows from the layout sweep")
+        return better
+    return roster
 
 
 def _scrape_default(team: Dict, season: str) -> List:
@@ -2007,17 +2124,16 @@ def _scrape_default(team: Dict, season: str) -> List:
     if 'wvball' in team['url']:
         # wvball teams use either standard Sidearm or a table format.
         html = fetch_roster(team['url'], season)
-        if not html:
-            return []
-        if not verify_roster_season(html, season, team):
-            return []
-        roster = parse_roster(team, html, season)
-        if roster:
-            return roster
-        roster = parse_roster_wbkb(team, html, season)
-        if roster:
-            return roster
-        # Self-heal: Nuxt pages and WAF-challenged stubs parse empty.
+        if html and verify_roster_season(html, season, team):
+            roster = parse_roster(team, html, season)
+            if roster:
+                return roster
+            roster = parse_roster_wbkb(team, html, season)
+            if roster:
+                return _prefer_named_roster(roster, html, team, season)
+        # Self-heal: Nuxt pages and WAF-challenged stubs parse empty, and a
+        # wrong-season page (year-only slug redirecting to the current roster)
+        # is better answered by the season-qualified URLs in the sweep.
         return _scrape_js_render(team, season)
     elif 'w-baskbl' in team['url']:
         html = fetch_baskbl_roster(team['url'], season)
@@ -2026,17 +2142,17 @@ def _scrape_default(team: Dict, season: str) -> List:
         return parse_roster_baskbl(team, html, season)
     # DEFAULT: standard roster page.
     html = fetch_roster(team['url'], season)
-    if not html:
-        return []
-    if not verify_roster_season(html, season, team):
-        return []
-    roster = parse_roster(team, html, season)
-    if roster:
-        return roster
+    if html and verify_roster_season(html, season, team):
+        roster = parse_roster(team, html, season)
+        if roster:
+            return roster
 
     # Self-heal: render with a real browser and try every known layout. This
-    # also covers WAF-challenged pages (an Incapsula stub parses empty) and
-    # server pages that redirect the season path to a JS-rendered current one.
+    # also covers WAF-challenged pages (an Incapsula stub parses empty),
+    # server pages that redirect the season path to a JS-rendered current one,
+    # and a season-verification rejection on the year-only fetch — the sweep's
+    # season-qualified URLs (including the derived academic-year slug) are the
+    # better answer for archival rosters.
     return _scrape_js_render(team, season)
 
 

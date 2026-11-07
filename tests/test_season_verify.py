@@ -170,3 +170,146 @@ def test_cache_corrupt_file_returns_none(tmp_path, monkeypatch):
     cache: Path = tmp_path / "data" / "cache" / "rosters_2026-27" / "999.json"
     cache.write_text("{not json")
     assert rosters._read_cached_rows("2026-27", 999) is None
+
+
+# ----------------------------------------------------------- season URL slugs
+
+def test_season_url_slugs_year_only_derives_academic_slug():
+    # Fall-sport seasons span an academic year; a year-only season must also
+    # produce the full slug many sites index rosters under.
+    assert rosters.season_url_slugs('2025') == ['2025-26', '2025']
+
+
+def test_season_url_slugs_full_slug_keeps_year_form():
+    # Full-slug seasons keep the bare start-year form for the Nuxt
+    # /roster/season/<year> sites (Penn State, Nebraska, Wyoming).
+    assert rosters.season_url_slugs('2026-27') == ['2026-27', '2026']
+    assert rosters.season_url_slugs('2025-26') == ['2025-26', '2025']
+
+
+def test_js_render_paths_include_academic_slug(monkeypatch):
+    # The render sweep must try the derived full-slug paths before falling
+    # back to the bare-year and current-roster forms.
+    seen = []
+
+    def fake_render(url, wait_ms=5000):
+        seen.append(url)
+        return None
+
+    monkeypatch.setattr(rosters, 'fetch_url_with_javascript', fake_render)
+    monkeypatch.setattr(rosters, 'verify_roster_season',
+                        lambda html, season, team: False)
+    roster = rosters._scrape_js_render(
+        {"ncaa_id": 1, "team": "T", "url": "https://x.com/sports/wvball"}, '2025')
+    assert roster == []
+    assert "https://x.com/sports/wvball/roster/2025-26" in seen
+    assert "https://x.com/sports/wvball/roster/2025-26" in seen[:3]  # tried early
+    assert seen[-1].endswith("/roster")  # current-roster fallback stays last
+
+
+def test_legacy_index_paths_include_academic_slug(monkeypatch):
+    captured = {}
+
+    def fake_plain(team, season, urls):
+        captured['urls'] = urls
+        return []
+
+    monkeypatch.setattr(rosters, '_scrape_plain_urls', fake_plain)
+    monkeypatch.setattr(rosters, '_scrape_js_render', lambda team, season: [])
+    rosters._scrape_legacy_index(
+        {"ncaa_id": 1, "team": "T", "url": "https://x.com/sports/wvball/index"}, '2025')
+    urls = captured['urls']
+    assert "https://x.com/sports/wvball/2025-26/roster" in urls[:2]
+    assert "https://x.com/sports/wvball/roster/2025-26" in urls
+    assert urls[-1] == "https://x.com/sports/wvball/roster"
+
+
+def test_default_falls_through_to_sweep_on_season_mismatch(monkeypatch):
+    # A season-verification rejection on the first (year-only) fetch must not
+    # end the team as unparsed before the sweep tries the archival URLs.
+    monkeypatch.setattr(rosters, 'fetch_roster',
+                        lambda url, season: html('2026 Volleyball Roster'))
+    calls = []
+    monkeypatch.setattr(rosters, '_scrape_js_render',
+                        lambda team, season: calls.append('sweep') or [])
+    roster = rosters._scrape_default(
+        {"ncaa_id": 1, "team": "T", "url": "https://x.com/sports/wvolleyball"}, '2025')
+    assert roster == [] and calls == ['sweep']
+
+
+def test_js_render_plain_fallback_tries_season_slugs(monkeypatch):
+    captured = {}
+
+    def fake_render(url, wait_ms=5000):
+        return None
+
+    def fake_plain(team, season, urls):
+        captured['urls'] = urls
+        return []
+
+    monkeypatch.setattr(rosters, 'fetch_url_with_javascript', fake_render)
+    monkeypatch.setattr(rosters, '_scrape_plain_urls', fake_plain)
+    monkeypatch.setattr(rosters, 'fetch_roster',
+                        lambda url, season: html('2026 Volleyball Roster'))
+    roster = rosters._scrape_js_render(
+        {"ncaa_id": 1, "team": "T", "url": "https://x.com/sports/blank/index"}, '2025')
+    assert roster == []
+    urls = captured['urls']
+    assert "https://x.com/sports/blank/roster/2025-26" in urls
+    assert "https://x.com/sports/blank/roster/2025" in urls
+
+
+def test_prefer_named_roster_swaps_blank_names(monkeypatch):
+    # Multi-table pages can leave the wbkb table parser with blank names;
+    # the guard must swap in a fully named parse from the layout sweep.
+    blank = [rosters.Player(team_id=1, team="T", player_id=None, name="",
+                            year="Jr.", hometown=None, high_school=None,
+                            previous_school=None, height=None, position=None,
+                            jersey=None, url=None, season="2025")]
+    named = [rosters.Player(team_id=1, team="T", player_id=None, name="J Smith",
+                            year="Jr.", hometown=None, high_school=None,
+                            previous_school=None, height=None, position=None,
+                            jersey=None, url=None, season="2025")]
+    monkeypatch.setattr(rosters, '_best_parse', lambda html, t, s: named)
+    html = BeautifulSoup('<table><tr><td>x</td></tr></table>', 'html.parser')
+    team = {"ncaa_id": 1, "team": "T", "url": "https://x.com/sports/wvball"}
+    assert rosters._prefer_named_roster(blank, html, team, '2025') == named
+    # A roster that already has names, or a sweep that stays blank, keeps the
+    # original rows.
+    assert rosters._prefer_named_roster(named, html, team, '2025') == named
+    partially = named + [dict(blank[0].__dict__ | {'name': ''})]
+    monkeypatch.setattr(rosters, '_best_parse', lambda html, t, s: [])
+    assert rosters._prefer_named_roster(partially, html, team, '2025') == partially
+
+
+def test_resolved_roster_base_follows_redirect(monkeypatch):
+    # Sites that reorganize sport slugs leave stale team URLs; the sweep must
+    # also try season paths under the base the /roster redirect resolves to.
+    class R:
+        url = 'https://auburntigers.com/sports/volleyball/roster'
+    monkeypatch.setattr(rosters.requests, 'head', lambda url, **kw: R())
+    base = rosters._resolved_roster_base('https://auburntigers.com/sports/womens-volleyball')
+    assert base == 'https://auburntigers.com/sports/volleyball'
+
+    class Same:
+        url = 'https://x.com/sports/wvball/roster'
+    monkeypatch.setattr(rosters.requests, 'head', lambda url, **kw: Same())
+    assert rosters._resolved_roster_base('https://x.com/sports/wvball') is None
+
+
+def test_js_render_sweeps_redirect_resolved_base(monkeypatch):
+    seen = []
+
+    def fake_render(url, wait_ms=5000):
+        seen.append(url)
+        return None
+
+    monkeypatch.setattr(rosters, 'fetch_url_with_javascript', fake_render)
+    monkeypatch.setattr(rosters.requests, 'head', lambda url, **kw: type(
+        'R', (), {'url': 'https://x.com/sports/volleyball/roster'})())
+    monkeypatch.setattr(rosters, '_scrape_plain_urls', lambda t, s, urls: [])
+    monkeypatch.setattr(rosters, 'fetch_roster',
+                        lambda url, season: html('2026 Volleyball Roster'))
+    rosters._scrape_js_render(
+        {"ncaa_id": 1, "team": "T", "url": "https://x.com/sports/wvolleyball"}, '2025')
+    assert any(u.startswith("https://x.com/sports/volleyball/roster/") for u in seen)
