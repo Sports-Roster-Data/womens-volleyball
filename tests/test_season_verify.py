@@ -313,3 +313,83 @@ def test_js_render_sweeps_redirect_resolved_base(monkeypatch):
     rosters._scrape_js_render(
         {"ncaa_id": 1, "team": "T", "url": "https://x.com/sports/wvolleyball"}, '2025')
     assert any(u.startswith("https://x.com/sports/volleyball/roster/") for u in seen)
+
+
+def test_prestosport_cards_parser():
+    html_soup = BeautifulSoup("""
+    <div class="player-cards">
+      <div class="player-card-wrapper"><div class="player-card card">
+        <div class="card-front card-data">
+          <div class="bio-card-name-and-year">
+            <a href="/sports/wvball/2025-26/bios/basantes_maria_p5w0">
+              <span class="name">
+                <span class="firstname">Maria</span>
+                <span class="lastname">Basantes</span>
+              </span>
+            </a>
+          </div>
+          <span class="number">1</span>
+          <div class="bio-attr-short"><span>PH</span><span>So.</span><span>5-8</span></div>
+        </div>
+        <div class="player-short-bio card-back">
+          <div class="bio-data"><ul>
+            <li><span class="fw-bold">Position:</span> PH</li>
+            <li><span class="fw-bold">Class:</span> So.</li>
+            <li><span class="fw-bold">Height:</span> 5-8</li>
+            <li><span class="fw-bold">Hometown:</span> Williamsburg, Va.</li>
+            <li><span class="fw-bold">Highschool:</span> Lafayette</li>
+          </ul></div>
+        </div>
+      </div></div>
+    </div>""", 'html.parser')
+    team = {"ncaa_id": 1, "team": "T", "url": "https://x.com/sports/wvball"}
+    roster = rosters.parse_prestosport_cards(html_soup, team, '2025')
+    assert len(roster) == 1
+    p = roster[0]
+    assert p.name == 'Maria Basantes'
+    assert p.year == 'So.' and p.height == '5-8' and p.position == 'PH'
+    assert p.hometown == 'Williamsburg, Va.' and p.high_school == 'Lafayette'
+    assert p.jersey == '1'
+    assert p.url == '/sports/wvball/2025-26/bios/basantes_maria_p5w0'
+    # Front-only fallback when the flipped card is absent.
+    html_soup.select_one('.player-short-bio').decompose()
+    roster = rosters.parse_prestosport_cards(html_soup, team, '2025')
+    p = roster[0]
+    assert (p.position, p.year, p.height) == ('PH', 'So.', '5-8')
+
+
+def test_prestosport_table_parser():
+    html_soup = BeautifulSoup("""
+    <table><tbody>
+      <tr>
+        <th data-field-label="No.">No.</th><th data-field-label="Name">Name</th>
+        <th data-field-label="Yr.">Yr.</th><th data-field-label="Pos.">Pos.</th>
+      </tr>
+      <tr>
+        <td data-field="number" data-label="No.">1</td>
+        <th data-field="first_name: :last_name" data-label="Name">
+          <a aria-label="Katelyn Benhem: jersey number 1: full bio"
+             href="/sports/wvball/2025-26/bios/benhem_katelyn_u3tz">Katelyn Benhem</a>
+        </th>
+        <td data-field="year" data-label="Yr.">Yr.:Fr.</td>
+        <td data-field="position" data-label="Pos.">Pos.:S</td>
+        <td data-field="hometown" data-label="Hometown/High School">Hometown/High School: Massena, NY / Brockton High School</td>
+      </tr>
+    </tbody></table>""", 'html.parser')
+    team = {"ncaa_id": 2, "team": "T", "url": "https://x.com/sports/wvball/index"}
+    roster = rosters.parse_prestosport_table(html_soup, team, '2025')
+    # The header row (no td[data-field]) is skipped.
+    assert len(roster) == 1
+    p = roster[0]
+    assert p.name == 'Katelyn Benhem'
+    assert p.year == 'Fr.' and p.position == 'S'
+    assert p.jersey == '1'
+    assert p.hometown == 'Massena, NY' and p.high_school == 'Brockton High School'
+    assert p.height is None
+    assert p.url == '/sports/wvball/2025-26/bios/benhem_katelyn_u3tz'
+
+
+def test_best_parse_prefers_prestosport_layouts():
+    # The two new parsers are registered and claim their own pages.
+    assert 'prestosport-cards' in [n for n, _ in rosters.RENDERED_PARSERS]
+    assert 'prestosport-table' in [n for n, _ in rosters.RENDERED_PARSERS]

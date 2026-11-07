@@ -1204,6 +1204,161 @@ def parse_iowa_state_cards(html: BeautifulSoup, team: Dict, season: str) -> List
     return roster
 
 
+def parse_prestosport_cards(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
+    """PrestoSport player-card grid (e.g. Goucher 2025-26).
+
+    Each ``.player-card`` has a front face (``.bio-card-name-and-year`` with
+    firstname/lastname spans and a ``.number`` badge) and a flipped back face
+    (``.bio-data``) holding a labelled field list: Position, Class, Height,
+    Hometown, Highschool. Split from fetching so it is testable offline.
+    """
+    roster = []
+    for card in html.select('.player-cards .player-card'):
+        front = card.select_one('.bio-card-name-and-year')
+        if front is None:
+            continue
+        anchor = card.find('a')
+        url = anchor.get('href', '') if anchor else ''
+
+        name = ''
+        name_el = front.select_one('.name')
+        if name_el is not None:
+            first = name_el.select_one('.firstname')
+            last = name_el.select_one('.lastname')
+            name = ' '.join(x for x in (
+                first.get_text(strip=True) if first else '',
+                last.get_text(strip=True) if last else '') if x)
+
+        jersey = None
+        jersey_el = card.select_one('.card-front .number')
+        if jersey_el is not None:
+            jersey = jersey_el.get_text(strip=True).lstrip('#')
+
+        year = height = position = hometown = high_school = None
+        # The flipped card carries the full field list; the front's
+        # .bio-attr-short spans (position, class, height) are the fallback.
+        back = card.select_one('.bio-data')
+        if back is not None:
+            for li in back.find_all('li'):
+                label_el = li.find('span', class_='fw-bold')
+                if label_el is None:
+                    continue
+                label = label_el.get_text(strip=True).rstrip(':').lower()
+                rest = li.get_text(' ', strip=True)
+                prefix = label_el.get_text(strip=True)
+                if rest.lower().startswith(prefix.lower()):
+                    rest = rest[len(prefix):].lstrip(':').strip()
+                rest = FieldExtractors.clean_text(rest)
+                if label == 'position':
+                    position = rest
+                elif label in ('class', 'year'):
+                    year = rest
+                elif label == 'height':
+                    height = rest
+                elif label == 'hometown':
+                    hometown = rest
+                elif label in ('highschool', 'high school'):
+                    high_school = rest
+                elif label in ('previous school', 'last school'):
+                    high_school = rest
+        else:
+            short = card.select_one('.bio-attr-short')
+            if short is not None:
+                spans = [s.get_text(strip=True) for s in short.find_all('span')]
+                spans = [s for s in spans if s]
+                if len(spans) == 3:
+                    position, year, height = spans
+
+        roster.append(Player(
+            team_id=team['ncaa_id'],
+            team=team['team'],
+            player_id=None,
+            name=name,
+            year=year,
+            hometown=hometown,
+            high_school=high_school,
+            previous_school=None,
+            height=height,
+            position=position,
+            jersey=jersey,
+            url=url,
+            season=season,
+        ))
+    return roster
+
+
+def parse_prestosport_table(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
+    """PrestoSport data-table roster (e.g. Sage 2025-26).
+
+    The table's data rows carry per-cell ``data-label``/``data-field``
+    attributes and repeat each field label inside the cell text
+    (``Yr.:Fr.``); player names sit in ``a[aria-label]`` (``Name: jersey
+    number N: full bio``). The header row uses ``th[data-field-label]`` only
+    and is skipped (no ``td[data-field]``), which also keeps staff tables
+    without data attributes out of the result. There is often no height
+    column; such fields stay None.
+    """
+    roster = []
+    for tr in html.select('tr'):
+        if tr.find('td', attrs={'data-field': True}) is None:
+            continue
+        cells = tr.find_all(['td', 'th'])
+        fields: Dict[str, str] = {}
+        for cell in cells:
+            label = cell.get('data-label') or ''
+            key = HEADERS.get(label)
+            if not key:
+                continue
+            text = ' '.join(cell.get_text(' ', strip=True).split())
+            # Cells repeat their label ('Yr.:Fr.'); strip it.
+            if label:
+                lc = label.lower()
+                if text.lower().startswith(lc + ':'):
+                    text = text[len(label) + 1:].strip()
+                elif text.lower().startswith(lc):
+                    text = text[len(label):].strip(' :')
+            text = FieldExtractors.clean_text(text)
+            fields[key] = text.strip()
+
+        name = fields.get('name', '')
+        # Prefer the bio anchor's aria-label ('Name: jersey number 1: full
+        # bio'); the visible name spans repeat the name on both faces.
+        anchor = None
+        for cell in cells:
+            if HEADERS.get(cell.get('data-label', '')) == 'name':
+                anchor = cell.find('a')
+                break
+        if anchor is not None and anchor.get('aria-label'):
+            name = anchor['aria-label'].split(':')[0].strip()
+        name = _collapse_duplicated_name(name) if name else ''
+        if not name:
+            continue
+
+        town = fields.get('town') or None
+        high_school = fields.get('high_school') or None
+        # PrestoSport folds town and high school into one 'Hometown/High
+        # School' cell ('Massena, NY / X').
+        if town and '/' in town and high_school is None:
+            town, high_school = split_town_high_school(town)
+        jersey = fields.get('jersey') or None
+        roster.append(Player(
+            team_id=team['ncaa_id'],
+            team=team['team'],
+            player_id=None,
+            name=name,
+            year=fields.get('academic_year') or None,
+            hometown=town,
+            high_school=high_school,
+            previous_school=None,
+            height=fields.get('height') or None,
+            position=fields.get('position') or None,
+            jersey=jersey,
+            url=anchor.get('href') if anchor else None,
+            season=season,
+        ))
+    return roster
+
+
 def parse_nebraska_table(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
     """Parse Nebraska's rendered roster-table layout.
 
@@ -1937,6 +2092,8 @@ RENDERED_PARSERS = [
     ('sidearm', lambda html, team, season: parse_roster(team, html, season)),
     ('s-person-card', parse_iowa_state_cards),
     ('roster-card', parse_clemson_cards),
+    ('prestosport-cards', parse_prestosport_cards),
+    ('prestosport-table', parse_prestosport_table),
     ('roster-table', parse_nebraska_table),
     ('roster-table-body-row', parse_roster_table_body_row),
     ('roster-list-item', parse_roster_list_item),

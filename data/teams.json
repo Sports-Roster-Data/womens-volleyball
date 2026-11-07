@@ -2246,7 +2246,8 @@
     "url": "https://athletics.enc.edu/sports/wvball/index",
     "ncaa_id": 1064,
     "stats_name": "Eastern Nazarene",
-    "scraper": "js_render"
+    "scraper": "skip",
+    "skip_note": "College ceased operations after spring 2025; site is Cloudflare-challenged and no roster has been published since 2023 (last rows in rosters_2023.csv)"
   },
   {
     "team": "Edgewood",
@@ -3942,7 +3943,8 @@
     "twitter": "PSHbgwvball",
     "url": "https://athletics.hbg.psu.edu/sports/wvball/index",
     "ncaa_id": 30081,
-    "scraper": "js_render"
+    "scraper": "skip",
+    "skip_note": "Whole site behind a Cloudflare challenge (plain requests and browser render both blocked); no roster rows since 2023, no Wayback snapshots. Revisit if Cloudflare access changes"
   },
   {
     "team": "Montclair St.",
