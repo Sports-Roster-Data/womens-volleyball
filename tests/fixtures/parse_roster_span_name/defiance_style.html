@@ -1,0 +1,46 @@
+<!-- Presto-style roster table where the jersey and name cells wrap their
+     text in <span> elements and one row cell is genuinely empty. The old
+     parser decomposed the name span, dropped the emptied cell, and shifted
+     every later field one column left (positions landed in the name column). -->
+<table>
+  <thead>
+    <tr>
+      <th>No.</th>
+      <th>Name</th>
+      <th>Pos.</th>
+      <th>Ht.</th>
+      <th>Yr.</th>
+      <th>Prev. Coll.</th>
+      <th>Hometown/High School</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span>1</span></td>
+      <td><a href="/sports/wvball/roster/jane-smith/1"><span>Jane Smith</span></a></td>
+      <td>DS</td>
+      <td>5-6</td>
+      <td>Fr.</td>
+      <td></td>
+      <td>Huber Heights, Ohio/Huber Heights HS</td>
+    </tr>
+    <tr>
+      <td><span>7</span></td>
+      <td><a href="/sports/wvball/roster/alex-doe/7"><span>Alex Doe</span></a></td>
+      <td>OH</td>
+      <td>5-9</td>
+      <td>Sr.</td>
+      <td>Ohio Northern</td>
+      <td>Alvordton, Ohio/Hilltop HS</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><a href="/sports/wvball/roster/sam-coach/8"><span>Sam Coach</span></a></td>
+      <td>Head Coach</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

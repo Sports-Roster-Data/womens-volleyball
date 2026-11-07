@@ -335,7 +335,9 @@
     "twitter": "lasalle_wbb",
     "url": "https://goexplorers.com/sports/womens-volleyball",
     "ncaa_id": 340,
-    "stats_name": "La Salle"
+    "stats_name": "La Salle",
+    "scraper": "skip",
+    "skip_note": "Site frozen at 2020 Volleyball Roster title; no current roster published"
   },
   {
     "team": "Manhattan",
@@ -852,7 +854,7 @@
   {
     "team": "Cleveland State",
     "twitter": "CSU_WBasketball",
-    "url": "https://www.csuvikings.com/sports/w-volley/index",
+    "url": "https://www.csuvikings.com/sports/womens-volleyball",
     "ncaa_id": 148,
     "scraper": "js_render"
   },
@@ -1649,7 +1651,9 @@
     "twitter": "riverhawkwbb",
     "url": "https://goriverhawks.com/sports/womens-volleyball",
     "ncaa_id": 368,
-    "stats_name": "UMass Lowell"
+    "stats_name": "UMass Lowell",
+    "scraper": "skip",
+    "skip_note": "UMass Lowell site serves 2018-labeled roster; no current roster page found"
   },
   {
     "team": "Sacred Heart",
@@ -1712,10 +1716,10 @@
   {
     "team": "St. Francis College Brooklyn",
     "twitter": "sfbk_wbb",
-    "url": "https://sfcathletics.com/sports/womens-volleyball",
     "ncaa_id": 599,
     "stats_name": "St. Francis Brooklyn",
-    "scraper": "js_render"
+    "scraper": "skip",
+    "skip_note": "St. Francis Brooklyn eliminated its entire athletics program in 2023; sfcathletics.com is an archive"
   },
   {
     "team": "Saint Francis (PA)",
@@ -2034,7 +2038,7 @@
   {
     "team": "Valparaiso",
     "twitter": "valpowbb",
-    "url": "https://www.valpoathletics.com/volleyball",
+    "url": "https://www.valpoathletics.com/sports/womens-volleyball",
     "ncaa_id": 735,
     "stats_name": "Valparaiso",
     "scraper": "js_render"
@@ -2355,7 +2359,7 @@
   {
     "team": "Greenville",
     "twitter": "guwvball",
-    "url": "http://athletics.greenville.edu/sports/wvball/index",
+    "url": "https://greenvillepanthers.com/sports/womens-volleyball",
     "ncaa_id": 1111,
     "scraper": "js_render"
   },
@@ -2461,7 +2465,8 @@
     "twitter": "fontbonnewbb",
     "url": "https://fontbonnegriffins.com/sports/wvball/index",
     "ncaa_id": 11538,
-    "scraper": "js_render"
+    "scraper": "skip",
+    "skip_note": "Fontbonne University closed 2025; fontbonnegriffins.com no longer resolves"
   },
   {
     "team": "Neb.-Kearney",
@@ -2510,10 +2515,10 @@
   {
     "team": "Limestone",
     "twitter": "LCWBB",
-    "url": "https://golimestonesaints.com/sports/womens-volleyball",
     "ncaa_id": 1174,
     "stats_name": "Limestone",
-    "scraper": "js_render"
+    "scraper": "skip",
+    "skip_note": "Limestone University closed 2025 (final semester May 2025); golimestonesaints.com serves only 404s"
   },
   {
     "team": "West Florida",
@@ -2551,7 +2556,7 @@
   {
     "team": "Marian (WI)",
     "twitter": "marianwbb",
-    "url": "https://muknights.com/sports/womens-volleyball",
+    "url": "https://muknights.com/sports/volleyball",
     "ncaa_id": 1196,
     "scraper": "js_render"
   },
@@ -2585,7 +2590,9 @@
     "team": "Cabrini",
     "twitter": "_cwbb",
     "url": "https://cabriniathletics.com/sports/womens-volleyball",
-    "ncaa_id": 88
+    "ncaa_id": 88,
+    "scraper": "skip",
+    "skip_note": "Cabrini University closed 2024; site frozen at 2022 roster"
   },
   {
     "team": "CWRU",
@@ -2657,7 +2664,9 @@
     "twitter": "jillswbb",
     "url": "https://northlandcollegesports.com/sports/womens-volleyball",
     "ncaa_id": 1267,
-    "stats_name": "Northland"
+    "stats_name": "Northland",
+    "scraper": "skip",
+    "skip_note": "Northland College closed 2025; site frozen at 2024 roster"
   },
   {
     "team": "Northwest Nazarene",
@@ -2670,7 +2679,9 @@
     "team": "Alliance",
     "twitter": "NyackWomen",
     "url": "https://athletics.allianceu.edu/sports/womens-volleyball",
-    "ncaa_id": 1277
+    "ncaa_id": 1277,
+    "scraper": "skip",
+    "skip_note": "Alliance University closed 2024; site resets connections"
   },
   {
     "team": "Wheeling",
@@ -3009,14 +3020,18 @@
     "twitter": "_rosemontwbb",
     "url": "https://rosemont-ravens.com/sports/womens-volleyball",
     "ncaa_id": 15882,
-    "stats_name": "Rosemont"
+    "stats_name": "Rosemont",
+    "scraper": "skip",
+    "skip_note": "Rosemont College site frozen at 2025 roster"
   },
   {
     "team": "Columbus St.",
     "twitter": "CSUCougarsWBB",
     "url": "https://csucougars.com/sports/womens-volleyball",
     "ncaa_id": 159,
-    "stats_name": "Columbus State"
+    "stats_name": "Columbus State",
+    "scraper": "skip",
+    "skip_note": "Columbus State University site frozen at 2016 roster"
   },
   {
     "team": "Albright",
@@ -3047,7 +3062,7 @@
   {
     "team": "Cornell College",
     "twitter": "CornellRamsWBB",
-    "url": "https://cornellrams.com/sports/volleyball",
+    "url": "https://cornellrams.com/sports/womens-volleyball",
     "ncaa_id": 166,
     "scraper": "js_render"
   },
@@ -3254,7 +3269,7 @@
   {
     "team": "Emmanuel (MA)",
     "twitter": "EmmanuelHoops",
-    "url": "https://www.goecsaints.com/sports/w-volley/index",
+    "url": "https://www.goecsaints.com/sports/womens-volleyball",
     "ncaa_id": 215,
     "scraper": "js_render"
   },
@@ -3392,7 +3407,8 @@
     "url": "https://medaillesports.com/sports/womens-volleyball",
     "ncaa_id": 23725,
     "stats_name": "Medaille",
-    "scraper": "js_render"
+    "scraper": "skip",
+    "skip_note": "Medaille merged into Villa Maria 2023; medaillesports.com now serves unrelated spam"
   },
   {
     "team": "Franklin & Marshall",
@@ -3685,7 +3701,9 @@
     "twitter": "SOUTHERNWBB",
     "url": "https://bscsports.net/sports/womens-volleyball",
     "ncaa_id": 28593,
-    "stats_name": "Birmingham-Southern"
+    "stats_name": "Birmingham-Southern",
+    "scraper": "skip",
+    "skip_note": "Birmingham-Southern College closed 2024; site frozen at 2023 roster"
   },
   {
     "team": "Hiram",
@@ -3778,7 +3796,7 @@
   {
     "team": "Northwestern-St. Paul",
     "twitter": "unwwbb",
-    "url": "https://unweagles.com/sports/volleyball",
+    "url": "https://unweagles.com/sports/womens-volleyball",
     "ncaa_id": 30031,
     "scraper": "js_render"
   },
@@ -3786,7 +3804,9 @@
     "team": "Finlandia",
     "twitter": "FinnUwbb",
     "url": "https://fulions.com/sports/womens-volleyball",
-    "ncaa_id": 30032
+    "ncaa_id": 30032,
+    "scraper": "skip",
+    "skip_note": "Finlandia University closed 2023; site resets connections"
   },
   {
     "team": "Crown (MN)",
@@ -3873,7 +3893,9 @@
     "team": "Notre Dame de Namur",
     "twitter": "NDNUbasketball",
     "url": "https://ndnuargos.com/sports/womens-volleyball",
-    "ncaa_id": 30056
+    "ncaa_id": 30056,
+    "scraper": "skip",
+    "skip_note": "Notre Dame de Namur University closed 2024; invalid TLS cert on dead site"
   },
   {
     "team": "Seton Hill",
@@ -4000,7 +4022,9 @@
     "twitter": "ARTUWBB",
     "url": "https://artuathletics.com/sports/womens-volleyball",
     "ncaa_id": 30123,
-    "stats_name": "Academy of Art"
+    "stats_name": "Academy of Art",
+    "scraper": "skip",
+    "skip_note": "Academy of Art site frozen at 2024 roster"
   },
   {
     "team": "Cedarville",
@@ -4021,7 +4045,9 @@
     "twitter": "NDCWBB",
     "url": "https://notredamefalcons.com/sports/womens-volleyball",
     "ncaa_id": 30126,
-    "stats_name": "Notre Dame (OH)"
+    "stats_name": "Notre Dame (OH)",
+    "scraper": "skip",
+    "skip_note": "Notre Dame College (OH) closed 2024; site frozen at 2023 roster"
   },
   {
     "team": "Simon Fraser",
@@ -4160,7 +4186,8 @@
     "url": "https://www.iwtigers.com/sport/0/2",
     "ncaa_id": 30173,
     "private": false,
-    "scraper": "js_render"
+    "scraper": "skip",
+    "skip_note": "Iowa Wesleyan University closed 2023"
   },
   {
     "team": "Daemen",
@@ -4193,7 +4220,9 @@
     "team": "Bryn Athyn",
     "twitter": "BrynAthynWBB",
     "url": "https://brynathynathletics.com/sports/womens-volleyball",
-    "ncaa_id": 30188
+    "ncaa_id": 30188,
+    "scraper": "skip",
+    "skip_note": "Bryn Athyn College site frozen at 2024 roster"
   },
   {
     "team": "Penn College",
@@ -4428,7 +4457,7 @@
   {
     "team": "Lake Superior St.",
     "twitter": "LakeStateWBB",
-    "url": "https://www.lssulakers.com/sports/w-volley/index",
+    "url": "https://www.lssulakers.com/sports/womens-volleyball",
     "ncaa_id": 345,
     "scraper": "js_render"
   },
@@ -4548,7 +4577,9 @@
     "team": "Me.-Farmington",
     "twitter": "UMFwomenshoops",
     "url": "https://goumfbeavers.com/sports/womens-volleyball",
-    "ncaa_id": 379
+    "ncaa_id": 379,
+    "scraper": "skip",
+    "skip_note": "Maine-Farmington site frozen at 2013-14 roster"
   },
   {
     "team": "Augsburg",
@@ -5478,7 +5509,9 @@
     "twitter": "SonomaStwvball",
     "url": "https://sonomaseawolves.com/sports/womens-volleyball",
     "ncaa_id": 645,
-    "stats_name": "Sonoma St."
+    "stats_name": "Sonoma St.",
+    "scraper": "skip",
+    "skip_note": "Sonoma State discontinued athletics 2025"
   },
   {
     "team": "South Alabama",
@@ -5575,7 +5608,9 @@
     "twitter": "CsiWbb",
     "url": "https://csidolphins.com/sports/womens-volleyball",
     "ncaa_id": 675,
-    "stats_name": "Staten Island"
+    "stats_name": "Staten Island",
+    "scraper": "skip",
+    "skip_note": "Staten Island site frozen at 2018 roster"
   },
   {
     "team": "Texas Lutheran",
@@ -6147,7 +6182,7 @@
   {
     "team": "Southwestern (TX)",
     "twitter": "SUPiratesWBB",
-    "url": "https://www.southwesternpirates.com/sports/w-volley/index",
+    "url": "https://www.southwesternpirates.com/sports/womens-volleyball",
     "ncaa_id": 8746,
     "scraper": "js_render"
   },
@@ -6262,7 +6297,7 @@
   {
     "team": "Anderson (IN)",
     "twitter": "AURavensWBB",
-    "url": "https://aua.prestosports.com/sports/wvball/index",
+    "url": "https://athletics.anderson.edu/sports/wvball/index",
     "ncaa_id": 939
   },
   {
@@ -6361,11 +6396,13 @@
     "twitter": "uvf_wbb",
     "url": "https://uvfpatriots.com/sports/womens-volleyball",
     "ncaa_id": 30166,
-    "stats_name": "Valley Forge"
+    "stats_name": "Valley Forge",
+    "scraper": "skip",
+    "skip_note": "Valley Forge Military College site no longer resolves"
   },
   {
     "team": "Talladega",
-    "url": "http://www.talladegatornadoes.com/sport/0/3",
+    "url": "https://www.talladegatornadoes.com/sports/volleyball",
     "ncaa_id": 505160,
     "private": true,
     "stats_name": "Talladega",
@@ -6373,7 +6410,7 @@
   },
   {
     "team": "Edward Waters",
-    "url": "https://ewutigerpride.com/sports/wvball",
+    "url": "https://ewutigerpride.com/sports/womens-volleyball",
     "ncaa_id": 30244,
     "stats_name": "Edward Waters",
     "scraper": "js_render"

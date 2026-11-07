@@ -82,6 +82,8 @@ HEADERS = {
     'Hometown/High School (Former School)': 'town', 'Hometown / High School': 'town',
     'YR': 'academic_year', 'POS': 'position', 'HT': 'height', 'Player': 'name',
     'Hometown/High School/Previous College': 'town', 'Last School/Hometown': 'town',
+    'Academic Year': 'academic_year',
+    'Number Jersey Number': 'jersey',
     'NO.': 'jersey', 'YR.': 'academic_year', 'POS.': 'position',
     'HIGH SCHOOL': 'high_school', 'NO': 'jersey', 'HOMETOWN/HIGH SCHOOL': 'town',
     'Academic Yr.': 'academic_year', 'Full Name': 'name', 'POSITION': 'position',
@@ -165,6 +167,9 @@ class FieldExtractors:
             r'\bPrevious College:\s*', r'\bPrevious School:\s*',
             r'\bHt\.?:\s*', r'\bPos\.?:\s*', r'\bMajor:\s*',
             r'^High school:\s*', r'^Hometown:\s*', r'^No\.?:\s*',
+            # Generic leading "Label:" prefix, e.g. 'Pos.: DS', 'Yr.: Fr.',
+            # 'Hometown/High School: Huber Heights, Ohio' on rendered tables.
+            r'^[A-Za-z][A-Za-z /.]{0,22}:\s*',
         ]
 
         for p in patterns:
@@ -485,6 +490,19 @@ def dedupe_school_fields(row: Dict) -> bool:
 # PARSER FUNCTIONS
 # ============================================================================
 
+def _collapse_duplicated_name(name: str) -> str:
+    """Collapse a name cell that repeats itself (hidden + visible copies).
+
+    Some Sidearm/Presto tables render 'First Last First Last' in one cell:
+    a visually-hidden copy followed by the visible one.
+    """
+    tokens = ' '.join((name or '').split()).split(' ')
+    n = len(tokens)
+    if n >= 4 and tokens[:n // 2] == tokens[n // 2:]:
+        return ' '.join(tokens[:n // 2])
+    return ' '.join(tokens)
+
+
 def split_town_high_school(town: Optional[str]) -> tuple:
     """Split a combined 'Hometown / High School' cell.
 
@@ -532,6 +550,12 @@ def parse_roster_baskbl(team: Dict, html: BeautifulSoup, season: str) -> List[Pl
 
     new_cols = [HEADERS[c] for c in mapped_cols]
     cols = mapped_cols  # Update cols to only include mapped ones
+    # Index-based alignment: when a row carries one cell per header (including
+    # unmapped ones, e.g. "Prev. College"), dropping an unmapped header from
+    # new_cols while keeping its cell shifts every later field left by one.
+    # Track which header indexes are mapped instead.
+    header_map = [i for i, c in enumerate([x.text.strip() for x in thead.find_all('th')
+                                           if x.text.strip()]) if c in HEADERS]
 
     tbody = html.find('tbody')
     if not tbody:
@@ -541,8 +565,19 @@ def parse_roster_baskbl(team: Dict, html: BeautifulSoup, season: str) -> List[Pl
 
     for raw_player in raw_players:
         try:
-            [x.span.decompose() for x in raw_player.find_all('td') if x.find('span')]
-            raw_player_list = [x.text.strip() for x in raw_player.find_all('td')]
+            # Keep spans that wrap the cell's entire text (player names are
+            # often <a><span>Name</span></a>); decompose only decorative spans.
+            for td in raw_player.find_all('td'):
+                span_texts = ' '.join(s.get_text(' ', strip=True) for s in td.find_all('span'))
+                td_text = td.get_text(' ', strip=True)
+                if td.find('span') is not None and span_texts and span_texts != td_text:
+                    for span in td.find_all('span'):
+                        span.decompose()
+            row_cells = raw_player.find_all(['td', 'th'])
+            if len(row_cells) == len(header_map):
+                raw_player_list = [row_cells[i].text.strip() for i in header_map]
+            else:
+                raw_player_list = [x.text.strip() for x in raw_player.find_all('td')]
             if len(raw_player_list) <= 4:
                 logger.info(f"Skipping short row {raw_player_list}")
                 continue
@@ -608,10 +643,12 @@ def parse_roster_wbkb(team: Dict, html: BeautifulSoup, season: str) -> List[Play
         headers = table_rows[0]
 
     cols = [x.text.strip() for x in headers if x.text.strip() != '']
+    cols_with_major = list(cols)
 
     # Remove unwanted columns
     unwanted_cols = ['Pronounciation', 'Club Team', 'Major', 'MAJOR', 'Major/Minor',
-                     'College', 'Wt.', 'Ltrs.', 'Pronouns']
+                     'College', 'Wt.', 'Ltrs.', 'Pronouns', 'Instagram', 'Twitter',
+                     'TikTok', 'X (Twitter)', 'Facebook']
     for col in unwanted_cols:
         if col in cols:
             cols.remove(col)
@@ -633,6 +670,12 @@ def parse_roster_wbkb(team: Dict, html: BeautifulSoup, season: str) -> List[Play
         return roster
 
     new_cols = [HEADERS[c] for c in mapped_cols]
+    # Index-based alignment: when a row carries one cell per header (including
+    # unmapped ones, e.g. "Prev. College"), dropping an unmapped or unwanted
+    # header from new_cols while keeping its cell shifts every later field
+    # left. Track which ORIGINAL header positions are mapped and kept.
+    header_map = [i for i, c in enumerate(cols_with_major)
+                  if c in HEADERS and c not in unwanted_cols]
     cols = mapped_cols  # Update cols to only include mapped ones
     tbody = html.find('tbody')
     if not tbody:
@@ -656,21 +699,51 @@ def parse_roster_wbkb(team: Dict, html: BeautifulSoup, season: str) -> List[Play
 
     for raw_player in raw_players:
         try:
-            [x.span.decompose() for x in raw_player.find_all('td') if x.find('span')]
+            # Remove decorative spans (icons, social links), but keep a span
+            # that wraps the cell's entire text: some sites render the player
+            # name inside <a><span>Name</span></a>, and decomposing that left
+            # an empty cell whose removal shifted every later field.
+            for td in raw_player.find_all('td'):
+                span_texts = ' '.join(s.get_text(' ', strip=True) for s in td.find_all('span'))
+                td_text = td.get_text(' ', strip=True)
+                if td.find('span') is not None and span_texts and span_texts != td_text:
+                    for span in td.find_all('span'):
+                        span.decompose()
             raw_player_list = [x.text.strip() for x in raw_player.find_all('td')
                               if x.text.replace('*', '').replace('(she/her/hers)', '').replace('she/her/hers', '').strip() != '']
+            row_cells_td_th = raw_player.find_all(['td', 'th'])
+            aligned_row = len(row_cells_td_th) == len(cols_with_major)
+            if aligned_row:
+                # One cell per header (unmapped/unwanted columns included):
+                # select only the mapped-and-kept cells by header index. This
+                # also restores empty trailing cells that the nonempty filter
+                # would have dropped, so fields never shift.
+                cells = [row_cells_td_th[i].text.strip() for i in header_map]
+                name_idx = next((k for k, c in enumerate(new_cols) if c == 'name'), None)
+                if name_idx is not None:
+                    cells[name_idx] = _collapse_duplicated_name(cells[name_idx])
+                raw_player_list = cells
+            else:
+                all_cells = [x.text.strip() for x in raw_player.find_all('td')]
+                if len(raw_player_list) < len(all_cells) and len(all_cells) == len(new_cols) \
+                        and all_cells[0].isdigit():
+                    # A genuinely empty cell was dropped by the filter; restore
+                    # it so the positional zip stays aligned. Player rows only:
+                    # staff rows (no leading jersey) stay on the filtered path,
+                    # which drops them below.
+                    raw_player_list = all_cells
 
             # Team-specific name insertion logic
-            if team['ncaa_id'] in [1340, 760, 510, 227]:
+            if not aligned_row and team['ncaa_id'] in [1340, 760, 510, 227]:
                 raw_name = raw_player.find('a').text.strip().replace("  ", " ").replace("\t", "").replace("\r", "").replace("\n", "").split(' ')
                 raw_player_list.insert(1, " ".join([x.strip() for x in raw_name if x != '']))
 
             # Skip specific problematic entries
-            if team['ncaa_id'] == 73 and len(raw_player_list) > 0 and raw_player_list[0] == '43':
+            if not aligned_row and team['ncaa_id'] == 73 and len(raw_player_list) > 0 and raw_player_list[0] == '43':
                 continue
 
             # Special handling for specific teams
-            if team['ncaa_id'] in [114, 1050, 1059, 1199, 22626, 24317, 30037, 341, 1315, 46, 641, 730, 75, 806, 817, 89, 145, 217, 247, 2713, 2798, 28594, 30002, 30225, 467, 567, 569, 137, 715, 779, 808, 8688, 379, 1461]:
+            if not aligned_row and team['ncaa_id'] in [114, 1050, 1059, 1199, 22626, 24317, 30037, 341, 1315, 46, 641, 730, 75, 806, 817, 89, 145, 217, 247, 2713, 2798, 28594, 30002, 30225, 467, 567, 569, 137, 715, 779, 808, 8688, 379, 1461]:
                 raw_player_list = [x.text.strip() for x in raw_player.find_all('td')]
 
             if len(raw_player_list) == 4:
@@ -681,16 +754,17 @@ def parse_roster_wbkb(team: Dict, html: BeautifulSoup, season: str) -> List[Play
 
             raw_player_list[4] = " ".join([x for x in raw_player_list[4].split()])
 
-            # Team-specific adjustments
-            if team['ncaa_id'] == 1036 and len(raw_player_list) == len(new_cols):
+            # Team-specific adjustments (legacy layout quirks; the header-index
+            # aligned path above needs none of these)
+            if not aligned_row and team['ncaa_id'] == 1036 and len(raw_player_list) == len(new_cols):
                 raw_player_list.pop()
-            if team['ncaa_id'] == 1096 and len(raw_player_list) >= len(new_cols):
+            if not aligned_row and team['ncaa_id'] == 1096 and len(raw_player_list) >= len(new_cols):
                 raw_player_list.pop()
-            if team['ncaa_id'] == 142:
+            if not aligned_row and team['ncaa_id'] == 142:
                 del raw_player_list[2]
 
             # Filter out major column if present
-            if any(major in raw_player_list for major in major_list):
+            if not aligned_row and any(major in raw_player_list for major in major_list):
                 if team['ncaa_id'] == 186:
                     del raw_player_list[4]
                 else:
@@ -1201,7 +1275,11 @@ def parse_roster_list_item(html: BeautifulSoup, team: Dict, season: str) -> List
     players = []
     seen_urls: set = set()
     for li in html.find_all('li', class_='roster-list-item'):
-        a_title = li.find('a', class_='roster-list-item__title')
+        # Iowa-style pages use an anchor classed roster-list-item__title; the
+        # UTSA variant uses roster-list-item__title-link with a separate
+        # span.roster-list-item__number for the jersey.
+        a_title = (li.find('a', class_='roster-list-item__title') or
+                   li.find('a', class_='roster-list-item__title-link'))
         if not a_title:
             continue
         name = a_title.get_text(strip=True)
@@ -1238,6 +1316,36 @@ def parse_roster_list_item(html: BeautifulSoup, team: Dict, season: str) -> List
 
         ps_el = li.find('span', class_='roster-player-list-profile-field--previous-school')
         previous_school = ps_el.get_text(strip=True) if ps_el else ''
+
+        # UTSA-style variant: strong.roster-players-list-item__position carries
+        # the position and two .roster-players-list-item__profile-fields groups
+        # hold unlabeled spans in a fixed order — height, year, then hometown,
+        # high school and (optionally) previous school.
+        if not year and not height and pos_el is None:
+            position_el = li.find('strong', class_='roster-players-list-item__position')
+            if position_el is not None:
+                groups = li.select('.roster-players-list-item__profile-fields')
+                # Group 1: unlabeled spans are height and academic year;
+                # later groups: hometown, high school, previous school.
+                g1_spans = [s.get_text(strip=True)
+                            for s in groups[0].find_all('span', class_='roster-players-list-item__profile-field')] if groups else []
+                height = next((s for s in g1_spans if re.fullmatch(r"\d\s*[′″'\"\d]+", s)), '')
+                year = next((s for s in g1_spans
+                             if s != height and re.search(r'(?i)fresh|soph|junior|senior|grad|redshirt', s)), '')
+                rest: List[str] = [s.get_text(strip=True)
+                                   for grp in groups[1:]
+                                   for s in grp.find_all('span', class_='roster-players-list-item__profile-field')]
+                position = position_el.get_text(strip=True) or 'N/A'
+                hometown = rest[0] if rest else ''
+                high_school = rest[1] if len(rest) > 1 else None
+                previous_school = rest[2] if len(rest) > 2 else ''
+
+        jersey_num_el = li.find('span', class_='roster-list-item__number')
+        if jersey_num_el is not None:
+            jersey = jersey_num_el.get_text(strip=True)
+
+        if not (position != 'N/A' or year or height or hometown):
+            continue  # staff/coach cards carry no roster fields
 
         players.append(Player(
             team_id=team['ncaa_id'],
@@ -1290,6 +1398,179 @@ def parse_s_table_row(html: BeautifulSoup, team: Dict, season: str) -> List[Play
         hs_text = cells[7].get_text(strip=True) if len(cells) > 7 else ''
         high_school = hs_text if hs_text else None
         previous_school = cells[8].get_text(strip=True) if len(cells) > 8 else ''
+
+        players.append(Player(
+            team_id=team['ncaa_id'],
+            team=team['team'],
+            player_id=player_id,
+            name=name,
+            year=year,
+            hometown=hometown,
+            high_school=high_school,
+            previous_school=previous_school,
+            height=height,
+            position=position,
+            jersey=jersey,
+            url=url,
+            season=season,
+        ))
+    return players
+
+
+def parse_roster_table_body_row(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
+    """Parse the Nuxt roster-table layout used by Notre Dame (2026-27).
+
+    Rendered DOM: visible <tr class="roster-table__body-row"> per player with a
+    fixed cell order — jersey | name (th) | position | height | class |
+    hometown | high school | social | toggle. Each player is followed by a
+    hidden expandable bio row (<tr class="roster-table__body-row--hidden">),
+    which is skipped. Split from fetching so it is testable offline against a
+    saved rendered fixture.
+    """
+    er = tldextract.extract(team['url'])
+    players = []
+    for row in html.select('tr.roster-table__body-row'):
+        if 'roster-table__body-row--hidden' in (row.get('class') or []):
+            continue
+        cells = row.find_all('td', class_='roster-table__body-cell', recursive=False)
+        if len(cells) < 5:
+            continue
+        jersey = cells[0].get_text(strip=True)
+        if not jersey.isdigit():
+            continue  # staff / header rows carry no jersey number
+        th = row.find('th')
+        name_a = th.find('a') if th else None
+        name = name_a.get_text(strip=True) if name_a else th.get_text(strip=True) if th else ''
+        if not name:
+            continue
+
+        def cell_text(td):
+            return td.get_text(' ', strip=True)
+
+        href = name_a.get('href', '') if name_a else ''
+        url = f"https://www.{er.domain}.{er.suffix}{href}" if href else ''
+        player_id = href.rstrip('/').split('/')[-1] if href else None
+        players.append(Player(
+            team_id=team['ncaa_id'],
+            team=team['team'],
+            player_id=player_id,
+            name=name,
+            year=cell_text(cells[3]),
+            hometown=cell_text(cells[4])
+                       if len(cells) > 4 else '',
+            high_school=cell_text(cells[5])
+                        if len(cells) > 5 else None,
+            previous_school='',
+            height=cell_text(cells[2]) if len(cells) > 2 else '',
+            position=cell_text(cells[1]) if len(cells) > 1 else 'N/A',
+            jersey=jersey,
+            url=url,
+            season=season,
+        ))
+    return players
+
+
+def parse_sidearm_list_item(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
+    """Parse Sidearm's .sidearm-roster-list-item layout (Bradley, …).
+
+    Static twin of shotscraper_list_item: the same markup is often served
+    server-side, so it is parsed without the shot-scraper round-trip.
+    """
+    er = tldextract.extract(team['url'])
+    players = []
+    seen_urls: set = set()
+    for li in html.find_all('li', class_='sidearm-roster-list-item'):
+        name_el = li.find('span', class_='sidearm-roster-player-name') or \
+                  li.find('div', class_='sidearm-roster-player-name')
+        if name_el is None:
+            name_el = li.find(class_='sidearm-roster-player-name')
+        if name_el is None:
+            continue
+        name = name_el.get_text(strip=True)
+        if not name:
+            continue
+
+        def field(cls):
+            el = li.find(class_=cls)
+            return el.get_text(strip=True) if el else ''
+
+        anchor = li.find('a', href=True)
+        href = anchor.get('href', '') if anchor else ''
+        url = f"https://www.{er.domain}.{er.suffix}{href}" if href else ''
+        player_id = (href.rstrip('/').split('/')[-1] or None) if href else None
+
+        key = url or name
+        if key in seen_urls:
+            continue
+        seen_urls.add(key)
+
+        players.append(Player(
+            team_id=team['ncaa_id'],
+            team=team['team'],
+            player_id=player_id,
+            name=name,
+            year=field('sidearm-roster-list-item-year'),
+            hometown=field('sidearm-roster-list-item-hometown'),
+            high_school=field('sidearm-roster-list-item-highschool') or None,
+            previous_school=field('sidearm-roster-list-item-previous-school'),
+            height=field('sidearm-roster-list-item-height'),
+            position=field('sidearm-roster-list-item-position'),
+            jersey=field('sidearm-roster-list-item-photo-number'),
+            url=url,
+            season=season,
+        ))
+    return players
+
+
+def parse_rosters_list_item(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
+    """Parse the Nuxt .rosters-list-item layout (Washington State, …).
+
+    Newer variant of roster-list-item: each player is an <li class=
+    "rosters-list-item">. Fields come in two .roster-list-item__fields-item
+    groups — the first holds <strong> position + <span> height, the second
+    holds <strong> academic year + spans for hometown, high school and
+    previous school. The jersey is a # prefixed strong.rosters-list-item__number.
+    """
+    er = tldextract.extract(team['url'])
+    players = []
+    seen_urls: set = set()
+    for li in html.find_all('li', class_='rosters-list-item'):
+        a_title = li.find('a', class_='rosters-list-item__title-link') or \
+                  li.find('a', class_='roster-list-item__title')
+        if not a_title:
+            continue
+        name = a_title.get_text(strip=True)
+        if not name:
+            continue
+        href = a_title.get('href', '')
+        url = f"https://www.{er.domain}.{er.suffix}{href}" if href else ''
+        player_id = href.rstrip('/').split('/')[-1] if href else None
+        if url and url in seen_urls:
+            continue
+        seen_urls.add(url)
+
+        jersey_el = li.find('strong', class_='rosters-list-item__number')
+        jersey = jersey_el.get_text(strip=True).lstrip('#') if jersey_el else ''
+
+        height = year = position = ''
+        rest: List[str] = []
+        fielditems = li.select('.roster-list-item__fields-item')
+        if not fielditems:
+            continue  # coach/staff cards carry no field groups
+        first = fielditems[0]
+        strongs = first.find_all('strong')
+        spans = [s.get_text(strip=True) for s in first.find_all('span')]
+        position = strongs[0].get_text(strip=True) if strongs else ''
+        height = next((s for s in spans if s), '')
+        for field_el in fielditems[1:]:
+            strongs = field_el.find_all('strong')
+            spans = [s.get_text(strip=True) for s in field_el.find_all('span') if s.get_text(strip=True)]
+            year = strongs[0].get_text(strip=True) if strongs else ''
+            rest.extend(spans)
+
+        hometown = rest[0] if rest else ''
+        high_school = rest[1] if len(rest) > 1 else None
+        previous_school = rest[2] if len(rest) > 2 else ''
 
         players.append(Player(
             team_id=team['ncaa_id'],
@@ -1611,7 +1892,10 @@ RENDERED_PARSERS = [
     ('s-person-card', parse_iowa_state_cards),
     ('roster-card', parse_clemson_cards),
     ('roster-table', parse_nebraska_table),
+    ('roster-table-body-row', parse_roster_table_body_row),
     ('roster-list-item', parse_roster_list_item),
+    ('rosters-list-item', parse_rosters_list_item),
+    ('sidearm-list-item', parse_sidearm_list_item),
     ('s-table-row', parse_s_table_row),
     ('roster-card-item', parse_roster_card_item),
     ('sidearm-table', lambda html, team, season: parse_roster_wbkb(team, html, season)),
@@ -1642,18 +1926,26 @@ def _scrape_js_render(team: Dict, season: str) -> List:
     layout parser, using the first that finds players.
     """
     base = team['url'].rstrip('/')
+    # Legacy homepages end in "/index"; for those, also sweep the trimmed base
+    # (Sidearm sites want /roster without the suffix, PrestoSport /{season}/roster).
+    bases = [base]
+    if base.endswith('/index'):
+        bases.append(base[:-len('/index')])
     # Some Nuxt sites use /roster/season/{year} or /roster/{year} (e.g. Penn State, Nebraska, Wyoming).
+    # PrestoSport sites (roster behind a /index homepage) use /{season}/roster.
     year = season.split('-')[0]
     wait_ms = team.get('wait_ms', 5000)
-    for path in (f"/roster/{season}", f"/roster/season/{year}", f"/roster/{year}", "/roster"):
-        html = fetch_url_with_javascript(base + path, wait_ms=wait_ms)
-        if html is None:
-            continue
-        if not verify_roster_season(html, season, team):
-            continue
-        roster = _best_parse(html, team, season)
-        if roster:
-            return roster
+    for base in bases:
+        for path in (f"/roster/{season}", f"/roster/season/{year}", f"/roster/{year}",
+                     f"/{season}/roster", "/roster"):
+            html = fetch_url_with_javascript(base + path, wait_ms=wait_ms)
+            if html is None:
+                continue
+            if not verify_roster_season(html, season, team):
+                continue
+            roster = _best_parse(html, team, season)
+            if roster:
+                return roster
 
     # If JS rendering yielded nothing, fall back to a plain fetch + parse.
     logger.info(f"JS rendering found no players for {team['team']}, trying standard fetch")
@@ -1679,8 +1971,39 @@ def _is_nuxt_page(html: BeautifulSoup) -> bool:
     return '__NUXT_DATA__' in raw or 'window.__NUXT__' in raw
 
 
+def _scrape_plain_urls(team: Dict, season: str, urls: List[str]) -> List:
+    """Try a list of plain-fetched roster URLs with every layout parser."""
+    for url in urls:
+        html = BeautifulSoup(fetch_url(url).text, features="html.parser")
+        if not verify_roster_season(html, season, team):
+            continue
+        roster = _best_parse(html, team, season)
+        if roster:
+            return roster
+    return []
+
+
+def _scrape_legacy_index(team: Dict, season: str) -> List:
+    """Sites whose homepage URL ends in "/index" (old Sidearm or PrestoSport).
+
+    The default `{base}/roster/{season}` form builds a nonexistent
+    "/index/roster/..." URL for these. Sidearm sites want the suffix dropped;
+    PrestoSport sites use /{season}/roster. All are server-rendered, so plain
+    fetches work, and the JS-render pass catches client-rendered holdouts.
+    """
+    base = team['url'].rstrip('/')[:-len('/index')]
+    roster = _scrape_plain_urls(team, season, [
+        f"{base}/{season}/roster", f"{base}/roster/{season}", f"{base}/roster",
+    ])
+    if roster:
+        return roster
+    return _scrape_js_render(team, season)
+
+
 def _scrape_default(team: Dict, season: str) -> List:
     """URL-pattern routing for teams without an explicit `scraper` strategy."""
+    if team['url'].rstrip('/').endswith('/index'):
+        return _scrape_legacy_index(team, season)
     if 'wvball' in team['url']:
         # wvball teams use either standard Sidearm or a table format.
         html = fetch_roster(team['url'], season)
@@ -1694,9 +2017,8 @@ def _scrape_default(team: Dict, season: str) -> List:
         roster = parse_roster_wbkb(team, html, season)
         if roster:
             return roster
-        if _is_nuxt_page(html):
-            return _scrape_js_render(team, season)
-        return []
+        # Self-heal: Nuxt pages and WAF-challenged stubs parse empty.
+        return _scrape_js_render(team, season)
     elif 'w-baskbl' in team['url']:
         html = fetch_baskbl_roster(team['url'], season)
         if html is None or not verify_roster_season(html, season, team):
@@ -1711,9 +2033,11 @@ def _scrape_default(team: Dict, season: str) -> List:
     roster = parse_roster(team, html, season)
     if roster:
         return roster
-    if _is_nuxt_page(html):
-        return _scrape_js_render(team, season)
-    return []
+
+    # Self-heal: render with a real browser and try every known layout. This
+    # also covers WAF-challenged pages (an Incapsula stub parses empty) and
+    # server pages that redirect the season path to a JS-rendered current one.
+    return _scrape_js_render(team, season)
 
 
 # Maps a team's optional `scraper` key (in data/teams.json) to its handler.
@@ -1829,7 +2153,15 @@ def scrape_team_roster(team: Dict, season: str) -> List:
     """
     strategy = team.get('scraper')
     handler = SCRAPERS.get(strategy, _scrape_default)
-    return handler(team, season)
+    roster = handler(team, season)
+    if roster or handler in (_scrape_default, _scrape_js_render, None):
+        return roster
+    # Self-heal for stale pinned strategies: a site that has since migrated to
+    # another layout (or renamed its season URL) produces nothing; retry with
+    # the generic renderer, which sweeps every URL form and layout parser.
+    logger.info(f"Pinned strategy '{strategy}' found no players for "
+                f"{team['team']}, trying js_render sweep")
+    return _scrape_js_render(team, season)
 
 
 def player_to_row(player, season: str) -> List:
