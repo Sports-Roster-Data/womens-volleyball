@@ -1359,6 +1359,94 @@ def parse_prestosport_table(html: BeautifulSoup, team: Dict, season: str) -> Lis
     return roster
 
 
+def parse_nuxt_payload(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
+    """Extract roster rows from a Sidearm/Nuxt page that did not hydrate.
+
+    The browser DOM on such pages stays empty (the roster never renders), but
+    the full player records live in ``<script id="__NUXT_DATA__">`` — a
+    devalue-flattened JSON payload where most player fields resolve to plain
+    strings at the first level. Records carry ``full_name`` plus either
+    ``player_position`` or ``jersey_number``/``jersey_number_label``; staff
+    records (athletic trainers, etc.) carry an email/title and neither of
+    those, so they are skipped.
+    """
+    script = html.find('script', id='__NUXT_DATA__')
+    if script is None or not (script.string or '').lstrip().startswith('['):
+        return []
+    try:
+        payload = json.loads(script.string)
+    except ValueError:
+        return []
+    n = len(payload)
+
+    def first_level(v):
+        """One devalue hop: an int is an index into the flat payload."""
+        if isinstance(v, int) and -n <= v < n:
+            return payload[v]
+        return v
+
+    roster, seen = [], set()
+    for item in payload:
+        if not isinstance(item, dict) or 'full_name' not in item:
+            continue
+        rec = {}
+        for k, v in item.items():
+            out = first_level(v)
+            if isinstance(out, dict):
+                out = {kk: first_level(vv) for kk, vv in out.items()}
+            rec[k] = out
+        name = rec.get('full_name')
+        if not isinstance(name, str) or not name.strip():
+            continue
+        keys = rec.keys()
+        has_position = isinstance(rec.get('player_position'), dict) and (
+            rec['player_position'].get('name') or rec['player_position'].get('abbreviation'))
+        has_jersey = isinstance(rec.get('jersey_number'), str) or \
+            isinstance(rec.get('jersey_number_label'), str)
+        if 'email' in keys or not (has_position or has_jersey):
+            continue
+
+        position = None
+        if has_position:
+            pp = rec['player_position']
+            position = pp.get('name') or pp.get('abbreviation')
+
+        height = None
+        feet, inches = rec.get('height_feet'), rec.get('height_inches')
+        if isinstance(feet, str) and feet.isdigit() and \
+                isinstance(inches, str) and inches.isdigit():
+            height = f"{feet}' {inches}''"
+
+        year = rec.get('class_level')
+        if not isinstance(year, str) or not year.strip() or 'None' in year:
+            year = None
+
+        slug = rec.get('slug')
+        url = f"/roster/player/{slug}" if isinstance(slug, str) and slug else None
+
+        key = name.strip()
+        if key in seen:
+            continue
+        seen.add(key)
+        roster.append(Player(
+            team_id=team['ncaa_id'],
+            team=team['team'],
+            player_id=rec.get('id') if isinstance(rec.get('id'), str) else None,
+            name=name,
+            year=year,
+            hometown=rec.get('hometown') if isinstance(rec.get('hometown'), str) else None,
+            high_school=rec.get('high_school') if isinstance(rec.get('high_school'), str) else None,
+            previous_school=None,
+            height=height,
+            position=position,
+            jersey=rec.get('jersey_number') if isinstance(rec.get('jersey_number'), str)
+                   else (rec.get('jersey_number_label') if isinstance(rec.get('jersey_number_label'), str) else None),
+            url=url,
+            season=season,
+        ))
+    return roster
+
+
 def parse_nebraska_table(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
     """Parse Nebraska's rendered roster-table layout.
 
@@ -2089,6 +2177,7 @@ def _scrape_byu(team: Dict, season: str) -> List:
 # least-specific to avoid a generic table parser claiming a card page. All are
 # normalized to (html, team, season) -> List[Player].
 RENDERED_PARSERS = [
+    ('nuxt-data', parse_nuxt_payload),
     ('sidearm', lambda html, team, season: parse_roster(team, html, season)),
     ('s-person-card', parse_iowa_state_cards),
     ('roster-card', parse_clemson_cards),

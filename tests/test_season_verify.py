@@ -393,3 +393,28 @@ def test_best_parse_prefers_prestosport_layouts():
     # The two new parsers are registered and claim their own pages.
     assert 'prestosport-cards' in [n for n, _ in rosters.RENDERED_PARSERS]
     assert 'prestosport-table' in [n for n, _ in rosters.RENDERED_PARSERS]
+
+
+def test_nuxt_payload_parser():
+    # A non-hydrating Nuxt page still carries player records in
+    # __NUXT_DATA__; staff records (email, no position/jersey) are skipped.
+    payload = '''[["ShallowReactive",1],0,
+      {"full_name":3,"first_name":4,"last_name":5,"player_position":{"name":6,"abbreviation":7},
+       "height_feet":8,"height_inches":9,"jersey_number":10,"jersey_number_label":10,
+       "class_level":11,"hometown":12,"high_school":13,"slug":14,"id":15},
+      "Ava Falduto","Ava","Falduto","L/DS","LO","5","7","2","Jr.","Elmhurst, Ill.","IC Catholic Prep","ava-falduto","5005",
+      {"full_name":16,"first_name":17,"email":18,"title":19},
+      "Scott Campbell","Scott","sc@c","Assistant Trainer"]'''
+    html_soup = BeautifulSoup(f'<script id="__NUXT_DATA__" type="application/json">{payload}</script>',
+                              'html.parser')
+    team = {"ncaa_id": 3, "team": "PSU", "url": "https://gopsusports.com/sports/womens-volleyball"}
+    roster = rosters.parse_nuxt_payload(html_soup, team, '2024')
+    assert len(roster) == 1, [p.name for p in roster]
+    p = roster[0]
+    assert p.name == 'Ava Falduto'
+    assert p.position == 'L/DS' and p.jersey == '2' and p.year == 'Jr.'
+    assert p.height == "5' 7''"
+    assert p.hometown == 'Elmhurst, Ill.' and p.high_school == 'IC Catholic Prep'
+    assert p.player_id == '5005' and p.url == '/roster/player/ava-falduto'
+    # A page without the payload is a no-op for this parser.
+    assert rosters.parse_nuxt_payload(BeautifulSoup('<h1>plain</h1>', 'html.parser'), team, '2024') == []
