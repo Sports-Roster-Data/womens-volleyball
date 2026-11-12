@@ -4,3 +4,6 @@ ncaa_id,season,reason,reviewed_on,reviewer,note
 704,2016-17,unrecoverable_echo,2026-11-12,Derek Willis,"site serves its 2015-16 roster on both /roster/2015 and /roster/2016; 2016-17 truth not on-site, no Wayback capture before Dec 2019"
 257,2015-16,unrecoverable_echo,2026-11-12,Derek Willis,"stored rows carry a later roster's classes (Grad/5th-year labels whose bio ids reappear as Sophomore in 2016-17); live site serves no 2015-16 page and Wayback starts Dec 2019"
 387,2015-16,unrecoverable_echo,2026-11-12,Derek Willis,"same URL-keyed class-regression evidence; no live 2015-16 page, no Wayback coverage before Dec 2019"
+158,2015-16,unrecoverable_echo,2026-11-12,Derek Willis,"frozen-lag site: /roster/2015-16 serves a ~2019-20-era roster (URL-keyed class regression: 'Graduate Student' labels whose ids reappear as Sophomore in 2016-17); rescrape re-captured the same frozen page; Wayback starts Dec 2019"
+158,2016-17,unrecoverable_echo,2026-11-12,Derek Willis,"same frozen-lag pattern (~2020-21-era roster on the 2016-17 slug)"
+158,2017-18,unrecoverable_echo,2026-11-12,Derek Willis,"same frozen-lag pattern (~2021-22-era roster on the 2017-18 slug)"

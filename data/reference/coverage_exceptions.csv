@@ -6,3 +6,6 @@ ncaa_id,season,kind,approved_by,reviewed_on,note
 704,2016-17,team_omission,Derek Willis,2026-11-12,"published rows are the 2015-16 roster echo; season unrecoverable from site or Wayback"
 257,2015-16,team_omission,Derek Willis,2026-11-12,"published rows are a later-roster echo; 2015-16 truth unrecoverable from site or Wayback"
 387,2015-16,team_omission,Derek Willis,2026-11-12,"same; unrecoverable"
+158,2015-16,team_omission,Derek Willis,2026-11-12,"frozen-lag page serves a later roster; 2015-16 truth unrecoverable (site and Wayback)"
+158,2016-17,team_omission,Derek Willis,2026-11-12,"same frozen-lag pattern; unrecoverable"
+158,2017-18,team_omission,Derek Willis,2026-11-12,"same frozen-lag pattern; unrecoverable"
