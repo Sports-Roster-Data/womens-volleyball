@@ -1,7 +1,7 @@
 "metric","value"
-"rows_raw",16276
-"rows_published",16061
-"rows_quarantined",215
+"rows_raw",16255
+"rows_published",16121
+"rows_quarantined",134
 "rows_removed_exact_duplicate",0
 "rows_removed_reviewed_duplicate",0
 "rows_excluded_reviewed_stale",0
