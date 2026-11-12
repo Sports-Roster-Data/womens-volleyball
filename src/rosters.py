@@ -2278,13 +2278,81 @@ def _best_parse(html: BeautifulSoup, team: Dict, season: str) -> List:
     return []
 
 
+def _roster_key(roster) -> tuple:
+    """Signature for echo comparison: identity of the roster's rows."""
+    rows = []
+    for p in (roster or []):
+        d = p.to_dict() if isinstance(p, Player) else p
+        rows.append((str(d.get('name') or ''), str(d.get('year') or ''),
+                     str(d.get('jersey') or ''), str(d.get('height') or ''),
+                     str(d.get('position') or ''), str(d.get('url') or '')))
+    return tuple(sorted(rows))
+
+
+def _resolve_echo_candidates(team: Dict, season: str, candidates: List,
+                             fetch_baseline) -> List:
+    """Pick the trustworthy roster among season-URL sweep candidates.
+
+    Some athletics sites render the current roster for any season-qualified
+    URL while ignoring the season slug (uabsports.com November 2026:
+    /roster/2024-25 returned the current team while /roster/2025 served the
+    real 2025-26 roster). Because the sweep tries the academic-year slug
+    before the year-only form, the first parse used to be that echo — and it
+    was stored under a season it does not belong to.
+
+    Candidates are (path_or_url, html, roster) triples; identical rosters
+    collapse. Resolution order:
+    1. a single distinct roster is taken as-is;
+    2. otherwise, a page whose title/headings positively name the requested
+       season wins (an echo page cannot);
+    3. otherwise, whatever differs from the bare current-roster page wins —
+       when they all agree with the bare page there is no better option, and
+       the first season-qualified candidate is kept (old behavior).
+    """
+    if not candidates:
+        return []
+    seen, distinct = set(), []
+    for path, html, roster in candidates:
+        key = _roster_key(roster)
+        if key in seen or key == ():
+            continue
+        seen.add(key)
+        distinct.append({'path': path, 'html': html, 'roster': roster,
+                         'key': key,
+                         'matched': SeasonVerifier.classify(html, season) == 'matched'})
+    if len(distinct) == 1:
+        return distinct[0]['roster']
+    qualified = [d for d in distinct if not str(d['path']).rstrip('/').endswith('/roster')]
+    bare = [d for d in distinct if str(d['path']).rstrip('/').endswith('/roster')]
+    matched = [d for d in qualified if d['matched']]
+    if len(matched) == 1:
+        return matched[0]['roster']
+    pool = qualified or distinct
+    if len(qualified) == 1:
+        # One season-qualified roster and nothing that contradicts it.
+        return qualified[0]['roster']
+    # Two or more season-qualified rosters disagree: render the bare current
+    # page once; whichever candidate matches it is the slug-ignoring echo.
+    baseline = fetch_baseline(team['url'], season)
+    if baseline is None:
+        return qualified[0]['roster']
+    base_key = _roster_key(baseline)
+    echo_free = [d for d in pool if d['key'] != base_key]
+    if not echo_free:
+        return qualified[0]['roster']
+    best = [d for d in echo_free if d['matched']] or echo_free
+    return best[0]['roster']
+
+
 def _scrape_js_render(team: Dict, season: str) -> List:
     """Render the page and self-heal across roster layouts.
 
     Sidearm sites have migrated to several client-rendered layouts, some of
     which only serve the current roster at `/roster` (a `/roster/{season}` path
     404s). So try both URL forms, and against each render try every known
-    layout parser, using the first that finds players.
+    layout parser, using the first that finds players. Slug-ignoring sites
+    that echo the current roster for every season URL are resolved by
+    _resolve_echo_candidates instead of first-parse-wins.
     """
     base = team['url'].rstrip('/')
     # Legacy homepages end in "/index"; for those, also sweep the trimmed base
@@ -2313,6 +2381,7 @@ def _scrape_js_render(team: Dict, season: str) -> List:
     for slug in season_url_slugs(season):
         paths.append(f"/{slug}/roster")
     paths.append("/roster")
+    candidates = []
     for base in bases:
         for path in dict.fromkeys(paths):
             html = fetch_url_with_javascript(base + path, wait_ms=wait_ms)
@@ -2321,8 +2390,26 @@ def _scrape_js_render(team: Dict, season: str) -> List:
             if not verify_roster_season(html, season, team):
                 continue
             roster = _best_parse(html, team, season)
-            if roster:
+            if not roster:
+                continue
+            # A page that positively names this season cannot be an echo of
+            # the bare current-roster page, so take it straight away.
+            if SeasonVerifier.classify(html, season) == 'matched':
                 return roster
+            candidates.append((path, html, roster))
+
+    def _js_baseline(team_url: str, season_arg: str):
+        url = team_url.rstrip('/')
+        if url.endswith('/index'):
+            url = url[:-len('/index')]
+        html = fetch_url_with_javascript(url + '/roster', wait_ms=wait_ms)
+        if html is None or not verify_roster_season(html, season_arg, team):
+            return None
+        return _best_parse(html, team, season_arg)
+
+    roster = _resolve_echo_candidates(team, season, candidates, _js_baseline)
+    if roster:
+        return roster
 
     # If JS rendering yielded nothing, fall back to a plain fetch + parse.
     logger.info(f"JS rendering found no players for {team['team']}, trying standard fetch")
@@ -2381,14 +2468,34 @@ def _resolved_roster_base(base: str) -> Optional[str]:
 
 def _scrape_plain_urls(team: Dict, season: str, urls: List[str]) -> List:
     """Try a list of plain-fetched roster URLs with every layout parser."""
+    candidates = []
     for url in urls:
         html = BeautifulSoup(fetch_url(url).text, features="html.parser")
         if not verify_roster_season(html, season, team):
             continue
         roster = _best_parse(html, team, season)
-        if roster:
+        if not roster:
+            continue
+        # A page that positively names this season cannot be an echo of
+        # the bare current-roster page, so take it straight away.
+        if SeasonVerifier.classify(html, season) == 'matched':
             return roster
-    return []
+        candidates.append((url, html, roster))
+
+    def _plain_baseline(team_url: str, season_arg: str):
+        base = team_url.rstrip('/')
+        if base.endswith('/index'):
+            base = base[:-len('/index')]
+        try:
+            html = BeautifulSoup(fetch_url(base + '/roster').text,
+                                 features="html.parser")
+        except requests.RequestException:
+            return None
+        if not verify_roster_season(html, season_arg, team):
+            return None
+        return _best_parse(html, team, season_arg)
+
+    return _resolve_echo_candidates(team, season, candidates, _plain_baseline)
 
 
 def _scrape_legacy_index(team: Dict, season: str) -> List:
