@@ -1,1 +1,3 @@
 ncaa_id,season,reason,reviewed_on,reviewer,note
+698,2016-17,unrecoverable_echo,2026-11-12,Derek Willis,"site serves its 2015-16 roster on both /roster/2015 and /roster/2016 (identical bio ids); 2016-17 truth not on-site, no Wayback capture before Dec 2019"
+698,2017-18,unrecoverable_echo,2026-11-12,Derek Willis,"same frozen-vintage pathology; 2017-18 rows cannot be distinguished from the 2015-16 roster copy"

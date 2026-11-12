@@ -1,3 +1,5 @@
 ncaa_id,season,kind,approved_by,reviewed_on,note
 569,2026-27,team_omission,Derek Willis,2026-11-11,"roster-card template shift at the site (class in name column, position in year column, major in hometown, hometown in previous_school); rows are fully preserved in data/derived/quarantine/ awaiting a parser fix and rescrape"
 449,2026-27,team_omission,Derek Willis,2026-11-11,"roster-card template shift at the site (class in name column, position in year column); rows preserved in data/derived/quarantine/ awaiting a parser fix and rescrape"
+698,2016-17,team_omission,Derek Willis,2026-11-12,"published rows are the 2015-16 roster echo; season unrecoverable from site or Wayback"
+698,2017-18,team_omission,Derek Willis,2026-11-12,"published rows indistinguishable from the 2015-16 roster copy; season unrecoverable"

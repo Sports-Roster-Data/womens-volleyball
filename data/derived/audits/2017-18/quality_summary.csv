@@ -1,10 +1,10 @@
 "metric","value"
 "rows_raw",13833
-"rows_published",13787
+"rows_published",13770
 "rows_quarantined",45
 "rows_removed_exact_duplicate",0
 "rows_removed_reviewed_duplicate",1
-"rows_excluded_reviewed_stale",0
+"rows_excluded_reviewed_stale",17
 "heights_failed_parsing_nonempty_raw",83
 "positions_unmapped_nonempty_raw",267
 "classes_unmapped_nonempty_raw",130
