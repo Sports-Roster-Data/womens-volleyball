@@ -11466,22 +11466,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 486,MCLA,,Shannon O'Brien,2026,"Unionville, CT",Farmington Senior,,5'9,S,18,/sports/wvball/2022-23/bios/o-brien_shannon_2w6l,2022
 486,MCLA,,Ezmeralda Albright,2025,"Loves Park, IL",Harlem,,5'6,OH,19,/sports/wvball/2022-23/bios/albright_ezmeralda_i03m,2022
 486,MCLA,,Jayna Schmohl,2026,"Rutland, MA",Bay Path Vocational Tech School,,5'10,MH/RS,,/sports/wvball/2022-23/bios/schmohl_jayna_qp7q,2022
-487,North Alabama,,Ava Martindale,Sr.,"College Station, Texas",College Station HS,UTEP,"5'5""",Defensive Specialist/Libero,1,//roarlions.com/sports/wvball/roster/ava-martindale/4213,2022
-487,North Alabama,,Olivia Fenoff,Sr.,"Lake Mary, Fla.",Lake Mary HS,,"6'0""",Outside Hitter,2,//roarlions.com/sports/wvball/roster/olivia-fenoff/4207,2022
-487,North Alabama,,Ally Greenwell,So.,"Spring Hill, Tenn.",Independence HS,,"5'8""",Outside Hitter,3,//roarlions.com/sports/wvball/roster/ally-greenwell/4209,2022
-487,North Alabama,,Kinslee McGowan,Jr.,"Cleveland, Tenn.",Cleveland HS,,"5'10""",Setter,4,//roarlions.com/sports/wvball/roster/kinslee-mcgowan/4214,2022
-487,North Alabama,,Lankford Gurner,Jr.,"Birmingham, Ala.",Vestavia Hills HS,,"5'7""",Libero,5,//roarlions.com/sports/wvball/roster/lankford-gurner/4210,2022
-487,North Alabama,,Phoebe Reyes Fortunato,Sr.,"San Francisco de Macorís, D.R.",Central Pointe Christian Academy,South Carolina/Barton CC,"6'1""",Rightside Hitter,6,//roarlions.com/sports/wvball/roster/phoebe-reyes-fortunato/4686,2022
-487,North Alabama,,Kendall Barnes,Sr.,"Memphis, Tenn.",Briarcrest Christian School,Ball State,"6'1""",Outside Hitter,7,//roarlions.com/sports/wvball/roster/kendall-barnes/4206,2022
-487,North Alabama,,Landri Ross,So.,"Tallahassee, Fla.",Maclay School,,"5'10""",Setter,10,//roarlions.com/sports/wvball/roster/landri-ross/4217,2022
-487,North Alabama,,Reese Ricketts,Jr.,"Harrison, Ark.",Harrison HS,,"6'2""",Outside Hitter,11,//roarlions.com/sports/wvball/roster/reese-ricketts/4216,2022
-487,North Alabama,,Kendall Buckley,Fr.,"Madison, Ala.",Bob Jones High School,,"6'0""",Outside Hitter,13,//roarlions.com/sports/wvball/roster/kendall-buckley/4732,2022
-487,North Alabama,,Paris McQuirter,So.,"Mobile, Ala.",McGill Toolen HS,,"5'10""",Outside Hitter,14,//roarlions.com/sports/wvball/roster/paris-mcquirter/4215,2022
-487,North Alabama,,Jenna Kolosta,So.,"Lockport, Ill.",Lockport HS,,"6'2""",Middle Blocker,15,//roarlions.com/sports/wvball/roster/jenna-kolosta/4212,2022
-487,North Alabama,,Anna Hoffmayer,Fr.,"Ocean Springs, Miss.",Ocean Springs High School,,"6'0""",Middle Blocker,16,//roarlions.com/sports/wvball/roster/anna-hoffmayer/4735,2022
-487,North Alabama,,Kennedy Bullins,Fr.,"Crawfordsville, Ark.",Marion High School,,"6'0""",Middle Blocker,19,//roarlions.com/sports/wvball/roster/kennedy-bullins/4733,2022
-487,North Alabama,,Kaylee Maikranz,Fr.,"Vero Beach, Fla.",John Carroll Catholic High School,,"5'6""",Defensive Specialist/Libero,21,//roarlions.com/sports/wvball/roster/kaylee-maikranz/4734,2022
-487,North Alabama,,Dylann Garner,Jr.,"Franklin, Tenn.",Franklin HS,,"6'2""",Outside Hitter,24,//roarlions.com/sports/wvball/roster/dylann-garner/4208,2022
 488,N.C. A&T,3459,Madison Sanabria,Sophomore,"Virginia Beach, Va.",Lanstown HS,,"6'0""",Middle,2,//www.ncataggies.com/sports/womens-volleyball/roster/madison-sanabria/3459,2022
 488,N.C. A&T,3463,Liselotte Spoormakers,Graduate Student,"De Mortel, Netherlands",Fonty's University of Applied Sciences,,"6'0""",Right,3,//www.ncataggies.com/sports/womens-volleyball/roster/liselotte-spoormakers/3463,2022
 488,N.C. A&T,3462,Addy Warfield,Senior,"Winter Springs, Fla.",Winter Springs,,"5'9""",Setter,4,//www.ncataggies.com/sports/womens-volleyball/roster/addy-warfield/3462,2022
@@ -15092,3 +15076,21 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 542,Pfeiffer,3629,Mattie Burris,Senior,"Misenheimer, N.C.",Gray Stone Day,,"5'11""",MIddle,22,//www.gofalconsports.com/sports/womens-volleyball/roster/mattie-burris/3629,2022
 542,Pfeiffer,3632,Kaitlyn Kilts,Senior,"Madison, N.C.",McMichael,,"5'1""",Defensive,23,//www.gofalconsports.com/sports/womens-volleyball/roster/kaitlyn-kilts/3632,2022
 542,Pfeiffer,3642,Caroline Willard,Junior,"Chesterfield, S.C.",Chesterfield,,"5'5""",Setter,24,//www.gofalconsports.com/sports/womens-volleyball/roster/caroline-willard/3642,2022
+487,North Alabama,,Elizabeth Ford,Sr.,"Geneva, Illinois / Geneva High School",,,5-8,DS/LIB,1,//www.roarlions.com/sports/wvball/roster/elizabeth-ford/2652,2022-23
+487,North Alabama,,Tatum Fouche,So.,"Frisco, Texas / Reedy High School",,,5-8,DS/LIB,3,//www.roarlions.com/sports/wvball/roster/tatum-fouche/2653,2022-23
+487,North Alabama,,Katie Gerig,Jr.,"Towanda, Ill. / Normal Community High School",,,5-6,DS/LIB,4,//www.roarlions.com/sports/wvball/roster/katie-gerig/2654,2022-23
+487,North Alabama,,Anna Katherine Griggs,Sr.,"Arab, Ala. / Arab High School",,,6-2,MB/OPP,6,//www.roarlions.com/sports/wvball/roster/anna-katherine-griggs/2655,2022-23
+487,North Alabama,,Elif Ozsoy,So.,"Ankara, Turkey /",Trinity Valley CC,,6-2,S,7,//www.roarlions.com/sports/wvball/roster/elif-ozsoy/2733,2022-23
+487,North Alabama,,Mackenzie O'Loughlin,Jr.,"Jupiter, Florida / Jupiter Christian High School",,,6-1,OH,8,//www.roarlions.com/sports/wvball/roster/mackenzie-o-loughlin/2659,2022-23
+487,North Alabama,,Lucy Wedding,Fr.,"Lexington, Ky. / Lexington Catholic High School",,,5-10,OH,9,//www.roarlions.com/sports/wvball/roster/lucy-wedding/2732,2022-23
+487,North Alabama,,Ella Ratzloff,Sr.,"Woodbury, Minnesota / East Ridge High School",Rhode Island,,5-4,DS/LIB,10,//www.roarlions.com/sports/wvball/roster/ella-ratzloff/2734,2022-23
+487,North Alabama,,Taylor Floyd,Sr.,"Louisville, Kentucky / Ballard High School",Belmont,,6-1,OH,11,//www.roarlions.com/sports/wvball/roster/taylor-floyd/2735,2022-23
+487,North Alabama,,Katy Floyd,So.,"Louisville, Ky. / Ballard HS",,,6-0,OH,12,//www.roarlions.com/sports/wvball/roster/katy-floyd/2651,2022-23
+487,North Alabama,,Kennedey Johnson,Jr.,"Castle Rock, Colo. / Lutheran High School",,,5-10,S,13,//www.roarlions.com/sports/wvball/roster/kennedey-johnson/2657,2022-23
+487,North Alabama,,Miya-Cole Brown,So.,"Summertown, Tenn. / Summertown High School",,,5-11,OH,14,//www.roarlions.com/sports/wvball/roster/miya-cole-brown/2649,2022-23
+487,North Alabama,,Breylee Linder,Sr.,"Florence, Alabama / Florence High School",,,5-7,S,15,//www.roarlions.com/sports/wvball/roster/breylee-linder/2658,2022-23
+487,North Alabama,,Kamryn Parsonage,Jr.,"Cypress, California / Los Alamitos High School",,,6-1,OH,16,//www.roarlions.com/sports/wvball/roster/kamryn-parsonage/2660,2022-23
+487,North Alabama,,Mary Kate Stasevich,So.,"Chesapeake, Va. / Grassfield High School",,,6-2,MB,19,//www.roarlions.com/sports/wvball/roster/mary-kate-stasevich/2661,2022-23
+487,North Alabama,,Hayley Martin,Fr.,"Elgin, Ill. / Harvest Christian Academy",,,5-11,OH,21,//www.roarlions.com/sports/wvball/roster/hayley-martin/2736,2022-23
+487,North Alabama,,Mattrice Harris,Sr.,"Opelika, Ala. / Opelika High School",Wallace State CC,,6-1,MB,24,//www.roarlions.com/sports/wvball/roster/mattrice-harris/2656,2022-23
+487,North Alabama,,Maggie Sullivan,Sr.,"Tuscaloosa, Ala. / American Christian Academy",,,6-1,MB,25,//www.roarlions.com/sports/wvball/roster/maggie-sullivan/2662,2022-23

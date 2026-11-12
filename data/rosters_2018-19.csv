@@ -1187,23 +1187,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 418,Michigan,,Kiara Shannon,So.,"Oshawa, Ontario",,,6' 2'',MB,17,//mgoblue.com/sports/womens-volleyball/roster/kiara-shannon/21006,2018
 418,Michigan,,Carly Skjodt,Sr.,"Indianapolis, Ind.",,,6' 1'',OH Is Captain (C),18,//mgoblue.com/sports/womens-volleyball/roster/carly-skjodt/16929,2018
 418,Michigan,,Erin O'Leary,Fr.,"Novi, Mich.",,,5' 10'',S,19,//mgoblue.com/sports/womens-volleyball/roster/erin-oleary/16933,2018
-367,Louisville,,Chloe Meester,So.,"Mount Vernon, Iowa",,,6' 3'',OH,2,//gocards.com/sports/womens-volleyball/roster/chloe-meester/17846,2018
-367,Louisville,,Kamden Schrand,Sr.,"Villa Hills, Ky.",,,5' 7'',L/DS,3,//gocards.com/sports/womens-volleyball/roster/kamden-schrand/17848,2018
-367,Louisville,,Addison Makun,So.,"Charlestown, Ind.",,,6' 3'',MB,4,//gocards.com/sports/womens-volleyball/roster/addison-makun/17845,2018
-367,Louisville,,Amirra Bailey,Fr.,"Bowling Green, Ky.",,,6' 5'',MB/OPP,5,//gocards.com/sports/womens-volleyball/roster/amirra-bailey/18104,2018
-367,Louisville,,Hannah Kenny,So.,"Villa Park, Ill.",,,5' 8'',S/L,6,//gocards.com/sports/womens-volleyball/roster/hannah-kenny/17844,2018
-367,Louisville,,Chloe Chicoine,Sr.,"Lafayette, Ind.",,,5' 9'',OH,7,//gocards.com/sports/womens-volleyball/roster/chloe-chicoine/17841,2018
-367,Louisville,,Nayelis Cabello,Jr.,"Clermont, Fla.",,,6' 0'',S,8,//gocards.com/sports/womens-volleyball/roster/nayelis-cabello/17840,2018
-367,Louisville,,Jordyn Gray,Fr.,"Charlotte, N.C.",,,6' 1'',OH,9,//gocards.com/sports/womens-volleyball/roster/jordyn-gray/17880,2018
-367,Louisville,,Elsi Karjanlahti,Fr.,"Seinäjoki, Finland",,,5' 8'',L/DS,10,//gocards.com/sports/womens-volleyball/roster/elsi-karjanlahti/18103,2018
-367,Louisville,,Hannah Sherman,5th,"Silver Spring, Md.",,,6' 3'',MB,11,//gocards.com/sports/womens-volleyball/roster/hannah-sherman/17849,2018
-367,Louisville,,Jessica Drapp,Sr.,"Cincinnati, Ohio",,,5' 6'',DS,12,//gocards.com/sports/womens-volleyball/roster/jessica-drapp/17842,2018
-367,Louisville,,Molly Urban,Sr.,"Martinsville, Ind.",,,5' 4'',L/DS,17,//gocards.com/sports/womens-volleyball/roster/molly-urban/17850,2018
-367,Louisville,,Payton Petersen,Jr.,"Dike, Iowa",,,6' 0'',OH/L,21,//gocards.com/sports/womens-volleyball/roster/payton-petersen/17847,2018
-367,Louisville,,Blair Thiebaud,Fr.,"College Station, Texas",,,6' 0'',S,22,//gocards.com/sports/womens-volleyball/roster/blair-thiebaud/17879,2018
-367,Louisville,,Kalyssa Blackshear,So.,"Lomita, Calif.",,,6' 5'',OPP,24,//gocards.com/sports/womens-volleyball/roster/kalyssa-blackshear/17839,2018
-367,Louisville,,Brooke Bultema,Sr.,"Cincinnati, Ohio",,,6' 3'',MB,44,//gocards.com/sports/womens-volleyball/roster/brooke-bultema/17877,2018
-367,Louisville,,Elli Strecker,Fr.,"Zionsville, Ind.",,,6' 4'',MB,54,//gocards.com/sports/womens-volleyball/roster/elli-strecker/17881,2018
 629,San Francisco,,Shannon Levinson,Jr.,Los Angeles,Notre Dame Academy,,5' 3'',DS/L,1,/sports/womens-volleyball/roster/shannon-levinson/3952,2018
 629,San Francisco,,Ally Wada,Fr.,"Aiea, Hawaii",Hawaii Baptist Academy,,5' 8'',S,2,/sports/womens-volleyball/roster/ally-wada/4221,2018
 629,San Francisco,,Tanner Pemberton,Fr.,"Wallace, Calif.",Calaveras HS,,5' 6'',L/DS,4,/sports/womens-volleyball/roster/tanner-pemberton/4966,2018
@@ -14126,3 +14109,21 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 542,Pfeiffer,2617,Emma Gray Beacham,Sophomore,"Laurinburg, N.C.",Scotland,,"5'5""",S,16,//www.gofalconsports.com/sports/womens-volleyball/roster/emma-gray-beacham/2617,2018
 542,Pfeiffer,2621,Lili Jaramillo,Junior,"Oakboro, NC",,,"5'3""",DS,21,//www.gofalconsports.com/sports/womens-volleyball/roster/lili-jaramillo/2621,2018
 542,Pfeiffer,2632,Madison Shutter,Sophomore,"Greensboro, NC",Noble Academy,,"5'1""",DS,24,//www.gofalconsports.com/sports/womens-volleyball/roster/madison-shutter/2632,2018
+367,Louisville,,Molly Sauer,Sr.,"Louisville, Ky.",Assumption,,5' 11'',Libero,1,/sports/womens-volleyball/roster/molly-sauer/8625,2018-19
+367,Louisville,,Anaya Martin,Fr.,"Tyrone, Ga.",Woodward,,5' 7'',S,3,/sports/womens-volleyball/roster/anaya-martin/8916,2018-19
+367,Louisville,,Piper Roe,R-So.,"Roanoke, VA",Cave Spring,,6' 2'',MB,5,/sports/womens-volleyball/roster/piper-roe/11382,2018-19
+367,Louisville,,Emily Scott,Fr.,"Appleton, WI",Kimberly,,6' 2'',MB,7,/sports/womens-volleyball/roster/emily-scott/12284,2018-19
+367,Louisville,,Alexis Hamilton,So.,"Louisville, KY",Assumption,,5' 7'',Libero,8,/sports/womens-volleyball/roster/alexis-hamilton/11377,2018-19
+367,Louisville,,Claire Chaussee,Fr.,"Sun Prairie, WI",Sun Prairie,,6' 2'',OH,9,/sports/womens-volleyball/roster/claire-chaussee/13024,2018-19
+367,Louisville,,Melanie McHenry,Jr.,"Speedway, IN",Speedway,,6' 2'',OH,10,/sports/womens-volleyball/roster/melanie-mchenry/9433,2018-19
+367,Louisville,,Marijke Van Dyke,So.,"Munster, Ind.",Munster,,6' 2'',OH,11,/sports/womens-volleyball/roster/marijke-van-dyke/8726,2018-19
+367,Louisville,,Wilma Rivera,Sr.,"Carolina, Puerto Rico",Saint Francis,,5' 10'',Setter,12,/sports/womens-volleyball/roster/wilma-rivera/8623,2018-19
+367,Louisville,,Megan Sloan,Jr.,"Zionsville, IN",Cathedral,,6' 1'',OH/OPP,14,/sports/womens-volleyball/roster/megan-sloan/8626,2018-19
+367,Louisville,,Aiko Jones,Fr.,"Kingston, Jamaica",Wolmer,,6' 2'',OPP,15,/sports/womens-volleyball/roster/aiko-jones/13820,2018-19
+367,Louisville,,Akela Yuhl,So.,"Manhattan Beach, CA",Mira Costa,,5' 6'',DS,16,/sports/womens-volleyball/roster/akela-yuhl/9439,2018-19
+367,Louisville,,Mia Stander,Fr.,"Atlanta, Ga.",Marist,,5' 3'',DS,17,/sports/womens-volleyball/roster/mia-stander/12286,2018-19
+367,Louisville,,Amanda Green,Sr.,"Skokie, Ill.",Niles North,,6' 1'',OH,18,/sports/womens-volleyball/roster/amanda-green/8617,2018-19
+367,Louisville,,Brianna Lester,Jr.,"Dallas, TX",Richardson,,5' 11'',MB,20,/sports/womens-volleyball/roster/brianna-lester/8619,2018-19
+367,Louisville,,Natalie Palastro,So.,"Pittsburgh, PA",Oakland Catholic,,5' 10'',DS,21,/sports/womens-volleyball/roster/natalie-palastro/8622,2018-19
+367,Louisville,,Kelly O'Neil,So.,"Louisville, KY",Mercy,,5' 7'',DS,24,/sports/womens-volleyball/roster/kelly-oneil/8922,2018-19
+367,Louisville,,Jasmine Bennett,Sr.,"Paducah, Ky.",McCracken Co.,,6' 2'',MB,25,/sports/womens-volleyball/roster/jasmine-bennett/8616,2018-19
