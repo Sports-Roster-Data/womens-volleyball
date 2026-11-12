@@ -795,6 +795,15 @@ def parse_roster_wbkb(team: Dict, html: BeautifulSoup, season: str) -> List[Play
                 if td.find('span') is not None and span_texts and span_texts != td_text:
                     for span in td.find_all('span'):
                         span.decompose()
+            # Sidearm responsive templates repeat one column in a mobile-only
+            # cell (class d-md-none) beside a desktop-only twin (d-none
+            # d-md-table-cell). Counting both breaks header alignment and
+            # shifted the jersey number into the name column (Simpson
+            # 2026-27); drop the mobile-only copy and keep the desktop twin.
+            if raw_player.find('td', class_='d-md-none') is not None and \
+                    raw_player.find('td', class_='d-md-table-cell') is not None:
+                for cell in raw_player.find_all('td', class_='d-md-none'):
+                    cell.decompose()
             raw_player_list = [x.text.strip() for x in raw_player.find_all('td')
                               if x.text.replace('*', '').replace('(she/her/hers)', '').replace('she/her/hers', '').strip() != '']
             row_cells_td_th = raw_player.find_all(['td', 'th'])

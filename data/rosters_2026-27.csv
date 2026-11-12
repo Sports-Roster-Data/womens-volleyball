@@ -1497,9 +1497,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 626,San Diego State,steve-timmons,Steve Timmons,,,,,,N/A,,https://www.goaztecs.com/sports/volleyball/roster/season/2026/staff/steve-timmons,2026-27
 626,San Diego State,haley-coulter,Haley Coulter,,,,,,N/A,,https://www.goaztecs.com/sports/volleyball/roster/season/2026/staff/haley-coulter,2026-27
 626,San Diego State,clayre-shaver,Clayre Shaver,,,,,,N/A,,https://www.goaztecs.com/sports/volleyball/roster/season/2026/staff/clayre-shaver,2026-27
-47,Ball State,,73,1.5,6,17,.353,17,6.6,0,,2026-27
-47,Ball State,,11,0.0,0,2,.000,0,11.0,0,,2026-27
-47,Ball State,,84,1.4,6,19,.316,17,7.0,0,,2026-27
 7,Alabama State,9575,Chidera Okocha,Freshman,"Medford, N.Y.",Longwood HS,,"6'0""",Middle,1,https://www.bamastatesports.com/sports/womens-volleyball/roster/chidera-okocha/9575,2026-27
 7,Alabama State,9588,Denver Watkins,Junior,"Hampton, Ga.",Hampton HS,Grambling State,"5'10""",Outside,2,https://www.bamastatesports.com/sports/womens-volleyball/roster/denver-watkins/9588,2026-27
 7,Alabama State,9581,Emani Green,Freshman,"Madison, Ala.",James Clemens HS,,"5'2""",Defensive,3,https://www.bamastatesports.com/sports/womens-volleyball/roster/emani-green/9581,2026-27
@@ -14929,34 +14926,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 591,Saginaw Valley,8942,Marissa Roe,2nd Year,"Chesterton, Ind.",Chesterton HS,,"6'1""",MB,18,https://www.svsucardinals.com/sports/womens-volleyball/roster/marissa-roe/8942,2026-27
 591,Saginaw Valley,8941,Kendall Ihm,4th Year,"Owosso, Mich.",Owosso HS,,"6'0""",MB,19,https://www.svsucardinals.com/sports/womens-volleyball/roster/kendall-ihm/8941,2026-27
 591,Saginaw Valley,8952,Makayla Bruman,1st Year,"Attica, Mich.",Imlay City HS,,"5'10""",S,20,https://www.svsucardinals.com/sports/womens-volleyball/roster/makayla-bruman/8952,2026-27
-641,Simpson,,1,JR,"Muscatine, Iowa",Muscatine,,5-8,L/OH,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/jansen_hannah_bekp,2026-27
-641,Simpson,,2,FR,"Indianola, Iowa",Indianola,,5-9,OH,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/olson_lauren_gmun,2026-27
-641,Simpson,,4,FR,"Eldridge, Iowa",North Scott,,5-7,S,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/allen_addison_huks,2026-27
-641,Simpson,,5,FR,"West Des Moines, Iowa",Valley,,5-9,RS,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/brown_brooklyn_7ww1,2026-27
-641,Simpson,,6,FR,"Decorah, Iowa",Decorah,,5-6,OH/DS,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/massman_mckinley_fba3,2026-27
-641,Simpson,,7,FR,"Bondurant, Iowa",Bondurant-Farrar,,5-8,S/RS,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/arens_kailynn_kk13,2026-27
-641,Simpson,,8,SR,"Ankeny, Iowa",Centennial,,5-11,MB/RS,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/schmidt_jada_g8bh,2026-27
-641,Simpson,,9,JR,"Jordan, Minn.",Jordan,,5-11,MB/RS,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/kinkeade_caroline_scgr,2026-27
-641,Simpson,,10,FR,"Humboldt, Iowa",Humboldt,,5-10,OH,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/schluter_mia_nqho,2026-27
-641,Simpson,,11,SO,"Indianola, Iowa",Indianola,,5-7,DS/L,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/downey_sully_ys8s,2026-27
-641,Simpson,,12,SO,"Indianola, Iowa",Indianola,,5-11,MB,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/sloan_makenzie_758r,2026-27
-641,Simpson,,13,SR,"Malvern, Iowa",East Mills,,5-9,OH,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/williams_emily_p7h0,2026-27
-641,Simpson,,14,FR,"Denver, Iowa",Denver,,6-0,MB/RS,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/thurm_mylee_83a1,2026-27
-641,Simpson,,15,FR,"Tabor, Iowa",Fremont-Mills,,6-2,MB,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/mattox_hayleigh_y4zx,2026-27
-641,Simpson,,16,SR,"Omaha, Neb.",Westside,,5-7,S/DS,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/behrens_audrey_jspc,2026-27
-641,Simpson,,17,FR,"Dallas Center, Iowa",Dallas Center-Grimes,,5-7,S,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/fox_riley_7lt1,2026-27
-641,Simpson,,18,JR,"Ankeny, Iowa",Ankeny,,5-8,S,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/dockendorff_lauren_h7ty,2026-27
-641,Simpson,,19,FR,"Mount Pleasant, Iowa",Mount Pleasant,,5-10,OH/MB,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/clark_addison_8mv6,2026-27
-641,Simpson,,20,FR,"Waukee, Iowa",Waukee Northwest,,5-6,DS/L,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/pelds_anna_a85b,2026-27
-641,Simpson,,21,JR,"Canary Island, Spain",Sagrado Corazón,,5-9,OH,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/gomez_de_luis_lucia_cf6b,2026-27
-641,Simpson,,22,FR,"Paola, Kan.",Paola,,5-5,DS/L,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/haas_vanessa_twm1,2026-27
-641,Simpson,,23,SO,"Greenfield, Iowa",Nodaway Valley,,5-10,RS/MB,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/carstens_bailey_tmhh,2026-27
-641,Simpson,,25,FR,"Lakeville, Minn.",Lakeville North,,6-0,MB/RS,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/swenson_annika_nj6w,2026-27
-641,Simpson,,26,SO,"Oakland, Iowa",Riverside,,5-7,OH,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/henderson_elly_lfkg,2026-27
-641,Simpson,,27,FR,"Des Moines, Iowa",Roosevelt,,5-4,DS/OH,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/rife_maliya_jhlq,2026-27
-641,Simpson,,28,FR,"Minneapolis, Minn.",Southwest,,5-6,S/DS,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/clennon_elizabeth_zadf,2026-27
-641,Simpson,,29,FR,"Malvern, Iowa",East Mills,,5-7,DS/OH,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/palmer_loycee_sm3q,2026-27
-641,Simpson,,33,FR,"Pella, Iowa",Pella Christian,,5-11,OH,,https://www.simpsonathletics.com/sports/wvball/2026-27/bios/roozeboom_brynn_7dg0,2026-27
 684,Suffolk,,Sam Michon,Jr.,"Longmeadow, Mass.",Longmeadow,,5-8,RS,0,https://www.gosuffolkrams.com/sports/wvball/2026-27/bios/michon_sam_mecp,2026-27
 684,Suffolk,,Aislinn Lanigan,Sr.,"Savannah, Ga.",Islands,,5-8,S,3,https://www.gosuffolkrams.com/sports/wvball/2026-27/bios/lanigan_aislinn_l754,2026-27
 684,Suffolk,,Kaylee Perrault,Fr.,"West Bridgewater, Mass.",Cardinal Spellman,,5-10,OH,5,https://www.gosuffolkrams.com/sports/wvball/2026-27/bios/perrault_kaylee_t97i,2026-27
@@ -16275,3 +16244,48 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 569,Regis (MA),,Rachel Albernaz,Fy.,"Rehoboth, Mass.",Bristol-Plymouth Regional Technical School,,6-3,MB,21,/sports/wvball/2026-27/bios/albernaz_rachel_d8bv,2026-27
 569,Regis (MA),,Talulah Homolya,Fy.,"Collegeville, Pa.",Perkiomen Valley High School,,5-11,RS,24,/sports/wvball/2026-27/bios/homolya_tallulah_vw8k,2026-27
 569,Regis (MA),,Kate Julian,Jr.,"Mendon, Mass.",Nipmuc Regional,,5-10,S/RS,26,/sports/wvball/2026-27/bios/julian_kate_hw8e,2026-27
+47,Ball State,,Audrey Geer,Jr.,"Birch Run, Mich.",Frankenmuth,,5' 10'',OH,1,/sports/womens-volleyball/roster/audrey-geer/13314,2026-27
+47,Ball State,,Reese Axness,So.,"Brooklyn Park, MN",Champlin Park,,5' 9'',S,2,/sports/womens-volleyball/roster/reese-axness/13177,2026-27
+47,Ball State,,Elizabeth Tabeling,Jr.,"Edgewood, KY",St. Henry,,5' 6'',DS/L,3,/sports/womens-volleyball/roster/elizabeth-tabeling/13185,2026-27
+47,Ball State,,Kendall Eden,So.,"Morgantown, IN",Indian Creek,,5' 4'',DS/L,4,/sports/womens-volleyball/roster/kendall-eden/13181,2026-27
+47,Ball State,,Merritt Sliwa,Fr.,"Fishers, Ind.",Hamilton Southeastern,,6' 1'',OH,6,/sports/womens-volleyball/roster/merritt-sliwa/13315,2026-27
+47,Ball State,,Lucy McCollum,Fr.,"Merrillville, Ind.",Merrillville,,5' 10'',S,7,/sports/womens-volleyball/roster/lucy-mccollum/13316,2026-27
+47,Ball State,,Lindsey Green,Sr.,"Cincinnati, OH",Ursuline Academy,,5' 10'',S,8,/sports/womens-volleyball/roster/lindsey-green/13182,2026-27
+47,Ball State,,Mallory Pike,Fr.,"Monclova, Ohio",Anthony Wayne,,5' 11'',OH,9,/sports/womens-volleyball/roster/mallory-pike/13318,2026-27
+47,Ball State,,Leah Pike,Fr.,"Monclova, Ohio",Anthony Wayne,,5' 11'',MH,10,/sports/womens-volleyball/roster/leah-pike/13319,2026-27
+47,Ball State,,Tiffany Snook,Jr.,"Fishers, IN",Hamilton Southeastern,,6' 2'',OPP/MH,11,/sports/womens-volleyball/roster/tiffany-snook/13184,2026-27
+47,Ball State,,Sophie Ledbetter,Jr.,"Fishers, IN",Hamilton Southeastern,,5' 8'',DS/L,12,/sports/womens-volleyball/roster/sophie-ledbetter/13183,2026-27
+47,Ball State,,Gwen Crull,Sr.,"Madison, WI",McFarland,,6' 2'',MH,13,/sports/womens-volleyball/roster/gwen-crull/13180,2026-27
+47,Ball State,,Ava Smith,Jr.,"Carmel, Ind.",Park Tudor,,6' 1'',OH/Opp,14,/sports/womens-volleyball/roster/ava-smith/13317,2026-27
+47,Ball State,,Allie Wuestenfeld,Sr.,"Joliet, IL",Joliet Catholic Academy,,5' 8'',DS,15,/sports/womens-volleyball/roster/allie-wuestenfeld/13482,2026-27
+47,Ball State,,Alana Bailey,So.,"Grand Rapids, MI",East Kentwood,,5' 11'',MH,16,/sports/womens-volleyball/roster/alana-bailey/13178,2026-27
+47,Ball State,,Camryn Wise,Sr.,"Parker City, IN",Wapahani,,5' 11'',MH,17,/sports/womens-volleyball/roster/camryn-wise/13187,2026-27
+47,Ball State,,Madison Buckley,5th,"Montgomery, IL",Kaneland,,6' 2'',OPP,21,/sports/womens-volleyball/roster/madison-buckley/13179,2026-27
+641,Simpson,,Hannah Jansen,JR,"Muscatine, Iowa",Muscatine,,5-8,L/OH,1,//www.simpsonathletics.com/sports/wvball/2026-27/bios/jansen_hannah_bekp,2026-27
+641,Simpson,,Lauren Olson,FR,"Indianola, Iowa",Indianola,,5-9,OH,2,//www.simpsonathletics.com/sports/wvball/2026-27/bios/olson_lauren_gmun,2026-27
+641,Simpson,,Addison Allen,FR,"Eldridge, Iowa",North Scott,,5-7,S,4,//www.simpsonathletics.com/sports/wvball/2026-27/bios/allen_addison_huks,2026-27
+641,Simpson,,Brooklyn Brown,FR,"West Des Moines, Iowa",Valley,,5-9,RS,5,//www.simpsonathletics.com/sports/wvball/2026-27/bios/brown_brooklyn_7ww1,2026-27
+641,Simpson,,McKinley Massman,FR,"Decorah, Iowa",Decorah,,5-6,OH/DS,6,//www.simpsonathletics.com/sports/wvball/2026-27/bios/massman_mckinley_fba3,2026-27
+641,Simpson,,Kai Arens,FR,"Bondurant, Iowa",Bondurant-Farrar,,5-8,S/RS,7,//www.simpsonathletics.com/sports/wvball/2026-27/bios/arens_kailynn_kk13,2026-27
+641,Simpson,,Jada Schmidt,SR,"Ankeny, Iowa",Centennial,,5-11,MB/RS,8,//www.simpsonathletics.com/sports/wvball/2026-27/bios/schmidt_jada_g8bh,2026-27
+641,Simpson,,Caroline Kinkeade,JR,"Jordan, Minn.",Jordan,,5-11,MB/RS,9,//www.simpsonathletics.com/sports/wvball/2026-27/bios/kinkeade_caroline_scgr,2026-27
+641,Simpson,,Mia Schluter,FR,"Humboldt, Iowa",Humboldt,,5-10,OH,10,//www.simpsonathletics.com/sports/wvball/2026-27/bios/schluter_mia_nqho,2026-27
+641,Simpson,,Sully Downey,SO,"Indianola, Iowa",Indianola,,5-7,DS/L,11,//www.simpsonathletics.com/sports/wvball/2026-27/bios/downey_sully_ys8s,2026-27
+641,Simpson,,Makenzie Sloan,SO,"Indianola, Iowa",Indianola,,5-11,MB,12,//www.simpsonathletics.com/sports/wvball/2026-27/bios/sloan_makenzie_758r,2026-27
+641,Simpson,,Emily Williams,SR,"Malvern, Iowa",East Mills,,5-9,OH,13,//www.simpsonathletics.com/sports/wvball/2026-27/bios/williams_emily_p7h0,2026-27
+641,Simpson,,Mylee Thurm,FR,"Denver, Iowa",Denver,,6-0,MB/RS,14,//www.simpsonathletics.com/sports/wvball/2026-27/bios/thurm_mylee_83a1,2026-27
+641,Simpson,,Hayleigh Mattox,FR,"Tabor, Iowa",Fremont-Mills,,6-2,MB,15,//www.simpsonathletics.com/sports/wvball/2026-27/bios/mattox_hayleigh_y4zx,2026-27
+641,Simpson,,Audrey Behrens,SR,"Omaha, Neb.",Westside,,5-7,S/DS,16,//www.simpsonathletics.com/sports/wvball/2026-27/bios/behrens_audrey_jspc,2026-27
+641,Simpson,,Riley Fox,FR,"Dallas Center, Iowa",Dallas Center-Grimes,,5-7,S,17,//www.simpsonathletics.com/sports/wvball/2026-27/bios/fox_riley_7lt1,2026-27
+641,Simpson,,Lauren Dockendorff,JR,"Ankeny, Iowa",Ankeny,,5-8,S,18,//www.simpsonathletics.com/sports/wvball/2026-27/bios/dockendorff_lauren_h7ty,2026-27
+641,Simpson,,Addison Clark,FR,"Mount Pleasant, Iowa",Mount Pleasant,,5-10,OH/MB,19,//www.simpsonathletics.com/sports/wvball/2026-27/bios/clark_addison_8mv6,2026-27
+641,Simpson,,Anna Pelds,FR,"Waukee, Iowa",Waukee Northwest,,5-6,DS/L,20,//www.simpsonathletics.com/sports/wvball/2026-27/bios/pelds_anna_a85b,2026-27
+641,Simpson,,Lucia Gómez de Luis,JR,"Canary Island, Spain",Sagrado Corazón,,5-9,OH,21,//www.simpsonathletics.com/sports/wvball/2026-27/bios/gomez_de_luis_lucia_cf6b,2026-27
+641,Simpson,,Vanessa Haas,FR,"Paola, Kan.",Paola,,5-5,DS/L,22,//www.simpsonathletics.com/sports/wvball/2026-27/bios/haas_vanessa_twm1,2026-27
+641,Simpson,,Bailey Carstens,SO,"Greenfield, Iowa",Nodaway Valley,,5-10,RS/MB,23,//www.simpsonathletics.com/sports/wvball/2026-27/bios/carstens_bailey_tmhh,2026-27
+641,Simpson,,Annika Swenson,FR,"Lakeville, Minn.",Lakeville North,,6-0,MB/RS,25,//www.simpsonathletics.com/sports/wvball/2026-27/bios/swenson_annika_nj6w,2026-27
+641,Simpson,,Elly Henderson,SO,"Oakland, Iowa",Riverside,,5-7,OH,26,//www.simpsonathletics.com/sports/wvball/2026-27/bios/henderson_elly_lfkg,2026-27
+641,Simpson,,Maliya Rife,FR,"Des Moines, Iowa",Roosevelt,,5-4,DS/OH,27,//www.simpsonathletics.com/sports/wvball/2026-27/bios/rife_maliya_jhlq,2026-27
+641,Simpson,,Elizabeth Clennon,FR,"Minneapolis, Minn.",Southwest,,5-6,S/DS,28,//www.simpsonathletics.com/sports/wvball/2026-27/bios/clennon_elizabeth_zadf,2026-27
+641,Simpson,,Loycee Palmer,FR,"Malvern, Iowa",East Mills,,5-7,DS/OH,29,//www.simpsonathletics.com/sports/wvball/2026-27/bios/palmer_loycee_sm3q,2026-27
+641,Simpson,,Brynn Roozeboom,FR,"Pella, Iowa",Pella Christian,,5-11,OH,33,//www.simpsonathletics.com/sports/wvball/2026-27/bios/roozeboom_brynn_7dg0,2026-27

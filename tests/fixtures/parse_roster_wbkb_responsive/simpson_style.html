@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- Simpson Athletics 2026-27 Sidearm responsive table: each player row
+     repeats the jersey column in a mobile-only cell (d-md-none) beside the
+     desktop twin (d-none d-md-table-cell), and the name lives in a <th>.
+     Label spans inside desktop cells are also mobile-only. Before the fix,
+     the extra cell broke the header alignment and the jersey number landed
+     in the name column. -->
+<html>
+<body>
+<table class="table">
+  <thead>
+    <tr>
+      <th class="text-nowrap w-1 col1 sortable" scope="col">No.</th>
+      <th class="text-nowrap col2 sortable" scope="col">Name</th>
+      <th class="text-nowrap col3 sortable" scope="col">Pos.</th>
+      <th class="text-nowrap col4 sortable" scope="col">Ht.</th>
+      <th class="text-nowrap col5 sortable" scope="col">Cl.</th>
+      <th class="text-nowrap col6 sortable" scope="col">Hometown/High School</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="text-nowrap jersey-number d-md-none">
+        <span class="badge badge-secondary">1</span>
+      </td>
+      <td class="text-inherit jersey-number d-none d-md-table-cell">
+        <span class="label font-weight-bold fw-bold d-md-none">No.:</span>
+        1
+      </td>
+      <th class="text-inherit" scope="row">
+        <a aria-label="Hannah Jansen: jersey number 1: full bio"
+           href="/sports/wvball/2026-27/bios/jansen_hannah_bekp">Hannah
+          Jansen</a>
+      </th>
+      <td class="text-nowrap">
+        <span class="label font-weight-bold fw-bold d-md-none">Pos.:</span>
+        L/OH
+      </td>
+      <td class="text-nowrap">
+        <span class="label font-weight-bold fw-bold d-md-none">Ht.:</span>
+        5-8
+      </td>
+      <td class="text-nowrap">
+        <span class="label font-weight-bold fw-bold d-md-none">Cl.:</span>
+        JR
+      </td>
+      <td class="text-inherit">
+        <span class="label font-weight-bold fw-bold d-md-none">Hometown/High School:</span>
+        Muscatine, Iowa / Muscatine
+      </td>
+    </tr>
+    <tr>
+      <td class="text-nowrap jersey-number d-md-none">
+        <span class="badge badge-secondary">12</span>
+      </td>
+      <td class="text-inherit jersey-number d-none d-md-table-cell">
+        <span class="label font-weight-bold fw-bold d-md-none">No.:</span>
+        12
+      </td>
+      <th class="text-inherit" scope="row">
+        <a aria-label="Ava Martin: jersey number 12: full bio"
+           href="/sports/wvball/2026-27/bios/martin_ava_4xp2">Ava Martin</a>
+      </th>
+      <td class="text-nowrap">
+        <span class="label font-weight-bold fw-bold d-md-none">Pos.:</span>
+        MB
+      </td>
+      <td class="text-nowrap">
+        <span class="label font-weight-bold fw-bold d-md-none">Ht.:</span>
+        6-0
+      </td>
+      <td class="text-nowrap">
+        <span class="label font-weight-bold fw-bold d-md-none">Cl.:</span>
+        FR
+      </td>
+      <td class="text-inherit">
+        <span class="label font-weight-bold fw-bold d-md-none">Hometown/High School:</span>
+        Indianola, Iowa / Indianola
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

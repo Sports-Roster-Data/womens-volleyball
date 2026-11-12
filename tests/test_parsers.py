@@ -271,6 +271,37 @@ def test_parse_roster_wbkb_major_column_aligned():
                + (p.year or "") + (p.position or "") for p in roster)
 
 
+def test_parse_roster_wbkb_responsive_duplicate_jersey_cell():
+    # Sidearm responsive table (Simpson 2026-27): each row repeats the jersey
+    # column in a mobile-only cell (d-md-none) beside the desktop twin
+    # (d-none d-md-table-cell), and the name lives in a <th>. The duplicate
+    # cell must be dropped so header alignment holds; before the fix the
+    # jersey number shifted into the name column and every row was
+    # quarantined as "numeric-only name".
+    team = {"ncaa_id": 641, "team": "Simpson", "url": "https://www.simpsonathletics.com/sports/wvball/index"}
+    html = load("parse_roster_wbkb_responsive", "simpson_style.html")
+    roster = rosters.parse_roster_wbkb(team, html, "2026-27")
+
+    assert len(roster) == 2
+    hannah = roster[0]
+    assert hannah.name == "Hannah Jansen"
+    assert hannah.jersey == "1"
+    assert hannah.position == "L/OH"
+    assert hannah.height == "5-8"
+    assert hannah.year == "JR"
+    assert hannah.hometown == "Muscatine, Iowa"
+    assert hannah.high_school == "Muscatine"
+    assert hannah.url.endswith("/bios/jansen_hannah_bekp")
+
+    ava = roster[1]
+    assert ava.name == "Ava Martin"
+    assert ava.jersey == "12"
+    assert ava.position == "MB"
+    assert ava.year == "FR"
+    # No field may be left holding a bare jersey number.
+    assert all(p.name and not p.name.isdigit() for p in roster)
+
+
 def test_parse_roster_list_item():
     # Nuxt roster-list-item layout: Iowa, Notre Dame, Missouri, Northwestern, …
     team = {"ncaa_id": 312, "team": "Iowa", "url": "https://hawkeyesports.com/sports/wvball"}
