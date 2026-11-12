@@ -1,6 +1,6 @@
 "metric","value"
-"rows_raw",15278
-"rows_published",15250
+"rows_raw",15273
+"rows_published",15245
 "rows_quarantined",28
 "rows_removed_exact_duplicate",0
 "rows_removed_reviewed_duplicate",0
@@ -9,7 +9,7 @@
 "positions_unmapped_nonempty_raw",289
 "classes_unmapped_nonempty_raw",120
 "state_or_country_unparsed_nonempty_raw",363
-"high_school_missing",1519
+"high_school_missing",1501
 "high_school_backfilled",109
 "cell_corrections_applied",178
 "stale_roster_teams_flagged",1

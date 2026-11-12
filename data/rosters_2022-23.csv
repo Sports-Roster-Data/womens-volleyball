@@ -2199,24 +2199,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 96,Fresno State,,Addison Haluska,Fr.,"Gilbert, Ariz.",,,6' 0'',MB,14,//gobulldogs.com/sports/womens-volleyball/roster/addison-haluska/15560,2022
 96,Fresno State,,Maja Malczewska,So.,"Gdansk, Poland",,,6' 0'',OH,21,//gobulldogs.com/sports/womens-volleyball/roster/maja-malczewska/14765,2022
 96,Fresno State,,Jenna Legault,Fr.,"Bothell, Wash.",,,6' 0'',OH,23,//gobulldogs.com/sports/womens-volleyball/roster/jenna-legault/16153,2022
-234,Florida St,,Payton Whalen,So.,"Peoria, Ariz.",,,6' 1'',Outside Hitter,0,//seminoles.com/sports/womens-volleyball/roster/payton-whalen/8468,2022
-234,Florida St,,Ava Lambert,So.,"Scottsdale, Ariz.",,,5' 9'',Libero,1,//seminoles.com/sports/womens-volleyball/roster/ava-lambert/8459,2022
-234,Florida St,,Nicole Mauser,Sr.,Dallas Texas,,,6' 2'',Opposite,2,//seminoles.com/sports/womens-volleyball/roster/nicole-mauser/8461,2022
-234,Florida St,,Kelsey Perry,5th,"Frisco, Texas",,,6' 4'',Middle Blocker,3,//seminoles.com/sports/womens-volleyball/roster/kelsey-perry/8464,2022
-234,Florida St,,Victoria David,So.,"Rio de Janeiro, Brazil",,,6' 1'',Outside Hitter/Libero,6,//seminoles.com/sports/womens-volleyball/roster/victoria-david/8455,2022
-234,Florida St,,Ryan Murphy,So.,"Ponte Vedra Beach, Fla.",,,6' 1'',Setter,7,//seminoles.com/sports/womens-volleyball/roster/ryan-murphy/8462,2022
-234,Florida St,,Emma Lilo,Jr.,"Kailua, Hawaii",,,5' 9'',Setter,9,//seminoles.com/sports/womens-volleyball/roster/emma-lilo/8469,2022
-234,Florida St,,Callie Kieffer,Sr.,"Prosper, Texas",,,5' 10'',Setter,10,//seminoles.com/sports/womens-volleyball/roster/callie-kieffer/8527,2022
-234,Florida St,,Caylan Russ,Jr.,"Winter Garden, Fla.",,,5' 6'',Libero,11,//seminoles.com/sports/womens-volleyball/roster/caylan-russ/8466,2022
-234,Florida St,,Kyleene Filimaua,Sr.,"Bothell, Wash.",,,6' 1'',Outside Hitter,12,//seminoles.com/sports/womens-volleyball/roster/kyleene-filimaua/8457,2022
-234,Florida St,,Bennett Raterman,Fr.,"St. Louis, Mo.",,,6' 3'',Middle Blocker,13,//seminoles.com/sports/womens-volleyball/roster/bennett-raterman/8510,2022
-234,Florida St,,Johanna Sova,Jr.,"Tallinn, Estonia",,,6' 5'',Opposite,15,//seminoles.com/sports/womens-volleyball/roster/johanna-sova/8467,2022
-234,Florida St,,Nenu Kpea,So.,"Melissa, Texas",,,6' 2'',Middle Blocker,16,//seminoles.com/sports/womens-volleyball/roster/nenu-kpea/8458,2022
-234,Florida St,,Sofia Moss,Fr.,"Tortoli, Italy",,,6' 0'',Outside Hitter,17,//seminoles.com/sports/womens-volleyball/roster/sofia-moss/8528,2022
-234,Florida St,,Maile Chan,Jr.,"Portland, Ore.",,,5' 3'',Libero,18,//seminoles.com/sports/womens-volleyball/roster/maile-chan/8470,2022
-234,Florida St,,Bailey Higgins,Jr.,"Tampa, Fla.",,,5' 11'',Opposite,21,//seminoles.com/sports/womens-volleyball/roster/bailey-higgins/8853,2022
-234,Florida St,,Delaney Ewing,Jr.,"Fort Collins, Colo.",,,6' 2'',Middle Blocker,24,//seminoles.com/sports/womens-volleyball/roster/delaney-ewing/8456,2022
-234,Florida St,,Lexie Mason,So.,"Burlington, Wash.",,,6' 1'',Opposite,26,//seminoles.com/sports/womens-volleyball/roster/lexie-mason/8460,2022
 97,Cal State Fullerton,4476,Kyahana Robinson,Senior,"San Jose, Calif.",,Notre Dame De Namur University,"6'0""",RS/MB,2,//www.fullertontitans.com/sports/womens-volleyball/roster/kyahana-robinson/4476,2022
 97,Cal State Fullerton,4478,Naia Stewart,Freshman,"Gilbert, Ariz.",,,"6'0""",OH,3,//www.fullertontitans.com/sports/womens-volleyball/roster/naia-stewart/4478,2022
 97,Cal State Fullerton,4475,Málie McClure,Senior,"Kane'ohe, Hawai'i",,,"5'9""",OH/L,4,//www.fullertontitans.com/sports/womens-volleyball/roster/m-aacute-lie-mcclure/4475,2022
@@ -15094,3 +15076,19 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 487,North Alabama,,Hayley Martin,Fr.,"Elgin, Ill. / Harvest Christian Academy",,,5-11,OH,21,//www.roarlions.com/sports/wvball/roster/hayley-martin/2736,2022-23
 487,North Alabama,,Mattrice Harris,Sr.,"Opelika, Ala. / Opelika High School",Wallace State CC,,6-1,MB,24,//www.roarlions.com/sports/wvball/roster/mattrice-harris/2656,2022-23
 487,North Alabama,,Maggie Sullivan,Sr.,"Tuscaloosa, Ala. / American Christian Academy",,,6-1,MB,25,//www.roarlions.com/sports/wvball/roster/maggie-sullivan/2662,2022-23
+234,Florida St,,Skye Ekes,So.,"Sarasota, Fla.",Cardinal Mooney,,6' 1'',Right Side/Outside Hitter,1,/sports/womens-volleyball/roster/skye-ekes/6264,2022-23
+234,Florida St,,Addi Hultquist,R-Fr.,"Tallahassee, Fla.",Chiles,,5' 4'',Libero,2,/sports/womens-volleyball/roster/addi-hultquist/6266,2022-23
+234,Florida St,,Andjelija Draskovic,Sr.,"Vrnjacka Banja, Serbia",Druga Kragujevacka Gimnazija,,5' 11'',Setter,3,/sports/womens-volleyball/roster/andjelija-draskovic/6262,2022-23
+234,Florida St,,Audrey Koenig,So.,"Wesley Chapel, Fla.",Bishop McLaughlin,,6' 3'',Outside Hitter,4,/sports/womens-volleyball/roster/audrey-koenig/7029,2022-23
+234,Florida St,,Emery Dupes,So.,"Marietta, Ga.",Walton,,5' 6'',Libero,5,/sports/womens-volleyball/roster/emery-dupes/7025,2022-23
+234,Florida St,,Emily Ryan,Gr.,"Bethesda, Md.",The Academy of the Holy Cross,,6' 4'',Middle Blocker,7,/sports/womens-volleyball/roster/emily-ryan/5943,2022-23
+234,Florida St,,Khori Louis,So.,"Tallahassee, Fla.",Florida,,6' 3'',Middle Blocker,8,/sports/womens-volleyball/roster/khori-louis/7030,2022-23
+234,Florida St,,Audrey Rothman,Fr.,"Birmingham, Ala.",Spain Park,,6' 4'',Outside Hitter,9,/sports/womens-volleyball/roster/audrey-rothman/6271,2022-23
+234,Florida St,,Alejandra Perez,Gr.,"Ponce, Puerto Rico",Colegio Sagrado Corazón de Jesús,,5' 8'',Libero,12,/sports/womens-volleyball/roster/alejandra-perez/5956,2022-23
+234,Florida St,,Laila N’Diaye,Fr.,"Longwood, Fla.",Lake Brantley,,6' 2'',Middle Blocker,14,/sports/womens-volleyball/roster/laila-ndiaye/7031,2022-23
+234,Florida St,,Sydney Conley,Jr.,"Oviedo, Fla.",Hagerty,,6' 1'',Right Side/Outside Hitter,15,/sports/womens-volleyball/roster/sydney-conley/6261,2022-23
+234,Florida St,,Emma Clothier,Sr.,"Carrollton, Texas",Hebron,,6' 2'',Middle Blocker,16,/sports/womens-volleyball/roster/emma-clothier/5964,2022-23
+234,Florida St,,Greta Gelumbickas,Fr.,"Boca Raton, Fla.",Boca Raton,,6' 2'',Middle Blocker,17,/sports/womens-volleyball/roster/greta-gelumbickas/7028,2022-23
+234,Florida St,,Ava Pitchford,So.,"Norcross, Ga.",Alpharetta,,5' 9'',Setter,18,/sports/womens-volleyball/roster/ava-pitchford/5972,2022-23
+234,Florida St,,Melanie Cuervo,Gr.,"Miami, Fla.",John A. Ferguson,,5' 7'',Setter,19,/sports/womens-volleyball/roster/melanie-cuervo/5976,2022-23
+234,Florida St,,Lauryn Burrows,Sr.,"Marietta, Ga.",Walton,,5' 8'',Libero,23,/sports/womens-volleyball/roster/lauryn-burrows/5980,2022-23

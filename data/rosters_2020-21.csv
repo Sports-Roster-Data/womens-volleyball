@@ -2084,10 +2084,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 96,Fresno State,,Savanah Smith,Sr.,"Roseville, Calif.",,,5' 11'',OH,16,//gobulldogs.com/sports/womens-volleyball/roster/savanah-smith/10662,2020
 96,Fresno State,,Amilya Thompson,Sr.,"Stockton, Calif.",,,5' 10'',OH,23,//gobulldogs.com/sports/womens-volleyball/roster/amilya-thompson/10019,2020
 96,Fresno State,,Julia Handy,R-So.,"Hilmar, Calif.",,,5' 9'',S,24,//gobulldogs.com/sports/womens-volleyball/roster/julia-handy/10656,2020
-234,Florida St,,Payton Whalen,So.,"Peoria, Ariz.",,,6' 1'',Outside Hitter,0,//seminoles.com/sports/womens-volleyball/roster/payton-whalen/8468,2020
-234,Florida St,,Ava Lambert,So.,"Scottsdale, Ariz.",,,5' 9'',Libero,1,//seminoles.com/sports/womens-volleyball/roster/ava-lambert/8459,2020
-234,Florida St,,Nicole Mauser,Sr.,Dallas Texas,,,6' 2'',Opposite,2,//seminoles.com/sports/womens-volleyball/roster/nicole-mauser/8461,2020
-234,Florida St,,Kelsey Perry,5th,"Frisco, Texas",,,6' 4'',Middle Blocker,3,//seminoles.com/sports/womens-volleyball/roster/kelsey-perry/8464,2020
 97,Cal State Fullerton,3697,Savahna Costello,Senior,"Riverside, Calif.",La Sierra HS,,"5'6""",L,1,//www.fullertontitans.com/sports/womens-volleyball/roster/savahna-costello/3697,2020
 97,Cal State Fullerton,3710,Nicole Shuhandler,Junior,"Scottsdale, Ariz.",Notre Dame Preparatory HS,,"6'2""",MB,2,//www.fullertontitans.com/sports/womens-volleyball/roster/nicole-shuhandler/3710,2020
 97,Cal State Fullerton,3704,Danielle Jefferies,Sophomore,"Reedley, Calif.",Immanuel HS,,"5'11""",OH,4,//www.fullertontitans.com/sports/womens-volleyball/roster/danielle-jefferies/3704,2020
@@ -13545,3 +13541,17 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 688,Syracuse,,Naomi Franco,Fr.,"Fayetteville, GA.",Fayette County HS,,6' 3'',OH,17,/sports/womens-volleyball/roster/naomi-franco/21365,2020-21
 688,Syracuse,,Izzy Plummer,So.,"Fairport, N.Y.",Fairport High School,,6' 3'',MB,19,/sports/womens-volleyball/roster/izzy-plummer/20281,2020-21
 688,Syracuse,,Viktoriia Lokhmanchuk,So.,"Zhaporizhia, Ukraine",Orbita,,6' 5'',OH,23,/sports/womens-volleyball/roster/viktoriia-lokhmanchuk/21370,2020-21
+234,Florida St,,Morgan Chacon,R-So.,"Crown Point, Ind.",Crown Point,,5' 11'',Outside Hitter,3,/sports/womens-volleyball/roster/morgan-chacon/5727,2020-21
+234,Florida St,,Audrey Koenig,Fr.,"Wesley Chapel, Fla.",Bishop McLaughlin,,6' 3'',Outside Hitter,4,/sports/womens-volleyball/roster/audrey-koenig/7029,2020-21
+234,Florida St,,Jasmyn Martin,Sr.,"Brooklyn Park, Minn.",Hopkins,,6' 3'',Outside/Right Side Hitter,4,/sports/womens-volleyball/roster/jasmyn-martin/3603,2020-21
+234,Florida St,,Lily Tessier,R-So.,"Fort Myers, Fla.",Evangelical Christian,,6' 3'',Setter,7,/sports/womens-volleyball/roster/lily-tessier/5744,2020-21
+234,Florida St,,Khori Louis,Fr.,"Tallahassee, Fla.",Florida,,6' 3'',Middle Blocker,8,/sports/womens-volleyball/roster/khori-louis/7030,2020-21
+234,Florida St,,Jessica Nunge,So.,"Newburgh, Ind.",Castle,,6' 2'',Outside/Right Side Hitter,10,/sports/womens-volleyball/roster/jessica-nunge/3614,2020-21
+234,Florida St,,Marissa Stockman,Jr.,"Clear Lake, Wis.",River Falls,,6' 3'',Middle Blocker,11,/sports/womens-volleyball/roster/marissa-stockman/5755,2020-21
+234,Florida St,,Taryn Knuth,Sr.,"Johnston, Iowa",Johnston,,6' 3'',Middle Blocker,13,/sports/womens-volleyball/roster/taryn-knuth/3621,2020-21
+234,Florida St,,Caroline Golden,R-Sr.,"Mandeville, La.",Fontainebleau,,5' 9'',Libero,14,/sports/womens-volleyball/roster/caroline-golden/3627,2020-21
+234,Florida St,,Sydney Conley,Fr.,"Oviedo, Fla.",Hagerty,,6' 1'',Right Side/Outside Hitter,15,/sports/womens-volleyball/roster/sydney-conley/6261,2020-21
+234,Florida St,,Emma Clothier,So.,"Carrollton, Texas",Hebron,,6' 2'',Middle Blocker,16,/sports/womens-volleyball/roster/emma-clothier/5964,2020-21
+234,Florida St,,Ava Pitchford,Fr.,"Norcross, Ga.",Alpharetta,,5' 9'',Setter,18,/sports/womens-volleyball/roster/ava-pitchford/5972,2020-21
+234,Florida St,,Olivia Dailey,R-Sr.,"Trussville, Ala.",The Cahaba School,,5' 10'',Setter,20,/sports/womens-volleyball/roster/olivia-dailey/3648,2020-21
+234,Florida St,,Lauryn Burrows,So.,"Marietta, Ga.",Walton,,5' 8'',Libero,23,/sports/womens-volleyball/roster/lauryn-burrows/5980,2020-21

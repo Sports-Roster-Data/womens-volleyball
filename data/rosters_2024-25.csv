@@ -2315,24 +2315,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 96,Fresno State,,Keely Hummel,Fr.,"Stockton, Calif.",,,5' 10'',S,20,//gobulldogs.com/sports/womens-volleyball/roster/keely-hummel/15561,2024
 96,Fresno State,,Maja Malczewska,Sr.,"Gdansk, Poland",,,6' 0'',OH,22,//gobulldogs.com/sports/womens-volleyball/roster/maja-malczewska/14765,2024
 96,Fresno State,,Jenna Legault,R-So.,"Bothell, Wash.",,,6' 0'',OH,23,//gobulldogs.com/sports/womens-volleyball/roster/jenna-legault/16153,2024
-234,Florida St,,Payton Whalen,So.,"Peoria, Ariz.",,,6' 1'',Outside Hitter,0,//seminoles.com/sports/womens-volleyball/roster/payton-whalen/8468,2024
-234,Florida St,,Ava Lambert,So.,"Scottsdale, Ariz.",,,5' 9'',Libero,1,//seminoles.com/sports/womens-volleyball/roster/ava-lambert/8459,2024
-234,Florida St,,Nicole Mauser,Sr.,Dallas Texas,,,6' 2'',Opposite,2,//seminoles.com/sports/womens-volleyball/roster/nicole-mauser/8461,2024
-234,Florida St,,Kelsey Perry,5th,"Frisco, Texas",,,6' 4'',Middle Blocker,3,//seminoles.com/sports/womens-volleyball/roster/kelsey-perry/8464,2024
-234,Florida St,,Victoria David,So.,"Rio de Janeiro, Brazil",,,6' 1'',Outside Hitter/Libero,6,//seminoles.com/sports/womens-volleyball/roster/victoria-david/8455,2024
-234,Florida St,,Ryan Murphy,So.,"Ponte Vedra Beach, Fla.",,,6' 1'',Setter,7,//seminoles.com/sports/womens-volleyball/roster/ryan-murphy/8462,2024
-234,Florida St,,Emma Lilo,Jr.,"Kailua, Hawaii",,,5' 9'',Setter,9,//seminoles.com/sports/womens-volleyball/roster/emma-lilo/8469,2024
-234,Florida St,,Callie Kieffer,Sr.,"Prosper, Texas",,,5' 10'',Setter,10,//seminoles.com/sports/womens-volleyball/roster/callie-kieffer/8527,2024
-234,Florida St,,Caylan Russ,Jr.,"Winter Garden, Fla.",,,5' 6'',Libero,11,//seminoles.com/sports/womens-volleyball/roster/caylan-russ/8466,2024
-234,Florida St,,Kyleene Filimaua,Sr.,"Bothell, Wash.",,,6' 1'',Outside Hitter,12,//seminoles.com/sports/womens-volleyball/roster/kyleene-filimaua/8457,2024
-234,Florida St,,Bennett Raterman,Fr.,"St. Louis, Mo.",,,6' 3'',Middle Blocker,13,//seminoles.com/sports/womens-volleyball/roster/bennett-raterman/8510,2024
-234,Florida St,,Johanna Sova,Jr.,"Tallinn, Estonia",,,6' 5'',Opposite,15,//seminoles.com/sports/womens-volleyball/roster/johanna-sova/8467,2024
-234,Florida St,,Nenu Kpea,So.,"Melissa, Texas",,,6' 2'',Middle Blocker,16,//seminoles.com/sports/womens-volleyball/roster/nenu-kpea/8458,2024
-234,Florida St,,Sofia Moss,Fr.,"Tortoli, Italy",,,6' 0'',Outside Hitter,17,//seminoles.com/sports/womens-volleyball/roster/sofia-moss/8528,2024
-234,Florida St,,Maile Chan,Jr.,"Portland, Ore.",,,5' 3'',Libero,18,//seminoles.com/sports/womens-volleyball/roster/maile-chan/8470,2024
-234,Florida St,,Bailey Higgins,Jr.,"Tampa, Fla.",,,5' 11'',Opposite,21,//seminoles.com/sports/womens-volleyball/roster/bailey-higgins/8853,2024
-234,Florida St,,Delaney Ewing,Jr.,"Fort Collins, Colo.",,,6' 2'',Middle Blocker,24,//seminoles.com/sports/womens-volleyball/roster/delaney-ewing/8456,2024
-234,Florida St,,Lexie Mason,So.,"Burlington, Wash.",,,6' 1'',Opposite,26,//seminoles.com/sports/womens-volleyball/roster/lexie-mason/8460,2024
 97,Cal State Fullerton,5061,Laura Williams,Junior,"Lakewood, Calif.",Lakewood HS,Oregon State,"5'9""",OH,1,//www.fullertontitans.com/sports/womens-volleyball/roster/laura-williams/5061,2024
 97,Cal State Fullerton,5057,Anna Schatz,Redshirt Sophomore,"Houston, Texas",Concordia Lutheran HS,CSU San Bernardino,"6'0""",S,2,//www.fullertontitans.com/sports/womens-volleyball/roster/anna-schatz/5057,2024
 97,Cal State Fullerton,5051,Ryleigh Garis,Sophomore,"Austin, Texas",Vista Ridge HS,,"5'9""",S,3,//www.fullertontitans.com/sports/womens-volleyball/roster/ryleigh-garis/5051,2024
@@ -15980,3 +15962,19 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 9,UAB,,Chloe Rodriguez,Sr.,"Portland, Texas",Gregory Portland,,6' 2'',MB,21,/sports/womens-volleyball/roster/chloe-rodriguez/10570,2024-25
 9,UAB,,Summer Snead,R-Fr.,"Nashville, Tenn.",Hillsboro,,6' 0'',MB,23,/sports/womens-volleyball/roster/summer-snead/11140,2024-25
 9,UAB,,Mia Reese,So.,"Nashville, Tenn.",Hillsboro HS,,5' 11'',OH,24,/sports/womens-volleyball/roster/mia-reese/11713,2024-25
+234,Florida St,,Loren Robertson,Gr.,"Memphis, Tenn.",Briarcrest Christian,,5' 8'',S,0,/sports/womens-volleyball/roster/loren-robertson/7038,2024-25
+234,Florida St,,Taylor Head,Gr.,"Winter Garden, Fla.",West Orange,,5' 10'',OH,1,/sports/womens-volleyball/roster/taylor-head/7037,2024-25
+234,Florida St,,Kelsey Perry,R-So.,"Frisco, Texas",Reedy,,6' 4'',MB,3,/sports/womens-volleyball/roster/kelsey-perry/8464,2024-25
+234,Florida St,,Audrey Koenig,Sr.,"Wesley Chapel, Fla.",Bishop McLaughlin,,6' 3'',Outside Hitter,4,/sports/womens-volleyball/roster/audrey-koenig/7029,2024-25
+234,Florida St,,Emery Dupes,R-Jr.,"Marietta, Ga.",Walton,,5' 6'',Libero,5,/sports/womens-volleyball/roster/emery-dupes/7025,2024-25
+234,Florida St,,Kenna Phelan,So.,"Fayetteville, Ark.",Fayetteville,,5' 7'',Setter,7,/sports/womens-volleyball/roster/kenna-phelan/7032,2024-25
+234,Florida St,,Khori Louis,Sr.,"Tallahassee, Fla.",Florida,,6' 3'',Middle Blocker,8,/sports/womens-volleyball/roster/khori-louis/7030,2024-25
+234,Florida St,,Maddie Snider,So.,"Land O' Lakes, Fla.",Sunlake,,6' 4'',Right Side Hitter,10,/sports/womens-volleyball/roster/maddie-snider/7036,2024-25
+234,Florida St,,Caylan Russ,Fr.,"Winter Garden, Fla.",Windermere,,5' 6'',L,11,/sports/womens-volleyball/roster/caylan-russ/8466,2024-25
+234,Florida St,,Kyleene Filimaua,So.,"Bothell, Wash.",North Creek,,6' 1'',Outside Hitter,12,/sports/womens-volleyball/roster/kyleene-filimaua/8457,2024-25
+234,Florida St,,Laila N’Diaye,Jr.,"Longwood, Fla.",Lake Brantley,,6' 2'',Middle Blocker,14,/sports/womens-volleyball/roster/laila-ndiaye/7031,2024-25
+234,Florida St,,Johanna Sova,Fr.,"Tallinn, Estonia",Gustav Adolf Grammar School,,6' 5'',MB,15,/sports/womens-volleyball/roster/johanna-sova/8467,2024-25
+234,Florida St,,Ashley Reynolds,So.,"Sarasota, Fla.",Pine View,,5' 10'',Setter,16,/sports/womens-volleyball/roster/ashley-reynolds/7033,2024-25
+234,Florida St,,Greta Gelumbickas,R-So.,"Boca Raton, Fla.",Boca Raton,,6' 2'',Middle Blocker,17,/sports/womens-volleyball/roster/greta-gelumbickas/7028,2024-25
+234,Florida St,,Iane Henke,Jr.,"Ulm, Germany",Anna Essinger Gymnasium Ulm,,6' 3'',OH,18,/sports/womens-volleyball/roster/iane-henke/7867,2024-25
+234,Florida St,,Ella Gaona,So.,"St. Louis, Mo.",Nerinx Hall,,5' 4'',Libero,23,/sports/womens-volleyball/roster/ella-gaona/7027,2024-25

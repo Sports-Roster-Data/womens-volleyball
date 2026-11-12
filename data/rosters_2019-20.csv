@@ -2129,24 +2129,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 96,Fresno State,,Savanah Smith,Jr.,"Roseville, Calif.",,,5' 11'',OH,16,//gobulldogs.com/sports/womens-volleyball/roster/savanah-smith/10662,2019
 96,Fresno State,,Amilya Thompson,Jr.,"Stockton, Calif.",,,5' 10'',OH,23,//gobulldogs.com/sports/womens-volleyball/roster/amilya-thompson/10019,2019
 96,Fresno State,,Julia Handy,R-Fr.,"Hilmar, Calif.",,,5' 9'',S,24,//gobulldogs.com/sports/womens-volleyball/roster/julia-handy/10656,2019
-234,Florida St,,Payton Whalen,So.,"Peoria, Ariz.",,,6' 1'',Outside Hitter,0,//seminoles.com/sports/womens-volleyball/roster/payton-whalen/8468,2019
-234,Florida St,,Ava Lambert,So.,"Scottsdale, Ariz.",,,5' 9'',Libero,1,//seminoles.com/sports/womens-volleyball/roster/ava-lambert/8459,2019
-234,Florida St,,Nicole Mauser,Sr.,Dallas Texas,,,6' 2'',Opposite,2,//seminoles.com/sports/womens-volleyball/roster/nicole-mauser/8461,2019
-234,Florida St,,Kelsey Perry,5th,"Frisco, Texas",,,6' 4'',Middle Blocker,3,//seminoles.com/sports/womens-volleyball/roster/kelsey-perry/8464,2019
-234,Florida St,,Victoria David,So.,"Rio de Janeiro, Brazil",,,6' 1'',Outside Hitter/Libero,6,//seminoles.com/sports/womens-volleyball/roster/victoria-david/8455,2019
-234,Florida St,,Ryan Murphy,So.,"Ponte Vedra Beach, Fla.",,,6' 1'',Setter,7,//seminoles.com/sports/womens-volleyball/roster/ryan-murphy/8462,2019
-234,Florida St,,Emma Lilo,Jr.,"Kailua, Hawaii",,,5' 9'',Setter,9,//seminoles.com/sports/womens-volleyball/roster/emma-lilo/8469,2019
-234,Florida St,,Callie Kieffer,Sr.,"Prosper, Texas",,,5' 10'',Setter,10,//seminoles.com/sports/womens-volleyball/roster/callie-kieffer/8527,2019
-234,Florida St,,Caylan Russ,Jr.,"Winter Garden, Fla.",,,5' 6'',Libero,11,//seminoles.com/sports/womens-volleyball/roster/caylan-russ/8466,2019
-234,Florida St,,Kyleene Filimaua,Sr.,"Bothell, Wash.",,,6' 1'',Outside Hitter,12,//seminoles.com/sports/womens-volleyball/roster/kyleene-filimaua/8457,2019
-234,Florida St,,Bennett Raterman,Fr.,"St. Louis, Mo.",,,6' 3'',Middle Blocker,13,//seminoles.com/sports/womens-volleyball/roster/bennett-raterman/8510,2019
-234,Florida St,,Johanna Sova,Jr.,"Tallinn, Estonia",,,6' 5'',Opposite,15,//seminoles.com/sports/womens-volleyball/roster/johanna-sova/8467,2019
-234,Florida St,,Nenu Kpea,So.,"Melissa, Texas",,,6' 2'',Middle Blocker,16,//seminoles.com/sports/womens-volleyball/roster/nenu-kpea/8458,2019
-234,Florida St,,Sofia Moss,Fr.,"Tortoli, Italy",,,6' 0'',Outside Hitter,17,//seminoles.com/sports/womens-volleyball/roster/sofia-moss/8528,2019
-234,Florida St,,Maile Chan,Jr.,"Portland, Ore.",,,5' 3'',Libero,18,//seminoles.com/sports/womens-volleyball/roster/maile-chan/8470,2019
-234,Florida St,,Bailey Higgins,Jr.,"Tampa, Fla.",,,5' 11'',Opposite,21,//seminoles.com/sports/womens-volleyball/roster/bailey-higgins/8853,2019
-234,Florida St,,Delaney Ewing,Jr.,"Fort Collins, Colo.",,,6' 2'',Middle Blocker,24,//seminoles.com/sports/womens-volleyball/roster/delaney-ewing/8456,2019
-234,Florida St,,Lexie Mason,So.,"Burlington, Wash.",,,6' 1'',Opposite,26,//seminoles.com/sports/womens-volleyball/roster/lexie-mason/8460,2019
 97,Cal State Fullerton,3677,Savahna Costello,Junior,"Riverside, Calif.",La Sierra HS,,"5'6""",L,1,//www.fullertontitans.com/sports/womens-volleyball/roster/savahna-costello/3677,2019
 97,Cal State Fullerton,3688,Nicole Shuhandler,Sophomore,"Scottsdale, Ariz.",Notre Dame Preparatory HS,,"6'2""",MB,2,//www.fullertontitans.com/sports/womens-volleyball/roster/nicole-shuhandler/3688,2019
 97,Cal State Fullerton,3683,Danielle Jeffries,Freshman,"Reedley, Calif.",Immanuel HS,,"5'11""",OH,4,//www.fullertontitans.com/sports/womens-volleyball/roster/danielle-jeffries/3683,2019
@@ -14312,3 +14294,19 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 367,Louisville,,Shannon Shields,Fr.,"Phoenix, Ariz.",Xavier Prep,,5' 10'',S,19,/sports/womens-volleyball/roster/shannon-shields/9653,2019-20
 367,Louisville,,Jamie Vasilou,So.,"Bloomington, Illinois",Normal Community High School,,5' 5'',S,22,/sports/womens-volleyball/roster/jamie-vasilou/12289,2019-20
 367,Louisville,,Amaya Tillman,Fr.,"Topeka, Kan.",Shawnee Heights,,6' 3'',MB,25,/sports/womens-volleyball/roster/amaya-tillman/13035,2019-20
+234,Florida St,,Taylor Roberts,So.,"Sneads, Fla.",Sneads,,5' 4'',Libero,1,/sports/womens-volleyball/roster/taylor-roberts/1782,2019-20
+234,Florida St,,Alyssa Collins,R-Fr.,"Fort Myers, Fla.",Bishop Verot,,5' 5'',Libero,2,/sports/womens-volleyball/roster/alyssa-collins/1785,2019-20
+234,Florida St,,Morgan Chacon,R-Fr.,"Crown Point, Ind.",Crown Point,,5' 11'',Outside Hitter,3,/sports/womens-volleyball/roster/morgan-chacon/5727,2019-20
+234,Florida St,,Jasmyn Martin,Jr.,"Brooklyn Park, Minn.",Hopkins,,6' 3'',Outside Hitter,4,/sports/womens-volleyball/roster/jasmyn-martin/3603,2019-20
+234,Florida St,,Caleigh Morrison,R-Jr.,"Jacksonville, Fla.",Episcopal School,,6' 4'',Middle Blocker,5,/sports/womens-volleyball/roster/caleigh-morrison/1799,2019-20
+234,Florida St,,Lily Tessier,R-Fr.,"Fort Myers, Fla.",Evangelical Christian,,6' 3'',Setter,7,/sports/womens-volleyball/roster/lily-tessier/5744,2019-20
+234,Florida St,,Madison Sullivan,Sr.,"Jacksonville, Fla.",Duncan U. Fletcher,,5' 7'',Libero,9,/sports/womens-volleyball/roster/madison-sullivan/1807,2019-20
+234,Florida St,,Jessica Nunge,Fr.,"Newburgh, Ind.",Castle,,6' 2'',Outside Hitter,10,/sports/womens-volleyball/roster/jessica-nunge/3614,2019-20
+234,Florida St,,Marissa Stockman,So.,"Clear Lake, Wis.",River Falls,,6' 3'',Middle Blocker,11,/sports/womens-volleyball/roster/marissa-stockman/5755,2019-20
+234,Florida St,,Loren Scott,Fr.,"Tallahassee, Fla.",Lincoln,,6' 0'',Setter,12,/sports/womens-volleyball/roster/loren-scott/1823,2019-20
+234,Florida St,,Taryn Knuth,Jr.,"Johnston, Iowa",Johnston,,6' 3'',Middle Blocker,13,/sports/womens-volleyball/roster/taryn-knuth/3621,2019-20
+234,Florida St,,Payton Caffrey,Sr.,"Chuluota, Fla.",Winter Springs,,6' 0'',Outside Hitter,15,/sports/womens-volleyball/roster/payton-caffrey/1831,2019-20
+234,Florida St,,Emma Clothier,Fr.,"Carrollton, Texas",Hebron,,6' 2'',Middle Blocker,16,/sports/womens-volleyball/roster/emma-clothier/5964,2019-20
+234,Florida St,,Adrian Ell,R-So.,"Cincinnati, Ohio",Archbishop McNicholas,,6' 2'',Setter,17,/sports/womens-volleyball/roster/adrian-ell/1840,2019-20
+234,Florida St,,Lauryn Burrows,Fr.,"Marietta, Ga.",Walton,,5' 8'',Outside Hitter,23,/sports/womens-volleyball/roster/lauryn-burrows/5980,2019-20
+234,Florida St,,Deion Williams,Jr.,"Suwanee, Ga.",Peachtree Ridge,,6' 2'',Middle Blocker,47,/sports/womens-volleyball/roster/deion-williams/1848,2019-20

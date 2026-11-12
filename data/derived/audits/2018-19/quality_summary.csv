@@ -1,6 +1,6 @@
 "metric","value"
-"rows_raw",14128
-"rows_published",14100
+"rows_raw",14127
+"rows_published",14099
 "rows_quarantined",28
 "rows_removed_exact_duplicate",0
 "rows_removed_reviewed_duplicate",0
@@ -9,10 +9,10 @@
 "positions_unmapped_nonempty_raw",265
 "classes_unmapped_nonempty_raw",94
 "state_or_country_unparsed_nonempty_raw",426
-"high_school_missing",1591
+"high_school_missing",1573
 "high_school_backfilled",61
 "cell_corrections_applied",171
-"stale_roster_teams_flagged",2
+"stale_roster_teams_flagged",1
 "height_parse_rate_pct",99.4
 "position_parse_rate_pct",98.2
 "class_parse_rate_pct",99.3
