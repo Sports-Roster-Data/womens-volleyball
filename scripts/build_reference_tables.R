@@ -252,7 +252,7 @@ classes <- read_csv("data/years_cleaned.csv", show_col_types = FALSE, na = "") %
 SEASON_STARTS <- 2015:2026
 raw_files <- tibble(
   start = SEASON_STARTS,
-  raw_path = file.path("data", paste0("rosters_", SEASON_STARTS, ".csv")),
+  raw_path = file.path("data", sprintf("rosters_%d-%02d.csv", SEASON_STARTS, (SEASON_STARTS + 1) %% 100)),
   canonical = sprintf("%d-%02d", SEASON_STARTS, (SEASON_STARTS + 1) %% 100)
 ) %>% filter(file.exists(raw_path))
 

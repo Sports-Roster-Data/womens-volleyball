@@ -111,7 +111,8 @@ def generate():
     row_drops = []
     stats = {"A": 0, "B": 0, "C": 0, "C2": 0, "C3": 0, "C1": 0}
 
-    refs = {str(y): f"data/rosters_{y}.csv" for y in range(2015, 2027)}
+    refs = {str(y): f"data/rosters_{season_label(str(y))}.csv"
+            for y in range(2015, 2027)}
     for year, path in refs.items():
         season = season_label(year)
         rows = read_raw(path)

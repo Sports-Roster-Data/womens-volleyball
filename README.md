@@ -77,7 +77,7 @@ The roster CSVs in `data/` share a 13-column schema:
 
 | File | Contents |
 | --- | --- |
-| `data/rosters_<season>.csv` | Raw scraped rosters for a season (legacy names are year-only, e.g. `rosters_2015.csv`; new seasons use full labels, e.g. `rosters_2025-26.csv`). |
+| `data/rosters_<season>.csv` | Raw scraped rosters for a season; files use the full academic-year label, e.g. `rosters_2025-26.csv`. |
 | `data/reference/` | Build inputs: snapshot registry, canonical teams and affiliations, position/class/state/country lookups, reviewed school mappings, exclusions and coverage exceptions. |
 | `data/finished_rosters.csv` | Legacy cleaned, geocoded roster data (superseded; kept for reference). |
 | `data/teams.json` | The 900+ teams, their URLs, NCAA ids, and scraper routing (see below). `teams.csv` is the same data — scraper configuration, not the analytical team dimension. |
