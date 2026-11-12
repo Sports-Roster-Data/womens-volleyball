@@ -9,8 +9,8 @@
 "positions_unmapped_nonempty_raw",289
 "classes_unmapped_nonempty_raw",120
 "state_or_country_unparsed_nonempty_raw",363
-"high_school_missing",1501
-"high_school_backfilled",109
+"high_school_missing",1489
+"high_school_backfilled",121
 "cell_corrections_applied",178
 "stale_roster_teams_flagged",0
 "height_parse_rate_pct",99.4

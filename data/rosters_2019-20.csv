@@ -6449,23 +6449,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 155,Colo. Sch. of Mines,8274,Audrey Richard,Freshman,"Firestone, Colo.",Niwot,,"5'8""",DS,15,//www.minesathletics.com/sports/womens-volleyball/roster/audrey-richard/8274,2019
 155,Colo. Sch. of Mines,8271,Drew Stokes,Sophomore,"Murphysboro, Ill.",Murphysboro,,"5'11""",S,18,//www.minesathletics.com/sports/womens-volleyball/roster/drew-stokes/8271,2019
 155,Colo. Sch. of Mines,8264,Taylor Hicken,Sophomore,"Littleton, Colo.",Dakota Ridge,,"6'0""",MB,20,//www.minesathletics.com/sports/womens-volleyball/roster/taylor-hicken/8264,2019
-156,Colorado St.,,Karsyn Fetzer,ACADEMIC YEAR SO.,"HOMETOWN KERSEY, COLO.",,,HEIGHT 5' 9'',POSITION L/DS,1,//csurams.com/sports/womens-volleyball/roster/karsyn-fetzer/14862,2019
-156,Colorado St.,,Brooke Holman,ACADEMIC YEAR JR.,"HOMETOWN ASPEN, COLO.",,,HEIGHT 6' 1'',POSITION PIN,3,//csurams.com/sports/womens-volleyball/roster/brooke-holman/14864,2019
-156,Colorado St.,,Halle Jameson,ACADEMIC YEAR SO.,"HOMETOWN ROCKWALL, TEX.",,,HEIGHT 6' 1'',POSITION OH,4,//csurams.com/sports/womens-volleyball/roster/halle-jameson/14865,2019
-156,Colorado St.,,Sofia Zabjek,ACADEMIC YEAR SO.,"HOMETOWN ONTARIO, CANADA",,,HEIGHT 6' 3'',POSITION PIN,5,//csurams.com/sports/womens-volleyball/roster/sofia-zabjek/14870,2019
-156,Colorado St.,,Jessica Lawton,ACADEMIC YEAR JR.,"HOMETOWN HALES CORNER, WIS.",,,HEIGHT 6' 2'',POSITION MB,7,//csurams.com/sports/womens-volleyball/roster/jessica-lawton/14866,2019
-156,Colorado St.,,Silvie Graetzer,ACADEMIC YEAR SO.,"HOMETOWN MAHTOMEDI, MINN.",,,HEIGHT 6' 1'',POSITION MB,9,//csurams.com/sports/womens-volleyball/roster/silvie-graetzer/14863,2019
-156,Colorado St.,,Brenna Rowland,ACADEMIC YEAR SR.,"HOMETOWN SCOTTSDALE, ARIZ.",,,HEIGHT 6' 2'',POSITION MB,10,//csurams.com/sports/womens-volleyball/roster/brenna-rowland/14868,2019
-156,Colorado St.,,Abby Little,ACADEMIC YEAR FR.,"HOMETOWN BILLINGS, MT",,,HEIGHT 6' 3'',POSITION PIN,11,//csurams.com/sports/womens-volleyball/roster/abby-little/14876,2019
-156,Colorado St.,,Olivia Ewing,ACADEMIC YEAR FR.,"HOMETOWN FORT COLLINS, CO",,,HEIGHT 6' 5'',POSITION MB,15,//csurams.com/sports/womens-volleyball/roster/olivia-ewing/14873,2019
-156,Colorado St.,,Jaedyn Riley,ACADEMIC YEAR FR.,"HOMETOWN OAKDALE, CA",,,HEIGHT 6' 1'',POSITION S,16,//csurams.com/sports/womens-volleyball/roster/jaedyn-riley/14871,2019
-156,Colorado St.,,Sophie Stephenson,ACADEMIC YEAR 5TH,"HOMETOWN SEATTLE, WA",,,HEIGHT 6' 2'',POSITION OPP,17,//csurams.com/sports/womens-volleyball/roster/sophie-stephenson/14874,2019
-156,Colorado St.,,Ella Stowell,ACADEMIC YEAR FR.,"HOMETOWN OLATHE, KS",,,HEIGHT 6' 1'',POSITION OH,21,//csurams.com/sports/womens-volleyball/roster/ella-stowell/14875,2019
-156,Colorado St.,,Erin Debiec,ACADEMIC YEAR JR.,"HOMETOWN POTOMAC, MD.",,,HEIGHT 6' 1'',POSITION S,23,//csurams.com/sports/womens-volleyball/roster/erin-debiec/14861,2019
-156,Colorado St.,,Hayden Grimes,ACADEMIC YEAR FR.,"HOMETOWN ANDALE, KS",,,HEIGHT 5' 9'',POSITION L/DS,24,//csurams.com/sports/womens-volleyball/roster/hayden-grimes/14872,2019
-156,Colorado St.,,Maria Brun,ACADEMIC YEAR JR.,"HOMETOWN BARCELONA, SPAIN",,,HEIGHT 6' 1'',POSITION OH,26,//csurams.com/sports/womens-volleyball/roster/maria-brun/14860,2019
-156,Colorado St.,,Eve Wilson,ACADEMIC YEAR SR.,"HOMETOWN SANDY, UTAH",,,HEIGHT 6' 4'',POSITION MB,27,//csurams.com/sports/womens-volleyball/roster/eve-wilson/14869,2019
-156,Colorado St.,,Kekua Richards,ACADEMIC YEAR SR.,"HOMETOWN PA'IA, MAUI, HAWAII",,,HEIGHT 6' 7'',POSITION MB,33,//csurams.com/sports/womens-volleyball/roster/kekua-richards/14867,2019
 16,Albright,6327,Bryana Chambers,Junior,"Baltimore, Md.",Maryvale Prep,,"5'9""",Middle,1,//www.albrightathletics.com/sports/womens-volleyball/roster/bryana-chambers/6327,2019
 16,Albright,6335,Shelby Cheuvront,First Year,"Finksburg, Md.",Westminster,,"5'7""",Right,4,//www.albrightathletics.com/sports/womens-volleyball/roster/shelby-cheuvront/6335,2019
 16,Albright,6332,Grace Serafin,Sophomore,"Westfield, N.J.",Westfield,,"5'9""",Setter,6,//www.albrightathletics.com/sports/womens-volleyball/roster/grace-serafin/6332,2019
@@ -14310,3 +14293,19 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 31,Arkansas,,Natalie Perdue,Freshman,"Dallas, Texas",Richardson HS,,6-0,OH,19,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/natalie-perdue/,2019-20
 31,Arkansas,,Gracie Ryan,Sophomore,"Orlando, Fla.",Bishop Moore HS,,5-9,S,21,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/gracie-ryan/,2019-20
 31,Arkansas,,Allyson Dernehl,Junior,"Sugar Land, Texas",UT Tyler,,5-10,OH,23,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/allyson-dernehl/,2019-20
+156,Colorado St.,5327,Alyssa Bert,Freshman,"Oklahoma City, Okla.",Westmoore,,"5'10""",Defensive,0,//www.csurams.com/sports/womens-volleyball/roster/alyssa-bert/5327,2019-20
+156,Colorado St.,5328,Madison Boles,Freshman,"Tacoma, Wash.",Life Christian Academy,,"5'11""",Outside,1,//www.csurams.com/sports/womens-volleyball/roster/madison-boles/5328,2019-20
+156,Colorado St.,5166,Ellie Gubser,Junior,"Colorado Springs, Colo.",Cheyenne Mountain HS,,"6'4""",Opposite,2,//www.csurams.com/sports/womens-volleyball/roster/ellie-gubser/5166,2019-20
+156,Colorado St.,5171,Olivia Nicholson,Senior,"North Platte, Neb.",North Platte HS,,"6'0""",Outside,3,//www.csurams.com/sports/womens-volleyball/roster/olivia-nicholson/5171,2019-20
+156,Colorado St.,5177,Brooke Hudson,Freshman,"Houston, Texas",Cypress Lakes HS,,"5'3""",Defensive,4,//www.csurams.com/sports/womens-volleyball/roster/brooke-hudson/5177,2019-20
+156,Colorado St.,5167,Jenna Heinemeyer,Junior,"Parker, Colo.",Regis Jesuit HS,,"5'6""",Defensive,5,//www.csurams.com/sports/womens-volleyball/roster/jenna-heinemeyer/5167,2019-20
+156,Colorado St.,5352,Alana Giles,Freshman,"Conifer, Colo.",Conifer HS,,"6'0""",Middle,6,//www.csurams.com/sports/womens-volleyball/roster/alana-giles/5352,2019-20
+156,Colorado St.,5164,Sasha Colombo,Sophomore,"Milan, Italy",Liceo Scientifico Giordano Bruno,,"6'2""",Middle,7,//www.csurams.com/sports/womens-volleyball/roster/sasha-colombo/5164,2019-20
+156,Colorado St.,5353,Alexa Roumeliotis,Junior,"Menlo Park, Calif.",Menlo-Atherton HS,Creighton,"5'7""",Defensive,8,//www.csurams.com/sports/womens-volleyball/roster/alexa-roumeliotis/5353,2019-20
+156,Colorado St.,5176,Ciera Zimmerman,Redshirt Freshman,"Auburn, Wash.",Auburn Riverside HS,,"6'0""",Setter,9,//www.csurams.com/sports/womens-volleyball/roster/ciera-zimmerman/5176,2019-20
+156,Colorado St.,5174,Jacqi Van Liefde,Sophomore,"Chula Vista, Calif.",Eastlake High,,"6'0""",Outside,10,//www.csurams.com/sports/womens-volleyball/roster/jacqi-van-liefde/5174,2019-20
+156,Colorado St.,5169,Paulina Hougaard-Jensen,Senior,"Copenhagen, Denmark",Falkonergaardens Gymnasium & HF,,"6'1""",Middle,11,//www.csurams.com/sports/womens-volleyball/roster/paulina-hougaard-jensen/5169,2019-20
+156,Colorado St.,5168,Kirstie Hillyer,Redshirt Senior,"Bayfield, Colo.",Bayfield HS,,"6'6""",Middle,13,//www.csurams.com/sports/womens-volleyball/roster/kirstie-hillyer/5168,2019-20
+156,Colorado St.,5173,Breana Runnels,Redshirt Junior,"Bakersfield, Calif.",Independence HS,,"5'10""",Outside,15,//www.csurams.com/sports/womens-volleyball/roster/breana-runnels/5173,2019-20
+156,Colorado St.,5170,Jessica Jackson,Redshirt Senior,"Denver, Colo.",Thomas Jefferson HS,,"5'11""",Outside,21,//www.csurams.com/sports/womens-volleyball/roster/jessica-jackson/5170,2019-20
+156,Colorado St.,5172,Katie Oleksak,Senior,"Phoenix, Ariz.",Sunnyslope HS,,"5'10""",Setter,22,//www.csurams.com/sports/womens-volleyball/roster/katie-oleksak/5172,2019-20

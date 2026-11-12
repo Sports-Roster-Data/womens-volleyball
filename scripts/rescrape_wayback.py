@@ -19,6 +19,7 @@ and a rebuild, like any rescrape.
 """
 import argparse
 import json
+import re
 import sys
 import urllib.request
 from pathlib import Path
@@ -49,10 +50,11 @@ def cdx_captures(roster_url: str):
 def pick_capture(timestamps, season_label, preferred_months):
     """Best capture timestamp for a season label ('2015-16' -> fall 2015)."""
     fall_year = int(season_label.split("-")[0])
-    season_ts = [t for t in timestamps if t.startswith(str(fall_year))]
-    # Late-month snapshots can already reflect the NEXT season's page when the
-    # site pre-published in, say, June; stay in the academic window.
-    window = season_ts or [t for t in timestamps if t.startswith(str(fall_year - 1))]
+    # In-season window: fall of the season year through May of the next
+    # spring (volleyball season ends ~December, but COVID-era seasons ran
+    # into spring, and some pages pre-publish in fall of the prior year).
+    window = [t for t in timestamps
+              if t.startswith(str(fall_year)) or t[:4] == str(fall_year + 1) and 1 <= int(t[4:6]) <= 5]
     for pref in preferred_months:
         matches = [t for t in window if len(t) >= 6 and t[4:6] in pref]
         if matches:
@@ -68,6 +70,22 @@ def fetch_capture(ts: str, roster_url: str) -> BeautifulSoup:
 
 def roster_key(rows):
     return tuple(sorted((r[3], r[4]) for r in rows))  # (name, year)
+
+
+_WAYBACK_URL = re.compile(r"^https?://web\.archive\.org/web/\d+(?:id_)?/(?:(?:http[s]?://)|(?:/http))?")
+
+
+def _normalize_urls(roster):
+    """Turn wayback-wrapped bio URLs back into the site's own paths."""
+    for p in roster:
+        url = getattr(p, "url", None) or (p.get("url") if isinstance(p, dict) else None)
+        if url and "web.archive.org/web/" in url:
+            cleaned = _WAYBACK_URL.sub("", url)
+            if isinstance(p, rosters.Player):
+                p.url = cleaned
+            else:
+                p["url"] = cleaned
+    return roster
 
 
 def main():
