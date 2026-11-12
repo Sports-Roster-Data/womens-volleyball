@@ -1,0 +1,891 @@
+"team","ncaa_id","rows_raw","quarantined","removed_dup","excluded","published"
+"Cal State LA","100",20,0,0,0,20
+"Carson-Newman","1000",18,0,0,0,18
+"Catawba","1001",22,0,0,0,22
+"Central Arkansas","1004",19,0,0,0,19
+"Central Okla.","1009",14,0,0,0,14
+"CSUN","101",15,0,0,0,15
+"Central Wash.","1010",19,0,0,0,19
+"Chadron St.","1012",21,0,0,0,21
+"Charleston (WV)","1013",15,0,0,0,15
+"College of Charleston","1014",20,0,0,0,20
+"Christian Brothers","1015",15,0,0,0,15
+"Sacramento State","102",15,0,0,0,15
+"Coker","1023",17,0,0,0,17
+"Concord","1028",19,0,0,0,19
+"Concordia Wisconsin","1036",29,0,0,0,29
+"UC Santa Barbara","104",21,0,0,0,21
+"USC Upstate","10411",18,0,0,0,18
+"Defiance","1050",19,0,0,0,19
+"Drury","1057",17,0,0,0,17
+"D'Youville","1059",17,0,0,0,17
+"Cal U (PA)","106",23,0,0,0,23
+"East Tex. Baptist","1062",15,0,0,0,15
+"Edgewood","1066",16,0,0,0,16
+"Elon","1068",16,0,0,0,16
+"California","107",18,0,0,0,18
+"Emporia St.","1071",14,0,0,0,14
+"Erskine","1072",19,0,0,0,19
+"Fairmont St.","1076",18,0,0,0,18
+"Findlay","1079",20,0,0,0,20
+"UC Davis","108",17,0,0,0,17
+"Fort Lewis","1083",16,0,0,0,16
+"Francis Marion","1085",12,0,0,0,12
+"Shepherd","10870",13,0,0,0,13
+"UC Irvine","109",24,0,0,0,24
+"Gardner-Webb","1092",13,0,0,0,13
+"George Fox","1094",18,0,0,0,18
+"Georgia College","1096",13,0,0,0,13
+"Chatham","10972",15,0,0,0,15
+"Glenville St.","1098",22,0,0,0,22
+"Alas. Anchorage","11",14,0,0,0,14
+"UCLA","110",21,0,0,0,21
+"Sage Colleges","11036",14,0,0,0,14
+"Grand Canyon","1104",18,0,0,0,18
+"UC Riverside","111",16,0,0,0,16
+"Greenville","1111",26,0,0,0,26
+"Guilford","1112",13,0,0,0,13
+"Hanover","1115",15,0,0,0,15
+"Harding","1116",16,0,0,0,16
+"UC San Diego","112",19,0,0,0,19
+"Henderson St.","1123",18,0,0,0,18
+"Hendrix","1124",19,0,0,0,19
+"Holy Family","1126",16,0,0,0,16
+"S.C. Aiken","11276",18,0,0,0,18
+"UC Santa Cruz","113",20,0,0,0,20
+"Huntingdon","1130",25,0,0,0,25
+"Husson","1133",17,0,0,0,17
+"Calvin","114",21,0,0,0,21
+"Colo. Christian","11403",17,0,0,0,17
+"Colorado Mesa","11416",19,0,0,0,19
+"Campbell","115",17,0,0,0,17
+"Queens (NC)","11504",16,0,0,0,16
+"Neb.-Kearney","1156",25,0,0,0,25
+"Kennesaw State","1157",15,0,0,0,15
+"Keuka","1159",17,0,0,0,17
+"Canisius","116",16,0,0,0,16
+"LaGrange","1162",13,0,0,0,13
+"Lakeland","1164",27,0,0,0,27
+"Lander","1167",16,0,0,0,16
+"Capital","117",23,0,0,0,23
+"Lenoir-Rhyne","1170",20,0,0,0,20
+"West Florida","11740",17,0,0,0,17
+"Linfield","1179",20,0,0,0,20
+"Carleton","118",15,0,0,0,15
+"Pitt.-Greensburg","11839",14,0,0,0,14
+"Carnegie Mellon","119",16,0,0,0,16
+"Marian (WI)","1196",21,0,0,0,21
+"Mars Hill","1199",12,0,0,0,12
+"Alas. Fairbanks","12",17,0,0,0,17
+"Carroll (WI)","120",20,0,0,0,20
+"Mary Hardin-Baylor","1203",19,0,0,0,19
+"Carthage","121",26,0,0,0,26
+"CWRU","122",23,0,0,0,23
+"Castleton","123",14,0,0,0,14
+"Montevallo","1238",16,0,0,0,16
+"Catholic","124",18,0,0,0,18
+"MSU Moorhead","1240",15,0,0,0,15
+"Mount Olive","1245",21,0,0,0,21
+"Centenary (LA)","125",21,0,0,0,21
+"Neumann","1254",11,0,0,0,11
+"Newberry","1257",17,0,0,0,17
+"Northern St.","1266",19,0,0,0,19
+"Central Connecticut","127",18,0,0,0,18
+"Northwest Nazarene","1274",17,0,0,0,17
+"Wheeling","12799",24,0,0,0,24
+"Central Florida","128",16,0,0,0,16
+"Tusculum","12830",24,0,0,0,24
+"Centenary (NJ)","12884",8,0,0,0,8
+"Ouachita Baptist","1289",17,0,0,0,17
+"Central Michigan","129",19,0,0,0,19
+"Central Mo.","130",19,0,0,0,19
+"Anderson (SC)","13028",20,0,0,0,20
+"Cairn","1305",15,0,0,0,15
+"Pittsburg St.","1314",16,0,0,0,16
+"Pitt.-Bradford","1315",18,0,0,0,18
+"Post","1318",16,0,0,0,16
+"Centre","132",22,0,0,0,22
+"Presbyterian College","1320",15,0,0,0,15
+"Rockhurst","1328",21,0,0,0,21
+"Lees-McRae","13302",13,0,0,0,13
+"St. Edward's","1334",17,0,0,0,17
+"St. Joseph's (L.I.)","1340",13,0,0,0,13
+"Saint Martin's","1343",17,0,0,0,17
+"St. Mary's (TX)","1346",14,0,0,0,14
+"Schreiner","1355",15,0,0,0,15
+"Seattle","1356",18,0,0,0,18
+"Chicago State","136",14,0,0,0,14
+"Chicago","137",18,0,0,0,18
+"Southeastern Okla.","1371",17,0,0,0,17
+"Southern Ark.","1376",17,0,0,0,17
+"Chris. Newport","139",16,0,0,0,16
+"Sul Ross St.","1390",17,0,0,0,17
+"Tarleton St.","1395",20,0,0,0,20
+"Albany","14",19,0,0,0,19
+"Cincinnati","140",19,0,0,0,19
+"Texas Lutheran","1400",21,0,0,0,21
+"Tiffin","1403",20,0,0,0,20
+"Claremont-M-S","142",21,0,0,0,21
+"Wayne St. (NE)","1433",16,0,0,0,16
+"Waynesburg","1434",17,0,0,0,17
+"West Liberty","1438",17,0,0,0,17
+"West Virginia St.","1439",20,0,0,0,20
+"Clark Atlanta","144",17,0,0,0,17
+"Western N.M.","1445",17,0,0,0,17
+"Western Ore.","1446",17,0,0,0,17
+"Western Wash.","1448",19,0,0,0,19
+"Clark (MA)","145",17,0,0,0,17
+"Westminster (PA)","1451",15,0,0,0,15
+"Whitworth","1454",20,0,0,0,20
+"Clarkson","146",16,0,0,0,16
+"Wilmington (OH)","1461",14,0,0,0,14
+"Wingate","1462",15,0,0,0,15
+"Goucher","1467",11,0,0,0,11
+"Clemson","147",15,0,0,0,15
+"Cedar Crest","14795",11,0,0,0,11
+"Cleveland State","148",22,0,0,0,22
+"Coastal Carolina","149",21,0,0,0,21
+"Belmont","14927",16,0,0,0,16
+"Albion","15",21,0,0,0,21
+"Coe","150",21,0,0,0,21
+"Colby","151",16,0,0,0,16
+"Colgate","153",19,0,0,0,19
+"Colorado Col.","154",17,0,0,0,17
+"Colo. Sch. of Mines","155",23,0,0,0,23
+"Colorado St.","156",17,0,0,0,17
+"Colorado","157",19,0,0,0,19
+"Columbia","158",23,0,0,0,23
+"Albright","16",12,0,0,0,12
+"Concordia Chicago","160",26,0,0,0,26
+"Misericordia","16142",18,0,0,0,18
+"Connecticut Col.","163",14,0,0,0,14
+"UConn","164",15,0,0,0,15
+"Coppin State","165",19,0,0,0,19
+"Cornell College","166",20,0,0,0,20
+"Cornell","167",17,0,0,0,17
+"Creighton","169",16,0,0,0,16
+"Alcorn State","17",14,0,0,0,14
+"William Peace","17094",19,0,0,0,19
+"Dartmouth","172",19,0,0,0,19
+"Davidson","173",15,0,0,0,15
+"Davis & Elkins","174",16,0,0,0,16
+"Dayton","175",19,0,0,0,19
+"DePaul","176",19,0,0,0,19
+"DePauw","177",16,0,0,0,16
+"Delaware State","178",17,0,0,0,17
+"Delaware Valley","179",10,0,0,0,10
+"Alfred","18",15,0,0,0,15
+"Delaware","180",17,0,0,0,17
+"Denison","182",20,0,0,0,20
+"Denver","183",16,0,0,0,16
+"Dickinson","185",15,0,0,0,15
+"Drake","189",20,0,0,0,20
+"Allegheny","19",16,0,0,0,16
+"Drew","190",14,0,0,0,14
+"Salem (WV)","19117",15,0,0,0,15
+"Dubuque","192",31,0,0,0,31
+"Duke","193",16,0,0,0,16
+"Duquesne","194",14,0,0,0,14
+"Earlham","195",16,0,0,0,16
+"East Carolina","196",17,0,0,0,17
+"High Point","19651",20,0,0,0,20
+"East Stroudsburg","197",14,0,0,0,14
+"East Tennessee State","198",17,0,0,0,17
+"Tex. A&M-Commerce","199",26,0,0,0,26
+"Abilene Christian","2",18,0,0,0,18
+"DeSales","20",18,0,0,0,18
+"Eastern Conn. St.","200",13,0,0,0,13
+"Eastern Illinois","201",17,0,0,0,17
+"Eastern Kentucky","202",17,0,0,0,17
+"MSOE","20220",17,0,0,0,17
+"East. Mennonite","203",16,0,0,0,16
+"Eastern Michigan","204",14,0,0,0,14
+"Mont. St. Billings","205",18,0,0,0,18
+"Eastern N.M.","206",20,0,0,0,20
+"Eastern Washington","207",19,0,0,0,19
+"Eckerd","208",17,0,0,0,17
+"Edinboro","209",15,0,0,0,15
+"Alma","21",24,0,0,0,24
+"Elizabethtown","211",18,0,0,0,18
+"Elmhurst","212",20,0,0,0,20
+"Elmira","213",17,0,0,0,17
+"Chestnut Hill","21323",13,0,0,0,13
+"Emerson","214",16,0,0,0,16
+"Emmanuel (MA)","215",16,0,0,0,16
+"Emory & Henry","216",19,0,0,0,19
+"Emory","217",22,0,0,0,22
+"Eureka","218",12,0,0,0,12
+"Piedmont","21830",22,0,0,0,22
+"Stevenson","21852",16,0,0,0,16
+"Evansville","219",16,0,0,0,16
+"American International","22",19,0,0,0,19
+"Fairfield","220",18,0,0,0,18
+"FDU-Florham","221",20,0,0,0,20
+"Fairleigh Dickinson","222",18,0,0,0,18
+"Ferris St.","224",17,0,0,0,17
+"Ferrum","225",16,0,0,0,16
+"JWU (Providence)","22626",16,0,0,0,16
+"Fitchburg St.","227",15,0,0,0,15
+"Florida A&M","228",15,0,0,0,15
+"Florida Atlantic","229",15,0,0,0,15
+"American","23",20,0,0,0,20
+"Florida Tech","230",12,0,0,0,12
+"FIU","231",17,0,0,0,17
+"Texas-Dallas","23121",19,0,0,0,19
+"Felician","23157",13,0,0,0,13
+"Fla. Southern","233",17,0,0,0,17
+"Florida St","234",18,0,0,0,18
+"Florida","235",13,0,0,0,13
+"Fordham","236",16,0,0,0,16
+"Franklin & Marshall","239",16,0,0,0,16
+"Franklin Pierce","241",15,0,0,0,15
+"Fredonia","242",15,0,0,0,15
+"Frostburg St.","243",19,0,0,0,19
+"Lesley","24317",6,0,0,0,6
+"Furman","244",14,0,0,0,14
+"Concordia (TX)","24400",13,0,0,0,13
+"Gannon","246",18,0,0,0,18
+"Nova Southeastern","24639",20,0,0,0,20
+"SUNY Geneseo","247",17,0,0,0,17
+"George Mason","248",22,0,0,0,22
+"George Washington","249",12,0,0,0,12
+"Angelo St.","25",15,0,0,0,15
+"Georgetown","251",21,0,0,0,21
+"Georgia Southern","253",20,0,0,0,20
+"Georgia State","254",16,0,0,0,16
+"Georgia Tech","255",18,0,0,0,18
+"Georgia","257",17,0,0,0,17
+"Penn St.-Altoona","25719",17,0,0,0,17
+"Gettysburg","258",17,0,0,0,17
+"Rowan","259",16,0,0,0,16
+"Gonzaga","260",14,0,0,0,14
+"Grambling","261",18,0,0,0,18
+"A&M-Corpus Christi","26172",14,0,0,0,14
+"Grand Valley St.","262",20,0,0,0,20
+"Grinnell","264",16,0,0,0,16
+"Grove City","265",18,0,0,0,18
+"Gust. Adolphus","266",24,0,0,0,24
+"Hamilton","267",14,0,0,0,14
+"Arkansas-Pine Bluff","2678",20,0,0,0,20
+"Hamline","268",19,0,0,0,19
+"Belmont Abbey","2683",25,0,0,0,25
+"Franklin","2694",13,0,0,0,13
+"IUPUI","2699",15,0,0,0,15
+"Appalachian State","27",20,0,0,0,20
+"Hampton","270",16,0,0,0,16
+"Kansas City","2707",14,0,0,0,14
+"Hardin-Simmons","271",18,0,0,0,18
+"North Florida","2711",17,0,0,0,17
+"Oglethorpe","2713",19,1,0,0,18
+"Hartford","272",13,0,0,0,13
+"Colorado St.-Pueblo","2720",22,0,0,0,22
+"Hartwick","273",14,0,0,0,14
+"Howard Payne","2741",17,0,0,0,17
+"Incarnate Word","2743",18,0,0,0,18
+"Lake Erie","2746",14,0,0,0,14
+"Harvard","275",16,0,0,0,16
+"Pacific (OR)","2751",19,0,0,0,19
+"Southwest Baptist","2755",17,0,0,0,17
+"Western Colo.","2759",17,0,0,0,17
+"Hawaii","277",16,0,0,0,16
+"Heidelberg","278",33,0,0,0,33
+"Minn.-Crookston","27854",13,0,0,0,13
+"Farmingdale St.","27892",16,0,0,0,16
+"Albertus Magnus","2798",14,0,0,0,14
+"Arizona State","28",20,0,0,0,20
+"Hillsdale","280",19,0,0,0,19
+"Hiram","281",19,0,0,0,19
+"St. Thomas (TX)","2810",18,0,0,0,18
+"Washburn","2814",22,0,0,0,22
+"Hofstra","283",16,0,0,0,16
+"Hollins","284",13,0,0,0,13
+"Holy Cross","285",14,0,0,0,14
+"Hope","286",19,0,0,0,19
+"Lipscomb","28600",15,0,0,0,15
+"Houston Christian","287",16,0,0,0,16
+"Transylvania","28749",15,0,0,0,15
+"Florida Gulf Coast","28755",17,0,0,0,17
+"Houston","288",21,0,0,0,21
+"Arizona","29",18,0,0,0,18
+"Howard","290",22,0,0,0,22
+"Cal Poly Humboldt","291",18,0,0,0,18
+"Wofford","2915",19,0,0,0,19
+"Hunter","292",13,0,0,0,13
+"Idaho St.","294",16,0,0,0,16
+"Idaho","295",16,0,0,0,16
+"Benedictine (IL)","296",19,0,0,0,19
+"Illinois Col.","297",21,0,0,0,21
+"Illinois State","299",18,0,0,0,18
+"Adelphi","3",16,0,0,0,16
+"Arkansas St.","30",16,0,0,0,16
+"Ill. Wesleyan","300",22,0,0,0,22
+"Trevecca Nazarene","30002",19,0,0,0,19
+"Lee","30013",16,0,0,0,16
+"Utah Valley","30024",20,0,0,0,20
+"Texas-Tyler","30028",19,0,0,0,19
+"Northwestern-St. Paul","30031",20,0,0,0,20
+"Crown (MN)","30035",19,0,0,0,19
+"Mount Aloysius","30036",17,0,0,0,17
+"Trine","30037",25,0,0,0,25
+"Bethany Lutheran","30038",14,0,0,0,14
+"North Central (MN)","30039",16,0,0,0,16
+"Mitchell","30042",20,0,0,0,20
+"Palm Beach Atl.","30045",18,0,0,0,18
+"Keystone","30047",7,0,0,0,7
+"Ill. Springfield","30050",15,0,0,0,15
+"Newman","30054",15,0,0,0,15
+"Cal St. Monterey Bay","30055",18,0,0,0,18
+"Seton Hill","30063",21,0,0,0,21
+"Saint Vincent","30064",21,0,0,0,21
+"NVU-Lyndon","30065",9,0,0,0,9
+"SUNY Morrisville","30067",12,0,0,0,12
+"Franciscan","30069",13,0,0,0,13
+"Geneva","30084",15,0,0,0,15
+"Lancaster Bible","30085",16,0,0,0,16
+"Tex. Permian Basin","30088",17,0,0,0,17
+"Flagler","30092",14,0,0,0,14
+"AUM","30093",13,0,0,0,13
+"Utah Tech","30095",17,0,0,0,17
+"Illinois","301",17,0,0,0,17
+"Ark.-Fort Smith","30105",15,0,0,0,15
+"Covenant","30111",18,0,0,0,18
+"Penn St.-Abington","30114",14,0,0,0,14
+"Ohio Dominican","30119",14,0,0,0,14
+"William Jewell","30120",19,0,0,0,19
+"Cedarville","30124",17,0,0,0,17
+"Minot St.","30125",25,0,0,0,25
+"Simon Fraser","30127",19,0,0,0,19
+"Sioux Falls","30128",16,0,0,0,16
+"Black Hills St.","30134",16,0,0,0,16
+"California Baptist","30135",18,0,0,0,18
+"Lindenwood (MO)","30136",20,0,0,0,20
+"McKendree","30138",14,0,0,0,14
+"South Dakota Mines","30139",22,0,0,0,22
+"Ursuline","30140",16,0,0,0,16
+"Walsh","30141",14,0,0,0,14
+"Fresno Pacific","30147",16,0,0,0,16
+"Point Loma","30149",16,0,0,0,16
+"Shorter","30151",22,0,0,0,22
+"Southern Nazarene","30152",22,0,0,0,22
+"Union (TN)","30153",16,0,0,0,16
+"Young Harris","30154",19,0,0,0,19
+"Houghton","30160",16,0,0,0,16
+"Sarah Lawrence","30163",12,0,0,0,12
+"Southern Va.","30164",16,0,0,0,16
+"SUNY Canton","30165",16,0,0,0,16
+"Berea","30171",21,0,0,0,21
+"Daemen","30174",18,0,0,0,18
+"Lubbock Christian","30177",17,0,0,0,17
+"Northwestern Okla.","30178",20,0,0,0,20
+"UVa-Wise","30181",15,0,0,0,15
+"Penn College","30190",11,0,0,0,11
+"Southern Wesleyan","30192",15,0,0,0,15
+"Belhaven","30197",11,0,0,0,11
+"Cal St. San Marcos","30198",18,0,0,0,18
+"Concordia (CA)","30199",17,0,0,0,17
+"Illinois-Chicago","302",17,0,0,0,17
+"Okla. Baptist","30202",20,0,0,0,20
+"Westminster (UT)","30209",17,0,0,0,17
+"Dean","30219",14,0,0,0,14
+"Biola","30220",21,0,0,0,21
+"Davenport","30221",18,0,0,0,18
+"Purdue Northwest","30222",11,0,0,0,11
+"SUNY Delhi","30225",15,0,0,0,15
+"Edward Waters","30244",16,0,0,0,16
+"Indiana State","305",14,0,0,0,14
+"Indiana","306",18,0,0,0,18
+"Indiana (PA)","307",20,0,0,0,20
+"Purdue-Fort Wayne","308",19,1,0,0,18
+"UIndy","309",17,0,0,0,17
+"Arkansas","31",17,0,0,0,17
+"Iona","310",18,0,0,0,18
+"Iowa State","311",21,0,0,0,21
+"Iowa","312",18,0,0,0,18
+"Ithaca","313",17,0,0,0,17
+"Jackson St.","314",3,0,0,0,3
+"Jacksonville St.","315",16,0,0,0,16
+"Jacksonville","316",16,0,0,0,16
+"James Madison","317",16,0,0,0,16
+"Arkansas-Little Rock","32",16,0,0,0,16
+"John Carroll","320",20,0,0,0,20
+"John Jay","321",14,0,0,0,14
+"Johns Hopkins","322",22,0,0,0,22
+"Johnson C. Smith","323",11,0,0,0,11
+"Juniata","325",20,0,0,0,20
+"Kalamazoo","326",21,0,0,0,21
+"Kansas State","327",15,0,0,0,15
+"Kansas","328",20,0,0,0,20
+"Keene St.","330",18,0,0,0,18
+"Kent State","331",16,0,0,0,16
+"Ky. Wesleyan","333",16,0,0,0,16
+"Kentucky","334",15,0,0,0,15
+"Kenyon","335",14,0,0,0,14
+"King's (PA)","336",14,0,0,0,14
+"Knox","337",20,0,0,0,20
+"Kutztown","339",21,0,0,0,21
+"La Verne","341",19,0,0,0,19
+"Lafayette","342",20,0,0,0,20
+"Lake Forest","344",15,0,0,0,15
+"Lake Superior St.","345",19,0,0,0,19
+"Lamar","346",15,0,0,0,15
+"Lawrence","348",12,0,0,0,12
+"Le Moyne","349",15,0,0,0,15
+"Ashland","35",18,0,0,0,18
+"Lebanon Valley","351",17,0,0,0,17
+"Lehigh","352",15,0,0,0,15
+"Lewis","354",15,0,0,0,15
+"Liberty","355",18,0,0,0,18
+"West Alabama","358",16,0,0,0,16
+"Assumption","36",14,0,0,0,14
+"Lock Haven","360",15,0,0,0,15
+"Long Island","361",21,0,0,0,21
+"Loras","364",19,0,0,0,19
+"LSU","365",19,0,0,0,19
+"Louisiana Tech","366",16,0,0,0,16
+"Louisville","367",17,0,0,0,17
+"Loyola-Maryland","369",14,0,0,0,14
+"Auburn","37",12,0,0,0,12
+"Loyola Marymount","370",15,0,0,0,15
+"Loyola-Chicago","371",17,0,0,0,17
+"Luther","372",25,0,0,0,25
+"Lycoming","373",19,0,0,0,19
+"Lynchburg","374",13,0,0,0,13
+"Macalester","376",20,0,0,0,20
+"MacMurray","377",16,0,0,0,16
+"Augsburg","38",20,0,0,0,20
+"Manhattan","381",15,0,0,0,15
+"Manhattanville","382",19,0,0,0,19
+"Minnesota St.","383",17,0,0,0,17
+"Marietta","385",13,0,0,0,13
+"Marist","386",17,0,0,0,17
+"Marquette","387",19,0,0,0,19
+"Marshall","388",18,0,0,0,18
+"Mary Baldwin","389",14,0,0,0,14
+"Augusta","39",12,0,0,0,12
+"Mary Washington","390",21,0,0,0,21
+"UMBC","391",16,0,0,0,16
+"Maryland","392",16,0,0,0,16
+"Maryland-Eastern Shore","393",16,0,0,0,16
+"Marymount (VA)","394",19,0,0,0,19
+"Maryville (MO)","395",21,0,0,0,21
+"Marywood","397",15,0,0,0,15
+"MIT","398",22,0,0,0,22
+"Augustana (IL)","40",34,0,0,0,34
+"McNeese State","402",20,0,0,0,20
+"Memphis","404",16,0,0,0,16
+"Mercer","406",13,0,0,0,13
+"Mercy","407",14,0,0,0,14
+"Mercyhurst","408",22,0,0,0,22
+"Meredith","409",17,0,0,0,17
+"Augustana (SD)","41",15,0,0,0,15
+"Merrimack","410",18,0,0,0,18
+"Messiah","411",16,0,0,0,16
+"MSU Denver","413",19,0,0,0,19
+"Miami Ohio","414",17,0,0,0,17
+"Miami","415",18,0,0,0,18
+"Michigan State","416",16,0,0,0,16
+"Michigan Tech","417",18,0,0,0,18
+"Michigan","418",19,0,0,0,19
+"Middle Tennessee","419",14,0,0,0,14
+"Aurora","42",24,0,0,0,24
+"Middlebury","420",18,0,0,0,18
+"Miles","422",9,0,0,0,9
+"Millersville","423",20,0,0,0,20
+"Millikin","424",30,0,0,0,30
+"Millsaps","426",15,0,0,0,15
+"Minn. Duluth","427",14,0,0,0,14
+"Minnesota","428",15,0,0,0,15
+"Mississippi College","429",15,0,0,0,15
+"Austin Peay","43",19,0,0,0,19
+"Mississippi State","430",18,0,0,0,18
+"Mississippi Valley State","432",10,0,0,0,10
+"Mississippi","433",19,0,0,0,19
+"Missouri","434",15,0,0,0,15
+"Missouri S&T","435",19,0,0,0,19
+"Missouri-St. Louis","436",15,0,0,0,15
+"Monmouth (IL)","438",19,0,0,0,19
+"Averett","44",18,0,0,0,18
+"Montana State","440",17,0,0,0,17
+"Montana","441",17,0,0,0,17
+"Montclair St.","442",16,0,0,0,16
+"Moravian","443",14,0,0,0,14
+"Morehead State","444",16,0,0,0,16
+"Morgan St.","446",16,0,0,0,16
+"Mount Holyoke","449",14,0,0,0,14
+"Babson","45",19,0,0,0,19
+"CMSV","451",13,0,0,0,13
+"Mount Union","452",21,0,0,0,21
+"Muhlenberg","453",16,0,0,0,16
+"Murray State","454",14,0,0,0,14
+"Muskingum","455",20,0,0,0,20
+"UNC Asheville","456",14,0,0,0,14
+"North Carolina","457",20,0,0,0,20
+"Charlotte","458",13,0,0,0,13
+"UNC Greensboro","459",18,0,0,0,18
+"Baldwin Wallace","46",16,0,0,0,16
+"UNCW","460",18,0,0,0,18
+"Nazareth","461",18,0,0,0,18
+"Neb. Wesleyan","462",23,0,0,0,23
+"Nebraska","463",16,0,0,0,16
+"Omaha","464",15,0,0,0,15
+"UNLV","465",11,0,0,0,11
+"Nevada","466",15,0,0,0,15
+"New England Col.","467",17,0,0,0,17
+"Southern N.H.","468",13,0,0,0,13
+"New Hampshire","469",16,0,0,0,16
+"Ball State","47",17,0,0,0,17
+"New Haven","470",19,0,0,0,19
+"New Jersey Institute of Technology","471",17,0,0,0,17
+"New Mexico State","472",19,0,0,0,19
+"New Mexico","473",15,0,0,0,15
+"New Orleans","474",15,0,0,0,15
+"NYU","479",25,0,0,0,25
+"Charleston Southern","48",16,0,0,0,16
+"CCNY","480",9,0,0,0,9
+"Niagara","482",16,0,0,0,16
+"Nicholls State","483",15,0,0,0,15
+"Nichols","484",16,0,0,0,16
+"Norfolk State","485",17,0,0,0,17
+"MCLA","486",11,0,0,0,11
+"North Alabama","487",16,0,0,0,16
+"N.C. A&T","488",19,0,0,0,19
+"North Carolina Central","489",14,0,0,0,14
+"Barry","49",14,0,0,0,14
+"NC State","490",16,0,0,0,16
+"N.C. Wesleyan","491",20,0,0,0,20
+"North Dakota State","493",17,0,0,0,17
+"North Dakota","494",18,0,0,0,18
+"North Park","496",31,0,0,0,31
+"North Texas","497",22,3,0,0,19
+"Louisiana Monroe","498",17,0,0,0,17
+"Truman State","499",14,0,0,0,14
+"Akron","5",17,4,0,0,13
+"Bates","50",14,0,0,0,14
+"Northeastern","500",17,0,0,0,17
+"Northern Arizona","501",15,0,0,0,15
+"Northern Colorado","502",14,0,0,0,14
+"Northern Illinois","503",15,0,0,0,15
+"Northern Iowa","504",17,0,0,0,17
+"Northern Kentucky","505",15,0,0,0,15
+"Talladega","505160",14,0,0,0,14
+"Northern Michigan","506",14,0,0,0,14
+"Northwest Missouri State","507",18,0,0,0,18
+"Northwestern State","508",14,0,0,0,14
+"Northwestern","509",17,0,0,0,17
+"Baylor","51",23,0,0,0,23
+"Northwood","510",17,17,0,0,0
+"Norwich","511",15,0,0,0,15
+"Notre Dame","513",16,0,0,0,16
+"Oakland","514",19,0,0,0,19
+"Oberlin","515",17,0,0,0,17
+"Occidental","516",20,0,0,0,20
+"Ohio Northern","517",24,0,0,0,24
+"Ohio State","518",18,0,0,0,18
+"Ohio","519",20,0,0,0,20
+"Bellarmine","52",18,1,0,0,17
+"Oklahoma","522",16,0,0,0,16
+"Old Dominion","523",16,0,0,0,16
+"Olivet","525",21,0,0,0,21
+"SUNY Oneonta","526",15,0,0,0,15
+"Oral Roberts","527",15,0,0,0,15
+"Oregon State","528",18,0,0,0,18
+"Oregon","529",17,0,0,0,17
+"Oswego St.","530",16,0,0,0,16
+"Otterbein","531",18,0,0,0,18
+"Pace","533",14,0,0,0,14
+"UT-Rio Grande Valley","536",14,0,0,0,14
+"UNC Pembroke","537",15,0,0,0,15
+"Penn St.-Behrend","538",17,0,0,0,17
+"Penn State","539",21,0,0,0,21
+"Bemidji St.","54",17,0,0,0,17
+"Pennsylvania","540",19,0,0,0,19
+"Pepperdine","541",17,0,0,0,17
+"Pfeiffer","542",18,0,0,0,18
+"Jefferson","543",16,0,0,0,16
+"Pittsburgh","545",17,0,0,0,17
+"Pitt.-Johnstown","546",22,0,0,0,22
+"Plattsburgh St.","547",14,0,0,0,14
+"Pomona-Pitzer","549",20,0,0,0,20
+"Benedict","55",18,0,0,0,18
+"Portland State","550",16,0,0,0,16
+"Portland","551",14,0,0,0,14
+"SUNY Potsdam","552",17,0,0,0,17
+"Prairie View A&M","553",15,0,0,0,15
+"Princeton","554",27,0,0,0,27
+"Providence","556",17,0,0,0,17
+"Puget Sound","557",22,0,0,0,22
+"Purdue","559",21,0,0,0,21
+"Bentley","56",14,0,0,0,14
+"Queens (NY)","560",12,0,0,0,12
+"Quincy","561",23,0,0,0,23
+"Quinnipiac","562",14,0,0,0,14
+"Radford","563",21,0,0,0,21
+"Ramapo","564",17,0,0,0,17
+"Randolph-Macon","565",16,0,0,0,16
+"Randolph","566",13,0,0,0,13
+"Redlands","567",15,0,0,0,15
+"Regis (CO)","568",14,0,0,0,14
+"Regis (MA)","569",19,0,0,0,19
+"Rhode Island College","571",16,0,0,0,16
+"Rhode Island","572",18,0,0,0,18
+"Rhodes","573",18,0,0,0,18
+"Rice","574",16,0,0,0,16
+"Rider","576",19,0,0,0,19
+"Ripon","577",17,0,0,0,17
+"Robert Morris","579",16,0,0,0,16
+"Baruch","58",12,0,0,0,12
+"Rochester (NY)","581",16,0,0,0,16
+"Rockford","582",15,0,0,0,15
+"Roger Williams","583",17,0,0,0,17
+"Rollins","584",19,0,0,0,19
+"Rose-Hulman","585",15,0,0,0,15
+"Rutgers","587",16,0,0,0,16
+"Rutgers-Newark","589",13,0,0,0,13
+"Bethany (WV)","59",23,0,0,0,23
+"Sacred Heart","590",20,0,0,0,20
+"Saginaw Valley","591",13,0,0,0,13
+"St. Anselm","593",15,0,0,0,15
+"Saint Benedict","595",15,0,0,0,15
+"St. Catherine","597",18,0,0,0,18
+"St. Cloud St.","598",17,0,0,0,17
+"Alabama A&M","6",21,0,0,0,21
+"Bethel (MN)","60",28,0,0,0,28
+"Saint Francis (PA)","600",20,0,0,0,20
+"St. John Fisher","601",17,0,0,0,17
+"St. John's","603",17,0,0,0,17
+"St. Lawrence","607",15,0,0,0,15
+"Saint Leo","608",16,0,0,0,16
+"Saint Louis","609",16,0,0,0,16
+"Bethune-Cookman","61",17,0,0,0,17
+"Saint Mary's (CA)","610",16,0,0,0,16
+"St. Mary's (MD)","611",19,0,0,0,19
+"Saint Mary's (MN)","612",18,0,0,0,18
+"Saint Michael's","613",14,0,0,0,14
+"St. Norbert","614",18,0,0,0,18
+"St. Olaf","615",23,0,0,0,23
+"Saint Peter's","617",15,0,0,0,15
+"St. Scholastica","618",15,0,0,0,15
+"Binghamton","62",13,0,0,0,13
+"St. Thomas (MN)","620",19,0,0,0,19
+"Salisbury","622",17,0,0,0,17
+"Salve Regina","623",15,0,0,0,15
+"Sam Houston State","624",17,0,0,0,17
+"Samford","625",15,0,0,0,15
+"San Diego State","626",18,0,0,0,18
+"San Diego","627",16,0,0,0,16
+"San Fran. St.","628",20,0,0,0,20
+"San Francisco","629",17,0,0,0,17
+"San Jose State","630",18,0,0,0,18
+"Santa Clara","631",17,0,0,0,17
+"Scranton","633",21,0,0,0,21
+"Seattle Pacific","634",17,0,0,0,17
+"Seton Hall","635",19,0,0,0,19
+"Shenandoah","637",13,0,0,0,13
+"Shippensburg","638",20,0,0,0,20
+"Siena","639",17,0,0,0,17
+"Blackburn","64",16,0,0,0,16
+"Simpson","641",24,0,0,0,24
+"Skidmore","642",20,0,0,0,20
+"Smith","644",16,0,0,0,16
+"South Alabama","646",18,0,0,0,18
+"South Carolina St.","647",13,0,0,0,13
+"South Carolina","648",18,0,0,0,18
+"South Dakota State","649",16,0,0,0,16
+"Bloomsburg","65",24,0,0,0,24
+"South Dakota","650",17,0,0,0,17
+"South Florida","651",15,0,0,0,15
+"Sewanee","652",17,0,0,0,17
+"Southeast Missouri State","654",17,0,0,0,17
+"Southeastern Louisiana","655",15,0,0,0,15
+"UMass Dartmouth","656",12,0,0,0,12
+"Southern Cal","657",18,0,0,0,18
+"Southern Conn. St.","658",16,0,0,0,16
+"Southern Ill.","659",17,0,0,0,17
+"Boise State","66",17,0,0,0,17
+"SIUE","660",15,0,0,0,15
+"Southern Ind.","661",15,1,0,0,14
+"Southern Me.","662",15,0,0,0,15
+"Southern Methodist","663",14,0,0,0,14
+"Southern Miss","664",18,0,0,0,18
+"Southern","665",12,0,0,0,12
+"Southern Utah","667",20,0,0,0,20
+"Missouri St.","669",17,0,0,0,17
+"Boston College","67",22,0,0,0,22
+"Texas State","670",20,0,0,0,20
+"Louisiana","671",18,0,0,0,18
+"Springfield","673",17,0,0,0,17
+"Stanford","674",16,0,0,0,16
+"Stephen F. Austin","676",10,0,0,0,10
+"Stetson","678",14,0,0,0,14
+"Stevens","679",18,0,0,0,18
+"Stonehill","682",19,0,0,0,19
+"Stony Brook","683",14,0,0,0,14
+"Suffolk","684",21,0,0,0,21
+"Susquehanna","685",20,0,0,0,20
+"Swarthmore","686",14,0,0,0,14
+"Syracuse","688",14,0,0,0,14
+"Tampa","689",17,0,0,0,17
+"Bowdoin","69",17,0,0,0,17
+"Temple","690",16,0,0,0,16
+"Tennessee St.","691",13,0,0,0,13
+"Tennessee Tech","692",17,0,0,0,17
+"Chattanooga","693",16,0,0,0,16
+"Tennessee","694",20,0,0,0,20
+"UT Martin","695",17,0,0,0,17
+"Tex. A&M-Kingsville","696",18,0,0,0,18
+"Texas A&M","697",18,0,0,0,18
+"Texas Christian","698",16,0,0,0,16
+"Texas Southern","699",16,0,0,0,16
+"Alabama State","7",20,0,0,0,20
+"Bowie St.","70",16,0,0,0,16
+"Texas Tech","700",18,0,0,0,18
+"Texas Woman's","701",20,0,0,0,20
+"Texas-Arlington","702",19,0,0,0,19
+"Texas","703",14,0,0,0,14
+"Texas-El Paso","704",21,0,0,0,21
+"UT-San Antonio","706",19,0,0,0,19
+"Thiel","707",17,0,0,0,17
+"Toledo","709",18,0,0,0,18
+"Bowling Green","71",17,0,0,0,17
+"Towson","711",17,0,0,0,17
+"Trinity (CT)","713",15,0,0,0,15
+"Trinity (TX)","715",18,0,0,0,18
+"Troy","716",17,0,0,0,17
+"Tufts","717",19,0,0,0,19
+"Tulane","718",16,0,0,0,16
+"Tulsa","719",14,0,0,0,14
+"Bradley","72",19,0,0,0,19
+"Tuskegee","720",9,0,0,0,9
+"Air Force","721",20,0,0,0,20
+"Coast Guard","722",19,0,0,0,19
+"Army","725",22,0,0,0,22
+"Navy","726",20,0,0,0,20
+"Union (NY)","727",18,0,0,0,18
+"Upper Iowa","728",18,0,0,0,18
+"Brandeis","73",17,0,0,0,17
+"Ursinus","730",15,0,0,0,15
+"Utah St.","731",18,0,0,0,18
+"Utah","732",15,0,0,0,15
+"Valdosta St.","734",18,0,0,0,18
+"Valparaiso","735",17,0,0,0,17
+"Vassar","737",14,0,0,0,14
+"Villanova","739",22,0,0,0,22
+"Bridgeport","74",12,0,0,0,12
+"Virginia Commonwealth","740",18,0,0,0,18
+"Virginia Tech","742",22,0,0,0,22
+"Va. Wesleyan","745",14,0,0,0,14
+"Virginia","746",17,0,0,0,17
+"Wake Forest","749",15,0,0,0,15
+"Bridgewater (VA)","75",13,0,0,0,13
+"Wartburg","750",33,0,0,0,33
+"Washington & Jefferson","751",15,0,0,0,15
+"Washington Col.","753",12,0,0,0,12
+"Washington State","754",15,0,0,0,15
+"WashU","755",18,0,0,0,18
+"Washington","756",17,0,0,0,17
+"Wayne St. (MI)","757",19,0,0,0,19
+"Weber State","758",16,0,0,0,16
+"Webster","759",16,0,0,0,16
+"Wellesley","760",13,0,0,0,13
+"Wentworth","762",16,0,0,0,16
+"Wesleyan (CT)","764",22,0,0,0,22
+"West Texas A&M","767",18,0,0,0,18
+"West Virginia","768",16,0,0,0,16
+"Western Carolina","769",16,0,0,0,16
+"Brigham Young","77",19,0,0,0,19
+"Western Connecticut St.","770",14,0,0,0,14
+"Western Illinois","771",17,0,0,0,17
+"Western Ky.","772",19,0,0,0,19
+"McDaniel","773",11,0,0,0,11
+"Western Michigan","774",13,0,0,0,13
+"Western New Eng.","775",18,0,0,0,18
+"Wheaton (IL)","778",17,0,0,0,17
+"Wheaton (MA)","779",13,0,0,0,13
+"Brockport","78",20,0,0,0,20
+"Whitman","780",17,0,0,0,17
+"Wichita State","782",20,0,0,0,20
+"Widener","783",17,0,0,0,17
+"Wilkes","784",17,0,0,0,17
+"Willamette","785",11,0,0,0,11
+"William & Mary","786",16,0,0,0,16
+"William Paterson","787",10,0,0,0,10
+"Winona St.","790",18,0,0,0,18
+"Winston-Salem","791",17,0,0,0,17
+"Winthrop","792",20,0,0,0,20
+"Wis.-Eau Claire","793",20,0,0,0,20
+"Green Bay","794",19,0,0,0,19
+"Wisconsin-La Crosse","795",22,0,0,0,22
+"Wisconsin","796",18,0,0,0,18
+"Milwaukee","797",15,0,0,0,15
+"Wis.-Oshkosh","798",19,0,0,0,19
+"Wisconsin-Parkside","799",17,0,0,0,17
+"Alabama","8",17,0,0,0,17
+"Brown","80",17,0,0,0,17
+"Wis.-Platteville","800",17,0,0,0,17
+"Wisconsin-River Falls","801",22,0,0,0,22
+"Wisconsin-Stevens Point","802",20,0,0,0,20
+"Wisconsin-Stout","803",19,0,0,0,19
+"Wisconsin-Superior","804",18,0,0,0,18
+"Wisconsin-Whitewater","805",19,0,0,0,19
+"Wittenberg","806",19,0,0,0,19
+"Wooster","807",24,0,0,0,24
+"WPI","808",19,0,0,0,19
+"Worcester St.","809",15,0,0,0,15
+"Bryant","81",17,0,0,0,17
+"Wright St.","810",15,0,0,0,15
+"Wyoming","811",9,0,0,0,9
+"Xavier","812",17,0,0,0,17
+"Yale","813",19,0,0,0,19
+"York (PA)","815",18,0,0,0,18
+"Youngstown St.","817",17,0,0,0,17
+"Bucknell","83",17,0,0,0,17
+"Hilbert","8398",13,0,0,0,13
+"Buena Vista","84",16,0,0,0,16
+"Hood","8404",17,0,0,0,17
+"Ark.-Monticello","8411",16,0,0,0,16
+"LeTourneau","8490",17,0,0,0,17
+"McMurry","8530",16,0,0,0,16
+"Mount St. Joseph","8567",17,0,0,0,17
+"Buffalo","86",15,0,0,0,15
+"St. Mary's (IN)","8688",12,0,0,0,12
+"Butler","87",18,0,0,0,18
+"Southwest Minn. St.","8736",15,0,0,0,15
+"Southwestern Okla.","8744",16,0,0,0,16
+"Southwestern (TX)","8746",20,0,0,0,20
+"Chowan","8875",17,0,0,0,17
+"Caltech","89",13,0,0,0,13
+"Wis. Lutheran","8911",22,0,0,0,22
+"Converse","8935",17,0,0,0,17
+"East Central","8965",18,0,0,0,18
+"Endicott","8981",19,0,0,0,19
+"UAB","9",17,0,0,0,17
+"Cal Poly","90",21,0,0,0,21
+"Georgian Court","9004",17,0,0,0,17
+"Fort Hays St.","9011",14,0,0,0,14
+"Mo. Southern St.","9012",16,0,0,0,16
+"Missouri Western","9013",18,0,0,0,18
+"Concordia-St. Paul","9081",17,0,0,0,17
+"Cal Poly Pomona","91",18,0,0,0,18
+"Cal St. Dom. Hills","92",15,0,0,0,15
+"Adams St.","929",19,0,0,0,19
+"Cal St. San Bernardino","93",19,0,0,0,19
+"Alvernia","938",17,0,0,0,17
+"Anderson (IN)","939",18,0,0,0,18
+"Cal State Bakersfield","94",16,0,0,0,16
+"Arkansas Tech","947",21,0,0,0,21
+"Chico St.","95",17,0,0,0,17
+"Austin","953",21,0,0,0,21
+"Fresno State","96",16,0,0,0,16
+"Bard","962",11,0,0,0,11
+"West Va. Wesleyan","9630",17,0,0,0,17
+"Arcadia","966",13,0,0,0,13
+"Embry-Riddle (FL)","9680",17,0,0,0,17
+"St. Elizabeth","9684",12,0,0,0,12
+"Cal State Fullerton","97",22,0,0,0,22
+"Berry","973",19,0,0,0,19
+"UC-Colo. Springs","9754",13,0,0,0,13
+"Cal St. East Bay","98",15,0,0,0,15
+"Bluefield St.","985",12,0,0,0,12
+"Long Beach State","99",22,0,0,0,22
+"Caldwell","995",13,0,0,0,13
+"Cameron","996",14,0,0,0,14

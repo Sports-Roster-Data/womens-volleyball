@@ -1,0 +1,109 @@
+year_raw,year_clean,redshirt
+1V,Freshman,FALSE
+2V,Sophomore,FALSE
+3V,Junior,FALSE
+5TH,Fifth Year,FALSE
+5TH YEAR,Fifth Year,FALSE
+5TH YEAR SR.,Fifth Year,FALSE
+5TH YR,Senior,FALSE
+5TH YR.,Fifth Year,FALSE
+5TH-YEAR SENIOR,Fifth Year,FALSE
+6TH,Sixth Year,FALSE
+COVID SENIOR,Senior,FALSE
+F,Freshman,FALSE
+FIFTH YEAR,Fifth Year,FALSE
+FIRST YEAR,Freshman,FALSE
+FIRST-YEAR,Freshman,FALSE
+FIRST-YEAR STUDENT,Freshman,FALSE
+FR,Freshman,FALSE
+FR.,Freshman,FALSE
+FR. - RS,Freshman,TRUE
+FR.-HS,Freshman,FALSE
+FR.-RS,Freshman,TRUE
+FRESHMAN,Freshman,FALSE
+FY,Freshman,FALSE
+FY.,Freshman,FALSE
+GR,Graduate Student,FALSE
+GR.,Graduate Student,FALSE
+GR.-2L,Graduate Student,FALSE
+GR.-4L,Graduate Student,FALSE
+GRAD,Graduate Student,FALSE
+GRAD STUDENT,Graduate Student,FALSE
+GRAD.,Graduate Student,FALSE
+GRADUATE,Graduate Student,FALSE
+GRADUATE STUDENT,Graduate Student,FALSE
+GRADUATE TRANSFER,Graduate Student,FALSE
+GS,Graduate Student,FALSE
+GS.,Graduate Student,FALSE
+HS,Freshman,FALSE
+JR,Junior,FALSE
+JR.,Junior,FALSE
+JR.-1L,Junior,FALSE
+JR.-2L,Junior,FALSE
+JR.-R,Junior,TRUE
+JR.-TR.,Junior,FALSE
+JUNIOR,Junior,FALSE
+R-FIFTH,Fifth Year,TRUE
+R-FR,Freshman,TRUE
+R-FR.,Freshman,TRUE
+R-FRESHMAN,Freshman,TRUE
+R-JR,Junior,TRUE
+R-JR.,Junior,TRUE
+R-JUNIOR,Junior,TRUE
+R-SENIOR,Senior,TRUE
+R-SO,Sophomore,TRUE
+R-SO.,Sophomore,TRUE
+R-SOPHOMORE,Sophomore,TRUE
+R-SR,Senior,TRUE
+R-SR.,Senior,TRUE
+REDSHIRT FIFTH YEAR,Fifth Year,TRUE
+REDSHIRT FIRST YEAR,Freshman,TRUE
+REDSHIRT FRESHMAN,Freshman,TRUE
+REDSHIRT JUNIOR,Junior,TRUE
+REDSHIRT SENIOR,Senior,TRUE
+REDSHIRT SOPHOMORE,Sophomore,TRUE
+REDSHIRT-FRESHMAN,Freshman,TRUE
+REDSHIRT-JUNIOR,Junior,TRUE
+REDSHIRT-SENIOR,Senior,TRUE
+REDSHIRT-SOPHOMORE,Sophomore,TRUE
+RFR,Freshman,TRUE
+RFR.,Freshman,TRUE
+RS JR.,Junior,TRUE
+RS SENIOR,Senior,TRUE
+RS SO.,Sophomore,TRUE
+RS SR,Senior,TRUE
+RS SR.,Senior,TRUE
+RS-FR.,Freshman,TRUE
+RS-FRESHMAN,Freshman,TRUE
+RS-JUNIOR,Junior,TRUE
+RS-SENIOR,Senior,TRUE
+RS-SO.,Sophomore,TRUE
+RS-SOPHOMORE,Sophomore,TRUE
+RS-SR.,Senior,TRUE
+RS.,Freshman,TRUE
+RSO,Sophomore,TRUE
+RSO.,Sophomore,TRUE
+RSR,Senior,TRUE
+RSR*,Senior,TRUE
+RSR.,Senior,TRUE
+SENIOR,Senior,FALSE
+SENIOR*,Senior,FALSE
+SENIOR+,Senior,FALSE
+SIXTH YEAR,Sixth Year,FALSE
+SO,Sophomore,FALSE
+SO.,Sophomore,FALSE
+SO. - RS,Sophomore,TRUE
+SO.-1L,Sophomore,FALSE
+SO.-TR.,Sophomore,FALSE
+SOPHMORE,Sophomore,FALSE
+SOPHOMORE,Sophomore,FALSE
+SR,Senior,FALSE
+SR.,Senior,FALSE
+SR.+,Senior,FALSE
+SR.-1L,Senior,FALSE
+SR.-2L,Senior,FALSE
+SR.-3L,Senior,FALSE
+SR.-5,Senior,FALSE
+SR.-TR.,Senior,FALSE
+SR./JR.,Senior,FALSE
+SUPER-SENIOR,Senior,FALSE

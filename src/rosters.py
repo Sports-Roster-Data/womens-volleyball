@@ -7,6 +7,11 @@ Usage:
     python rosters.py -season 2023-24
     python rosters.py -season 2023-24 -teams 255 326
     python rosters.py -url https://example.com/sports/w-volley -season 2023-24
+    python rosters.py -season 2025        # year-only accepted; written as 2025-26
+
+Seasons are written with the full academic-year label (fall sport: end year
+is start + 1), so `-season 2025` writes data/rosters_2025-26.csv and uses
+data/cache/rosters_2025-26/ for its resume cache.
 """
 
 import os
@@ -14,6 +19,7 @@ import re
 import csv
 import time
 import json
+import shutil
 import argparse
 import logging
 import subprocess
@@ -435,12 +441,46 @@ def verify_roster_season(html, season: str, team: Dict) -> bool:
     return False
 
 
+def canonical_season_label(season: str) -> str:
+    """Normalize a requested season to the full academic-year label used for
+    all writes (CSV path, per-team cache dir, and the `season` column value).
+
+    Volleyball is a fall sport spanning an academic year, so the canonical
+    label is the starting year plus the two-digit end year (start + 1):
+
+    >>> canonical_season_label('2025')
+    '2025-26'
+    >>> canonical_season_label('2025-26')
+    '2025-26'
+    >>> canonical_season_label('2023-24')
+    '2023-24'
+
+    A year-only four-digit season (existing muscle memory) is accepted and
+    expanded; anything else raises ValueError.
+    """
+    if not isinstance(season, str):
+        raise ValueError(f"Season must be a string: {season!r}")
+    value = season.strip()
+    if re.fullmatch(r'\d{4}', value):
+        return f"{value}-{'%02d' % ((int(value) + 1) % 100)}"
+    if re.fullmatch(r'\d{4}-\d{2}', value):
+        start = int(value[:4])
+        end = int(value[5:7])
+        if end != (start + 1) % 100:
+            logger.warning(f"Season label {value} does not extend its start year "
+                           f"(expected {start}-{'%02d' % ((start + 1) % 100)}); "
+                           f"using it as given")
+        return value
+    raise ValueError(f"Season must be a four-digit year ('2025') or a full "
+                     f"academic-year label ('2025-26'); got {season!r}")
+
+
 def season_url_slugs(season: str) -> List[str]:
     """Return the season slugs to embed in roster URL paths, best first.
 
     Volleyball seasons span an academic year, and many sites index rosters
     under the full slug ('2025-26') even when the requested season is
-    year-only ('2025', the convention used in data/rosters_<year>.csv names).
+    year-only ('2025', a form canonical_season_label accepts).
     For a year-only season, derive the academic slug (fall sport: end year is
     start + 1) and try it before the bare year. A season that already carries
     its end year also yields its bare-start-year form, which the Nuxt
@@ -469,7 +509,8 @@ def season_url_slugs(season: str) -> List[str]:
 # Ambiguous bare names and generic colleges are deliberately left alone.
 _HS_MARKER = (
     r'(?:\bH\.?S\.?\b|High School|Secondary School|Grammar School|'
-    r'Preparatory School|Prep School|Academy|Gymnasium|\bSchool\b)'
+    r'Preparatory School|Prep School|Academy|Gymnasium|Lyceum|'
+    r'\bSchool(?:\s+of\b|\b))'
 )
 
 
@@ -482,7 +523,8 @@ def reclassify_high_school_from_previous(row: Dict) -> bool:
     """Move an explicitly high-school-like previous_school value to high_school.
 
     Only fires when high_school is empty. Combined values keep the transfer
-    institution in previous_school, e.g. "Twin Valley HS / Liberty".
+    institution in previous_school, e.g. "Twin Valley HS / Liberty" via a slash
+    and "Deer Park HS (University of Houston)" via a transfer-suffix paren.
     Ported from the field-hockey scraper.
     """
     if row.get('high_school') or not row.get('previous_school'):
@@ -495,6 +537,17 @@ def reclassify_high_school_from_previous(row: Dict) -> bool:
     if slash:
         row['high_school'] = FieldExtractors.clean_text(slash.group(1))
         row['previous_school'] = FieldExtractors.clean_text(slash.group(2))
+        return True
+
+    # Transfer suffix: "<high school> (<transfer school>)", where the paren
+    # part is a UC campus ('UC Houston') or a school carrying 'University'
+    # ('University of Houston'). E.g. "Deer Park HS (University of Houston)".
+    transfer = re.match(
+        rf'^(.+?{_HS_MARKER})\s+\(((?:UC\s+.+)|(?:.*University.*))\)$',
+        value, re.IGNORECASE)
+    if transfer:
+        row['high_school'] = FieldExtractors.clean_text(transfer.group(1))
+        row['previous_school'] = FieldExtractors.clean_text(transfer.group(2))
         return True
 
     row['high_school'] = value
@@ -532,15 +585,22 @@ def _collapse_duplicated_name(name: str) -> str:
 def split_town_high_school(town: Optional[str]) -> tuple:
     """Split a combined 'Hometown / High School' cell.
 
-    Tolerates a missing '/' (returns the whole string as the town and None for
-    the high school) and a missing/None cell, so a malformed row never raises.
+    Tolerates a missing '/' (falls back to a trailing parenthesized school,
+    e.g. "La Jolla, Calif. (The Bishop's School)", then the whole string as
+    the town with None for the high school) and a missing/None cell, so a
+    malformed row never raises.
     """
     if not town:
         return '', None
-    parts = [x.strip() for x in town.split('/', maxsplit=1)]
-    if len(parts) == 2:
-        return parts[0], parts[1]
-    return parts[0], None
+    if '/' in town:
+        parts = [x.strip() for x in town.split('/', maxsplit=1)]
+        if len(parts) == 2:
+            return parts[0], parts[1]
+        return parts[0], None
+    paren = re.match(r'(.+?)\s*\(([^)]+)\)\s*$', town)
+    if paren:
+        return paren.group(1).strip(), paren.group(2).strip()
+    return town.strip(), None
 
 
 def parse_roster_baskbl(team: Dict, html: BeautifulSoup, season: str) -> List[Player]:
@@ -2163,7 +2223,7 @@ def _with_fallback(scraper):
 
 def _scrape_byu(team: Dict, season: str) -> List:
     # BYU uses a four-digit end year (e.g. "2025-26" -> "2025-2026"); derive
-    # it when the season is year-only (rosters_2025.csv convention).
+    # it from the canonical academic-year label when it arrives year-only.
     if re.fullmatch(r'\d{4}', season):
         byu_season = f"{season}-{int(season) + 1}"
     else:
@@ -2562,6 +2622,12 @@ def write_rosters_csv(path: str, new_rows: List[List], replace_ids: set = None):
     If `replace_ids` is None, the file is fully overwritten (full-season run).
     Otherwise, existing rows are preserved except those whose ncaa_id is in
     `replace_ids` (the teams we just re-scraped), and `new_rows` is appended.
+
+    Before the replace, when the target already exists and its bytes differ
+    from the bytes about to be written, the previous file is archived verbatim
+    (byte copy, never re-encoded) to `_raw_archive_dir(path)/<stem>.<UTC
+    timestamp>.csv`, preserving prior raw vintages. A rewrite with identical
+    bytes archives nothing.
     """
     existing_rows = []
     if replace_ids is not None and os.path.exists(path):
@@ -2578,7 +2644,52 @@ def write_rosters_csv(path: str, new_rows: List[List], replace_ids: set = None):
         writer.writerow(CSV_HEADER)
         writer.writerows(existing_rows)
         writer.writerows(new_rows)
+
+    if os.path.exists(path):
+        with open(path, 'rb') as f:
+            current_bytes = f.read()
+        with open(tmp_path, 'rb') as f:
+            incoming_bytes = f.read()
+        if current_bytes != incoming_bytes:
+            _archive_previous_snapshot(path)
+
     os.replace(tmp_path, path)
+
+
+def _raw_archive_dir(path: str) -> str:
+    """Directory that holds prior vintages of the CSV at `path`.
+
+    Defaults to a `raw_archive` directory alongside the CSV (a season file in
+    `data/` therefore archives to `data/raw_archive/`). Set the
+    ROSTERS_RAW_ARCHIVE_DIR environment variable to override.
+    """
+    override = os.environ.get('ROSTERS_RAW_ARCHIVE_DIR')
+    if override:
+        return override
+    return os.path.join(os.path.dirname(path) or '.', 'raw_archive')
+
+
+def _archive_previous_snapshot(path: str) -> None:
+    """Copy the current bytes of `path` to the raw archive before replacement.
+
+    A byte-preserving shutil.copy2 (no re-encode) so the archived vintage is
+    exactly what the file was. No-op when the target does not exist.
+    """
+    if not os.path.exists(path):
+        return
+    archive_dir = _raw_archive_dir(path)
+    os.makedirs(archive_dir, exist_ok=True)
+    timestamp = time.strftime('%Y%m%dT%H%M%S', time.gmtime())
+    stem = Path(path).stem or Path(path).name
+    archive_path = os.path.join(archive_dir, f"{stem}.{timestamp}.csv")
+    # Same-second rewrites must not overwrite an archived vintage.
+    counter = 0
+    while os.path.exists(archive_path):
+        counter += 1
+        archive_path = os.path.join(
+            archive_dir, f"{stem}.{timestamp}.{counter}.csv")
+    shutil.copy2(path, archive_path)
+    logger.info(f"Archived previous snapshot of {path} to {archive_path}")
 
 
 # ============================================================================
@@ -2586,16 +2697,17 @@ def write_rosters_csv(path: str, new_rows: List[List], replace_ids: set = None):
 # ============================================================================
 
 def _cache_file_for(season: str, ncaa_id: Any) -> str:
-    """Per-team cache file holding that team's CSV rows for a season."""
+    """Per-team cache file for a canonical season label."""
     return f"data/cache/rosters_{season}/{ncaa_id}.json"
 
 
 def _write_cached_rows(season: str, ncaa_id: Any, rows: List[List]) -> None:
     """Atomically cache one team's CSV rows so an interrupted run can resume.
 
-    Only successful (non-empty) rosters are cached, so re-running with resume
-    still retries the teams that failed or parsed empty. Delete
-    ``data/cache/rosters_<season>/`` to force a full re-scrape.
+    `season` is the canonical academic-year label. Only successful
+    (non-empty) rosters are cached, so re-running with resume still retries
+    the teams that failed or parsed empty. Delete
+    ``data/cache/rosters_<label>/`` to force a full re-scrape.
     """
     path = _cache_file_for(season, ncaa_id)
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -2628,10 +2740,14 @@ def get_all_rosters(season: str, teams: List[int] = [], resume: bool = False) ->
     Main function to scrape all rosters for a season
 
     Args:
-        season: Season string (e.g., '2023-24')
+        season: Season string, either year-only ('2025') or the full
+            academic-year label ('2023-24'). All writes use the canonical
+            label: the `season` column value, the output file
+            data/rosters_<label>.csv and the resume cache
+            data/cache/rosters_<label>/.
         teams: Optional list of team IDs to scrape (if empty, scrapes all)
         resume: When True, teams already scraped successfully for this season
-            (present in data/cache/rosters_<season>/) are served from cache
+            (present in data/cache/rosters_<label>/) are served from cache
             instead of being re-fetched
 
     Returns:
@@ -2639,6 +2755,13 @@ def get_all_rosters(season: str, teams: List[int] = [], resume: bool = False) ->
     """
     unparsed = []
     skipped = []
+
+    # Normalize to the full academic-year label used everywhere below (URL
+    # slugs, row values, cache dir, output file). A year-only request keeps
+    # working; the label is what lands on disk.
+    label = canonical_season_label(season)
+    if label != season:
+        logger.info(f"Season {season!r} canonicalized to {label!r}")
 
     # Load teams
     teams_json = json.loads(open('data/teams.json').read())
@@ -2653,10 +2776,12 @@ def get_all_rosters(season: str, teams: List[int] = [], resume: bool = False) ->
 
     for team in teams_with_urls:
         try:
-            # Skip decisions come from data/teams.json config keys.
+            # Skip decisions come from data/teams.json config keys. Match both
+            # the requested season and its canonical label.
             if team.get('scraper') == 'skip':
                 continue
-            if season in team.get('skip_seasons', []):
+            skip_seasons = team.get('skip_seasons', [])
+            if season in skip_seasons or label in skip_seasons:
                 continue
             if 'roster' in team:
                 continue
@@ -2665,20 +2790,20 @@ def get_all_rosters(season: str, teams: List[int] = [], resume: bool = False) ->
 
             # Resume: serve teams with a settled cache instead of re-fetching.
             if resume:
-                cached_rows = _read_cached_rows(season, team['ncaa_id'])
+                cached_rows = _read_cached_rows(label, team['ncaa_id'])
                 if cached_rows:
                     logger.info(f"{team['team']}: serving {len(cached_rows)} players from cache")
                     scraped_ids.add(str(team['ncaa_id']))
                     new_rows.extend(cached_rows)
                     continue
 
-            roster = scrape_team_roster(team, season)
+            roster = scrape_team_roster(team, label)
 
             if roster:
-                rows = [player_to_row(player, season) for player in roster]
+                rows = [player_to_row(player, label) for player in roster]
                 scraped_ids.add(str(team['ncaa_id']))
                 new_rows.extend(rows)
-                _write_cached_rows(season, team['ncaa_id'], rows)
+                _write_cached_rows(label, team['ncaa_id'], rows)
             else:
                 unparsed.append(team['ncaa_id'])
             if RATE_LIMIT_SECONDS:
@@ -2696,7 +2821,7 @@ def get_all_rosters(season: str, teams: List[int] = [], resume: bool = False) ->
 
     # A full-season run overwrites the file; a targeted `-teams` run merges the
     # newly scraped teams into the existing file, replacing only those teams.
-    path = f"data/rosters_{season}.csv"
+    path = f"data/rosters_{label}.csv"
     if teams:
         write_rosters_csv(path, new_rows, replace_ids=scraped_ids)
     else:
@@ -2717,35 +2842,46 @@ if __name__ == "__main__":
         epilog="""
 Examples:
   python rosters.py -season 2023-24
+  python rosters.py -season 2025            (written as 2025-26)
   python rosters.py -season 2023-24 -teams 255 326
   python rosters.py -url https://example.com/sports/w-volley -season 2023-24
+
+Season labels are the full academic year (fall sport: end year = start + 1):
+-season 2025 writes data/rosters_2025-26.csv and resumes from
+data/cache/rosters_2025-26/. Year-only input is accepted and canonicalized.
         """
     )
     parser.add_argument('-season', action='store', dest='season',
-                       help='Season string such as "2023-24"', required=True)
+                       help='Season string: year-only ("2025") or the full '
+                            'academic-year label ("2025-26")', required=True)
     parser.add_argument('-url', action='store', dest='url',
                        help='Base URL for a single team')
     parser.add_argument('-teams', nargs='+', type=int, dest='teams',
                        help='List of team IDs to scrape (space-separated)')
     parser.add_argument('-resume', action='store_true', dest='resume',
                        help='Reuse cached per-team results from a previous run '
-                            'of this season (data/cache/rosters_<season>/) instead '
+                            'of this season (data/cache/rosters_<label>/) instead '
                             'of re-fetching teams that already succeeded')
 
     results = parser.parse_args()
+
+    # Canonicalize up front so every below log line and cache reference names
+    # the label that will actually be written (a bad season exits loudly).
+    canonical = canonical_season_label(results.season)
+    logger.info(f"Using canonical season label: {canonical}")
 
     if results.url:
         # Single team mode
         logger.info(f"Scraping single team: {results.url}")
         team = {'url': results.url, 'ncaa_id': 0, 'team': 'Single Team'}
-        html = fetch_roster(results.url, results.season)
-        roster = parse_roster(team, html, results.season)
+        html = fetch_roster(results.url, canonical)
+        roster = parse_roster(team, html, canonical)
         for player in roster:
             logger.info(player)
     else:
         # Bulk mode
         teams_to_scrape = results.teams if results.teams else []
-        logger.info(f"Starting bulk scrape for season {results.season}")
+        logger.info(f"Starting bulk scrape for season {canonical}")
         if teams_to_scrape:
             logger.info(f"Scraping specific teams: {teams_to_scrape}")
         unparsed, skipped = get_all_rosters(results.season, teams_to_scrape, resume=results.resume)

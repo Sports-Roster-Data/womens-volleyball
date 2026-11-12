@@ -1,0 +1,185 @@
+raw_key,state_code,state_name,census_region,is_territory
+AK,AK,Alaska,West,FALSE
+ALA,AL,Alabama,South,FALSE
+ALABAMA,AL,Alabama,South,FALSE
+ALAS,AK,Alaska,West,FALSE
+ALASKA,AK,Alaska,West,FALSE
+AR,AR,Arkansas,South,FALSE
+ARI,AZ,Arizona,West,FALSE
+ARIZ,AZ,Arizona,West,FALSE
+ARIZONA,AZ,Arizona,West,FALSE
+ARK,AR,Arkansas,South,FALSE
+ARKANSAS,AR,Arkansas,South,FALSE
+ARZ,AZ,Arizona,West,FALSE
+CA,CA,California,West,FALSE
+CAIF,CA,California,West,FALSE
+CAL,CA,California,West,FALSE
+CALF,CA,California,West,FALSE
+CALFIORNIA,CA,California,West,FALSE
+CALI,CA,California,West,FALSE
+CALIF,CA,California,West,FALSE
+CALIFONIA,CA,California,West,FALSE
+CALIFORNIA,CA,California,West,FALSE
+CO,CO,Colorado,West,FALSE
+COL,CO,Colorado,West,FALSE
+COLO,CO,Colorado,West,FALSE
+COLORADO,CO,Colorado,West,FALSE
+CONN,CT,Connecticut,Northeast,FALSE
+CONNECTICUT,CT,Connecticut,Northeast,FALSE
+CT,CT,Connecticut,Northeast,FALSE
+DC,DC,District of Columbia,South,FALSE
+DE,DE,Delaware,South,FALSE
+DEL,DE,Delaware,South,FALSE
+DELWARE,DE,Delaware,South,FALSE
+FL,FL,Florida,South,FALSE
+FL+,FL,Florida,South,FALSE
+FLA,FL,Florida,South,FALSE
+FLL,FL,Florida,South,FALSE
+FLORIDA,FL,Florida,South,FALSE
+GA,GA,Georgia,South,FALSE
+GEORGIA,GA,Georgia,South,FALSE
+GU,GU,Guam,West,TRUE
+GUAM,GU,Guam,West,TRUE
+HAW,HI,Hawaii,West,FALSE
+HAWAI'I,HI,Hawaii,West,FALSE
+HAWAII,HI,Hawaii,West,FALSE
+HAWAIII,HI,Hawaii,West,FALSE
+HAWAI‘I,HI,Hawaii,West,FALSE
+HAWAI’I,HI,Hawaii,West,FALSE
+HI,HI,Hawaii,West,FALSE
+IA,IA,Iowa,Midwest,FALSE
+ID,ID,Idaho,West,FALSE
+IDA,ID,Idaho,West,FALSE
+IDAHO,ID,Idaho,West,FALSE
+IIL,IL,Illinois,Midwest,FALSE
+IL,IL,Illinois,Midwest,FALSE
+ILL,IL,Illinois,Midwest,FALSE
+ILLI,IL,Illinois,Midwest,FALSE
+ILLIINOIS,IL,Illinois,Midwest,FALSE
+ILLINOIS,IL,Illinois,Midwest,FALSE
+IN,IN,Indiana,Midwest,FALSE
+IND,IN,Indiana,Midwest,FALSE
+INDIANA,IN,Indiana,Midwest,FALSE
+IOWA,IA,Iowa,Midwest,FALSE
+KAN,KS,Kansas,Midwest,FALSE
+KANS,KS,Kansas,Midwest,FALSE
+KANSAS,KS,Kansas,Midwest,FALSE
+KEN,KY,Kentucky,South,FALSE
+KENT,KY,Kentucky,South,FALSE
+KS,KS,Kansas,Midwest,FALSE
+KY,KY,Kentucky,South,FALSE
+LA,LA,Louisiana,South,FALSE
+LOUIS,LA,Louisiana,South,FALSE
+LOUISANA,LA,Louisiana,South,FALSE
+LOUISIANA,LA,Louisiana,South,FALSE
+MA,MA,Massachusetts,Northeast,FALSE
+MAINE,ME,Maine,Northeast,FALSE
+MARLYAND,MD,Maryland,South,FALSE
+MARY,MD,Maryland,South,FALSE
+MARYLAND,MD,Maryland,South,FALSE
+MASS,MA,Massachusetts,Northeast,FALSE
+MASSACHUSETTS,MA,Massachusetts,Northeast,FALSE
+MAUI,HI,Hawaii,West,FALSE
+MD,MD,Maryland,South,FALSE
+ME,ME,Maine,Northeast,FALSE
+MI,MI,Michigan,Midwest,FALSE
+MICH,MI,Michigan,Midwest,FALSE
+MICHIGAN,MI,Michigan,Midwest,FALSE
+MIN,MN,Minnesota,Midwest,FALSE
+MINN,MN,Minnesota,Midwest,FALSE
+MINNESOTA,MN,Minnesota,Midwest,FALSE
+MISS,MS,Mississippi,South,FALSE
+MISSISSIPPI,MS,Mississippi,South,FALSE
+MISSOURI,MO,Missouri,Midwest,FALSE
+MN,MN,Minnesota,Midwest,FALSE
+MO,MO,Missouri,Midwest,FALSE
+MOLOKA‘I,HI,Hawaii,West,FALSE
+MONT,MT,Montana,West,FALSE
+MONTANA,MT,Montana,West,FALSE
+MP,MP,Northern Mariana Islands,West,TRUE
+MS,MS,Mississippi,South,FALSE
+MT,MT,Montana,West,FALSE
+N C,NC,North Carolina,South,FALSE
+N MEX,NM,New Mexico,West,FALSE
+NC,NC,North Carolina,South,FALSE
+ND,ND,North Dakota,Midwest,FALSE
+NE,NE,Nebraska,Midwest,FALSE
+NEB,NE,Nebraska,Midwest,FALSE
+NEBR,NE,Nebraska,Midwest,FALSE
+NEBRASKA,NE,Nebraska,Midwest,FALSE
+NEV,NV,Nevada,West,FALSE
+NEVADA,NV,Nevada,West,FALSE
+NEW HAMPSHIRE,NH,New Hampshire,Northeast,FALSE
+NEW JERSEY,NJ,New Jersey,Northeast,FALSE
+NEW MEXICO,NM,New Mexico,West,FALSE
+NEW YORK,NY,New York,Northeast,FALSE
+NH,NH,New Hampshire,Northeast,FALSE
+NJ,NJ,New Jersey,Northeast,FALSE
+NM,NM,New Mexico,West,FALSE
+NMEX,NM,New Mexico,West,FALSE
+NORTH CAROLIN,NC,North Carolina,South,FALSE
+NORTH CAROLINA,NC,North Carolina,South,FALSE
+NV,NV,Nevada,West,FALSE
+NY,NY,New York,Northeast,FALSE
+NYC,NY,New York,Northeast,FALSE
+O'AHU,HI,Hawaii,West,FALSE
+OH,OH,Ohio,Midwest,FALSE
+OHIO,OH,Ohio,Midwest,FALSE
+OK,OK,Oklahoma,South,FALSE
+OKLA,OK,Oklahoma,South,FALSE
+OKLAHOMA,OK,Oklahoma,South,FALSE
+OR,OR,Oregon,West,FALSE
+ORE,OR,Oregon,West,FALSE
+OREG,OR,Oregon,West,FALSE
+OREGON,OR,Oregon,West,FALSE
+O`AHU,HI,Hawaii,West,FALSE
+O‘AHU,HI,Hawaii,West,FALSE
+PA,PA,Pennsylvania,Northeast,FALSE
+PENN,PA,Pennsylvania,Northeast,FALSE
+PENNSYLVANIA,PA,Pennsylvania,Northeast,FALSE
+PENSYLVANIA,PA,Pennsylvania,Northeast,FALSE
+PR,PR,Puerto Rico,South,TRUE
+PUERTA RICO,PR,Puerto Rico,South,TRUE
+PUERTO RICO,PR,Puerto Rico,South,TRUE
+RI,RI,Rhode Island,Northeast,FALSE
+SC,SC,South Carolina,South,FALSE
+SD,SD,South Dakota,Midwest,FALSE
+SD.,SD,South Dakota,Midwest,FALSE
+SOUTH CAROLINA,SC,South Carolina,South,FALSE
+SOUTH DAKOTA,SD,South Dakota,Midwest,FALSE
+TENN,TN,Tennessee,South,FALSE
+TENNESSEE,TN,Tennessee,South,FALSE
+TEX,TX,Texas,South,FALSE
+TEXAS,TX,Texas,South,FALSE
+TN,TN,Tennessee,South,FALSE
+TX,TX,Texas,South,FALSE
+US VIRGIN ISLAND,VI,US Virgin Islands,South,TRUE
+US VIRGIN ISLANDS,VI,US Virgin Islands,South,TRUE
+USVI,VI,US Virgin Islands,South,TRUE
+UT,UT,Utah,West,FALSE
+UTAH,UT,Utah,West,FALSE
+VA,VA,Virginia,South,FALSE
+VER,VT,Vermont,Northeast,FALSE
+VERMONT,VT,Vermont,Northeast,FALSE
+VI,VI,US Virgin Islands,South,TRUE
+VIR,VI,US Virgin Islands,South,TRUE
+VIRG,VA,Virginia,South,FALSE
+VIRGIN ISLANDS,VI,US Virgin Islands,South,TRUE
+VIRGINIA,VA,Virginia,South,FALSE
+VT,VT,Vermont,Northeast,FALSE
+W VA,WV,West Virginia,South,FALSE
+WA,WA,Washington,West,FALSE
+WAS,WA,Washington,West,FALSE
+WASH,WA,Washington,West,FALSE
+WASHINGTON,WA,Washington,West,FALSE
+WEST VIRGINIA,WV,West Virginia,South,FALSE
+WI,WI,Wisconsin,Midwest,FALSE
+WIS,WI,Wisconsin,Midwest,FALSE
+WISC,WI,Wisconsin,Midwest,FALSE
+WISCONSIN,WI,Wisconsin,Midwest,FALSE
+WS,WI,Wisconsin,South,FALSE
+WV,WV,West Virginia,South,FALSE
+WVA,WV,West Virginia,South,FALSE
+WY,WY,Wyoming,West,FALSE
+WYO,WY,Wyoming,West,FALSE
+WYOMING,WY,Wyoming,West,FALSE

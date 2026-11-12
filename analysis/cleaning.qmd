@@ -1,546 +1,213 @@
 ---
-title: Women's College Volleyball Roster Data Cleaning
+title: "Women's College Volleyball Roster Cleaning — Quality Report"
+params:
+  season: "2026-27"
+execute:
+  echo: false
 ---
 
-```{r setup-root, include=FALSE}
-# The notebook reads/writes repo-relative paths (data/, vb_rosters_*.csv);
-# set the working directory to the repository root wherever the render runs.
-if (!file.exists("data/teams.csv")) knitr::opts_knit$set(root.dir = "..")
+This report renders the build's outputs for the selected season. It reads and
+audits the files `scripts/build_rosters.R` produces; it does not re-implement
+transformations. Set the season with `params$season` (a full academic-year
+label such as `2026-27`), e.g.:
+
+```r
+rmarkdown::render("analysis/cleaning.qmd", params = list(season = "2026-27"))
 ```
 
-```{r load-libraries, message=FALSE, warning=FALSE}
-library(tidyverse)
-library(janitor)
-library(postmastr)
-library(usdata)
-```
-
-This notebook processes and standardizes women's college volleyball roster data for a single season (set by `SEASON` below). The data requires extensive cleaning to standardize heights, positions, years, geographic information, and previous school names. Exploratory checks live in the **Data quality checks** section at the end.
-
-## Setup and Configuration
+The canonical season label drives everything; the build processed seasons
+chronologically so backfilled high schools come from the previous season's
+corrected output.
 
 ```{r setup, message=FALSE, warning=FALSE}
-# Configuration: change SEASON (e.g. "2027-28") and everything else follows
-SEASON      <- "2026-27"
-START_YEAR  <- as.integer(str_sub(SEASON, 1, 4))
-SEASON_END  <- START_YEAR + 1L                                   # 2027
-PREV_SEASON <- sprintf("%d-%02d", START_YEAR - 1L, START_YEAR %% 100L)  # 2025-26
+# Paths are repo-relative; render from the repository root wherever run.
+root_dir <- getwd()
+if (!file.exists(file.path(root_dir, "data", "reference", "raw_snapshots.csv"))) {
+  # likely invoked with analysis/ as the working directory
+  root_dir <- file.path(root_dir, "..")
+}
+knitr::opts_knit$set(root.dir = root_dir)
+library(tidyverse)
 
-# Scraper output lives in data/rosters_<SEASON>.csv; cleaned output follows
-# the repo's vb_rosters_* naming.
-INPUT_FILE   <- paste0("data/rosters_", SEASON, ".csv")
-OUTPUT_FILE  <- paste0("vb_rosters_", SEASON, ".csv")
-PREV_FILE    <- paste0("data/rosters_", PREV_SEASON, ".csv")
+SEASON <- params$season
+
+clean_file <- function(kind) {
+  switch(kind,
+    clean    = file.path("data", "clean", paste0("vb_rosters_", SEASON, ".csv")),
+    baseline = file.path("data", "derived", "baseline", paste0("vb_rosters_", SEASON, ".csv")),
+    quarantine = file.path("data", "derived", "quarantine", paste0("vb_rosters_", SEASON, ".csv")))
+}
+
+audits_dir <- file.path("data", "derived", "audits", SEASON)
+
+read_audit <- function(name) {
+  path <- file.path(audits_dir, name)
+  if (!file.exists(path)) return(tibble())
+  read_csv(path, show_col_types = FALSE, na = "")
+}
+read_output <- function(kind) {
+  path <- clean_file(kind)
+  if (!file.exists(path)) stop("build output missing: ", path)
+  read_csv(path, show_col_types = FALSE, na = "")
+}
+
+if (!file.exists(clean_file("clean"))) {
+  stop("No build output for ", SEASON, ". Run scripts/build_rosters.R --season ",
+       SEASON, " first.")
+}
+
+vb_rosters <- read_output("clean")
+baseline   <- read_output("baseline")
+quarantine <- read_output("quarantine")
+
+issues      <- read_audit("row_issues.csv")
+dup_review  <- read_audit("duplicate_review.csv")
+coverage    <- read_audit("team_coverage.csv")
+quality     <- read_audit("quality_summary.csv")
+reconciled  <- read_audit("reconciliation.csv")
+
+n_clean <- nrow(vb_rosters)
 ```
 
-## Load Source Data
+## Reconciliation
 
-```{r load-data, message=FALSE}
-# Load roster data and squish team names
-vb_rosters <- read_csv(INPUT_FILE, show_col_types = FALSE) |>
-  mutate(team = str_squish(team))
+Raw rows must equal the sum of published, quarantined, duplicate-removal and
+reviewed-exclusion rows. The build enforces this before writing anything.
 
-stopifnot(all(vb_rosters$season == SEASON))
-n_input <- nrow(vb_rosters)
+```{r reconciliation}
+reconciled
+stopifnot(sum(reconciled$rows) == nrow(baseline))
+```
 
-# Load teams metadata (conference/division columns are joined only if present)
-teams <- read_csv("data/teams.csv", show_col_types = FALSE) |>
-  select(-any_of(c("url", "twitter", "stats_name", "private", "roster"))) |>
-  distinct()
+## Quality summary
 
-keep_cols <- intersect(c("ncaa_id", "team", "team_state", "conference", "division"),
-                       names(teams))
-if (setdiff(keep_cols, c("ncaa_id", "team")) |> length() > 0) {
-  vb_rosters <- vb_rosters |>
-    left_join(teams |> select(all_of(keep_cols)),
-              by = intersect(c("ncaa_id", "team"), keep_cols),
-              relationship = "many-to-one")
-  cat("Joined team metadata columns:", setdiff(keep_cols, c("ncaa_id", "team")), "\n")
+```{r quality}
+quality |>
+  mutate(display = paste0(metric, ": ", value))
+```
+
+`*_rate_pct` metrics are shares of non-missing raw values; `high_school_`
+metrics count published rows.
+
+## Quarantined rows
+
+Structural problems quarantine the individual row with a reason. Every raw
+value is preserved in `data/derived/quarantine/`.
+
+```{r quarantine-reasons}
+quarantine |>
+  count(quarantine_reason, sort = TRUE)
+```
+
+```{r quarantine-teams}
+if (nrow(quarantine)) {
+  quarantine |>
+    count(ncaa_id, team, sort = TRUE) |>
+    head(20)
+}
+```
+
+## Field-level warnings (published rows)
+
+A bad field does not prove the row is not a player, so these rows publish
+with an explicit status. The unparsable raw values should shrink to genuine
+unknowns over time.
+
+```{r parse-failures}
+vb_rosters |>
+  filter(!is.na(height_raw) & str_squish(height_raw) != "", is.na(total_inches)) |>
+  count(height_raw, sort = TRUE)
+```
+
+```{r position-failures}
+vb_rosters |>
+  filter(!is.na(position_raw) & str_squish(position_raw) != "", is.na(position_clean)) |>
+  count(position_raw, sort = TRUE)
+```
+
+```{r class-failures}
+vb_rosters |>
+  filter(!is.na(year_raw) & str_squish(year_raw) != "", is.na(year_clean)) |>
+  count(year_raw, sort = TRUE)
+```
+
+## Unrecognized geography
+
+Only dictionary hits resolve; cities, club names and majors are never
+promoted to a country. Anything here is a candidate for
+`data/reference/country_variants.csv` / `state_variants.csv` — or a genuine
+unknown.
+
+```{r geography-failures}
+if (any(vb_rosters$hometown_status == "unparsed")) {
+  vb_rosters |> filter(hometown_status == "unparsed") |> count(team, sort = TRUE)
+}
+```
+
+## Duplicate review
+
+Candidate groups share a profile URL, player ID, or normalized name within a
+team-season. Matching name/jersey is evidence, not proof: rows collapse only
+through reviewed `corrections/row_corrections.csv` entries, and everything
+else is quarantined.
+
+```{r duplicate-review}
+if (nrow(dup_review)) {
+  dup_review
 } else {
-  cat("teams.csv has no conference/division data - skipping metadata join\n")
+  tibble(note = "no candidate duplicate groups this season")
 }
 ```
 
-## Height Cleaning
+## Team coverage
 
-The roster data contains heights in various formats (6'0", 6-0, 5'-2", 6′0″ with curly quotes). We standardize all heights to use hyphens (6-0) and create a total inches column for analysis.
+Raw, published, quarantined, duplicate and excluded counts by team.
+Teams that had raw rows but published nothing are build blockers unless
+reviewed in `data/reference/coverage_exceptions.csv`.
 
-```{r clean-heights}
-# Source heights come as 6'0", 6' 0'', 5'-2", 6′0″, etc. Turn the feet mark
-# (straight or curly apostrophe) into a dash AFTER dropping the inch marks and
-# spaces — removing the apostrophe first would mangle 5'9" into "59".
-vb_rosters <- vb_rosters |>
-  mutate(
-    height_clean = height |>
-      str_replace_all("''", "") |>
-      str_replace_all("″", "") |>
-      str_remove_all("\"|\\s|(?i)height:") |>
-      str_replace_all("[′']", "-")
-  ) |>
-  separate(height_clean, c("height_ft", "height_in"), sep = "-",
-           extra = "merge", fill = "right", remove = FALSE) |>
-  mutate(
-    across(c(height_ft, height_in), \(x) suppressWarnings(as.numeric(x))),
-    total_inches = height_ft * 12 + height_in,
-    # Heights outside a plausible range are parse errors, not players
-    total_inches = if_else(between(total_inches, 55, 84), total_inches, NA_real_)
-  )
-
-# Check the formats that did not make it into the plausible range
-vb_rosters |> filter(!is.na(height_clean), is.na(total_inches)) |>
-  count(height_clean, sort = TRUE)
+```{r coverage}
+coverage |>
+  filter(rows_raw > 0) |>
+  arrange(desc(rows_raw - published)) |>
+  head(20)
 ```
 
-## Position Cleaning
-
-Volleyball positions come as long names ("Outside Hitter", "Middle Blocker", "Defensive Specialist"), abbreviations (OH, MB, DS), and slash combinations (OH/DS, L/DS, MB/RS). We standardize to a canonical code set — OH (outside), MB (middle), S (setter), L (libero), DS (defensive specialist), OPP (opposite), RS (right side), PH (pin), UT (utility) — with a mapping table for the known formats and a token fallback for everything else.
-
-```{r clean-positions}
-# Existing mapping from raw position strings to canonical codes
-positions_cleaned <- read_csv("data/cleaned_positions.csv", show_col_types = FALSE) |>
-  select(-count) |>
-  distinct(position, .keep_all = TRUE)
-
-# Fallback for variants the mapping lacks: spell out the long forms first,
-# then map each remaining token to a code and rebuild in order.
-token_map <- c(
-  S = "S", SET = "S", SETTER = "S", SETTERS = "S",
-  OH = "OH", O = "OH", OUTSIDE = "OH",
-  MB = "MB", M = "MB", MID = "MB", MIDDLE = "MB", MH = "MB",
-  DS = "DS", D = "DS", DEF = "DS", DEFENSE = "DS", DEFENSIVE = "DS",
-  L = "L", LIB = "L", LIBERO = "L",
-  RS = "RS", R = "RS", RIGHT = "RS",
-  OP = "OPP", OPP = "OPP", OPPOSITE = "OPP",
-  PIN = "PH", PH = "PH", UT = "UT", UTL = "UT", UTILITY = "UT"
-)
-
-fallback_position <- function(x) {
-  map_chr(x, \(p) {
-    if (is.na(p)) return(NA_character_)
-    p <- p |>
-      str_to_upper() |>
-      str_replace_all(c(
-        "OUTSIDE HITTER" = "OH", "MIDDLE BLOCKER" = "MB",
-        "DEFENSIVE SPECIALIST" = "DS", "RIGHT-SIDE HITTER" = "RS",
-        "RIGHT SIDE HITTER" = "RS", "RIGHT-SIDE" = "RS",
-        "RIGHT SIDE" = "RS", "PIN HITTER" = "PH", "PIN-HITTER" = "PH"
-      ))
-    tokens <- unname(token_map[str_split_1(p, "\\s*[/-]\\s*")])
-    if (anyNA(tokens)) return(NA_character_)
-    paste(tokens, collapse = "/")
-  })
-}
-
-vb_rosters <- vb_rosters |>
-  mutate(position = str_squish(position),
-         position = na_if(position, ""), position = na_if(position, "N/A")) |>
-  left_join(positions_cleaned, by = "position", relationship = "many-to-one") |>
-  mutate(
-    position_clean = coalesce(cleaned_position, fallback_position(position)),
-    position_full  = position_clean
-  ) |>
-  select(-cleaned_position) |>
-  # Split combined positions (e.g., "OH/DS")
-  separate(position_clean, c("primary_position", "secondary_position"),
-           sep = "/", extra = "merge", fill = "right")
-
-# Check position distribution
-vb_rosters |> count(primary_position, sort = TRUE)
+```{r coverage-empty}
+coverage |> filter(rows_raw > 0, published == 0)
 ```
 
-## Year Classification Cleaning
+## Roster sizes and staleness
 
-We standardize year classifications to: Freshman, Sophomore, Junior, Senior, Graduate Student, Fifth Year, Sixth Year. We also track redshirt status separately.
-
-```{r clean-years}
-# Exact-match lookup for the known formats (one row per key)
-years_cleaned <- read_csv("data/years_cleaned.csv", show_col_types = FALSE) |>
-  rename(year_clean = `year-clean`) |>
-  filter(!is.na(year_clean)) |>
-  distinct(year, .keep_all = TRUE) |>
-  select(-count)
-
-# Pattern fallback for everything the lookup misses (FRESHMAN, 2nd Year, Jr. (3rd), ...)
-year_from_pattern <- function(x) {
-  x <- x |> str_to_upper() |> str_squish() |> str_remove("^ACADEMIC |^R-|^RS-?|^RED ")
-  case_when(
-    str_detect(x, "^GR|GRAD")                       ~ "Graduate Student",
-    str_detect(x, "SIXTH|SEVENTH|6TH")              ~ "Sixth Year",
-    str_detect(x, "FIFTH|5TH")                      ~ "Fifth Year",
-    str_detect(x, "^FR|FRESH|1ST|FIRST|^1$")        ~ "Freshman",
-    str_detect(x, "^SO|SOPH|2ND|SECOND|^2$")        ~ "Sophomore",
-    str_detect(x, "^JR|JUNIOR|3RD|THIRD|^3$")       ~ "Junior",
-    str_detect(x, "^SR|SENIOR|4TH|FOURTH|^4$")      ~ "Senior",
-    TRUE                                            ~ NA_character_
-  )
-}
-
-# Class years in the source can also be graduation years (2029 / '29)
-grad_year_class <- c("Freshman", "Sophomore", "Junior", "Senior")
-grad_year_map <- tibble(
-  year = c(as.character(SEASON_END + 3:0), paste0("'", (SEASON_END + 3:0) %% 100)),
-  grad_year_clean = rep(grad_year_class, 2)
-)
-
-vb_rosters <- vb_rosters |>
-  left_join(years_cleaned, by = "year", relationship = "many-to-one") |>
-  left_join(grad_year_map, by = "year", relationship = "many-to-one") |>
-  mutate(
-    year_clean = coalesce(year_clean, grad_year_clean, year_from_pattern(year)),
-    redshirt = coalesce(
-      redshirt,
-      as.numeric(str_detect(str_to_upper(year), "REDSHIRT|^R-|^RS|^RED "))
-    )
-  ) |>
-  select(-grad_year_clean)
-
-# Check year distribution
-vb_rosters |> count(year_clean, sort = TRUE)
+```{r roster-sizes}
+vb_rosters |>
+  count(division, team, name = "players") |>
+  group_by(division) |>
+  summarise(teams = n(), min = min(players), median = median(players),
+            max = max(players), .groups = "drop")
 ```
 
-## High School and Previous School Cleaning
-
-Some records list high schools in the previous_school column. We separate these and backfill missing high school data from previous roster years.
-
-```{r clean-schools}
-# Some records list high schools in the previous_school column
-hs_pattern <- "HS|H\\.S\\.|High School"
-
-previous_school_is_hs <- vb_rosters |>
-  filter(is.na(high_school) | high_school == "",
-         !is.na(previous_school), str_detect(previous_school, hs_pattern)) |>
-  pull(previous_school) |>
-  unique()
-
-vb_rosters <- vb_rosters |>
-  mutate(
-    hs_clean = if_else((is.na(high_school) | high_school == "") &
-                         previous_school %in% previous_school_is_hs,
-                       previous_school, high_school),
-    previous_school_clean = previous_school,
-    # Clear previous_school when it is really the high school (or junk: "NA",
-    # "none", …) — the scraper's own hygiene rules leave a few behind
-    previous_school_clean = if_else(
-      previous_school_clean %in% c("", "NA", "N.A.", "none", "None") |
-        previous_school_clean == hs_clean,
-      NA_character_, previous_school_clean)
-  )
-
-# Backfill missing high schools from last season's file (same player, same team)
-if (file.exists(PREV_FILE)) {
-  previous_hs <- read_csv(PREV_FILE, show_col_types = FALSE) |>
-    filter(!is.na(high_school), high_school != "") |>
-    distinct(ncaa_id, name, .keep_all = TRUE) |>
-    select(ncaa_id, name, prev_high_school = high_school)
-
-  vb_rosters <- vb_rosters |>
-    left_join(previous_hs, by = c("ncaa_id", "name"), relationship = "many-to-one") |>
-    mutate(
-      backfilled = is.na(hs_clean) & is.na(previous_school_clean) & !is.na(prev_high_school),
-      hs_clean = coalesce(hs_clean, prev_high_school)
-    )
-
-  cat("Backfilled", sum(vb_rosters$backfilled, na.rm = TRUE), "high school records from", PREV_FILE, "\n")
-  vb_rosters <- select(vb_rosters, -prev_high_school, -backfilled)
-} else {
-  cat("No previous season file", PREV_FILE, "- skipping high school backfill\n")
-}
-
-# Blank-string high schools are missing, not real values
-vb_rosters <- vb_rosters |>
-  mutate(hs_clean = if_else(is.na(hs_clean) | str_squish(hs_clean) == "", NA_character_, hs_clean))
-```
-
-## Geographic Data Cleaning
-
-We clean hometown/homestate data to standardize state abbreviations and identify international players.
-
-```{r clean-geography}
-# Standardize hometown format
-vb_rosters <- vb_rosters %>%
-  mutate(
-    hometown_cleaned = hometown %>%
-      str_to_upper() %>%
-      str_replace_all("\\.", "") %>%
-      str_replace("/.*", "") %>%
-      str_replace("\\.$", "") %>%
-      str_replace(",", ", ") %>%
-      str_squish()
-  )
-
-# Create extended state dictionary for postmastr
-states_non_standard <- pm_append(
-  type = "state",
-  input = c("SD.", "MASS", "CALIF", "MICH", "NEB", "IND", "MINN", "ORE", "OHIO",
-            "FLA", "MISS", "TENN", "ARIZ", "KAN", "ALA", "OKLA", "WIS", "ILL",
-            "WASH", "ARK", "COLO", "NEV", "CONN", "WISC", "WVA", "DEL", "WYO",
-            "CALI", "LOUIS", "VIRG", "MONT", "PENN", "TEX", "KANS", "NEBR",
-            "IDA", "COL"),
-  output = c("SD", "MA", "CA", "MI", "NE", "IN", "MN", "OR", "OH", "FL", "MS",
-             "TN", "AZ", "KS", "AL", "OK", "WI", "IL", "WA", "AR", "CO", "NV",
-             "CT", "WI", "WV", "DE", "WY", "CA", "LA", "VA", "MT", "PA", "TX",
-             "KS", "NE", "ID", "CO"),
-  locale = "us"
-)
-
-dict <- pm_dictionary(type = "state", case = c("title", "upper", "lower"),
-                     append = states_non_standard)
-
-# Identify addresses and parse states using postmastr
-vb_rosters <- vb_rosters %>%
-  pm_identify(var = "hometown_cleaned")
-
-parsed <- vb_rosters %>%
-  pm_prep(var = "hometown_cleaned", type = "street") %>%
-  pm_state_parse(dict)
-
-# Join parsed results
-vb_rosters <- vb_rosters %>%
-  left_join(parsed, by = "pm.uid") %>%
-  separate(hometown, c("hometown", "homestate"), sep = ",", extra = "merge", fill = "right") %>%
-  mutate(
-    homestate = str_trim(homestate),
-    homestate = str_replace(homestate, "\\.", ""),
-    homestate = case_when(
-      is.na(abbr2state(homestate)) ~ homestate,
-      TRUE ~ abbr2state(homestate)
-    )
-  )
-
-# Handle special state cases
-vb_rosters <- vb_rosters %>%
-  mutate(
-    pm.state = case_when(
-      homestate %in% c("Hawai'i", "O'ahu") ~ "HI",
-      homestate == "Ken" ~ "KY",
-      homestate %in% c("Caif", "Cal", "Calfiornia", "Califonia") ~ "CA",
-      homestate %in% c("Illi", "IIl", "Illnois") ~ "IL",
-      homestate == "Min" ~ "MN",
-      homestate == "N C." ~ "NC",
-      homestate == "NMex." ~ "NM",
-      homestate == "Oreg" ~ "OR",
-      homestate %in% c("US.V.I", "USVI") ~ "USVI",
-      homestate == "Ver" ~ "VT",
-      homestate == "Was" ~ "WA",
-      homestate == "WS" ~ "WI",
-      homestate == "NYC" ~ "NY",
-      TRUE ~ pm.state
-    )
-  )
-```
-
-## Country Identification
-
-The country is the last piece of the hometown unless a US state was parsed. Variant spellings, provinces and regions are standardized below. Volleyball rosters draw heavily from Canada, Brazil, Europe and Australia, so province/region variants are more common than in the basketball data.
-
-```{r clean-countries}
-# Extract potential country from last part of hometown
-vb_rosters <- vb_rosters %>%
-  mutate(
-    country = if_else(!is.na(pm.state), "USA", NA_character_),
-    # Puerto Rico and US territories carry state-style codes
-    country = if_else(pm.state %in% c("PR", "GU", "VI", "USVI"), "USA", country),
-    # last comma-separated piece of the hometown (NA when hometown is missing/empty)
-    temp = str_trim(str_extract(hometown_cleaned, "[^,]+$")),
-    temp = if_else(temp %in% c("NA", ""), NA_character_, temp),
-    # known nation names are kept as-is; anything else falls through to temp for standardization
-    country = coalesce(country, temp)
-  )
-
-# Standardize country names
-vb_rosters <- vb_rosters %>%
-  mutate(
-    country = case_when(
-      # US state codes that slipped through as the last piece are not countries
-      !is.na(country) & country %in% state.abb ~ "USA",
-      # Canadian provinces
-      country %in% c("BC", "BRITISH COLUMBIA", "ALBERTA", "ALTA", "AB",
-                     "ONTARIO", "ON", "QUEBEC", "QUÉBEC", "QUE", "QC",
-                     "MANITOBA", "SASKATCHEWAN", "NOVA SCOTIA", "NS", "CN") ~ "CANADA",
-      # Australian states
-      country %in% c("VICTORIA", "SOUTH AUSTRALIA", "WESTERN AUSTRALIA",
-                     "TASMANIA", "QUEENSLAND", "AUSTRAILA", "AU", "AUS") ~ "AUSTRALIA",
-      country %in% c("NZ") ~ "NEW ZEALAND",
-      # UK variations
-      country %in% c("GREAT BRITAIN", "ENGLAND", "ENG", "UK", "WALES",
-                     "SCOTLAND", "NORTHERN IRELAND", "EAST MIDLANDS") ~ "UNITED KINGDOM",
-      country %in% c("IRELAND", "IRL") ~ "IRELAND",
-      # Other common variants
-      country %in% c("HAWAI'I", "HAWAII") ~ "USA",
-      country %in% c("PUERTO RICO") ~ "USA",
-      country %in% c("SWEEDEN") ~ "SWEDEN",
-      country %in% c("CZECHIA") ~ "CZECH REPUBLIC",
-      country %in% c("DR") ~ "DOMINICAN REPUBLIC",
-      country %in% c('THE NETHERLANDS', 'NETHLERLANDS', 'NOORD HOLLAND') ~ 'NETHERLANDS',
-      country %in% c('MÉXICO') ~ 'MEXICO',
-      country %in% c("SÉNÉGAL") ~ "SENEGAL",
-      country %in% c('DR CONGO', 'DEMOCRATIC REPUBLIC OF CONGO', 'CONGO') ~ 'DEMOCRATIC REPUBLIC OF THE CONGO',
-      country %in% c("TURKIYE", "TÜRKIYE") ~ "TURKEY",
-      TRUE ~ country
-    )
-  ) %>%
-  select(-temp)
-```
-
-## Final Data Preparation
-
-```{r final-cleanup}
-vb_rosters_final <- vb_rosters |>
-  select(-pm.id, -pm.uid, -pm.type, -pm.address, -any_of(c("backfilled", "count"))) |>
-  select(-height) |>   # raw height lives on in height_clean/total_inches
-  rename(
-    hometown_clean = hometown_cleaned,
-    state_clean = pm.state,
-    country_clean = country
-  ) |>
-  distinct() |>
-  # Same player listed twice on one roster (e.g. partial scrapes): keep the more complete row
-  mutate(.filled = rowSums(!is.na(across(everything())))) |>
-  slice_max(.filled, n = 1, by = c(ncaa_id, team, name, jersey), with_ties = FALSE) |>
-  select(-.filled) |>
-  relocate(team, ncaa_id, season, jersey, name, position, height_clean, year, hometown, homestate,
-           high_school, previous_school, url,
-           height_ft, height_in, total_inches, position_full,
-           primary_position, secondary_position, year_clean, redshirt,
-           hs_clean, hometown_clean, state_clean, country_clean,
-           previous_school_clean,
-           any_of(c("team_state", "conference", "division"))) |>
-  arrange(ncaa_id, jersey)
-
-cat("Dropped", n_input - nrow(vb_rosters_final), "duplicate player rows\n")
-stopifnot(
-  "rows were lost beyond duplicate players" = nrow(vb_rosters_final) == n_distinct(vb_rosters$ncaa_id, vb_rosters$team, vb_rosters$name, vb_rosters$jersey),
-  "wrong season" = all(vb_rosters_final$season == SEASON)
-)
-```
-
-## Write Output
-
-```{r write-output}
-write_csv(vb_rosters_final, OUTPUT_FILE, quote = "all", na = "")
-
-cat("Final dataset written to", OUTPUT_FILE)
-cat("\nFinal statistics:")
-cat("\n- Total players:", nrow(vb_rosters_final))
-cat("\n- Teams:", n_distinct(vb_rosters_final$ncaa_id))
-cat("\n- Transfer players:", sum(!is.na(vb_rosters_final$previous_school_clean)))
-cat("\n- International players:", sum(vb_rosters_final$country_clean != "USA", na.rm = TRUE))
-```
-
-## Transfer Analysis by Conference
-
-```{r transfer-analysis}
-if (all(c("conference", "division") %in% names(vb_rosters_final))) {
-  conference_transfers <- vb_rosters_final %>%
-    filter(division == "I") %>%
-    group_by(conference) %>%
-    summarise(
-      total_players = n(),
-      total_transfers = sum(!is.na(previous_school_clean)),
-      .groups = "drop"
-    ) %>%
-    mutate(transfer_pct = total_transfers / total_players * 100) %>%
-    arrange(desc(transfer_pct))
-
-  print(head(conference_transfers, 20))
-} else {
-  cat("No conference/division data in teams.csv yet - add those columns to run\n")
-  cat("this analysis\n")
-}
-```
-
-## Data quality checks
-
-Run these after a render; anything that prints rows needs a look.
-
-```{r check-coverage}
-# Teams in teams.csv with no roster this season
-teams |>
-  anti_join(distinct(vb_rosters_final, ncaa_id), by = "ncaa_id") |>
-  select(ncaa_id, team, any_of(c("conference", "division", "team_state")))
-```
-
-```{r check-year-missing}
-# Teams with players but no class year
-vb_rosters_final |>
+```{r missing-class-years}
+no_year <- vb_rosters |>
   group_by(ncaa_id, team) |>
-  summarize(n = n(), no_year = sum(is.na(year_clean)), .groups = "drop") |>
-  filter(no_year == n)
+  summarise(players = n(), no_year = sum(is.na(year_clean)), .groups = "drop") |>
+  filter(no_year == players)
+if (nrow(no_year)) no_year else tibble(note = "every team has at least one class year")
 ```
 
-```{r check-missing}
-# NA counts for the cleaned columns
-vb_rosters_final |>
-  summarize(across(c(total_inches, position_full, year_clean, state_clean, country_clean,
-                     hs_clean, previous_school), \(x) sum(is.na(x)))) |>
-  pivot_longer(everything(), names_to = "column", values_to = "n_missing")
+## Provenance notes
 
-# Source values that did not clean
-vb_rosters_final |> filter(!is.na(height_clean), is.na(total_inches)) |> count(height_clean, sort = TRUE)
-vb_rosters_final |> filter(!is.na(position), is.na(position_full)) |> count(position, sort = TRUE)
-vb_rosters_final |> filter(!is.na(year), is.na(year_clean)) |> count(year, sort = TRUE)
-```
-
-```{r check-high-school-na}
-# Teams with at least one player missing high_school, worst first
-teams_missing_hs <- vb_rosters_final |>
-  filter(country_clean == "USA" | is.na(country_clean)) |>
-  group_by(ncaa_id, team) |>
-  summarize(players = n(), missing_high_school = sum(is.na(hs_clean)), .groups = "drop") |>
-  filter(missing_high_school > 0) |>
-  mutate(pct_missing = round(missing_high_school / players * 100, 1)) |>
-  arrange(desc(pct_missing), desc(missing_high_school))
-
-teams_missing_hs
-```
-
-```{r check-stale-roster}
-# Teams whose roster is a copy of last season's (same urls, names and class
-# years). Returning players should move up a class, so any team here means the
-# scrape fell back to an old page: exclude it from the scraper output.
-if (file.exists(PREV_FILE)) {
-  stale_norm_url <- \(x) x |> str_to_lower() |> str_remove("^https?://") |>
-    str_remove("^www\\.") |> str_remove("/$")
-  stale_key <- \(df) df |>
-    transmute(ncaa_id = as.character(ncaa_id), name, year_clean,
-              url = stale_norm_url(url)) |>
-    filter(!is.na(url), !is.na(year_clean))
-  prev_rows <- read_csv(PREV_FILE, show_col_types = FALSE) |>
-    transmute(ncaa_id = as.character(ncaa_id), name,
-              year_clean = year_from_pattern(year),
-              url = stale_norm_url(url)) |>
-    filter(!is.na(url), !is.na(year_clean))
-  stale_key(vb_rosters_final) |>
-    left_join(prev_rows, by = c("ncaa_id", "url"), suffix = c("", "_prev")) |>
-    group_by(ncaa_id) |>
-    summarize(players = n(), shared = sum(!is.na(name_prev)),
-              identical = sum(name == name_prev & year_clean == year_clean_prev,
-                              na.rm = TRUE), .groups = "drop") |>
-    filter(identical >= 5, identical >= 0.9 * players) |>
-    left_join(teams |> transmute(ncaa_id = as.character(ncaa_id), team), by = "ncaa_id")
+```{r corrections}
+# reviewed corrections that touched this season's rows
+corrections_file <- "corrections/cell_corrections.csv"
+if (file.exists(corrections_file)) {
+  corrows <- read_csv(corrections_file, show_col_types = FALSE, na = "")
+  corrows |>
+    mutate(snapshot = str_remove(source_row_id, "#.*$")) |>
+    filter(snapshot == paste0(SEASON, "_1")) |>
+    count(field, sort = TRUE)
 }
 ```
 
-```{r check-duplicates}
-# Same player listed twice on one roster
-vb_rosters_final |> count(ncaa_id, team, name, jersey) |> filter(n > 1)
-```
-
-```{r check-countries}
-missing_countries <- vb_rosters_final |> filter(is.na(country_clean))
-if (nrow(missing_countries)) {
-  cat(sprintf("%d rows have no parsed country, where they come from:\n",
-              nrow(missing_countries)))
-  print(count(missing_countries, team, sort = TRUE), n = 30)
-}
-```
-
-```{r check-roster-sizes}
-# Roster-size outliers (once teams.csv carries division)
-if ("division" %in% names(vb_rosters_final)) {
-  vb_rosters_final |>
-    count(division, team, name = "players") |>
-    group_by(division) |>
-    summarize(teams = n(), min = min(players), median = median(players), max = max(players))
-}
-```
+Stale-roster flags (shared profile URLs plus identical names/classes) live in
+the build summary; removing a flagged team-season requires a reviewed entry
+in `data/reference/source_exclusions.csv`.

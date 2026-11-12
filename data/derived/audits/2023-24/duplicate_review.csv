@@ -1,0 +1,7 @@
+"group_id","candidate_key","target_source_row_id","keeper_source_row_id","review_status","disposition"
+"name|314|kamierawatkins","name","2023-24_1#10084",,"kept_reviewed","keep_distinct (reviewed)"
+"name|314|kamierawatkins","name","2023-24_1#10099","2023-24_1#10084","dropped_reviewed","drop_duplicate (reviewed)"
+"name|491|fionaegan","name","2023-24_1#11719","2023-24_1#11720","dropped_reviewed","drop_duplicate (reviewed)"
+"name|491|fionaegan","name","2023-24_1#11720",,"kept_reviewed","keep_distinct (reviewed)"
+"name|9630|baileeeinspahr","name","2023-24_1#15255",,"kept_reviewed","keep_distinct (reviewed)"
+"name|9630|baileeeinspahr","name","2023-24_1#15262",,"kept_reviewed","keep_distinct (reviewed)"

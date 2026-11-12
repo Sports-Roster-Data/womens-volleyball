@@ -6,21 +6,68 @@ This project was supervised and edited by Derek Willis, lecturer in data and com
 
 The original roster information is drawn from team websites, mostly obtained via [a scraper written in Python](src/rosters.py). That information has been augmented by individual research and editing. For example, a transfer player's high school may not be noted on her current team, but it could be found on her previous team's roster. Team information comes from [the NCAA](https://stats.ncaa.org/rankings?academic_year=2024&division=1.0&sport_code=WVB).
 
-The roster data in this repository has been cleaned and standardized by contributors using R; a description of that process and the code is available in [this Quarto notebook](analysis/cleaning.qmd).
+## Building the cleaned data
 
-The specific information cleaned and parsed includes the following:
+The raw roster CSVs are the build's only source, and their bytes are frozen:
+`data/reference/raw_snapshots.csv` records each season's file, canonical
+academic-year label (`2015-16` … `2026-27`) and SHA-256 hash, which the build
+re-validates every time it runs. The notebook in
+[analysis/cleaning.qmd](analysis/cleaning.qmd) renders a human-readable
+quality report from the build's outputs; all transformations live in tested R
+functions in [R/roster_cleaning.R](R/roster_cleaning.R).
 
-* Position (also standardized)
-* Height (standardized and converted to total inches to make comparisons possible)
-* Year (also standardized; because this information could refer to either academic or athletic eligibility, it may not be reflective of one of those - and COVID eligibility added more complexity)
-* Hometown (parsed using the [postmastr](https://slu-opengis.github.io/postmastr/) package, then separated into hometown, state and country-specific fields. For foreign countries, we started with the list of FIBA nations and added others, then standardized the results)
-* Previous School (probably the least consistent column in this data because of the way it is presented in the original data; we did make an attempt to move high schools listed in this column to the high school field)
+Schema version and column-by-column documentation, including the legacy →
+new column mapping, are in [docs/data_dictionary.md](docs/data_dictionary.md).
 
-We have *not* completely standardized the following data, at least not yet:
+### Setup
 
-* High School
-* Hometown
-* Previous School
+```bash
+Rscript -e 'renv::restore()'   # installs the R dependency versions in renv.lock
+uv run pytest                  # scraper + pytest additions
+```
+
+### Build a season
+
+```bash
+Rscript scripts/build_rosters.R --season 2026-27    # single season
+Rscript scripts/build_rosters.R --all               # all seasons, chronologically
+Rscript scripts/build_rosters.R --all --render      # + notebooks/quality report
+```
+
+The build reads the registered raw snapshot, applies the reference tables and
+the reviewed corrections, and writes:
+
+```
+data/clean/vb_rosters_<season>.csv
+data/derived/baseline/vb_rosters_<season>.csv
+data/derived/quarantine/vb_rosters_<season>.csv
+data/derived/audits/<season>/{row_issues,duplicate_review,team_coverage,
+                              quality_summary,reconciliation}.csv
+```
+
+Structural problems quarantine the individual row with a reason; only
+deterministic formatting is fixed automatically, and raw cells are never
+rewritten (cell values move only through reviewed corrections in `corrections/`).
+The build fails when rows cannot be reconciled, when a team with raw rows
+publishes nothing, or when duplicate groups are unresolved — pass
+`--allow-partial` to ship anyway (for example while a first review is pending).
+Rebuilds are byte-identical: outputs carry no timestamps.
+
+### Tests
+
+```bash
+Rscript -e 'testthat::test_dir("tests/testthat")'
+uv run pytest
+```
+
+### Raw immutability
+
+Never edit `data/rosters_*.csv` in place. The scraper archives any
+prior raw vintage it would overwrite to `data/raw_archive/` (byte-for-byte)
+and new/changed snapshots are registered with `scripts/register_snapshot.py`;
+see the scraper section below. Corrections to data go through
+`corrections/cell_corrections.csv` / `row_corrections.csv` with a reason and
+reviewed-on date, or into the reference tables when a fix is systematic.
 
 ## Data files
 
@@ -30,10 +77,13 @@ The roster CSVs in `data/` share a 13-column schema:
 
 | File | Contents |
 | --- | --- |
-| `data/rosters_<season>.csv` | Raw scraped rosters for a season (e.g. `rosters_2025-26.csv`). |
-| `data/finished_rosters.csv` | Cleaned, geocoded roster data. |
-| `data/teams.json` | The 900+ teams, their URLs, NCAA ids, and scraper routing (see below). `teams.csv` is the same data. |
+| `data/rosters_<season>.csv` | Raw scraped rosters for a season (legacy names are year-only, e.g. `rosters_2015.csv`; new seasons use full labels, e.g. `rosters_2025-26.csv`). |
+| `data/reference/` | Build inputs: snapshot registry, canonical teams and affiliations, position/class/state/country lookups, reviewed school mappings, exclusions and coverage exceptions. |
+| `data/finished_rosters.csv` | Legacy cleaned, geocoded roster data (superseded; kept for reference). |
+| `data/teams.json` | The 900+ teams, their URLs, NCAA ids, and scraper routing (see below). `teams.csv` is the same data — scraper configuration, not the analytical team dimension. |
 | `data/vb_teams.csv` | Team metadata: conference, division, state. |
+| `data/clean/` | Published clean season CSVs from the build. |
+| `data/derived/` | Build-time baselines, quarantines and audits. |
 
 ## Running the scraper
 
@@ -66,7 +116,7 @@ uv run python src/rosters.py -season 2025-26 -teams 721 5
 uv run python src/rosters.py -season 2025-26 -resume
 ```
 
-A full-season run overwrites `data/rosters_<season>.csv`. A targeted `-teams` run **merges** into the existing file, replacing only the teams it re-scraped and leaving every other team's rows intact. Both writes are atomic (temp file + rename), so an interrupted run never truncates the season file. Every successful team's rows are also cached to `data/cache/rosters_<season>/`; `-resume` reads that cache, and deleting the directory forces a full re-scrape. Failed and empty teams are never cached, so a resumed run still retries them.
+A full-season run writes `data/rosters_<season>.csv` using the full academic-year label (a `-season 2025` run now writes `data/rosters_2025-26.csv` and leaves any older year-only file untouched). If a write would change an existing raw file, the prior bytes are archived verbatim to `data/raw_archive/` first; run `uv run python scripts/register_snapshot.py -season 2025-26` to register the new snapshot (the build refuses an unregistered season). A targeted `-teams` run **merges** into the existing file, replacing only the teams it re-scraped and leaving every other team's rows intact. Both writes are atomic (temp file + rename), so an interrupted run never truncates the season file. Every successful team's rows are also cached to `data/cache/rosters_<season>/`; `-resume` reads that cache, and deleting the directory forces a full re-scrape. Failed and empty teams are never cached, so a resumed run still retries them.
 
 ### Season verification
 

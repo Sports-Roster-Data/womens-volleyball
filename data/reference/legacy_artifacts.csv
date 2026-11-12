@@ -1,0 +1,8 @@
+artifact,season_implied,legacy_schema,role,active_build_input,note
+vb_rosters_2024.csv,2024-24,7 columns (School,Name,Position,Class,Height,Hometown,High School),one-off raw capture,no,superseded historical capture in the repo root; not an input to the build
+vb_rosters_2026-27.csv,2026-27,notebook cleaned output v1 (28 columns),superseded clean output,no,replaced by data/clean/vb_rosters_2026-27.csv
+data/finished_rosters.csv,2023-24,geocoded one-off (23 columns),legacy analytical file,no,kept for reference; superseded by data/clean/ + data/derived/
+data/missing_teams.csv,unknown,single-line team id list,legacy scraper output notes,no,superseded by team_coverage.csv audits
+data/raw_positions.csv,all,position,count,cleaned_position,legacy lookup,no,byte-identical twin of data/cleaned_positions.csv; superseded by data/reference/positions.csv
+data/cleaned_positions.csv,all,position,count,cleaned_position,legacy lookup,no,byte-identical twin of data/raw_positions.csv; superseded by data/reference/positions.csv
+data/years_cleaned.csv,all,year,count,year-clean,redshirt,legacy lookup,no,superseded by data/reference/classes.csv

@@ -1,0 +1,7 @@
+"group_id","candidate_key","target_source_row_id","keeper_source_row_id","review_status","disposition"
+"name|1098|madisonsmith","name","2015-16_1#04597","2015-16_1#04598","dropped_reviewed","drop_duplicate (reviewed)"
+"name|1098|madisonsmith","name","2015-16_1#04598",,"kept_reviewed","keep_distinct (reviewed)"
+"name|1434|caseyhall","name","2015-16_1#05728",,"kept_reviewed","keep_distinct (reviewed)"
+"name|1434|caseyhall","name","2015-16_1#05729",,"kept_reviewed","keep_distinct (reviewed)"
+"name|272|dakotabutzler","name","2015-16_1#02281",,"kept_reviewed","keep_distinct (reviewed)"
+"name|272|dakotabutzler","name","2015-16_1#02282","2015-16_1#02281","dropped_reviewed","drop_duplicate (reviewed)"
