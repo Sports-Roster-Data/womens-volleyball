@@ -1,6 +1,6 @@
 "metric","value"
-"rows_raw",15979
-"rows_published",15903
+"rows_raw",15980
+"rows_published",15904
 "rows_quarantined",75
 "rows_removed_exact_duplicate",0
 "rows_removed_reviewed_duplicate",1
@@ -12,7 +12,7 @@
 "high_school_missing",1440
 "high_school_backfilled",110
 "cell_corrections_applied",199
-"stale_roster_teams_flagged",1
+"stale_roster_teams_flagged",0
 "height_parse_rate_pct",99.4
 "position_parse_rate_pct",98.5
 "class_parse_rate_pct",99.4

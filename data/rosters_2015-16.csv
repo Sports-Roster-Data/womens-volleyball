@@ -908,23 +908,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 559,Purdue,,Annie Drews,,"Elkhart, Ind.",Penn,,,OH,18,/roster/player/annie-drews,2015
 559,Purdue,,Kaisley Fisher,,"Plainfield, Ill.",Plainfield North,,,MB,16,/roster/player/kaisley-fisher,2015
 559,Purdue,,Danielle Cuttino,,"Indianapolis, Ind.",Ben Davis,,,MB,20,/roster/player/danielle-cuttino,2015
-31,Arkansas,,Laci Bohannan,5th Year,"Benton, Ark.",Central Arkansas,,6-0,OH,1,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/laci-bohannan/,2015
-31,Arkansas,,Bella Knoernschild,Freshman,"Russellville, Ark.",Russellville HS,,5-6,L,2,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/bella-knoernschild/,2015
-31,Arkansas,,Livia Niu,Junior,"Salado, Texas",South Florida,,6-1,S,3,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/livia-niu/,2015
-31,Arkansas,,Lily Dudley,Senior,"Columbia, Mo.",Rock Bridge HS,,5-11,OH,4,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/lily-dudley/,2015
-31,Arkansas,,Madi Benne,Freshman,"Lee's Summit, Mo.",Lee's Summit North HS,,5-7,L,6,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/madi-benne/,2015
-31,Arkansas,,Elsie Law,Freshman,"Salado, Texas",Salado HS,,6-2,MB,11,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/elsie-law/,2015
-31,Arkansas,,Kiki Remensperger,Junior,"San Diego, Calif.",Boise State,,5-9,S,13,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/kiki-remensperger/,2015
-31,Arkansas,,Gaby Cornier,Senior,"Arecibo, Puerto Rico",Florida,,5-6,L,15,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/gaby-cornier/,2015
-31,Arkansas,,Layla Smith,Senior,"Houston, Texas",Boise State,,6-2,MB,16,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/layla-smith/,2015
-31,Arkansas,,Paisley Pavliska,Freshman,"La Vernia, Texas",La Vernia HS,,5-9,OH,18,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/paisley-pavliska/,2015
-31,Arkansas,,Parker Duncan,Sophomore,"Austin, Texas",Anderson HS,,6-1,OH,21,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/parker-duncan/,2015
-31,Arkansas,,Ava Roth,Senior,"Festus, Mo.",Jefferson HS,,5-6,L,22,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/ava-roth/,2015
-31,Arkansas,,Aleki Alexander,Sophomore,"Blue Springs, Mo.",Blue Springs HS,,6-2,MB,23,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/aleki-alexander/,2015
-31,Arkansas,,Lakin Laurendine,Senior,"Jackson, Miss.",Auburn,,6-1,OH,25,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/lakin-laurendine/,2015
-31,Arkansas,,Journey Peppers,Sophomore,"Hensley, Ark.",White Hall HS,,6-4,MB,27,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/journey-peppers/,2015
-31,Arkansas,,Romani Thurman,Senior,"Little Rock, Ark.",North Carolina,,5-10,OPP,30,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/romani-thurman/,2015
-31,Arkansas,,Maggie McCarroll,Freshman,"Austin, Texas",Austin HS,,6-0,S,33,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/maggie-mccarroll/,2015
 579,Robert Morris,4960,Deja Tamlin,,"Inkster, Mich.",Wayne Memorial,,"5'9""",Outside,1,//www.rmucolonials.com/sports/womens-volleyball/roster/deja-tamlin/4960,2015
 579,Robert Morris,4959,April Krivoniak,,"Latrobe, Pa.",Latrobe,,"5'10""",Middle,2,//www.rmucolonials.com/sports/womens-volleyball/roster/april-krivoniak/4959,2015
 579,Robert Morris,4961,Kristin Thompson,,"Monroe, Ohio",Bishop Fenwick,,"6'2""",Middle,3,//www.rmucolonials.com/sports/womens-volleyball/roster/kristin-thompson/4961,2015
@@ -13351,3 +13334,20 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 234,Florida St,,Karyn Israel,R-Sr.,"Huntington Beach, Calif.",Edison High Schoo,,6' 0'',Libero/Defensive Specialist,22,/sports/womens-volleyball/roster/karyn-israel/4294,2015-16
 234,Florida St,,Caroline Mooney,Fr.,"Tallahassee, Fla.",Chiles,,5' 7'',Libero/Defensive Specialist,33,/sports/womens-volleyball/roster/caroline-mooney/4309,2015-16
 234,Florida St,,Mara Green,R-Jr.,"McDonough, Ga.",Eagles Landing Christian Academy,,6' 1'',Middle Blocker,35,/sports/womens-volleyball/roster/mara-green/6160,2015-16
+31,Arkansas,,Chanell Clark-Bibbs,Senior,"Houston, Texas",Georgia Tech,,6-1,MB,1,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/chanell-clark-bibbs/,2015-16
+31,Arkansas,,Breana Jones,Junior,"Peachtree City, Ga.",McIntosh HS,,6-2,MB,2,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/breana-jones/,2015-16
+31,Arkansas,,Danielle Harbin,Junior,"Mobile, Ala.",McGill-Toolen Catholic HS,,6-1,OH/MB,3,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/danielle-harbin/,2015-16
+31,Arkansas,,Juliette Fidon,Freshman,"Paris, France",Toulouse,,6-1,OH,5,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/juliette-fidon/,2015-16
+31,Arkansas,,Fernanda Güitron,Freshman,"Guadalajara, Mexico",Preparatoria Jose Vasconcelos,,6-0,OPP,6,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/fernanda-guitron/,2015-16
+31,Arkansas,,Bailee Hankenson,Sophomore,"Decatur, Ind.",Bellmont HS,,5-9,S,8,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/bailee-hankenson/,2015-16
+31,Arkansas,,Liz Fortado,Senior,"Flower Mound, Texas",Marcus HS,,6-2,OPP,9,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/liz-fortado/,2015-16
+31,Arkansas,,Monica Bollinger,Senior,"St. Louis, Mo.",Rockwood Summit HS,,5-9,L/DS,10,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/monica-bollinger/,2015-16
+31,Arkansas,,Kimi Davis,Freshman,"Rogers, Ark.",Rogers HS,,5-5,L/DS,11,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/kimi-davis/,2015-16
+31,Arkansas,,Okiana Valle,Freshman,"Barceloneta, Puerto Rico",Christian Military Academy,,5-2,L/DS,12,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/okiana-valle/,2015-16
+31,Arkansas,,Blakelee Dunagin,Sophomore,"Rogers, Ark.",Heritage HS,,6-0,MB,13,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/blakelee-dunagin/,2015-16
+31,Arkansas,,Adrien Wohlschlaeger,Junior,"Conroe, Texas",Conroe HS,,6-0,S,14,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/adrien-wohlschlaeger/,2015-16
+31,Arkansas,,Savannah Voelzke,Junior,"Longview, Texas",Spring Hill HS,,6-0,OH,15,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/savannah-voelzke/,2015-16
+31,Arkansas,,Kori Ortiz,Sophomore,"Southlake, Texas",Carroll HS,,5-5,L/DS,17,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/kori-ortiz/,2015-16
+31,Arkansas,,Barbara Dapic,Junior,"Split, Croatia",OK Brda,,6-3,OH,18,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/barbara-dapic/,2015-16
+31,Arkansas,,Ana Sofia Jusino,Junior,"Toa Baja, Puerto Rico",Timber Creek HS,,6-2,MB,19,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/ana-sofia-jusino/,2015-16
+31,Arkansas,,Pilar Victoria,Junior,"Caguas, Puerto Rico",Texas,,5-11,OH,21,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/pilar-victoria/,2015-16

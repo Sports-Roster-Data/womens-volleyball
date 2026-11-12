@@ -2377,9 +2377,11 @@ def _scrape_js_render(team: Dict, season: str) -> List:
     for slug in season_url_slugs(season):
         paths.append(f"/roster/{slug}")
     for slug in season_url_slugs(season):
-        paths.append(f"/roster/season/{slug}")
+        paths.append(f"/roster/?season={slug}")
     for slug in season_url_slugs(season):
         paths.append(f"/{slug}/roster")
+    for slug in season_url_slugs(season):
+        paths.append(f"/roster/season/{slug}")
     paths.append("/roster")
     candidates = []
     for base in bases:

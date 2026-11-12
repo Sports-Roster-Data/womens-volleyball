@@ -936,23 +936,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 556,Providence,,Cayla Veverka,So.,"Collegeville, Pa.",Perkiomen Valley,,6' 4'',OH,12,/sports/womens-volleyball/roster/cayla-veverka/4785,2017
 556,Providence,,Lindsey Schaible,So.,"Tampa, Fla.",Wharton,,6' 2'',MB,14,/sports/womens-volleyball/roster/lindsey-schaible/4782,2017
 556,Providence,,Chicyia Clark,Sr.,"Huntington Beach, Calif.",Edison,,5' 8'',S,16,/sports/womens-volleyball/roster/chicyia-clark/4043,2017
-31,Arkansas,,Laci Bohannan,5th Year,"Benton, Ark.",Central Arkansas,,6-0,OH,1,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/laci-bohannan/,2017
-31,Arkansas,,Bella Knoernschild,Freshman,"Russellville, Ark.",Russellville HS,,5-6,L,2,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/bella-knoernschild/,2017
-31,Arkansas,,Livia Niu,Junior,"Salado, Texas",South Florida,,6-1,S,3,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/livia-niu/,2017
-31,Arkansas,,Lily Dudley,Senior,"Columbia, Mo.",Rock Bridge HS,,5-11,OH,4,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/lily-dudley/,2017
-31,Arkansas,,Madi Benne,Freshman,"Lee's Summit, Mo.",Lee's Summit North HS,,5-7,L,6,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/madi-benne/,2017
-31,Arkansas,,Elsie Law,Freshman,"Salado, Texas",Salado HS,,6-2,MB,11,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/elsie-law/,2017
-31,Arkansas,,Kiki Remensperger,Junior,"San Diego, Calif.",Boise State,,5-9,S,13,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/kiki-remensperger/,2017
-31,Arkansas,,Gaby Cornier,Senior,"Arecibo, Puerto Rico",Florida,,5-6,L,15,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/gaby-cornier/,2017
-31,Arkansas,,Layla Smith,Senior,"Houston, Texas",Boise State,,6-2,MB,16,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/layla-smith/,2017
-31,Arkansas,,Paisley Pavliska,Freshman,"La Vernia, Texas",La Vernia HS,,5-9,OH,18,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/paisley-pavliska/,2017
-31,Arkansas,,Parker Duncan,Sophomore,"Austin, Texas",Anderson HS,,6-1,OH,21,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/parker-duncan/,2017
-31,Arkansas,,Ava Roth,Senior,"Festus, Mo.",Jefferson HS,,5-6,L,22,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/ava-roth/,2017
-31,Arkansas,,Aleki Alexander,Sophomore,"Blue Springs, Mo.",Blue Springs HS,,6-2,MB,23,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/aleki-alexander/,2017
-31,Arkansas,,Lakin Laurendine,Senior,"Jackson, Miss.",Auburn,,6-1,OH,25,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/lakin-laurendine/,2017
-31,Arkansas,,Journey Peppers,Sophomore,"Hensley, Ark.",White Hall HS,,6-4,MB,27,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/journey-peppers/,2017
-31,Arkansas,,Romani Thurman,Senior,"Little Rock, Ark.",North Carolina,,5-10,OPP,30,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/romani-thurman/,2017
-31,Arkansas,,Maggie McCarroll,Freshman,"Austin, Texas",Austin HS,,6-0,S,33,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/maggie-mccarroll/,2017
 579,Robert Morris,6041,Deja Tamlin,Senior,"Inkster, Mich.",Wayne Memorial,,"5'9""",Outside,1,//www.rmucolonials.com/sports/womens-volleyball/roster/deja-tamlin/6041,2017
 579,Robert Morris,6043,Alyson Londot,Freshman,"Utica, Ohio",Utica,,"5'10""",Outside,2,//www.rmucolonials.com/sports/womens-volleyball/roster/alyson-londot/6043,2017
 579,Robert Morris,6044,Erika Wilt,Freshman,"Temperance, Mich.",Bedford,,"5'9""",Outside,3,//www.rmucolonials.com/sports/womens-volleyball/roster/erika-wilt/6044,2017
@@ -13832,3 +13815,20 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 234,Florida St,,Annie Tietjens,R-So.,"St. Louis, Mo.",Ursuline Academy,,5' 8'',Setter,15,/sports/womens-volleyball/roster/annie-tietjens/2526,2017-18
 234,Florida St,,Adrian Ell,Fr.,"Cincinnati, Ohio",Archbishop McNicholas,,6' 2'',Setter,17,/sports/womens-volleyball/roster/adrian-ell/1840,2017-18
 234,Florida St,,Deion Williams,Fr.,"Suwanee, Ga.",Peachtree Ridge,,6' 2'',Middle Blocker,47,/sports/womens-volleyball/roster/deion-williams/1848,2017-18
+31,Arkansas,,Rachel Rippee,Sophomore,"Springfield, Mo.",Kickapoo HS,,6-0,S,1,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/rachel-rippee/,2017-18
+31,Arkansas,,Paige Johnson,Freshman,"Pleasant Hill, Mo.",Pleasant Hill,,5-6,L/DS,2,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/paige-johnson/,2017-18
+31,Arkansas,,Hailey Dirrigl,Freshman,"Phoenix, Ariz.",Desert Vista HS,,6-2,OH,3,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/hailey-dirrigl/,2017-18
+31,Arkansas,,Kenzie Stinnett,Freshman,"Carl Junction, Mo.",Carl Junction,,5-9,S,5,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/kenzie-stinnett/,2017-18
+31,Arkansas,,Fernanda Güitron,RS Sophomore,"Guadalajara, Mexico",Preparatoria Jose Vasconcelos,,6-0,OPP,6,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/fernanda-guitron/,2017-18
+31,Arkansas,,Reagan Robinson,Sophomore,"Fayetteville, Ark.",Shiloh Christian HS,,5-11,OH,7,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/reagan-robison/,2017-18
+31,Arkansas,,Elizabeth Pamphile,Freshman,"Orlando, Fla.",Edgewater HS,,6-1,MB,8,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/elizabeth-pamphile/,2017-18
+31,Arkansas,,Klaire Trainor,Freshman,"Springdale, Ark.",Har-Ber HS,,5-8,OH,9,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/klaire-trainor/,2017-18
+31,Arkansas,,Kelly O’Brien,Junior,"Long Beach, Calif.",Wyoming,,6-1,MB,10,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/kelly-obrien/,2017-18
+31,Arkansas,,Kiley Tiller,Freshman,"Carthage, Mo.",Carthage,,6-3,MB,11,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/kiley-tiller/,2017-18
+31,Arkansas,,Okiana Valle,Junior,"Barceloneta, Puerto Rico",Christian Military Academy,,5-2,L/DS,12,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/okiana-valle/,2017-18
+31,Arkansas,,Maia Stripp,Freshman,"Roskilde, Denmark",Holte IF,,6-3,MB,15,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/maia-stripp/,2017-18
+31,Arkansas,,Logan Brown,Freshman,"Dallas, Texas",Rowlett HS,,6-0,OH,16,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/logan-brown/,2017-18
+31,Arkansas,,Kori Ortiz,Senior,"Southlake, Texas",Carroll HS,,5-5,L/DS,17,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/kori-ortiz/,2017-18
+31,Arkansas,,Savannah Wagner,Freshman,"Mount Vernon, Texas",Mount Vernon,,5-9,OH,18,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/savannah-wagner/,2017-18
+31,Arkansas,,Pilar Victoria,RS Senior,"Caguas, Puerto Rico",Texas,,5-11,OH,21,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/pilar-victoria/,2017-18
+31,Arkansas,,Krista Kolbinskie,Senior,"San Antonio, Texas",Reagan HS,,5-9,L/DS,23,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/krista-kolbinskie/,2017-18

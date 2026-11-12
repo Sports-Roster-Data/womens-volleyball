@@ -1056,23 +1056,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 559,Purdue,,Maddy Chinn,,"Oakland Township, Mich.",Notre Dame Prep,,,OH,5,/roster/player/maddy-chinn,2021
 559,Purdue,,Emma Ellis,,"Charlotte, N.C.",Charlotte Catholic,,,OH,12,/roster/player/emma-ellis,2021
 559,Purdue,,Madeline Koch,,"Ashwaubenon, Wis.",Ashwaubenon,,,OH,16,/roster/player/madeline-koch,2021
-31,Arkansas,,Laci Bohannan,5th Year,"Benton, Ark.",Central Arkansas,,6-0,OH,1,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/laci-bohannan/,2021
-31,Arkansas,,Bella Knoernschild,Freshman,"Russellville, Ark.",Russellville HS,,5-6,L,2,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/bella-knoernschild/,2021
-31,Arkansas,,Livia Niu,Junior,"Salado, Texas",South Florida,,6-1,S,3,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/livia-niu/,2021
-31,Arkansas,,Lily Dudley,Senior,"Columbia, Mo.",Rock Bridge HS,,5-11,OH,4,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/lily-dudley/,2021
-31,Arkansas,,Madi Benne,Freshman,"Lee's Summit, Mo.",Lee's Summit North HS,,5-7,L,6,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/madi-benne/,2021
-31,Arkansas,,Elsie Law,Freshman,"Salado, Texas",Salado HS,,6-2,MB,11,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/elsie-law/,2021
-31,Arkansas,,Kiki Remensperger,Junior,"San Diego, Calif.",Boise State,,5-9,S,13,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/kiki-remensperger/,2021
-31,Arkansas,,Gaby Cornier,Senior,"Arecibo, Puerto Rico",Florida,,5-6,L,15,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/gaby-cornier/,2021
-31,Arkansas,,Layla Smith,Senior,"Houston, Texas",Boise State,,6-2,MB,16,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/layla-smith/,2021
-31,Arkansas,,Paisley Pavliska,Freshman,"La Vernia, Texas",La Vernia HS,,5-9,OH,18,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/paisley-pavliska/,2021
-31,Arkansas,,Parker Duncan,Sophomore,"Austin, Texas",Anderson HS,,6-1,OH,21,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/parker-duncan/,2021
-31,Arkansas,,Ava Roth,Senior,"Festus, Mo.",Jefferson HS,,5-6,L,22,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/ava-roth/,2021
-31,Arkansas,,Aleki Alexander,Sophomore,"Blue Springs, Mo.",Blue Springs HS,,6-2,MB,23,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/aleki-alexander/,2021
-31,Arkansas,,Lakin Laurendine,Senior,"Jackson, Miss.",Auburn,,6-1,OH,25,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/lakin-laurendine/,2021
-31,Arkansas,,Journey Peppers,Sophomore,"Hensley, Ark.",White Hall HS,,6-4,MB,27,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/journey-peppers/,2021
-31,Arkansas,,Romani Thurman,Senior,"Little Rock, Ark.",North Carolina,,5-10,OPP,30,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/romani-thurman/,2021
-31,Arkansas,,Maggie McCarroll,Freshman,"Austin, Texas",Austin HS,,6-0,S,33,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/maggie-mccarroll/,2021
 579,Robert Morris,7758,Nikolette Zanolli,Senior,"Massillon, Ohio",Jackson,NOVA Club Juniors,"5'6""",Libero,1,//www.rmucolonials.com/sports/womens-volleyball/roster/nikolette-zanolli/7758,2021
 579,Robert Morris,7755,Alyson Londot,Graduate Student,"Utica, Ohio",Utica,Mintonette Sports One,"5'10""",Outside,2,//www.rmucolonials.com/sports/womens-volleyball/roster/alyson-londot/7755,2021
 579,Robert Morris,7761,Jaidan Hockman,Freshman,"North Canton, Ohio",Jackson,,"5'5""",Defensive,3,//www.rmucolonials.com/sports/womens-volleyball/roster/jaidan-hockman/7761,2021
@@ -15272,3 +15255,20 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 234,Florida St,,Emma Clothier,Jr.,"Carrollton, Texas",Hebron,,6' 2'',Middle Blocker,16,/sports/womens-volleyball/roster/emma-clothier/5964,2021-22
 234,Florida St,,Ava Pitchford,Fr.,"Norcross, Ga.",Alpharetta,,5' 9'',Setter,18,/sports/womens-volleyball/roster/ava-pitchford/5972,2021-22
 234,Florida St,,Lauryn Burrows,Jr.,"Marietta, Ga.",Walton,,5' 8'',Libero,23,/sports/womens-volleyball/roster/lauryn-burrows/5980,2021-22
+31,Arkansas,,Jordyn Gates,Sophomore,"Grand Rapids, Mich.",Grand Rapids Christian,,5-10,S,1,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/jordyn-gates/,2021-22
+31,Arkansas,,Jada Lawson,Freshman,"North Little Rock, Ark.",North Little Rock HS,,5-7,OH,2,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/jada-lawson/,2021-22
+31,Arkansas,,Hailey Dirrigl,RS Senior,"Phoenix, Ariz.",Desert Vista HS,,6-2,OH,3,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/hailey-dirrigl/,2021-22
+31,Arkansas,,Clara Parker,Sophomore,"Jonesboro, Ark.",Jonesboro HS,,5-10,OH,4,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/clara-parker/,2021-22
+31,Arkansas,,Lauren Evans,Senior,"Dallas, Texas",Colleyville Heritage HS,,5-11,DS,5,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/lauren-evans/,2021-22
+31,Arkansas,,Ellease Crumpton,Senior,"Houston, Texas",Cypress Lake HS,,6-3,MB,6,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/ellease-crumpton/,2021-22
+31,Arkansas,,Taylor Head,Sophomore,"Winter Garden, Fla.",West Orange HS,,5-10,OH,7,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/taylor-head/,2021-22
+31,Arkansas,,Abigail Archibong,Graduate,"Shawnee, Kan.",Kansas State,,6-1,MB,9,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/abigail-archibong/,2021-22
+31,Arkansas,,Jill Gillen,Junior,"Stilwell, Kan.",The Barstow School,,5-7,OH,10,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/jillian-gillen/,2021-22
+31,Arkansas,,Maggie Cartwright,Junior,"Kimberly, Wis.",Kimberly HS,,6-0,OH,11,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/maggie-cartwright/,2021-22
+31,Arkansas,,Hailey Schneider,Sophomore,"Denton, Texas",Guyer HS,,5-9,OH,12,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/hailey-schneider/,2021-22
+31,Arkansas,,Courtney Jackson,Freshman,"Olathe, Kan.",Olathe Northwest HS,,5-8,L,15,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/courtney-jackson/,2021-22
+31,Arkansas,,Abbigail McGee,Senior,"Jonesboro, Ark.",Valley View HS,,5-7,S/L,17,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/abbigail-mcgee/,2021-22
+31,Arkansas,,Hannah Hogue,Freshman,"Fort Smith, Arkansas",Southside HS,,5-8,S,18,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/hannah-hogue/,2021-22
+31,Arkansas,,Natalie Perdue,RS Sophomore,"Dallas, Texas",Richardson HS,,6-0,OH,19,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/natalie-perdue/,2021-22
+31,Arkansas,,Gracie Ryan,Senior,"Orlando, Fla.",Bishop Moore HS,,5-9,S,21,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/gracie-ryan/,2021-22
+31,Arkansas,,Zoi Evans,Freshman,"Tampa, Fla.",Wiregrass HS,,6-4,MB,44,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/zoi-evans/,2021-22

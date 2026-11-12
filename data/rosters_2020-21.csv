@@ -964,23 +964,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 559,Purdue,,Lourdès Myers,,"Alliance, Ohio",St. Thomas Aquinas,,,MB,9,/roster/player/lourdes-myers,2020
 559,Purdue,,Molly Brown,,"Goshen, Ind.",Northridge,,,MB,13,/roster/player/molly-brown,2020
 559,Purdue,,Taylor Trammell,,"Lexington, Ky.",Henry Clay,,,MB,17,/roster/player/taylor-trammell,2020
-31,Arkansas,,Laci Bohannan,5th Year,"Benton, Ark.",Central Arkansas,,6-0,OH,1,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/laci-bohannan/,2020
-31,Arkansas,,Bella Knoernschild,Freshman,"Russellville, Ark.",Russellville HS,,5-6,L,2,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/bella-knoernschild/,2020
-31,Arkansas,,Livia Niu,Junior,"Salado, Texas",South Florida,,6-1,S,3,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/livia-niu/,2020
-31,Arkansas,,Lily Dudley,Senior,"Columbia, Mo.",Rock Bridge HS,,5-11,OH,4,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/lily-dudley/,2020
-31,Arkansas,,Madi Benne,Freshman,"Lee's Summit, Mo.",Lee's Summit North HS,,5-7,L,6,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/madi-benne/,2020
-31,Arkansas,,Elsie Law,Freshman,"Salado, Texas",Salado HS,,6-2,MB,11,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/elsie-law/,2020
-31,Arkansas,,Kiki Remensperger,Junior,"San Diego, Calif.",Boise State,,5-9,S,13,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/kiki-remensperger/,2020
-31,Arkansas,,Gaby Cornier,Senior,"Arecibo, Puerto Rico",Florida,,5-6,L,15,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/gaby-cornier/,2020
-31,Arkansas,,Layla Smith,Senior,"Houston, Texas",Boise State,,6-2,MB,16,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/layla-smith/,2020
-31,Arkansas,,Paisley Pavliska,Freshman,"La Vernia, Texas",La Vernia HS,,5-9,OH,18,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/paisley-pavliska/,2020
-31,Arkansas,,Parker Duncan,Sophomore,"Austin, Texas",Anderson HS,,6-1,OH,21,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/parker-duncan/,2020
-31,Arkansas,,Ava Roth,Senior,"Festus, Mo.",Jefferson HS,,5-6,L,22,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/ava-roth/,2020
-31,Arkansas,,Aleki Alexander,Sophomore,"Blue Springs, Mo.",Blue Springs HS,,6-2,MB,23,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/aleki-alexander/,2020
-31,Arkansas,,Lakin Laurendine,Senior,"Jackson, Miss.",Auburn,,6-1,OH,25,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/lakin-laurendine/,2020
-31,Arkansas,,Journey Peppers,Sophomore,"Hensley, Ark.",White Hall HS,,6-4,MB,27,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/journey-peppers/,2020
-31,Arkansas,,Romani Thurman,Senior,"Little Rock, Ark.",North Carolina,,5-10,OPP,30,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/romani-thurman/,2020
-31,Arkansas,,Maggie McCarroll,Freshman,"Austin, Texas",Austin HS,,6-0,S,33,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/maggie-mccarroll/,2020
 579,Robert Morris,7251,Nikolette Zanolli,Junior,"Massillon, Ohio",Jackson,NOVA Club Juniors,"5'6""",Libero,1,//www.rmucolonials.com/sports/womens-volleyball/roster/nikolette-zanolli/7251,2020
 579,Robert Morris,7248,Alyson Londot,Senior,"Utica, Ohio",Utica,Mintonette Sports One,"5'10""",Outside,2,//www.rmucolonials.com/sports/womens-volleyball/roster/alyson-londot/7248,2020
 579,Robert Morris,7250,Erika Wilt,Senior,"Temperance, Mich.",Bedford,,"5'9""",Outside,3,//www.rmucolonials.com/sports/womens-volleyball/roster/erika-wilt/7250,2020
@@ -13555,3 +13538,22 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 234,Florida St,,Ava Pitchford,Fr.,"Norcross, Ga.",Alpharetta,,5' 9'',Setter,18,/sports/womens-volleyball/roster/ava-pitchford/5972,2020-21
 234,Florida St,,Olivia Dailey,R-Sr.,"Trussville, Ala.",The Cahaba School,,5' 10'',Setter,20,/sports/womens-volleyball/roster/olivia-dailey/3648,2020-21
 234,Florida St,,Lauryn Burrows,So.,"Marietta, Ga.",Walton,,5' 8'',Libero,23,/sports/womens-volleyball/roster/lauryn-burrows/5980,2020-21
+31,Arkansas,,Jordyn Gates,Freshman,"Grand Rapids, Mich.",Grand Rapids Christian,,5-10,S,1,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/jordyn-gates/,2020-21
+31,Arkansas,,Savannah Downing,Senior,"Carthage, Mo.",Iowa Western,,5-5,L,2,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/savannah-downing/,2020-21
+31,Arkansas,,Hailey Dirrigl,RS Junior,"Phoenix, Ariz.",Desert Vista HS,,6-2,OH,3,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/hailey-dirrigl/,2020-21
+31,Arkansas,,Clara Parker,Freshman,"Jonesboro, Ark.",Jonesboro HS,,5-10,OH,4,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/clara-parker/,2020-21
+31,Arkansas,,Lauren Evans,Junior,"Dallas, Texas",Colleyville Heritage HS,,5-11,DS,5,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/lauren-evans/,2020-21
+31,Arkansas,,Ellease Crumpton,Junior,"Houston, Texas",Cypress Lakes HS,,6-3,MB,6,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/ellease-crumpton/,2020-21
+31,Arkansas,,Taylor Head,Freshman,"Winter Garden, Fla.",West Orange High School,,5-10,OH,7,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/taylor-head/,2020-21
+31,Arkansas,,Elizabeth Pamphile,Senior,"Orlando, Fla.",Edgewater HS,,6-2,MB,8,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/elizabeth-pamphile/,2020-21
+31,Arkansas,,Klaire Trainor,Senior,"Springdale, Ark.",Har-Ber HS,,5-10,DS,9,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/klaire-trainor/,2020-21
+31,Arkansas,,Jill Gillen,Sophomore,"Stilwell, Kan.",The Barstow School,,5-10,OH,10,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/jillian-gillen/,2020-21
+31,Arkansas,,Maggie Cartwright,Sophomore,"Kimberly, Wis.",Kimberly HS,,6-0,OH,11,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/maggie-cartwright/,2020-21
+31,Arkansas,,Hailey Schneider,Freshman,"Denton, Texas",Guyer HS,,5-9,OH,12,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/hailey-schneider/,2020-21
+31,Arkansas,,Maia Stripp,RS Junior,"Roskilde, Denmark",Holte IF,,6-3,MB,15,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/maia-stripp/,2020-21
+31,Arkansas,,Devyn Wheeler,Senior,"Carrollton, Texas",North Florida,,6-0,MB,16,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/devyn-wheeler/,2020-21
+31,Arkansas,,Abbigail McGee,Sophomore,"Jonesboro, Ark.",Valley View HS,,5-7,S/L,17,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/abbigail-mcgee/,2020-21
+31,Arkansas,,Hannah Hogue,Freshman,"Fort Smith, Arkansas",Southside HS,,5-8,S,18,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/hannah-hogue/,2020-21
+31,Arkansas,,Natalie Perdue,RS Freshman,"Dallas, Texas",Richardson HS,,6-0,OH,19,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/natalie-perdue/,2020-21
+31,Arkansas,,Gracie Ryan,Junior,"Orlando, Fla.",Bishop Moore HS,,5-9,S,21,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/gracie-ryan/,2020-21
+31,Arkansas,,Allyson Dernehl,Senior,"Sugar Land, Texas",UT Tyler,,5-10,OH,23,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/allyson-dernehl/,2020-21
