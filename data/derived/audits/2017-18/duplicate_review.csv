@@ -1,3 +1,3 @@
 "group_id","candidate_key","target_source_row_id","keeper_source_row_id","review_status","disposition"
-"name|144|kiathomas","name","2017-18_4#05959","2017-18_4#05960","dropped_reviewed","drop_duplicate (reviewed)"
-"name|144|kiathomas","name","2017-18_4#05960",,"kept_reviewed","keep_distinct (reviewed)"
+"name|144|kiathomas","name","2017-18_5#05943","2017-18_5#05944","dropped_reviewed","drop_duplicate (reviewed)"
+"name|144|kiathomas","name","2017-18_5#05944",,"kept_reviewed","keep_distinct (reviewed)"

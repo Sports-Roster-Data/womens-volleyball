@@ -1824,22 +1824,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 48,Charleston Southern,,Macey LaPorte,So.,"Charleston, S.C.",Cathedral Academy,,5' 9'',Util.,13,/sports/womens-volleyball/roster/macey-laporte/2350,2017
 48,Charleston Southern,,Caitlyn Michalski,So.,"Greensboro, N.C.",Wesleyan Christian Academy,,5' 10'',MB,14,/sports/womens-volleyball/roster/caitlyn-michalski/2352,2017
 48,Charleston Southern,,Madison Malloch,R-Fr.,"Mount Pleasant, S.C.",Hanahan,,6' 3'',OH,17,/sports/womens-volleyball/roster/madison-malloch/2170,2017
-158,Columbia,,Luciana Del Valle,Jr.,"Lima, Peru",Colegio Trener,,5' 11'',OH,1,/sports/womens-volleyball/roster/luciana-del-valle/7953,2017
-158,Columbia,,Madelyn Ward,Gr.,"Waxahachie, Texas",Waxahachie,,6' 0'',OH,2,/sports/womens-volleyball/roster/madelyn-ward/8653,2017
-158,Columbia,,Rose Compton,So.,"Ferndale, Wash.",Ferndale,,6' 3'',MB,4,/sports/womens-volleyball/roster/rose-compton/8266,2017
-158,Columbia,,Kate Hefner,So.,"Newport Beach, Calif.",Newport Harbor,,5' 7'',DS/L,5,/sports/womens-volleyball/roster/kate-hefner/8274,2017
-158,Columbia,,Kaitlin Schultz,Gr.,"Santa Clarita, Calif.",West Ranch,,6' 0'',MB,6,/sports/womens-volleyball/roster/kaitlin-schultz/8652,2017
-158,Columbia,,Audrey Cheng,Gr.,"Superior, Colo.",Fairview,,5' 9'',S,8,/sports/womens-volleyball/roster/audrey-cheng/8642,2017
-158,Columbia,,Lauren Gurbach,So.,"Manhattan Beach, Calif.",Marymount,,5' 4'',DS/L,9,/sports/womens-volleyball/roster/lauren-gurbach/8269,2017
-158,Columbia,,Kalie Wood,So.,"San Diego, Calif.",Canyon Crest Academy,,5' 8'',DS/L,10,/sports/womens-volleyball/roster/kalie-wood/8289,2017
-158,Columbia,,Natasha Kosowicz,Jr.,"San Jose, Calif",Archbishop Mitty,,6' 0'',OH,11,/sports/womens-volleyball/roster/natasha-kosowicz/7961,2017
-158,Columbia,,Madeleine Casey,Jr.,"San Diego, Calif.",Francis Parker,,5' 11'',RS,12,/sports/womens-volleyball/roster/madeleine-casey/7949,2017
-158,Columbia,,Lauren Wilkins,Jr.,"Cincinnati, Ohio",Ursuline Academy,,6' 1'',OH/RS,13,/sports/womens-volleyball/roster/lauren-wilkins/7979,2017
-158,Columbia,,Jamie Dailey,Gr.,"Newport Beach, Calif.",Sage,,6' 1'',OH,14,/sports/womens-volleyball/roster/jamie-dailey/8644,2017
-158,Columbia,,Grace Campbell,So.,"Visalia, Calif.",San Joaquin Memorial,,6' 0'',S,15,/sports/womens-volleyball/roster/grace-campbell/8262,2017
-158,Columbia,,Ara Peterson,Jr.,"Menlo Park, Calif.",Sacred Heart Prep,,6' 1'',MB,16,/sports/womens-volleyball/roster/ara-peterson/7970,2017
-158,Columbia,,Chichi Ikwuazom,So.,"New York, N.Y.",Horace Mann,,6' 1'',MB,20,/sports/womens-volleyball/roster/chichi-ikwuazom/8280,2017
-158,Columbia,,Anja Malesevic,Sr.,"Belgrade, Serbia",Benjamin N. Cardozo (N.Y.),,6' 2'',RS,22,/sports/womens-volleyball/roster/anja-malesevic/7635,2017
 172,Dartmouth,,Lauren Douglas,Fy.,"Pacific Palisades, Calif.",Marymount,,5' 5'',DS/L,1,/sports/womens-volleyball/roster/lauren-douglas/24655,2017
 172,Dartmouth,,Sara Lindquist,Sr.,"Mercer Island, Wash.",Mercer Island,,6' 2'',OH,3,/sports/womens-volleyball/roster/sara-lindquist/10413,2017
 172,Dartmouth,,Elise Petit,Fy.,"Redmond, Wash.",Redmond,,6' 1'',OH,5,/sports/womens-volleyball/roster/elise-petit/24660,2017
@@ -13832,3 +13816,19 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 510,Northwood,,Marlee Bromberg,Fr.,"Essexville, Mich.",Essexville Garber,,5-9,OH,23,//www.gonorthwood.com/sports/wvball/2017-18/bios/bromberg_marlee_llmx,2017-18
 510,Northwood,,Mary Gallagher,Fr.,"Dexter, Mich.",Dexter,,6-1,MB,24,//www.gonorthwood.com/sports/wvball/2017-18/bios/gallagher_mary_z9xr,2017-18
 510,Northwood,,Jaelynn Block,Fr.,"St. Louis, Mich.",St. Louis,,5-10,S,RS,//www.gonorthwood.com/sports/wvball/2017-18/bios/block_jaelynn_yjdp,2017-18
+158,Columbia,,Luciana Del Valle,Jr.,"Lima, Peru",Colegio Trener,,5' 11'',OH,1,/sports/womens-volleyball/roster/luciana-del-valle/7953,2017-18
+158,Columbia,,Madelyn Ward,Gr.,"Waxahachie, Texas",Waxahachie,,6' 0'',OH,2,/sports/womens-volleyball/roster/madelyn-ward/8653,2017-18
+158,Columbia,,Rose Compton,So.,"Ferndale, Wash.",Ferndale,,6' 3'',MB,4,/sports/womens-volleyball/roster/rose-compton/8266,2017-18
+158,Columbia,,Kate Hefner,So.,"Newport Beach, Calif.",Newport Harbor,,5' 7'',DS/L,5,/sports/womens-volleyball/roster/kate-hefner/8274,2017-18
+158,Columbia,,Kaitlin Schultz,Gr.,"Santa Clarita, Calif.",West Ranch,,6' 0'',MB,6,/sports/womens-volleyball/roster/kaitlin-schultz/8652,2017-18
+158,Columbia,,Audrey Cheng,Gr.,"Superior, Colo.",Fairview,,5' 9'',S,8,/sports/womens-volleyball/roster/audrey-cheng/8642,2017-18
+158,Columbia,,Lauren Gurbach,So.,"Manhattan Beach, Calif.",Marymount,,5' 4'',DS/L,9,/sports/womens-volleyball/roster/lauren-gurbach/8269,2017-18
+158,Columbia,,Kalie Wood,So.,"San Diego, Calif.",Canyon Crest Academy,,5' 8'',DS/L,10,/sports/womens-volleyball/roster/kalie-wood/8289,2017-18
+158,Columbia,,Natasha Kosowicz,Jr.,"San Jose, Calif",Archbishop Mitty,,6' 0'',OH,11,/sports/womens-volleyball/roster/natasha-kosowicz/7961,2017-18
+158,Columbia,,Madeleine Casey,Jr.,"San Diego, Calif.",Francis Parker,,5' 11'',RS,12,/sports/womens-volleyball/roster/madeleine-casey/7949,2017-18
+158,Columbia,,Lauren Wilkins,Jr.,"Cincinnati, Ohio",Ursuline Academy,,6' 1'',OH/RS,13,/sports/womens-volleyball/roster/lauren-wilkins/7979,2017-18
+158,Columbia,,Jamie Dailey,Gr.,"Newport Beach, Calif.",Sage,,6' 1'',OH,14,/sports/womens-volleyball/roster/jamie-dailey/8644,2017-18
+158,Columbia,,Grace Campbell,So.,"Visalia, Calif.",San Joaquin Memorial,,6' 0'',S,15,/sports/womens-volleyball/roster/grace-campbell/8262,2017-18
+158,Columbia,,Ara Peterson,Jr.,"Menlo Park, Calif.",Sacred Heart Prep,,6' 1'',MB,16,/sports/womens-volleyball/roster/ara-peterson/7970,2017-18
+158,Columbia,,Chichi Ikwuazom,So.,"New York, N.Y.",Horace Mann,,6' 1'',MB,20,/sports/womens-volleyball/roster/chichi-ikwuazom/8280,2017-18
+158,Columbia,,Anja Malesevic,Sr.,"Belgrade, Serbia",Benjamin N. Cardozo (N.Y.),,6' 2'',RS,22,/sports/womens-volleyball/roster/anja-malesevic/7635,2017-18
