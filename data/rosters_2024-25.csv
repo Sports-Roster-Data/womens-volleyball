@@ -1791,25 +1791,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 87,Butler,12129,Destiny Cherry,Senior,"Spring Hill, Tenn.",Summit,,"6'3""",MB,18,//www.butlersports.com/sports/womens-volleyball/roster/destiny-cherry/12129,2024
 87,Butler,12132,Mariah Grunze,Senior,"Waterford, Wis.",Waterford Union,,"6'1""",OH/OPP,19,//www.butlersports.com/sports/womens-volleyball/roster/mariah-grunze/12132,2024
 87,Butler,12142,Torii Starks,Freshman,"Lexington, Ky.",Frederick Douglass,,"6'4""",MB,20,//www.butlersports.com/sports/womens-volleyball/roster/torii-starks/12142,2024
-77,Brigham Young,,Kate Prior,"Henderson, Nevada",Nevada State High School,Kate Prior,,Junior,6-4,1,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/kate-prior,2024
-77,Brigham Young,,Elli Mortensen,"Draper, Utah",Corner Canyon High School,Elli Mortensen,,Freshman,6-2,2,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/elli-mortensen,2024
-77,Brigham Young,,Hannah Billeter,"McKinney, Texas",McKinney Boyd High School,Hannah Billeter,,Junior,5-11,4,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/hannah-billeter,2024
-77,Brigham Young,,Lulu Po'uha,"Lā'ie, Hawai'i",Punahou School,Lulu Po'uha,,Freshman,5-8,5,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/lulu-uluave-pouha,2024
-77,Brigham Young,,Kalia Thunstrom,"Murrieta, California",Utah State,Kalia Thunstrom,,Senior,5-10,6,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/kalia-thunstrom,2024
-77,Brigham Young,,Alex Bower,"Nampa, Idaho",Skyview High School,Alex Bower,,Freshman,5-11,7,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/alex-bower,2024
-77,Brigham Young,,Eden Bower,"Nampa, Idaho",Skyview High School,Eden Bower,,Junior,6-3,8,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/eden-bower,2024
-77,Brigham Young,,Alyssa Erickson,"Gilbert, Arizona",Perry High School,Alyssa Erickson,,Senior,6-1,9,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/alyssa-erickson,2024
-77,Brigham Young,,Addie Benson,"Newbury Park, California",Newbury Park High School,Addie Benson,,Sophomore,6-2,11,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/addie-benson,2024
-77,Brigham Young,,Claire Little Chambers,"Temecula, California",Vista Murrieta High School,Claire Little Chambers,,Sophomore,6-3,12,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/claire-little-chambers,2024
-77,Brigham Young,,Mia Lee,"Vineyard, Utah",Mountain View High School,Mia Lee,,Sophomore,6-0,13,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/mia-lee,2024
-77,Brigham Young,,Elyse Stowell,"Yorba Linda, California",Esperanza High School,Elyse Stowell,,Senior,6-2,15,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/elyse-stowell,2024
-77,Brigham Young,,Brielle Miller,"Orem, Utah",Mountain View High School,Brielle Miller,,Sophomore,5-5,16,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/brielle-miller,2024
-77,Brigham Young,,Abby Hoybjerg,"El Dorado Hills, California",Oak Ridge High School,Abby Hoybjerg,,Freshman,6-2,18,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/abby-hoybjerg,2024
-77,Brigham Young,,Kaieva Johnson,"Riverton, Utah",Utah,Kaieva Johnson,,Sophomore,5-8,19,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/kaieva-johnson,2024
-77,Brigham Young,,Blaykli Bobik,"Queen Creek, Arizona",Queen Creek High School,Blaykli Bobik,,Freshman,6-1,20,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/blaykli-bobik,2024
-77,Brigham Young,,Macy Marshall,"Middleton, Idaho",Southern Utah,Macy Marshall,,Junior,6-0,21,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/macy-marshall,2024
-77,Brigham Young,,Kjersti Strong,"Mechanicsburg, Pennsylvania",Saint Mary's,Kjersti Strong,,Graduate,6-3,22,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/kjersti-strong,2024
-77,Brigham Young,,Brielle Kemavor,"Bristow, Virginia",Colgan High School,Brielle Kemavor,,Sophomore,6-5,24,//byucougars.com/sports/womens-volleyball/roster/season/2024/player/brielle-kemavor,2024
 90,Cal Poly,,Emma Fredrick,So.,"Bakersfield, CA",Liberty HS,,5' 10'',OH,1,/sports/womens-volleyball/roster/emma-fredrick/11049,2024
 90,Cal Poly,,Chloe Leluge,Fr.,"Bend, OR",Bend HS,,6' 3'',MB,2,/sports/womens-volleyball/roster/chloe-leluge/11053,2024
 90,Cal Poly,,Samantha Callahan,So.,"Livermore, CA",Granada HS,,6' 0'',S,3,/sports/womens-volleyball/roster/samantha-callahan/11047,2024
@@ -12264,22 +12245,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 507,Northwest Missouri State,9951,Kate Frakes,Junior,"Overland Park, Kan.",Spring Hill,,"6'2""",MH,18,//www.bearcatsports.com/sports/womens-volleyball/roster/kate-frakes/9951,2024
 507,Northwest Missouri State,9964,Maja Noehrer,Freshman,"Hausmannstatten, Austria",,University of Graz,"6'0""",OH,20,//www.bearcatsports.com/sports/womens-volleyball/roster/maja-noehrer/9964,2024
 507,Northwest Missouri State,9959,Karsen VanScoy,Junior,"Lincoln, Neb.",Waverly,,"5'4""",L/DS,23,//www.bearcatsports.com/sports/womens-volleyball/roster/karsen-vanscoy/9959,2024
-510,Northwood,,Sophia Oakes,L/DS,5-2,,,Sr.,1,1,//www.gonorthwood.com/sports/wvball/2024-25/bios/oakes_sophia_qlcj,2024
-510,Northwood,,Dani Pohl,OH,5-11,,,So.,2,2,//www.gonorthwood.com/sports/wvball/2024-25/bios/pohl_dani_ira4,2024
-510,Northwood,,Clara Gyomory,RS/OH,5-11,,,Fr.,5,5,//www.gonorthwood.com/sports/wvball/2024-25/bios/gyomory_clara_y65g,2024
-510,Northwood,,Laney Kokaly,DS,5-5,,,So.,6,6,//www.gonorthwood.com/sports/wvball/2024-25/bios/kokaly_laney_tuyl,2024
-510,Northwood,,Renee Brines,S,5-8,,,Jr.,7,7,//www.gonorthwood.com/sports/wvball/2024-25/bios/brines_renee_lfb1,2024
-510,Northwood,,Olivia Ott,OH,5-9,,,Sr.,8,8,//www.gonorthwood.com/sports/wvball/2024-25/bios/ott_olivia_46qe,2024
-510,Northwood,,Avery Dubey,S,5-8,,,Fr.,9,9,//www.gonorthwood.com/sports/wvball/2024-25/bios/dubey_avery_5el1,2024
-510,Northwood,,Olivia Nester,OH,5-11,,,So.,10,10,//www.gonorthwood.com/sports/wvball/2024-25/bios/nester_olivia_js26,2024
-510,Northwood,,Ava Orlando,DS,5-5,,,Fr.,11,11,//www.gonorthwood.com/sports/wvball/2024-25/bios/orlando_ava_j94p,2024
-510,Northwood,,Sage Kissman,OH,6-0,,,R-Jr.,12,12,//www.gonorthwood.com/sports/wvball/2024-25/bios/kissman_sage_3i5y,2024
-510,Northwood,,Madeline Heil,MB,6-0,,,So.,13,13,//www.gonorthwood.com/sports/wvball/2024-25/bios/heil_madeline_erdp,2024
-510,Northwood,,Macy Kellstrom,L/DS,5-4,,,Sr.,15,15,//www.gonorthwood.com/sports/wvball/2024-25/bios/kellstrom_macy_m9st,2024
-510,Northwood,,Soleil Allen,MB,6-0,,,Fr.,16,16,//www.gonorthwood.com/sports/wvball/2024-25/bios/allen_soliel_wmsx,2024
-510,Northwood,,Mackenzie Scheid,MB,5-11,,,Fr.,17,17,//www.gonorthwood.com/sports/wvball/2024-25/bios/scheid_mackenzie_t1t7,2024
-510,Northwood,,Sydney Hasenfratz,MB/OH,6-1,,,R-Jr.,18,18,//www.gonorthwood.com/sports/wvball/2024-25/bios/hasenfratz_sydney_1b2g,2024
-510,Northwood,,Kiana Martens,OP,6-0,,,Sr.,19,19,//www.gonorthwood.com/sports/wvball/2024-25/bios/martens_kiana_5swo,2024
 511,Norwich,10378,Isabella Vasapolli,Freshman,"Pepperell, Mass.",Windham Woods Private,,"5'11""",MH,1,//www.norwichathletics.com/sports/womens-volleyball/roster/isabella-vasapolli/10378,2024
 511,Norwich,10373,Sarah DeBot,Sophomore,"Rochester, N.Y.",Bishop Kearney,,"5'1""",DS/L,2,//www.norwichathletics.com/sports/womens-volleyball/roster/sarah-debot/10373,2024
 511,Norwich,10377,Rae Lawing,Freshman,"Allen, Texas",Allen,,"5'5""",LH/DS,3,//www.norwichathletics.com/sports/womens-volleyball/roster/rae-lawing/10377,2024
@@ -15979,3 +15944,38 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 31,Arkansas,,Aleki Alexander,Freshman,"Blue Springs, Mo.",Blue Springs HS,,6-2,MB,23,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/aleki-alexander/,2024-25
 31,Arkansas,,Romani Thurman,Sophomore,"Little Rock, Ark.",North Carolina,,5-10,OH,30,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/romani-thurman/,2024-25
 31,Arkansas,,Zoi Evans,Senior,"Tampa, Fla.",Wiregrass HS,,6-4,MB,44,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/zoi-evans/,2024-25
+510,Northwood,,Sophia Oakes,Sr.,"Pinckney, Mich.",Pinckney,,5-2,L/DS,1,//www.gonorthwood.com/sports/wvball/2024-25/bios/oakes_sophia_qlcj,2024-25
+510,Northwood,,Dani Pohl,So.,"Westphalia, Mich.",Pewamo-Westphalia,,5-11,OH,2,//www.gonorthwood.com/sports/wvball/2024-25/bios/pohl_dani_ira4,2024-25
+510,Northwood,,Clara Gyomory,Fr.,"North Branch, Mich.",North Branch,,5-11,RS/OH,5,//www.gonorthwood.com/sports/wvball/2024-25/bios/gyomory_clara_y65g,2024-25
+510,Northwood,,Laney Kokaly,So.,"Essexville, Mich.",Garber,,5-5,DS,6,//www.gonorthwood.com/sports/wvball/2024-25/bios/kokaly_laney_tuyl,2024-25
+510,Northwood,,Renee Brines,Jr.,"Cadillac, Mich.",Cadillac,,5-8,S,7,//www.gonorthwood.com/sports/wvball/2024-25/bios/brines_renee_lfb1,2024-25
+510,Northwood,,Olivia Ott,Sr.,"Allegan, Mich.",Allegan,,5-9,OH,8,//www.gonorthwood.com/sports/wvball/2024-25/bios/ott_olivia_46qe,2024-25
+510,Northwood,,Avery Dubey,Fr.,"Alpena, Mich.",Alpena,,5-8,S,9,//www.gonorthwood.com/sports/wvball/2024-25/bios/dubey_avery_5el1,2024-25
+510,Northwood,,Olivia Nester,So.,"Fenton, Mich.",Linden,,5-11,OH,10,//www.gonorthwood.com/sports/wvball/2024-25/bios/nester_olivia_js26,2024-25
+510,Northwood,,Ava Orlando,Fr.,"Romeo, Mich.",Romeo,,5-5,DS,11,//www.gonorthwood.com/sports/wvball/2024-25/bios/orlando_ava_j94p,2024-25
+510,Northwood,,Sage Kissman,R-Jr.,"Mason, Mich.",Mason (Ashland University),,6-0,OH,12,//www.gonorthwood.com/sports/wvball/2024-25/bios/kissman_sage_3i5y,2024-25
+510,Northwood,,Madeline Heil,So.,"Bourbannais, Ill.",Bradley-Bourbannais,,6-0,MB,13,//www.gonorthwood.com/sports/wvball/2024-25/bios/heil_madeline_erdp,2024-25
+510,Northwood,,Macy Kellstrom,Sr.,"Oscoda, Mich.",Oscoda,,5-4,L/DS,15,//www.gonorthwood.com/sports/wvball/2024-25/bios/kellstrom_macy_m9st,2024-25
+510,Northwood,,Soleil Allen,Fr.,"Whitby, Ont.",Wilson,,6-0,MB,16,//www.gonorthwood.com/sports/wvball/2024-25/bios/allen_soliel_wmsx,2024-25
+510,Northwood,,Mackenzie Scheid,Fr.,"Coldwater, Mich.",Coldwater,,5-11,MB,17,//www.gonorthwood.com/sports/wvball/2024-25/bios/scheid_mackenzie_t1t7,2024-25
+510,Northwood,,Sydney Hasenfratz,R-Jr.,"Clarkston, Mich.",Clarkston,,6-1,MB/OH,18,//www.gonorthwood.com/sports/wvball/2024-25/bios/hasenfratz_sydney_1b2g,2024-25
+510,Northwood,,Kiana Martens,Sr.,"St. Johns, Mich.",St. Johns,,6-0,OP,19,//www.gonorthwood.com/sports/wvball/2024-25/bios/martens_kiana_5swo,2024-25
+77,Brigham Young,,Kate Prior,Junior,"Henderson, Nevada",Nevada State High School,,6-4,Opposite Hitter/Middle Blocker,1,/sports/womens-volleyball/roster/season/2024/player/kate-prior,2024-25
+77,Brigham Young,,Elli Mortensen,Freshman,"Draper, Utah",Corner Canyon High School,,6-2,Outside Hitter,2,/sports/womens-volleyball/roster/season/2024/player/elli-mortensen,2024-25
+77,Brigham Young,,Hannah Billeter,Junior,"McKinney, Texas",McKinney Boyd High School,,5-11,Libero,4,/sports/womens-volleyball/roster/season/2024/player/hannah-billeter,2024-25
+77,Brigham Young,,Lulu Po'uha,Freshman,"Lā'ie, Hawai'i",Punahou School,,5-8,Libero,5,/sports/womens-volleyball/roster/season/2024/player/lulu-uluave-pouha,2024-25
+77,Brigham Young,,Kalia Thunstrom,Senior,"Murrieta, California",Utah State,,5-10,Setter,6,/sports/womens-volleyball/roster/season/2024/player/kalia-thunstrom,2024-25
+77,Brigham Young,,Alex Bower,Freshman,"Nampa, Idaho",Skyview High School,,5-11,Setter,7,/sports/womens-volleyball/roster/season/2024/player/alex-bower,2024-25
+77,Brigham Young,,Eden Bower,Junior,"Nampa, Idaho",Skyview High School,,6-3,Outside Hitter,8,/sports/womens-volleyball/roster/season/2024/player/eden-bower,2024-25
+77,Brigham Young,,Alyssa Erickson,Senior,"Gilbert, Arizona",Perry High School,,6-1,Outside Hitter,9,/sports/womens-volleyball/roster/season/2024/player/alyssa-erickson,2024-25
+77,Brigham Young,,Addie Benson,Sophomore,"Newbury Park, California",Newbury Park High School,,6-2,Outside Hitter,11,/sports/womens-volleyball/roster/season/2024/player/addie-benson,2024-25
+77,Brigham Young,,Claire Little Chambers,Sophomore,"Temecula, California",Vista Murrieta High School,,6-3,Outside Hitter,12,/sports/womens-volleyball/roster/season/2024/player/claire-little-chambers,2024-25
+77,Brigham Young,,Mia Lee,Sophomore,"Vineyard, Utah",Mountain View High School,,6-0,Middle Blocker/Opposite Hitter,13,/sports/womens-volleyball/roster/season/2024/player/mia-lee,2024-25
+77,Brigham Young,,Elyse Stowell,Senior,"Yorba Linda, California",Esperanza High School,,6-2,Outside Hitter,15,/sports/womens-volleyball/roster/season/2024/player/elyse-stowell,2024-25
+77,Brigham Young,,Brielle Miller,Sophomore,"Orem, Utah",Mountain View High School,,5-5,Libero,16,/sports/womens-volleyball/roster/season/2024/player/brielle-miller,2024-25
+77,Brigham Young,,Abby Hoybjerg,Freshman,"El Dorado Hills, California",Oak Ridge High School,,6-2,Middle Blocker,18,/sports/womens-volleyball/roster/season/2024/player/abby-hoybjerg,2024-25
+77,Brigham Young,,Kaieva Johnson,Sophomore,"Riverton, Utah",Utah,,5-8,Libero/Defensive Specialist,19,/sports/womens-volleyball/roster/season/2024/player/kaieva-johnson,2024-25
+77,Brigham Young,,Blaykli Bobik,Freshman,"Queen Creek, Arizona",Queen Creek High School,,6-1,Outside Hitter,20,/sports/womens-volleyball/roster/season/2024/player/blaykli-bobik,2024-25
+77,Brigham Young,,Macy Marshall,Junior,"Middleton, Idaho",Southern Utah,,6-0,Setter,21,/sports/womens-volleyball/roster/season/2024/player/macy-marshall,2024-25
+77,Brigham Young,,Kjersti Strong,Graduate,"Mechanicsburg, Pennsylvania",Saint Mary's,,6-3,Middle Blocker,22,/sports/womens-volleyball/roster/season/2024/player/kjersti-strong,2024-25
+77,Brigham Young,,Brielle Kemavor,Sophomore,"Bristow, Virginia",Colgan High School,,6-5,Middle Blocker,24,/sports/womens-volleyball/roster/season/2024/player/brielle-kemavor,2024-25

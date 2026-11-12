@@ -10889,22 +10889,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 507,Northwest Missouri State,7347,Bethany Elkins,Sophomore,"Belton, Missouri",Belton,,"5'11""",Middle,18,//www.bearcatsports.com/sports/womens-volleyball/roster/bethany-elkins/7347,2019
 507,Northwest Missouri State,7430,Sydney McDermott,Freshman,"Omaha, Nebraska",Skutt Catholic,,"6'1""",RS/MH,19,//www.bearcatsports.com/sports/womens-volleyball/roster/sydney-mcdermott/7430,2019
 507,Northwest Missouri State,7429,Hannah LaPour,Freshman,"Blue Springs, Missouri",Blue Springs South,,"6'0""",MH,21,//www.bearcatsports.com/sports/womens-volleyball/roster/hannah-lapour/7429,2019
-510,Northwood,,Loren Westlake,DS/L,5-5,,,Sr.,1,1,//www.gonorthwood.com/sports/wvball/2019-20/bios/westlake_loren_2pou,2019
-510,Northwood,,Macy Lintz,S,5-7,,,So.,5,5,//www.gonorthwood.com/sports/wvball/2019-20/bios/lintz_macy_mwbv,2019
-510,Northwood,,Meredith Collins,OH/DS,5-9,,,Sr.,6,6,//www.gonorthwood.com/sports/wvball/2019-20/bios/collins_meredith_xe2g,2019
-510,Northwood,,Clare Keating,OH/DS,5-8,,,Sr.,7,7,//www.gonorthwood.com/sports/wvball/2019-20/bios/keating_clare_driw,2019
-510,Northwood,,Carson Rutherford,OH/RS,6-0,,,Sr.,8,8,//www.gonorthwood.com/sports/wvball/2019-20/bios/rutherford_carson_bprd,2019
-510,Northwood,,Sydney Sweet,MB/RS,6-0,,,Fr.,9,9,//www.gonorthwood.com/sports/wvball/2019-20/bios/sweet_sydney_g0sl,2019
-510,Northwood,,Venera Kadriu,OH,5-8,,,So.,10,10,//www.gonorthwood.com/sports/wvball/2019-20/bios/kadriu_venera_ctud,2019
-510,Northwood,,Lauren Bell,L,5-3,,,Fr.,11,11,//www.gonorthwood.com/sports/wvball/2019-20/bios/bell_lauren_8nra,2019
-510,Northwood,,Al'Lesha Roberts,MB,5-11,,,So.,12,12,//www.gonorthwood.com/sports/wvball/2019-20/bios/roberts_al-lesha_j0nm,2019
-510,Northwood,,Zyla Kadriu,S,5-8,,,Fr.,13,13,//www.gonorthwood.com/sports/wvball/2019-20/bios/kadriu_kyla_pp94,2019
-510,Northwood,,Hannah Siegel,MB/RS,6-0,,,Sr.,14,14,//www.gonorthwood.com/sports/wvball/2019-20/bios/siegel_hannah_dnm6,2019
-510,Northwood,,Mackenzie Kepler,OH,5-11,,,Jr.,15,15,//www.gonorthwood.com/sports/wvball/2019-20/bios/kepler_mackenzie_m7w9,2019
-510,Northwood,,Megan Acs,OH,5-10,,,Fr.,16,16,//www.gonorthwood.com/sports/wvball/2019-20/bios/acs_megan_1e2y,2019
-510,Northwood,,Grace Rekeweg,OH,5-11,,,So.,17,17,//www.gonorthwood.com/sports/wvball/2019-20/bios/rekeweg_grace_s7id,2019
-510,Northwood,,Karlie Wengorovius,MB/RS,5-11,,,Sr.,19,19,//www.gonorthwood.com/sports/wvball/2019-20/bios/wengorovius_karlie_l2ry,2019
-510,Northwood,,Mary Gallagher,MB,6-1,,,Jr.,24,24,//www.gonorthwood.com/sports/wvball/2019-20/bios/gallagher_mary_a5rp,2019
 511,Norwich,6985,Sarah Farnum,Freshman,"North Andover, Mass.",North Andover,,"5'7""",S,1,//www.norwichathletics.com/sports/womens-volleyball/roster/sarah-farnum/6985,2019
 511,Norwich,6992,Monika Schneider,Senior,"Brookline, N.H.",Hollis-Brookline,,"5'5""",OH,2,//www.norwichathletics.com/sports/womens-volleyball/roster/monika-schneider/6992,2019
 511,Norwich,6988,Addison Schroeder,Sophomore,"Apple Valley, Calif.",Apple Valley,,"5'8""",MB,3,//www.norwichathletics.com/sports/womens-volleyball/roster/addison-schroeder/6988,2019
@@ -14309,3 +14293,19 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 156,Colorado St.,5173,Breana Runnels,Redshirt Junior,"Bakersfield, Calif.",Independence HS,,"5'10""",Outside,15,//www.csurams.com/sports/womens-volleyball/roster/breana-runnels/5173,2019-20
 156,Colorado St.,5170,Jessica Jackson,Redshirt Senior,"Denver, Colo.",Thomas Jefferson HS,,"5'11""",Outside,21,//www.csurams.com/sports/womens-volleyball/roster/jessica-jackson/5170,2019-20
 156,Colorado St.,5172,Katie Oleksak,Senior,"Phoenix, Ariz.",Sunnyslope HS,,"5'10""",Setter,22,//www.csurams.com/sports/womens-volleyball/roster/katie-oleksak/5172,2019-20
+510,Northwood,,Loren Westlake,Sr.,"Olivet, Mich.",Olivet,,5-5,DS/L,1,//www.gonorthwood.com/sports/wvball/2019-20/bios/westlake_loren_2pou,2019-20
+510,Northwood,,Macy Lintz,So.,"Columbiaville, Mich.",Davison,,5-7,S,5,//www.gonorthwood.com/sports/wvball/2019-20/bios/lintz_macy_mwbv,2019-20
+510,Northwood,,Meredith Collins,Sr.,"Grand Rapids, Mich.",Forest Hills Central,,5-9,OH/DS,6,//www.gonorthwood.com/sports/wvball/2019-20/bios/collins_meredith_xe2g,2019-20
+510,Northwood,,Clare Keating,Sr.,"Troy, Mich.",Troy,,5-8,OH/DS,7,//www.gonorthwood.com/sports/wvball/2019-20/bios/keating_clare_driw,2019-20
+510,Northwood,,Carson Rutherford,Sr.,"Flushing, Mich.",Flushing (Minnesota-Crookston),,6-0,OH/RS,8,//www.gonorthwood.com/sports/wvball/2019-20/bios/rutherford_carson_bprd,2019-20
+510,Northwood,,Sydney Sweet,Fr.,"Clio, Mich.",Clio,,6-0,MB/RS,9,//www.gonorthwood.com/sports/wvball/2019-20/bios/sweet_sydney_g0sl,2019-20
+510,Northwood,,Venera Kadriu,So.,"Gjilan, Kosovo",,,5-8,OH,10,//www.gonorthwood.com/sports/wvball/2019-20/bios/kadriu_venera_ctud,2019-20
+510,Northwood,,Lauren Bell,Fr.,"Lake Orion, Mich.",Lake Orion,,5-3,L,11,//www.gonorthwood.com/sports/wvball/2019-20/bios/bell_lauren_8nra,2019-20
+510,Northwood,,Al'Lesha Roberts,So.,"Eastpointe, Mich.",Detroit Cass Tech,,5-11,MB,12,//www.gonorthwood.com/sports/wvball/2019-20/bios/roberts_al-lesha_j0nm,2019-20
+510,Northwood,,Zyla Kadriu,Fr.,"Skenderaj, Kosovo",,,5-8,S,13,//www.gonorthwood.com/sports/wvball/2019-20/bios/kadriu_kyla_pp94,2019-20
+510,Northwood,,Hannah Siegel,Sr.,"Goshen, Ind.",Fairfield,,6-0,MB/RS,14,//www.gonorthwood.com/sports/wvball/2019-20/bios/siegel_hannah_dnm6,2019-20
+510,Northwood,,Mackenzie Kepler,Jr.,"Macomb, Mich.",Dakota,,5-11,OH,15,//www.gonorthwood.com/sports/wvball/2019-20/bios/kepler_mackenzie_m7w9,2019-20
+510,Northwood,,Megan Acs,Fr.,"Hartland, Mich.",Hartland,,5-10,OH,16,//www.gonorthwood.com/sports/wvball/2019-20/bios/acs_megan_1e2y,2019-20
+510,Northwood,,Grace Rekeweg,So.,"Midland, Mich.",Midland,,5-11,OH,17,//www.gonorthwood.com/sports/wvball/2019-20/bios/rekeweg_grace_s7id,2019-20
+510,Northwood,,Karlie Wengorovius,Sr.,"Farmington, Mich.",Farmington,,5-11,MB/RS,19,//www.gonorthwood.com/sports/wvball/2019-20/bios/wengorovius_karlie_l2ry,2019-20
+510,Northwood,,Mary Gallagher,Jr.,"Dexter, Mich.",Dexter,,6-1,MB,24,//www.gonorthwood.com/sports/wvball/2019-20/bios/gallagher_mary_a5rp,2019-20

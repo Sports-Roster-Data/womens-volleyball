@@ -15281,25 +15281,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 486,MCLA,,Beth Harris,Junior,"San Antonio, TX",Winston Churchill,,"5'-6""",S,19,//www.mcla.edu/sports/wvball/2025-26/bios/harris_beth_furv,2025
 486,MCLA,,Sasha Fyfe,Sophomore,"Dalton, MA",Wahconah Regional High School,,"5'-4""",DS,20,//www.mcla.edu/sports/wvball/2025-26/bios/fyfe_sasha_y5km,2025
 486,MCLA,,Audrey Melson,Senior,"Champlin, MN",Champlin Park,,5'10,OH/RS,21,//www.mcla.edu/sports/wvball/2025-26/bios/melson_audrey_v9k5,2025
-510,Northwood,,Mairin Ziegler,OH/RS,5-11,,,Fr.,1,1,//www.gonorthwood.com/sports/wvball/2025-26/bios/ziegler_mairin_1est,2025
-510,Northwood,,Dani Pohl,OH,5-11,,,Jr.,2,2,//www.gonorthwood.com/sports/wvball/2025-26/bios/pohl_dani_gl05,2025
-510,Northwood,,Bella Colon,OH,5-10,,,Fr.,4,4,//www.gonorthwood.com/sports/wvball/2025-26/bios/colon_bella_y08v,2025
-510,Northwood,,Clara Gyomory,RS/OH,5-11,,,So.,5,5,//www.gonorthwood.com/sports/wvball/2025-26/bios/gyomory_clara_51z7,2025
-510,Northwood,,Laney Kokaly,DS,5-5,,,Jr.,6,6,//www.gonorthwood.com/sports/wvball/2025-26/bios/kokaly_laney_2hde,2025
-510,Northwood,,Renee Brines,S,5-8,,,Sr.,7,7,//www.gonorthwood.com/sports/wvball/2025-26/bios/brines_renee_7dlv,2025
-510,Northwood,,Corinne Hiler,MB,6-1,,,Fr.,8,8,//www.gonorthwood.com/sports/wvball/2025-26/bios/hiler_corinne_1b4g,2025
-510,Northwood,,Avery Dubey,S,5-8,,,So.,9,9,//www.gonorthwood.com/sports/wvball/2025-26/bios/dubey_avery_4py6,2025
-510,Northwood,,Olivia Nester,OH,5-11,,,Jr.,10,10,//www.gonorthwood.com/sports/wvball/2025-26/bios/nester_olivia_q9xf,2025
-510,Northwood,,Ava Orlando,DS,5-5,,,So.,11,11,//www.gonorthwood.com/sports/wvball/2025-26/bios/orlando_ava_yacc,2025
-510,Northwood,,Sage Kissman,OH,6-0,,,R-Sr.,12,12,//www.gonorthwood.com/sports/wvball/2025-26/bios/kissman_sage_2dzy,2025
-510,Northwood,,Madeline Heil,MB,6-0,,,Jr.,13,13,//www.gonorthwood.com/sports/wvball/2025-26/bios/heil_madeline_nmxh,2025
-510,Northwood,,Kylie Goodman,OH,5-9,,,Fr.,14,14,//www.gonorthwood.com/sports/wvball/2025-26/bios/goodman_kylie_gyrc,2025
-510,Northwood,,Liza Young,RS,6-0,,,Fr.,15,15,//www.gonorthwood.com/sports/wvball/2025-26/bios/young_cydney_2osz,2025
-510,Northwood,,Soleil Allen,MB,6-2,,,So.,16,16,//www.gonorthwood.com/sports/wvball/2025-26/bios/allen_soleil_isoz,2025
-510,Northwood,,Mackenzie Scheid,MB,5-11,,,So.,17,17,//www.gonorthwood.com/sports/wvball/2025-26/bios/scheid_mackenzie_o59v,2025
-510,Northwood,,Ava Thomas,L,5-6,,,Fr.,19,19,//www.gonorthwood.com/sports/wvball/2025-26/bios/thomas_ava_8oy9,2025
-510,Northwood,,Kyden Ehle,S,5-10,,,Fr.,21,21,//www.gonorthwood.com/sports/wvball/2025-26/bios/ehle_kyden_8023,2025
-510,Northwood,,Addison Pearce,MB/RS,5-11,,,Fr.,23,23,//www.gonorthwood.com/sports/wvball/2025-26/bios/pearce_addison_qlmw,2025
 517,Ohio Northern,,Elizabeth Barbara,Sr.,"Foothill Ranch, Calif.",Trabuco Hills,,5-2,DS,1,//www.onusports.com/sports/wvball/2025-26/bios/barbara_elizabeth_9vdu,2025
 517,Ohio Northern,,Maggie Jordan,Fr.,Lima,Shawnee,,5-6,DS,3,//www.onusports.com/sports/wvball/2025-26/bios/jordan_maggie_3420,2025
 517,Ohio Northern,,Hailey Miller,So.,North Ridgeville,North Ridgeville,,5-1,DS,4,//www.onusports.com/sports/wvball/2025-26/bios/miller_hailey_2mng,2025
@@ -15798,3 +15779,22 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 31,Arkansas,,Journey Peppers,Freshman,"Hensley, Ark.",White Hall HS,,6-4,MB,27,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/journey-peppers/,2025-26
 31,Arkansas,,Romani Thurman,Junior,"Little Rock, Ark.",North Carolina,,5-10,OPP,30,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/romani-thurman/,2025-26
 31,Arkansas,,Zoi Evans,Graduate,"Tampa, Fla.",Wiregrass HS,,6-4,MB,44,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/zoi-evans/,2025-26
+510,Northwood,,Mairin Ziegler,Fr.,"Caledonia, Mich.",Grand Rapids Catholic Central,,5-11,OH/RS,1,//www.gonorthwood.com/sports/wvball/2025-26/bios/ziegler_mairin_1est,2025-26
+510,Northwood,,Dani Pohl,Jr.,"Westphalia, Mich.",Pewamo-Westphalia,,5-11,OH,2,//www.gonorthwood.com/sports/wvball/2025-26/bios/pohl_dani_gl05,2025-26
+510,Northwood,,Bella Colon,Fr.,"Troy, Mich.",Troy,,5-10,OH,4,//www.gonorthwood.com/sports/wvball/2025-26/bios/colon_bella_y08v,2025-26
+510,Northwood,,Clara Gyomory,So.,"North Branch, Mich.",North Branch,,5-11,RS/OH,5,//www.gonorthwood.com/sports/wvball/2025-26/bios/gyomory_clara_51z7,2025-26
+510,Northwood,,Laney Kokaly,Jr.,"Essexville, Mich.",Garber,,5-5,DS,6,//www.gonorthwood.com/sports/wvball/2025-26/bios/kokaly_laney_2hde,2025-26
+510,Northwood,,Renee Brines,Sr.,"Cadillac, Mich.",Cadillac,,5-8,S,7,//www.gonorthwood.com/sports/wvball/2025-26/bios/brines_renee_7dlv,2025-26
+510,Northwood,,Corinne Hiler,Fr.,"Paw Paw, Mich",Mattawan,,6-1,MB,8,//www.gonorthwood.com/sports/wvball/2025-26/bios/hiler_corinne_1b4g,2025-26
+510,Northwood,,Avery Dubey,So.,"Alpena, Mich.",Alpena,,5-8,S,9,//www.gonorthwood.com/sports/wvball/2025-26/bios/dubey_avery_4py6,2025-26
+510,Northwood,,Olivia Nester,Jr.,"Fenton, Mich.",Linden,,5-11,OH,10,//www.gonorthwood.com/sports/wvball/2025-26/bios/nester_olivia_q9xf,2025-26
+510,Northwood,,Ava Orlando,So.,"Romeo, Mich.",Romeo,,5-5,DS,11,//www.gonorthwood.com/sports/wvball/2025-26/bios/orlando_ava_yacc,2025-26
+510,Northwood,,Sage Kissman,R-Sr.,"Mason, Mich.",Mason (Ashland University),,6-0,OH,12,//www.gonorthwood.com/sports/wvball/2025-26/bios/kissman_sage_2dzy,2025-26
+510,Northwood,,Madeline Heil,Jr.,"Bourbannais, Ill.",Bradley-Bourbannais,,6-0,MB,13,//www.gonorthwood.com/sports/wvball/2025-26/bios/heil_madeline_nmxh,2025-26
+510,Northwood,,Kylie Goodman,Fr.,"Grand Ledge, Mich.",Grand Ledge,,5-9,OH,14,//www.gonorthwood.com/sports/wvball/2025-26/bios/goodman_kylie_gyrc,2025-26
+510,Northwood,,Liza Young,Fr.,"Okinawa, Japan",Kadena,,6-0,RS,15,//www.gonorthwood.com/sports/wvball/2025-26/bios/young_cydney_2osz,2025-26
+510,Northwood,,Soleil Allen,So.,"Whitby, Ont., Canada",Donald A. Wilson Secondary,,6-2,MB,16,//www.gonorthwood.com/sports/wvball/2025-26/bios/allen_soleil_isoz,2025-26
+510,Northwood,,Mackenzie Scheid,So.,"Coldwater, Mich.",Coldwater,,5-11,MB,17,//www.gonorthwood.com/sports/wvball/2025-26/bios/scheid_mackenzie_o59v,2025-26
+510,Northwood,,Ava Thomas,Fr.,"Coopersville, Mich.",Coopersville,,5-6,L,19,//www.gonorthwood.com/sports/wvball/2025-26/bios/thomas_ava_8oy9,2025-26
+510,Northwood,,Kyden Ehle,Fr.,"Elsie, Mich.",Ovid-Elsie,,5-10,S,21,//www.gonorthwood.com/sports/wvball/2025-26/bios/ehle_kyden_8023,2025-26
+510,Northwood,,Addison Pearce,Fr.,"Clarkston, Mich.",Everest Collegiate,,5-11,MB/RS,23,//www.gonorthwood.com/sports/wvball/2025-26/bios/pearce_addison_qlmw,2025-26

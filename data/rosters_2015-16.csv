@@ -10130,22 +10130,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 507,Northwest Missouri State,4514,Aarika Wittenburg,Senior,"Readlyn, Iowa",Wapsie Valley HS,,"5'9""",DS,16,//www.bearcatsports.com/sports/womens-volleyball/roster/aarika-wittenburg/4514,2015
 507,Northwest Missouri State,4503,Sarah Dannettell,Sophomore,"Windsor, Colo.",Fossil Ridge HS,,"5'10""",S,19,//www.bearcatsports.com/sports/womens-volleyball/roster/sarah-dannettell/4503,2015
 507,Northwest Missouri State,4517,Olivia Nowakowski,Freshman,"Kansas City, Mo.",Park Hill HS,,"5'4""",DS,23,//www.bearcatsports.com/sports/womens-volleyball/roster/olivia-nowakowski/4517,2015
-510,Northwood,,Jaclyn Kimmet,S,5-7,,,Sr,1,1,//www.gonorthwood.com/sports/wvball/2015-16/bios/kimmet_jaclyn_ahxr,2015
-510,Northwood,,Kiana Martinez,L,5-7,,,Fr,2,2,//www.gonorthwood.com/sports/wvball/2015-16/bios/martinez_kiana_ccex,2015
-510,Northwood,,Lisa Kisil,L,5-7,,,Sr,4,4,//www.gonorthwood.com/sports/wvball/2015-16/bios/kisil_lisa_zn5y,2015
-510,Northwood,,Allison Getty,OH,5-10,,,So,5,5,//www.gonorthwood.com/sports/wvball/2015-16/bios/getty_allison_rez4,2015
-510,Northwood,,Birta Bjornsdottir,L,5-9,,,Sr,6,6,//www.gonorthwood.com/sports/wvball/2015-16/bios/bjornsdottir_birta_hld0,2015
-510,Northwood,,Cassandra Marsh,MB,6-0,,,Sr,7,7,//www.gonorthwood.com/sports/wvball/2015-16/bios/marsh_cassandra_5ztz,2015
-510,Northwood,,Krysta Kramer,OH,5-11,,,Sr,8,8,//www.gonorthwood.com/sports/wvball/2015-16/bios/kramer_krysta_isga,2015
-510,Northwood,,Meghan Cleary,OH,5-11,,,Sr,9,9,//www.gonorthwood.com/sports/wvball/2015-16/bios/cleary_meghan_irot,2015
-510,Northwood,,Hailey Jones,S,5-8,,,So,10,10,//www.gonorthwood.com/sports/wvball/2015-16/bios/jones_hailey_yl7j,2015
-510,Northwood,,Brenna Murphy,OH,5-10,,,Fr,11,11,//www.gonorthwood.com/sports/wvball/2015-16/bios/murphy_brenna_uedl,2015
-510,Northwood,,Sydney Greulich,MB,6-2,,,So,12,12,//www.gonorthwood.com/sports/wvball/2015-16/bios/greulich_sydney_f24e,2015
-510,Northwood,,Chelsea Watson,OP,6-1,,,Sr,14,14,//www.gonorthwood.com/sports/wvball/2015-16/bios/watson_chelsea_u2ug,2015
-510,Northwood,,Marissa Pomaville,MB,6-2,,,Jr,15,15,//www.gonorthwood.com/sports/wvball/2015-16/bios/pomaville_marissa_e98k,2015
-510,Northwood,,Elizabeth Niemi,OP,6-0,,,So,17,17,//www.gonorthwood.com/sports/wvball/2015-16/bios/niemi_elizabeth_b9oh,2015
-510,Northwood,,Colleen Mayer,MB,6-3,,,Fr,18,18,//www.gonorthwood.com/sports/wvball/2015-16/bios/mayer_colleen_owxl,2015
-510,Northwood,,Taylor Pritchett,S,5-10,,,Sr,19,19,//www.gonorthwood.com/sports/wvball/2015-16/bios/pritchett_taylor_cdml,2015
 511,Norwich,6933,Andrea Moreno,Senior,"Newark, Del.",Howard School of Technology,,"5'4""",LS/DS,3,//www.norwichathletics.com/sports/womens-volleyball/roster/andrea-moreno/6933,2015
 511,Norwich,6938,Adrianna Watrobski,Sophomore,"Amsterdam, N.Y.",Galway,,"5'6""",OH/S,4,//www.norwichathletics.com/sports/womens-volleyball/roster/adrianna-watrobski/6938,2015
 511,Norwich,6936,Courtney Quinn,Freshman,"Taunton, Mass.",Bristol-Plymouth Regional,,"5'7""",OH/MH,5,//www.norwichathletics.com/sports/womens-volleyball/roster/courtney-quinn/6936,2015
@@ -13351,3 +13335,19 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 31,Arkansas,,Barbara Dapic,Junior,"Split, Croatia",OK Brda,,6-3,OH,18,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/barbara-dapic/,2015-16
 31,Arkansas,,Ana Sofia Jusino,Junior,"Toa Baja, Puerto Rico",Timber Creek HS,,6-2,MB,19,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/ana-sofia-jusino/,2015-16
 31,Arkansas,,Pilar Victoria,Junior,"Caguas, Puerto Rico",Texas,,5-11,OH,21,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/pilar-victoria/,2015-16
+510,Northwood,,Jaclyn Kimmet,Sr,"Maumee, Ohio",Springfield,,5-7,S,1,//www.gonorthwood.com/sports/wvball/2015-16/bios/kimmet_jaclyn_ahxr,2015-16
+510,Northwood,,Kiana Martinez,Fr,"Hubbard, Ohio",Hubbard,,5-7,L,2,//www.gonorthwood.com/sports/wvball/2015-16/bios/martinez_kiana_ccex,2015-16
+510,Northwood,,Lisa Kisil,Sr,"Rochester, Mich.",Stoney Creek,,5-7,L,4,//www.gonorthwood.com/sports/wvball/2015-16/bios/kisil_lisa_zn5y,2015-16
+510,Northwood,,Allison Getty,So,"Wayland, Mich.",Wayland,,5-10,OH,5,//www.gonorthwood.com/sports/wvball/2015-16/bios/getty_allison_rez4,2015-16
+510,Northwood,,Birta Bjornsdottir,Sr,"Kopavogur, Iceland",,,5-9,L,6,//www.gonorthwood.com/sports/wvball/2015-16/bios/bjornsdottir_birta_hld0,2015-16
+510,Northwood,,Cassandra Marsh,Sr,"Maumee, Ohio",Maumee,,6-0,MB,7,//www.gonorthwood.com/sports/wvball/2015-16/bios/marsh_cassandra_5ztz,2015-16
+510,Northwood,,Krysta Kramer,Sr,"Lansing, Mich.",Grand Ledge,,5-11,OH,8,//www.gonorthwood.com/sports/wvball/2015-16/bios/kramer_krysta_isga,2015-16
+510,Northwood,,Meghan Cleary,Sr,"Howell, Mich.",Farmington Hills Mercy,,5-11,OH,9,//www.gonorthwood.com/sports/wvball/2015-16/bios/cleary_meghan_irot,2015-16
+510,Northwood,,Hailey Jones,So,"Ada, Mich.",Forest Hills Northern,,5-8,S,10,//www.gonorthwood.com/sports/wvball/2015-16/bios/jones_hailey_yl7j,2015-16
+510,Northwood,,Brenna Murphy,Fr,"Fort Gratiot, Mich.",Port Huron Northern,,5-10,OH,11,//www.gonorthwood.com/sports/wvball/2015-16/bios/murphy_brenna_uedl,2015-16
+510,Northwood,,Sydney Greulich,So,"Kitchener, Ontario",St. Mary's,,6-2,MB,12,//www.gonorthwood.com/sports/wvball/2015-16/bios/greulich_sydney_f24e,2015-16
+510,Northwood,,Chelsea Watson,Sr,"Bowling Green, Ohio",Bowling Green HS (Niagara U.),,6-1,OP,14,//www.gonorthwood.com/sports/wvball/2015-16/bios/watson_chelsea_u2ug,2015-16
+510,Northwood,,Marissa Pomaville,Jr,"Livonia, Mich.",Churchill,,6-2,MB,15,//www.gonorthwood.com/sports/wvball/2015-16/bios/pomaville_marissa_e98k,2015-16
+510,Northwood,,Elizabeth Niemi,So,"Howell, Mich.",Howell,,6-0,OP,17,//www.gonorthwood.com/sports/wvball/2015-16/bios/niemi_elizabeth_b9oh,2015-16
+510,Northwood,,Colleen Mayer,Fr,"Troy, Mich.",Avondale,,6-3,MB,18,//www.gonorthwood.com/sports/wvball/2015-16/bios/mayer_colleen_owxl,2015-16
+510,Northwood,,Taylor Pritchett,Sr,"Apex, N.C.",Apex (Buffalo),,5-10,S,19,//www.gonorthwood.com/sports/wvball/2015-16/bios/pritchett_taylor_cdml,2015-16

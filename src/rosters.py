@@ -1176,11 +1176,11 @@ def fetch_and_parse_byu(team: Dict, season: str) -> List[Dict]:
     Array.from(document.querySelectorAll('div.roster-players__group table tbody tr'), el => {
      const id = '';
      const name = el.querySelector('a').innerText;
-     const year = el.querySelectorAll('td')[4].innerText;
-     const height = el.querySelectorAll('td')[3].innerText;
-     const position = el.querySelectorAll('td')[2].innerText;
-     const hometown = el.querySelectorAll('td')[5].innerText;
-     const high_school = el.querySelectorAll('td')[6].innerText;
+     const position = el.querySelectorAll('td')[1].innerText;
+     const height = el.querySelectorAll('td')[2].innerText;
+     const year = el.querySelectorAll('td')[3].innerText;
+     const hometown = el.querySelectorAll('td')[4].innerText;
+     const high_school = el.querySelectorAll('td')[5].innerText;
      const previous_school = '';
      const jersey = el.querySelectorAll('td')[0].innerText;
      const url =el.querySelector("a")['href'];
@@ -2257,7 +2257,47 @@ def _scrape_byu(team: Dict, season: str) -> List:
 # the table parsers), so a page matches at most one. Ordered most- to
 # least-specific to avoid a generic table parser claiming a card page. All are
 # normalized to (html, team, season) -> List[Player].
+def parse_byu_table(html: BeautifulSoup, team: Dict, season: str) -> List[Player]:
+    """Parse BYU's server-rendered roster-players table.
+
+    Each ``div.roster-players__group table tbody tr`` holds a fixed column
+    order: jersey | position | height | year | hometown | high school |
+    name (+ social-link icons). The name is read from the row's anchor, not
+    the name cell text (which trails social labels like 'Instagram Opens in
+    a new window'). The page is server-rendered, so a plain fetch suffices.
+    """
+    roster = []
+    for row in html.select('div.roster-players__group table tbody tr'):
+        cells = row.find_all('td')
+        if len(cells) < 6:
+            continue
+        anchor = row.find('a')
+        if anchor is None:
+            continue
+        name = anchor.get_text(' ', strip=True)
+        if not name:
+            continue
+        href = anchor.get('href', '')
+        roster.append(Player(
+            team_id=team['ncaa_id'],
+            team=team['team'],
+            player_id=None,
+            name=name,
+            year=cells[3].get_text(' ', strip=True),
+            hometown=cells[4].get_text(' ', strip=True),
+            high_school=cells[5].get_text(' ', strip=True),
+            previous_school=None,
+            height=cells[2].get_text(' ', strip=True),
+            position=cells[1].get_text(' ', strip=True),
+            jersey=cells[0].get_text(' ', strip=True),
+            url=href,
+            season=season,
+        ))
+    return roster
+
+
 RENDERED_PARSERS = [
+    ('byu-table', parse_byu_table),
     ('nuxt-data', parse_nuxt_payload),
     ('sidearm', lambda html, team, season: parse_roster(team, html, season)),
     ('s-person-card', parse_iowa_state_cards),

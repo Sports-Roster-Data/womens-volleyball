@@ -11693,23 +11693,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 507,Northwest Missouri State,8563,Natalie Laiolo,Freshman,"Tracy, Calif.",Tracy,,"5'9""",S,17,//www.bearcatsports.com/sports/womens-volleyball/roster/natalie-laiolo/8563,2021
 507,Northwest Missouri State,8564,Hadley Waldren,Freshman,"Hutchinson, Kan.",Buhler,,"6'0""",MH,19,//www.bearcatsports.com/sports/womens-volleyball/roster/hadley-waldren/8564,2021
 507,Northwest Missouri State,8552,Kelsey Havel,Junior,"Osage, Iowa",Osage,Iowa Western CC,"5'11""",OH,21,//www.bearcatsports.com/sports/womens-volleyball/roster/kelsey-havel/8552,2021
-510,Northwood,,Sophia Oakes,L/DS,5-2,,,Fr.,1,1,//www.gonorthwood.com/sports/wvball/2021-22/bios/oaks_sophia_qv0v,2021
-510,Northwood,,MacKelle Thompson,L,5-5,,,So.,2,2,//www.gonorthwood.com/sports/wvball/2021-22/bios/thompson_mackelle_oh9w,2021
-510,Northwood,,Macy Lintz,S,5-7,,,Sr.,5,5,//www.gonorthwood.com/sports/wvball/2021-22/bios/lintz_macy_vm7m,2021
-510,Northwood,,Maya Ferland,MB,5-11,,,Sr.,6,6,//www.gonorthwood.com/sports/wvball/2021-22/bios/ferland_maya_1u3y,2021
-510,Northwood,,Olivia Ott,OH,5-9,,,Fr.,8,8,//www.gonorthwood.com/sports/wvball/2021-22/bios/ott_olivia_jczz,2021
-510,Northwood,,Sydney Sweet,MB/RS,6-0,,,Jr.,9,9,//www.gonorthwood.com/sports/wvball/2021-22/bios/sweet_sydney_rz5t,2021
-510,Northwood,,Venera Kadriu,OH,5-8,,,Sr.,10,10,//www.gonorthwood.com/sports/wvball/2021-22/bios/kadriu_venera_sd2q,2021
-510,Northwood,,Lauren Bell,L,5-3,,,Jr.,11,11,//www.gonorthwood.com/sports/wvball/2021-22/bios/bell_lauren_5h2p,2021
-510,Northwood,,Al'Lesha Roberts,MB,5-11,,,Sr.,12,12,//www.gonorthwood.com/sports/wvball/2021-22/bios/roberts_al-lesha_mvpq,2021
-510,Northwood,,Zyla Kadriu,S,5-8,,,Jr.,13,13,//www.gonorthwood.com/sports/wvball/2021-22/bios/kadriu_zyla_pzw5,2021
-510,Northwood,,Maddy House,OH,5-8,,,So.,14,14,//www.gonorthwood.com/sports/wvball/2021-22/bios/house_maddy_qb0z,2021
-510,Northwood,,Macy Kellstrom,L/DS,5-4,,,Fr.,15,15,//www.gonorthwood.com/sports/wvball/2021-22/bios/kellstron_macy_puvu,2021
-510,Northwood,,Megan Acs,OH,5-10,,,Jr.,16,16,//www.gonorthwood.com/sports/wvball/2021-22/bios/acs_megan_u6u2,2021
-510,Northwood,,Grace Rekeweg,OH,5-11,,,Sr.,17,17,//www.gonorthwood.com/sports/wvball/2021-22/bios/rekeweg_grace_kwde,2021
-510,Northwood,,Sydney Hasenfratz,MB/RS,6-1,,,Fr.,18,18,//www.gonorthwood.com/sports/wvball/2021-22/bios/hasenfratz_sydney_aosb,2021
-510,Northwood,,Kiana Martens,OP,6-0,,,So.,19,19,//www.gonorthwood.com/sports/wvball/2021-22/bios/martens_kiana_ddli,2021
-510,Northwood,,Haley Jaster,MB,6-1,,,So.,23,23,//www.gonorthwood.com/sports/wvball/2021-22/bios/jaster_haley_ol4v,2021
 511,Norwich,8968,Sarah Farnum,Junior,"North Andover, Mass.",North Andover,,"5'7""",S,1,//www.norwichathletics.com/sports/womens-volleyball/roster/sarah-farnum/8968,2021
 511,Norwich,8967,Laura Farnum,Sophomore,"North Andover, Mass.",North Andover,,"5'6""",DS/L,2,//www.norwichathletics.com/sports/womens-volleyball/roster/laura-farnum/8967,2021
 511,Norwich,8970,Addison Schroeder,Senior,"Apple Valley, Calif.",Apple Valley,,"5'8""",MB,3,//www.norwichathletics.com/sports/womens-volleyball/roster/addison-schroeder/8970,2021
@@ -15272,3 +15255,20 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 31,Arkansas,,Natalie Perdue,RS Sophomore,"Dallas, Texas",Richardson HS,,6-0,OH,19,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/natalie-perdue/,2021-22
 31,Arkansas,,Gracie Ryan,Senior,"Orlando, Fla.",Bishop Moore HS,,5-9,S,21,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/gracie-ryan/,2021-22
 31,Arkansas,,Zoi Evans,Freshman,"Tampa, Fla.",Wiregrass HS,,6-4,MB,44,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/zoi-evans/,2021-22
+510,Northwood,,Sophia Oakes,Fr.,"Pinckney, Mich.",Pinckney,,5-2,L/DS,1,//www.gonorthwood.com/sports/wvball/2021-22/bios/oaks_sophia_qv0v,2021-22
+510,Northwood,,MacKelle Thompson,So.,"Ithaca, Mich.",Ithaca,,5-5,L,2,//www.gonorthwood.com/sports/wvball/2021-22/bios/thompson_mackelle_oh9w,2021-22
+510,Northwood,,Macy Lintz,Sr.,"Columbiaville, Mich.",Davison,,5-7,S,5,//www.gonorthwood.com/sports/wvball/2021-22/bios/lintz_macy_vm7m,2021-22
+510,Northwood,,Maya Ferland,Sr.,"Laingsburg, Mich.",Lansing CC,,5-11,MB,6,//www.gonorthwood.com/sports/wvball/2021-22/bios/ferland_maya_1u3y,2021-22
+510,Northwood,,Olivia Ott,Fr.,"Allegan, Mich.",Allegan,,5-9,OH,8,//www.gonorthwood.com/sports/wvball/2021-22/bios/ott_olivia_jczz,2021-22
+510,Northwood,,Sydney Sweet,Jr.,"Clio, Mich.",Clio,,6-0,MB/RS,9,//www.gonorthwood.com/sports/wvball/2021-22/bios/sweet_sydney_rz5t,2021-22
+510,Northwood,,Venera Kadriu,Sr.,"Gjilan, Kosovo",,,5-8,OH,10,//www.gonorthwood.com/sports/wvball/2021-22/bios/kadriu_venera_sd2q,2021-22
+510,Northwood,,Lauren Bell,Jr.,"Lake Orion, Mich.",Lake Orion,,5-3,L,11,//www.gonorthwood.com/sports/wvball/2021-22/bios/bell_lauren_5h2p,2021-22
+510,Northwood,,Al'Lesha Roberts,Sr.,"Eastpointe, Mich.",Detroit Cass Tech,,5-11,MB,12,//www.gonorthwood.com/sports/wvball/2021-22/bios/roberts_al-lesha_mvpq,2021-22
+510,Northwood,,Zyla Kadriu,Jr.,"Skenderaj, Kosovo",,,5-8,S,13,//www.gonorthwood.com/sports/wvball/2021-22/bios/kadriu_zyla_pzw5,2021-22
+510,Northwood,,Maddy House,So.,"Flushing, Mich.",Flushing,,5-8,OH,14,//www.gonorthwood.com/sports/wvball/2021-22/bios/house_maddy_qb0z,2021-22
+510,Northwood,,Macy Kellstrom,Fr.,"Oscoda, Mich.",Oscoda,,5-4,L/DS,15,//www.gonorthwood.com/sports/wvball/2021-22/bios/kellstron_macy_puvu,2021-22
+510,Northwood,,Megan Acs,Jr.,"Hartland, Mich.",Hartland,,5-10,OH,16,//www.gonorthwood.com/sports/wvball/2021-22/bios/acs_megan_u6u2,2021-22
+510,Northwood,,Grace Rekeweg,Sr.,"Midland, Mich.",Midland,,5-11,OH,17,//www.gonorthwood.com/sports/wvball/2021-22/bios/rekeweg_grace_kwde,2021-22
+510,Northwood,,Sydney Hasenfratz,Fr.,"Clarkston, Mich.",Clarkston,,6-1,MB/RS,18,//www.gonorthwood.com/sports/wvball/2021-22/bios/hasenfratz_sydney_aosb,2021-22
+510,Northwood,,Kiana Martens,So.,"St. Johns, Mich.",St. Johns,,6-0,OP,19,//www.gonorthwood.com/sports/wvball/2021-22/bios/martens_kiana_ddli,2021-22
+510,Northwood,,Haley Jaster,So.,"Midland, Mich.",Dow,,6-1,MB,23,//www.gonorthwood.com/sports/wvball/2021-22/bios/jaster_haley_ol4v,2021-22

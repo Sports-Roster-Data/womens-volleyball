@@ -10379,23 +10379,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 507,Northwest Missouri State,5112,Katelyn McKinnis,Freshman,"Harrisonville, Mo.",Harrisonville HS,,"5'8""",DS,17,//www.bearcatsports.com/sports/womens-volleyball/roster/katelyn-mckinnis/5112,2016
 507,Northwest Missouri State,5102,Sarah Dannettell,Junior,"Windsor, Colo.",Fossil Ridge HS,,"5'10""",S,19,//www.bearcatsports.com/sports/womens-volleyball/roster/sarah-dannettell/5102,2016
 507,Northwest Missouri State,5104,Olivia Nowakowski,Sophomore,"Kansas City, Mo.",Park Hill HS,,"5'4""",L/DS,23,//www.bearcatsports.com/sports/womens-volleyball/roster/olivia-nowakowski/5104,2016
-510,Northwood,,Loren Westlake,DS/L,5-5,,,Fr.,1,1,//www.gonorthwood.com/sports/wvball/2016-17/bios/westlake_loren_45wa,2016
-510,Northwood,,Sommer VandenBerge,DS/L,5-7,,,Fr.,2,2,//www.gonorthwood.com/sports/wvball/2016-17/bios/vandenberge_sommer_mvc7,2016
-510,Northwood,,Hailey Hartwick,DS/L,5-7,,,Fr.,4,4,//www.gonorthwood.com/sports/wvball/2016-17/bios/hartwick_hailey_zg54,2016
-510,Northwood,,Allison Getty,OH,5-10,,,Jr.,5,5,//www.gonorthwood.com/sports/wvball/2016-17/bios/getty_allison_pbdy,2016
-510,Northwood,,Meredith Collins,OH/DS,5-9,,,Fr.,6,6,//www.gonorthwood.com/sports/wvball/2016-17/bios/collins_meredith_bd5q,2016
-510,Northwood,,Clare Keating,OH/DS,5-8,,,Fr.,7,7,//www.gonorthwood.com/sports/wvball/2016-17/bios/keating_clare_9nsn,2016
-510,Northwood,,Carson Rutherford,OH/RS,6-0,,,RFr.,8,8,//www.gonorthwood.com/sports/wvball/2016-17/bios/rutherford_carson_br6l,2016
-510,Northwood,,Veronica George,OH/RS,5-9,,,Fr.,9,9,//www.gonorthwood.com/sports/wvball/2016-17/bios/george_veronica_5yj7,2016
-510,Northwood,,Hailey Jones,S,5-9,,,Jr.,10,10,//www.gonorthwood.com/sports/wvball/2016-17/bios/jones_hailey_rimd,2016
-510,Northwood,,Brenna Murphy,OH,5-10,,,So.,11,11,//www.gonorthwood.com/sports/wvball/2016-17/bios/murphy_brenna_jaze,2016
-510,Northwood,,Sydney Greulich,MB,6-2,,,Jr.,12,12,//www.gonorthwood.com/sports/wvball/2016-17/bios/greulich_sydney_mw85,2016
-510,Northwood,,Alexis Kiefer,S,5-7,,,Fr.,13,13,//www.gonorthwood.com/sports/wvball/2016-17/bios/kiefer_alexis_iocz,2016
-510,Northwood,,Hannah Siegel,MB/RS,6-0,,,Fr.,14,14,//www.gonorthwood.com/sports/wvball/2016-17/bios/siegel_hannah_7fqn,2016
-510,Northwood,,Erica Chappell,MB/RS,6-0,,,So.,16,16,//www.gonorthwood.com/sports/wvball/2016-17/bios/chappell_erica_8jqg,2016
-510,Northwood,,Elizabeth Niemi,OP,5-11,,,Jr.,17,17,//www.gonorthwood.com/sports/wvball/2016-17/bios/niemi_elizabeth_6bzh,2016
-510,Northwood,,Colleen Mayer,MB,6-3,,,So.,18,18,//www.gonorthwood.com/sports/wvball/2016-17/bios/mayer_colleen_ezp2,2016
-510,Northwood,,Karlie Wengorovius,MB/RS,5-11,,,Fr.,19,19,//www.gonorthwood.com/sports/wvball/2016-17/bios/wengorovius_karlie_2v08,2016
 511,Norwich,6950,Danielle Rena,Freshman,"Houston, Texas",Waltrip,,"4'11""",LB,1,//www.norwichathletics.com/sports/womens-volleyball/roster/danielle-rena/6950,2016
 511,Norwich,6952,Monika Schneider,Freshman,"Brookline, N.H.",Hollis-Brookline,,"5'6""",OH,2,//www.norwichathletics.com/sports/womens-volleyball/roster/monika-schneider/6952,2016
 511,Norwich,6949,Courtney Quinn,Sophomore,"Taunton, Mass.",Bristol-Plymouth Regional,,"5'7""",OH,3,//www.norwichathletics.com/sports/womens-volleyball/roster/courtney-quinn/6949,2016
@@ -13648,3 +13631,20 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 31,Arkansas,,Barbara Dapic,Senior,"Split, Croatia",OK Brda,,6-3,OH,18,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/barbara-dapic/,2016-17
 31,Arkansas,,Ana Sofia Jusino,Senior,"Toa Baja, Puerto Rico",Timber Creek HS,,6-2,MB,19,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/ana-sofia-jusino/,2016-17
 31,Arkansas,,Pilar Victoria,Senior,"Caguas, Puerto Rico",Texas,,5-11,OH,21,//www.arkansasrazorbacks.comhttps://arkansasrazorbacks.com/roster/pilar-victoria/,2016-17
+510,Northwood,,Loren Westlake,Fr.,"Olivet, Mich.",Olivet,,5-5,DS/L,1,//www.gonorthwood.com/sports/wvball/2016-17/bios/westlake_loren_45wa,2016-17
+510,Northwood,,Sommer VandenBerge,Fr.,"Ada, Mich.",Forest Hills Eastern,,5-7,DS/L,2,//www.gonorthwood.com/sports/wvball/2016-17/bios/vandenberge_sommer_mvc7,2016-17
+510,Northwood,,Hailey Hartwick,Fr.,"Oxford, Mich.",Oxford,,5-7,DS/L,4,//www.gonorthwood.com/sports/wvball/2016-17/bios/hartwick_hailey_zg54,2016-17
+510,Northwood,,Allison Getty,Jr.,"Wayland, Mich.",Wayland,,5-10,OH,5,//www.gonorthwood.com/sports/wvball/2016-17/bios/getty_allison_pbdy,2016-17
+510,Northwood,,Meredith Collins,Fr.,"Grand Rapids, Mich.",Forest Hills Central,,5-9,OH/DS,6,//www.gonorthwood.com/sports/wvball/2016-17/bios/collins_meredith_bd5q,2016-17
+510,Northwood,,Clare Keating,Fr.,"Troy, Mich.",Troy,,5-8,OH/DS,7,//www.gonorthwood.com/sports/wvball/2016-17/bios/keating_clare_9nsn,2016-17
+510,Northwood,,Carson Rutherford,RFr.,"Flushing, Mich.",Flushing (Minnesota-Crookston),,6-0,OH/RS,8,//www.gonorthwood.com/sports/wvball/2016-17/bios/rutherford_carson_br6l,2016-17
+510,Northwood,,Veronica George,Fr.,"Marysville, Ohio",Marysville,,5-9,OH/RS,9,//www.gonorthwood.com/sports/wvball/2016-17/bios/george_veronica_5yj7,2016-17
+510,Northwood,,Hailey Jones,Jr.,"Ada, Mich.",Forest Hills Northern,,5-9,S,10,//www.gonorthwood.com/sports/wvball/2016-17/bios/jones_hailey_rimd,2016-17
+510,Northwood,,Brenna Murphy,So.,"Fort Gratiot, Mich.",Port Huron Northern,,5-10,OH,11,//www.gonorthwood.com/sports/wvball/2016-17/bios/murphy_brenna_jaze,2016-17
+510,Northwood,,Sydney Greulich,Jr.,"Kitchener, Ontario",St. Mary's,,6-2,MB,12,//www.gonorthwood.com/sports/wvball/2016-17/bios/greulich_sydney_mw85,2016-17
+510,Northwood,,Alexis Kiefer,Fr.,"Clio, Mich.",Flushing (Oakland CC),,5-7,S,13,//www.gonorthwood.com/sports/wvball/2016-17/bios/kiefer_alexis_iocz,2016-17
+510,Northwood,,Hannah Siegel,Fr.,"Goshen, Ind.",Fairfield,,6-0,MB/RS,14,//www.gonorthwood.com/sports/wvball/2016-17/bios/siegel_hannah_7fqn,2016-17
+510,Northwood,,Erica Chappell,So.,"Monroe, Mich.",Monroe (Alderson Broaddus),,6-0,MB/RS,16,//www.gonorthwood.com/sports/wvball/2016-17/bios/chappell_erica_8jqg,2016-17
+510,Northwood,,Elizabeth Niemi,Jr.,"Howell, Mich.",Howell,,5-11,OP,17,//www.gonorthwood.com/sports/wvball/2016-17/bios/niemi_elizabeth_6bzh,2016-17
+510,Northwood,,Colleen Mayer,So.,"Troy, Mich.",Avondale,,6-3,MB,18,//www.gonorthwood.com/sports/wvball/2016-17/bios/mayer_colleen_ezp2,2016-17
+510,Northwood,,Karlie Wengorovius,Fr.,"Farmington, Mich.",Farmington,,5-11,MB/RS,19,//www.gonorthwood.com/sports/wvball/2016-17/bios/wengorovius_karlie_2v08,2016-17

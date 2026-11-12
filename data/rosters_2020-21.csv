@@ -10330,21 +10330,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 507,Northwest Missouri State,7937,Kristen Ford,Freshman,"Gladstone, Mo.",St. Theresa's Academy,,"5'4""",L/DS,15,//www.bearcatsports.com/sports/womens-volleyball/roster/kristen-ford/7937,2020
 507,Northwest Missouri State,7927,Bethany Elkins,Junior,"Belton, Missouri",Belton,,"5'11""",Middle,18,//www.bearcatsports.com/sports/womens-volleyball/roster/bethany-elkins/7927,2020
 507,Northwest Missouri State,7940,Kelsey Havel,Junior,"Osage, Iowa",Osage,Iowa Western CC,"5'11""",OH,21,//www.bearcatsports.com/sports/womens-volleyball/roster/kelsey-havel/7940,2020
-510,Northwood,,MacKelle Thompson,L,5-5,,,Fr.,2,2,//www.gonorthwood.com/sports/wvball/2020-21/bios/thompson_mackelle_sh0n,2020
-510,Northwood,,Macy Lintz,S,5-7,,,Jr.,5,5,//www.gonorthwood.com/sports/wvball/2020-21/bios/lintz_macy_hk6s,2020
-510,Northwood,,Maya Ferland,MB,5-11,,,Jr.,6,6,//www.gonorthwood.com/sports/wvball/2020-21/bios/ferland_maya_064o,2020
-510,Northwood,,Sydney Sweet,MB/RS,6-0,,,So.,9,9,//www.gonorthwood.com/sports/wvball/2020-21/bios/sweet_sydney_8gvu,2020
-510,Northwood,,Venera Kadriu,OH,5-8,,,Jr.,10,10,//www.gonorthwood.com/sports/wvball/2020-21/bios/kadriu_venera_a82d,2020
-510,Northwood,,Lauren Bell,L,5-3,,,So.,11,11,//www.gonorthwood.com/sports/wvball/2020-21/bios/bell_lauren_p5b1,2020
-510,Northwood,,Al'Lesha Roberts,MB,5-11,,,Jr.,12,12,//www.gonorthwood.com/sports/wvball/2020-21/bios/roberts_al-lesha_hfqx,2020
-510,Northwood,,Zyla Kadriu,S,5-8,,,So.,13,13,//www.gonorthwood.com/sports/wvball/2020-21/bios/kadriu_zyla_znxk,2020
-510,Northwood,,Maddy House,OH,5-8,,,Fr.,14,14,//www.gonorthwood.com/sports/wvball/2020-21/bios/house_maddy_82g5,2020
-510,Northwood,,Mackenzie Kepler,OH,5-11,,,Sr.,15,15,//www.gonorthwood.com/sports/wvball/2020-21/bios/kepler_mackenzie_5ul1,2020
-510,Northwood,,Megan Acs,OH,5-10,,,So.,16,16,//www.gonorthwood.com/sports/wvball/2020-21/bios/acs_megan_ahsa,2020
-510,Northwood,,Grace Rekeweg,OH,5-11,,,Jr.,17,17,//www.gonorthwood.com/sports/wvball/2020-21/bios/rekeweg_grace_3731,2020
-510,Northwood,,Kiana Martens,OP,6-0,,,Fr.,19,19,//www.gonorthwood.com/sports/wvball/2020-21/bios/martens_kiana_w44z,2020
-510,Northwood,,Haley Jaster,MB,6-1,,,Fr.,23,23,//www.gonorthwood.com/sports/wvball/2020-21/bios/jaster_haley_q58o,2020
-510,Northwood,,Mary Gallagher,MB,6-1,,,Sr.,24,24,//www.gonorthwood.com/sports/wvball/2020-21/bios/gallagher_mary_e2yf,2020
 511,Norwich,7001,Sarah Farnum,Sophomore,"North Andover, Mass.",North Andover,,"5'7""",S,,//www.norwichathletics.com/sports/womens-volleyball/roster/sarah-farnum/7001,2020
 511,Norwich,7000,Laura Farnum,Freshman,"North Andover, Mass.",North Andover,,"5'6""",DS/L,,//www.norwichathletics.com/sports/womens-volleyball/roster/laura-farnum/7000,2020
 511,Norwich,7003,Addison Schroeder,Junior,"Apple Valley, Calif.",Apple Valley,,"5'8""",MB,,//www.norwichathletics.com/sports/womens-volleyball/roster/addison-schroeder/7003,2020
@@ -13558,3 +13543,18 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 156,Colorado St.,5959,Helena Perez,Freshman,"Martinez, Calif.",Carondelet,,"5'6""",Defensive,27,//www.csurams.com/sports/womens-volleyball/roster/helena-perez/5959,2020-21
 156,Colorado St.,5960,Karina Leber,Freshman,"Trevor, Wis.",Wilmot Union,,"6'3""",Middle,42,//www.csurams.com/sports/womens-volleyball/roster/karina-leber/5960,2020-21
 156,Colorado St.,5961,Ruby Kayser,Freshman,"Canby, Ore.",Canby,,"5'8""",Defensive,49,//www.csurams.com/sports/womens-volleyball/roster/ruby-kayser/5961,2020-21
+510,Northwood,,MacKelle Thompson,Fr.,"Ithaca, Mich.",Ithaca,,5-5,L,2,//www.gonorthwood.com/sports/wvball/2020-21/bios/thompson_mackelle_sh0n,2020-21
+510,Northwood,,Macy Lintz,Jr.,"Columbiaville, Mich.",Davison,,5-7,S,5,//www.gonorthwood.com/sports/wvball/2020-21/bios/lintz_macy_hk6s,2020-21
+510,Northwood,,Maya Ferland,Jr.,"Laingsburg, Mich.",Lansing CC,,5-11,MB,6,//www.gonorthwood.com/sports/wvball/2020-21/bios/ferland_maya_064o,2020-21
+510,Northwood,,Sydney Sweet,So.,"Clio, Mich.",Clio,,6-0,MB/RS,9,//www.gonorthwood.com/sports/wvball/2020-21/bios/sweet_sydney_8gvu,2020-21
+510,Northwood,,Venera Kadriu,Jr.,"Gjilan, Kosovo",,,5-8,OH,10,//www.gonorthwood.com/sports/wvball/2020-21/bios/kadriu_venera_a82d,2020-21
+510,Northwood,,Lauren Bell,So.,"Lake Orion, Mich.",Lake Orion,,5-3,L,11,//www.gonorthwood.com/sports/wvball/2020-21/bios/bell_lauren_p5b1,2020-21
+510,Northwood,,Al'Lesha Roberts,Jr.,"Eastpointe, Mich.",Detroit Cass Tech,,5-11,MB,12,//www.gonorthwood.com/sports/wvball/2020-21/bios/roberts_al-lesha_hfqx,2020-21
+510,Northwood,,Zyla Kadriu,So.,"Skenderaj, Kosovo",,,5-8,S,13,//www.gonorthwood.com/sports/wvball/2020-21/bios/kadriu_zyla_znxk,2020-21
+510,Northwood,,Maddy House,Fr.,"Flushing, Mich.",Flushing,,5-8,OH,14,//www.gonorthwood.com/sports/wvball/2020-21/bios/house_maddy_82g5,2020-21
+510,Northwood,,Mackenzie Kepler,Sr.,"Macomb, Mich.",Dakota,,5-11,OH,15,//www.gonorthwood.com/sports/wvball/2020-21/bios/kepler_mackenzie_5ul1,2020-21
+510,Northwood,,Megan Acs,So.,"Hartland, Mich.",Hartland,,5-10,OH,16,//www.gonorthwood.com/sports/wvball/2020-21/bios/acs_megan_ahsa,2020-21
+510,Northwood,,Grace Rekeweg,Jr.,"Midland, Mich.",Midland,,5-11,OH,17,//www.gonorthwood.com/sports/wvball/2020-21/bios/rekeweg_grace_3731,2020-21
+510,Northwood,,Kiana Martens,Fr.,"St. Johns, Mich.",St. Johns,,6-0,OP,19,//www.gonorthwood.com/sports/wvball/2020-21/bios/martens_kiana_w44z,2020-21
+510,Northwood,,Haley Jaster,Fr.,"Midland, Mich.",Dow,,6-1,MB,23,//www.gonorthwood.com/sports/wvball/2020-21/bios/jaster_haley_q58o,2020-21
+510,Northwood,,Mary Gallagher,Sr.,"Dexter, Mich.",Dexter,,6-1,MB,24,//www.gonorthwood.com/sports/wvball/2020-21/bios/gallagher_mary_e2yf,2020-21
