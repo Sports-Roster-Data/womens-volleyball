@@ -1255,11 +1255,23 @@ def parse_iowa_state_cards(html: BeautifulSoup, team: Dict, season: str) -> List
                     bio[label] = text[len(label):].strip()
 
         name_el = card.select_one('.s-person-details__personal-single-line')
+        name = name_el.get_text(strip=True) if name_el else ''
+        # Some templates (e.g. Colorado St. 2023-24) drop the name element
+        # and carry it only on the anchors' aria-labels ('Malaya Jones full
+        # bio'); without this fallback every card parses with a blank name.
+        if not name:
+            for a in card.find_all('a'):
+                m = re.match(r'^(.+?)\s+full bio$', (a.get('aria-label') or '').strip())
+                if m:
+                    name = ' '.join(m.group(1).split())
+                    break
+        if not name:
+            continue
         roster.append(Player(
             team_id=team['ncaa_id'],
             team=team['team'],
             player_id=None,
-            name=name_el.get_text(strip=True) if name_el else '',
+            name=name,
             year=bio.get('Academic Year', ''),
             hometown=strip_label(card.select_one('.s-person-card__content__person__location-item'), 'Hometown'),
             high_school=strip_label(card.select_one('.s-person-card__content__person__high-school-item'), 'Last School'),

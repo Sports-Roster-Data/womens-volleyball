@@ -302,6 +302,30 @@ def test_parse_roster_wbkb_responsive_duplicate_jersey_cell():
     assert all(p.name and not p.name.isdigit() for p in roster)
 
 
+def test_parse_iowa_state_cards_aria_label_name_fallback():
+    # Some templates (Colorado St. 2023-24 as archived) drop the name
+    # element entirely and carry the name only on the anchors' aria-labels
+    # ('Malaya Jones full bio'). Without the fallback every card parses
+    # with a blank name.
+    team = {"ncaa_id": 156, "team": "Colorado St.", "url": "https://csurams.com/sports/womens-volleyball"}
+    html = BeautifulSoup("""
+    <div class="s-person-card__content">
+      <a aria-label="Malaya Jones full bio" href="/roster/malaya-jones/12345">
+        <span class="s-stamp__text">1</span>
+      </a>
+      <div class="s-person-details__bio-stats-item">Position MB</div>
+      <div class="s-person-details__bio-stats-item">Academic Year R-Jr.</div>
+      <div class="s-person-details__bio-stats-item">Hgt. 6' 0''</div>
+    </div>
+    """, features="html.parser")
+    roster = rosters.parse_iowa_state_cards(html, team, "2023-24")
+    assert len(roster) == 1
+    assert roster[0].name == "Malaya Jones"
+    assert roster[0].year == "R-Jr."
+    assert roster[0].position == "MB"
+    assert roster[0].jersey == "1"
+
+
 def test_parse_roster_list_item():
     # Nuxt roster-list-item layout: Iowa, Notre Dame, Missouri, Northwestern, …
     team = {"ncaa_id": 312, "team": "Iowa", "url": "https://hawkeyesports.com/sports/wvball"}
