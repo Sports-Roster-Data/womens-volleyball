@@ -97,9 +97,13 @@ def series_violations(tid, series_key, display, obs):
         if rank >= max_so_far:
             max_so_far, prev_high = rank, (idx, rank, redshirt, season)
     fr = [o for o in obs if o[1] == 1]
-    if len(fr) >= 2 and fr[-1][0] - fr[0][0] >= 3:
-        add("impossible", f"{fr[0][3]}=Freshman -> {fr[-1][3]}=Freshman",
-            f"two freshman seasons {fr[-1][0] - fr[0][0]} seasons apart")
+    # A second (or third) `Freshman` season is legitimate when it reflects a
+    # redshirt listing (redshirt=TRUE carries the R-Fr. classification), so
+    # only unredeemed repeats are impossible.
+    fr_hard = [o for o in fr if o[2] != "TRUE"]
+    if len(fr_hard) >= 2 and fr_hard[-1][0] - fr_hard[0][0] >= 3:
+        add("impossible", f"{fr_hard[0][3]}=Freshman -> {fr_hard[-1][3]}=Freshman",
+            f"two non-redshirt freshman seasons {fr_hard[-1][0] - fr_hard[0][0]} seasons apart")
     for rank in (2, 3, 4):
         same = [o for o in obs if o[1] == rank]
         if len(same) >= 2 and same[-1][0] - same[0][0] >= 5:

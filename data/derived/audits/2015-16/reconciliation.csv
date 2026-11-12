@@ -1,4 +1,5 @@
 "classification","rows","share_of_raw"
 "quarantined",11,8.238466147393649e-4
 "removed_reviewed_duplicate",2,1.4979029358897544e-4
-"accepted",13339,0.9990263630916717
+"excluded_reviewed_stale",32,0.002396644697423607
+"accepted",13307,0.9966297183942481

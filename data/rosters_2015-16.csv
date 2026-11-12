@@ -1773,26 +1773,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 48,Charleston Southern,,Krista Kuglin,Fr.,"Minnetonka, Minn.",Minnetonka,,5' 11'',OH,12,/sports/womens-volleyball/roster/krista-kuglin/2128,2015
 48,Charleston Southern,,Katrina Houston,Sr.,"Stafford, Va.",North Stafford,,5' 8'',OH,13,/sports/womens-volleyball/roster/katrina-houston/2125,2015
 48,Charleston Southern,,Cassidy Greer,Sr.,"Mobile, Ala.",Montgomery,,5' 10'',S,14,/sports/womens-volleyball/roster/cassidy-greer/2123,2015
-172,Dartmouth,,Julia Lau,Jr.,"Honolulu, Hawaii",Punahou,,5' 3'',LIB,1,/sports/womens-volleyball/roster/julia-lau/9853,2015
-172,Dartmouth,,Catherine Shepherd,Fy.,"Los Angeles, Calif.",Marymount,,6' 1'',MB/RS,2,/sports/womens-volleyball/roster/catherine-shepherd/9861,2015
-172,Dartmouth,,Sara Lindquist,So.,"Mercer Island, Wash.",Mercer Island,,6' 2'',OH,3,/sports/womens-volleyball/roster/sara-lindquist/10413,2015
-172,Dartmouth,,Emily Patrick,Jr.,"Austin, Texas",St. Stephens,,6' 0'',OH,4,/sports/womens-volleyball/roster/emily-patrick/9859,2015
-172,Dartmouth,,Danielle Glinka,Jr.,"Orlando, Fla.",Bishop Moore,,5' 11'',OH,5,/sports/womens-volleyball/roster/danielle-glinka/9850,2015
-172,Dartmouth,,Lida Vandermeer,Fy.,"Hillsborough, Calif.",Menlo School,,6' 0'',OH,6,/sports/womens-volleyball/roster/lida-vandermeer/9221,2015
-172,Dartmouth,,Allison Brady,Sr.,"Phoenix, Ariz.",Xavier College Prep,,6' 0'',OH/MB,7,/sports/womens-volleyball/roster/allison-brady/9187,2015
-172,Dartmouth,,Kayden Cook,Sr.,"Southlake, Texas",Carroll HS,,5' 9'',S,9,/sports/womens-volleyball/roster/kayden-cook/9191,2015
-172,Dartmouth,,Stacey Benton,Jr.,"Phoenix, Ariz.",Snow Canyon/Arcadia,,5' 7'',S,10,/sports/womens-volleyball/roster/stacey-benton/9844,2015
-172,Dartmouth,,Lottie MacAulay,Jr.,"Mercer Island, Wash.",Mercer Island,,6' 1'',MB,11,/sports/womens-volleyball/roster/lottie-macaulay/9858,2015
-172,Dartmouth,,Zoe Leonard,Fy.,"Hilo, Hawaii",Kamehameha Schools,,5' 10'',LIB,12,/sports/womens-volleyball/roster/zoe-leonard/15117,2015
-172,Dartmouth,,Emily Astarita,Jr.,"Setauket, N.Y.",Ward Melville,,5' 11'',OPP,13,/sports/womens-volleyball/roster/emily-astarita/9843,2015
-172,Dartmouth,,Molly Kornfeind,Jr.,"Pacific Palisades, Calif.",Palisades Charter,,6' 0'',OH,14,/sports/womens-volleyball/roster/molly-kornfeind/9851,2015
-172,Dartmouth,,Jordan Cornwell,Fy.,"Clements, Calif.",Saint Mary's,,5' 8'',LIB,15,/sports/womens-volleyball/roster/jordan-cornwell/9847,2015
-172,Dartmouth,,Sierra Lyle,Fy.,"Encinitas, Calif.",La Costa Canyon,,6' 1'',RS,16,/sports/womens-volleyball/roster/sierra-lyle/9857,2015
-172,Dartmouth,,Kaira Lujan,Sr.,"Santa Fe, N.M.",Albuquerque Academy,,6' 4'',MB,18,/sports/womens-volleyball/roster/kaira-lujan/9203,2015
-172,Dartmouth,,Samantha Bozoian,Fy.,"Chino Hills, Calif.",Ruben S. Ayala,,6' 0'',OPP,21,/sports/womens-volleyball/roster/samantha-bozoian/15113,2015
-172,Dartmouth,,Paige Caridi,Sr.,"Austin, Texas",Westlake HS,,6' 0'',OH,22,/sports/womens-volleyball/roster/paige-caridi/9189,2015
-172,Dartmouth,,Marisol Tracy,So.,"Pleasanton, Calif.",Amador Valley,,6' 2'',OH,23,/sports/womens-volleyball/roster/marisol-tracy/9213,2015
-172,Dartmouth,,Morgan Dressel,So.,"Woodside, Calif.",Menlo School,,6' 1'',MB,24,/sports/womens-volleyball/roster/morgan-dressel/10409,2015
 173,Davidson,,Kylie Bishopp,So.,"Tumwater, Wash.",,,5' 9'',DS,1,//davidsonwildcats.com/sports/womens-volleyball/roster/kylie-bishopp/5617,2015
 173,Davidson,,Emily Franklin,Jr.,"Charlotte, N.C.",,,6' 1'',MH,2,//davidsonwildcats.com/sports/womens-volleyball/roster/emily-franklin/4903,2015
 173,Davidson,,Sam Thompson,Fr.,"McKinney, Texas",,,5' 7'',OH/DS,3,//davidsonwildcats.com/sports/womens-volleyball/roster/sam-thompson/6264,2015
@@ -12046,20 +12026,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 770,Western Connecticut St.,3077,Shayllah Dobson,Freshman,"Derby, Conn.",Ansonia,,"5'8""",OH,15,//www.westconnathletics.com/sports/womens-volleyball/roster/shayllah-dobson/3077,2015
 770,Western Connecticut St.,3080,Jacqueline Kanuk,Junior,"New Fairfield, Conn.",New Fairfield,,"5'9""",OH,21,//www.westconnathletics.com/sports/womens-volleyball/roster/jacqueline-kanuk/3080,2015
 770,Western Connecticut St.,3075,Cady Cordes,Junior,"Fallon, Nev.",Churchill County,,"5'10""",OH,22,//www.westconnathletics.com/sports/womens-volleyball/roster/cady-cordes/3075,2015
-772,Western Ky.,,Jessica Lucas,So.,"Seymour, Ind.",Seymour,,6' 0'',S,1,/sports/womens-volleyball/roster/jessica-lucas/1139,2015
-772,Western Ky.,,Rachel Anderson,Fr.,"Sturgis, Mich.",Sturgis,,6' 1'',MH,4,/sports/womens-volleyball/roster/rachel-anderson/1636,2015
-772,Western Ky.,,Harlie Bryant,Fr.,"Beaver Dam, Ky.",,,0' 0'',,6,/sports/womens-volleyball/roster/harlie-bryant/6556,2015
-772,Western Ky.,,Alyssa Cavanaugh,So.,"Louisville, Ky.",Assumption,,5' 10'',OH,7,/sports/womens-volleyball/roster/alyssa-cavanaugh/1133,2015
-772,Western Ky.,,Mary Martin,Fr.,"Lexington, Ky.",Dunbar,,5' 11'',S,8,/sports/womens-volleyball/roster/mary-martin/1643,2015
-772,Western Ky.,,Haley Bodway,Sr.,"Bloomington, Minn.",Thomas Jefferson HS,,6' 0'',OH,10,/sports/womens-volleyball/roster/haley-bodway/913,2015
-772,Western Ky.,,Amara Listenbee,R-Fr.,"Beloit, Wis.",Beloit Memorial,,6' 0'',MH,11,/sports/womens-volleyball/roster/amara-listenbee/1138,2015
-772,Western Ky.,,Georgia O'Connell,Jr.,"Louisville, Ky.",Male HS,,5' 2'',DS,12,/sports/womens-volleyball/roster/georgia-oconnell/910,2015
-772,Western Ky.,,Noelle Langenkamp,Sr.,"Cincinnati, Ohio",Ursuline Academy,,6' 2'',MH,13,/sports/womens-volleyball/roster/noelle-langenkamp/920,2015
-772,Western Ky.,,Rachel Engle,Sr.,"Floyds Knobs, Ind.",Floyd Central HS,,5' 10'',OH,15,/sports/womens-volleyball/roster/rachel-engle/917,2015
-772,Western Ky.,,Sydney Engle,So.,"Floyds Knobs, Ind.",Floyd Central HS,,6' 0'',OH/RS,16,/sports/womens-volleyball/roster/sydney-engle/1136,2015
-772,Western Ky.,,Kaelin Grimes,Jr.,"Louisville, Ky.",Assumption HS,,5' 8'',DS,17,/sports/womens-volleyball/roster/kaelin-grimes/905,2015
-772,Western Ky.,,Taylor Dellinger,Fr.,"Clarkston, Mich.",Clarkston,,6' 0'',OH,21,/sports/womens-volleyball/roster/taylor-dellinger/1135,2015
-772,Western Ky.,,Jackie Scott,So.,"Wildwood, Mo.",Lafayette HS,,5' 11'',OH/DS,24,/sports/womens-volleyball/roster/jackie-scott/925,2015
 773,McDaniel,6600,Colette Kellen,Senior,"Derwood, Md.",Covenant Life School,,"5'4""",S,1,//www.mcdanielathletics.com/sports/womens-volleyball/roster/colette-kellen/6600,2015
 773,McDaniel,6602,Kloe Martin,Senior,"Littleton, Colo.",Heritage,,"5'9""",OH,2,//www.mcdanielathletics.com/sports/womens-volleyball/roster/kloe-martin/6602,2015
 773,McDaniel,6598,Abby Graham,First Year,"Mt. Airy, Md.",Linganore,,"5'8""",OH,4,//www.mcdanielathletics.com/sports/womens-volleyball/roster/abby-graham/6598,2015
@@ -13351,3 +13317,37 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 158,Columbia,,Kesi Neblett,Jr.,"Russellville, Ky.",Russellville,,6' 0'',MH,18,/sports/womens-volleyball/roster/kesi-neblett/7164,2015-16
 158,Columbia,,Madeleine Casey,Gr.,"San Diego, Calif.",Francis Parker,,5' 11'',OH,19,/sports/womens-volleyball/roster/madeleine-casey/7949,2015-16
 158,Columbia,,Anja Malesevic,So.,"Belgrade, Serbia",Benjamin N. Cardozo (N.Y.),,6' 2'',OH,22,/sports/womens-volleyball/roster/anja-malesevic/7635,2015-16
+172,Dartmouth,,Julia Lau,Jr.,"Honolulu, Hawaii",Punahou,,5' 3'',LIB,1,/sports/womens-volleyball/roster/julia-lau/9853,2015-16
+172,Dartmouth,,Catherine Shepherd,Fy.,"Los Angeles, Calif.",Marymount,,6' 1'',MB/RS,2,/sports/womens-volleyball/roster/catherine-shepherd/9861,2015-16
+172,Dartmouth,,Sara Lindquist,So.,"Mercer Island, Wash.",Mercer Island,,6' 2'',OH,3,/sports/womens-volleyball/roster/sara-lindquist/10413,2015-16
+172,Dartmouth,,Emily Patrick,Jr.,"Austin, Texas",St. Stephens,,6' 0'',OH,4,/sports/womens-volleyball/roster/emily-patrick/9859,2015-16
+172,Dartmouth,,Danielle Glinka,Jr.,"Orlando, Fla.",Bishop Moore,,5' 11'',OH,5,/sports/womens-volleyball/roster/danielle-glinka/9850,2015-16
+172,Dartmouth,,Lida Vandermeer,Fy.,"Hillsborough, Calif.",Menlo School,,6' 0'',OH,6,/sports/womens-volleyball/roster/lida-vandermeer/9221,2015-16
+172,Dartmouth,,Allison Brady,Sr.,"Phoenix, Ariz.",Xavier College Prep,,6' 0'',OH/MB,7,/sports/womens-volleyball/roster/allison-brady/9187,2015-16
+172,Dartmouth,,Kayden Cook,Sr.,"Southlake, Texas",Carroll HS,,5' 9'',S,9,/sports/womens-volleyball/roster/kayden-cook/9191,2015-16
+172,Dartmouth,,Stacey Benton,Jr.,"Phoenix, Ariz.",Snow Canyon/Arcadia,,5' 7'',S,10,/sports/womens-volleyball/roster/stacey-benton/9844,2015-16
+172,Dartmouth,,Lottie MacAulay,Jr.,"Mercer Island, Wash.",Mercer Island,,6' 1'',MB,11,/sports/womens-volleyball/roster/lottie-macaulay/9858,2015-16
+172,Dartmouth,,Zoe Leonard,Fy.,"Hilo, Hawaii",Kamehameha Schools,,5' 10'',LIB,12,/sports/womens-volleyball/roster/zoe-leonard/15117,2015-16
+172,Dartmouth,,Emily Astarita,Jr.,"Setauket, N.Y.",Ward Melville,,5' 11'',OPP,13,/sports/womens-volleyball/roster/emily-astarita/9843,2015-16
+172,Dartmouth,,Molly Kornfeind,Jr.,"Pacific Palisades, Calif.",Palisades Charter,,6' 0'',OH,14,/sports/womens-volleyball/roster/molly-kornfeind/9851,2015-16
+172,Dartmouth,,Jordan Cornwell,Fy.,"Clements, Calif.",Saint Mary's,,5' 8'',LIB,15,/sports/womens-volleyball/roster/jordan-cornwell/9847,2015-16
+172,Dartmouth,,Sierra Lyle,Fy.,"Encinitas, Calif.",La Costa Canyon,,6' 1'',RS,16,/sports/womens-volleyball/roster/sierra-lyle/9857,2015-16
+172,Dartmouth,,Kaira Lujan,Sr.,"Santa Fe, N.M.",Albuquerque Academy,,6' 4'',MB,18,/sports/womens-volleyball/roster/kaira-lujan/9203,2015-16
+172,Dartmouth,,Samantha Bozoian,Fy.,"Chino Hills, Calif.",Ruben S. Ayala,,6' 0'',OPP,21,/sports/womens-volleyball/roster/samantha-bozoian/15113,2015-16
+172,Dartmouth,,Paige Caridi,Sr.,"Austin, Texas",Westlake HS,,6' 0'',OH,22,/sports/womens-volleyball/roster/paige-caridi/9189,2015-16
+172,Dartmouth,,Marisol Tracy,So.,"Pleasanton, Calif.",Amador Valley,,6' 2'',OH,23,/sports/womens-volleyball/roster/marisol-tracy/9213,2015-16
+172,Dartmouth,,Morgan Dressel,So.,"Woodside, Calif.",Menlo School,,6' 1'',MB,24,/sports/womens-volleyball/roster/morgan-dressel/10409,2015-16
+772,Western Ky.,,Jessica Lucas,So.,"Seymour, Ind.",Seymour,,6' 0'',S,1,/sports/womens-volleyball/roster/jessica-lucas/1139,2015-16
+772,Western Ky.,,Rachel Anderson,Fr.,"Sturgis, Mich.",Sturgis,,6' 1'',MH,4,/sports/womens-volleyball/roster/rachel-anderson/1636,2015-16
+772,Western Ky.,,Harlie Bryant,Fr.,"Beaver Dam, Ky.",,,0' 0'',,6,/sports/womens-volleyball/roster/harlie-bryant/6556,2015-16
+772,Western Ky.,,Alyssa Cavanaugh,So.,"Louisville, Ky.",Assumption,,5' 10'',OH,7,/sports/womens-volleyball/roster/alyssa-cavanaugh/1133,2015-16
+772,Western Ky.,,Mary Martin,Fr.,"Lexington, Ky.",Dunbar,,5' 11'',S,8,/sports/womens-volleyball/roster/mary-martin/1643,2015-16
+772,Western Ky.,,Haley Bodway,Sr.,"Bloomington, Minn.",Thomas Jefferson HS,,6' 0'',OH,10,/sports/womens-volleyball/roster/haley-bodway/913,2015-16
+772,Western Ky.,,Amara Listenbee,R-Fr.,"Beloit, Wis.",Beloit Memorial,,6' 0'',MH,11,/sports/womens-volleyball/roster/amara-listenbee/1138,2015-16
+772,Western Ky.,,Georgia O'Connell,Jr.,"Louisville, Ky.",Male HS,,5' 2'',DS,12,/sports/womens-volleyball/roster/georgia-oconnell/910,2015-16
+772,Western Ky.,,Noelle Langenkamp,Sr.,"Cincinnati, Ohio",Ursuline Academy,,6' 2'',MH,13,/sports/womens-volleyball/roster/noelle-langenkamp/920,2015-16
+772,Western Ky.,,Rachel Engle,Sr.,"Floyds Knobs, Ind.",Floyd Central HS,,5' 10'',OH,15,/sports/womens-volleyball/roster/rachel-engle/917,2015-16
+772,Western Ky.,,Sydney Engle,So.,"Floyds Knobs, Ind.",Floyd Central HS,,6' 0'',OH/RS,16,/sports/womens-volleyball/roster/sydney-engle/1136,2015-16
+772,Western Ky.,,Kaelin Grimes,Jr.,"Louisville, Ky.",Assumption HS,,5' 8'',DS,17,/sports/womens-volleyball/roster/kaelin-grimes/905,2015-16
+772,Western Ky.,,Taylor Dellinger,Fr.,"Clarkston, Mich.",Clarkston,,6' 0'',OH,21,/sports/womens-volleyball/roster/taylor-dellinger/1135,2015-16
+772,Western Ky.,,Jackie Scott,So.,"Wildwood, Mo.",Lafayette HS,,5' 11'',OH/DS,24,/sports/womens-volleyball/roster/jackie-scott/925,2015-16
