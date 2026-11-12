@@ -1,163 +1,197 @@
-ncaa_id,team,seasons,players
-5,Akron,"2022-23, 2023-24, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26",Tyson Norton; Tyson Norton; Tyson Norton; Ieasia Walker; Jenna Sullivan; Regan Nickol; Tyson Norton
-9,UAB,2025-26,Sara Sykes
-12,Alas. Fairbanks,"2025-26, 2025-26",Alyvia Davis; Ruby Tansy
-35,Ashland,"2025-26, 2025-26",Josilyn Wadas; Tori Cravens
-37,Auburn,"2024-25, 2024-25, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Emma Moore; Grace Havlicek; Lauren Dreves; Belle Patrick; Eden Bower; Emma Moore; Grace Havlicek; Greer Chambless; Kate Mansfield; Kathleen Burnett; Lauren Dreves; Shanelle Puetz
-43,Austin Peay,2025-26,Lauren Wallace
-48,Charleston Southern,2025-26,Dillia Lowry
-49,Barry,2025-26,Frankie Good
-50,Bates,"2023-24, 2023-24, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Logan Yogi; Sofia Castiglioni; Anaïs Reneaum; Kate Norry; Lauren Croom; Logan Yogi; Malina Young; Nora Gilmer; Sofia Castiglioni; Anaïs Reneaum; Isabel Bettencourt; Jaime Bartley-Cohen; Jordan Blackburn; Kate Norry; Katie Patrinos; Lauren Croom; Logan Yogi; Malina Young; Nora Gilmer; Sofia Castiglioni
-58,Baruch,2025-26,Sarah Sellami
-60,Bethel (MN),2025-26,Ellie Van Namen
-69,Bowdoin,"2023-24, 2023-24, 2023-24, 2023-24, 2023-24, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Anna Yeh; Annie Stent; Cameron Shelly; Haley Campau; Skye LaMendola; Alison Smith; Anna Yeh; Annie Stent; Cameron Shelly; Haley Campau; Hannah Woolley; Kelsey Kim; Skye LaMendola; Tamara Gisiger; Alison Smith; Anna Yeh; Annie Stent; Cameron Shelly; Gillian Colledge; Haley Campau; Hannah Woolley; Kelsey Kim; Mackensie Wolfson; Skye LaMendola; Tamara Gisiger; Zoe Ryu
-72,Bradley,2024-25,Tendai Titley
-81,Bryant,2025-26,Nadine Abdat
-91,Cal Poly Pomona,2025-26,Rachel Mau
-94,Cal State Bakersfield,2025-26,Analiese Gagliano
-97,Cal State Fullerton,2025-26,Kaieva Christensen
-99,Long Beach State,"2025-26, 2025-26",Chloe Johnson; Mia Halsey
-100,Cal State LA,"2025-26, 2025-26",Mia Webster; Savannah Risley
-101,CSUN,2025-26,Raegan Richardson
-109,UC Irvine,"2024-25, 2025-26, 2025-26, 2025-26",Jessica Bates; Addie Kannegeisser; Brianna Brewer; Jessica Bates
-110,UCLA,"2016-17, 2017-18, 2018-19",Kylie Miller; Kylie Miller; Kylie Miller
-116,Canisius,2025-26,McKenna Corcoran
-128,Central Florida,"2022-23, 2023-24, 2023-24, 2023-24, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Abby Schomers; Abby Schomers; Avah Armour; Sasha Cohen; Abby Karalus; Abby Schomers; Alexa Haley; Avah Armour; Chris McFarlane; Ella Chapman; Fallon Stewart; Lexi Campagna; Mikayla Porter; Nicole Whitaker; Nygeria Hart; Rachel Rodriguez; Reese Moore; Sarah Mendoza; Sasha Cohen
-136,Chicago State,2025-26,Gracilove Littlejohn
-146,Clarkson,2025-26,Cecilia Velardi
-148,Cleveland State,2025-26,Sophie Skidmore
-155,Colo. Sch. of Mines,"2025-26, 2025-26, 2025-26, 2025-26",Adrienne Enriquez; Eryn Hiraki; Layla Padgett; Tori Garrett
-156,Colorado St.,"2023-24, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Kekua Richards; Brooke Holman; Erin Debiec; Jessica Lawton; Kekua Richards; Maria Brun; Brenna Rowland; Brooke Holman; Erin Debiec; Eve Wilson; Halle Jameson; Jessica Lawton; Karsyn Fetzer; Kekua Richards; Maria Brun; Silvie Graetzer; Sofia Zabjek
-158,Columbia,2025-26,Kylee Eze
-173,Davidson,"2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21","Abbie Henson; Adlee Grissett; Angelique ""Geli"" St. Laurent; Ariyana Johnson; Brooke Briscoe; Cayla Weisner; Elena Garcia-Guerrios; Ellie Ocampo; Kate Whiteley; Kinsey Smith; Meile Songaila; Melanie Tilles; Mia Compas; Myla Young; Ngodoo Harris; Peyton Garrick"
-178,Delaware State,2025-26,Ailena Mykins
-180,Delaware,"2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21",Anna Logan Gillens; Asia Murray; Aubrey Lyssy; Auna Wiegand; Avery Brown; Carolina Sayeg Blak; Emily Zgonc; Fiona Rigby; India Gantt; Jayda Gray; Jayda Redd; Kennedi Inman; Kristyn Membreno; Morgan Campbell; Sofia Guerrero-Wilson; Sydney Mayfield; Taylor Holly; Thalia Yancey
-196,East Carolina,2025-26,Angeles Alderete
-202,Eastern Kentucky,2025-26,Emily Melton
-205,Mont. St. Billings,"2023-24, 2024-25, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Avarey Stuff; Avarey Stuff; Jordin Taulua; Adrienne Magdaleno; Allie Dorman; Avarey Stuff; Avarie Gutierrez; Izzy Ping; Jordin Taulua
-208,Eckerd,"2025-26, 2025-26",Avry Nelson; Hayden Nash
-213,Elmira,"2023-24, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Olivia Roccabruna; Cloé VanFleet; Erin Bracken; Katie Witt; Morgan Sica; Olivia Roccabruna; Vicki Titus; Aimee Bridges; Ava Remscheid; Cloé VanFleet; Ellora Bynoe; Erin Bracken; Julie Smith; Katie Witt; Lilyanah Doolittle; Madalyn Devonshire; Morgan Sica; Olivia Roccabruna; Vicki Titus
-224,Ferris St.,"2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Aaliyah Cage; Alaina Panagiotopoulos; Breanna David; Dylann Kelly; Janie Eichberger
-230,Florida Tech,"2025-26, 2025-26, 2025-26",Abby Koenen; Chiara Cristinzio; Tessa Schutter
-248,George Mason,2025-26,Morgan Inemer
-255,Georgia Tech,"2023-24, 2023-24, 2024-25, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Heloise Soares; Larissa Mendes; Heloise Soares; Larissa Mendes; Abi Li; Anna Fiedorowicz; Bianca Garibaldi; Danielle Tansey; Gabi Robinska; Heloise Soares; Larissa Mendes; Laura Bieleski; Leo Weng
-257,Georgia,"2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21",Alex Richter; Alyssa Worden; Ana Julia Bleeker; Arianna Muoneke; Bianna Muoneke; Ceci Gooch; Chloe Elarton; Emma Bryson; Gigi Artiles; Kaiya Tyson; Kate Yoshimoto; Keira Steininger; Kendal Kemp; Marin Collins; Rylan Miller; Taylor Bruce; Tori Harper; Alex Richter; Alyssa Worden; Ana Julia Bleeker; Arianna Muoneke; Bianna Muoneke; Ceci Gooch; Chloe Elarton; Emma Bryson; Gigi Artiles; Kaiya Tyson; Kate Yoshimoto; Keira Steininger; Kendal Kemp; Marin Collins; Rylan Miller; Taylor Bruce; Tori Harper
-267,Hamilton,"2023-24, 2023-24, 2023-24, 2023-24, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Caitlin Allen; Elodie McGeiver; Kathryn Fox; Kendall Scholz; Allie Steel; Ayzlinn Trefren; Caitlin Allen; Elodie McGeiver; Kathryn Fox; Kendall Scholz; Liza Beigel; Mackenzie Sickinger; Mia Jessen; Allie Steel; Amelia Hahn; Ayzlinn Trefren; Caitlin Allen; Elodie McGeiver; Grace Jansen; Grace Seaman; Kathryn Fox; Kendall Scholz; Liza Beigel; Lucy Proud; Mackenzie Sickinger; Mia Jessen; Zua Vang
-277,Hawaii,2025-26,Tali Hakas
-281,Hiram,2025-26,Mia Nelson
-287,Houston Christian,"2025-26, 2025-26",Ana Garza; Tobey Allen
-288,Houston,2024-25,Aidan Conner
-291,Cal Poly Humboldt,"2025-26, 2025-26, 2025-26",Addison Bookstaber; Delaney Buchanan; Nyah Johnson
-299,Illinois State,2025-26,Sammi Bunch
-301,Illinois,"2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21",ALYSSA AGUAYO; ASHLYN PHILPOT; AVA WYSOCKI; DEVIN DZIENNY; GABBY DEAN; GABRIELLA PITCEL; KENNA PHELAN; KENZIE COGAN; KRISTINA STAROSTENKO; LINDSAY OLDENDORF; MADI MILES; MAYA HARRIS; PAITYN CHAPMAN; SOPHI RANDALL; TALITA GONCALVES; TARYN KIRSCH; TAYLOR DE BOER; VIVIAN CAMPBELL
-308,Purdue-Fort Wayne,"2015-16, 2016-17, 2020-21, 2021-22, 2022-23, 2023-24, 2024-25, 2025-26, 2025-26, 2025-26",Steve Florio; Steve Florio; Steve Florio; Steve Florio; Steve Florio; Steve Florio; Steve Florio; Dan Gebhart; Jacob Carrico; Steve Florio
-314,Jackson St.,2025-26,Kayla Troutman
-316,Jacksonville,"2025-26, 2025-26",Addison Krieger; Zoey Vandel
-323,Johnson C. Smith,"2025-26, 2025-26",Abigail Freeman; Marianna Diaz
-346,Lamar,"2023-24, 2023-24, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Emily Moon; Jo Moffitt; Addison Stanley; Alexa Gonzalez; Emily Moon; Jo Moffitt; Maja Malinowska; Addison Stanley; Alexa Gonzalez; Emily Moon; Gabby Baker; Jo Moffitt; Kinley Elms; Maja Malinowska; Riley Johnson
-354,Lewis,"2025-26, 2025-26",Addison Lampe; Grace Erwin
-355,Liberty,2025-26,Addison Hart
-358,West Alabama,2025-26,Duru Seber
-365,LSU,"2023-24, 2023-24, 2023-24, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Angelina Lee; Ella Hemmings; Jurnee Robinson; Aly Kirkhoff; Angelina Lee; Ella Hemmings; Jessica Jones; Jurnee Robinson; Lainee Pyles; Remi Nuss; Aly Kirkhoff; Angelina Lee; Camryn Jeffery; Ella Hemmings; Emilee Prochaska; Jessica Jones; Jurnee Robinson; Lainee Pyles; Laurel Cassidy; Lauren Brooker; Remi Nuss; Sanaa Donaie; Takyla Brown; Tireh Smith
-374,Lynchburg,"2025-26, 2025-26",Jacqueline Bryant; Kate Hardie
-381,Manhattan,"2025-26, 2025-26",Laura Hernandez; Mikalah Curran
-383,Minnesota St.,"2025-26, 2025-26, 2025-26",Aiella Burgert; Ellie Voth; Savannah Meyer
-387,Marquette,"2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2015-16, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21",Allie Beers; Annika Kowalski; Aubrey Hicks; Avery Helms; Berrak Sporeli; Carson Tyler; Caydence Doolan; Emi Juric; Emma Parks; Julia Stanev; Keira Schmidt; Lauren Young; Luanna Markus; Molly Welge; Tani Juric; Allie Beers; Annika Kowalski; Aubrey Hicks; Avery Helms; Berrak Sporeli; Carson Tyler; Caydence Doolan; Emi Juric; Emma Parks; Julia Stanev; Keira Schmidt; Lauren Young; Luanna Markus; Molly Welge; Tani Juric
-391,UMBC,"2025-26, 2025-26",Alissa Grant; Natalie Harris
-395,Maryville (MO),2025-26,Delaney Lemay
-402,McNeese State,2025-26,Kayla Wilson
-404,Memphis,2025-26,Arianna Mongare
-408,Mercyhurst,"2025-26, 2025-26",Ava Carney; Julia Shepherd
-416,Michigan State,"2025-26, 2025-26, 2025-26",Kalea Norton; Leela Ormsby; Sarah Vellucci
-419,Middle Tennessee,2025-26,Ellie Watts
-428,Minnesota,"2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21",ALEX ACEVEDO; CALISSA MINATEE; CARLY GILK; ELENA HOECKE; GEORGIA LEE; JORDAN TAYLOR; KATE THIBAULT; KELLY KINNEY; LUCIE BLAŽKOVÁ; MADI KRAFT; MAKENNA CROSSON; MCKENNA GARR; MCKENNA WUCHERER; OLIVIA SWENSON; STELLA SWENSON; ZEYNEP PALABIYIK
-432,Mississippi Valley State,2025-26,Mikayla Lee
-467,New England Col.,2025-26,Alexandra Seijas-Quea
-472,New Mexico State,"2025-26, 2025-26, 2025-26",Ashley Herman; Jazlyn Vasquez; Mia Mendoza
-497,North Texas,"2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2024-25, 2025-26, 2025-26, 2025-26",Adam Campbell; Addison Achilles; Alessandra Romo; Alyssa Young; Dakota Mitchell; Dave Fleming; Emma Shaddix; Jahniya Jackson; Jocelyn Jourdan; Kennedy Cooper; Kennedy Shelstead; Lillian Croshaw; Madeline Smith; Olivia Branum; Paige Hawkinson; Reagan Bedell; Reese Watters; Ryann Vik; Sidney Soria; Adam Campbell; Adam Campbell; Dave Fleming; Kennedy Shelstead
-501,Northern Arizona,"2025-26, 2025-26",Georgi Stein; Lauren Edlund
-523,Old Dominion,"2023-24, 2023-24, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25",Adrienne Peji; Elisa Maggi; Adrienne Peji; Becca Lamb; Elisa Maggi; Emma Schelah; Fred Chao
-551,Portland,2025-26,Nevaeh Bray
-554,Princeton,"2015-16, 2015-16, 2016-17, 2016-17, 2017-18, 2017-18, 2017-18, 2018-19, 2018-19, 2018-19, 2019-20, 2019-20, 2019-20, 2019-20, 2020-21, 2020-21, 2020-21, 2020-21, 2021-22, 2021-22, 2021-22, 2021-22, 2021-22, 2022-23, 2022-23, 2022-23, 2022-23, 2022-23, 2023-24, 2023-24, 2023-24, 2023-24, 2023-24, 2023-24, 2023-24, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Corina Tarnita; Sabrina King; Corina Tarnita; Sabrina King; Andrej Kosmrlj; Corina Tarnita; Sabrina King; Andrej Kosmrlj; Corina Tarnita; Sabrina King; Andrej Kosmrlj; Corina Tarnita; Evan Schneider; Sabrina King; Andrej Kosmrlj; Corina Tarnita; Dominique Mason; Sabrina King; Andrej Kosmrlj; Corina Tarnita; Dominique Mason; Evan Schneider; Sabrina King; Andrej Kosmrlj; Corina Tarnita; Dominique Mason; Evan Schneider; Sabrina King; Andrej Kosmrlj; Corina Tarnita; Dominique Mason; Evan Schneider; Ludovic Tangpi; Ramona Romero; Sabrina King; Aislinn Roth; Andrej Kosmrlj; Ashtyn Sims; Cecily Swanson; Corina Tarnita; Dominique Mason; Evan Schneider; Ludovic Tangpi; Ramona Romero; Sabrina King; Aislinn Roth; Andrej Kosmrlj; Ashtyn Sims; Cecily Swanson; Corina Tarnita; Dominique Mason; Evan Schneider; Ludovic Tangpi; Milexa Cardona; Ramona Romero; Sabrina King
-559,Purdue,"2024-25, 2025-26, 2025-26, 2025-26, 2025-26",Rachel Williams; Addy Tindall; Isabelle Bardin; Morgan Williams; Rachel Williams
-564,Ramapo,2025-26,Aubrey Agcaoili
-574,Rice,2025-26,Thea Carter
-582,Rockford,2025-26,Jayce Shaw
-603,St. John's,"2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21",Amanda Caputi; Angelica Rodriguez; Barbara Costa dos Santos; Brooke Boyles; Carola Tesoro; Chloe Bell; Katianna Mejia- Betancur; Kendall White; Kya Harris; Lejla Hadziredzepovic; Maggie Carcillo; Martina Capponcelli; Rashanny Solano Smith; Shiloh Clayton; Soheila Cirelli; Sumaiyya Harris; Teodora Stamenkovic
-630,San Jose State,"2018-19, 2019-20, 2020-21, 2021-22, 2025-26, 2025-26",Haylee Nelson; Haylee Nelson; Haylee Nelson; Haylee Nelson; Aniyah Hall; Bohdana Hrytsyk
-638,Shippensburg,2025-26,Riley Blank
-639,Siena,"2025-26, 2025-26",Jill Frye; Madison Evans
-648,South Carolina,2025-26,Sydney Davis
-655,Southeastern Louisiana,2025-26,Keira Beverly
-657,Southern Cal,"2025-26, 2025-26, 2025-26",Addison Townsend; Paisley Douglas; Quinn Loper
-663,Southern Methodist,"2025-26, 2025-26",Hannah Beauford; Mia Silva
-665,Southern,"2025-26, 2025-26",Najah Harris; Zaria Nelson
-670,Texas State,2025-26,Ashley Euston
-671,Louisiana,2025-26,Gigi Smith
-674,Stanford,"2023-24, 2023-24, 2023-24, 2023-24, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Ipar Kurt; Jordyn Harvey; Julia Blyashov; Koko Kirsch; Ipar Kurt; Jordyn Harvey; Julia Blyashov; Koko Kirsch; Lizzy Andrew; Malyssa Cawa; Sidney Duncan; Taylor Yu; Tony Glessner; Erika Sayer; Ipar Kurt; Jordyn Harvey; Julia Blyashov; Kaci Demaria; Koko Kirsch; Lizzy Andrew; Logan Parks; Malyssa Cawa; Sidney Duncan; Spencer Etzler; Taylor Yu; Tony Glessner; Zaria Queen
-683,Stony Brook,2025-26,Aajaylah Zeno
-690,Temple,"2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2023-24, 2023-24, 2023-24, 2023-24, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Abby Jhun; Christiana Greene; Claudia Rivera; Daniella Gonzalez Murati; Jaya Moore; Kennedy Crayton; Khenedi Guest; Leah Hampson; Lexi Yoza; Lily Smith; Maddie Metcalf; Maddix Taniguchi; Makayla Batten; Mickhaila Murray; Olivia Hummel; Ope Aladetimi; Sarah Quarells; Sofia Hardy; Sofia Vega Lopez; Steel Sinai; Abby Jhun; Lexi Yoza; Olivia Hummel; Sofia Hardy; Abby Jhun; Christiana Greene; Lexi Yoza; Mickhaila Murray; Olivia Hummel; Sofia Hardy; Abby Jhun; Christiana Greene; Claudia Rivera; Daniella Gonzalez Murati; Jaya Moore; Lexi Yoza; Maddie Metcalf; Makayla Batten; Mickhaila Murray; Olivia Hummel; Ope Aladetimi; Sofia Hardy; Sofia Vega Lopez; Steel Sinai
-696,Tex. A&M-Kingsville,"2025-26, 2025-26, 2025-26, 2025-26",Allison Warden; Christin Cowart; Cristella Rojas; Sloane Paugh
-699,Texas Southern,"2025-26, 2025-26",Kadence Davison; Lacey Kusnier
-704,Texas-El Paso,2025-26,Mackenzi Davis
-706,UT-San Antonio,2025-26,Brooke Elliott
-711,Towson,2025-26,Destini Pickett
-719,Tulsa,"2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2020-21, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Ava Steffe; Brittany Bacorn; Campbell Hague; Emma Blaine; Isabella Ocampo; Jill Hanson; Kat Cooper; Kylee McCoy; Lauren Patterson; Lexi Dahl; Maegan Mills; Meg Goodwin; Mikey Freeman; Milee Jackson; Olivia Vance; Quinn Swofford; Rachel Megna; Brittany Bacorn; Ava Steffe; Brittany Bacorn; Jill Hanson; Kylee McCoy; Lauren Patterson; Maegan Mills; Meg Goodwin; Milee Jackson; Olivia Vance; Quinn Swofford
-728,Upper Iowa,2025-26,Abby Buchanan-Kenzinger
-732,Utah,2025-26,Devyn Wiest
-745,Va. Wesleyan,2025-26,Hannah Smith
-746,Virginia,"2023-24, 2023-24, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Lauryn Bowie; Meredith Reeg; Becca Wight; Lauryn Bowie; Meredith Reeg; Sarah Brodner; Teagan Hogan; Zoey Dood; Becca Wight; Caroline Lang; Hannah Scott; Katie Barrier; Lauryn Bowie; Meredith Reeg; Reagan Ennist; Sarah Brodner; Teagan Hogan; Zoey Dood
-749,Wake Forest,"2023-24, 2024-25, 2024-25, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Elena Dragani; Becca Bellows; Dhru Lalaji; Elena Dragani; Becca Bellows; Dhru Lalaji; Elena Dragani; Kelis Hawkins; Patrycja Lagida; Ryleigh Whitekettle; Sadie Poeck; Sanaa Williams
-757,Wayne St. (MI),"2025-26, 2025-26",Abby Baushke; Alina Ike
-760,Wellesley,"2023-24, 2023-24, 2023-24, 2023-24, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2024-25, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26, 2025-26",Caroline Meyer; Emily Goldstein; Evie Hill; Noelle Winn; Caroline Meyer; Ella Mancuso; Else Kunze-Hoeg; Emily Goldstein; Evie Hill; Logan Wilson; Noelle Winn; Sarah Jin; Brianna Milliken; Caroline Meyer; Cassie McMillan; Ella Mancuso; Else Kunze-Hoeg; Emily Goldstein; Evie Hill; Logan Wilson; Natalie Dabrowski; Noelle Winn; Sarah Jin
-767,West Texas A&M,2025-26,Logan Garcia
-778,Wheaton (IL),2025-26,Karalyn Osborne
-786,William & Mary,2025-26,Berkeley Konrady
-791,Winston-Salem,2025-26,Holiday Ellis
-803,Wisconsin-Stout,2025-26,Brooke McCune
-929,Adams St.,2025-26,Taylor Matthews
-985,Bluefield St.,2025-26,Tessa Heffner
-1001,Catawba,2025-26,Katrina Misra
-1004,Central Arkansas,"2025-26, 2025-26, 2025-26",Kennady Martindale; Sarah Carnathan; Trinity Hamilton
-1009,Central Okla.,2025-26,Taylor Nielsen
-1014,College of Charleston,2025-26,Rosa Brenčič
-1023,Coker,2025-26,Pelin Aksoy
-1057,Drury,"2025-26, 2025-26",Caroline Red; Gracie Kimrey
-1072,Erskine,2025-26,Madison Bagwell
-1085,Francis Marion,2025-26,Vanessa Blake
-1167,Lander,"2025-26, 2025-26, 2025-26",Amelia May; Andrea Crawford; Tyra Listenbee
-1170,Lenoir-Rhyne,2025-26,Emmaleigh Allen
-1328,Rockhurst,2025-26,Jaicee Corcoran
-1371,Southeastern Okla.,2025-26,Patience Lewis
-1446,Western Ore.,"2025-26, 2025-26",Ava Ainsworth; Jessica Eldridge
-1448,Western Wash.,2025-26,Maleah Andrews
-2743,Incarnate Word,"2025-26, 2025-26, 2025-26",Jadyn Molina; Liliana Brisco; Lilly Roach
-2798,Albertus Magnus,2025-26,Majo Pelaez
-2810,St. Thomas (TX),"2025-26, 2025-26, 2025-26, 2025-26",Alexie Martinez; Casey Hyde; Jayda Dixon; Morgan Gardner
-8490,LeTourneau,2025-26,Kylee Marksberry
-8567,Mount St. Joseph,2025-26,Mary Austing
-8875,Chowan,2025-26,Gabriella Figueroa
-8965,East Central,"2025-26, 2025-26",Jaylani Evans; Seran Eran
-9684,St. Elizabeth,2025-26,Dadlyna Louis
-10411,USC Upstate,"2025-26, 2025-26",Alyssa Hook; Savannah Page
-10972,Chatham,2025-26,Vanessa Mleczko
-12799,Wheeling,2025-26,Lainey Simmons
-19117,Salem (WV),2025-26,Amari Nunez
-20220,MSOE,2025-26,Emma Schattschneider
-21323,Chestnut Hill,2025-26,Parys Boykin
-23121,Texas-Dallas,2025-26,Lashae Goffney
-27892,Farmingdale St.,2025-26,Sarah Rende
-30028,Texas-Tyler,"2025-26, 2025-26",Makhai Lewis; Maya Jones
-30031,Northwestern-St. Paul,2025-26,Rylee Kennedy
-30050,Ill. Springfield,2025-26,Tuana Yuce
-30124,Cedarville,2025-26,Cam Davenport
-30127,Simon Fraser,"2025-26, 2025-26, 2025-26, 2025-26",Bella Tano; Brooklyn Robinson; Keona Savage; Lyla McKay
-30135,California Baptist,"2024-25, 2025-26",Maddie Brown; Maddie Brown
-30138,McKendree,2025-26,Brooke Heimburger
-30147,Fresno Pacific,2025-26,Mikayla Weiss
-30152,Southern Nazarene,"2025-26, 2025-26, 2025-26",Hannah Morgan; Maecie Hawthorne; Quinn Van Maanen
-30171,Berea,2025-26,Genesis Casillas
-30199,Concordia (CA),"2025-26, 2025-26, 2025-26",Bella Loftin; Clara John; Gabby Johnson
-30209,Westminster (UT),2025-26,Alie Coleman
-30220,Biola,"2025-26, 2025-26",Alexa Bell; Emmy Page
-30244,Edward Waters,2025-26,Genesis Melenciano
+ncaa_id,team,tier,player,class_pair,note
+158,Columbia,impossible,7949,2015-16=Grad/Fifth -> 2016-17=Sophomore,class drops 3 ranks
+158,Columbia,impossible,7949,2015-16=Grad/Fifth -> 2017-18=Junior,class drops 2 ranks
+158,Columbia,impossible,7953,2015-16=Grad/Fifth -> 2016-17=Sophomore,class drops 3 ranks
+158,Columbia,impossible,7953,2015-16=Grad/Fifth -> 2017-18=Junior,class drops 2 ranks
+158,Columbia,impossible,7961,2015-16=Grad/Fifth -> 2016-17=Sophomore,class drops 3 ranks
+158,Columbia,impossible,7961,2015-16=Grad/Fifth -> 2017-18=Junior,class drops 2 ranks
+158,Columbia,impossible,7970,2015-16=Grad/Fifth -> 2016-17=Sophomore,class drops 3 ranks
+158,Columbia,impossible,7970,2015-16=Grad/Fifth -> 2017-18=Junior,class drops 2 ranks
+158,Columbia,impossible,7979,2015-16=Grad/Fifth -> 2016-17=Sophomore,class drops 3 ranks
+158,Columbia,impossible,7979,2015-16=Grad/Fifth -> 2017-18=Junior,class drops 2 ranks
+158,Columbia,impossible,8262,2016-17=Grad/Fifth -> 2017-18=Sophomore,class drops 3 ranks
+158,Columbia,impossible,8262,2016-17=Grad/Fifth -> 2018-19=Junior,class drops 2 ranks
+158,Columbia,impossible,8266,2016-17=Grad/Fifth -> 2017-18=Sophomore,class drops 3 ranks
+158,Columbia,impossible,8266,2016-17=Grad/Fifth -> 2018-19=Junior,class drops 2 ranks
+158,Columbia,impossible,8269,2016-17=Grad/Fifth -> 2017-18=Sophomore,class drops 3 ranks
+158,Columbia,impossible,8274,2016-17=Grad/Fifth -> 2017-18=Sophomore,class drops 3 ranks
+158,Columbia,impossible,8280,2016-17=Grad/Fifth -> 2017-18=Sophomore,class drops 3 ranks
+158,Columbia,impossible,8280,2016-17=Grad/Fifth -> 2018-19=Junior,class drops 2 ranks
+158,Columbia,impossible,8289,2016-17=Grad/Fifth -> 2017-18=Sophomore,class drops 3 ranks
+158,Columbia,impossible,8289,2016-17=Grad/Fifth -> 2018-19=Junior,class drops 2 ranks
+158,Columbia,impossible,8642,2017-18=Grad/Fifth -> 2018-19=Sophomore,class drops 3 ranks
+158,Columbia,impossible,8642,2017-18=Grad/Fifth -> 2019-20=Junior,class drops 2 ranks
+158,Columbia,impossible,8652,2017-18=Grad/Fifth -> 2018-19=Sophomore,class drops 3 ranks
+158,Columbia,impossible,8652,2017-18=Grad/Fifth -> 2019-20=Junior,class drops 2 ranks
+158,Columbia,impossible,8653,2017-18=Grad/Fifth -> 2018-19=Sophomore,class drops 3 ranks
+158,Columbia,impossible,8653,2017-18=Grad/Fifth -> 2019-20=Junior,class drops 2 ranks
+172,Dartmouth,impossible,9203,2015-16=Senior -> 2016-17=Freshman,class drops 3 ranks
+173,Davidson,impossible,11826,2020-21=Senior -> 2023-24=Freshman,class drops 3 ranks
+173,Davidson,impossible,11828,2020-21=Senior -> 2023-24=Freshman,class drops 3 ranks
+173,Davidson,impossible,11828,2020-21=Senior -> 2024-25=Sophomore,class drops 2 ranks
+173,Davidson,impossible,11834,2020-21=Junior -> 2024-25=Freshman,class drops 2 ranks
+173,Davidson,impossible,11835,2020-21=Junior -> 2024-25=Freshman,class drops 2 ranks
+173,Davidson,impossible,11836,2020-21=Senior -> 2023-24=Freshman,class drops 3 ranks
+173,Davidson,impossible,11836,2020-21=Senior -> 2024-25=Sophomore,class drops 2 ranks
+173,Davidson,impossible,11837,2020-21=Junior -> 2024-25=Freshman,class drops 2 ranks
+173,Davidson,impossible,11838,2020-21=Junior -> 2024-25=Freshman,class drops 2 ranks
+173,Davidson,suspect,11826,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+173,Davidson,suspect,11828,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+173,Davidson,suspect,11829,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+173,Davidson,suspect,11830,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+173,Davidson,suspect,11831,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+173,Davidson,suspect,11832,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+173,Davidson,suspect,11834,2020-21=Junior -> 2025-26=Sophomore,"one-rank drop after 5 seasons, no redshirt"
+173,Davidson,suspect,11835,2020-21=Junior -> 2025-26=Sophomore,"one-rank drop after 5 seasons, no redshirt"
+173,Davidson,suspect,11836,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+173,Davidson,suspect,11837,2020-21=Junior -> 2025-26=Sophomore,"one-rank drop after 5 seasons, no redshirt"
+173,Davidson,suspect,11838,2020-21=Junior -> 2025-26=Sophomore,"one-rank drop after 5 seasons, no redshirt"
+180,Delaware,impossible,30915,2020-21=Senior -> 2023-24=Freshman,class drops 3 ranks
+180,Delaware,impossible,30915,2020-21=Senior -> 2024-25=Sophomore,class drops 2 ranks
+180,Delaware,impossible,30917,2020-21=Senior -> 2023-24=Freshman,class drops 3 ranks
+180,Delaware,impossible,30917,2020-21=Senior -> 2024-25=Sophomore,class drops 2 ranks
+180,Delaware,impossible,30919,2020-21=Junior -> 2024-25=Freshman,class drops 2 ranks
+180,Delaware,impossible,30920,2020-21=Senior -> 2023-24=Freshman,class drops 3 ranks
+180,Delaware,impossible,30920,2020-21=Senior -> 2024-25=Sophomore,class drops 2 ranks
+180,Delaware,impossible,30922,2020-21=Junior -> 2024-25=Freshman,class drops 2 ranks
+180,Delaware,impossible,30923,2020-21=Grad/Fifth -> 2022-23=Freshman,class drops 4 ranks
+180,Delaware,impossible,30923,2020-21=Grad/Fifth -> 2023-24=Freshman,class drops 4 ranks
+180,Delaware,impossible,30923,2020-21=Grad/Fifth -> 2024-25=Junior,class drops 2 ranks
+180,Delaware,impossible,30924,2020-21=Junior -> 2024-25=Freshman,class drops 2 ranks
+180,Delaware,suspect,30915,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+180,Delaware,suspect,30916,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+180,Delaware,suspect,30917,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+180,Delaware,suspect,30918,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+180,Delaware,suspect,30919,2020-21=Junior -> 2025-26=Sophomore,"one-rank drop after 5 seasons, no redshirt"
+180,Delaware,suspect,30920,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+180,Delaware,suspect,30921,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+180,Delaware,suspect,30922,2020-21=Junior -> 2025-26=Sophomore,"one-rank drop after 5 seasons, no redshirt"
+180,Delaware,suspect,30923,2020-21=Grad/Fifth -> 2025-26=Senior,"one-rank drop after 5 seasons, no redshirt"
+180,Delaware,suspect,30924,2020-21=Junior -> 2025-26=Sophomore,"one-rank drop after 5 seasons, no redshirt"
+180,Delaware,suspect,30925,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+180,Delaware,suspect,30926,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+257,Georgia,impossible,10474,2020-21=Grad/Fifth -> 2022-23=Freshman,class drops 4 ranks
+257,Georgia,impossible,10474,2020-21=Grad/Fifth -> 2024-25=Sophomore,class drops 3 ranks
+257,Georgia,impossible,10474,2020-21=Grad/Fifth -> 2025-26=Junior,class drops 2 ranks
+257,Georgia,impossible,10477,2020-21=Senior -> 2024-25=Sophomore,class drops 2 ranks
+257,Georgia,impossible,10478,2020-21=Grad/Fifth -> 2022-23=Freshman,class drops 4 ranks
+257,Georgia,impossible,10478,2020-21=Grad/Fifth -> 2023-24=Sophomore,class drops 3 ranks
+257,Georgia,impossible,10478,2020-21=Grad/Fifth -> 2024-25=Junior,class drops 2 ranks
+257,Georgia,impossible,10478,2020-21=Grad/Fifth -> 2025-26=Junior,class drops 2 ranks
+257,Georgia,impossible,10479,2020-21=Grad/Fifth -> 2024-25=Junior,class drops 2 ranks
+257,Georgia,impossible,10479,2020-21=Grad/Fifth -> 2025-26=Junior,class drops 2 ranks
+257,Georgia,impossible,10480,2020-21=Senior -> 2024-25=Sophomore,class drops 2 ranks
+257,Georgia,impossible,10483,2020-21=Senior -> 2023-24=Freshman,class drops 3 ranks
+257,Georgia,impossible,10483,2020-21=Senior -> 2024-25=Sophomore,class drops 2 ranks
+257,Georgia,impossible,10520,2015-16=Freshman -> 2020-21=Freshman,two freshman seasons 5 seasons apart
+257,Georgia,impossible,10521,2015-16=Freshman -> 2020-21=Freshman,two freshman seasons 5 seasons apart
+257,Georgia,impossible,11210,2015-16=Freshman -> 2020-21=Freshman,two freshman seasons 5 seasons apart
+257,Georgia,impossible,11211,2015-16=Freshman -> 2020-21=Freshman,two freshman seasons 5 seasons apart
+257,Georgia,suspect,10475,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+257,Georgia,suspect,10475,2015-16=Sophomore -> 2020-21=Sophomore,same class five or more seasons apart
+257,Georgia,suspect,10476,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+257,Georgia,suspect,10476,2015-16=Sophomore -> 2020-21=Sophomore,same class five or more seasons apart
+257,Georgia,suspect,10477,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+257,Georgia,suspect,10477,2015-16=Senior -> 2020-21=Senior,same class five or more seasons apart
+257,Georgia,suspect,10480,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+257,Georgia,suspect,10480,2015-16=Senior -> 2020-21=Senior,same class five or more seasons apart
+257,Georgia,suspect,10481,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+257,Georgia,suspect,10481,2015-16=Sophomore -> 2020-21=Sophomore,same class five or more seasons apart
+257,Georgia,suspect,10482,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+257,Georgia,suspect,10482,2015-16=Sophomore -> 2020-21=Sophomore,same class five or more seasons apart
+257,Georgia,suspect,10483,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+257,Georgia,suspect,10483,2015-16=Senior -> 2020-21=Senior,same class five or more seasons apart
+257,Georgia,suspect,10485,2015-16=Senior -> 2020-21=Senior,same class five or more seasons apart
+257,Georgia,suspect,10486,2015-16=Sophomore -> 2020-21=Sophomore,same class five or more seasons apart
+301,Illinois,impossible,15881,2020-21=Senior -> 2024-25=Sophomore,class drops 2 ranks
+301,Illinois,impossible,15882,2020-21=Junior -> 2024-25=Freshman,class drops 2 ranks
+301,Illinois,impossible,15883,2020-21=Senior -> 2023-24=Freshman,class drops 3 ranks
+301,Illinois,impossible,15883,2020-21=Senior -> 2024-25=Freshman,class drops 3 ranks
+301,Illinois,impossible,15883,2020-21=Senior -> 2025-26=Sophomore,class drops 2 ranks
+301,Illinois,impossible,15884,2020-21=Senior -> 2023-24=Freshman,class drops 3 ranks
+301,Illinois,impossible,15884,2020-21=Senior -> 2024-25=Freshman,class drops 3 ranks
+301,Illinois,impossible,15884,2020-21=Senior -> 2025-26=Sophomore,class drops 2 ranks
+301,Illinois,impossible,15888,2020-21=Junior -> 2024-25=Freshman,class drops 2 ranks
+301,Illinois,suspect,15880,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+301,Illinois,suspect,15881,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+301,Illinois,suspect,15882,2020-21=Junior -> 2025-26=Sophomore,"one-rank drop after 5 seasons, no redshirt"
+301,Illinois,suspect,15885,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+301,Illinois,suspect,15886,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+301,Illinois,suspect,15887,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+301,Illinois,suspect,15888,2020-21=Junior -> 2025-26=Sophomore,"one-rank drop after 5 seasons, no redshirt"
+301,Illinois,suspect,15889,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+301,Illinois,suspect,15890,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+301,Illinois,suspect,15891,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+328,Kansas,impossible,10307,2020-21=Senior -> 2021-22=Sophomore,class drops 2 ranks
+328,Kansas,impossible,10326,2020-21=Senior -> 2021-22=Sophomore,class drops 2 ranks
+328,Kansas,impossible,12807,2020-21=Senior -> 2021-22=Sophomore,class drops 2 ranks
+328,Kansas,impossible,12807,2020-21=Senior -> 2022-23=Sophomore,class drops 2 ranks
+387,Marquette,impossible,8555,2015-16=Freshman -> 2020-21=Freshman,two freshman seasons 5 seasons apart
+387,Marquette,impossible,8556,2015-16=Freshman -> 2020-21=Freshman,two freshman seasons 5 seasons apart
+387,Marquette,impossible,8557,2015-16=Freshman -> 2020-21=Freshman,two freshman seasons 5 seasons apart
+387,Marquette,impossible,8558,2015-16=Freshman -> 2020-21=Freshman,two freshman seasons 5 seasons apart
+387,Marquette,impossible,8560,2015-16=Freshman -> 2020-21=Freshman,two freshman seasons 5 seasons apart
+387,Marquette,impossible,8579,2015-16=Freshman -> 2020-21=Freshman,two freshman seasons 5 seasons apart
+387,Marquette,impossible,8580,2015-16=Freshman -> 2020-21=Freshman,two freshman seasons 5 seasons apart
+387,Marquette,impossible,8781,2015-16=Freshman -> 2020-21=Freshman,two freshman seasons 5 seasons apart
+387,Marquette,suspect,8547,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+387,Marquette,suspect,8547,2015-16=Sophomore -> 2020-21=Sophomore,same class five or more seasons apart
+387,Marquette,suspect,8549,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+387,Marquette,suspect,8549,2015-16=Sophomore -> 2020-21=Sophomore,same class five or more seasons apart
+387,Marquette,suspect,8550,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+387,Marquette,suspect,8550,2015-16=Sophomore -> 2020-21=Sophomore,same class five or more seasons apart
+387,Marquette,suspect,8552,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+387,Marquette,suspect,8552,2015-16=Sophomore -> 2020-21=Sophomore,same class five or more seasons apart
+387,Marquette,suspect,8553,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+387,Marquette,suspect,8553,2015-16=Senior -> 2020-21=Senior,same class five or more seasons apart
+387,Marquette,suspect,8554,2015-16=Junior -> 2020-21=Junior,same class five or more seasons apart
+428,Minnesota,impossible,23916,2020-21=Senior -> 2024-25=Freshman,class drops 3 ranks
+428,Minnesota,impossible,23916,2020-21=Senior -> 2025-26=Sophomore,class drops 2 ranks
+428,Minnesota,impossible,23921,2020-21=Senior -> 2023-24=Freshman,class drops 3 ranks
+428,Minnesota,impossible,23921,2020-21=Senior -> 2024-25=Sophomore,class drops 2 ranks
+428,Minnesota,impossible,23922,2020-21=Senior -> 2023-24=Freshman,class drops 3 ranks
+428,Minnesota,impossible,23922,2020-21=Senior -> 2024-25=Sophomore,class drops 2 ranks
+428,Minnesota,impossible,23923,2020-21=Junior -> 2024-25=Freshman,class drops 2 ranks
+428,Minnesota,impossible,23923,2020-21=Junior -> 2025-26=Freshman,class drops 2 ranks
+428,Minnesota,impossible,23924,2020-21=Junior -> 2024-25=Freshman,class drops 2 ranks
+428,Minnesota,impossible,23924,2020-21=Junior -> 2025-26=Freshman,class drops 2 ranks
+428,Minnesota,impossible,23926,2020-21=Senior -> 2024-25=Sophomore,class drops 2 ranks
+428,Minnesota,impossible,23927,2020-21=Grad/Fifth -> 2022-23=Freshman,class drops 4 ranks
+428,Minnesota,impossible,23927,2020-21=Grad/Fifth -> 2023-24=Sophomore,class drops 3 ranks
+428,Minnesota,impossible,23927,2020-21=Grad/Fifth -> 2024-25=Junior,class drops 2 ranks
+428,Minnesota,suspect,23917,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+428,Minnesota,suspect,23918,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+428,Minnesota,suspect,23919,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+428,Minnesota,suspect,23920,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+428,Minnesota,suspect,23921,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+428,Minnesota,suspect,23922,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+428,Minnesota,suspect,23925,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+428,Minnesota,suspect,23926,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+428,Minnesota,suspect,23927,2020-21=Grad/Fifth -> 2025-26=Senior,"one-rank drop after 5 seasons, no redshirt"
+497,North Texas,impossible,7792,2020-21=Junior -> 2024-25=Freshman,class drops 2 ranks
+497,North Texas,impossible,7793,2020-21=Junior -> 2024-25=Freshman,class drops 2 ranks
+497,North Texas,impossible,7803,2020-21=Junior -> 2024-25=Freshman,class drops 2 ranks
+497,North Texas,impossible,7804,2020-21=Senior -> 2025-26=Sophomore,class drops 2 ranks
+497,North Texas,suspect,7792,2020-21=Junior -> 2025-26=Sophomore,"one-rank drop after 5 seasons, no redshirt"
+497,North Texas,suspect,7793,2020-21=Junior -> 2025-26=Sophomore,"one-rank drop after 5 seasons, no redshirt"
+497,North Texas,suspect,7795,2020-21=Junior -> 2025-26=Sophomore,"one-rank drop after 5 seasons, no redshirt"
+497,North Texas,suspect,7800,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+497,North Texas,suspect,7801,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+497,North Texas,suspect,7802,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+497,North Texas,suspect,7803,2020-21=Junior -> 2025-26=Sophomore,"one-rank drop after 5 seasons, no redshirt"
+590,Sacred Heart,impossible,7655,2016-17=Freshman -> 2019-20=Freshman,two freshman seasons 3 seasons apart
+590,Sacred Heart,impossible,7732,2016-17=Freshman -> 2019-20=Freshman,two freshman seasons 3 seasons apart
+590,Sacred Heart,impossible,9982,2016-17=Freshman -> 2019-20=Freshman,two freshman seasons 3 seasons apart
+603,St. John's,impossible,6339,2020-21=Junior -> 2024-25=Freshman,class drops 2 ranks
+603,St. John's,impossible,6341,2020-21=Junior -> 2024-25=Freshman,class drops 2 ranks
+603,St. John's,impossible,6342,2020-21=Senior -> 2023-24=Freshman,class drops 3 ranks
+603,St. John's,impossible,6342,2020-21=Senior -> 2024-25=Sophomore,class drops 2 ranks
+603,St. John's,suspect,6335,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+603,St. John's,suspect,6337,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+603,St. John's,suspect,6338,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+603,St. John's,suspect,6339,2020-21=Junior -> 2025-26=Sophomore,"one-rank drop after 5 seasons, no redshirt"
+603,St. John's,suspect,6341,2020-21=Junior -> 2025-26=Sophomore,"one-rank drop after 5 seasons, no redshirt"
+603,St. John's,suspect,6342,2020-21=Senior -> 2025-26=Junior,"one-rank drop after 5 seasons, no redshirt"
+603,St. John's,suspect,6344,2020-21=Sophomore -> 2025-26=Freshman,"one-rank drop after 5 seasons, no redshirt"
+772,Western Ky.,impossible,6556,2015-16=Freshman -> 2025-26=Freshman,two freshman seasons 10 seasons apart
+817,Youngstown St.,impossible,4788,2016-17=Junior -> 2017-18=Freshman,class drops 2 ranks
