@@ -377,20 +377,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 165,Coppin State,2719,Hope Casel,Freshman,"Tyler, Texas",Tyler Legacy HS,,"5'10""",Outside,21,//www.coppinstatesports.com/sports/womens-volleyball/roster/hope-casel/2719,2021
 165,Coppin State,2715,Chudear Tut,Sophomore,"Minneapolis, Minn.",Hopkins HS,,"6'2""",Middle,22,//www.coppinstatesports.com/sports/womens-volleyball/roster/chudear-tut/2715,2021
 165,Coppin State,2706,Jordan Celestine,Senior,"Stockbridge, Ga.",Dutchtown HS,,"5'11""",Middle,23,//www.coppinstatesports.com/sports/womens-volleyball/roster/jordan-celestine/2706,2021
-688,Syracuse,,Charis Burge,Fr.,"Frederick, MD",,,5' 10'',S,1,//cuse.com/sports/womens-volleyball/roster/charis-burge/25275,2021
-688,Syracuse,,Kiera Hagler,Fr.,"Calera, AL",,,6' 0'',MB,3,//cuse.com/sports/womens-volleyball/roster/kiera-hagler/25527,2021
-688,Syracuse,,Marie Laurio,So.,"Ann Arbor, MI",,,5' 11'',OH,6,//cuse.com/sports/womens-volleyball/roster/marie-laurio/25267,2021
-688,Syracuse,,Kiernan Stamey,Jr.,"Maryville, TN",,,6' 0'',OH,8,//cuse.com/sports/womens-volleyball/roster/kiernan-stamey/25537,2021
-688,Syracuse,,Bo Nijenhuis,5th,"Markelo, Netherlands",,,6' 2'',MB,10,//cuse.com/sports/womens-volleyball/roster/bo-nijenhuis/25530,2021
-688,Syracuse,,Keila Gabriel,So.,"San Diego, CA",,,6' 4'',RS,12,//cuse.com/sports/womens-volleyball/roster/keila-gabriel/25539,2021
-688,Syracuse,,Aileen McAllister,Fr.,"Yokosuka, Japan",,,5' 11'',OH,13,//cuse.com/sports/womens-volleyball/roster/aileen-mcallister/25525,2021
-688,Syracuse,,Emma Faerber,Fr.,"Wiesbaden, Germany",,,6' 1'',MB,15,//cuse.com/sports/womens-volleyball/roster/emma-faerber/25529,2021
-688,Syracuse,,Queen Howse,Fr.,"Brentwood, TN",,,5' 6'',DS/L,16,//cuse.com/sports/womens-volleyball/roster/queen-howse/25276,2021
-688,Syracuse,,Yuka Urano,So.,"Tokyo, Japan",,,5' 6'',DS/L,18,//cuse.com/sports/womens-volleyball/roster/yuka-urano/25536,2021
-688,Syracuse,,Emma Williams,Jr.,"Portland, OR",,,5' 11'',OH/RS,19,//cuse.com/sports/womens-volleyball/roster/emma-williams/25528,2021
-688,Syracuse,,Bella Rodriguez,Jr.,"San Antonio, TX",,,5' 11'',OH/RS,21,//cuse.com/sports/womens-volleyball/roster/bella-rodriguez/25546,2021
-688,Syracuse,,Mira Ledermueller,Sr.,"Endorf, Germany",,,6' 1'',S,22,//cuse.com/sports/womens-volleyball/roster/mira-ledermueller/25526,2021
-688,Syracuse,,Abby Nicholson,5th,"Savannah, GA",,,6' 2'',MB,23,//cuse.com/sports/womens-volleyball/roster/abby-nicholson/25531,2021
 311,Iowa State,,Kenzie Mantz,Jr.,"Belle Plaine, Iowa",Belle Plaine Community,,6' 2'',RS/OH,1,/sports/womens-volleyball/roster/kenzie-mantz/11979,2021
 311,Iowa State,,Taylor Baranski,Sr.,"Channahon, Ill.",Minooka Community,,5' 6'',DS/L,2,/sports/womens-volleyball/roster/taylor-baranski/11470,2021
 311,Iowa State,,Jaden Newsome,Sr.,"Houston, Texas",Clear Brook,,6' 0'',S,3,/sports/womens-volleyball/roster/jaden-newsome/11981,2021
@@ -15276,3 +15262,18 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 487,North Alabama,,Freya Collier,So.,"Florence, Alabama / Wilson High School",,,6-4,RS,21,//www.roarlions.com/sports/wvball/roster/freya-collier/2424,2021-22
 487,North Alabama,,Mattrice Harris,Jr.,"Opelika, Ala. / Opelika High School",Wallace State CC,,6-1,MH,24,//www.roarlions.com/sports/wvball/roster/mattrice-harris/2439,2021-22
 487,North Alabama,,Maggie Sullivan,Jr.,"Tuscaloosa, Ala. / American Christian Academy",,,6-1,MB,25,//www.roarlions.com/sports/wvball/roster/maggie-sullivan/2432,2021-22
+688,Syracuse,,Lauren Hogan,So.,"Loveland, Ohio",Mount Notre Dame,,5' 4'',DS,1,/sports/womens-volleyball/roster/lauren-hogan/20277,2021-22
+688,Syracuse,,Peyton O'Brien,Fr.,"Libertyville, Ill.",Libertyville,,6' 0'',S,2,/sports/womens-volleyball/roster/peyton-obrien/20285,2021-22
+688,Syracuse,,Marina Markova,Jr.,"St. Petersburg, Russia",College of Olympic Reserve,,6' 5'',OH,3,/sports/womens-volleyball/roster/marina-markova/20280,2021-22
+688,Syracuse,,Riley Hoffman,Fr.,"Ada, Mich.",Forest Hills Eastern,,5' 5'',S/DS,4,/sports/womens-volleyball/roster/riley-hoffman/21366,2021-22
+688,Syracuse,,Elena Karakasi,Sr.,"Marousi-Athens, Greece",,,6' 0'',S,5,/sports/womens-volleyball/roster/elena-karakasi/20278,2021-22
+688,Syracuse,,Diana Akopova,Fr.,"Mozdok, Russia",Mowgli School,,6' 1'',OH,7,/sports/womens-volleyball/roster/diana-akopova/20287,2021-22
+688,Syracuse,,Lauren Woodford,Jr.,"Edina, Minn.",Spring Lake Park,,5' 8'',S,9,/sports/womens-volleyball/roster/lauren-woodford/21375,2021-22
+688,Syracuse,,Polina Shemanova,Sr.,"St. Petersburg, Russia",,,6' 0'',OH Is Captain (C),11,/sports/womens-volleyball/roster/polina-shemanova/21374,2021-22
+688,Syracuse,,Yuliia Yastrub,Gr.,"Nikolaev, Ukraine",Zaporozhye Specialized Boarding School,,6' 2'',OH Is Captain (C),13,/sports/womens-volleyball/roster/yuliia-yastrub/20284,2021-22
+688,Syracuse,,Dana Gardner,Gr.,"Knoxville, Tenn.",Knoxville Catholic,,6' 3'',MB,15,/sports/womens-volleyball/roster/dana-gardner/20275,2021-22
+688,Syracuse,,Abby Casiano,Jr.,"Riverview, Fla.",Tampa United Volleyball Academy,,6' 2'',MB Is Captain (C),16,/sports/womens-volleyball/roster/abby-casiano/20273,2021-22
+688,Syracuse,,Naomi Franco,So.,"Fayetteville, GA.",Fayette County HS,,6' 3'',OH,17,/sports/womens-volleyball/roster/naomi-franco/21365,2021-22
+688,Syracuse,,Izzy Plummer,Jr.,"Fairport, N.Y.",Fairport High School,,6' 3'',MB,19,/sports/womens-volleyball/roster/izzy-plummer/20281,2021-22
+688,Syracuse,,Raina Hughes,Fr.,"Williamstown, N.J.",Williamstown,,6' 1'',MB/RH,22,/sports/womens-volleyball/roster/raina-hughes/22161,2021-22
+688,Syracuse,,Viktoriia Lokhmanchuk,Jr.,"Zhaporizhia, Ukraine",Orbita,,6' 5'',OH,23,/sports/womens-volleyball/roster/viktoriia-lokhmanchuk/21370,2021-22

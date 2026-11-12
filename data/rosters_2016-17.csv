@@ -3568,24 +3568,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 1356,Seattle,,Katarina Marinkovic,,"Belgrade, Serbia",Radnicki Beograd,,,Outside Hitter/Right Side,18,/roster/player/katarina-marinkovic,2016
 1356,Seattle,,Maja Stojanovic,,"Cacak, Serbia",Gimnazija,,,Middle Blocker,6,/roster/player/maja-stojanovic,2016
 1356,Seattle,,Cecilia Wu,,"Green Brook, N.J.",Johns Creek HS,,,Middle Blocker,8,/roster/player/cecilia-wu,2016
-698,Texas Christian,,Jillian Bergeson,Sr.,"Friendswood, Texas",Pepperdine,,6' 2'',OH,1,/sports/womens-volleyball/roster/jillian-bergeson/4723,2016
-698,Texas Christian,,Ashley Smith,Sr.,"League City, Texas",Clear Creek HS,,6' 1'',OH,2,/sports/womens-volleyball/roster/ashley-smith/4724,2016
-698,Texas Christian,,Sarah Langs,Fr.,"Fairview, Texas",Lovejoy HS,,6' 3'',MB,3,/sports/womens-volleyball/roster/sarah-langs/5656,2016
-698,Texas Christian,,Abigail Buckingham,Fr.,"San Antonio, Texas",Churchill HS,,6' 1'',OH,5,/sports/womens-volleyball/roster/abigail-buckingham/4692,2016
-698,Texas Christian,,Anna Walsh,So.,"Grapevine, Texas",Virginia,,6' 2'',MB,6,/sports/womens-volleyball/roster/anna-walsh/4693,2016
-698,Texas Christian,,Kaylee Smith,Jr.,"Indianola, Iowa",Iowa,,5' 11'',S,8,/sports/womens-volleyball/roster/kaylee-smith/4711,2016
-698,Texas Christian,,Regan McGuire,Sr.,"Flower Mound, Texas",Edward S. Marcus HS,,6' 2'',MB,10,/sports/womens-volleyball/roster/regan-mcguire/4729,2016
-698,Texas Christian,,Lamprini Konstantinidou,Jr.,"Thessaloniki, Greece",West Virginia,,6' 1'',S,11,/sports/womens-volleyball/roster/lamprini-konstantinidou/4714,2016
-698,Texas Christian,,Ashleigh Martin,So.,"McKinney, Texas",McKinney Boyd HS,,6' 1'',OH,12,/sports/womens-volleyball/roster/ashleigh-martin/4715,2016
-698,Texas Christian,,Sarita Mikals,Sr.,"Colleyville, Texas",Houston,,6' 1'',OH/OPP,14,/sports/womens-volleyball/roster/sarita-mikals/4732,2016
-698,Texas Christian,,Paty Hernandez,So.,"Guasave, Sinaloa, Mexico",Preparatoria Jos&eacute; Vasconcelos,,6' 4'',MB,15,/sports/womens-volleyball/roster/paty-hernandez/4733,2016
-698,Texas Christian,,Calli Novak,Fr.,"Georgetown, Texas",East View HS,,6' 1'',OH,16,/sports/womens-volleyball/roster/calli-novak/11433,2016
-698,Texas Christian,,Chyna Perkins,Sr.,"Los Angeles, Calif.",Marymount HS,,,MB,17,/sports/womens-volleyball/roster/chyna-perkins/4735,2016
-698,Texas Christian,,Chyanne Perkins,Sr.,"Los Angeles, Calif.",Marymount HS,,,MB,18,/sports/womens-volleyball/roster/chyanne-perkins/4736,2016
-698,Texas Christian,,Natalie Gower,Sr.,"St. Louis, Mo.",St. Joseph's Academy,,6' 4'',MB,19,/sports/womens-volleyball/roster/natalie-gower/4737,2016
-698,Texas Christian,,Makena Martin,Fr.,"Newport Beach, Calif.",Mater Dei HS,,6' 1'',MB,20,/sports/womens-volleyball/roster/makena-martin/4702,2016
-698,Texas Christian,,Kayla Scheevel,Jr.,"Irvine, Calif.",Irvine Valley College,,5' 8'',L/DS,21,/sports/womens-volleyball/roster/kayla-scheevel/4720,2016
-698,Texas Christian,,Ashley Waggle,Fr.,"Dripping Springs, Texas",Dripping Springs HS,,,MB,22,/sports/womens-volleyball/roster/ashley-waggle/5661,2016
 711,Towson,7007,Julymar Otero,Junior,"Toa Baja, Puerto Rico",Academia Discipulos de Cristo,College of Central Florida,"5'11""",Right,1,//www.towsontigers.com/sports/womens-volleyball/roster/julymar-otero/7007,2016
 711,Towson,7048,Anabella Pope,Freshman,"Jenks, Okla.",Jenks H.S.,,"5'11""",Outside,2,//www.towsontigers.com/sports/womens-volleyball/roster/anabella-pope/7048,2016
 711,Towson,7008,Nur Sher,Sophomore,"Poughkeepsie, N.Y.",Spackenkill H.S.,,"5'8""",Setter,3,//www.towsontigers.com/sports/womens-volleyball/roster/nur-sher/7008,2016
@@ -4027,18 +4009,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 627,San Diego,5370,Hunter Jennings,Senior,"Costa Mesa, CA",Newport Harbor,,"5'5""",Libero,16,//www.usdtoreros.com/sports/womens-volleyball/roster/hunter-jennings/5370,2016
 627,San Diego,5371,Thana Fayad,Freshman,"Victoria, B.C.",Oak Bay,,"6'2""",OH,17,//www.usdtoreros.com/sports/womens-volleyball/roster/thana-fayad/5371,2016
 627,San Diego,5372,Anna Newsome,Freshman,"Sabadell, Barcelona",INS Joaquim Blume,,"5'9""",Setter,18,//www.usdtoreros.com/sports/womens-volleyball/roster/anna-newsome/5372,2016
-704,Texas-El Paso,2293,Dania Orozco,Junior,"El Paso, Texas",New Mexico Military Institute,,"5'2""",DS,1,//www.utepminers.com/sports/womens-volleyball/roster/dania-orozco/2293,2016
-704,Texas-El Paso,2294,Ali Vidali,Redshirt Freshman,"Pacifica, Calif.",Terra Nova HS,,"5'11""",OH,2,//www.utepminers.com/sports/womens-volleyball/roster/ali-vidali/2294,2016
-704,Texas-El Paso,2288,Niki Cebak,Redshirt Freshman,"Airdrie, Alberta, Canada",George McDougall HS,,"5'7""",DS,4,//www.utepminers.com/sports/womens-volleyball/roster/niki-cebak/2288,2016
-704,Texas-El Paso,2296,Tatum Winter,Senior,"Gilbert, Ariz.",,,"6'0""",MB,6,//www.utepminers.com/sports/womens-volleyball/roster/tatum-winter/2296,2016
-704,Texas-El Paso,2295,Sarah Villa,Senior,"El Paso, Texas",Burges High School,,"5'6""",DS,7,//www.utepminers.com/sports/womens-volleyball/roster/sarah-villa/2295,2016
-704,Texas-El Paso,2290,Amanda King,Junior,"Boynton, Fla.",,,"5'8""",S,8,//www.utepminers.com/sports/womens-volleyball/roster/amanda-king/2290,2016
-704,Texas-El Paso,2285,Briana Arellano,Freshman,"El Paso, Texas",Canutillo HS,,"5'10""",OH,10,//www.utepminers.com/sports/womens-volleyball/roster/briana-arellano/2285,2016
-704,Texas-El Paso,2286,Macey Austin,Freshman,"Keller, Texas",Fort Worth Christian School,,"6'0""",OH,12,//www.utepminers.com/sports/womens-volleyball/roster/macey-austin/2286,2016
-704,Texas-El Paso,2291,Lindsey Larson,Senior,"Humboldt, Saskatchewan, Canada",Humboldt Collegiate Institute,,"5'9""",S,16,//www.utepminers.com/sports/womens-volleyball/roster/lindsey-larson/2291,2016
-704,Texas-El Paso,2289,Ashley Grzebeniak,Sophomore,"Winnipeg, Manitoba, Canada",Lord Selkirk HS,,"5'10""",OH,17,//www.utepminers.com/sports/womens-volleyball/roster/ashley-grzebeniak/2289,2016
-704,Texas-El Paso,2287,Kylie Baumgartner,Sophomore,"Pleasant Hill, Calif.",Carondelet HS,,"6'0""",MB,18,//www.utepminers.com/sports/womens-volleyball/roster/kylie-baumgartner/2287,2016
-704,Texas-El Paso,2292,Maddie Morgan,Sophomore,"San Rafael, Calif.",Terra Linda HS,,"6'2""",MB,20,//www.utepminers.com/sports/womens-volleyball/roster/maddie-morgan/2292,2016
 536,UT-Rio Grande Valley,5596,Ragni Steen Knudsen,Sophomore,"Myre, Norway",Sortland Videregaaende Skole,Lindsey Wilson College,"5'11""",Outside,1,//www.goutrgv.com/sports/womens-volleyball/roster/ragni-steen-knudsen/5596,2016
 536,UT-Rio Grande Valley,5256,Alisha Watson,Senior,"Round Rock, TX",Round Rock High School,,"5'9""",Right,2,//www.goutrgv.com/sports/womens-volleyball/roster/alisha-watson/5256,2016
 536,UT-Rio Grande Valley,5251,Alexandra Ecker,Sophomore,"Helotes, TX",O'Connor High School,,"5'10""",Middle,3,//www.goutrgv.com/sports/womens-volleyball/roster/alexandra-ecker/5251,2016
@@ -13657,3 +13627,33 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 542,Pfeiffer,2591,Severina Lanuza,Freshman,"Conyers, GA",,,"5'3""",DS/L,14,//www.gofalconsports.com/sports/womens-volleyball/roster/severina-lanuza/2591,2016
 542,Pfeiffer,2589,Lili Jaramillo,Freshman,"Oakboro, NC",,,"5'4""",DS/L,21,//www.gofalconsports.com/sports/womens-volleyball/roster/lili-jaramillo/2589,2016
 542,Pfeiffer,2584,Erin Errington,Sophomore,"Simpsonville, SC",,,"5'8""",RS,22,//www.gofalconsports.com/sports/womens-volleyball/roster/erin-errington/2584,2016
+704,Texas-El Paso,2293,Dania Orozco,Junior,"El Paso, Texas",New Mexico Military Institute,,"5'2""",DS,1,//www.utepminers.com/sports/womens-volleyball/roster/dania-orozco/2293,2016-17
+704,Texas-El Paso,2294,Ali Vidali,Redshirt Freshman,"Pacifica, Calif.",Terra Nova HS,,"5'11""",OH,2,//www.utepminers.com/sports/womens-volleyball/roster/ali-vidali/2294,2016-17
+704,Texas-El Paso,2288,Niki Cebak,Redshirt Freshman,"Airdrie, Alberta, Canada",George McDougall HS,,"5'7""",DS,4,//www.utepminers.com/sports/womens-volleyball/roster/niki-cebak/2288,2016-17
+704,Texas-El Paso,2296,Tatum Winter,Senior,"Gilbert, Ariz.",,,"6'0""",MB,6,//www.utepminers.com/sports/womens-volleyball/roster/tatum-winter/2296,2016-17
+704,Texas-El Paso,2295,Sarah Villa,Senior,"El Paso, Texas",Burges High School,,"5'6""",DS,7,//www.utepminers.com/sports/womens-volleyball/roster/sarah-villa/2295,2016-17
+704,Texas-El Paso,2290,Amanda King,Junior,"Boynton, Fla.",,,"5'8""",S,8,//www.utepminers.com/sports/womens-volleyball/roster/amanda-king/2290,2016-17
+704,Texas-El Paso,2285,Briana Arellano,Freshman,"El Paso, Texas",Canutillo HS,,"5'10""",OH,10,//www.utepminers.com/sports/womens-volleyball/roster/briana-arellano/2285,2016-17
+704,Texas-El Paso,2286,Macey Austin,Freshman,"Keller, Texas",Fort Worth Christian School,,"6'0""",OH,12,//www.utepminers.com/sports/womens-volleyball/roster/macey-austin/2286,2016-17
+704,Texas-El Paso,2291,Lindsey Larson,Senior,"Humboldt, Saskatchewan, Canada",Humboldt Collegiate Institute,,"5'9""",S,16,//www.utepminers.com/sports/womens-volleyball/roster/lindsey-larson/2291,2016-17
+704,Texas-El Paso,2289,Ashley Grzebeniak,Sophomore,"Winnipeg, Manitoba, Canada",Lord Selkirk HS,,"5'10""",OH,17,//www.utepminers.com/sports/womens-volleyball/roster/ashley-grzebeniak/2289,2016-17
+704,Texas-El Paso,2287,Kylie Baumgartner,Sophomore,"Pleasant Hill, Calif.",Carondelet HS,,"6'0""",MB,18,//www.utepminers.com/sports/womens-volleyball/roster/kylie-baumgartner/2287,2016-17
+704,Texas-El Paso,2292,Maddie Morgan,Sophomore,"San Rafael, Calif.",Terra Linda HS,,"6'2""",MB,20,//www.utepminers.com/sports/womens-volleyball/roster/maddie-morgan/2292,2016-17
+698,Texas Christian,,Jillian Bergeson,Sr.,"Friendswood, Texas",Pepperdine,,6' 2'',OH,1,/sports/womens-volleyball/roster/jillian-bergeson/4723,2016-17
+698,Texas Christian,,Ashley Smith,Sr.,"League City, Texas",Clear Creek HS,,6' 1'',OH,2,/sports/womens-volleyball/roster/ashley-smith/4724,2016-17
+698,Texas Christian,,Sarah Langs,Fr.,"Fairview, Texas",Lovejoy HS,,6' 3'',MB,3,/sports/womens-volleyball/roster/sarah-langs/5656,2016-17
+698,Texas Christian,,Abigail Buckingham,Fr.,"San Antonio, Texas",Churchill HS,,6' 1'',OH,5,/sports/womens-volleyball/roster/abigail-buckingham/4692,2016-17
+698,Texas Christian,,Anna Walsh,So.,"Grapevine, Texas",Virginia,,6' 2'',MB,6,/sports/womens-volleyball/roster/anna-walsh/4693,2016-17
+698,Texas Christian,,Kaylee Smith,Jr.,"Indianola, Iowa",Iowa,,5' 11'',S,8,/sports/womens-volleyball/roster/kaylee-smith/4711,2016-17
+698,Texas Christian,,Regan McGuire,Sr.,"Flower Mound, Texas",Edward S. Marcus HS,,6' 2'',MB,10,/sports/womens-volleyball/roster/regan-mcguire/4729,2016-17
+698,Texas Christian,,Lamprini Konstantinidou,Jr.,"Thessaloniki, Greece",West Virginia,,6' 1'',S,11,/sports/womens-volleyball/roster/lamprini-konstantinidou/4714,2016-17
+698,Texas Christian,,Ashleigh Martin,So.,"McKinney, Texas",McKinney Boyd HS,,6' 1'',OH,12,/sports/womens-volleyball/roster/ashleigh-martin/4715,2016-17
+698,Texas Christian,,Sarita Mikals,Sr.,"Colleyville, Texas",Houston,,6' 1'',OH/OPP,14,/sports/womens-volleyball/roster/sarita-mikals/4732,2016-17
+698,Texas Christian,,Paty Hernandez,So.,"Guasave, Sinaloa, Mexico",Preparatoria Jos&eacute; Vasconcelos,,6' 4'',MB,15,/sports/womens-volleyball/roster/paty-hernandez/4733,2016-17
+698,Texas Christian,,Calli Novak,Fr.,"Georgetown, Texas",East View HS,,6' 1'',OH,16,/sports/womens-volleyball/roster/calli-novak/11433,2016-17
+698,Texas Christian,,Chyna Perkins,Sr.,"Los Angeles, Calif.",Marymount HS,,,MB,17,/sports/womens-volleyball/roster/chyna-perkins/4735,2016-17
+698,Texas Christian,,Chyanne Perkins,Sr.,"Los Angeles, Calif.",Marymount HS,,,MB,18,/sports/womens-volleyball/roster/chyanne-perkins/4736,2016-17
+698,Texas Christian,,Natalie Gower,Sr.,"St. Louis, Mo.",St. Joseph's Academy,,6' 4'',MB,19,/sports/womens-volleyball/roster/natalie-gower/4737,2016-17
+698,Texas Christian,,Makena Martin,Fr.,"Newport Beach, Calif.",Mater Dei HS,,6' 1'',MB,20,/sports/womens-volleyball/roster/makena-martin/4702,2016-17
+698,Texas Christian,,Kayla Scheevel,Jr.,"Irvine, Calif.",Irvine Valley College,,5' 8'',L/DS,21,/sports/womens-volleyball/roster/kayla-scheevel/4720,2016-17
+698,Texas Christian,,Ashley Waggle,Fr.,"Dripping Springs, Texas",Dripping Springs HS,,,MB,22,/sports/womens-volleyball/roster/ashley-waggle/5661,2016-17
