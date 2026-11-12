@@ -122,6 +122,51 @@ A full-season run writes `data/rosters_<season>.csv` using the full academic-yea
 
 Pages fetched at a current-roster URL (e.g. bare `/roster` on JavaScript-rendered sites, which a `/roster/<season>` path 404s on) are checked for year evidence in the page title and headings. A page that positively identifies a *different* season is rejected rather than scraped under the requested season's label; pages with no year evidence are accepted. This prevents, say, a November run for `2026-27` from silently recording a site's stale `2025-26` roster as current.
 
+### Season-URL sweep and echo rejection
+
+The JS-render sweep (`_scrape_js_render`) probes every season-URL form: the
+academic-year path (`/roster/2024-25`), the year-only path (`/roster/2024`),
+the `?season=` query (`/roster/?season=2024-25`), and the
+`/roster/season/…` and `/{season}/roster` variants. Some JavaScript apps
+ignore the season slug and render the *current* roster for any of these —
+uabsports.com's academic slugs, seminoles.com's year-only slugs, and
+arkansasrazorbacks.com's path slugs all echo, while their real per-season
+data (respectively) lives under the year-only path, the academic path, and
+the `?season=` query. Because the sweep used to return the first
+successful parse, such sites ended up with their current roster stored
+under historical season labels.
+
+Pages that positively name the requested season still short-circuit (an
+echo cannot match a requested *past* season). Otherwise all season-URL
+candidates are collected and `_resolve_echo_candidates` arbitrates: when
+parses disagree, anything that matches the bare current-roster render is
+rejected as the slug-ignoring echo.
+
+Audit a whole dataset for that signature with
+`scripts/find_echo_seasons.py`: it flags teams with identical
+consecutive-season rosters (never legitimate, class years advance) and
+writes a chronology-suspect review list to
+`data/derived/audits/echo_sweep.csv`.
+
+### Re-scraping a season (runbook)
+
+1. Purge the team's per-season cache (`data/cache/rosters_<season>/<id>.json`)
+   and re-scrape: `uv run python src/rosters.py -season 2024-25 -teams 9`.
+2. Register the new snapshot: `uv run python scripts/register_snapshot.py -season 2024-25`.
+3. **Remap corrections**: re-registering a season silently neuters all
+   snapshot-scoped corrections (their `<season>_1#…` ids stop matching the
+   active snapshot; the build filters stale prefixes without warning). Run
+   `uv run python scripts/remap_corrections.py` — it re-points stale ids to
+   the current snapshot by content matching against the archived vintage
+   and drops corrections whose rows no longer exist.
+4. Rebuild the season: `Rscript scripts/build_rosters.R --season 2024-25`.
+
+If a site no longer serves real per-season data (echo on all URL forms, no
+Wayback coverage either), the affected team-seasons can be excluded from
+publication with a reviewed entry in `data/reference/source_exclusions.csv`
+plus a `team_omission` row in `data/reference/coverage_exceptions.csv` —
+see TCU 2016-17/2017-18 and UTEP 2016-17 for the precedent.
+
 ### How team routing works
 
 Most teams use standard [Sidearm Sports](https://sidearmsports.com/) roster pages and are parsed directly. Teams whose sites need JavaScript rendering or a bespoke parser carry a `"scraper"` key in `data/teams.json` that names their strategy:
