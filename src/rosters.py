@@ -1256,9 +1256,11 @@ def parse_iowa_state_cards(html: BeautifulSoup, team: Dict, season: str) -> List
 
         name_el = card.select_one('.s-person-details__personal-single-line')
         name = name_el.get_text(strip=True) if name_el else ''
-        # Some templates (e.g. Colorado St. 2023-24) drop the name element
-        # and carry it only on the anchors' aria-labels ('Malaya Jones full
-        # bio'); without this fallback every card parses with a blank name.
+        # Defensive fallback for a template that carries the name only on
+        # the anchors' aria-labels ('Malaya Jones full bio'). No live template
+        # is known to lack the name element (CSU 2023-24, the motivating
+        # case, was verified 2026-11-12 to render names normally); this guards
+        # against blank-name cards if one ever surfaces.
         if not name:
             for a in card.find_all('a'):
                 m = re.match(r'^(.+?)\s+full bio$', (a.get('aria-label') or '').strip())

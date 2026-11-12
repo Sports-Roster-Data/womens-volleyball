@@ -305,7 +305,7 @@
 "Ill. Wesleyan","300",21,0,0,0,21
 "Trevecca Nazarene","30002",17,0,0,0,17
 "Lee","30013",18,0,0,0,18
-"Utah Valley","30024",20,0,0,0,20
+"Utah Valley","30024",20,0,1,0,19
 "Texas-Tyler","30028",18,0,0,0,18
 "Northwestern-St. Paul","30031",18,0,0,0,18
 "Crown (MN)","30035",14,0,0,0,14
@@ -824,7 +824,7 @@
 "Concordia-St. Paul","9081",16,0,0,0,16
 "Cal Poly Pomona","91",17,0,0,0,17
 "Cal St. Dom. Hills","92",19,0,0,0,19
-"Adams St.","929",18,0,0,0,18
+"Adams St.","929",18,2,1,0,15
 "Cal St. San Bernardino","93",17,0,0,0,17
 "Alvernia","938",16,0,0,0,16
 "Anderson (IN)","939",18,0,0,0,18

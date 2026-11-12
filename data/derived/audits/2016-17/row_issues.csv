@@ -6,6 +6,7 @@
 "2016-17_7","2016-17_7#04107","2016-17","5","Akron","row","Madi Baer","quarantined","quarantine","class column carries a position code"
 "2016-17_7","2016-17_7#04120","2016-17","5","Akron","row","Julie Shallman","quarantined","quarantine","class column carries a position code"
 "2016-17_7","2016-17_7#04581","2016-17","1098","Glenville St.","row","Kaylee Dickenson","removed_reviewed_duplicate","quarantine","reviewed drop_duplicate in corrections/row_corrections.csv"
+"2016-17_7","2016-17_7#08340","2016-17","30139","South Dakota Mines","row","Allie Boggs","removed_reviewed_duplicate","quarantine","reviewed drop_duplicate in corrections/row_corrections.csv"
 "2016-17_7","2016-17_7#08668","2016-17","30199","Concordia (CA)","row","Siena Goggia","quarantined","quarantine","position column carries staff/title text"
 "2016-17_7","2016-17_7#12844","2016-17","84","Buena Vista","row","Kelsey Ackerman (MANAGER)","quarantined","quarantine","staff/title entry, not a player"
 "2016-17_7","2016-17_7#13527","2016-17","704","Texas-El Paso","row","Dania Orozco","excluded_reviewed_stale","quarantine","reviewed row exclusion for a flagged stale-roster copy (data/reference/source_exclusions.csv)"

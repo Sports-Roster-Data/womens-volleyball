@@ -1,12 +1,12 @@
 "metric","value"
 "rows_raw",15799
-"rows_published",15717
+"rows_published",15716
 "rows_quarantined",82
 "rows_removed_exact_duplicate",0
-"rows_removed_reviewed_duplicate",0
+"rows_removed_reviewed_duplicate",1
 "rows_excluded_reviewed_stale",0
 "heights_failed_parsing_nonempty_raw",90
-"positions_unmapped_nonempty_raw",269
+"positions_unmapped_nonempty_raw",268
 "classes_unmapped_nonempty_raw",95
 "state_or_country_unparsed_nonempty_raw",318
 "high_school_missing",1411

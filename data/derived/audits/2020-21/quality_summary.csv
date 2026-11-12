@@ -1,9 +1,9 @@
 "metric","value"
 "rows_raw",13545
-"rows_published",13533
-"rows_quarantined",7
+"rows_published",13529
+"rows_quarantined",9
 "rows_removed_exact_duplicate",0
-"rows_removed_reviewed_duplicate",5
+"rows_removed_reviewed_duplicate",7
 "rows_excluded_reviewed_stale",0
 "heights_failed_parsing_nonempty_raw",74
 "positions_unmapped_nonempty_raw",305

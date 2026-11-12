@@ -303,10 +303,13 @@ def test_parse_roster_wbkb_responsive_duplicate_jersey_cell():
 
 
 def test_parse_iowa_state_cards_aria_label_name_fallback():
-    # Some templates (Colorado St. 2023-24 as archived) drop the name
-    # element entirely and carry the name only on the anchors' aria-labels
-    # ('Malaya Jones full bio'). Without the fallback every card parses
-    # with a blank name.
+    # Defensive guard, not a known live case: the CSU 2023-24 page was
+    # verified on 2026-11-12 to carry names in
+    # .s-person-details__personal-single-line (rendered and archived alike),
+    # so no live template has been seen dropping the name element. Synthetic
+    # card here proves the parser still works if one ever does — the name
+    # then comes from the anchors' aria-labels ('Malaya Jones full bio')
+    # instead of every card parsing with a blank name.
     team = {"ncaa_id": 156, "team": "Colorado St.", "url": "https://csurams.com/sports/womens-volleyball"}
     html = BeautifulSoup("""
     <div class="s-person-card__content">
