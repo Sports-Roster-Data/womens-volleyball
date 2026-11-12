@@ -4129,24 +4129,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 670,Texas State,11297,Bailey Hanner,,"Sugar Land, Texas",Fort Bend Christian Academy,,"6'2""",Middle,20,//www.txstatebobcats.com/sports/womens-volleyball/roster/bailey-hanner/11297,2024
 670,Texas State,11300,Alyssa Ortega,,"San Antonio, Texas",San Antonio Churchill HS,Stephen F. Austin,"5'4""",Libero,21,//www.txstatebobcats.com/sports/womens-volleyball/roster/alyssa-ortega/11300,2024
 670,Texas State,11310,Naara Tanco,,"Austin, Texas",Rouse HS,,"6'1""",Middle,23,//www.txstatebobcats.com/sports/womens-volleyball/roster/naara-tanco/11310,2024
-9,UAB,,Diora Bender,Fr.,"Pawleys Island, S.C.",,,5' 11'',OH/OPP,1,//uabsports.com/sports/womens-volleyball/roster/diora-bender/12339,2024
-9,UAB,,Sydney Austin,Sr.,"Flowery Branch, Ga.",,,6' 3'',MB,2,//uabsports.com/sports/womens-volleyball/roster/sydney-austin/12122,2024
-9,UAB,,Abby Jones,Jr.,"Johns Creek, Ga.",,,6' 0'',OH,3,//uabsports.com/sports/womens-volleyball/roster/abby-jones/11711,2024
-9,UAB,,Sara Sykes,R-So.,"Gilbert, S.C.",,,5' 2'',L/DS,4,//uabsports.com/sports/womens-volleyball/roster/sara-sykes/11716,2024
-9,UAB,,Payton Sirdine,Fr.,"Bloomfield, Conn.",,,6' 1'',OPP/OH,7,//uabsports.com/sports/womens-volleyball/roster/payton-sirdine/12126,2024
-9,UAB,,Ingrid Dittmar,Fr.,"Zanesville, Ohio",,,6' 0'',S,8,//uabsports.com/sports/womens-volleyball/roster/ingrid-dittmar/12124,2024
-9,UAB,,Kennedy Vaughn,So.,"Madison, Ala.",,,5' 10'',OH,9,//uabsports.com/sports/womens-volleyball/roster/kennedy-vaughn/11718,2024
-9,UAB,,Juliet Galla,Jr.,"Mobile, Ala.",,,5' 8'',L/DS,10,//uabsports.com/sports/womens-volleyball/roster/juliet-galla/11710,2024
-9,UAB,,Makayla Meister,Fr.,"Newark, Ohio",,,6' 1'',OH,11,//uabsports.com/sports/womens-volleyball/roster/makayla-meister/12125,2024
-9,UAB,,Delaney Bowser,R-Sr.,"McCordsville, Ind.",,,5' 8'',DS,12,//uabsports.com/sports/womens-volleyball/roster/delaney-bowser/11708,2024
-9,UAB,,Aniya Kennedy,R-Sr.,"La Porte, Ind.",,,6' 0'',OPP,14,//uabsports.com/sports/womens-volleyball/roster/aniya-kennedy/12121,2024
-9,UAB,,Chinwendu Aguoru,Fr.,"Pflugerville, Texas",,,6' 1'',MB,15,//uabsports.com/sports/womens-volleyball/roster/chinwendu-aguoru/12341,2024
-9,UAB,,Addyson Smock,So.,"Easton, Mass.",,,6' 0'',MB,17,//uabsports.com/sports/womens-volleyball/roster/addyson-smock/11714,2024
-9,UAB,,Annastiina Tarkkanen,Jr.,"Orivesi, Finland",,,5' 10'',S,18,//uabsports.com/sports/womens-volleyball/roster/annastiina-tarkkanen/11717,2024
-9,UAB,,Kennedy Jones,So.,"St. Louis, Mo.",,,6' 2'',MB,20,//uabsports.com/sports/womens-volleyball/roster/kennedy-jones/11712,2024
-9,UAB,,Rachel McCollum,R-Sr.,"Lakeland, Tenn.",,,6' 2'',S/OPP,21,//uabsports.com/sports/womens-volleyball/roster/rachel-mccollum/12340,2024
-9,UAB,,Rylee Busse,R-Jr.,"New Braunfels, Texas",,,5' 10'',DS,23,//uabsports.com/sports/womens-volleyball/roster/rylee-busse/12123,2024
-9,UAB,,Mia Reese,Sr.,"Nashville, Tenn.",,,5' 11'',OH,24,//uabsports.com/sports/womens-volleyball/roster/mia-reese/11713,2024
 2678,Arkansas-Pine Bluff,4306,Camille Johnson,Sophomore,"Gainesville, Florida",Santa Fe HS,,"5'6""",OH,1,//www.uapblionsroar.com/sports/womens-volleyball/roster/camille-johnson/4306,2024
 2678,Arkansas-Pine Bluff,4312,Haley Reeves,Freshman,"Mansfield, TX",Mansfield Lake Ridge HS,,"5'7""",OH,2,//www.uapblionsroar.com/sports/womens-volleyball/roster/haley-reeves/4312,2024
 2678,Arkansas-Pine Bluff,4313,Destani Jones,Sophomore,"Portsmouth, Virginia",Grossmont College,,"5'9""",MB/OH,3,//www.uapblionsroar.com/sports/womens-volleyball/roster/destani-jones/4313,2024
@@ -15983,3 +15965,18 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 539,Penn State,,Catherine Burke,,"Glenview, Ill.",Loyola Academy,,,MB,23,/roster/player/catherine-burke,2024
 539,Penn State,,Quinn Menger,,"Powhatan, Va.",St. Catherine's School,,,DS/S,24,/roster/player/quinn-menger,2024
 539,Penn State,,Maggie Mendelson,,"North Ogden, Utah",Fremont,,,MB,44,/roster/player/maggie-mendelson,2024
+9,UAB,,Jorda Crook,So.,"Ohatchee, Ala.",Ohatchee,,6' 0'',OPP,2,/sports/womens-volleyball/roster/jorda-crook/11135,2024-25
+9,UAB,,Abby Jones,Fr.,"Johns Creek, Ga.",Johns Creek HS,,6' 0'',OH,3,/sports/womens-volleyball/roster/abby-jones/11711,2024-25
+9,UAB,,Anna Hewitt,Sr.,"Bowling Green, Ky.",Greenwood,,5' 8'',L/DS,4,/sports/womens-volleyball/roster/anna-hewitt/10566,2024-25
+9,UAB,,Meg Jarrett,Fr.,"Madison, Ala",Bob Jones,,5' 7'',L/DS,5,/sports/womens-volleyball/roster/meg-jarrett/11136,2024-25
+9,UAB,,Brooklyn Allison,So.,"Birmingham, Ala.",Spain Park,,5' 6'',L/DS,7,/sports/womens-volleyball/roster/brooklyn-allison/10560,2024-25
+9,UAB,,Katia Nikolic,So.,"St. John, Ind.",Lake Central,,6' 0'',OH,10,/sports/womens-volleyball/roster/katia-nikolic/10567,2024-25
+9,UAB,,Izabella Carter,Jr.,"Lexington, Ky.",Bryan Station,,5' 11'',S,11,/sports/womens-volleyball/roster/izabella-carter/11134,2024-25
+9,UAB,,Delaney Bowser,R-So.,"McCordsville, Ind.",Mt. Vernon HS,,5' 9'',DS,12,/sports/womens-volleyball/roster/delaney-bowser/11708,2024-25
+9,UAB,,Kelsey Smith,Jr.,"Cicero, Ind.",Hamilton Heights,,5' 11'',S/OPP,13,/sports/womens-volleyball/roster/kelsey-smith/10571,2024-25
+9,UAB,,Madison Page,Sr.,"Marietta, Ga.",Kell,,6' 0'',MB,15,/sports/womens-volleyball/roster/madison-page/10568,2024-25
+9,UAB,,Asli Celikkol,Sr.,"Izmir, Turkey",American University,,6' 2'',OH,16,/sports/womens-volleyball/roster/asli-celikkol/10564,2024-25
+9,UAB,,Annastiina Tarkkanen,Fr.,"Orivesi, Finland",Orivesi HS,,,S,18,/sports/womens-volleyball/roster/annastiina-tarkkanen/11717,2024-25
+9,UAB,,Chloe Rodriguez,Sr.,"Portland, Texas",Gregory Portland,,6' 2'',MB,21,/sports/womens-volleyball/roster/chloe-rodriguez/10570,2024-25
+9,UAB,,Summer Snead,R-Fr.,"Nashville, Tenn.",Hillsboro,,6' 0'',MB,23,/sports/womens-volleyball/roster/summer-snead/11140,2024-25
+9,UAB,,Mia Reese,So.,"Nashville, Tenn.",Hillsboro HS,,5' 11'',OH,24,/sports/womens-volleyball/roster/mia-reese/11713,2024-25
