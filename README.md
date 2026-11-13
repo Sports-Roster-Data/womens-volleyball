@@ -153,9 +153,12 @@ and tiers its findings: `impossible` (a class drop of two or more ranks,
 `Freshman` observed three or more seasons apart, or the same grade-2/3/4
 class five or more seasons apart) versus `suspect` (a one-rank drop across
 four or more seasons without a redshirt). The review list goes to
-`data/derived/audits/echo_sweep.csv`; every echo finding has been
-adjudicated or excluded, and the only remaining rows are two known
-bio-id reuse anomalies rather than echoes.
+`data/derived/audits/echo_sweep.csv`. Every finding that this check has
+raised has been adjudicated: most were site echoes or excluded team-seasons,
+and the last two turned out to be bare-`Rs.` labels whose sites mark
+freshmen with a distinct vocabulary (`Fy.`/`Fr.`) — fifth-year/redshirt
+seniors mis-read as redshirt freshmen, fixed by reviewed cell corrections
+(kaira-lujan/9203, dana-borsz/4788).
 
 ### Re-scraping a season (runbook)
 
