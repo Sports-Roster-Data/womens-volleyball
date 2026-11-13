@@ -143,10 +143,19 @@ parses disagree, anything that matches the bare current-roster render is
 rejected as the slug-ignoring echo.
 
 Audit a whole dataset for that signature with
-`scripts/find_echo_seasons.py`: it flags teams with identical
-consecutive-season rosters (never legitimate, class years advance) and
-writes a chronology-suspect review list to
-`data/derived/audits/echo_sweep.csv`.
+`scripts/find_echo_seasons.py`. It runs two checks: an identical-run census
+(the same roster two seasons running is never legitimate — class years
+advance every non-redshirt season), and a tiered chronology check whose
+person key is `(team, profile_url)` — stable per player and exactly what
+echo rows share with the current page — with a name fallback used only for
+players whose rows all lack URLs. The chronology check is redshirt-aware
+and tiers its findings: `impossible` (a class drop of two or more ranks,
+`Freshman` observed three or more seasons apart, or the same grade-2/3/4
+class five or more seasons apart) versus `suspect` (a one-rank drop across
+four or more seasons without a redshirt). The review list goes to
+`data/derived/audits/echo_sweep.csv`; every echo finding has been
+adjudicated or excluded, and the only remaining rows are two known
+bio-id reuse anomalies rather than echoes.
 
 ### Re-scraping a season (runbook)
 
@@ -165,7 +174,29 @@ If a site no longer serves real per-season data (echo on all URL forms, no
 Wayback coverage either), the affected team-seasons can be excluded from
 publication with a reviewed entry in `data/reference/source_exclusions.csv`
 plus a `team_omission` row in `data/reference/coverage_exceptions.csv` —
-see TCU 2016-17/2017-18 and UTEP 2016-17 for the precedent.
+see TCU 2016-17/2017-18, UTEP 2016-17, Georgia 2015-16, Marquette 2015-16
+and Columbia 2015-16–2017-18 for the precedent.
+
+### Adjudicating same-name duplicate players
+
+The build fails when a team-season holds two rows it cannot resolve: either
+two captures of one person with no basis to pick between them, or two rows
+that might be different people. Unresolved groups land in each season's
+`data/derived/audits/<season>/duplicate_review.csv`; dispositions are
+recorded in `corrections/row_corrections.csv` with evidence and a
+reviewed-on date:
+
+* `drop_duplicate` (with `keeper_source_row_id`) — the captures are one
+  page revision of one player; keep the fuller capture.
+* `keep_distinct` — the rows are two different people (for example,
+  different jersey numbers both present).
+* `quarantine` — both rows belong to a *different* season: later-revision
+  echoes of a current roster.
+
+Evidence comes from two sources: the player's bio-id progression across
+adjacent seasons (profile ids advance with class years, pinning which
+capture belongs to which season) and an in-season Wayback capture of the
+roster page, which shows who was actually listed mid-season.
 
 ### How team routing works
 
