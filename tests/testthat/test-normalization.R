@@ -127,3 +127,28 @@ test_that("hometowns parse states, provinces, countries and regions", {
   expect_equal(out$hometown_status[22], "missing")
   expect_equal(out$hometown_status[nrow(out)], "missing")
 })
+
+test_that("bare postal codes and full names added 2026-11-13 parse", {
+  refs <- vb_test_refs()
+  rows <- tibble(hometown_raw = c("Phoenix, AZ", "Birmingham, AL",
+                                  "Louisville, Kentucky", "Dover, Delaware",
+                                  "Fargo, North Dakota", "Newport, Rhode Island",
+                                  "Sofia, Bulgaria", "Stockholm, Sweden",
+                                  "Pristina, Kosovo", "Pago Pago, American Samoa"))
+  rows$hometown_source <- rows$hometown_raw
+  out <- vb_clean_hometowns(rows, refs$state, refs$country)
+  expect_equal(out$state[1:6], c("AZ", "AL", "KY", "DE", "ND", "RI"))
+  expect_true(all(out$country[1:6] == "USA"))
+  expect_equal(out$country[7:9], c("BGR", "SWE", "XKX"))
+  expect_equal(out$state[10], "AS")
+  expect_true(all(out$hometown_status == "parsed"))
+})
+
+test_that("staff profile URLs are screened out", {
+  expect_true(vb_screen_staff_url("//goprincetontigers.com/sports/womens-volleyball/roster/staff/corina-tarnita/7699"))
+  expect_true(vb_screen_staff_url("https://gomastodons.com/sports/womens-volleyball/roster/coaches/dan-gebhart/1503"))
+  expect_false(vb_screen_staff_url("/sports/womens-volleyball/roster/abby-christian/15898"))
+  # a player whose name merely contains "coach" in the slug is not staff
+  expect_false(vb_screen_staff_url("/sports/womens-volleyball/roster/kate-coachman/12"))
+  expect_false(vb_screen_staff_url(NA))
+})

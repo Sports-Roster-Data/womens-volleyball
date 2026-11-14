@@ -4690,23 +4690,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 260,Gonzaga,,Jody Smith,So.,"Redondo Beach, Calif.",Redondo Union HS,,6' 2'',MB,16,/sports/womens-volleyball/roster/jody-smith/5339,2021
 260,Gonzaga,,Grace Ehler,So.,"Tucson, Ariz.",Marana,,6' 2'',OH,17,/sports/womens-volleyball/roster/grace-ehler/4771,2021
 260,Gonzaga,,Zahria Parker,So.,"Austin, TX",McNeil HS,,5' 6'',DS/L,18,/sports/womens-volleyball/roster/zahria-parker/4236,2021
-5,Akron,,Rachel Abramson,LS,"Waddell, Ariz.",Verrado HS,Arizona Sky,6' 0'',Jr.,1,//gozips.com/sports/womens-volleyball/roster/rachel-abramson/7964,2021
-5,Akron,,Taylor Sharrits,DS,"Concord, Ohio",Lake Catholic HS,Eastside Cleveland Juniors,5' 7'',Gr.,2,//gozips.com/sports/womens-volleyball/roster/taylor-sharrits/7457,2021
-5,Akron,,Emily Weigand,S,"Burton, Ohio",Notre Dame Cathedral Latin HS,Eastside Cleveland Juniors,5' 10'',Gr.,3,//gozips.com/sports/womens-volleyball/roster/emily-weigand/7458,2021
-5,Akron,,Anne Lesure,S,"Carmel, Ind.",Carmel HS,Circle City VBC,6' 0'',So.,4,//gozips.com/sports/womens-volleyball/roster/anne-lesure/7970,2021
-5,Akron,,Jayda Young,MB,"Toledo, Ohio",Whitmer HS,Premier Academy,6' 0'',So.,5,//gozips.com/sports/womens-volleyball/roster/jayda-young/7973,2021
-5,Akron,,Ellen Kinnaird,RS,"Lewis Center, Ohio",Olentangy HS,Mintonette Sports,5' 11'',Fr.,6,//gozips.com/sports/womens-volleyball/roster/ellen-kinnaird/8962,2021
-5,Akron,,Genevieve Hara,LS/RS,"Imperial Beach, Calif.",Mar Vista HS,Storm VBC,5' 11'',R-Fr.,7,//gozips.com/sports/womens-volleyball/roster/genevieve-hara/8704,2021
-5,Akron,,Lauren Latka,DS,"Zionsville, Ind.",Zionsville HS,Team Indiana,5' 7'',Jr.,8,//gozips.com/sports/womens-volleyball/roster/lauren-latka/7969,2021
-5,Akron,,Baylee Vought,S,"Fort Mill, S.C.",Indian Land HS,Carolina Union,6' 0'',Fr.,9,//gozips.com/sports/womens-volleyball/roster/baylee-vought/8709,2021
-5,Akron,,Alexis Adleta,LS,"West Chester, Ohio",Lakota East HS,Elevation,6' 2'',Gr.,10,//gozips.com/sports/womens-volleyball/roster/alexis-adleta/7449,2021
-5,Akron,,Megan Kelly,MB,"Lakewood, Ill.",Crystal Lake Central HS,Sky High,6' 0'',Sr.,11,//gozips.com/sports/womens-volleyball/roster/megan-kelly/7453,2021
-5,Akron,,Jen Durra,LS,"Painesville, Ohio",Riverside HS,Eastside Cleveland Juniors,5' 11'',Sr.,12,//gozips.com/sports/womens-volleyball/roster/jen-durra/7450,2021
-5,Akron,,Faith Johnson,LS/RS,"Naperville, Ill.",Neuqua Valley HS,First Alliance,5' 11'',So.,16,//gozips.com/sports/womens-volleyball/roster/faith-johnson/8705,2021
-5,Akron,,Karleighana Jones,MB,"White Plains, N.Y.",White Plains HS,USANY Volleyball,6' 3'',Fr.,17,//gozips.com/sports/womens-volleyball/roster/karleighana-jones/8961,2021
-5,Akron,,Hannah Yaconis,MB,"Batavia, Ill.",Batavia HS,Sports Performance,6' 0'',Sr.,18,//gozips.com/sports/womens-volleyball/roster/hannah-yaconis/7459,2021
-5,Akron,,Teagan Ochaya,RS,"Mentor, Ohio",Mentor HS,Eastside Cleveland Juniors,6' 3'',Sr.,19,//gozips.com/sports/womens-volleyball/roster/teagan-ochaya/8183,2021
-5,Akron,,Gia Padilla,LS,"Apollo Beach, Fla.",Carrollwood Day School,OTVA Volleyball,5' 10'',Fr.,21,//gozips.com/sports/womens-volleyball/roster/gia-padilla/7971,2021
 100,Cal State LA,3629,Megan Menchaca,Junior,"Laredo, Texas",John B. Alexander HS,Notre Dame de Namur,"6'1""",RS,1,//www.lagoldeneagles.com/sports/womens-volleyball/roster/megan-menchaca/3629,2021
 100,Cal State LA,3630,Malia Apodaca,Sophomore,Yuba City,Yuba City HS,,"5'2""",L/DS,2,//www.lagoldeneagles.com/sports/womens-volleyball/roster/malia-apodaca/3630,2021
 100,Cal State LA,3631,Allison Linder,Junior,Roseville,Oakmont HS,American River JC,"5'10""",OH,3,//www.lagoldeneagles.com/sports/womens-volleyball/roster/allison-linder/3631,2021
@@ -15272,3 +15255,20 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 510,Northwood,,Sydney Hasenfratz,Fr.,"Clarkston, Mich.",Clarkston,,6-1,MB/RS,18,//www.gonorthwood.com/sports/wvball/2021-22/bios/hasenfratz_sydney_aosb,2021-22
 510,Northwood,,Kiana Martens,So.,"St. Johns, Mich.",St. Johns,,6-0,OP,19,//www.gonorthwood.com/sports/wvball/2021-22/bios/martens_kiana_ddli,2021-22
 510,Northwood,,Haley Jaster,So.,"Midland, Mich.",Dow,,6-1,MB,23,//www.gonorthwood.com/sports/wvball/2021-22/bios/jaster_haley_ol4v,2021-22
+5,Akron,,Rachel Abramson,Jr.,"Waddell, Ariz.",Verrado HS,,6' 0'',LS,1,/sports/womens-volleyball/roster/rachel-abramson/7964,2021-22
+5,Akron,,Taylor Sharrits,Gr.,"Concord, Ohio",Lake Catholic HS,,5' 7'',DS,2,/sports/womens-volleyball/roster/taylor-sharrits/7457,2021-22
+5,Akron,,Emily Weigand,Gr.,"Burton, Ohio",Notre Dame Cathedral Latin HS,,5' 10'',S,3,/sports/womens-volleyball/roster/emily-weigand/7458,2021-22
+5,Akron,,Anne Lesure,So.,"Carmel, Ind.",Carmel HS,,6' 0'',S,4,/sports/womens-volleyball/roster/anne-lesure/7970,2021-22
+5,Akron,,Jayda Young,So.,"Toledo, Ohio",Whitmer HS,,6' 0'',MB,5,/sports/womens-volleyball/roster/jayda-young/7973,2021-22
+5,Akron,,Ellen Kinnaird,Fr.,"Lewis Center, Ohio",Olentangy HS,,5' 11'',RS,6,/sports/womens-volleyball/roster/ellen-kinnaird/8962,2021-22
+5,Akron,,Genevieve Hara,R-Fr.,"Imperial Beach, Calif.",Mar Vista HS,,5' 11'',LS/RS,7,/sports/womens-volleyball/roster/genevieve-hara/8704,2021-22
+5,Akron,,Lauren Latka,Jr.,"Zionsville, Ind.",Zionsville HS,,5' 7'',DS,8,/sports/womens-volleyball/roster/lauren-latka/7969,2021-22
+5,Akron,,Baylee Vought,Fr.,"Fort Mill, S.C.",Indian Land HS,,6' 0'',S,9,/sports/womens-volleyball/roster/baylee-vought/8709,2021-22
+5,Akron,,Alexis Adleta,Gr.,"West Chester, Ohio",Lakota East HS,,6' 2'',LS,10,/sports/womens-volleyball/roster/alexis-adleta/7449,2021-22
+5,Akron,,Megan Kelly,Sr.,"Lakewood, Ill.",Crystal Lake Central HS,,6' 0'',MB,11,/sports/womens-volleyball/roster/megan-kelly/7453,2021-22
+5,Akron,,Jen Durra,Sr.,"Painesville, Ohio",Riverside HS,,5' 11'',LS,12,/sports/womens-volleyball/roster/jen-durra/7450,2021-22
+5,Akron,,Faith Johnson,So.,"Naperville, Ill.",Neuqua Valley HS,,5' 11'',LS/RS,16,/sports/womens-volleyball/roster/faith-johnson/8705,2021-22
+5,Akron,,Karleighana Jones,Fr.,"White Plains, N.Y.",White Plains HS,,6' 3'',MB,17,/sports/womens-volleyball/roster/karleighana-jones/8961,2021-22
+5,Akron,,Hannah Yaconis,Sr.,"Batavia, Ill.",Batavia HS,,6' 0'',MB,18,/sports/womens-volleyball/roster/hannah-yaconis/7459,2021-22
+5,Akron,,Teagan Ochaya,Sr.,"Mentor, Ohio",Mentor HS,,6' 3'',RS,19,/sports/womens-volleyball/roster/teagan-ochaya/8183,2021-22
+5,Akron,,Gia Padilla,Fr.,"Apollo Beach, Fla.",Carrollwood Day School,,5' 10'',LS,21,/sports/womens-volleyball/roster/gia-padilla/7971,2021-22

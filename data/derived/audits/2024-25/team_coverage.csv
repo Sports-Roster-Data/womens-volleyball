@@ -397,7 +397,7 @@
 "Indiana State","305",16,0,0,0,16
 "Indiana","306",18,0,0,0,18
 "Indiana (PA)","307",21,0,0,0,21
-"Purdue-Fort Wayne","308",18,3,0,0,15
+"Purdue-Fort Wayne","308",18,7,0,0,11
 "UIndy","309",18,0,0,0,18
 "Arkansas","31",18,0,0,0,18
 "Iona","310",19,0,0,0,19
@@ -559,10 +559,10 @@
 "North Dakota State","493",15,0,0,0,15
 "North Dakota","494",16,0,0,0,16
 "North Park","496",34,0,0,0,34
-"North Texas","497",26,2,0,0,24
+"North Texas","497",26,6,0,0,20
 "Louisiana Monroe","498",18,0,0,0,18
 "Truman State","499",16,0,0,0,16
-"Akron","5",22,2,0,0,20
+"Akron","5",18,0,0,0,18
 "Bates","50",19,0,0,0,19
 "Northeastern","500",16,0,0,0,16
 "Northern Arizona","501",18,0,0,0,18
@@ -613,7 +613,7 @@
 "Portland","551",19,0,0,0,19
 "SUNY Potsdam","552",13,0,0,0,13
 "Prairie View A&M","553",15,0,0,0,15
-"Princeton","554",27,0,0,0,27
+"Princeton","554",27,12,0,0,15
 "Providence","556",16,0,0,0,16
 "Puget Sound","557",28,0,0,0,28
 "Purdue","559",17,0,0,0,17

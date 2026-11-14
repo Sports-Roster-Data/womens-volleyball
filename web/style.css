@@ -1,0 +1,148 @@
+:root {
+  color-scheme: light;
+  --surface-0: #f5f4f1;
+  --surface-1: #fcfcfb;
+  --border: #e2e1dc;
+  --grid: #ecebe7;
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #77766f;
+  --accent: #2a78d6;
+  --d1: #2a78d6;
+  --d2: #eb6834;
+  --d3: #1baf7a;
+  --series-4: #eda100;
+  --neutral: #c3c2b7;
+  --series-5: #e87ba4;
+  --series-6: #008300;
+  --land: #ecebe7;
+  --land-line: #fcfcfb;
+  --seq-0: #cde2fb;
+  --seq-1: #104281;
+  --campus: #0b0b0b;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --surface-0: #121211;
+    --surface-1: #1a1a19;
+    --border: #33332f;
+    --grid: #2a2a27;
+    --text-primary: #f0efec;
+    --text-secondary: #c3c2b7;
+    --text-muted: #96958c;
+    --accent: #3987e5;
+    --d1: #3987e5;
+    --d2: #d95926;
+    --d3: #199e70;
+  --series-4: #c98500;
+  --neutral: #52514e;
+  --series-5: #d55181;
+  --series-6: #008300;
+    --series-4: #c98500;
+    --neutral: #52514e;
+    --series-5: #d55181;
+    --series-6: #008300;
+    --land: #2a2a27;
+    --land-line: #1a1a19;
+    --seq-0: #184f95;
+    --seq-1: #cde2fb;
+    --campus: #f0efec;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-0: #121211;
+  --surface-1: #1a1a19;
+  --border: #33332f;
+  --grid: #2a2a27;
+  --text-primary: #f0efec;
+  --text-secondary: #c3c2b7;
+  --text-muted: #96958c;
+  --accent: #3987e5;
+  --d1: #3987e5;
+  --d2: #d95926;
+  --d3: #199e70;
+  --land: #2a2a27;
+  --land-line: #1a1a19;
+  --seq-0: #184f95;
+  --seq-1: #cde2fb;
+  --campus: #f0efec;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--surface-0);
+  color: var(--text-primary);
+  font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+a { color: var(--accent); }
+code { font-size: 0.9em; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+.muted { color: var(--text-muted); }
+.small { font-size: 0.875rem; }
+
+.top { background: var(--surface-1); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 5; }
+.top-inner { display: flex; align-items: center; gap: 16px; min-height: 56px; flex-wrap: wrap; }
+.brand { font-weight: 700; color: var(--text-primary); text-decoration: none; }
+nav { display: flex; gap: 4px; flex-wrap: wrap; flex: 1; }
+nav a { color: var(--text-secondary); text-decoration: none; padding: 6px 10px; border-radius: 6px; font-size: 0.95rem; }
+nav a[aria-current="page"] { background: var(--surface-0); color: var(--text-primary); font-weight: 600; }
+.theme { background: none; border: 1px solid var(--border); color: var(--text-secondary); border-radius: 6px; padding: 4px 10px; cursor: pointer; font-size: 1rem; }
+
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 28px 0 8px; letter-spacing: -0.01em; }
+h2 { font-size: 1.15rem; margin: 0 0 4px; }
+.lede { color: var(--text-secondary); max-width: 68ch; margin: 0 0 20px; }
+
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 16px 0 24px; }
+.tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.tile .k { color: var(--text-secondary); font-size: 0.85rem; }
+.tile .v { font-size: 1.9rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.15; margin: 4px 0; }
+.tile .d { color: var(--text-muted); font-size: 0.85rem; }
+
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 16px; }
+.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-bottom: 16px; min-width: 0; }
+.card p.note { color: var(--text-muted); font-size: 0.85rem; margin: 8px 0 0; }
+.card .sub { color: var(--text-secondary); font-size: 0.9rem; margin: 0 0 10px; }
+.chart { width: 100%; overflow: hidden; }
+.chart svg { max-width: 100%; height: auto; }
+
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-secondary); margin: 0 0 8px; }
+.legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; background: var(--c); }
+
+.controls { display: flex; gap: 10px; flex-wrap: wrap; align-items: end; margin: 0 0 16px; }
+.controls label { display: flex; flex-direction: column; gap: 4px; font-size: 0.8rem; color: var(--text-secondary); }
+input, select { font: inherit; font-size: 0.95rem; padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); min-width: 0; }
+input[type="search"] { width: min(100%, 320px); }
+
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+th { color: var(--text-secondary); font-weight: 600; font-size: 0.8rem; }
+td.num, th.num { text-align: right; }
+.table-wrap { overflow-x: auto; max-height: 520px; overflow-y: auto; }
+.pill { display: inline-block; font-size: 0.75rem; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--border); color: var(--text-secondary); white-space: nowrap; }
+.pager { display: flex; gap: 8px; align-items: center; margin-top: 10px; font-size: 0.9rem; color: var(--text-secondary); }
+.pager button { font: inherit; padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); cursor: pointer; }
+.pager button:disabled { opacity: 0.4; cursor: default; }
+
+.prog-list { columns: 3 220px; column-gap: 24px; font-size: 0.92rem; }
+.prog-list a { display: block; padding: 2px 0; break-inside: avoid; text-decoration: none; }
+.prog-list .div { color: var(--text-muted); font-size: 0.78rem; }
+
+.foot { color: var(--text-muted); font-size: 0.82rem; padding-top: 16px; padding-bottom: 32px; }
+
+/* Plot tooltips follow the theme */
+figure, .plot-d6a7b5 { margin: 0; }
+[aria-label="tip"] path { fill: var(--surface-1); stroke: var(--border); }
+[aria-label="tip"] text { fill: var(--text-primary); }
+
+@media (max-width: 600px) {
+  h1 { font-size: 1.4rem; }
+  .tile .v { font-size: 1.5rem; }
+  .top { position: static; }
+  .top-inner { gap: 6px; padding-top: 8px; padding-bottom: 6px; justify-content: space-between; }
+  nav { order: 3; flex: 0 0 100%; flex-wrap: nowrap; overflow-x: auto; }
+  nav a { padding: 4px 7px; font-size: 0.88rem; white-space: nowrap; }
+}

@@ -4508,27 +4508,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 260,Gonzaga,,Raechelle Dykstra,So.,"Avondale, Ariz.",Verrado HS,,5' 8'',,18,/sports/womens-volleyball/roster/raechelle-dykstra/6475,2025
 260,Gonzaga,,Taylor Walsh,So.,"Villa Park, Calif.",Villa Park HS,,6' 2'',,20,/sports/womens-volleyball/roster/taylor-walsh/6481,2025
 260,Gonzaga,,Fallon Thompson,Sr.,"Spring, Texas",Grand Oaks HS,,5' 11'',,21,/sports/womens-volleyball/roster/fallon-thompson/6050,2025
-5,Akron,,Vanessa Del Real,L,"Crown Point, Ind.",Crown Point HS,1st Alliance,5' 6'',Jr.,1,//gozips.com/sports/womens-volleyball/roster/vanessa-del-real/10073,2025
-5,Akron,,Sarah Bettis,OH/RS,"Blissfield, Mich.",Blissfield HS,Pineapple,6' 1'',Jr.,2,//gozips.com/sports/womens-volleyball/roster/sarah-bettis/10071,2025
-5,Akron,,Payton Evans,S,"Cincinnati, Ohio",Mason HS,Elevation Volleyball Club,5' 9'',So.,3,//gozips.com/sports/womens-volleyball/roster/payton-evans/10074,2025
-5,Akron,,Ruby Klusman,OH,"Cincinnati, Ohio",Mercy McAuley HS | Morehead State,,5' 9'',So.,4,//gozips.com/sports/womens-volleyball/roster/ruby-klusman/10076,2025
-5,Akron,,Jordyn Aeschliman,OH,"Lester, Iowa",West Lyon HS,,6' 3'',Fr.,5,//gozips.com/sports/womens-volleyball/roster/jordyn-aeschliman/10070,2025
-5,Akron,,Martina Villani,S,"Milan, Italy",Liceo Leonardo Da Vinci | Monroe,,6' 2'',Jr.,6,//gozips.com/sports/womens-volleyball/roster/martina-villani/9589,2025
-5,Akron,,Reilly Chausse,L,"Orland Park, Ill.",Carl Sandburg HS,1st Alliance,5' 4'',So.,7,//gozips.com/sports/womens-volleyball/roster/reilly-chausse/10072,2025
-5,Akron,,Maureen Mathews,OH,"St. Louis, Mo.",Northwest HS | Jefferson College | Emporia State | West Virginia State,,6' 0'',Gr.,8,//gozips.com/sports/womens-volleyball/roster/maureen-mathews/9764,2025
-5,Akron,,Jessie Musselman,OH,"Columbus, Ohio",Bishop Watterson HS,Mintonette 72s,5' 10'',Fr.,9,//gozips.com/sports/womens-volleyball/roster/jessie-musselman/10077,2025
-5,Akron,,Jaryn Morgan,L,"Champions Gate, Fla.",Barberton HS | Keiser Univ. | Lynn,,5' 5'',Gr.,10,//gozips.com/sports/womens-volleyball/roster/jaryn-morgan/9663,2025
-5,Akron,,Gabby Brissett,RS/OH,"Coral Springs, FL",Calvary Christian Academy | Bellarmine,,5' 10'',Sr.,12,//gozips.com/sports/womens-volleyball/roster/gabby-brissett/9582,2025
-5,Akron,,Delaney Gash,OH,"Lexington, Ky.",Paul Laurence Dunbar HS,Lexington United Volleyball,5' 11'',So.,13,//gozips.com/sports/womens-volleyball/roster/delaney-gash/10075,2025
-5,Akron,,Lauren Wilson,OH/MB,"New Palestine, Ind.",New Castle HS,,6' 1'',Fr.,14,//gozips.com/sports/womens-volleyball/roster/lauren-wilson/10080,2025
-5,Akron,,Lyndi Wolf,MB,Fremont Ohio,Fremont Ross HS,,6' 2'',Fr.,16,//gozips.com/sports/womens-volleyball/roster/lyndi-wolf/10081,2025
-5,Akron,,Katelyn Crofts,MB,"Gainesville, Fla.",The Rock | Sante Fe College | Jacksonville State,,6' 2'',Gr.,17,//gozips.com/sports/womens-volleyball/roster/katelyn-crofts/9798,2025
-5,Akron,,Masa Prascevic,S,"Novi Sad, Serbia","School of economic “Vuk Karadzic"" Stara Pazova",,5' 11'',Fr.,18,//gozips.com/sports/womens-volleyball/roster/masa-prascevic/10079,2025
-5,Akron,,Chidera Ozoh,MB,"Hazel Crest, Ill.",Homewood Flossmoor HS,1st Alliance,6' 0'',Jr.,22,//gozips.com/sports/womens-volleyball/roster/chidera-ozoh/10078,2025
-5,Akron,,Tyson Norton,Head Women's Volleyball Coach,,,,tnorton@uakron.edu,330-972-7338,,//gozips.com/sports/womens-volleyball/roster/coaches/tyson-norton/1301,2025
-5,Akron,,Jenna Sullivan,Assistant Coach,,,,jsulliva@uakron.edu,,,//gozips.com/sports/womens-volleyball/roster/coaches/jenna--sullivan/1303,2025
-5,Akron,,Regan Nickol,Assistant Coach,,,,rnickol@uakron.edu,,,//gozips.com/sports/womens-volleyball/roster/coaches/regan-nickol/1304,2025
-5,Akron,,Ieasia Walker,Head Strength and Conditioning Coach,,,,iwalker@uakron.edu,,,//gozips.com/sports/womens-volleyball/roster/staff/ieasia-walker/94,2025
 100,Cal State LA,4771,Oluwatoyin Sunday,Junior,Palmdale,Knight HS,LA Mission College,"5'10""",RS,0,//www.lagoldeneagles.com/sports/womens-volleyball/roster/oluwatoyin-sunday/4771,2025
 100,Cal State LA,4772,Seriah Demski,Freshman,Eastvale,Los Osos HS,,"5'6""",S,1,//www.lagoldeneagles.com/sports/womens-volleyball/roster/seriah-demski/4772,2025
 100,Cal State LA,4773,Brooke Paige,Senior,"Las Vegas, Nev.",Palo Verde HS,,"5'7""",L,2,//www.lagoldeneagles.com/sports/womens-volleyball/roster/brooke-paige/4773,2025
@@ -15798,3 +15777,20 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 510,Northwood,,Ava Thomas,Fr.,"Coopersville, Mich.",Coopersville,,5-6,L,19,//www.gonorthwood.com/sports/wvball/2025-26/bios/thomas_ava_8oy9,2025-26
 510,Northwood,,Kyden Ehle,Fr.,"Elsie, Mich.",Ovid-Elsie,,5-10,S,21,//www.gonorthwood.com/sports/wvball/2025-26/bios/ehle_kyden_8023,2025-26
 510,Northwood,,Addison Pearce,Fr.,"Clarkston, Mich.",Everest Collegiate,,5-11,MB/RS,23,//www.gonorthwood.com/sports/wvball/2025-26/bios/pearce_addison_qlmw,2025-26
+5,Akron,,Vanessa Del Real,Jr.,"Crown Point, Ind.",Crown Point HS,,5' 6'',L,1,/sports/womens-volleyball/roster/vanessa-del-real/10073,2025-26
+5,Akron,,Sarah Bettis,Jr.,"Blissfield, Mich.",Blissfield HS,,6' 1'',OH/RS,2,/sports/womens-volleyball/roster/sarah-bettis/10071,2025-26
+5,Akron,,Payton Evans,So.,"Cincinnati, Ohio",Mason HS,,5' 9'',S,3,/sports/womens-volleyball/roster/payton-evans/10074,2025-26
+5,Akron,,Ruby Klusman,So.,"Cincinnati, Ohio",Mercy McAuley HS | Morehead State,,5' 9'',OH,4,/sports/womens-volleyball/roster/ruby-klusman/10076,2025-26
+5,Akron,,Jordyn Aeschliman,Fr.,"Lester, Iowa",West Lyon HS,,6' 3'',OH,5,/sports/womens-volleyball/roster/jordyn-aeschliman/10070,2025-26
+5,Akron,,Martina Villani,Jr.,"Milan, Italy",Liceo Leonardo Da Vinci | Monroe,,6' 2'',S,6,/sports/womens-volleyball/roster/martina-villani/9589,2025-26
+5,Akron,,Reilly Chausse,So.,"Orland Park, Ill.",Carl Sandburg HS,,5' 4'',L,7,/sports/womens-volleyball/roster/reilly-chausse/10072,2025-26
+5,Akron,,Maureen Mathews,Gr.,"St. Louis, Mo.",Northwest HS | Jefferson College | Emporia State | West Virginia State,,6' 0'',OH,8,/sports/womens-volleyball/roster/maureen-mathews/9764,2025-26
+5,Akron,,Jessie Musselman,Fr.,"Columbus, Ohio",Bishop Watterson HS,,5' 10'',OH,9,/sports/womens-volleyball/roster/jessie-musselman/10077,2025-26
+5,Akron,,Jaryn Morgan,Gr.,"Champions Gate, Fla.",Barberton HS | Keiser Univ. | Lynn,,5' 5'',L,10,/sports/womens-volleyball/roster/jaryn-morgan/9663,2025-26
+5,Akron,,Gabby Brissett,Sr.,"Coral Springs, FL",Calvary Christian Academy | Bellarmine,,5' 10'',RS/OH,12,/sports/womens-volleyball/roster/gabby-brissett/9582,2025-26
+5,Akron,,Delaney Gash,So.,"Lexington, Ky.",Paul Laurence Dunbar HS,,5' 11'',OH,13,/sports/womens-volleyball/roster/delaney-gash/10075,2025-26
+5,Akron,,Lauren Wilson,Fr.,"New Palestine, Ind.",New Castle HS,,6' 1'',OH/MB,14,/sports/womens-volleyball/roster/lauren-wilson/10080,2025-26
+5,Akron,,Lyndi Wolf,Fr.,Fremont Ohio,Fremont Ross HS,,6' 2'',MB,16,/sports/womens-volleyball/roster/lyndi-wolf/10081,2025-26
+5,Akron,,Katelyn Crofts,Gr.,"Gainesville, Fla.",The Rock | Sante Fe College | Jacksonville State,,6' 2'',MB,17,/sports/womens-volleyball/roster/katelyn-crofts/9798,2025-26
+5,Akron,,Masa Prascevic,Fr.,"Novi Sad, Serbia","School of economic “Vuk Karadzic"" Stara Pazova",,5' 11'',S,18,/sports/womens-volleyball/roster/masa-prascevic/10079,2025-26
+5,Akron,,Chidera Ozoh,Jr.,"Hazel Crest, Ill.",Homewood Flossmoor HS,,6' 0'',MB,22,/sports/womens-volleyball/roster/chidera-ozoh/10078,2025-26

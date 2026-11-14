@@ -5,7 +5,8 @@
 #   team_affiliations.csv - effective-dated affiliation ranges
 #   positions.csv         - raw position -> canonical code
 #   classes.csv           - raw class year -> canonical class + redshirt flag
-#   raw_snapshots.csv     - registered raw season snapshots + hashes
+#   raw_snapshots.csv     - seeded once; afterwards maintained by
+#                           scripts/register_snapshot.py and left untouched
 #
 # State/country variant tables (state_variants.csv, country_variants.csv) are
 # curated lists maintained directly under data/reference/, not generated.
@@ -77,6 +78,26 @@ vb_teams <- read_csv("data/vb_teams.csv", show_col_types = FALSE, na = "") %>%
       TRUE ~ as.character(division)
     )
   )
+
+# Reviewed campus-state corrections (vb_teams.csv had e.g. Simpson in CA,
+# MSU Denver in MN). Each row records the state it replaces; a row whose
+# from_state no longer matches means vb_teams.csv changed and the correction
+# needs another look, so the generator stops rather than overwrite it.
+state_fixes <- read_csv("data/reference/team_state_corrections.csv",
+                        col_types = cols(.default = col_character()))
+stale_fix <- state_fixes %>%
+  left_join(vb_teams %>% transmute(ncaa_id = as.character(ncaa_id), current = team_state),
+            by = "ncaa_id") %>%
+  filter(is.na(current) | current != from_state)
+if (nrow(stale_fix) > 0) {
+  stop("team_state_corrections.csv rows no longer match vb_teams.csv: ",
+       paste(stale_fix$ncaa_id, collapse = ", "))
+}
+vb_teams <- vb_teams %>%
+  mutate(team_state = coalesce(
+    state_fixes$to_state[match(as.character(ncaa_id), state_fixes$ncaa_id)],
+    team_state
+  ))
 
 stopifnot(
   "vb_teams.csv ncaa_id must be unique" = !anyDuplicated(vb_teams$ncaa_id),
@@ -279,7 +300,14 @@ write_csv(teams_canonical, "data/reference/teams_canonical.csv", na = "")
 write_csv(team_affiliations, "data/reference/team_affiliations.csv", na = "")
 write_csv(positions, "data/reference/positions.csv", na = "")
 write_csv(classes, "data/reference/classes.csv", na = "")
-write_csv(raw_snapshots, "data/reference/raw_snapshots.csv", na = "")
+# The registry is owned by scripts/register_snapshot.py once it exists (it
+# carries every later vintage and which one is active). Only seed it here;
+# rewriting it would erase that history.
+if (!file.exists("data/reference/raw_snapshots.csv")) {
+  write_csv(raw_snapshots, "data/reference/raw_snapshots.csv", na = "")
+} else {
+  raw_snapshots <- read_csv("data/reference/raw_snapshots.csv", show_col_types = FALSE)
+}
 
 cat("Reference tables written:\n")
 cat("  teams_canonical.csv:  ", nrow(teams_canonical), "teams\n")

@@ -172,3 +172,6 @@ data/derived/**/*.tmp
 data/raw_archive/
 # rendered quality reports
 analysis/*.html
+
+# Downloaded gazetteer sources (re-fetch with scripts/build_atlas.py --step fetch)
+data/reference/geo/raw/

@@ -4031,25 +4031,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 260,Gonzaga,,Lauren Joseph,Sr.,"Richland, Wash.",Richland,,5' 9'',Setter,17,/sports/womens-volleyball/roster/lauren-joseph/2405,2015
 260,Gonzaga,,Kaylie Loewen,So.,"Penticton, British Columbia",Penticton,,6' 1'',Outside Hitter,18,/sports/womens-volleyball/roster/kaylie-loewen/2434,2015
 260,Gonzaga,,Morgan Douglass,Jr.,"Spokane, Wash.",Mead,,5' 7'',Libero,19,/sports/womens-volleyball/roster/morgan-douglass/2390,2015
-5,Akron,,Patience Brown,MB,"Bloomington, Ill.",University HS,,Fr.,5' 9'',1,//gozips.com/sports/womens-volleyball/roster/patience-brown/4881,2015
-5,Akron,,Callie Mack,DS,"Mound, Minn.",Mound Westonka HS,,Jr.,5' 7'',2,//gozips.com/sports/womens-volleyball/roster/callie-mack/4888,2015
-5,Akron,,Julia Smagacz,LS,"Libertyville, Ill.",Libertyville HS,,Jr.,6' 0'',3,//gozips.com/sports/womens-volleyball/roster/julia-smagacz/4893,2015
-5,Akron,,Anna Wenger,LS,"Landisville, Pa.",Hempfield,,So.,6' 1'',4,//gozips.com/sports/womens-volleyball/roster/anna-wenger/4877,2015
-5,Akron,,Karley Kusan,S,"Columbus, Ohio",Bishop Ready HS,,Jr.,5' 11'',5,//gozips.com/sports/womens-volleyball/roster/karley-kusan/4886,2015
-5,Akron,,Kayla Gwozdz,LS,"Temperance, Mich.",Bedford Senior HS,,Fr.,5' 10'',6,//gozips.com/sports/womens-volleyball/roster/kayla-gwozdz/5764,2015
-5,Akron,,Ashley Holder,S,"Chicago, Ill.",Marist,,Sr.,5' 8'',7,//gozips.com/sports/womens-volleyball/roster/ashley-holder/4866,2015
-5,Akron,,Abbey Pawlak,DS,"Sylvania, Ohio",Sylvania Northview HS,,Fr.,5' 4'',8,//gozips.com/sports/womens-volleyball/roster/abbey-pawlak/5767,2015
-5,Akron,,Amanda Bedell,RS,"Hudson, Ohio",Hudson HS,,Jr.,6' 0'',10,//gozips.com/sports/womens-volleyball/roster/amanda-bedell/4880,2015
-5,Akron,,Madi Baer,RS,"Stow, Ohio",Stow-Munroe Falls HS,,Rs.,6' 2'',11,//gozips.com/sports/womens-volleyball/roster/madi-baer/4879,2015
-5,Akron,,Julie Shallman,MB,"Holt, Mich.",Holt HS,,Jr.,6' 3'',12,//gozips.com/sports/womens-volleyball/roster/julie-shallman/5287,2015
-5,Akron,,Brenna Mack,DS,"Mound, Minn.",Mound Westonka HS,,Jr.,5' 7'',13,//gozips.com/sports/womens-volleyball/roster/brenna-mack/4887,2015
-5,Akron,,Dragana Micic,LS,"Ivanjica, Serbia",Hutchinson Community College,,Sr.,5' 9'',14,//gozips.com/sports/womens-volleyball/roster/dragana-micic/4873,2015
-5,Akron,,Jessica Kloehn,MB,"Milwaukee, Wis.",Nicolet HS,,So.,6' 0'',15,//gozips.com/sports/womens-volleyball/roster/jessica-kloehn/5281,2015
-5,Akron,,Aubrey Kozer,DS,"Norton, Ohio",Our Lady of the Elms HS,,So.,5' 9'',16,//gozips.com/sports/womens-volleyball/roster/aubrey-kozer/5282,2015
-5,Akron,,Kelsey Wilson,MB,"Ferndale, Mich.",Ferndale,,Sr.,6' 1'',18,//gozips.com/sports/womens-volleyball/roster/kelsey-wilson/4878,2015
-5,Akron,,Tom Hanna,Head Coach,,,,thanna@uakron.edu,(330) 972-7338,,//gozips.com/sports/womens-volleyball/roster/coaches/tom-hanna/780,2015
-5,Akron,,Kacie Ehinger,Assistant Coach,,,,kehinger@uakron.edu,(330) 972-7438,,//gozips.com/sports/womens-volleyball/roster/coaches/kacie-ehinger/394,2015
-5,Akron,,Orlando Gonzalez,Assistant Coach,,,,ogonzalez@uakron.edu,(330) 972-7435,,//gozips.com/sports/womens-volleyball/roster/coaches/orlando-gonzalez/357,2015
 100,Cal State LA,2057,Makayla Taylor,Junior,Downey,Downey HS,Cypress College,"5'9""",L,1,//www.lagoldeneagles.com/sports/womens-volleyball/roster/makayla-taylor/2057,2015
 100,Cal State LA,2058,Cynthia Giron,Freshman,Rancho Cucamonga,Rancho Cucamonga HS,,"5'5""",L,2,//www.lagoldeneagles.com/sports/womens-volleyball/roster/cynthia-giron/2058,2015
 100,Cal State LA,2059,Alma Serna,Junior,Mission Viejo,Capistrano Valley HS,Long Beach State,"6'4""",MB,3,//www.lagoldeneagles.com/sports/womens-volleyball/roster/alma-serna/2059,2015
@@ -13351,3 +13332,19 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 772,Western Ky.,,Kaelin Grimes,Jr.,"Louisville, Ky.",Assumption HS,,5' 8'',DS,17,/sports/womens-volleyball/roster/kaelin-grimes/905,2015-16
 772,Western Ky.,,Taylor Dellinger,Fr.,"Clarkston, Mich.",Clarkston,,6' 0'',OH,21,/sports/womens-volleyball/roster/taylor-dellinger/1135,2015-16
 772,Western Ky.,,Jackie Scott,So.,"Wildwood, Mo.",Lafayette HS,,5' 11'',OH/DS,24,/sports/womens-volleyball/roster/jackie-scott/925,2015-16
+5,Akron,,Patience Brown,Fr.,"Bloomington, Ill.",University HS,,5' 9'',MB,1,/sports/womens-volleyball/roster/patience-brown/4881,2015-16
+5,Akron,,Callie Mack,Jr.,"Mound, Minn.",Mound Westonka HS,,5' 7'',DS,2,/sports/womens-volleyball/roster/callie-mack/4888,2015-16
+5,Akron,,Julia Smagacz,Jr.,"Libertyville, Ill.",Libertyville HS,,6' 0'',LS,3,/sports/womens-volleyball/roster/julia-smagacz/4893,2015-16
+5,Akron,,Anna Wenger,So.,"Landisville, Pa.",Hempfield,,6' 1'',LS,4,/sports/womens-volleyball/roster/anna-wenger/4877,2015-16
+5,Akron,,Karley Kusan,Jr.,"Columbus, Ohio",Bishop Ready HS,,5' 11'',S,5,/sports/womens-volleyball/roster/karley-kusan/4886,2015-16
+5,Akron,,Kayla Gwozdz,Fr.,"Temperance, Mich.",Bedford Senior HS,,5' 10'',LS,6,/sports/womens-volleyball/roster/kayla-gwozdz/5764,2015-16
+5,Akron,,Ashley Holder,Sr.,"Chicago, Ill.",Marist,,5' 8'',S,7,/sports/womens-volleyball/roster/ashley-holder/4866,2015-16
+5,Akron,,Abbey Pawlak,Fr.,"Sylvania, Ohio",Sylvania Northview HS,,5' 4'',DS,8,/sports/womens-volleyball/roster/abbey-pawlak/5767,2015-16
+5,Akron,,Amanda Bedell,Jr.,"Hudson, Ohio",Hudson HS,,6' 0'',RS,10,/sports/womens-volleyball/roster/amanda-bedell/4880,2015-16
+5,Akron,,Madi Baer,Rs.,"Stow, Ohio",Stow-Munroe Falls HS,,6' 2'',RS,11,/sports/womens-volleyball/roster/madi-baer/4879,2015-16
+5,Akron,,Julie Shallman,Jr.,"Holt, Mich.",Holt HS,,6' 3'',MB,12,/sports/womens-volleyball/roster/julie-shallman/5287,2015-16
+5,Akron,,Brenna Mack,Jr.,"Mound, Minn.",Mound Westonka HS,,5' 7'',DS,13,/sports/womens-volleyball/roster/brenna-mack/4887,2015-16
+5,Akron,,Dragana Micic,Sr.,"Ivanjica, Serbia",Hutchinson Community College,,5' 9'',LS,14,/sports/womens-volleyball/roster/dragana-micic/4873,2015-16
+5,Akron,,Jessica Kloehn,So.,"Milwaukee, Wis.",Nicolet HS,,6' 0'',MB,15,/sports/womens-volleyball/roster/jessica-kloehn/5281,2015-16
+5,Akron,,Aubrey Kozer,So.,"Norton, Ohio",Our Lady of the Elms HS,,5' 9'',DS,16,/sports/womens-volleyball/roster/aubrey-kozer/5282,2015-16
+5,Akron,,Kelsey Wilson,Sr.,"Ferndale, Mich.",Ferndale,,6' 1'',MB,18,/sports/womens-volleyball/roster/kelsey-wilson/4878,2015-16

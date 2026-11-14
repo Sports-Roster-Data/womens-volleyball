@@ -1,0 +1,924 @@
+ncaa_id,team_name,team_state,unitid,ipeds_name,ipeds_city,ipeds_state,lat,lon,match_method,match_score,runner_up
+2,Abilene Christian,TX,222178,Abilene Christian University,Abilene,TX,32.4689,-99.7098,name,0.983,0.766
+3,Adelphi,NY,188429,Adelphi University,Garden City,NY,40.7214,-73.6533,name,0.875,0
+5,Akron,OH,200800,University of Akron Main Campus,Akron,OH,41.0759,-81.5112,name,0.841,0.688
+6,Alabama A&M,AL,100654,Alabama A & M University,Normal,AL,34.7834,-86.5685,name,0.959,0
+7,Alabama State,AL,100724,Alabama State University,Montgomery,AL,32.3643,-86.2957,name,0.945,0.693
+8,Alabama,AL,100751,The University of Alabama,Tuscaloosa,AL,33.2119,-87.546,name,0.875,0.788
+9,UAB,AL,100663,University of Alabama at Birmingham,Birmingham,AL,33.5057,-86.7993,reviewed,9,
+11,Alas. Anchorage,AK,102553,University of Alaska Anchorage,Anchorage,AK,61.1902,-149.826,reviewed,9,
+12,Alas. Fairbanks,AK,102614,University of Alaska Fairbanks,Fairbanks,AK,64.8576,-147.823,reviewed,9,
+14,Albany,NY,196060,University at Albany,Albany,NY,42.6855,-73.8247,name,0.859,0.735
+15,Albion,MI,168546,Albion College,Albion,MI,42.245,-84.7456,name,0.891,0
+16,Albright,PA,210571,Albright College,Reading,PA,40.3614,-75.9097,name,0.917,0
+17,Alcorn State,MS,175342,Alcorn State University,Alcorn State,MS,31.8772,-91.1429,name,0.938,0
+18,Alfred,NY,188641,Alfred University,Alfred,NY,42.2545,-77.7881,name,0.859,0.644
+19,Allegheny,PA,210669,Allegheny College,Meadville,PA,41.6487,-80.1472,name,0.928,0.678
+20,DeSales,PA,210739,DeSales University,Center Valley,PA,40.5391,-75.3756,domain,3,0
+21,Alma,MI,168591,Alma College,Alma,MI,43.38,-84.6721,name,0.851,0
+22,American International,MA,164447,American International College,Springfield,MA,42.1123,-72.5583,name,1.019,0.71
+23,American,DC,131159,American University,Washington,DC,38.936,-77.0889,name,0.888,0.644
+25,Angelo St.,TX,222831,Angelo State University,San Angelo,TX,31.4409,-100.465,name,0.938,0
+27,Appalachian State,NC,197869,Appalachian State University,Boone,NC,36.2155,-81.6806,name,0.966,0
+28,Arizona State,AZ,104151,Arizona State University Campus Immersion,Tempe,AZ,33.4177,-111.934,name,0.791,0.717
+29,Arizona,AZ,104179,University of Arizona,Tucson,AZ,32.2327,-110.951,name,0.875,0.758
+30,Arkansas St.,AR,106458,Arkansas State University,Jonesboro,AR,35.8424,-90.68,name,0.951,0.813
+31,Arkansas,AR,106397,University of Arkansas,Fayetteville,AR,36.07,-94.177,name,0.888,0.801
+32,Arkansas-Little Rock,AR,106245,University of Arkansas at Little Rock,Little Rock,AR,34.7233,-92.3398,name,1.006,0.567
+35,Ashland,OH,201104,Ashland University,Ashland,OH,40.8618,-82.3211,name,0.875,0
+36,Assumption,MA,164562,Assumption University,Worcester,MA,42.2942,-71.829,name,0.909,0.591
+37,Auburn,AL,100858,Auburn University,Auburn,AL,32.5994,-85.4883,name,0.859,0.692
+38,Augsburg,MN,173045,Augsburg University,Minneapolis,MN,44.9663,-93.2404,domain,3,0
+39,Augusta,GA,482149,Augusta University,Augusta,GA,33.4704,-81.9891,name,0.875,0.725
+40,Augustana (IL),IL,143084,Augustana College,Rock Island,IL,41.5024,-90.5506,domain,3,0
+41,Augustana (SD),SD,219000,Augustana University,Sioux Falls,SD,43.5251,-96.737,name,0.626,0
+42,Aurora,IL,143118,Aurora University,Aurora,IL,41.7536,-88.349,domain,3,0
+43,Austin Peay,TN,219602,Austin Peay State University,Clarksville,TN,36.5333,-87.3541,name,0.876,0
+44,Averett,VA,231420,Averett University,Danville,VA,36.5773,-79.4132,name,0.875,0
+45,Babson,MA,164580,Babson College,Wellesley,MA,42.297,-71.2641,name,0.891,0
+46,Baldwin Wallace,OH,201195,Baldwin Wallace University,Berea,OH,41.373,-81.8511,name,0.974,0
+47,Ball State,IN,150136,Ball State University,Muncie,IN,40.2034,-85.409,name,0.922,0
+48,Charleston Southern,SC,217688,Charleston Southern University,Charleston,SC,32.983,-80.0726,name,0.991,0.567
+49,Barry,FL,132471,Barry University,Miami,FL,25.8789,-80.1989,name,0.841,0
+50,Bates,ME,160977,Bates College,Lewiston,ME,44.1053,-70.2033,name,0.873,0.573
+51,Baylor,TX,223232,Baylor University,Waco,TX,31.5469,-97.121,name,0.859,0.716
+52,Bellarmine,KY,156286,Bellarmine University,Louisville,KY,38.2193,-85.705,domain,3,0
+54,Bemidji St.,MN,173124,Bemidji State University,Bemidji,MN,47.4823,-94.8741,name,0.945,0
+55,Benedict,SC,217721,Benedict College,Columbia,SC,34.0129,-81.0204,name,0.917,0.644
+56,Bentley,MA,164739,Bentley University,Waltham,MA,42.386,-71.2228,name,0.875,0
+58,Baruch,NY,190512,CUNY Bernard M Baruch College,New York,NY,40.7402,-73.9834,reviewed,9,3
+59,Bethany (WV),WV,237181,Bethany College,Bethany,WV,40.2058,-80.5601,name,0.607,0
+60,Bethel (MN),MN,173160,Bethel University,Saint Paul,MN,45.0577,-93.1617,domain,3,0
+61,Bethune-Cookman,FL,132602,Bethune-Cookman University,Daytona Beach,FL,29.2072,-81.0329,name,0.974,0
+62,Binghamton,NY,196079,Binghamton University,Vestal,NY,42.0879,-75.9669,name,0.909,0
+64,Blackburn,IL,143288,Blackburn College,Carlinville,IL,39.2879,-89.8702,name,0.928,0
+65,Bloomsburg,PA,,Bloomsburg PA,,,41.0076,-76.4483,reviewed_coords,9,
+66,Boise State,ID,142115,Boise State University,Boise,ID,43.6043,-116.203,name,0.93,0.618
+67,Boston College,MA,164924,Boston College,Chestnut Hill,MA,42.3362,-71.1692,name,1.12,0.901
+69,Bowdoin,ME,161004,Bowdoin College,Brunswick,ME,43.9071,-69.9639,domain,3,0
+70,Bowie St.,MD,162007,Bowie State University,Bowie,MD,39.0182,-76.7597,name,0.93,0
+71,Bowling Green,KY,201441,Bowling Green State University-Main Campus,Bowling Green,OH,41.3755,-83.6409,name,0.773,0.763
+72,Bradley,IL,143358,Bradley University,Peoria,IL,40.6969,-89.6168,name,0.875,0
+73,Brandeis,MA,165015,Brandeis University,Waltham,MA,42.3657,-71.2602,name,0.888,0
+74,Bridgeport,CT,128744,University of Bridgeport,Bridgeport,CT,41.1647,-73.1902,name,0.909,0
+75,Bridgewater (VA),VA,231581,Bridgewater College,Bridgewater,VA,38.3785,-78.969,name,0.617,0.597
+77,Brigham Young,UT,230038,Brigham Young University,Provo,UT,40.2509,-111.649,name,0.962,0.724
+78,Brockport,NY,196121,SUNY Brockport,Brockport,NY,43.2119,-77.9472,name,0.883,0
+80,Brown,RI,217156,Brown University,Providence,RI,41.8262,-71.4039,name,0.841,0.59
+81,Bryant,RI,217165,Bryant University,Smithfield,RI,41.9201,-71.5395,name,0.859,0
+83,Bucknell,PA,211291,Bucknell University,Lewisburg,PA,40.9543,-76.8826,name,0.888,0
+84,Buena Vista,IA,153001,Buena Vista University,Storm Lake,IA,42.6423,-95.2085,name,0.948,0
+86,Buffalo,NY,196088,University at Buffalo,Buffalo,NY,43.0009,-78.7895,name,0.875,0.691
+87,Butler,IN,150163,Butler University,Indianapolis,IN,39.8374,-86.1722,name,0.859,0.59
+88,Cabrini,PA,211352,Cabrini University,Radnor,PA,40.0564,-75.3753,name,0.875,0
+89,Caltech,CA,110404,California Institute of Technology,Pasadena,CA,34.1373,-118.126,reviewed,9,
+90,Cal Poly,CA,110422,California Polytechnic State University-San Luis Obispo,San Luis Obispo,CA,35.2995,-120.657,reviewed,9,
+91,Cal Poly Pomona,CA,110529,California State Polytechnic University-Pomona,Pomona,CA,34.0579,-117.821,name,0.645,0
+92,Cal St. Dom. Hills,CA,110547,California State University-Dominguez Hills,Carson,CA,33.8648,-118.256,name,0.731,0
+93,Cal St. San Bernardino,CA,110510,California State University-San Bernardino,San Bernardino,CA,34.1826,-117.324,name,1.035,0.708
+94,Cal State Bakersfield,CA,110486,California State University-Bakersfield,Bakersfield,CA,35.35,-119.105,name,1.02,0.593
+95,Chico St.,CA,110538,California State University-Chico,Chico,CA,39.7297,-121.845,name,0.734,0
+96,Fresno State,CA,110556,California State University-Fresno,Fresno,CA,36.8112,-119.745,name,0.674,0.644
+97,Cal State Fullerton,CA,110565,California State University-Fullerton,Fullerton,CA,33.8815,-117.885,name,1.016,0.607
+98,Cal St. East Bay,CA,110574,California State University-East Bay,Hayward,CA,37.6577,-122.054,name,1.023,0.725
+99,Long Beach State,CA,110583,California State University-Long Beach,Long Beach,CA,33.7828,-118.112,reviewed,9,0.76
+100,Cal State LA,CA,110592,California State University-Los Angeles,Los Angeles,CA,34.0669,-118.169,reviewed,9,0.571
+101,CSUN,CA,110608,California State University-Northridge,Northridge,CA,34.2401,-118.529,reviewed,9,
+102,Sacramento State,CA,110617,California State University-Sacramento,Sacramento,CA,38.5594,-121.424,name,0.718,0.679
+104,UC Santa Barbara,CA,110705,University of California-Santa Barbara,Santa Barbara,CA,34.4163,-119.846,name,1.12,0.794
+106,Cal U (PA),PA,,California PA,,,40.0656,-79.8917,reviewed_coords,9,0.661
+107,California,CA,110635,University of California-Berkeley,Berkeley,CA,37.8719,-122.26,reviewed,9,0.793
+108,UC Davis,CA,110644,University of California-Davis,Davis,CA,38.5397,-121.75,name,1.12,0.678
+109,UC Irvine,CA,110653,University of California-Irvine,Irvine,CA,33.6484,-117.841,name,1.12,0.681
+110,UCLA,CA,110662,University of California-Los Angeles,Los Angeles,CA,34.0718,-118.442,reviewed,9,
+111,UC Riverside,CA,110671,University of California-Riverside,Riverside,CA,33.9725,-117.327,name,1.12,0.668
+112,UC San Diego,CA,110680,University of California-San Diego,La Jolla,CA,32.8777,-117.236,name,1.12,0.852
+113,UC Santa Cruz,CA,110714,University of California-Santa Cruz,Santa Cruz,CA,36.9956,-122.059,name,1.12,0.794
+114,Calvin,MI,169080,Calvin University,Grand Rapids,MI,42.9299,-85.5875,name,0.859,0.665
+115,Campbell,NC,198136,Campbell University,Buies Creek,NC,35.4091,-78.7382,name,0.888,0
+116,Canisius,NY,189705,Canisius University,Buffalo,NY,42.9252,-78.8526,name,0.888,0
+117,Capital,OH,201548,Capital University,Columbus,OH,39.9549,-82.9379,domain,3,0
+118,Carleton,MN,173258,Carleton College,Northfield,MN,44.4623,-93.1547,domain,3,0
+119,Carnegie Mellon,PA,211440,Carnegie Mellon University,Pittsburgh,PA,40.4436,-79.942,domain,3,0
+120,Carroll (WI),WI,238458,Carroll University,Waukesha,WI,43.0045,-88.2281,name,0.608,0
+121,Carthage,WI,238476,Carthage College,Kenosha,WI,42.623,-87.8209,domain,3,0
+122,CWRU,OH,201645,Case Western Reserve University,Cleveland,OH,41.5074,-81.6096,domain,3,0
+123,Castleton,VT,230834,Castleton University,Castleton,VT,43.6084,-73.1808,name,0.899,0
+124,Catholic,DC,131283,The Catholic University of America,Washington,DC,38.9337,-76.9979,name,0.733,0.608
+125,Centenary (LA),LA,158477,Centenary College of Louisiana,Shreveport,LA,32.4833,-93.7308,reviewed,9,
+127,Central Connecticut,CT,128771,Central Connecticut State University,New Britain,CT,41.6925,-72.766,name,0.927,0.624
+128,Central Florida,FL,132903,University of Central Florida,Orlando,FL,28.6022,-81.2009,reviewed,9,0.974
+129,Central Michigan,MI,169248,Central Michigan University,Mount Pleasant,MI,43.5912,-84.7752,name,0.979,0.88
+130,Central Mo.,MO,176965,University of Central Missouri,Warrensburg,MO,38.7591,-93.7374,name,0.979,0.88
+132,Centre,KY,156408,Centre College,Danville,KY,37.6457,-84.7794,name,0.891,0
+136,Chicago State,IL,144005,Chicago State University,Chicago,IL,41.7184,-87.6094,name,0.945,0.693
+137,Chicago,IL,144050,University of Chicago,Chicago,IL,41.788,-87.5995,domain,3,0
+139,Chris. Newport,VA,231712,Christopher Newport University,Newport News,VA,37.0625,-76.4944,reviewed,9,
+140,Cincinnati,OH,201885,University of Cincinnati-Main Campus,Cincinnati,OH,39.1312,-84.5143,name,0.909,0.8
+142,Claremont-M-S,CA,112260,Claremont McKenna College,Claremont,CA,34.1022,-117.711,reviewed,9,
+144,Clark Atlanta,GA,138947,Clark Atlanta University,Atlanta,GA,33.7476,-84.4126,name,0.962,0
+145,Clark (MA),MA,165334,Clark University,Worcester,MA,42.25,-71.8234,name,0.551,0
+146,Clarkson,NY,190044,Clarkson University,Potsdam,NY,44.6627,-74.9994,name,0.888,0.797
+147,Clemson,SC,217882,Clemson University,Clemson,SC,34.6794,-82.8351,name,0.875,0
+148,Cleveland State,OH,202134,Cleveland State University,Cleveland,OH,41.5023,-81.6744,name,0.956,0.7
+149,Coastal Carolina,SC,218724,Coastal Carolina University,Conway,SC,33.795,-79.0118,name,0.979,0.738
+150,Coe,IA,153144,Coe College,Cedar Rapids,IA,41.9883,-91.6582,name,0.822,0
+151,Colby,ME,161086,Colby College,Waterville,ME,44.5642,-69.6634,name,0.873,0.59
+153,Colgate,NY,190099,Colgate University,Hamilton,NY,42.8195,-75.5363,name,0.875,0.599
+154,Colorado Col.,CO,126678,Colorado College,Colorado Springs,CO,38.8489,-104.823,name,1.12,0.902
+155,Colo. Sch. of Mines,CO,126775,Colorado School of Mines,Golden,CO,39.7514,-105.223,name,0.789,0
+156,Colorado St.,CO,126818,Colorado State University-Fort Collins,Fort Collins,CO,40.5748,-105.081,reviewed,9,0.813
+157,Colorado,CO,126614,University of Colorado Boulder,Boulder,CO,40.0088,-105.271,reviewed,9,0.75
+158,Columbia,NY,190150,Columbia University in the City of New York,New York,NY,40.8083,-73.9619,reviewed,9,0.797
+159,Columbus St.,GA,139366,Columbus State University,Columbus,GA,32.501,-84.9411,name,0.951,0.693
+160,Concordia Chicago,IL,144351,Concordia University-Chicago,River Forest,IL,41.8987,-87.8095,name,0.983,0.602
+163,Connecticut Col.,CT,128902,Connecticut College,New London,CT,41.3798,-72.1073,name,1.12,0.851
+164,UConn,CT,129020,University of Connecticut,Storrs,CT,41.8091,-72.2499,reviewed,9,
+165,Coppin State,MD,162283,Coppin State University,Baltimore,MD,39.3113,-76.6587,name,0.938,0
+166,Cornell College,IA,153162,Cornell College,Mount Vernon,IA,41.9246,-91.4237,name,1.12,0.61
+167,Cornell,NY,190415,Cornell University,Ithaca,NY,42.4472,-76.4831,name,0.875,0.785
+169,Creighton,NE,181002,Creighton University,Omaha,NE,41.2654,-95.9478,name,0.899,0
+172,Dartmouth,VT,182670,Dartmouth College,Hanover,NH,43.7041,-72.2899,name,0.808,0.598
+173,Davidson,NC,198385,Davidson College,Davidson,NC,35.4998,-80.844,name,0.917,0.671
+174,Davis & Elkins,WV,237358,Davis & Elkins College,Elkins,WV,38.9312,-79.846,name,0.981,0
+175,Dayton,OH,202480,University of Dayton,Dayton,OH,39.7395,-84.1761,name,0.859,0.728
+176,DePaul,IL,144740,DePaul University,Chicago,IL,41.8776,-87.6272,name,0.859,0
+177,DePauw,IN,150400,DePauw University,Greencastle,IN,39.6409,-86.8604,name,0.859,0
+178,Delaware State,DE,130934,Delaware State University,Dover,DE,39.1872,-75.5405,name,0.951,0.706
+179,Delaware Valley,PA,211981,Delaware Valley University,Doylestown,PA,40.2987,-75.1585,domain,3,0
+180,Delaware,DE,130943,University of Delaware,Newark,DE,39.6796,-75.7528,name,0.888,0.801
+182,Denison,OH,202523,Denison University,Granville,OH,40.0715,-82.5233,name,0.875,0
+183,Denver,CO,127060,University of Denver,Denver,CO,39.678,-104.963,name,0.859,0.799
+185,Dickinson,PA,212009,Dickinson College,Carlisle,PA,40.2028,-77.1979,name,0.928,0.693
+186,Dist. Columbia,DC,131399,University of the District of Columbia,Washington,DC,38.9438,-77.0662,reviewed,9,
+189,Drake,IA,153269,Drake University,Des Moines,IA,41.6013,-93.6522,name,0.841,0
+190,Drew,NJ,184348,Drew University,Madison,NJ,40.7618,-74.4246,name,0.819,0
+192,Dubuque,IA,153278,University of Dubuque,Dubuque,IA,42.4973,-90.6934,name,0.875,0.75
+193,Duke,NC,198419,Duke University,Durham,NC,36.0011,-78.9376,name,0.819,0
+194,Duquesne,PA,212106,Duquesne University,Pittsburgh,PA,40.4359,-79.9931,name,0.888,0
+195,Earlham,IN,150455,Earlham College,Richmond,IN,39.8234,-84.915,name,0.905,0
+196,East Carolina,NC,198464,East Carolina University,Greenville,NC,35.6072,-77.3683,name,0.962,0.551
+197,East Stroudsburg,PA,212115,East Stroudsburg University of Pennsylvania,East Stroudsburg,PA,40.996,-75.1739,name,0.83,0
+198,East Tennessee State,TN,220075,East Tennessee State University,Johnson City,TN,36.3016,-82.367,name,0.999,0.664
+199,Tex. A&M-Commerce,TX,224554,Texas A & M University-Commerce,Commerce,TX,33.2421,-95.9046,name,1.005,0.703
+200,Eastern Conn. St.,CT,129215,Eastern Connecticut State University,Willimantic,CT,41.7217,-72.2188,name,1.013,0.624
+201,Eastern Illinois,IL,144892,Eastern Illinois University,Charleston,IL,39.4798,-88.1757,name,0.979,0.683
+202,Eastern Kentucky,KY,156620,Eastern Kentucky University,Richmond,KY,37.7408,-84.3008,name,0.979,0.602
+203,East. Mennonite,VA,232043,Eastern Mennonite University,Harrisonburg,VA,38.4711,-78.8803,reviewed,9,
+204,Eastern Michigan,MI,169798,Eastern Michigan University,Ypsilanti,MI,42.2517,-83.6274,name,0.979,0
+205,Mont. St. Billings,MT,180179,Montana State University Billings,Billings,MT,45.7969,-108.523,name,0.601,0
+206,Eastern N.M.,NM,187648,Eastern New Mexico University-Main Campus,Portales,NM,34.1756,-103.348,reviewed,9,
+207,Eastern Washington,WA,235097,Eastern Washington University,Cheney,WA,47.4907,-117.584,name,0.987,0
+208,Eckerd,FL,133492,Eckerd College,Saint Petersburg,FL,27.7158,-82.687,name,0.891,0
+209,Edinboro,PA,,Edinboro PA,,,41.8742,-80.1314,reviewed_coords,9,
+211,Elizabethtown,PA,212197,Elizabethtown College,Elizabethtown,PA,40.1492,-76.5932,name,0.957,0.584
+212,Elmhurst,IL,144962,Elmhurst University,Elmhurst,IL,41.8972,-87.9454,name,0.888,0
+213,Elmira,NY,190983,Elmira College,Elmira,NY,42.0961,-76.8135,domain,3,0
+214,Emerson,MA,165662,Emerson College,Boston,MA,42.3522,-71.0654,name,0.905,0
+215,Emmanuel (MA),MA,165671,Emmanuel College,Boston,MA,42.3406,-71.1036,name,0.617,0
+216,Emory & Henry,VA,232025,Emory & Henry University,Emory,VA,36.7729,-81.8291,name,0.948,0
+217,Emory,GA,139658,Emory University,Atlanta,GA,33.7902,-84.3255,name,0.841,0.646
+218,Eureka,IL,144971,Eureka College,Eureka,IL,40.7148,-89.2696,name,0.891,0
+219,Evansville,IN,150534,University of Evansville,Evansville,IN,37.9715,-87.5316,name,0.909,0
+220,Fairfield,CT,129242,Fairfield University,Fairfield,CT,41.1577,-73.2559,name,0.899,0.589
+221,FDU-Florham,NJ,184694,Fairleigh Dickinson University-Florham Campus,Madison,NJ,40.7745,-74.4321,reviewed,9,
+222,Fairleigh Dickinson,NJ,184603,Fairleigh Dickinson University-Metropolitan Campus,Teaneck,NJ,40.8972,-74.029,reviewed,9,0.847
+224,Ferris St.,MI,169910,Ferris State University,Big Rapids,MI,43.6877,-85.4819,name,0.938,0
+225,Ferrum,VA,232089,Ferrum College,Ferrum,VA,36.9264,-80.0206,name,0.891,0
+227,Fitchburg St.,MA,165820,Fitchburg State University,Fitchburg,MA,42.5883,-71.7897,name,0.956,0
+228,Florida A&M,FL,133650,Florida Agricultural and Mechanical University,Tallahassee,FL,30.4285,-84.2902,reviewed,9,
+229,Florida Atlantic,FL,133669,Florida Atlantic University,Boca Raton,FL,26.3724,-80.103,name,0.979,0.583
+230,Florida Tech,FL,133881,Florida Institute of Technology,Melbourne,FL,28.0658,-80.6231,name,0.933,0.842
+231,FIU,FL,133951,Florida International University,Miami,FL,25.7573,-80.3739,reviewed,9,
+233,Fla. Southern,FL,134079,Florida Southern College,Lakeland,FL,28.0324,-81.9482,name,1.001,0.609
+234,Florida St,FL,134097,Florida State University,Tallahassee,FL,30.4431,-84.2951,name,0.945,0.83
+235,Florida,FL,134130,University of Florida,Gainesville,FL,29.6463,-82.3479,reviewed,9,0.875
+236,Fordham,NY,191241,Fordham University,Bronx,NY,40.8594,-73.8827,name,0.875,0
+239,Franklin & Marshall,PA,212577,Franklin and Marshall College,Lancaster,PA,40.048,-76.319,name,1.005,0
+241,Franklin Pierce,NH,182795,Franklin Pierce University,Rindge,NH,42.7801,-72.058,name,0.974,0.697
+242,Fredonia,NY,196158,SUNY at Fredonia,Fredonia,NY,42.4522,-79.3374,name,0.875,0
+243,Frostburg St.,MD,162584,Frostburg State University,Frostburg,MD,39.6509,-78.9343,name,0.956,0
+244,Furman,SC,218070,Furman University,Greenville,SC,34.9247,-82.4405,name,0.859,0
+246,Gannon,PA,212601,Gannon University,Erie,PA,42.1284,-80.0872,name,0.859,0
+247,SUNY Geneseo,NY,196167,SUNY College at Geneseo,Geneseo,NY,42.7966,-77.8219,name,0.981,0
+248,George Mason,VA,232186,George Mason University,Fairfax,VA,38.8319,-77.3071,name,0.955,0
+249,George Washington,DC,131469,George Washington University,Washington,DC,38.8992,-77.0484,name,0.983,0
+251,Georgetown,DC,131496,Georgetown University,Washington,DC,38.9088,-77.0735,name,0.909,0.816
+253,Georgia Southern,GA,139931,Georgia Southern University,Statesboro,GA,32.4262,-81.784,name,0.979,0
+254,Georgia State,GA,139940,Georgia State University,Atlanta,GA,33.7527,-84.3867,name,0.945,0.856
+255,Georgia Tech,GA,139755,Georgia Institute of Technology-Main Campus,Atlanta,GA,33.7724,-84.3948,name,0.933,0
+257,Georgia,GA,139959,University of Georgia,Athens,GA,33.9563,-83.374,name,0.875,0.788
+258,Gettysburg,PA,212674,Gettysburg College,Gettysburg,PA,39.8366,-77.2368,name,0.936,0
+259,Rowan,NJ,184782,Rowan University,Glassboro,NJ,39.7091,-75.1191,name,0.841,0.622
+260,Gonzaga,WA,235316,Gonzaga University,Spokane,WA,47.6665,-117.401,name,0.875,0
+261,Grambling,LA,159009,Grambling State University,Grambling,LA,32.5238,-92.7132,name,0.813,0
+262,Grand Valley St.,MI,170082,Grand Valley State University,Allendale,MI,42.963,-85.8898,name,0.992,0.554
+264,Grinnell,IA,153384,Grinnell College,Grinnell,IA,41.748,-92.7221,domain,3,0
+265,Grove City,PA,212805,Grove City College,Grove City,PA,41.1558,-80.0815,domain,3,0
+266,Gust. Adolphus,MN,173647,Gustavus Adolphus College,Saint Peter,MN,44.3236,-93.9722,reviewed,9,
+267,Hamilton,NY,191515,Hamilton College,Clinton,NY,43.0502,-75.4082,domain,3,0
+268,Hamline,MN,173665,Hamline University,Saint Paul,MN,44.9662,-93.1645,name,0.875,0.66
+270,Hampton,VA,232265,Hampton University,Hampton,VA,37.0199,-76.3392,name,0.875,0
+271,Hardin-Simmons,TX,225247,Hardin-Simmons University,Abilene,TX,32.4764,-99.7356,name,0.968,0
+272,Hartford,CT,129525,University of Hartford,West Hartford,CT,41.7986,-72.7152,name,0.888,0.807
+273,Hartwick,NY,191533,Hartwick College,Oneonta,NY,42.4576,-75.072,name,0.917,0
+275,Harvard,MA,166027,Harvard University,Cambridge,MA,42.3745,-71.1183,name,0.875,0
+277,Hawaii,HI,141574,University of Hawaii at Manoa,Honolulu,HI,21.2986,-157.819,reviewed,9,0.722
+278,Heidelberg,OH,203085,Heidelberg University,Tiffin,OH,41.1148,-83.1684,name,0.909,0
+280,Hillsdale,MI,170286,Hillsdale College,Hillsdale,MI,41.9337,-84.6332,name,0.928,0.769
+281,Hiram,OH,203128,Hiram College,Hiram,OH,41.3107,-81.144,name,0.873,0
+283,Hofstra,NY,191649,Hofstra University,Hempstead,NY,40.716,-73.6008,name,0.875,0
+284,Hollins,VA,232308,Hollins University,Roanoke,VA,37.3542,-79.9433,name,0.875,0
+285,Holy Cross,MA,166124,College of the Holy Cross,Worcester,MA,42.2375,-71.8082,name,0.967,0.847
+286,Hope,MI,170301,Hope College,Holland,MI,42.7872,-86.101,domain,3,0
+287,Houston Christian,TX,225399,Houston Christian University,Houston,TX,29.6938,-95.516,name,0.983,0
+288,Houston,TX,225511,University of Houston,Houston,TX,29.7204,-95.3435,name,0.875,0.725
+290,Howard,DC,131520,Howard University,Washington,DC,38.9224,-77.019,name,0.859,0.771
+291,Cal Poly Humboldt,CA,115755,California State Polytechnic University-Humboldt,Arcata,CA,40.8775,-124.078,name,0.653,0
+292,Hunter,NY,190594,CUNY Hunter College,New York,NY,40.7687,-73.9648,name,0.742,0
+294,Idaho St.,ID,142276,Idaho State University,Pocatello,ID,42.8638,-112.432,name,0.93,0.679
+295,Idaho,ID,142285,University of Idaho,Moscow,ID,46.7274,-117.014,reviewed,9,0.841
+296,Benedictine (IL),IL,145619,Benedictine University,Lisle,IL,41.7776,-88.0973,name,0.64,0
+297,Illinois Col.,IL,145691,Illinois College,Jacksonville,IL,39.7313,-90.2462,name,1.12,0.91
+299,Illinois State,IL,145813,Illinois State University,Normal,IL,40.5094,-88.9901,name,0.951,0.779
+300,Ill. Wesleyan,IL,145646,Illinois Wesleyan University,Bloomington,IL,40.4899,-88.992,name,0.983,0.617
+301,Illinois,IL,145637,University of Illinois Urbana-Champaign,Champaign,IL,40.1047,-88.2291,reviewed,9,0.801
+302,Illinois-Chicago,IL,145600,University of Illinois Chicago,Chicago,IL,41.8718,-87.6505,name,0.979,0.626
+305,Indiana State,IN,151324,Indiana State University,Terre Haute,IN,39.4691,-87.4078,name,0.945,0.634
+306,Indiana,IN,151351,Indiana University-Bloomington,Bloomington,IN,39.1661,-86.5266,reviewed,9,0.737
+307,Indiana (PA),PA,213020,Indiana University of Pennsylvania-Main Campus,Indiana,PA,40.6175,-79.1593,name,0.995,0.63
+308,Purdue-Fort Wayne,IN,151102,Purdue University Fort Wayne,Fort Wayne,IN,41.1173,-85.109,name,0.995,0.56
+309,UIndy,IN,151263,University of Indianapolis,Indianapolis,IN,39.7096,-86.134,domain,3,0
+310,Iona,NY,191931,Iona University,New Rochelle,NY,40.9257,-73.788,name,0.819,0
+311,Iowa State,IA,153603,Iowa State University,Ames,IA,42.0262,-93.6485,name,0.922,0.64
+312,Iowa,IA,153658,University of Iowa,Iowa City,IA,41.6619,-91.5364,name,0.819,0.736
+313,Ithaca,NY,191968,Ithaca College,Ithaca,NY,42.4222,-76.4941,domain,3,0
+314,Jackson St.,MS,175856,Jackson State University,Jackson,MS,32.2961,-90.2074,name,0.945,0.686
+315,Jacksonville St.,AL,101480,Jacksonville State University,Jacksonville,AL,33.8229,-85.7653,name,0.97,0.687
+316,Jacksonville,FL,134945,Jacksonville University,Jacksonville,FL,30.3532,-81.6046,name,0.925,0.831
+317,James Madison,VA,232423,James Madison University,Harrisonburg,VA,38.4363,-78.8705,name,0.962,0
+320,John Carroll,OH,203368,John Carroll University,University Heights,OH,41.4903,-81.5312,name,0.955,0
+321,John Jay,NY,190600,CUNY John Jay College of Criminal Justice,New York,NY,40.7704,-73.9884,reviewed,9,0.672
+322,Johns Hopkins,MD,162928,Johns Hopkins University,Baltimore,MD,39.329,-76.6216,name,0.962,0
+323,Johnson C. Smith,NC,198756,Johnson C Smith University,Charlotte,NC,35.243,-80.8573,name,0.985,0
+325,Juniata,PA,213251,Juniata College,Huntingdon,PA,40.5005,-78.0173,name,0.905,0
+326,Kalamazoo,MI,170532,Kalamazoo College,Kalamazoo,MI,42.2908,-85.6019,domain,3,0
+327,Kansas State,KS,155399,Kansas State University,Manhattan,KS,39.1886,-96.5811,name,0.938,0.678
+328,Kansas,KS,155317,University of Kansas,Lawrence,KS,38.9585,-95.2476,name,0.859,0.773
+330,Keene St.,NH,183062,Keene State College,Keene,NH,42.9265,-72.2793,name,0.957,0
+331,Kent State,OH,203517,Kent State University at Kent,Kent,OH,41.1467,-81.3425,name,0.886,0.786
+332,Kentucky St.,KY,157058,Kentucky State University,Frankfort,KY,38.2014,-84.8554,name,0.951,0.706
+333,Ky. Wesleyan,KY,157076,Kentucky Wesleyan College,Owensboro,KY,37.7445,-87.1197,name,1.005,0
+334,Kentucky,KY,157085,University of Kentucky,Lexington,KY,38.0389,-84.5047,name,0.888,0.801
+335,Kenyon,OH,203535,Kenyon College,Gambier,OH,40.3744,-82.398,domain,3,0
+336,King's (PA),PA,213321,King's College,Wilkes-Barre,PA,41.2501,-75.8798,reviewed,9,0
+337,Knox,IL,146427,Knox College,Galesburg,IL,40.9431,-90.3732,domain,3,0
+339,Kutztown,PA,213349,Kutztown University of Pennsylvania,Kutztown,PA,40.5136,-75.7839,name,0.71,0
+340,LaSalle,PA,213367,La Salle University,Philadelphia,PA,40.038,-75.1531,reviewed,9,
+341,La Verne,CA,117140,University of La Verne,La Verne,CA,34.1009,-117.773,name,0.918,0
+342,Lafayette,PA,213385,Lafayette College,Easton,PA,40.6996,-75.2098,name,0.928,0.63
+344,Lake Forest,IL,146481,Lake Forest College,Lake Forest,IL,42.2496,-87.8275,name,0.974,0.72
+345,Lake Superior St.,MI,170639,Lake Superior State University,Sault Ste Marie,MI,46.4928,-84.3656,name,0.996,0.783
+346,Lamar,TX,226091,Lamar University,Beaumont,TX,30.0427,-94.0722,name,0.841,0.664
+348,Lawrence,WI,239017,Lawrence University,Appleton,WI,44.2613,-88.3978,domain,3,0
+349,Le Moyne,NY,192323,Le Moyne College,Syracuse,NY,43.0492,-76.0904,name,0.948,0.703
+351,Lebanon Valley,PA,213507,Lebanon Valley College,Annville,PA,40.3306,-76.5144,name,0.992,0
+352,Lehigh,PA,213543,Lehigh University,Bethlehem,PA,40.6068,-75.3802,name,0.859,0.641
+354,Lewis,IL,146612,Lewis University,Romeoville,IL,41.6054,-88.079,name,0.841,0.629
+355,Liberty,VA,232557,Liberty University,Lynchburg,VA,37.3502,-79.1822,name,0.875,0.617
+358,West Alabama,AL,101587,University of West Alabama,Livingston,AL,32.5881,-88.1863,name,0.955,0.644
+360,Lock Haven,PA,,Lock Haven PA,,,41.1395,-77.4636,reviewed_coords,9,
+361,Long Island,NY,192448,Long Island University,Brookville,NY,40.8207,-73.5937,name,0.948,0.816
+364,Loras,IA,153825,Loras College,Dubuque,IA,42.5039,-90.679,name,0.873,0
+365,LSU,LA,159391,Louisiana State University and Agricultural & Mechanical College,Baton Rouge,LA,30.415,-91.1789,reviewed,9,
+366,Louisiana Tech,LA,159647,Louisiana Tech University,Ruston,LA,32.5283,-92.65,name,0.995,0
+367,Louisville,KY,157289,University of Louisville,Louisville,KY,38.2169,-85.7604,name,0.909,0.701
+368,UMass Lowell,MA,166513,University of Massachusetts-Lowell,Lowell,MA,42.6529,-71.3268,reviewed,9,
+369,Loyola-Maryland,MD,163046,Loyola University Maryland,Baltimore,MD,39.3464,-76.6219,name,0.974,0
+370,Loyola Marymount,CA,117946,Loyola Marymount University,Los Angeles,CA,33.9708,-118.416,name,0.979,0
+371,Loyola-Chicago,IL,146719,Loyola University Chicago,Chicago,IL,42.0008,-87.6569,name,0.968,0.576
+372,Luther,IA,153834,Luther College,Decorah,IA,43.3123,-91.8028,name,0.891,0.679
+373,Lycoming,PA,213668,Lycoming College,Williamsport,PA,41.2467,-77,name,0.917,0
+374,Lynchburg,VA,232609,University of Lynchburg,Lynchburg,VA,37.3998,-79.1817,name,0.899,0.74
+376,Macalester,MN,173902,Macalester College,Saint Paul,MN,44.9386,-93.1681,domain,3,0
+377,MacMurray,IL,,Jacksonville IL,,,39.7339,-90.229,reviewed_coords,9,
+379,Me.-Farmington,ME,161226,University of Maine at Farmington,Farmington,ME,44.6669,-70.1471,reviewed,9,
+381,Manhattan,NY,192703,Manhattan College,Riverdale,NY,40.8898,-73.9019,name,0.928,0.752
+382,Manhattanville,NY,192749,Manhattanville College,Purchase,NY,41.0322,-73.7156,name,0.962,0
+383,Minnesota St.,MN,173920,Minnesota State University-Mankato,Mankato,MN,44.1467,-93.9994,reviewed,9,0.815
+385,Marietta,OH,203845,Marietta College,Marietta,OH,39.4167,-81.45,domain,3,0
+386,Marist,NY,192819,Marist College,Poughkeepsie,NY,41.7209,-73.9355,name,0.891,0
+387,Marquette,WI,239105,Marquette University,Milwaukee,WI,43.039,-87.928,name,0.899,0
+388,Marshall,WV,237525,Marshall University,Huntington,WV,38.4225,-82.429,name,0.888,0.63
+389,Mary Baldwin,VA,232672,Mary Baldwin University,Staunton,VA,38.1539,-79.0693,name,0.955,0
+390,Mary Washington,VA,232681,University of Mary Washington,Fredericksburg,VA,38.3025,-77.4761,name,0.974,0
+391,UMBC,MD,163268,University of Maryland-Baltimore County,Baltimore,MD,39.2567,-76.7116,reviewed,9,
+392,Maryland,MD,163286,University of Maryland-College Park,College Park,MD,38.9882,-76.9447,reviewed,9,0.744
+393,Maryland-Eastern Shore,MD,163338,University of Maryland Eastern Shore,Princess Anne,MD,38.2074,-75.6869,name,1.013,0
+394,Marymount (VA),VA,232706,Marymount University,Arlington,VA,38.9056,-77.1288,reviewed,9,0.603
+395,Maryville (MO),MO,178059,Maryville University of Saint Louis,Saint Louis,MO,38.6448,-90.506,reviewed,9,
+397,Marywood,PA,213826,Marywood University,Scranton,PA,41.4346,-75.6341,name,0.888,0
+398,MIT,MA,166683,Massachusetts Institute of Technology,Cambridge,MA,42.3592,-71.0932,reviewed,9,
+402,McNeese State,LA,159717,McNeese State University,Lake Charles,LA,30.1782,-93.2172,name,0.945,0
+404,Memphis,TN,220862,University of Memphis,Memphis,TN,35.1189,-89.9381,name,0.875,0.725
+406,Mercer,NJ,140447,Mercer University,Macon,GA,32.8291,-83.6494,name,0.739,0.641
+407,Mercy,NY,193016,Mercy University,Dobbs Ferry,NY,41.0216,-73.8744,name,0.841,0.604
+408,Mercyhurst,PA,213987,Mercyhurst University,Erie,PA,42.1058,-80.0534,name,0.909,0
+409,Meredith,NC,198950,Meredith College,Raleigh,NC,35.7994,-78.69,name,0.917,0
+410,Merrimack,MA,166850,Merrimack College,North Andover,MA,42.6683,-71.1242,name,0.928,0
+411,Messiah,PA,213996,Messiah University,Mechanicsburg,PA,40.1566,-76.9883,name,0.875,0
+413,MSU Denver,MN,127565,Metropolitan State University of Denver,Denver,CO,39.7442,-105.005,reviewed,9,
+414,Miami Ohio,OH,204024,Miami University-Oxford,Oxford,OH,39.5078,-84.733,reviewed,9,
+415,Miami,FL,135726,University of Miami,Coral Gables,FL,25.7213,-80.2787,name,0.841,0.724
+416,Michigan State,MI,171100,Michigan State University,East Lansing,MI,42.7321,-84.4761,name,0.951,0.647
+417,Michigan Tech,MI,171128,Michigan Technological University,Houghton,MI,47.1187,-88.5481,reviewed,9,
+418,Michigan,MI,170976,University of Michigan-Ann Arbor,Ann Arbor,MI,42.2784,-83.7348,reviewed,9,0.779
+419,Middle Tennessee,TN,220978,Middle Tennessee State University,Murfreesboro,TN,35.848,-86.3606,name,0.912,0.777
+420,Middlebury,VT,230959,Middlebury College,Middlebury,VT,44.0091,-73.1761,domain,3,2
+422,Miles,AL,101675,Miles College,Fairfield,AL,33.4824,-86.9088,name,0.873,0.573
+423,Millersville,PA,214041,Millersville University of Pennsylvania,Millersville,PA,40.0003,-76.3574,name,0.75,0
+424,Millikin,IL,147244,Millikin University,Decatur,IL,39.8426,-88.9763,domain,3,0
+426,Millsaps,MS,175980,Millsaps College,Jackson,MS,32.3227,-90.18,name,0.917,0
+427,Minn. Duluth,MN,174233,University of Minnesota-Duluth,Duluth,MN,46.8171,-92.0844,name,0.979,0
+428,Minnesota,MN,174066,University of Minnesota-Twin Cities,Minneapolis,MN,44.9729,-93.2355,reviewed,9,0.75
+429,Mississippi College,MS,176053,Mississippi College,Clinton,MS,32.3355,-90.3298,name,1.12,0.825
+430,Mississippi State,MS,176080,Mississippi State University,Mississippi State,MS,33.4549,-88.7901,name,0.966,0.832
+432,Mississippi Valley State,MS,176044,Mississippi Valley State University,Itta Bena,MS,33.5141,-90.3413,name,1.011,0.664
+433,Mississippi,MS,176017,University of Mississippi,University,MS,34.3655,-89.5374,reviewed,9,0.917
+434,Missouri,MO,178396,University of Missouri-Columbia,Columbia,MO,38.9453,-92.3288,reviewed,9,0.744
+435,Missouri S&T,MO,178411,Missouri University of Science and Technology,Rolla,MO,37.9534,-91.7756,reviewed,9,
+436,Missouri-St. Louis,MO,178420,University of Missouri-St Louis,Saint Louis,MO,38.7103,-90.3111,name,0.999,0.581
+438,Monmouth (IL),IL,147341,Monmouth College,Monmouth,IL,40.9148,-90.6373,name,0.647,0
+440,Montana State,MT,180461,Montana State University,Bozeman,MT,45.6667,-111.049,name,0.945,0.796
+441,Montana,MT,180489,The University of Montana,Missoula,MT,46.8593,-113.983,name,0.875,0.788
+442,Montclair St.,NJ,185590,Montclair State University,Montclair,NJ,40.8604,-74.1981,name,0.956,0
+443,Moravian,PA,214157,Moravian University,Bethlehem,PA,40.6309,-75.3836,name,0.888,0
+444,Morehead State,KY,157386,Morehead State University,Morehead,KY,38.1868,-83.434,name,0.951,0
+446,Morgan St.,MD,163453,Morgan State University,Baltimore,MD,39.3442,-76.5856,name,0.938,0
+449,Mount Holyoke,MA,166939,Mount Holyoke College,South Hadley,MA,42.2549,-72.5739,domain,3,0
+451,CMSV,NY,193399,University of Mount Saint Vincent,Bronx,NY,40.9137,-73.9089,reviewed,9,
+452,Mount Union,OH,204185,University of Mount Union,Alliance,OH,40.9053,-81.111,domain,3,0
+453,Muhlenberg,PA,214175,Muhlenberg College,Allentown,PA,40.5964,-75.5085,name,0.936,0
+454,Murray State,KY,157401,Murray State University,Murray,KY,36.6124,-88.3236,name,0.938,0.844
+455,Muskingum,OH,204264,Muskingum University,New Concord,OH,39.9966,-81.7371,name,0.899,0
+456,UNC Asheville,NC,199111,University of North Carolina Asheville,Asheville,NC,35.6171,-82.5654,reviewed,9,
+457,North Carolina,NC,199120,University of North Carolina at Chapel Hill,Chapel Hill,NC,35.9118,-79.051,reviewed,9,0.845
+458,Charlotte,NC,199139,University of North Carolina at Charlotte,Charlotte,NC,35.306,-80.7309,reviewed,9,0.735
+459,UNC Greensboro,NC,199148,University of North Carolina at Greensboro,Greensboro,NC,36.0682,-79.8094,reviewed,9,0
+460,UNCW,NC,199218,University of North Carolina Wilmington,Wilmington,NC,34.2252,-77.8755,reviewed,9,
+461,Nazareth,NY,193584,Nazareth University,Rochester,NY,43.1016,-77.5186,name,0.888,0
+462,Neb. Wesleyan,NE,181446,Nebraska Wesleyan University,Lincoln,NE,40.8391,-96.6483,name,0.983,0
+463,Nebraska,NE,181464,University of Nebraska-Lincoln,Lincoln,NE,40.8176,-96.7005,reviewed,9,0.733
+464,Omaha,NE,181394,University of Nebraska at Omaha,Omaha,NE,41.2588,-96.0085,name,0.684,0
+465,UNLV,NV,182281,University of Nevada-Las Vegas,Las Vegas,NV,36.106,-115.138,reviewed,9,
+466,Nevada,NV,182290,University of Nevada-Reno,Reno,NV,39.5436,-119.815,reviewed,9,0.722
+467,New England Col.,NH,182980,New England College,Henniker,NH,43.1764,-71.8223,domain,3,0
+468,Southern N.H.,NH,183026,Southern New Hampshire University,Manchester,NH,43.0389,-71.4518,reviewed,9,
+469,New Hampshire,NH,183044,University of New Hampshire-Main Campus,Durham,NH,43.1359,-70.9325,name,0.962,0.828
+470,New Haven,CT,129941,University of New Haven,West Haven,CT,41.2913,-72.9615,name,0.929,0
+471,New Jersey Institute of Technology,NJ,185828,New Jersey Institute of Technology,Newark,NJ,40.742,-74.1771,name,1.12,0.722
+472,New Mexico State,NM,188030,New Mexico State University-Main Campus,Las Cruces,NM,32.2816,-106.752,name,0.983,0.819
+473,New Mexico,NM,187985,University of New Mexico-Main Campus,Albuquerque,NM,35.0839,-106.62,name,0.939,0.867
+474,New Orleans,LA,159939,University of New Orleans,New Orleans,LA,30.0277,-90.0671,name,0.948,0.822
+479,NYU,NY,193900,New York University,New York,NY,40.7295,-73.9973,reviewed,9,
+480,CCNY,NY,190567,CUNY City College,New York,NY,40.8198,-73.9485,reviewed,9,
+482,Niagara,NY,193973,Niagara University,Niagara University,NY,43.1373,-79.0367,name,0.875,0.654
+483,Nicholls State,LA,159966,Nicholls State University,Thibodaux,LA,29.7945,-90.8016,name,0.951,0
+484,Nichols,MA,167260,Nichols College,Dudley,MA,42.044,-71.9303,name,0.905,0
+485,Norfolk State,VA,232937,Norfolk State University,Norfolk,VA,36.8484,-76.2614,name,0.945,0.572
+486,MCLA,MA,167288,Massachusetts College of Liberal Arts,North Adams,MA,42.6914,-73.1028,domain,3,0
+487,North Alabama,AL,101879,University of North Alabama,Florence,AL,34.8073,-87.6804,name,0.962,0.635
+488,N.C. A&T,NC,199102,North Carolina A & T State University,Greensboro,NC,36.0728,-79.7734,reviewed,9,
+489,North Carolina Central,NC,199157,North Carolina Central University,Durham,NC,35.9742,-78.8986,name,1.013,0.662
+490,NC State,NC,199193,North Carolina State University at Raleigh,Raleigh,NC,35.7851,-78.6745,name,0.883,0.861
+491,N.C. Wesleyan,NC,199209,North Carolina Wesleyan University,Rocky Mount,NC,36.0197,-77.774,reviewed,9,
+493,North Dakota State,ND,200332,North Dakota State University-Main Campus,Fargo,ND,46.8931,-96.8008,name,0.992,0.889
+494,North Dakota,ND,200280,University of North Dakota,Grand Forks,ND,47.9217,-97.0717,name,0.955,0.885
+496,North Park,IL,147679,North Park University,Chicago,IL,41.9753,-87.7099,domain,3,0
+497,North Texas,TX,227216,University of North Texas,Denton,TX,33.2112,-97.1484,name,0.948,0.833
+498,Louisiana Monroe,LA,159993,University of Louisiana at Monroe,Monroe,LA,32.5277,-92.0737,name,0.979,0
+499,Truman State,MO,178615,Truman State University,Kirksville,MO,40.1883,-92.5817,name,0.938,0
+500,Northeastern,MA,167358,Northeastern University,Boston,MA,42.34,-71.0888,name,0.925,0.741
+501,Northern Arizona,AZ,105330,Northern Arizona University,Flagstaff,AZ,35.1884,-111.654,name,0.979,0.61
+502,Northern Colorado,CO,127741,University of Northern Colorado,Greeley,CO,40.4109,-104.693,name,0.983,0
+503,Northern Illinois,IL,147703,Northern Illinois University,Dekalb,IL,41.9339,-88.7664,name,0.983,0
+504,Northern Iowa,IA,154095,University of Northern Iowa,Cedar Falls,IA,42.5149,-92.4597,name,0.962,0.579
+505,Northern Kentucky,KY,157447,Northern Kentucky University,Highland Heights,KY,39.0297,-84.4635,name,0.983,0.617
+506,Northern Michigan,MI,171456,Northern Michigan University,Marquette,MI,46.5598,-87.4066,name,0.983,0
+507,Northwest Missouri State,MO,178624,Northwest Missouri State University,Maryville,MO,40.3517,-94.8833,name,1.011,0.594
+508,Northwestern State,LA,160038,Northwestern State University of Louisiana,Natchitoches,LA,31.7507,-93.0978,name,0.823,0.727
+509,Northwestern,IL,147767,Northwestern University,Evanston,IL,42.0504,-87.6799,reviewed,9,0.925
+510,Northwood,MI,171492,Northwood University,Midland,MI,43.6287,-84.2768,name,0.899,0.63
+511,Norwich,VT,230995,Norwich University,Northfield,VT,44.1402,-72.6598,name,0.875,0
+513,Notre Dame,IN,152080,University of Notre Dame,Notre Dame,IN,41.7031,-86.239,name,0.939,0.847
+514,Oakland,MI,171571,Oakland University,Rochester Hills,MI,42.6746,-83.2164,name,0.875,0.725
+515,Oberlin,OH,204501,Oberlin College,Oberlin,OH,41.292,-82.2168,name,0.905,0
+516,Occidental,CA,120254,Occidental College,Los Angeles,CA,34.1271,-118.211,name,0.936,0
+517,Ohio Northern,OH,204635,Ohio Northern University,Ada,OH,40.7662,-83.8274,name,0.962,0.579
+518,Ohio State,OH,204796,Ohio State University-Main Campus,Columbus,OH,39.9998,-83.0075,name,0.922,0.792
+519,Ohio,OH,204857,Ohio University-Main Campus,Athens,OH,39.3268,-82.101,name,0.819,0.748
+522,Oklahoma,OK,207500,University of Oklahoma-Norman Campus,Norman,OK,35.2094,-97.4442,reviewed,9,0.75
+523,Old Dominion,VA,232982,Old Dominion University,Norfolk,VA,36.8864,-76.3067,name,0.955,0
+525,Olivet,MI,171599,The University of Olivet,Olivet,MI,42.4429,-84.9239,name,0.859,0.58
+526,SUNY Oneonta,NY,196185,SUNY Oneonta,Oneonta,NY,42.4689,-75.0636,name,1.12,0
+527,Oral Roberts,OK,207582,Oral Roberts University,Tulsa,OK,36.0491,-95.9525,name,0.955,0
+528,Oregon State,OR,209542,Oregon State University,Corvallis,OR,44.5639,-123.275,name,0.938,0.788
+529,Oregon,OR,209551,University of Oregon,Eugene,OR,44.0451,-123.076,name,0.859,0.773
+530,Oswego St.,NY,196194,State University of New York at Oswego,Oswego,NY,43.4543,-76.5408,name,0.637,0
+531,Otterbein,OH,204936,Otterbein University,Westerville,OH,40.1253,-82.9364,name,0.899,0
+532,Elms,MA,167394,College of Our Lady of the Elms,Chicopee,MA,42.1418,-72.6015,name,0.639,0
+533,Pace,NY,194310,Pace University,New York,NY,40.711,-74.0047,name,0.819,0
+536,UT-Rio Grande Valley,TX,227368,The University of Texas Rio Grande Valley,Edinburg,TX,26.3068,-98.1736,reviewed,9,0.776
+537,UNC Pembroke,NC,199281,University of North Carolina at Pembroke,Pembroke,NC,34.6883,-79.2003,reviewed,9,
+538,Penn St.-Behrend,PA,214591,Pennsylvania State University-Penn State Erie-Behrend College,Erie,PA,42.1194,-79.9838,name,0.743,0
+539,Penn State,PA,214777,Pennsylvania State University-Main Campus,University Park,PA,40.7965,-77.8628,reviewed,9,0.671
+540,Pennsylvania,PA,215062,University of Pennsylvania,Philadelphia,PA,39.9509,-75.1939,name,0.925,0.842
+541,Pepperdine,CA,121150,Pepperdine University,Malibu,CA,34.0378,-118.707,name,0.909,0
+542,Pfeiffer,NC,199306,Pfeiffer University,Misenheimer,NC,35.4847,-80.2832,name,0.888,0
+543,Jefferson,PA,216366,Thomas Jefferson University,Philadelphia,PA,39.9483,-75.1583,reviewed,9,0.75
+544,Pine Manor,MA,,Chestnut Hill MA,,,42.3236,-71.1661,reviewed_coords,9,
+545,Pittsburgh,PA,215293,University of Pittsburgh-Pittsburgh Campus,Pittsburgh,PA,40.4444,-79.9533,name,0.841,0.761
+546,Pitt.-Johnstown,PA,215284,University of Pittsburgh-Johnstown,Johnstown,PA,40.266,-78.8342,reviewed,9,
+547,Plattsburgh St.,NY,196246,SUNY College at Plattsburgh,Plattsburgh,NY,44.6929,-73.4665,name,0.627,0
+549,Pomona-Pitzer,CA,121345,Pomona College,Claremont,CA,34.099,-117.715,name,0.588,0
+550,Portland State,OR,209807,Portland State University,Portland,OR,45.5116,-122.686,name,0.951,0.706
+551,Portland,OR,209825,University of Portland,Portland,OR,45.5727,-122.727,name,0.888,0.801
+552,SUNY Potsdam,NY,196200,SUNY College at Potsdam,Potsdam,NY,44.6621,-74.9738,name,0.981,0
+553,Prairie View A&M,TX,227526,Prairie View A & M University,Prairie View,TX,30.0924,-95.9895,name,0.997,0
+554,Princeton,NJ,186131,Princeton University,Princeton,NJ,40.3487,-74.6594,name,0.899,0.705
+556,Providence,RI,217402,Providence College,Providence,RI,41.8427,-71.4374,name,0.936,0.789
+557,Puget Sound,WA,236328,University of Puget Sound,Tacoma,WA,47.2631,-122.479,name,0.948,0.751
+559,Purdue,IN,243780,Purdue University-Main Campus,West Lafayette,IN,40.4282,-86.9144,name,0.859,0.71
+560,Queens (NY),NY,190664,CUNY Queens College,Queens,NY,40.7364,-73.8201,reviewed,9,0.64
+561,Quincy,IL,148131,Quincy University,Quincy,IL,39.9389,-91.386,name,0.859,0.771
+562,Quinnipiac,CT,130226,Quinnipiac University,Hamden,CT,41.4189,-72.8941,name,0.909,0
+563,Radford,VA,233277,Radford University,Radford,VA,37.1369,-80.5497,name,0.875,0
+564,Ramapo,NJ,186201,Ramapo College of New Jersey,Mahwah,NJ,41.0809,-74.1741,name,0.666,0
+565,Randolph-Macon,VA,233295,Randolph-Macon College,Ashland,VA,37.7604,-77.4784,name,0.992,0.644
+566,Randolph,VA,233301,Randolph College,Lynchburg,VA,37.4373,-79.1719,name,0.917,0.764
+567,Redlands,CA,121691,University of Redlands,Redlands,CA,34.0642,-117.163,name,0.888,0.619
+568,Regis (CO),CO,127918,Regis University,Denver,CO,39.7882,-105.031,name,0.551,0
+569,Regis (MA),MA,167598,Regis College,Weston,MA,42.3513,-71.3106,name,0.579,0
+571,Rhode Island College,RI,217420,Rhode Island College,Providence,RI,41.8424,-71.4656,name,1.12,0.826
+572,Rhode Island,RI,217484,University of Rhode Island,Kingston,RI,41.4847,-71.5274,reviewed,9,0.955
+573,Rhodes,TN,221351,Rhodes College,Memphis,TN,35.1544,-89.9908,name,0.891,0
+574,Rice,TX,227757,Rice University,Houston,TX,29.7179,-95.402,name,0.819,0
+576,Rider,NJ,186283,Rider University,Lawrenceville,NJ,40.2788,-74.7378,name,0.841,0
+577,Ripon,WI,239628,Ripon College,Ripon,WI,43.8441,-88.8423,name,0.873,0
+579,Robert Morris,PA,215655,Robert Morris University,Moon Township,PA,40.5204,-80.2105,name,0.962,0
+581,Rochester (NY),NY,195030,University of Rochester,Rochester,NY,43.1264,-77.6312,reviewed,9,0.654
+582,Rockford,IL,148405,Rockford University,Rockford,IL,42.2706,-89.0195,name,0.888,0.629
+583,Roger Williams,RI,217518,Roger Williams University,Bristol,RI,41.6502,-71.2604,name,0.968,0.784
+584,Rollins,FL,136950,Rollins College,Winter Park,FL,28.5928,-81.3492,name,0.905,0
+585,Rose-Hulman,IN,152318,Rose-Hulman Institute of Technology,Terre Haute,IN,39.4836,-87.3267,domain,3,0
+587,Rutgers,NJ,186380,Rutgers University-New Brunswick,New Brunswick,NJ,40.4988,-74.4463,reviewed,9,0.725
+589,Rutgers-Newark,NJ,186399,Rutgers University-Newark,Newark,NJ,40.7391,-74.1758,name,0.968,0
+590,Sacred Heart,CT,130253,Sacred Heart University,Fairfield,CT,41.2209,-73.2433,name,0.955,0.696
+591,Saginaw Valley,MI,172051,Saginaw Valley State University,University Center,MI,43.5118,-83.9643,name,0.9,0
+593,St. Anselm,NH,183239,Saint Anselm College,Manchester,NH,42.9869,-71.5036,name,0.637,0
+595,Saint Benedict,MN,174747,College of Saint Benedict,Saint Joseph,MN,45.5618,-94.3199,name,0.992,0
+597,St. Catherine,MN,175005,St Catherine University,Saint Paul,MN,44.9249,-93.1838,name,0.956,0
+598,St. Cloud St.,MN,174783,Saint Cloud State University,Saint Cloud,MN,45.5532,-94.1527,name,0.819,0.728
+599,St. Francis College Brooklyn,NY,195173,St. Francis College,Brooklyn,NY,40.6902,-73.9866,name,0.819,0
+600,Saint Francis (PA),PA,215743,Saint Francis University,Loretto,PA,40.5067,-78.639,name,0.737,0
+601,St. John Fisher,NY,195720,St. John Fisher University,Rochester,NY,43.1163,-77.5131,name,0.988,0
+603,St. John's,NY,195809,St. John's University-New York,Queens,NY,40.7225,-73.7961,reviewed,9,0.844
+607,St. Lawrence,NY,195216,St Lawrence University,Canton,NY,44.5899,-75.1613,name,0.951,0.656
+608,Saint Leo,FL,137032,Saint Leo University,Saint Leo,FL,28.3368,-82.2578,name,0.929,0
+609,Saint Louis,MO,179159,Saint Louis University,Saint Louis,MO,38.6368,-90.2351,name,0.948,0.822
+610,Saint Mary's (CA),CA,123554,Saint Mary's College of California,Moraga,CA,37.8407,-122.109,reviewed,9,0.663
+611,St. Mary's (MD),MD,163912,St. Mary's College of Maryland,St. Mary's City,MD,38.188,-76.431,name,1.021,0.556
+612,Saint Mary's (MN),MN,174817,Saint Mary's University of Minnesota,Winona,MN,44.0447,-91.6954,reviewed,9,0.652
+613,Saint Michael's,VT,231059,Saint Michael's College,Colchester,VT,44.4946,-73.1671,name,0.997,0
+614,St. Norbert,WI,239716,Saint Norbert College,De Pere,WI,44.4448,-88.0678,domain,3,0
+615,St. Olaf,MN,174844,St Olaf College,Northfield,MN,44.4615,-93.182,domain,3,0
+617,Saint Peter's,NJ,186432,Saint Peter's University,Jersey City,NJ,40.7271,-74.0715,name,0.962,0
+618,St. Scholastica,MN,174899,The College of Saint Scholastica,Duluth,MN,46.8161,-92.1061,name,0.679,0
+620,St. Thomas (MN),MN,174914,University of St Thomas,Saint Paul,MN,44.9434,-93.189,reviewed,9,0.578
+622,Salisbury,MD,163851,Salisbury University,Salisbury,MD,38.3465,-75.6048,name,0.899,0
+623,Salve Regina,RI,217536,Salve Regina University,Newport,RI,41.4715,-71.3012,name,0.955,0
+624,Sam Houston State,TX,227881,Sam Houston State University,Huntsville,TX,30.7147,-95.5462,name,0.988,0
+625,Samford,AL,102049,Samford University,Birmingham,AL,33.4641,-86.7918,name,0.875,0
+626,San Diego State,CA,122409,San Diego State University,San Diego,CA,32.7752,-117.071,name,0.978,0.808
+627,San Diego,CA,122436,University of San Diego,San Diego,CA,32.7708,-117.192,name,0.929,0.856
+628,San Fran. St.,CA,122597,San Francisco State University,San Francisco,CA,37.7212,-122.477,name,0.564,0
+629,San Francisco,CA,122612,University of San Francisco,San Francisco,CA,37.7766,-122.45,name,0.962,0.893
+630,San Jose State,CA,122755,San Jose State University,San Jose,CA,37.3366,-121.881,name,0.973,0.775
+631,Santa Clara,CA,122931,Santa Clara University,Santa Clara,CA,37.3484,-121.938,name,0.948,0
+633,Scranton,PA,215929,University of Scranton,Scranton,PA,41.4066,-75.6569,domain,3,0
+634,Seattle Pacific,WA,236577,Seattle Pacific University,Seattle,WA,47.6502,-122.362,name,0.974,0.593
+635,Seton Hall,NJ,186584,Seton Hall University,South Orange,NJ,40.7423,-74.246,name,0.939,0
+637,Shenandoah,VA,233541,Shenandoah University,Winchester,VA,39.1674,-78.1574,name,0.909,0
+638,Shippensburg,PA,216010,Shippensburg University of Pennsylvania,Shippensburg,PA,40.0579,-77.5223,name,0.75,0
+639,Siena,NY,195474,Siena College,Loudonville,NY,42.7176,-73.7526,name,0.873,0.568
+641,Simpson,CA,154350,Simpson College,Indianola,IA,41.3655,-93.5635,reviewed,9,0.785
+642,Skidmore,NY,195526,Skidmore College,Saratoga Springs,NY,43.097,-73.7853,name,0.917,0
+644,Smith,MA,167835,Smith College,Northampton,MA,42.3181,-72.6381,name,0.873,0.59
+645,Sonoma St.,CA,123572,Sonoma State University,Rohnert Park,CA,38.3403,-122.677,name,0.938,0
+646,South Alabama,AL,102094,University of South Alabama,Mobile,AL,30.696,-88.1787,name,0.962,0.609
+647,South Carolina St.,SC,218733,South Carolina State University,Orangeburg,SC,33.498,-80.8487,name,0.999,0.825
+648,South Carolina,SC,218663,University of South Carolina-Columbia,Columbia,SC,33.9968,-81.0269,reviewed,9,0.851
+649,South Dakota State,SD,219356,South Dakota State University,Brookings,SD,44.3175,-96.7821,name,0.992,0.837
+650,South Dakota,SD,219471,University of South Dakota,Vermillion,SD,42.786,-96.9253,name,0.955,0.885
+651,South Florida,FL,137351,University of South Florida,Tampa,FL,28.0615,-82.4132,name,0.962,0.911
+652,Sewanee,TN,221519,The University of the South,Sewanee,TN,35.2047,-85.9202,reviewed,9,
+654,Southeast Missouri State,MO,179557,Southeast Missouri State University,Cape Girardeau,MO,37.3111,-89.5312,name,1.011,0.668
+655,Southeastern Louisiana,LA,160612,Southeastern Louisiana University,Hammond,LA,30.5147,-90.4687,name,1.001,0
+656,UMass Dartmouth,MA,167987,University of Massachusetts-Dartmouth,North Dartmouth,MA,41.6287,-71.0046,reviewed,9,
+657,Southern Cal,CA,123961,University of Southern California,Los Angeles,CA,34.0213,-118.284,name,0.991,0.943
+658,Southern Conn. St.,CT,130493,Southern Connecticut State University,New Haven,CT,41.3332,-72.9479,name,1.016,0.606
+659,Southern Ill.,IL,149222,Southern Illinois University-Carbondale,Carbondale,IL,37.7142,-89.2173,name,0.845,0.836
+660,SIUE,IL,149231,Southern Illinois University-Edwardsville,Edwardsville,IL,38.7939,-89.9978,reviewed,9,
+661,Southern Ind.,IN,151306,University of Southern Indiana,Evansville,IN,37.9624,-87.6772,name,0.979,0
+662,Southern Me.,ME,161554,University of Southern Maine,Portland,ME,43.6629,-70.2742,reviewed,9,
+663,Southern Methodist,TX,228246,Southern Methodist University,Dallas,TX,32.8436,-96.7834,name,0.987,0
+664,Southern Miss,MS,176372,University of Southern Mississippi,Hattiesburg,MS,31.3266,-89.3312,name,0.995,0.636
+665,Southern,LA,160621,Southern University and A & M College,Baton Rouge,LA,30.5246,-91.1901,reviewed,9,0.675
+667,Southern Utah,UT,230603,Southern Utah University,Cedar City,UT,37.6746,-113.07,name,0.962,0.579
+669,Missouri St.,MO,179566,Missouri State University-Springfield,Springfield,MO,37.1993,-93.2813,reviewed,9,0.808
+670,Texas State,TX,228459,Texas State University,San Marcos,TX,29.8889,-97.943,name,0.93,0.79
+671,Louisiana,LA,160658,University of Louisiana at Lafayette,Lafayette,LA,30.2122,-92.0202,reviewed,9,0.75
+673,Springfield,MA,167899,Springfield College,Springfield,MA,42.1022,-72.5566,name,0.944,0.687
+674,Stanford,CA,243744,Stanford University,Stanford,CA,37.4294,-122.167,name,0.888,0
+675,Staten Island,NY,190558,College of Staten Island CUNY,Staten Island,NY,40.6018,-74.1485,name,0.868,0
+676,Stephen F. Austin,TX,228431,Stephen F Austin State University,Nacogdoches,TX,31.6211,-94.6491,name,0.931,0
+678,Stetson,FL,137546,Stetson University,DeLand,FL,29.0355,-81.3007,name,0.875,0
+679,Stevens,NJ,186867,Stevens Institute of Technology,Hoboken,NJ,40.7448,-74.0253,name,0.68,0
+682,Stonehill,MA,167996,Stonehill College,Easton,MA,42.059,-71.0806,name,0.928,0
+683,Stony Brook,NY,196097,Stony Brook University,Stony Brook,NY,40.9148,-73.1205,name,0.948,0
+684,Suffolk,MA,168005,Suffolk University,Boston,MA,42.3579,-71.0609,name,0.875,0
+685,Susquehanna,PA,216278,Susquehanna University,Selinsgrove,PA,40.7975,-76.8753,name,0.917,0
+686,Swarthmore,PA,216287,Swarthmore College,Swarthmore,PA,39.9052,-75.3543,name,0.936,0
+688,Syracuse,NY,196413,Syracuse University,Syracuse,NY,43.0366,-76.134,name,0.888,0.629
+689,Tampa,FL,137847,The University of Tampa,Tampa,FL,27.9485,-82.4648,name,0.841,0.699
+690,Temple,PA,216339,Temple University,Philadelphia,PA,39.9805,-75.1569,name,0.859,0.771
+691,Tennessee St.,TN,221838,Tennessee State University,Nashville,TN,36.1663,-86.8283,name,0.956,0.831
+692,Tennessee Tech,TN,221847,Tennessee Technological University,Cookeville,TN,36.1748,-85.504,reviewed,9,0.814
+693,Chattanooga,TN,221740,The University of Tennessee-Chattanooga,Chattanooga,TN,35.0475,-85.3002,name,0.755,0.727
+694,Tennessee,TN,221759,The University of Tennessee-Knoxville,Knoxville,TN,35.9521,-83.9259,reviewed,9,0.756
+695,UT Martin,TN,221768,The University of Tennessee-Martin,Martin,TN,36.3403,-88.8642,reviewed,9,
+696,Tex. A&M-Kingsville,TX,228705,Texas A & M University-Kingsville,Kingsville,TX,27.5252,-97.8824,name,1.013,0.71
+697,Texas A&M,TX,228723,Texas A & M University-College Station,College Station,TX,30.6187,-96.3365,reviewed,9,0.819
+698,Texas Christian,TX,228875,Texas Christian University,Fort Worth,TX,32.7096,-97.3648,name,0.974,0.551
+699,Texas Southern,TX,229063,Texas Southern University,Houston,TX,29.721,-95.3611,name,0.968,0.588
+700,Texas Tech,TX,229115,Texas Tech University,Lubbock,TX,33.5834,-101.875,name,0.979,0.756
+701,Texas Woman's,TX,229179,Texas Woman's University,Denton,TX,33.2262,-97.1278,name,0.962,0.566
+702,Texas-Arlington,TX,228769,The University of Texas at Arlington,Arlington,TX,32.7297,-97.113,name,0.974,0.579
+703,Texas,TX,228778,The University of Texas at Austin,Austin,TX,30.2828,-97.7383,reviewed,9,0.756
+704,Texas-El Paso,TX,228796,The University of Texas at El Paso,El Paso,TX,31.7702,-106.504,name,0.974,0.69
+706,UT-San Antonio,TX,229027,The University of Texas at San Antonio,San Antonio,TX,29.5837,-98.6207,reviewed,9,0.668
+707,Thiel,PA,216357,Thiel College,Greenville,PA,41.4135,-80.3844,name,0.873,0
+709,Toledo,OH,206084,University of Toledo,Toledo,OH,41.6606,-83.6147,name,0.859,0
+711,Towson,MD,164076,Towson University,Towson,MD,39.3936,-76.6112,name,0.859,0
+712,TCNJ,NJ,187134,The College of New Jersey,Ewing,NJ,40.2687,-74.7788,reviewed,9,
+713,Trinity (CT),CT,130590,Trinity College,Hartford,CT,41.7475,-72.6909,name,0.639,0
+715,Trinity (TX),TX,229267,Trinity University,San Antonio,TX,29.4627,-98.4819,name,0.608,0
+716,Troy,AL,102368,Troy University,Troy,AL,31.7996,-85.958,name,0.819,0
+717,Tufts,MA,168148,Tufts University,Medford,MA,42.4085,-71.1183,name,0.841,0
+718,Tulane,LA,160755,Tulane University of Louisiana,New Orleans,LA,29.9401,-90.1221,name,0.696,0
+719,Tulsa,OK,207971,University of Tulsa,Tulsa,OK,36.1523,-95.9459,name,0.841,0.693
+720,Tuskegee,AL,102377,Tuskegee University,Tuskegee,AL,32.4309,-85.7085,name,0.888,0
+721,Air Force,CO,128328,United States Air Force Academy,USAF Academy,CO,39.011,-104.891,name,0.72,0
+722,Coast Guard,CT,130624,United States Coast Guard Academy,New London,CT,41.3758,-72.1016,name,0.74,0
+725,Army,NY,197036,United States Military Academy,West  Point,NY,41.389,-73.9568,reviewed,9,
+726,Navy,MD,164155,United States Naval Academy,Annapolis,MD,38.9805,-76.4817,reviewed,9,
+727,Union (NY),NY,196866,Union College,Schenectady,NY,42.8181,-73.9288,reviewed,9,0.675
+728,Upper Iowa,IA,154493,Upper Iowa University,Fayette,IA,42.8383,-91.7995,name,0.939,0.607
+730,Ursinus,PA,216524,Ursinus College,Collegeville,PA,40.193,-75.4565,name,0.905,0
+731,Utah St.,UT,230728,Utah State University,Logan,UT,41.7407,-111.814,name,0.922,0.64
+732,Utah,UT,230764,University of Utah,Salt Lake City,UT,40.7625,-111.846,name,0.819,0.736
+734,Valdosta St.,GA,141264,Valdosta State University,Valdosta,GA,30.8474,-83.2893,name,0.951,0
+735,Valparaiso,IN,152600,Valparaiso University,Valparaiso,IN,41.4622,-87.0402,name,0.909,0
+736,Vanderbilt,TN,221999,Vanderbilt University,Nashville,TN,36.1466,-86.8034,name,0.909,0
+737,Vassar,NY,197133,Vassar College,Poughkeepsie,NY,41.6869,-73.8951,name,0.891,0
+739,Villanova,PA,216597,Villanova University,Villanova,PA,40.0365,-75.3405,name,0.899,0
+740,Virginia Commonwealth,VA,234030,Virginia Commonwealth University,Richmond,VA,37.5496,-77.4527,name,0.998,0
+742,Virginia Tech,VA,233921,Virginia Polytechnic Institute and State University,Blacksburg,VA,37.229,-80.4237,reviewed,9,0.553
+745,Va. Wesleyan,VA,234173,Virginia Wesleyan University,Virginia Beach,VA,36.8684,-76.1861,name,0.983,0.771
+746,Virginia,VA,234076,University of Virginia-Main Campus,Charlottesville,VA,38.0357,-78.5034,name,0.888,0.801
+749,Wake Forest,NC,199847,Wake Forest University,Winston-Salem,NC,36.1336,-80.2774,name,0.948,0
+750,Wartburg,IA,154527,Wartburg College,Waverly,IA,42.7277,-92.4834,name,0.917,0.693
+751,Washington & Jefferson,PA,216667,Washington & Jefferson College,Washington,PA,40.1706,-80.2405,name,1.014,0
+753,Washington Col.,MD,164216,Washington College,Chestertown,MD,39.2173,-76.0688,name,1.12,0.783
+754,Washington State,WA,236939,Washington State University,Pullman,WA,46.7304,-117.158,name,0.961,0.711
+755,WashU,MO,179867,Washington University in St Louis,Saint Louis,MO,38.6479,-90.3106,reviewed,9,
+756,Washington,WA,236948,University of Washington-Seattle Campus,Seattle,WA,47.6554,-122.305,reviewed,9,0.816
+757,Wayne St. (MI),MI,172644,Wayne State University,Detroit,MI,42.359,-83.069,name,0.692,0.574
+758,Weber State,UT,230782,Weber State University,Ogden,UT,41.1926,-111.945,name,0.93,0
+759,Webster,MO,179894,Webster University,Saint Louis,MO,38.5889,-90.3452,name,0.875,0
+760,Wellesley,MA,168218,Wellesley College,Wellesley,MA,42.2916,-71.3066,name,0.928,0
+762,Wentworth,MA,168227,Wentworth Institute of Technology,Boston,MA,42.3366,-71.095,name,0.705,0
+764,Wesleyan (CT),CT,130697,Wesleyan University,Middletown,CT,41.5547,-72.6571,domain,3,0
+767,West Texas A&M,TX,229814,West Texas A & M University,Canyon,TX,34.9828,-101.915,name,0.986,0.647
+768,West Virginia,WV,238032,West Virginia University,Morgantown,WV,39.6344,-79.9544,name,0.962,0.893
+769,Western Carolina,NC,200004,Western Carolina University,Cullowhee,NC,35.309,-83.1863,name,0.979,0
+770,Western Connecticut St.,CT,130776,Western Connecticut State University,Danbury,CT,41.4004,-73.4443,name,1.013,0.624
+771,Western Illinois,IL,149772,Western Illinois University,Macomb,IL,40.4681,-90.6869,name,0.979,0.551
+772,Western Ky.,KY,157951,Western Kentucky University,Bowling Green,KY,36.985,-86.4568,name,0.979,0.602
+773,McDaniel,MD,164270,McDaniel College,Westminster,MD,39.5842,-77.002,name,0.917,0
+774,Western Michigan,MI,172699,Western Michigan University,Kalamazoo,MI,42.2822,-85.6138,name,0.979,0.668
+775,Western New Eng.,MA,168254,Western New England University,Springfield,MA,42.115,-72.5205,name,0.668,0
+778,Wheaton (IL),IL,149781,Wheaton College,Wheaton,IL,41.8702,-88.0996,domain,3,0
+779,Wheaton (MA),MA,168281,Wheaton College (Massachusetts),Norton,MA,41.9666,-71.184,reviewed,9,
+780,Whitman,WA,237057,Whitman College,Walla Walla,WA,46.0698,-118.332,domain,3,0
+782,Wichita State,KS,156125,Wichita State University,Wichita,KS,37.7189,-97.2924,name,0.945,0
+783,Widener,PA,216852,Widener University,Chester,PA,39.8617,-75.3554,name,0.875,0
+784,Wilkes,PA,216931,Wilkes University,Wilkes-Barre,PA,41.2442,-75.8903,name,0.859,0.59
+785,Willamette,OR,210401,Willamette University,Salem,OR,44.9355,-123.031,name,0.909,0
+786,William & Mary,VA,231624,William & Mary,Williamsburg,VA,37.2695,-76.7082,name,1.12,0
+787,William Paterson,NJ,187444,William Paterson University of New Jersey,Wayne,NJ,40.9453,-74.2002,name,0.797,0
+790,Winona St.,MN,175272,Winona State University,Winona,MN,44.0462,-91.6437,name,0.938,0
+791,Winston-Salem,NC,199999,Winston-Salem State University,Winston-Salem,NC,36.0896,-80.225,name,0.893,0
+792,Winthrop,SC,218964,Winthrop University,Rock Hill,SC,34.9415,-81.0314,name,0.888,0
+793,Wis.-Eau Claire,WI,240268,University of Wisconsin-Eau Claire,Eau Claire,WI,44.7983,-91.5019,name,1.006,0
+794,Green Bay,WI,240277,University of Wisconsin-Green Bay,Green Bay,WI,44.5323,-87.92,name,0.786,0
+795,Wisconsin-La Crosse,WI,240329,University of Wisconsin-La Crosse,La Crosse,WI,43.8157,-91.2319,name,1.003,0
+796,Wisconsin,WI,240444,University of Wisconsin-Madison,Madison,WI,43.0754,-89.4041,reviewed,9,0.756
+797,Milwaukee,WI,240453,University of Wisconsin-Milwaukee,Milwaukee,WI,43.0768,-87.8805,reviewed,9,0.75
+798,Wis.-Oshkosh,WI,240365,University of Wisconsin-Oshkosh,Oshkosh,WI,44.0262,-88.5494,name,0.983,0
+799,Wisconsin-Parkside,WI,240374,University of Wisconsin-Parkside,Kenosha,WI,42.6477,-87.8552,name,0.987,0.879
+800,Wis.-Platteville,WI,240462,University of Wisconsin-Platteville,Platteville,WI,42.7335,-90.4862,name,0.998,0
+801,Wisconsin-River Falls,WI,240471,University of Wisconsin-River Falls,River Falls,WI,44.8534,-92.6226,name,1.01,0
+802,Wisconsin-Stevens Point,WI,240480,University of Wisconsin-Stevens Point,Stevens Point,WI,44.5296,-89.5709,domain,3,0
+803,Wisconsin-Stout,WI,240417,University of Wisconsin-Stout,Menomonie,WI,44.8732,-91.9267,name,0.974,0
+804,Wisconsin-Superior,WI,240426,University of Wisconsin-Superior,Superior,WI,46.7176,-92.091,name,0.987,0
+805,Wisconsin-Whitewater,WI,240189,University of Wisconsin-Whitewater,Whitewater,WI,42.8356,-88.7424,name,0.995,0
+806,Wittenberg,OH,206525,Wittenberg University,Springfield,OH,39.934,-83.8154,name,0.909,0
+807,Wooster,OH,206589,The College of Wooster,Wooster,OH,40.8105,-81.9347,name,0.905,0
+808,WPI,MA,168421,Worcester Polytechnic Institute,Worcester,MA,42.2749,-71.8083,domain,3,0
+809,Worcester St.,MA,168430,Worcester State University,Worcester,MA,42.2675,-71.844,name,0.956,0.625
+810,Wright St.,OH,206604,Wright State University-Main Campus,Dayton,OH,39.7806,-84.0649,name,0.938,0.81
+811,Wyoming,WY,240727,University of Wyoming,Laramie,WY,41.3118,-105.579,name,0.875,0.737
+812,Xavier,OH,206622,Xavier University,Cincinnati,OH,39.1495,-84.4746,name,0.859,0.596
+813,Yale,CT,130794,Yale University,New Haven,CT,41.3112,-72.9267,name,0.819,0
+815,York (PA),PA,217059,York College of Pennsylvania,York,PA,39.9461,-76.728,name,1.005,0.742
+817,Youngstown St.,OH,206695,Youngstown State University,Youngstown,OH,41.1049,-80.6466,name,0.961,0
+929,Adams St.,CO,126182,Adams State University,Alamosa,CO,37.4736,-105.88,name,0.93,0
+938,Alvernia,PA,210775,Alvernia University,Reading,PA,40.31,-75.9368,name,0.888,0
+939,Anderson (IN),IN,150066,Anderson University,Anderson,IN,40.1128,-85.6643,name,0.888,0.768
+947,Arkansas Tech,AR,106467,Arkansas Tech University,Russellville,AR,35.2932,-93.1356,name,0.991,0
+953,Austin,TX,222983,Austin College,Sherman,TX,33.6463,-96.5963,name,0.891,0.716
+962,Bard,NY,189088,Bard College,Annandale-On-Hudson,NY,42.0204,-73.9099,name,0.851,0
+966,Arcadia,PA,211088,Arcadia University,Glenside,PA,40.0926,-75.1639,name,0.875,0
+973,Berry,GA,139144,Berry College,Mount Berry,GA,34.2904,-85.1892,name,0.873,0
+985,Bluefield St.,WV,237215,Bluefield State University,Bluefield,WV,37.2657,-81.239,name,0.956,0.667
+995,Caldwell,NJ,183910,Caldwell University,Caldwell,NJ,40.8328,-74.2726,name,0.888,0
+996,Cameron,OK,206914,Cameron University,Lawton,OK,34.6065,-98.4342,name,0.875,0
+1000,Carson-Newman,TN,219806,Carson-Newman University,Jefferson City,TN,36.1229,-83.4917,name,0.962,0
+1001,Catawba,NC,198215,Catawba College,Salisbury,NC,35.6914,-80.4828,name,0.905,0.654
+1004,Central Arkansas,AR,106704,University of Central Arkansas,Conway,AR,35.0779,-92.4577,name,0.979,0.602
+1009,Central Okla.,OK,206941,University of Central Oklahoma,Edmond,OK,35.6552,-97.4715,reviewed,9,0.979
+1010,Central Wash.,WA,234827,Central Washington University,Ellensburg,WA,47.0027,-120.538,reviewed,9,
+1012,Chadron St.,NE,180948,Chadron State College,Chadron,NE,42.8199,-103.002,name,0.97,0
+1013,Charleston (WV),WV,237312,University of Charleston,Charleston,WV,38.3334,-81.6162,name,0.586,0
+1014,College of Charleston,SC,217819,College of Charleston,Charleston,SC,32.7842,-79.9398,name,1.12,0.883
+1015,Christian Brothers,TN,219833,Christian Brothers University,Memphis,TN,35.1274,-89.9832,name,0.987,0
+1023,Coker,SC,217907,Coker University,Hartsville,SC,34.377,-80.0704,name,0.841,0
+1028,Concord,WV,237330,Concord University,Athens,WV,37.4237,-81.0067,name,0.875,0
+1036,Concordia Wisconsin,WI,238616,Concordia University-Wisconsin,Mequon,WI,43.2534,-87.9155,name,0.991,0
+1050,Defiance,OH,202514,Defiance College,Defiance,OH,41.2968,-84.3571,name,0.917,0
+1057,Drury,MO,177214,Drury University,Springfield,MO,37.2197,-93.2862,name,0.841,0.551
+1059,D'Youville,NY,190716,D'Youville  University,Buffalo,NY,42.9026,-78.8909,name,0.909,0
+1062,East Tex. Baptist,TX,224527,East Texas Baptist University,Marshall,TX,32.5578,-94.3745,name,0.999,0.602
+1064,Eastern Nazarene,MA,165644,Eastern Nazarene College,Quincy,MA,42.2712,-71.0111,domain,3,0
+1066,Edgewood,WI,238661,Edgewood College,Madison,WI,43.0571,-89.4229,name,0.917,0
+1068,Elon,NC,198516,Elon University,Elon,NC,36.1041,-79.5034,name,0.819,0
+1071,Emporia St.,KS,155025,Emporia State University,Emporia,KS,38.4148,-96.179,name,0.945,0
+1072,Erskine,SC,217998,Erskine College,Due West,SC,34.3321,-82.391,name,0.905,0
+1076,Fairmont St.,WV,237367,Fairmont State University,Fairmont,WV,39.4831,-80.1624,name,0.951,0
+1079,Findlay,OH,202763,The University of Findlay,Findlay,OH,41.0533,-83.6523,domain,3,0
+1083,Fort Lewis,CO,127185,Fort Lewis College,Durango,CO,37.2759,-107.867,name,0.967,0
+1085,Francis Marion,SC,218061,Francis Marion University,Florence,SC,34.1898,-79.6529,name,0.968,0
+1092,Gardner-Webb,NC,198561,Gardner-Webb University,Boiling Springs,NC,35.2473,-81.6681,name,0.955,0
+1094,George Fox,OR,208822,George Fox University,Newberg,OR,45.3036,-122.967,domain,3,0
+1096,Georgia College,GA,139861,Georgia College & State University,Milledgeville,GA,33.0828,-83.232,reviewed,9,0.897
+1098,Glenville St.,WV,237385,Glenville State University,Glenville,WV,38.9355,-80.8343,name,0.956,0
+1104,Grand Canyon,AZ,104717,Grand Canyon University,Phoenix,AZ,33.5132,-112.13,name,0.955,0
+1111,Greenville,IL,145372,Greenville University,Greenville,IL,38.8942,-89.4082,domain,3,0
+1112,Guilford,NC,198613,Guilford College,Greensboro,NC,36.0942,-79.8877,name,0.917,0.656
+1115,Hanover,IN,150756,Hanover College,Hanover,IN,38.7156,-85.4601,domain,3,0
+1116,Harding,AR,107044,Harding University,Searcy,AR,35.2474,-91.7261,name,0.875,0
+1123,Henderson St.,AR,107071,Henderson State University,Arkadelphia,AR,34.1282,-93.0597,name,0.956,0
+1124,Hendrix,AR,107080,Hendrix College,Conway,AR,35.1016,-92.4433,name,0.905,0
+1126,Holy Family,PA,212984,Holy Family University,Philadelphia,PA,40.0606,-74.9865,domain,3,0
+1130,Huntingdon,AL,101435,Huntingdon College,Montgomery,AL,32.351,-86.2844,name,0.936,0
+1133,Husson,ME,487524,Husson University,Bangor,ME,44.829,-68.7915,name,0.859,0
+1156,Neb.-Kearney,NE,181215,University of Nebraska at Kearney,Kearney,NE,40.7015,-99.0987,name,0.979,0
+1157,Kennesaw State,GA,486840,Kennesaw State University,Kennesaw,GA,34.0388,-84.5831,name,0.951,0
+1159,Keuka,NY,192192,Keuka College,Keuka Park,NY,42.6153,-77.0906,name,0.873,0
+1162,LaGrange,GA,140234,LaGrange College,Lagrange,GA,33.0386,-85.0431,name,0.917,0.608
+1164,Lakeland,WI,238980,Lakeland University,Plymouth,WI,43.8416,-87.8834,name,0.888,0.619
+1167,Lander,NY,218229,Lander University,Greenwood,SC,34.1999,-82.1647,name,0.739,0
+1170,Lenoir-Rhyne,NC,198835,Lenoir-Rhyne University,Hickory,NC,35.74,-81.3276,name,0.955,0
+1174,Limestone,SC,218238,Limestone University,Gaffney,SC,35.0571,-81.6492,name,0.899,0
+1179,Linfield,OR,209065,Linfield University,McMinnville,OR,45.2012,-123.2,name,0.888,0
+1196,Marian (WI),WI,239080,Marian University,Fond Du Lac,WI,43.7774,-88.4206,name,0.597,0
+1199,Mars Hill,NC,198899,Mars Hill University,Mars Hill,NC,35.8275,-82.5518,name,0.929,0
+1203,Mary Hardin-Baylor,TX,226471,University of Mary Hardin-Baylor,Belton,TX,31.0668,-97.4635,name,0.999,0
+1238,Montevallo,AL,101709,University of Montevallo,Montevallo,AL,33.1063,-86.8651,name,0.909,0
+1240,MSU Moorhead,MN,174358,Minnesota State University Moorhead,Moorhead,MN,46.8672,-96.7595,reviewed,9,
+1245,Mount Olive,NC,199069,University of Mount Olive,Mount Olive,NC,35.2082,-78.0694,name,0.948,0
+1254,Neumann,PA,214272,Neumann University,Aston,PA,39.8749,-75.44,name,0.875,0
+1257,Newberry,SC,218414,Newberry College,Newberry,SC,34.2859,-81.6198,name,0.917,0
+1266,Northern St.,SD,219259,Northern State University,Aberdeen,SD,45.4508,-98.4847,name,0.951,0.586
+1267,Northland,WI,239512,Northland College,Ashland,WI,46.5791,-90.8748,name,0.928,0.642
+1274,Northwest Nazarene,ID,142461,Northwest Nazarene University,Nampa,ID,43.5624,-116.566,name,0.987,0
+1277,Alliance,NY,194161,Alliance University,New York,NY,40.7058,-74.0156,name,0.888,0
+1289,Ouachita Baptist,AR,107512,Ouachita Baptist University,Arkadelphia,AR,34.1261,-93.0525,name,0.979,0
+1305,Cairn,PA,215114,Cairn University-Langhorne,Langhorne,PA,40.1658,-74.9095,name,0.679,0
+1314,Pittsburg St.,KS,155681,Pittsburg State University,Pittsburg,KS,37.3921,-94.7025,name,0.956,0
+1315,Pitt.-Bradford,PA,215266,University of Pittsburgh-Bradford,Bradford,PA,41.9434,-78.6737,reviewed,9,
+1318,Post,CT,130183,Post University,Waterbury,CT,41.5355,-73.0815,name,0.819,0
+1320,Presbyterian College,SC,218539,Presbyterian College,Clinton,SC,34.4658,-81.8745,name,1.12,0
+1328,Rockhurst,MO,179043,Rockhurst University,Kansas City,MO,39.0323,-94.573,name,0.899,0
+1334,St. Edward's,TX,227845,Saint Edward's University,Austin,TX,30.2296,-97.755,name,0.638,0
+1340,St. Joseph's (L.I.),NY,,Patchogue NY (St. Joseph's Long Island campus),,,40.7676,-73.0151,reviewed_coords,9,0
+1343,Saint Martin's,WA,236452,Saint Martin's University,Lacey,WA,47.0411,-122.816,name,0.968,0
+1346,St. Mary's (TX),TX,228149,St. Mary's University,San Antonio,TX,29.4532,-98.5628,name,0.698,0
+1348,St. Thomas Aquinas,NY,195243,St. Thomas Aquinas College,Sparkill,NY,41.0416,-73.9368,name,1.019,0.749
+1355,Schreiner,TX,228042,Schreiner University,Kerrville,TX,30.0315,-99.1306,name,0.899,0
+1356,Seattle,WA,236595,Seattle University,Seattle,WA,47.6089,-122.319,name,0.875,0.75
+1371,Southeastern Okla.,OK,207847,Southeastern Oklahoma State University,Durant,OK,34.0068,-96.3769,name,0.936,0
+1376,Southern Ark.,AR,107983,Southern Arkansas University Main Campus,Magnolia,AR,33.2916,-93.2359,name,0.983,0.617
+1390,Sul Ross St.,TX,228501,Sul Ross State University,Alpine,TX,30.3631,-103.651,name,0.973,0
+1395,Tarleton St.,TX,228529,Tarleton State University,Stephenville,TX,32.2178,-98.219,name,0.951,0
+1400,Texas Lutheran,TX,228981,Texas Lutheran University,Seguin,TX,29.5733,-97.9827,name,0.968,0.588
+1403,Tiffin,OH,206048,Tiffin University,Tiffin,OH,41.1183,-83.1842,name,0.859,0
+1433,Wayne St. (NE),NE,181783,Wayne State College,Wayne,NE,42.2416,-97.0151,name,0.718,0.594
+1434,Waynesburg,PA,216694,Waynesburg University,Waynesburg,PA,39.8999,-80.1862,name,0.909,0
+1438,West Liberty,WV,237932,West Liberty University,West Liberty,WV,40.1644,-80.6023,name,0.955,0
+1439,West Virginia St.,WV,237899,West Virginia State University,Institute,WV,38.3805,-81.765,name,0.996,0.9
+1445,Western N.M.,NM,188304,Western New Mexico University,Silver City,NM,32.7767,-108.283,reviewed,9,
+1446,Western Ore.,OR,210429,Western Oregon University,Monmouth,OR,44.8522,-123.238,reviewed,9,
+1448,Western Wash.,WA,237011,Western Washington University,Bellingham,WA,48.7378,-122.486,reviewed,9,
+1451,Westminster (PA),PA,216807,Westminster College,New Wilmington,PA,41.1193,-80.331,domain,3,0
+1454,Whitworth,WA,237066,Whitworth University,Spokane,WA,47.7534,-117.417,name,0.899,0.631
+1461,Wilmington (OH),OH,206507,Wilmington College,Wilmington,OH,39.4447,-83.8183,name,0.66,0
+1462,Wingate,NC,199962,Wingate University,Wingate,NC,34.9861,-80.443,name,0.875,0
+1467,Goucher,MD,162654,Goucher College,Baltimore,MD,39.4102,-76.5948,domain,3,0
+2678,Arkansas-Pine Bluff,AR,106412,University of Arkansas at Pine Bluff,Pine Bluff,AR,34.244,-92.0187,name,1.003,0
+2683,Belmont Abbey,NC,197984,Belmont Abbey College,Belmont,NC,35.2607,-81.0413,name,0.987,0
+2694,Franklin,IN,150604,Franklin College,Franklin,IN,39.4783,-86.0472,name,0.917,0.768
+2699,IUPUI,IN,,Indianapolis IN,,,39.7745,-86.1764,reviewed_coords,9,
+2707,Kansas City,MO,178402,University of Missouri-Kansas City,Kansas City,MO,39.0342,-94.5821,reviewed,9,0.948
+2711,North Florida,FL,136172,University of North Florida,Jacksonville,FL,30.2719,-81.5091,reviewed,9,0.962
+2713,Oglethorpe,GA,140696,Oglethorpe University,Atlanta,GA,33.8754,-84.3337,name,0.909,0
+2720,Colorado St.-Pueblo,CO,128106,Colorado State University Pueblo,Pueblo,CO,38.3086,-104.579,name,1.002,0.596
+2741,Howard Payne,TX,225548,Howard Payne University,Brownwood,TX,31.7165,-98.9852,name,0.955,0.597
+2743,Incarnate Word,TX,225627,University of the Incarnate Word,San Antonio,TX,29.4671,-98.4658,name,0.968,0
+2746,Lake Erie,OH,203580,Lake Erie College,Painesville,OH,41.7178,-81.2518,name,0.958,0.593
+2751,Pacific (OR),OR,209612,Pacific University,Forest Grove,OR,45.5214,-123.109,name,0.608,0
+2755,Southwest Baptist,MO,179326,Southwest Baptist University,Bolivar,MO,37.6024,-93.4071,name,0.983,0
+2759,Western Colo.,CO,128391,Western Colorado University,Gunnison,CO,38.5499,-106.919,name,0.979,0.551
+2798,Albertus Magnus,CT,128498,Albertus Magnus College,New Haven,CT,41.3325,-72.9238,name,0.997,0
+2810,St. Thomas (TX),TX,227863,University of St Thomas,Houston,TX,29.7364,-95.3931,reviewed,9,0.578
+2814,Washburn,KS,156082,Washburn University,Topeka,KS,39.0338,-95.7022,name,0.888,0
+2915,Wofford,SC,218973,Wofford College,Spartanburg,SC,34.9594,-81.9336,name,0.905,0
+8398,Hilbert,NY,191621,Hilbert College,Hamburg,NY,42.7546,-78.8203,name,0.905,0
+8404,Hood,MD,162760,Hood College,Frederick,MD,39.4206,-77.419,name,0.851,0
+8411,Ark.-Monticello,AR,106485,University of Arkansas at Monticello,Monticello,AR,33.5909,-91.8112,name,0.991,0
+8490,LeTourneau,TX,226231,LeTourneau University,Longview,TX,32.4663,-94.7264,name,0.909,0
+8530,McMurry,TX,226587,McMurry University,Abilene,TX,32.4298,-99.7487,name,0.875,0
+8567,Mount St. Joseph,OH,204200,Mount St. Joseph University,Cincinnati,OH,39.0959,-84.6395,name,0.992,0
+8688,St. Mary's (IN),IN,152390,Saint Mary's College,Notre Dame,IN,41.7073,-86.2569,domain,3,0
+8736,Southwest Minn. St.,MN,175078,Southwest Minnesota State University,Marshall,MN,44.4537,-95.7595,name,1.013,0
+8744,Southwestern Okla.,OK,207865,Southwestern Oklahoma State University,Weatherford,OK,35.5353,-98.7078,name,0.936,0
+8746,Southwestern (TX),TX,228343,Southwestern University,Georgetown,TX,30.6343,-97.6657,name,0.646,0
+8875,Chowan,NC,198303,Chowan University,Murfreesboro,NC,36.4363,-77.0991,name,0.859,0.637
+8911,Wis. Lutheran,WI,240338,Wisconsin Lutheran College,Milwaukee,WI,43.0369,-88.0227,name,1.008,0
+8935,Converse,SC,217961,Converse University,Spartanburg,SC,34.9555,-81.9179,name,0.888,0
+8965,East Central,OK,207041,East Central University,Ada,OK,34.7719,-96.6638,name,0.955,0.861
+8981,Endicott,MA,165699,Endicott College,Beverly,MA,42.5533,-70.8408,name,0.917,0
+9004,Georgian Court,NJ,184773,Georgian Court University,Lakewood,NJ,40.0996,-74.2282,name,0.968,0
+9011,Fort Hays St.,KS,155061,Fort Hays State University,Hays,KS,38.8722,-99.3425,name,0.978,0
+9012,Mo. Southern St.,MO,178341,Missouri Southern State University,Joplin,MO,37.0952,-94.4617,name,1.008,0.595
+9013,Missouri Western,MO,178387,Missouri Western State University,Saint Joseph,MO,39.7575,-94.7856,name,0.912,0
+9081,Concordia-St. Paul,MN,173328,Concordia University-Saint Paul,Saint Paul,MN,44.9498,-93.1549,name,0.822,0
+9630,West Va. Wesleyan,WV,237969,West Virginia Wesleyan College,Buckhannon,WV,38.9907,-80.219,name,1.031,0.777
+9680,Embry-Riddle (FL),FL,133553,Embry-Riddle Aeronautical University-Daytona Beach,Daytona Beach,FL,29.1899,-81.0484,reviewed,9,
+9684,St. Elizabeth,NJ,186618,Saint Elizabeth University,Morristown,NJ,40.7818,-74.4382,name,0.646,0.607
+9754,UC-Colo. Springs,CA,126580,University of Colorado Colorado Springs,Colorado Springs,CO,38.8927,-104.8,name,0.775,0.584
+10411,USC Upstate,SC,218742,University of South Carolina-Upstate,Spartanburg,SC,34.9964,-81.9706,reviewed,9,
+10870,Shepherd,WV,237792,Shepherd University,Shepherdstown,WV,39.4331,-77.8041,name,0.888,0
+10972,Chatham,PA,211556,Chatham University,Pittsburgh,PA,40.4484,-79.9261,name,0.875,0
+11036,Sage Colleges,NY,,Troy NY (Russell Sage College),,,42.7284,-73.6918,reviewed_coords,9,
+11276,S.C. Aiken,SC,218645,University of South Carolina Aiken,Aiken,SC,33.5727,-81.7676,reviewed,9,
+11403,Colo. Christian,CO,126669,Colorado Christian University,Lakewood,CO,39.7139,-105.095,name,0.987,0.586
+11416,Colorado Mesa,CO,127556,Colorado Mesa University,Grand Junction,CO,39.0806,-108.553,name,0.962,0.627
+11504,Queens (NC),NC,199412,Queens University of Charlotte,Charlotte,NC,35.1891,-80.8335,reviewed,9,0.674
+11538,Fontbonne,MO,177418,Fontbonne University,Saint Louis,MO,38.6427,-90.3157,name,0.899,0
+11740,West Florida,FL,138354,University of West Florida,Pensacola,FL,30.5491,-87.2185,name,0.955,0.645
+11839,Pitt.-Greensburg,PA,215275,University of Pittsburgh-Greensburg,Greensburg,PA,40.2764,-79.5327,reviewed,9,
+12799,Wheeling,WV,238078,Wheeling University,Wheeling,WV,40.0709,-80.6908,name,0.888,0
+12830,Tusculum,TN,221953,Tusculum University,Greeneville,TN,36.1724,-82.7608,name,0.888,0
+12884,Centenary (NJ),NJ,183974,Centenary University,Hackettstown,NJ,40.8476,-74.8336,reviewed,9,0.657
+13028,Anderson (SC),SC,217633,Anderson University,Anderson,SC,34.5152,-82.6404,reviewed,9,0.688
+13302,Lees-McRae,NC,198808,Lees-McRae College,Banner Elk,NC,36.1625,-81.8734,name,0.967,0
+14795,Cedar Crest,PA,211468,Cedar Crest College,Allentown,PA,40.5863,-75.5192,name,0.974,0
+14927,Belmont,TN,219709,Belmont University,Nashville,TN,36.1356,-86.7948,name,0.875,0.785
+15882,Rosemont,PA,215691,Rosemont College,Rosemont,PA,40.0334,-75.3293,name,0.917,0
+16142,Misericordia,PA,214069,Misericordia University,Dallas,PA,41.3453,-75.9715,domain,3,0
+17094,William Peace,NC,199272,William Peace University,Raleigh,NC,35.7891,-78.6377,name,0.962,0
+19117,Salem (WV),WV,237783,Salem University,Salem,WV,39.2886,-80.5718,name,0.584,0
+19651,High Point,NC,198695,High Point University,High Point,NC,35.972,-79.9947,name,0.939,0.818
+20220,MSOE,WI,239318,Milwaukee School of Engineering,Milwaukee,WI,43.0454,-87.9077,reviewed,9,
+21323,Chestnut Hill,PA,211583,Chestnut Hill College,Philadelphia,PA,40.0868,-75.2287,name,0.987,0
+21830,Piedmont,GA,140818,Piedmont University,Demorest,GA,34.566,-83.5421,name,0.888,0.663
+21852,Stevenson,MD,164173,Stevenson University,Owings Mills,MD,39.4264,-76.7758,name,0.899,0
+22626,JWU (Providence),RI,217235,Johnson & Wales University-Providence,Providence,RI,41.82,-71.4128,reviewed,9,0
+23121,Texas-Dallas,TX,228787,The University of Texas at Dallas,Richardson,TX,32.9847,-96.7497,name,0.955,0.836
+23157,Felician,NJ,184612,Felician University,Lodi,NJ,40.8673,-74.0965,name,0.888,0
+23725,Medaille,NY,192925,Medaille University,Buffalo,NY,42.9286,-78.8559,name,0.888,0
+24317,Lesley,MA,166452,Lesley University,Cambridge,MA,42.3801,-71.1173,name,0.859,0
+24400,Concordia (TX),TX,224004,Concordia University Texas,Austin,TX,30.4202,-97.8357,domain,3,0
+24639,Nova Southeastern,FL,136215,Nova Southeastern University,Fort Lauderdale,FL,26.0823,-80.2499,name,0.983,0.591
+25719,Penn St.-Altoona,PA,214689,Pennsylvania State University-Penn State Altoona,Altoona,PA,40.5418,-78.4096,name,0.83,0
+26107,Becker,MA,,Worcester MA,,,42.2626,-71.8023,reviewed_coords,9,
+26172,A&M-Corpus Christi,TX,224147,Texas A & M University-Corpus Christi,Corpus Christi,TX,27.7137,-97.3239,name,0.918,0
+27854,Minn.-Crookston,MN,174075,University of Minnesota-Crookston,Crookston,MN,47.8025,-96.6062,name,0.991,0
+27892,Farmingdale St.,NY,196042,Farmingdale State College,Farmingdale,NY,40.7542,-73.4283,name,0.988,0
+28593,Birmingham-Southern,AL,100937,Birmingham-Southern College,Birmingham,AL,33.5138,-86.8506,name,1.011,0
+28600,Lipscomb,TN,219976,Lipscomb University,Nashville,TN,36.1063,-86.7998,name,0.888,0
+28749,Transylvania,KY,157818,Transylvania University,Lexington,KY,38.053,-84.4932,name,0.925,0
+28755,Florida Gulf Coast,FL,433660,Florida Gulf Coast University,Fort Myers,FL,26.4636,-81.7726,name,0.999,0.641
+30002,Trevecca Nazarene,TN,221892,Trevecca Nazarene University,Nashville,TN,36.1413,-86.7542,name,0.983,0
+30013,Lee,TN,220613,Lee University,Cleveland,TN,35.166,-84.8714,name,0.792,0.702
+30024,Utah Valley,UT,230737,Utah Valley University,Orem,UT,40.2811,-111.716,name,0.948,0
+30028,Texas-Tyler,TX,228802,The University of Texas at Tyler,Tyler,TX,32.3158,-95.2543,name,0.948,0.617
+30031,Northwestern-St. Paul,MN,174491,University of Northwestern-St Paul,Saint Paul,MN,45.0337,-93.1678,name,1.008,0
+30032,Finlandia,MI,172440,Finlandia University,Hancock,MI,47.1279,-88.5888,name,0.899,0
+30035,Crown (MN),MN,174862,Crown College,Saint Bonifacius,MN,44.8854,-93.743,domain,3,0
+30036,Mount Aloysius,PA,214166,Mount Aloysius College,Cresson,PA,40.4597,-78.6009,name,0.992,0
+30037,Trine,IN,152567,Trine University,Angola,IN,41.6325,-85.008,name,0.841,0
+30038,Bethany Lutheran,MN,173142,Bethany Lutheran College,Mankato,MN,44.1666,-93.9908,name,1.001,0
+30039,North Central (MN),MN,174437,North Central University,Minneapolis,MN,44.9686,-93.2615,name,0.781,0.664
+30042,Mitchell,CT,129774,Mitchell College,New London,CT,41.328,-72.0952,name,0.917,0.619
+30045,Palm Beach Atl.,FL,136330,Palm Beach Atlantic University,West Palm Beach,FL,26.7044,-80.0525,reviewed,9,0.656
+30047,Keystone,PA,213303,Keystone College,La Plume,PA,41.559,-75.7775,name,0.917,0
+30050,Ill. Springfield,IL,148654,University of Illinois Springfield,Springfield,IL,39.7295,-89.6168,name,0.995,0.595
+30054,Newman,KS,155335,Newman University,Wichita,KS,37.6726,-97.3777,name,0.859,0.59
+30055,Cal St. Monterey Bay,CA,409698,California State University-Monterey Bay,Seaside,CA,36.6524,-121.796,name,1.031,0.738
+30063,Seton Hill,PA,215947,Seton Hill University,Greensburg,PA,40.3094,-79.5574,domain,3,0
+30064,Saint Vincent,PA,215798,Saint Vincent College,Latrobe,PA,40.2927,-79.4038,domain,3,0
+30065,NVU-Lyndon,VT,,Lyndonville VT (Vermont State University-Lyndon),,,44.534,-72.0034,reviewed_coords,9,
+30067,SUNY Morrisville,NY,196051,SUNY Morrisville,Morrisville,NY,42.894,-75.6406,name,1.12,0
+30069,Franciscan,OH,205957,Franciscan University of Steubenville,Steubenville,OH,40.3769,-80.6205,name,0.732,0.622
+30073,William Smith,NY,191630,Hobart William Smith Colleges,Geneva,NY,42.8581,-76.9855,name,0.818,0
+30081,Penn St. Harrisburg,PA,214713,Pennsylvania State University-Penn State Harrisburg,Middletown,PA,40.2043,-76.7412,reviewed,9,3
+30084,Geneva,PA,212656,Geneva College,Beaver Falls,PA,40.7725,-80.3218,domain,3,0
+30085,Lancaster Bible,PA,213400,Lancaster Bible College,Lancaster,PA,40.0753,-76.2878,name,0.997,0
+30088,Tex. Permian Basin,TX,229018,The University of Texas Permian Basin,Odessa,TX,31.8895,-102.33,name,1.003,0
+30092,Flagler,FL,133711,Flagler College,Saint Augustine,FL,29.8927,-81.3149,name,0.905,0.725
+30093,AUM,AL,100830,Auburn University at Montgomery,Montgomery,AL,32.3674,-86.1775,reviewed,9,
+30095,Utah Tech,UT,230171,Utah Tech University,Saint George,UT,37.1028,-113.566,name,0.974,0
+30105,Ark.-Fort Smith,AR,108092,University of Arkansas-Fort Smith,Fort Smith,AR,35.3842,-94.3737,name,1.003,0
+30111,Covenant,GA,139393,Covenant College,Lookout Mountain,GA,34.9652,-85.3751,domain,3,0
+30114,Penn St.-Abington,PA,214801,Pennsylvania State University-Penn State Abington,Abington,PA,40.1171,-75.1107,name,0.835,0
+30119,Ohio Dominican,OH,204617,Ohio Dominican University,Columbus,OH,39.9928,-82.9407,name,0.968,0
+30120,William Jewell,MO,179955,William Jewell College,Liberty,MO,39.2478,-94.4131,name,0.992,0
+30123,Academy of Art,CA,108232,Academy of Art University,San Francisco,CA,37.7879,-122.401,name,0.948,0.775
+30124,Cedarville,OH,201654,Cedarville University,Cedarville,OH,39.7492,-83.8147,domain,3,0
+30125,Minot St.,ND,200253,Minot State University,Minot,ND,48.247,-101.299,name,0.93,0
+30126,Notre Dame (OH),OH,204468,Notre Dame College,Cleveland,OH,41.5069,-81.5166,name,0.791,0.596
+30127,Simon Fraser,NA,,Burnaby BC,,,49.2781,-122.92,reviewed_coords,9,
+30128,Sioux Falls,SD,219383,University of Sioux Falls,Sioux Falls,SD,43.5316,-96.7382,name,0.948,0
+30134,Black Hills St.,SD,219046,Black Hills State University,Spearfish,SD,44.4949,-103.871,name,0.988,0
+30135,California Baptist,CA,110361,California Baptist University,Riverside,CA,33.9293,-117.426,name,0.987,0
+30136,Lindenwood (MO),MO,177968,Lindenwood University,Saint Charles,MO,38.7854,-90.5013,name,0.631,0
+30138,McKendree,IL,147013,McKendree University,Lebanon,IL,38.6082,-89.8168,name,0.899,0
+30139,South Dakota Mines,SD,219347,South Dakota School of Mines and Technology,Rapid City,SD,44.0754,-103.206,name,0.867,0.723
+30140,Ursuline,OH,206349,Ursuline College,Pepper Pike,OH,41.497,-81.4651,name,0.917,0
+30141,Walsh,OH,206437,Walsh University,North Canton,OH,40.8739,-81.3699,domain,3,0
+30147,Fresno Pacific,CA,114813,Fresno Pacific University,Fresno,CA,36.7268,-119.735,name,0.968,0.601
+30149,Point Loma,CA,121309,Point Loma Nazarene University,San Diego,CA,32.7184,-117.25,name,0.802,0
+30151,Shorter,GA,140988,Shorter University,Rome,GA,34.2575,-85.1965,name,0.875,0.785
+30152,Southern Nazarene,OK,206862,Southern Nazarene University,Bethany,OK,35.5133,-97.6295,name,0.983,0
+30153,Union (TN),TN,221971,Union University,Jackson,TN,35.6769,-88.8585,name,0.584,0
+30154,Young Harris,GA,141361,Young Harris College,Young Harris,GA,34.9335,-83.8459,name,0.981,0
+30160,Houghton,NY,191676,Houghton University,Houghton,NY,42.4261,-78.1554,domain,3,0
+30163,Sarah Lawrence,NY,195304,Sarah Lawrence College,Bronxville,NY,40.9355,-73.8437,name,0.992,0
+30164,Southern Va.,VA,233611,Southern Virginia University,Buena Vista,VA,37.7404,-79.3504,name,0.983,0.617
+30165,SUNY Canton,NY,196015,SUNY College of Technology at Canton,Canton,NY,44.6041,-75.1829,name,0.816,0
+30166,Valley Forge,PA,216542,University of Valley Forge,Phoenixville,PA,40.1178,-75.5469,name,0.955,0.836
+30171,Berea,KY,156295,Berea College,Berea,KY,37.572,-84.2929,name,0.873,0
+30173,Iowa Wesleyan,IA,153621,Iowa Wesleyan University,Mount Pleasant,IA,40.9738,-91.5525,name,0.962,0
+30174,Daemen,NY,190725,Daemen University,Amherst,NY,42.9656,-78.7881,name,0.859,0
+30177,Lubbock Christian,TX,226383,Lubbock Christian University,Lubbock,TX,33.576,-101.934,name,0.983,0
+30178,Northwestern Okla.,OK,207306,Northwestern Oklahoma State University,Alva,OK,36.7967,-98.6677,name,0.936,0
+30181,UVa-Wise,VA,233897,University of Virginia's College at Wise,Wise,VA,36.9706,-82.5597,reviewed,9,
+30188,Bryn Athyn,PA,210492,Bryn Athyn College of the New Church,Bryn Athyn,PA,40.1344,-75.0608,name,0.765,0
+30190,Penn College,PA,366252,Pennsylvania College of Technology,Williamsport,PA,41.2341,-77.0237,reviewed,9,0.631
+30192,Southern Wesleyan,SC,217776,Southern Wesleyan University,Central,SC,34.7281,-82.7616,name,0.983,0
+30197,Belhaven,MS,175421,Belhaven University,Jackson,MS,32.3184,-90.1692,domain,3,0
+30198,Cal St. San Marcos,CA,366711,California State University-San Marcos,San Marcos,CA,33.1306,-117.159,name,1.027,0.708
+30199,Concordia (CA),CA,112075,Concordia University-Irvine,Irvine,CA,33.6537,-117.812,reviewed,9,
+30200,Concordia Portland,OR,,Portland OR,,,45.5686,-122.633,reviewed_coords,9,0
+30202,Okla. Baptist,OK,207403,Oklahoma Baptist University,Shawnee,OK,35.3605,-96.9325,name,0.979,0
+30209,Westminster (UT),UT,230807,Westminster University,Salt Lake City,UT,40.7308,-111.856,name,0.662,0
+30219,Dean,MA,165574,Dean College,Franklin,MA,42.0856,-71.3978,name,0.851,0
+30220,Biola,CA,110097,Biola University,La Mirada,CA,33.9062,-118.014,domain,3,0
+30221,Davenport,MI,169479,Davenport University,Grand Rapids,MI,42.85,-85.5335,name,0.899,0.663
+30222,Purdue Northwest,IN,490805,Purdue University Northwest,Hammond,IN,41.5843,-87.4742,name,0.979,0.593
+30225,SUNY Delhi,NY,196024,SUNY College of Technology at Delhi,Delhi,NY,42.2699,-74.9246,name,0.807,0
+30244,Edward Waters,FL,133526,Edward Waters University,Jacksonville,FL,30.3448,-81.6849,name,0.962,0
+505160,Talladega,AL,102298,Talladega College,Talladega,AL,33.4335,-86.1127,name,0.928,0

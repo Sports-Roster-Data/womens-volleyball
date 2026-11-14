@@ -475,6 +475,16 @@ vb_screen_staff_name <- function(x) {
   staff_anywhere
 }
 
+# Sidearm and similar platforms put coach and staff bios under
+# /roster/coaches/ or /roster/staff/. Some roster pages list staff in the
+# player table with the title in the class column, a phone number in the
+# position column and an email in the height column; the URL is the one
+# reliable signal (a player's bio never lives there).
+vb_screen_staff_url <- function(x) {
+  str_detect(coalesce(as.character(x), ""),
+             regex("/roster/(coaches|staff)/", ignore_case = TRUE))
+}
+
 vb_screen_numeric_only <- function(x) {
   str_detect(str_squish(coalesce(as.character(x), "")), "^\\d+$")
 }
@@ -1650,6 +1660,7 @@ vb_clean_season <- function(season,
     vb_screen_numeric_only(raw$name_raw) ~ "numeric-only name",
     unknown_team ~ "team not in the canonical registry",
     vb_screen_staff_name(raw$name_raw) ~ "staff/title entry, not a player",
+    vb_screen_staff_url(raw$url_raw) ~ "staff profile URL, not a player",
     !is.na(shifted) ~ shifted,
     TRUE ~ NA_character_
   )

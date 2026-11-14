@@ -4562,24 +4562,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 260,Gonzaga,,Jody Smith,Jr.,"Redondo Beach, Calif.",Redondo Union HS,,6' 2'',MB,16,/sports/womens-volleyball/roster/jody-smith/5339,2022
 260,Gonzaga,,Grace Ehler,Jr.,"Tucson, Ariz.",Marana,,6' 2'',OH,17,/sports/womens-volleyball/roster/grace-ehler/4771,2022
 260,Gonzaga,,Fallon Thompson,Fr.,"Spring, Texas",Grand Oaks HS,,6' 0'',OH,21,/sports/womens-volleyball/roster/fallon-thompson/6050,2022
-5,Akron,,Rachel Abramson,OH,"Waddell, Ariz.",Verrado HS,Arizona Sky,6' 0'',Sr.,1,//gozips.com/sports/womens-volleyball/roster/rachel-abramson/7964,2022
-5,Akron,,Chloe Werner,RH,"Waterford, Wisc.",Waterford Union HS,,6' 0'',Fr.,2,//gozips.com/sports/womens-volleyball/roster/chloe-werner/8187,2022
-5,Akron,,Baylee Vought,S,"Fort Mill, S.C.",Indian Land HS,Carolina Union,6' 0'',R-Fr.,3,//gozips.com/sports/womens-volleyball/roster/baylee-vought/8709,2022
-5,Akron,,Anne Lesure,S,"Carmel, Ind.",Carmel HS,Circle City VBC,6' 0'',Jr.,4,//gozips.com/sports/womens-volleyball/roster/anne-lesure/7970,2022
-5,Akron,,Jayda Young,MB,"Toledo, Ohio",Whitmer HS,Premier Academy,6' 0'',Jr.,5,//gozips.com/sports/womens-volleyball/roster/jayda-young/7973,2022
-5,Akron,,Ellen Kinnaird,MB,"Lewis Center, Ohio",Olentangy HS,Mintonette Sports,5' 11'',So.,6,//gozips.com/sports/womens-volleyball/roster/ellen-kinnaird/8962,2022
-5,Akron,,Genevieve Hara,OH/RH,"Imperial Beach, Calif.",Mar Vista HS,Storm VBC,5' 11'',R-So.,7,//gozips.com/sports/womens-volleyball/roster/genevieve-hara/8704,2022
-5,Akron,,Lauren Latka,L/DS,"Zionsville, Ind.",Zionsville HS,Team Indiana,5' 7'',Sr.,8,//gozips.com/sports/womens-volleyball/roster/lauren-latka/7969,2022
-5,Akron,,Samantha Sabra,OH,"San Pedro, Calif.",Mary Star of the Sea HS,,5' 9'',So.,10,//gozips.com/sports/womens-volleyball/roster/samantha-sabra/8964,2022
-5,Akron,,Avery Brown,S,"Decatur, Ga.",St Pius X Catholic HS,,5' 9'',Fr.,12,//gozips.com/sports/womens-volleyball/roster/avery-brown/8703,2022
-5,Akron,,Mia Thompson,L/DS,"Delaware, Ohio",Delaware Hayes,,5' 5'',Jr.,13,//gozips.com/sports/womens-volleyball/roster/mia-thompson/8713,2022
-5,Akron,,Faith Johnson,OH,"Naperville, Ill.",Neuqua Valley HS,First Alliance,5' 11'',Jr.,16,//gozips.com/sports/womens-volleyball/roster/faith-johnson/8705,2022
-5,Akron,,Karleighana Jones,MB,"White Plains, N.Y.",White Plains HS,USANY Volleyball,6' 3'',So.,17,//gozips.com/sports/womens-volleyball/roster/karleighana-jones/8961,2022
-5,Akron,,Teagan Ochaya,RH,"Mentor, Ohio",Mentor HS,Eastside Cleveland Juniors,6' 3'',R-Sr.,19,//gozips.com/sports/womens-volleyball/roster/teagan-ochaya/8183,2022
-5,Akron,,Gia Padilla,OH,"Apollo Beach, Fla.",Carrollwood Day School,OTVA Volleyball,5' 10'',So.,21,//gozips.com/sports/womens-volleyball/roster/gia-padilla/7971,2022
-5,Akron,,Matalasi Danielson,OH/OPP,"Stockton, Calif.",St. Mary's HS,,5' 11'',So.,22,//gozips.com/sports/womens-volleyball/roster/matalasi-danielson/8191,2022
-5,Akron,,Tyson Norton,Head Women's Volleyball Coach,,,,tnorton@uakron.edu,330-972-7338,,//gozips.com/sports/womens-volleyball/roster/coaches/tyson-norton/1301,2022
-5,Akron,,Andy Riesenberg,Assistant Coach,,,,ariesenberg@uakron.edu,(330) 972-7438,,//gozips.com/sports/womens-volleyball/roster/coaches/andy-riesenberg/1124,2022
 100,Cal State LA,3943,Malia Apodaca,Junior,Yuba City,Yuba City HS,,"5'2""",L/DS,2,//www.lagoldeneagles.com/sports/womens-volleyball/roster/malia-apodaca/3943,2022
 100,Cal State LA,3944,Allison Linder,Senior,Roseville,Oakmont HS,American River JC,"5'10""",OH,3,//www.lagoldeneagles.com/sports/womens-volleyball/roster/allison-linder/3944,2022
 100,Cal State LA,3945,Ashley Dittmann,Senior,Clovis,Buchanan HS,UC Riverside,"6'1""",OH,4,//www.lagoldeneagles.com/sports/womens-volleyball/roster/ashley-dittmann/3945,2022
@@ -15091,3 +15073,19 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 510,Northwood,,Sydney Hasenfratz,RFr.,"Clarkston, Mich.",Clarkston,,6-1,MB/OH,18,//www.gonorthwood.com/sports/wvball/2022-23/bios/hasenfratz_sydney_yfuf,2022-23
 510,Northwood,,Kiana Martens,Jr.,"St. Johns, Mich.",St. Johns,,6-0,OP,19,//www.gonorthwood.com/sports/wvball/2022-23/bios/martens_kiana_1iom,2022-23
 510,Northwood,,Haley Jaster,Jr.,"Midland, Mich.",Dow,,6-1,MB,23,//www.gonorthwood.com/sports/wvball/2022-23/bios/jaster_haley_66zf,2022-23
+5,Akron,,Rachel Abramson,Sr.,"Waddell, Ariz.",Verrado HS,,6' 0'',OH,1,/sports/womens-volleyball/roster/rachel-abramson/7964,2022-23
+5,Akron,,Chloe Werner,Fr.,"Waterford, Wisc.",Waterford Union HS,,6' 0'',RH,2,/sports/womens-volleyball/roster/chloe-werner/8187,2022-23
+5,Akron,,Baylee Vought,R-Fr.,"Fort Mill, S.C.",Indian Land HS,,6' 0'',S,3,/sports/womens-volleyball/roster/baylee-vought/8709,2022-23
+5,Akron,,Anne Lesure,Jr.,"Carmel, Ind.",Carmel HS,,6' 0'',S,4,/sports/womens-volleyball/roster/anne-lesure/7970,2022-23
+5,Akron,,Jayda Young,Jr.,"Toledo, Ohio",Whitmer HS,,6' 0'',MB,5,/sports/womens-volleyball/roster/jayda-young/7973,2022-23
+5,Akron,,Ellen Kinnaird,So.,"Lewis Center, Ohio",Olentangy HS,,5' 11'',MB,6,/sports/womens-volleyball/roster/ellen-kinnaird/8962,2022-23
+5,Akron,,Genevieve Hara,R-So.,"Imperial Beach, Calif.",Mar Vista HS,,5' 11'',OH/RH,7,/sports/womens-volleyball/roster/genevieve-hara/8704,2022-23
+5,Akron,,Lauren Latka,Sr.,"Zionsville, Ind.",Zionsville HS,,5' 7'',L/DS,8,/sports/womens-volleyball/roster/lauren-latka/7969,2022-23
+5,Akron,,Samantha Sabra,So.,"San Pedro, Calif.",Mary Star of the Sea HS,,5' 9'',OH,10,/sports/womens-volleyball/roster/samantha-sabra/8964,2022-23
+5,Akron,,Avery Brown,Fr.,"Decatur, Ga.",St Pius X Catholic HS,,5' 9'',S,12,/sports/womens-volleyball/roster/avery-brown/8703,2022-23
+5,Akron,,Mia Thompson,Jr.,"Delaware, Ohio",Delaware Hayes,,5' 5'',L/DS,13,/sports/womens-volleyball/roster/mia-thompson/8713,2022-23
+5,Akron,,Faith Johnson,Jr.,"Naperville, Ill.",Neuqua Valley HS,,5' 11'',OH,16,/sports/womens-volleyball/roster/faith-johnson/8705,2022-23
+5,Akron,,Karleighana Jones,So.,"White Plains, N.Y.",White Plains HS,,6' 3'',MB,17,/sports/womens-volleyball/roster/karleighana-jones/8961,2022-23
+5,Akron,,Teagan Ochaya,R-Sr.,"Mentor, Ohio",Mentor HS,,6' 3'',RH,19,/sports/womens-volleyball/roster/teagan-ochaya/8183,2022-23
+5,Akron,,Gia Padilla,So.,"Apollo Beach, Fla.",Carrollwood Day School,,5' 10'',OH,21,/sports/womens-volleyball/roster/gia-padilla/7971,2022-23
+5,Akron,,Matalasi Danielson,So.,"Stockton, Calif.",St. Mary's HS,,5' 11'',OH/OPP,22,/sports/womens-volleyball/roster/matalasi-danielson/8191,2022-23

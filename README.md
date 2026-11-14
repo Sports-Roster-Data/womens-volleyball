@@ -84,6 +84,37 @@ The roster CSVs in `data/` share a 13-column schema:
 | `data/vb_teams.csv` | Team metadata: conference, division, state. |
 | `data/clean/` | Published clean season CSVs from the build. |
 | `data/derived/` | Build-time baselines, quarantines and audits. |
+| `data/derived/atlas/` | Roster atlas: distances from home, player links, transfers, freshman cohorts and international pipelines (see below). |
+| `web/` | Static site over the atlas tables. |
+
+## Roster atlas
+
+A derived layer over `data/clean/` that geocodes every hometown and campus,
+links roster rows into individual players across seasons and schools, and
+publishes the results as tables and a static site:
+
+```bash
+uv run python scripts/build_atlas.py --step fetch    # Census, GeoNames, IPEDS (once)
+uv run python scripts/build_atlas.py --step campus   # program -> campus coordinates
+uv run python scripts/build_atlas.py --step all      # geography, links, transfers, intl, site JSON
+python3 -m http.server 8765 --directory web          # then open http://localhost:8765
+```
+
+Some findings from the current build:
+
+- The median Division I player now lives 467 miles from campus, up from 319
+  in 2015-16. The share from the campus's own state fell from 36% to 25%.
+- International players went from 6.6% to 10.4% of D-I rosters. Turkey
+  alone went from 9 D-I players in 2015-16 to between 74 and 93 a season
+  since 2023-24.
+- About 5,700 moves between NCAA programs are linked. Between 21% and 28%
+  of each D-I freshman class entering from 2018-19 to 2022-23 later
+  transferred, against 12% of the class entering in 2015-16.
+
+Methods, validation and limits are in
+[docs/data_dictionary.md](docs/data_dictionary.md#roster-atlas-dataderivedatlas-datareferencegeo).
+Geographic sources: U.S. Census Gazetteer (public domain), GeoNames (CC BY
+4.0), IPEDS (public domain).
 
 ## Running the scraper
 

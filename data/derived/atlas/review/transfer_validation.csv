@@ -1,0 +1,7 @@
+metric,count,rate
+labelled_transfers,1310,
+recovered,1107,0.845
+labelled_with_same_name_at_previous_team,1124,
+recovered_given_same_name,1107,0.985
+probable_links_with_hs_on_both,861,
+probable_hs_agree,363,0.422

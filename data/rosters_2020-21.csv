@@ -4088,23 +4088,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 260,Gonzaga,,Jody Smith,Fr.,"Redondo Beach, Calif.",Redondo Union HS,,6' 2'',MB,16,/sports/womens-volleyball/roster/jody-smith/5339,2020
 260,Gonzaga,,Grace Ehler,Fr.,"Tucson, Ariz.",Marana,,6' 2'',OH,17,/sports/womens-volleyball/roster/grace-ehler/4771,2020
 260,Gonzaga,,Julia Talarico,Sr.,"Chandler, Ariz.",Hamilton HS,,5' 6'',DS,20,/sports/womens-volleyball/roster/julia-talarico/3392,2020
-5,Akron,,Rachel Abramson,LS,"Waddell, Ariz.",Verrado HS,Arizona Sky,6' 0'',So.,1,//gozips.com/sports/womens-volleyball/roster/rachel-abramson/7964,2020
-5,Akron,,Alexis Adleta,LS,"West Chester, Ohio",Lakota East HS,Elevation,6' 2'',Sr.,10,//gozips.com/sports/womens-volleyball/roster/alexis-adleta/7449,2020
-5,Akron,,Arianna Barksdale,MB,"Chula Vista, Calif.",Steele Canyon Charter School,Coast,6' 0'',R-Fr.,6,//gozips.com/sports/womens-volleyball/roster/arianna-barksdale/6898,2020
-5,Akron,,Jen Durra,LS,"Painesville, Ohio",Riverside HS,Eastside Cleveland Juniors,5' 11'',Jr.,12,//gozips.com/sports/womens-volleyball/roster/jen-durra/7450,2020
-5,Akron,,Shelby Fulmer,RS,"Perrysburg, Ohio",Perrysburg HS,Premier Academy,6' 0'',Sr.,14,//gozips.com/sports/womens-volleyball/roster/shelby-fulmer/6900,2020
-5,Akron,,Genevieve Hara,LS/RS,"Imperial Beach, Calif.",Mar Vista HS,Storm VBC,5' 11'',Fr.,7,//gozips.com/sports/womens-volleyball/roster/genevieve-hara/8704,2020
-5,Akron,,Faith Johnson,LS/RS,"Naperville, Ill.",Neuqua Valley HS,First Alliance,5' 11'',Fr.,16,//gozips.com/sports/womens-volleyball/roster/faith-johnson/8705,2020
-5,Akron,,Megan Kelly,MB,"Lakewood, Ill.",Crystal Lake Central HS,Sky High,6' 0'',Jr.,11,//gozips.com/sports/womens-volleyball/roster/megan-kelly/7453,2020
-5,Akron,,Taylor Kuruzovich,S,"Port Matilda, Pa.",State College Area HS,Revolution,5' 8'',Sr.,13,//gozips.com/sports/womens-volleyball/roster/taylor-kuruzovich/6902,2020
-5,Akron,,Lauren Latka,DS,"Zionsville, Ind.",Zionsville HS,Team Indiana,5' 7'',So.,8,//gozips.com/sports/womens-volleyball/roster/lauren-latka/7969,2020
-5,Akron,,Anne Lesure,S,"Carmel, Ind.",Carmel HS,Circle City VBC,6' 0'',Fr.,4,//gozips.com/sports/womens-volleyball/roster/anne-lesure/7970,2020
-5,Akron,,Teagan Ochaya,RS,"Mentor, Ohio",Mentor HS,Eastside Cleveland Juniors,6' 3'',Jr.,19,//gozips.com/sports/womens-volleyball/roster/teagan-ochaya/8183,2020
-5,Akron,,Taylor Sharrits,DS,"Concord, Ohio",Lake Catholic HS,Eastside Cleveland Juniors,5' 7'',Sr.,2,//gozips.com/sports/womens-volleyball/roster/taylor-sharrits/7457,2020
-5,Akron,,Emily Weigand,S,"Burton, Ohio",Notre Dame Cathedral Latin HS,Eastside Cleveland Juniors,5' 10'',Sr.,3,//gozips.com/sports/womens-volleyball/roster/emily-weigand/7458,2020
-5,Akron,,Hannah Yaconis,MB,"Batavia, Ill.",Batavia HS,Sports Performance,6' 0'',Jr.,18,//gozips.com/sports/womens-volleyball/roster/hannah-yaconis/7459,2020
-5,Akron,,Jayda Young,MB,"Toledo, Ohio",Whitmer HS,Premier Academy,6' 0'',Fr.,5,//gozips.com/sports/womens-volleyball/roster/jayda-young/7973,2020
-5,Akron,,Tom Hanna,Head Coach,,,,thanna@uakron.edu,(330) 972-7338,,//gozips.com/sports/womens-volleyball/roster/coaches/tom-hanna/780,2020
 100,Cal State LA,3427,Ashley Apel,Junior,Brentwood,Liberty HS,San Joaquin Delta College,"5'11""",OH,,//www.lagoldeneagles.com/sports/womens-volleyball/roster/ashley-apel/3427,2020
 100,Cal State LA,3425,Malia Apodaca,Sophomore,Yuba City,Yuba City HS,,"5'2""",L/DS,,//www.lagoldeneagles.com/sports/womens-volleyball/roster/malia-apodaca/3425,2020
 100,Cal State LA,3424,Mia Ardila,Sophomore,"Hopkinton, Mass.",Hopkinton HS,,"5'8""",S,,//www.lagoldeneagles.com/sports/womens-volleyball/roster/mia-ardila/3424,2020
@@ -13544,3 +13527,19 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 328,Kansas,,Lacey Angello,Junior,"Lansing, Kan.",Lansing HS,,"5'8""",Libero/Defensive Specialist,16,https://kuathletics.com/sports/wvball/roster/season/2020-21/player/lacey-angello/,2020-21
 328,Kansas,,Ayah Elnady,Freshman,"Cairo, Egypt",Ramses College For Girls,,"5'10""",Outside Hitter,17,https://kuathletics.com/sports/wvball/roster/season/2020-21/player/ayah-elnady/,2020-21
 328,Kansas,,Paige Shaw,Junior,"Hoover, Ala.",Hoover HS,,"6'0""",Outside Hitter,20,https://kuathletics.com/sports/wvball/roster/season/2020-21/player/paige-shaw/,2020-21
+5,Akron,,Rachel Abramson,So.,"Waddell, Ariz.",Verrado HS,,6' 0'',LS,1,/sports/womens-volleyball/roster/rachel-abramson/7964,2020-21
+5,Akron,,Alexis Adleta,Sr.,"West Chester, Ohio",Lakota East HS,,6' 2'',LS,10,/sports/womens-volleyball/roster/alexis-adleta/7449,2020-21
+5,Akron,,Arianna Barksdale,R-Fr.,"Chula Vista, Calif.",Steele Canyon Charter School,,6' 0'',MB,6,/sports/womens-volleyball/roster/arianna-barksdale/6898,2020-21
+5,Akron,,Jen Durra,Jr.,"Painesville, Ohio",Riverside HS,,5' 11'',LS,12,/sports/womens-volleyball/roster/jen-durra/7450,2020-21
+5,Akron,,Shelby Fulmer,Sr.,"Perrysburg, Ohio",Perrysburg HS,,6' 0'',RS,14,/sports/womens-volleyball/roster/shelby-fulmer/6900,2020-21
+5,Akron,,Genevieve Hara,Fr.,"Imperial Beach, Calif.",Mar Vista HS,,5' 11'',LS/RS,7,/sports/womens-volleyball/roster/genevieve-hara/8704,2020-21
+5,Akron,,Faith Johnson,Fr.,"Naperville, Ill.",Neuqua Valley HS,,5' 11'',LS/RS,16,/sports/womens-volleyball/roster/faith-johnson/8705,2020-21
+5,Akron,,Megan Kelly,Jr.,"Lakewood, Ill.",Crystal Lake Central HS,,6' 0'',MB,11,/sports/womens-volleyball/roster/megan-kelly/7453,2020-21
+5,Akron,,Taylor Kuruzovich,Sr.,"Port Matilda, Pa.",State College Area HS,,5' 8'',S,13,/sports/womens-volleyball/roster/taylor-kuruzovich/6902,2020-21
+5,Akron,,Lauren Latka,So.,"Zionsville, Ind.",Zionsville HS,,5' 7'',DS,8,/sports/womens-volleyball/roster/lauren-latka/7969,2020-21
+5,Akron,,Anne Lesure,Fr.,"Carmel, Ind.",Carmel HS,,6' 0'',S,4,/sports/womens-volleyball/roster/anne-lesure/7970,2020-21
+5,Akron,,Teagan Ochaya,Jr.,"Mentor, Ohio",Mentor HS,,6' 3'',RS,19,/sports/womens-volleyball/roster/teagan-ochaya/8183,2020-21
+5,Akron,,Taylor Sharrits,Sr.,"Concord, Ohio",Lake Catholic HS,,5' 7'',DS,2,/sports/womens-volleyball/roster/taylor-sharrits/7457,2020-21
+5,Akron,,Emily Weigand,Sr.,"Burton, Ohio",Notre Dame Cathedral Latin HS,,5' 10'',S,3,/sports/womens-volleyball/roster/emily-weigand/7458,2020-21
+5,Akron,,Hannah Yaconis,Jr.,"Batavia, Ill.",Batavia HS,,6' 0'',MB,18,/sports/womens-volleyball/roster/hannah-yaconis/7459,2020-21
+5,Akron,,Jayda Young,Fr.,"Toledo, Ohio",Whitmer HS,,6' 0'',MB,5,/sports/womens-volleyball/roster/jayda-young/7973,2020-21

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Volleyball Roster Atlas</title>
+<meta name="description" content="Where NCAA women's volleyball players come from, how far they travel, who transfers and the international pipeline, 2015-16 to 2026-27.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#/">Volleyball Roster Atlas</a>
+    <nav aria-label="Sections">
+      <a href="#/" data-route="overview">Overview</a>
+      <a href="#/programs" data-route="programs">Programs</a>
+      <a href="#/states" data-route="states">States</a>
+      <a href="#/transfers" data-route="transfers">Transfers</a>
+      <a href="#/international" data-route="international">International</a>
+    </nav>
+    <button id="theme" class="theme" type="button" aria-label="Toggle dark mode">◐</button>
+  </div>
+</header>
+<main id="app" class="wrap" aria-live="polite"><p class="muted">Loading…</p></main>
+<footer class="wrap foot">
+  <p>Built from cleaned rosters of ~890 NCAA women's volleyball programs, 2015-16 to 2026-27.
+  Hometowns geocoded offline with the U.S. Census Gazetteer and <a href="https://www.geonames.org/">GeoNames</a> (CC BY 4.0); campuses from IPEDS.
+  Transfers are inferred by linking roster rows across teams and seasons. See <code>docs/data_dictionary.md</code> for methods and limits.</p>
+</footer>
+<script src="vendor/d3.min.js"></script>
+<script src="vendor/plot.umd.min.js"></script>
+<script src="vendor/topojson-client.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

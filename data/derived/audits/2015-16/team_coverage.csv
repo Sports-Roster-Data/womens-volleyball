@@ -379,7 +379,7 @@
 "Edward Waters","30244",20,0,0,0,20
 "Indiana State","305",13,0,0,0,13
 "Indiana (PA)","307",15,0,0,0,15
-"Purdue-Fort Wayne","308",19,1,0,0,18
+"Purdue-Fort Wayne","308",19,4,0,0,15
 "UIndy","309",14,0,0,0,14
 "Arkansas","31",17,0,0,0,17
 "Iona","310",14,0,0,0,14
@@ -538,7 +538,7 @@
 "North Texas","497",15,1,0,0,14
 "Louisiana Monroe","498",14,0,0,0,14
 "Truman State","499",16,0,0,0,16
-"Akron","5",19,1,0,0,18
+"Akron","5",16,0,0,0,16
 "Bates","50",17,0,0,0,17
 "Northeastern","500",12,0,0,0,12
 "Northern Arizona","501",15,0,0,0,15
@@ -589,7 +589,7 @@
 "Portland","551",13,0,0,0,13
 "SUNY Potsdam","552",13,0,0,0,13
 "Prairie View A&M","553",15,0,0,0,15
-"Princeton","554",27,0,0,0,27
+"Princeton","554",27,8,0,0,19
 "Providence","556",15,0,0,0,15
 "Puget Sound","557",5,0,0,0,5
 "Purdue","559",16,0,0,0,16

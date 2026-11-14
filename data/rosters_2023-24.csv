@@ -4583,26 +4583,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 260,Gonzaga,,Jody Smith,Sr.,"Redondo Beach, Calif.",Redondo Union HS,,6' 2'',MB,16,/sports/womens-volleyball/roster/jody-smith/5339,2023
 260,Gonzaga,,Grace Ehler,Sr.,"Tucson, Ariz.",Marana,,6' 2'',OH,17,/sports/womens-volleyball/roster/grace-ehler/4771,2023
 260,Gonzaga,,Fallon Thompson,So.,"Spring, Texas",Grand Oaks HS,,6' 0'',OH,21,/sports/womens-volleyball/roster/fallon-thompson/6050,2023
-5,Akron,,Vanessa Del Real,L,"Crown Point, Ind.",Crown Point HS,1st Alliance,5' 6'',Fr.,1,//gozips.com/sports/womens-volleyball/roster/vanessa-del-real/10073,2023
-5,Akron,,Baylee Vought,S,"Fort Mill, S.C.",Indian Land HS,Carolina Union,6' 0'',R-So.,3,//gozips.com/sports/womens-volleyball/roster/baylee-vought/8709,2023
-5,Akron,,Emanouela Christodoulou,OH,"Eretria, Greece",Hutchinson Community College,,6' 0'',Jr.,4,//gozips.com/sports/womens-volleyball/roster/emanouela-christodoulou/8959,2023
-5,Akron,,Mia Thompson,L/DS,"Delaware, Ohio",Delaware Hayes,,5' 5'',R-Jr.,5,//gozips.com/sports/womens-volleyball/roster/mia-thompson/8713,2023
-5,Akron,,Ellen Kinnaird,MB,"Lewis Center, Ohio",Olentangy HS,Mintonette Sports,5' 11'',Jr.,6,//gozips.com/sports/womens-volleyball/roster/ellen-kinnaird/8962,2023
-5,Akron,,Genevieve Hara,RS/OH,"Imperial Beach, Calif.",Mar Vista HS,Storm VBC,5' 11'',R-Jr.,7,//gozips.com/sports/womens-volleyball/roster/genevieve-hara/8704,2023
-5,Akron,,Melisa Tore,MB,"Istanbul, Turkey",Anabilim HS,,6' 3'',Jr.,9,//gozips.com/sports/womens-volleyball/roster/melisa-tore/8965,2023
-5,Akron,,Samantha Sabra,OH,"San Pedro, Calif.",Mary Star of the Sea HS,Seal Beach,5' 9'',R-So.,10,//gozips.com/sports/womens-volleyball/roster/samantha-sabra/8964,2023
-5,Akron,,Sophie Twigg,L,"Sylvania, Ohio",Bowling Green HS,Premier,5' 9'',Fr.,11,//gozips.com/sports/womens-volleyball/roster/sophie-twigg/8966,2023
-5,Akron,,Avery Brown,S,"Decatur, Ga.",St Pius X Catholic HS,A5,5' 9'',So.,12,//gozips.com/sports/womens-volleyball/roster/avery-brown/8703,2023
-5,Akron,,Sarah Bettis,OH/RS,"Blissfield, Mich.",Blissfield HS,Pineapple,6' 1'',Fr.,15,//gozips.com/sports/womens-volleyball/roster/sarah-bettis/10071,2023
-5,Akron,,Faith Johnson,OH,"Naperville, Ill.",Neuqua Valley HS,First Alliance,5' 11'',R-Jr.,16,//gozips.com/sports/womens-volleyball/roster/faith-johnson/8705,2023
-5,Akron,,Karleighana Jones,MB,"White Plains, N.Y.",White Plains HS,USANY Volleyball,6' 3'',Jr.,17,//gozips.com/sports/womens-volleyball/roster/karleighana-jones/8961,2023
-5,Akron,,Eliska Vytiskova,S,"Ostrava, Czech Republic",Sportovní gymnázium Dany a Emila Zátopkových,TJ Ostrava,5' 9'',Fr.,18,//gozips.com/sports/womens-volleyball/roster/eliska-vytiskova/8967,2023
-5,Akron,,Lauren Baker,RS/OH,"Osceola, Ind.",Penn HS,Pineapple,5' 11'',Jr.,20,//gozips.com/sports/womens-volleyball/roster/lauren-baker/8957,2023
-5,Akron,,Chidera Ozoh,MB,"Hazel Crest, Ill.",Homewood Flossmoor HS,1st Alliance,6' 0'',Fr.,22,//gozips.com/sports/womens-volleyball/roster/chidera-ozoh/10078,2023
-5,Akron,,Tyson Norton,Head Women's Volleyball Coach,,,,tnorton@uakron.edu,330-972-7338,,//gozips.com/sports/womens-volleyball/roster/coaches/tyson-norton/1301,2023
-5,Akron,,Andy Riesenberg,Assistant Coach,,,,ariesenberg@uakron.edu,(330) 972-7438,,//gozips.com/sports/womens-volleyball/roster/coaches/andy-riesenberg/1124,2023
-5,Akron,,Kelsey Lahey,Assistant Coach,,,,klahey1@uakron.edu,(330) 972-7438,,//gozips.com/sports/womens-volleyball/roster/coaches/kelsey-lahey/1125,2023
-5,Akron,,Erin Pavlin,Graduate Assistant,,,,erp56@uakron.edu,,,//gozips.com/sports/womens-volleyball/roster/coaches/erin-pavlin/1127,2023
 100,Cal State LA,4187,Ashlyn Beaver,Sophomore,Murrieta,Temecula Valley HS,Oregon State/California Baptist,"5'11""",S,1,//www.lagoldeneagles.com/sports/womens-volleyball/roster/ashlyn-beaver/4187,2023
 100,Cal State LA,4188,Brooke Paige,Sophomore,"Las Vegas, Nev.",Palo Verde HS,,"5'7""",L,2,//www.lagoldeneagles.com/sports/womens-volleyball/roster/brooke-paige/4188,2023
 100,Cal State LA,4189,Matalasi Danielson,Sophomore,Stockton,St. Mary's HS,Akron,"5'10""",RS,3,//www.lagoldeneagles.com/sports/womens-volleyball/roster/matalasi-danielson/4189,2023
@@ -15458,3 +15438,19 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 77,Brigham Young,,Kamaile Hiapo,Graduate,"Gilbert, Arizona",University of Arizona,,5-7,Libero,18,/sports/womens-volleyball/roster/season/2023/player/kamaile-hiapo,2023-24
 77,Brigham Young,,Whitney McEwan-Llarenas,Graduate,"Bountiful, Utah",Woods Cross High School,,6-3,Middle Blocker,21,/sports/womens-volleyball/roster/season/2023/player/whitney-llarenas,2023-24
 77,Brigham Young,,Brielle Kemavor,Freshman,"Bristow, Virginia",Colgan High School,,6-5,Middle Blocker,24,/sports/womens-volleyball/roster/season/2023/player/brielle-kemavor,2023-24
+5,Akron,,Vanessa Del Real,Fr.,"Crown Point, Ind.",Crown Point HS,,5' 6'',L,1,/sports/womens-volleyball/roster/vanessa-del-real/10073,2023-24
+5,Akron,,Baylee Vought,R-So.,"Fort Mill, S.C.",Indian Land HS,,6' 0'',S,3,/sports/womens-volleyball/roster/baylee-vought/8709,2023-24
+5,Akron,,Emanouela Christodoulou,Jr.,"Eretria, Greece",Hutchinson Community College,,6' 0'',OH,4,/sports/womens-volleyball/roster/emanouela-christodoulou/8959,2023-24
+5,Akron,,Mia Thompson,R-Jr.,"Delaware, Ohio",Delaware Hayes,,5' 5'',L/DS,5,/sports/womens-volleyball/roster/mia-thompson/8713,2023-24
+5,Akron,,Ellen Kinnaird,Jr.,"Lewis Center, Ohio",Olentangy HS,,5' 11'',MB,6,/sports/womens-volleyball/roster/ellen-kinnaird/8962,2023-24
+5,Akron,,Genevieve Hara,R-Jr.,"Imperial Beach, Calif.",Mar Vista HS,,5' 11'',RS/OH,7,/sports/womens-volleyball/roster/genevieve-hara/8704,2023-24
+5,Akron,,Melisa Tore,Jr.,"Istanbul, Turkey",Anabilim HS,,6' 3'',MB,9,/sports/womens-volleyball/roster/melisa-tore/8965,2023-24
+5,Akron,,Samantha Sabra,R-So.,"San Pedro, Calif.",Mary Star of the Sea HS,,5' 9'',OH,10,/sports/womens-volleyball/roster/samantha-sabra/8964,2023-24
+5,Akron,,Sophie Twigg,Fr.,"Sylvania, Ohio",Bowling Green HS,,5' 9'',L,11,/sports/womens-volleyball/roster/sophie-twigg/8966,2023-24
+5,Akron,,Avery Brown,So.,"Decatur, Ga.",St Pius X Catholic HS,,5' 9'',S,12,/sports/womens-volleyball/roster/avery-brown/8703,2023-24
+5,Akron,,Sarah Bettis,Fr.,"Blissfield, Mich.",Blissfield HS,,6' 1'',OH/RS,15,/sports/womens-volleyball/roster/sarah-bettis/10071,2023-24
+5,Akron,,Faith Johnson,R-Jr.,"Naperville, Ill.",Neuqua Valley HS,,5' 11'',OH,16,/sports/womens-volleyball/roster/faith-johnson/8705,2023-24
+5,Akron,,Karleighana Jones,Jr.,"White Plains, N.Y.",White Plains HS,,6' 3'',MB,17,/sports/womens-volleyball/roster/karleighana-jones/8961,2023-24
+5,Akron,,Eliska Vytiskova,Fr.,"Ostrava, Czech Republic",Sportovní gymnázium Dany a Emila Zátopkových,,5' 9'',S,18,/sports/womens-volleyball/roster/eliska-vytiskova/8967,2023-24
+5,Akron,,Lauren Baker,Jr.,"Osceola, Ind.",Penn HS,,5' 11'',RS/OH,20,/sports/womens-volleyball/roster/lauren-baker/8957,2023-24
+5,Akron,,Chidera Ozoh,Fr.,"Hazel Crest, Ill.",Homewood Flossmoor HS,,6' 0'',MB,22,/sports/womens-volleyball/roster/chidera-ozoh/10078,2023-24

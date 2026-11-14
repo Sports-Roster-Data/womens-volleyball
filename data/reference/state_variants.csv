@@ -1,9 +1,11 @@
 raw_key,state_code,state_name,census_region,is_territory
 AK,AK,Alaska,West,FALSE
+AL,AL,Alabama,South,FALSE
 ALA,AL,Alabama,South,FALSE
 ALABAMA,AL,Alabama,South,FALSE
 ALAS,AK,Alaska,West,FALSE
 ALASKA,AK,Alaska,West,FALSE
+AMERICAN SAMOA,AS,American Samoa,West,TRUE
 AR,AR,Arkansas,South,FALSE
 ARI,AZ,Arizona,West,FALSE
 ARIZ,AZ,Arizona,West,FALSE
@@ -11,6 +13,7 @@ ARIZONA,AZ,Arizona,West,FALSE
 ARK,AR,Arkansas,South,FALSE
 ARKANSAS,AR,Arkansas,South,FALSE
 ARZ,AZ,Arizona,West,FALSE
+AZ,AZ,Arizona,West,FALSE
 CA,CA,California,West,FALSE
 CAIF,CA,California,West,FALSE
 CAL,CA,California,West,FALSE
@@ -30,7 +33,9 @@ CT,CT,Connecticut,Northeast,FALSE
 DC,DC,District of Columbia,South,FALSE
 DE,DE,Delaware,South,FALSE
 DEL,DE,Delaware,South,FALSE
+DELAWARE,DE,Delaware,South,FALSE
 DELWARE,DE,Delaware,South,FALSE
+DISTRICT OF COLUMBIA,DC,District of Columbia,South,FALSE
 FL,FL,Florida,South,FALSE
 FL+,FL,Florida,South,FALSE
 FLA,FL,Florida,South,FALSE
@@ -66,6 +71,7 @@ KANS,KS,Kansas,Midwest,FALSE
 KANSAS,KS,Kansas,Midwest,FALSE
 KEN,KY,Kentucky,South,FALSE
 KENT,KY,Kentucky,South,FALSE
+KENTUCKY,KY,Kentucky,South,FALSE
 KS,KS,Kansas,Midwest,FALSE
 KY,KY,Kentucky,South,FALSE
 LA,LA,Louisiana,South,FALSE
@@ -100,6 +106,7 @@ MP,MP,Northern Mariana Islands,West,TRUE
 MS,MS,Mississippi,South,FALSE
 MT,MT,Montana,West,FALSE
 N C,NC,North Carolina,South,FALSE
+N M,NM,New Mexico,West,FALSE
 N MEX,NM,New Mexico,West,FALSE
 NC,NC,North Carolina,South,FALSE
 ND,ND,North Dakota,Midwest,FALSE
@@ -119,6 +126,8 @@ NM,NM,New Mexico,West,FALSE
 NMEX,NM,New Mexico,West,FALSE
 NORTH CAROLIN,NC,North Carolina,South,FALSE
 NORTH CAROLINA,NC,North Carolina,South,FALSE
+NORTH DAKOTA,ND,North Dakota,Midwest,FALSE
+NORTHERN MARIANA ISLANDS,MP,Northern Mariana Islands,West,TRUE
 NV,NV,Nevada,West,FALSE
 NY,NY,New York,Northeast,FALSE
 NYC,NY,New York,Northeast,FALSE
@@ -141,6 +150,7 @@ PENSYLVANIA,PA,Pennsylvania,Northeast,FALSE
 PR,PR,Puerto Rico,South,TRUE
 PUERTA RICO,PR,Puerto Rico,South,TRUE
 PUERTO RICO,PR,Puerto Rico,South,TRUE
+RHODE ISLAND,RI,Rhode Island,Northeast,FALSE
 RI,RI,Rhode Island,Northeast,FALSE
 SC,SC,South Carolina,South,FALSE
 SD,SD,South Dakota,Midwest,FALSE

@@ -1,0 +1,805 @@
+hometown_clean,campus_state,lat,lon
+Anchorage,AK,61.2181,-149.9
+Eagle River,AK,61.3214,-149.568
+Fairbanks,AK,64.8378,-147.716
+Ketchikan,AK,55.3418,-131.648
+Palmer,AK,61.5994,-149.115
+Phoenix,AZ,33.4484,-112.074
+Tempe,AZ,33.4148,-111.909
+Alameda,CA,37.771,-122.261
+Albany,CA,37.8869,-122.298
+Alta Loma,CA,34.1222,-117.598
+Anaheim,CA,33.8353,-117.915
+Antioch,CA,38.0049,-121.806
+Apple Valley,CA,34.5008,-117.186
+Arcadia,CA,34.1397,-118.035
+Atascadero,CA,35.4894,-120.671
+Bakersfield,CA,35.3733,-119.019
+Bellflower,CA,33.8817,-118.117
+Benicia,CA,38.0494,-122.159
+Berkeley,CA,37.8716,-122.273
+Brea,CA,33.9167,-117.9
+Brentwood,CA,37.9319,-121.696
+Burbank,CA,34.1808,-118.309
+Camarillo,CA,34.2164,-119.038
+Cameron Park,CA,38.6688,-120.987
+Canyon Country,CA,34.4233,-118.472
+Canyon Lake,CA,33.685,-117.273
+Carlsbad,CA,33.1581,-117.351
+Castro Valley,CA,37.6941,-122.086
+Cayucos,CA,35.4427,-120.892
+Cerritos,CA,33.8584,-118.065
+Chico,CA,39.7285,-121.837
+Chino,CA,34.0122,-117.689
+Chino Hills,CA,33.9938,-117.759
+Chula Vista,CA,32.6401,-117.084
+Clovis,CA,36.8252,-119.703
+Commerce,CA,34.0006,-118.16
+Concord,CA,37.978,-122.031
+Cool,CA,38.8872,-121.015
+Corona,CA,33.8753,-117.566
+Costa Mesa,CA,33.6411,-117.919
+Culver City,CA,34.0211,-118.396
+Cypress,CA,33.817,-118.037
+Daly City,CA,37.7058,-122.462
+Denair,CA,37.5263,-120.797
+Discovery Bay,CA,37.9085,-121.6
+Downey,CA,33.94,-118.133
+Duarte,CA,34.1394,-117.977
+Dublin,CA,37.7022,-121.936
+Durham,CA,39.6463,-121.8
+Eagle Rock,CA,34.1389,-118.214
+Eastvale,CA,33.9636,-117.564
+El Dorado Hills,CA,38.6857,-121.082
+El Monte,CA,34.0686,-118.028
+Elk Grove,CA,38.4088,-121.372
+Encinitas,CA,33.037,-117.292
+Escalon,CA,37.7978,-120.998
+Exeter,CA,36.2961,-119.142
+Fairfield,CA,38.2494,-122.04
+Fontana,CA,34.0922,-117.435
+Fresno,CA,36.7477,-119.772
+Fullerton,CA,33.8703,-117.925
+Gilroy,CA,37.0058,-121.568
+Gold River,CA,38.6263,-121.247
+Grapevine,CA,34.9416,-118.93
+Hanford,CA,36.3274,-119.646
+Hayward,CA,37.6688,-122.081
+Highland,CA,34.1283,-117.209
+Huntington Beach,CA,33.6603,-117.999
+Irvine,CA,33.6695,-117.823
+Kensington,CA,37.9105,-122.28
+King City,CA,36.2127,-121.126
+La Puente,CA,34.02,-117.95
+La Verne,CA,34.1008,-117.768
+Laguna Beach,CA,33.5423,-117.783
+Laguna Hills,CA,33.6125,-117.713
+Lake Forest,CA,33.647,-117.689
+Lakeside,CA,32.8573,-116.922
+Lakewood,CA,33.8536,-118.134
+Lancaster,CA,34.698,-118.137
+Lockwood,CA,35.9401,-121.078
+Long Beach,CA,33.767,-118.189
+Los Alamitos,CA,33.8031,-118.073
+Los Angeles,CA,34.0522,-118.244
+Lynwood,CA,33.9303,-118.211
+Manhattan Beach,CA,33.8847,-118.411
+Manteca,CA,37.7974,-121.216
+Mar Vista,CA,34.0047,-118.431
+Martinez,CA,38.0194,-122.134
+Meadow Vista,CA,39.001,-121.022
+Menifee,CA,33.7283,-117.146
+Mission Viejo,CA,33.6,-117.672
+Modesto,CA,37.6391,-120.997
+Monrovia,CA,34.1481,-117.999
+Monterey Park,CA,34.0625,-118.123
+Moreno Valley,CA,33.9375,-117.231
+Murrieta,CA,33.5539,-117.214
+Newhall,CA,34.595,-118.662
+Newport Beach,CA,33.6189,-117.929
+Norco,CA,33.9311,-117.549
+North Hollywood,CA,34.1722,-118.379
+Northridge,CA,34.2283,-118.537
+Oakdale,CA,37.7666,-120.847
+Oceanside,CA,33.1959,-117.379
+Orange,CA,33.7878,-117.853
+Palm Springs,CA,33.8303,-116.545
+Palmdale,CA,34.5794,-118.116
+Palo Cedro,CA,40.5638,-122.239
+Palos Verdes,CA,33.3877,-118.433
+Pasadena,CA,34.1478,-118.145
+Pleasanton,CA,37.6624,-121.875
+Porter Ranch,CA,34.2819,-118.55
+Porterville,CA,36.0652,-119.017
+Rancho Cucamonga,CA,34.1064,-117.593
+Rancho Santa Fe,CA,33.0203,-117.203
+Rancho Santa Margarita,CA,33.6409,-117.603
+Redding,CA,40.5865,-122.392
+Redlands,CA,34.0556,-117.183
+Redondo Beach,CA,33.8492,-118.388
+Rialto,CA,34.1064,-117.37
+Riverside,CA,33.9534,-117.396
+Rohnert Park,CA,38.3396,-122.701
+Roseville,CA,38.7521,-121.288
+Rowland Heights,CA,33.9761,-117.905
+Sacramento,CA,38.5816,-121.494
+Salinas,CA,36.6777,-121.656
+San Bernardino,CA,34.1083,-117.29
+San Bruno,CA,37.6305,-122.411
+San Clemente,CA,33.427,-117.612
+San Diego,CA,32.7157,-117.165
+San Dimas,CA,34.1067,-117.807
+San Francisco,CA,37.7749,-122.419
+San Gabriel,CA,34.0961,-118.106
+San Jose,CA,37.3394,-121.895
+San Mateo,CA,37.563,-122.326
+San Pedro,CA,33.7358,-118.292
+San Rafael,CA,37.9735,-122.531
+San Ramon,CA,37.7799,-121.978
+Santa Ana,CA,33.7456,-117.868
+Santa Barbara,CA,34.4208,-119.698
+Santa Clarita,CA,34.3917,-118.543
+Santa Cruz,CA,36.9741,-122.031
+Santa Rosa,CA,38.4405,-122.714
+Simi Valley,CA,34.2694,-118.781
+South El Monte,CA,34.0519,-118.047
+South Lake Tahoe,CA,38.9332,-119.984
+South Pasadena,CA,34.1161,-118.15
+South San Francisco,CA,37.6547,-122.408
+Stockton,CA,37.9577,-121.291
+Sylmar,CA,34.3078,-118.449
+Temecula,CA,33.4936,-117.148
+Thousand Oaks,CA,34.1706,-118.838
+Torrance,CA,33.8359,-118.341
+Tracy,CA,37.7399,-121.426
+Turlock,CA,37.4947,-120.847
+Union City,CA,37.5958,-122.019
+Upland,CA,34.0975,-117.648
+Vacaville,CA,38.3566,-121.988
+Valencia,CA,34.4436,-118.61
+Vallejo,CA,38.1041,-122.257
+Valley Glen,CA,34.1857,-118.42
+Victorville,CA,34.5361,-117.291
+Walnut Creek,CA,37.9063,-122.065
+West Covina,CA,34.0686,-117.939
+Westminster,CA,33.7592,-118.007
+Whittier,CA,33.9792,-118.033
+Wildomar,CA,33.5989,-117.28
+Woodland,CA,38.6785,-121.773
+Yorba Linda,CA,33.8886,-117.813
+Yuba City,CA,39.1405,-121.617
+Colorado Springs,CO,38.8339,-104.821
+Andover,CT,41.733,-72.3747
+Avon,CT,41.8098,-72.8307
+Clinton,CT,41.2787,-72.5276
+Deep River,CT,41.3678,-72.4774
+East Berlin,CT,41.6184,-72.7137
+East Hampton,CT,41.5759,-72.5026
+East Lyme,CT,41.3561,-72.2298
+Hebron,CT,41.6579,-72.3659
+Lebanon,CT,41.633,-72.2401
+Manchester,CT,41.7759,-72.5215
+Marlborough,CT,41.6364,-72.454
+Meriden,CT,41.5382,-72.807
+Milford,CT,41.2223,-73.0565
+Mystic,CT,41.3543,-71.9665
+Norwich,CT,41.5243,-72.0759
+Plainfield,CT,41.6765,-71.9151
+Salem,CT,41.4904,-72.2754
+South Windsor,CT,41.8237,-72.6212
+Southbury,CT,41.4815,-73.2132
+Sprague,CT,41.6356,-72.0775
+Waterford,CT,41.3417,-72.136
+Willington,CT,41.8973,-72.2519
+Woodbury,CT,41.5445,-73.209
+Woodstock,CT,41.9662,-72.0228
+Columbia,FL,30.0738,-82.6957
+Atlanta,GA,33.749,-84.388
+John's Creek,GA,34.0289,-84.1986
+Warner Robins,GA,32.6157,-83.6266
+Paris,IA,43.2737,-92.2498
+Chicago,IL,41.85,-87.65
+Decatur,IL,39.8403,-88.9548
+Vandalia,IL,38.9606,-89.0937
+Louisville,KY,38.2542,-85.7594
+Lake Charles,LA,30.2131,-93.2044
+Medford,MA,42.4184,-71.1062
+Tewksbury,MA,42.6106,-71.2342
+Ada,MI,42.9826,-85.4854
+Albion,MI,42.2431,-84.753
+Alpena,MI,45.0617,-83.4327
+Ann Arbor,MI,42.2776,-83.7409
+Ashley,MI,43.1867,-84.4744
+Bath,MI,42.8186,-84.4486
+Battle Creek,MI,42.3173,-85.1782
+Brighton,MI,42.5295,-83.7802
+Brown City,MI,43.2122,-82.9897
+Burr Oak,MI,41.8473,-85.3186
+Burton,MI,42.9995,-83.6163
+Byron,MI,42.8228,-83.9444
+Byron Center,MI,42.8122,-85.7228
+Cadillac,MI,44.252,-85.4012
+Charlevoix,MI,45.3181,-85.2584
+Charlotte,MI,42.5637,-84.8358
+Chelsea,MI,42.3181,-84.0218
+Clare,MI,43.8195,-84.7686
+Clarkston,MI,42.7359,-83.4188
+Coldwater,MI,41.9403,-85.0005
+Concord,MI,42.1778,-84.643
+Coopersville,MI,43.0639,-85.9348
+Daggett,MI,45.462,-87.6047
+DeWitt,MI,42.8423,-84.5691
+Delton,MI,42.4998,-85.4081
+Detroit,MI,42.3314,-83.0457
+Dexter,MI,42.3383,-83.8895
+Dorr,MI,42.7267,-85.7169
+Dundee,MI,41.9573,-83.6597
+Eagle,MI,42.8098,-84.7909
+East Grand Rapids,MI,42.9411,-85.61
+East Leroy,MI,42.1662,-85.2175
+Eaton Rapids,MI,42.5092,-84.6558
+Farmington Hills,MI,42.4853,-83.3772
+Farwell,MI,43.835,-84.867
+Ferndale,MI,42.4606,-83.1346
+Fife Lake,MI,44.5758,-85.3478
+Flint,MI,43.0125,-83.6875
+Flushing,MI,43.0631,-83.8511
+Fowlerville,MI,42.6606,-84.073
+Frankenmuth,MI,43.3317,-83.738
+Frankfort,MI,44.6336,-86.2345
+Freeland,MI,43.525,-84.1228
+Fruitport,MI,43.132,-86.1548
+Gaylord,MI,45.0275,-84.6748
+Goodrich,MI,42.917,-83.5063
+Grand Blanc,MI,42.9275,-83.6299
+Grand Ledge,MI,42.7534,-84.7464
+Grand Rapids,MI,42.9634,-85.6681
+Grant,MI,43.3361,-85.8109
+Grosse Pointe Shores,MI,42.4367,-82.8769
+Hamilton,MI,44.0374,-84.6886
+Hartland,MI,42.6645,-83.7438
+Haslett,MI,42.747,-84.4011
+Hastings,MI,42.6459,-85.2908
+Hickory Corners,MI,42.4344,-85.3859
+Hillsdale,MI,41.9201,-84.6305
+Holt,MI,42.6406,-84.5152
+Honor,MI,44.6664,-86.0194
+Houghton,MI,47.1219,-88.569
+Howell,MI,42.6073,-83.9294
+Hudsonville,MI,42.8709,-85.865
+Ionia,MI,42.9873,-85.0711
+Ithaca,MI,43.2917,-84.6075
+Jackson,MI,42.2459,-84.4013
+Jenison,MI,42.9072,-85.792
+Jonesville,MI,41.9842,-84.6619
+Kalamazoo,MI,42.2917,-85.5872
+Kalkaska,MI,44.7342,-85.1759
+Kent City,MI,43.22,-85.7511
+Lake Leelanau,MI,44.9807,-85.7164
+Lake Odessa,MI,42.7848,-85.1383
+Lansing,MI,42.7325,-84.5555
+Lawton,MI,42.1673,-85.847
+Livonia,MI,42.3684,-83.3527
+Manchester,MI,42.1503,-84.0377
+Marcellus,MI,42.0259,-85.8156
+Marshall,MI,42.2723,-84.9633
+Mason,MI,42.5792,-84.4436
+Mattawan,MI,42.2095,-85.7845
+Middleville,MI,42.7131,-85.462
+Midland,MI,43.6156,-84.2472
+Milan,MI,42.0853,-83.6824
+Monroe,MI,41.9164,-83.3977
+Morley,MI,43.4904,-85.4455
+Muskegon,MI,43.2342,-86.2484
+Niles,MI,41.8298,-86.2542
+Novi,MI,42.4806,-83.4755
+Otsego,MI,42.4606,-85.6964
+Ottawa Lake,MI,41.7736,-83.7273
+Ovid,MI,43.0059,-84.3716
+Perry,MI,42.8264,-84.2194
+Petoskey,MI,45.3733,-84.9553
+Pinckney,MI,42.457,-83.9479
+Plymouth,MI,42.3714,-83.4702
+Portage,MI,42.2011,-85.58
+Potterville,MI,42.6292,-84.7389
+Prudenville,MI,44.2983,-84.652
+Roscommon,MI,44.4984,-84.592
+Roseville,MI,42.4973,-82.9371
+Saginaw,MI,43.4195,-83.9508
+Saint Clair,MI,42.8209,-82.486
+Saline,MI,42.1667,-83.7816
+Schoolcraft,MI,42.1142,-85.6378
+Shepherd,MI,43.5245,-84.6947
+Sherwood,MI,41.9997,-85.2394
+Southfield,MI,42.4734,-83.2219
+St. Clair Shores,MI,42.497,-82.8888
+Sterling Heights,MI,42.5803,-83.0302
+Swartz Creek,MI,42.9573,-83.8305
+Tecumseh,MI,42.0039,-83.9449
+Tekonsha,MI,42.0934,-84.9858
+Three Rivers,MI,41.9439,-85.6325
+Traverse City,MI,44.7631,-85.6206
+Union City,MI,42.0667,-85.1361
+Unionville,MI,43.6535,-83.4671
+Vicksburg,MI,42.12,-85.5328
+West Bloomfield,MI,42.5667,-83.3871
+Westland,MI,42.3242,-83.4002
+White Cloud,MI,43.5503,-85.772
+White Lake,MI,42.6544,-83.5064
+Whitehall,MI,43.41,-86.3487
+Whitmore Lake,MI,42.4397,-83.7453
+Williamston,MI,42.6889,-84.283
+Wolverine Lake,MI,42.5567,-83.4738
+Zeeland,MI,42.8125,-86.0186
+Alexandria,MN,45.8852,-95.3775
+Blaine,MN,45.1608,-93.2349
+Champlin,MN,45.1889,-93.3975
+Eagan,MN,44.8041,-93.1669
+Eden Prairie,MN,44.8547,-93.4708
+Faribault,MN,44.295,-93.2688
+Good Thunder,MN,44.0047,-94.0658
+Harmony,MN,43.5552,-92.0102
+Hopkins,MN,44.925,-93.4627
+Hutchinson,MN,44.8877,-94.3697
+Jackson,MN,43.6208,-94.9886
+Jeffers,MN,44.0559,-95.1954
+Jordan,MN,44.6669,-93.6269
+Lake Crystal,MN,44.1058,-94.2189
+Lakeville,MN,44.6497,-93.2427
+Marshall,MN,44.4469,-95.7883
+Mendota Heights,MN,44.8836,-93.1383
+Monticello,MN,45.3055,-93.7941
+North St. Paul,MN,45.0125,-92.9919
+Northfield,MN,44.4583,-93.1616
+Plymouth,MN,45.0105,-93.4555
+St. Paul,MN,44.9444,-93.0933
+Stewartville,MN,43.8555,-92.4885
+Stillwater,MN,45.0564,-92.806
+Wayzata,MN,44.9741,-93.5066
+Woodbury,MN,44.9239,-92.9594
+Tabor City,NC,34.1488,-78.8767
+Elmwood Park,NJ,40.904,-74.1185
+Piscataway,NJ,40.4993,-74.399
+Akwesasne,NY,44.9686,-74.666
+Ardsley,NY,41.0106,-73.8438
+Baldwinsville,NY,43.1587,-76.3327
+Ballston Spa,NY,43.0009,-73.849
+Bay Shore,NY,40.7251,-73.2454
+Bayport,NY,40.7384,-73.0507
+Berlin,NY,42.6602,-73.3727
+Brookhaven,NY,40.7793,-72.9154
+Buffalo,NY,42.8865,-78.8784
+Burnt Hills,NY,42.9098,-73.8951
+Campbell,NY,42.2331,-77.1975
+Canandaigua,NY,42.8742,-77.288
+Carthage,NY,43.9781,-75.6094
+Centereach,NY,40.8584,-73.0995
+Cicero,NY,43.1756,-76.1194
+Cincinnatus,NY,42.5423,-75.8958
+Clifton Park,NY,42.8656,-73.7709
+Cobleskill,NY,42.6778,-74.4854
+Deer Park,NY,40.7618,-73.3293
+Delmar,NY,42.622,-73.8326
+Derby,NY,42.6814,-78.9753
+East Aurora,NY,42.7678,-78.6134
+East Greenbush,NY,42.5909,-73.7018
+East Islip,NY,40.732,-73.1857
+East Patchogue,NY,40.767,-72.9962
+Elma,NY,42.8283,-78.6476
+Endicott,NY,42.0984,-76.0494
+Farmington,NY,42.9895,-77.3087
+Fishkill,NY,41.5356,-73.899
+Franklin Square,NY,40.7073,-73.676
+Fulton,NY,43.3229,-76.4172
+Glenville,NY,42.9292,-74.0521
+Goshen,NY,41.402,-74.3243
+Guilderland,NY,42.7067,-73.9623
+Hamburg,NY,42.7159,-78.8295
+Harpursville,NY,42.1784,-75.6246
+Honeoye Falls,NY,42.9523,-77.5903
+Islip,NY,40.7298,-73.2104
+Johnsonville,NY,42.9145,-73.5137
+Kirkwood,NY,42.0914,-75.7986
+Lancaster,NY,42.9006,-78.6703
+Lima,NY,42.9048,-77.6114
+Liverpool,NY,43.1065,-76.2177
+Livonia,NY,42.8214,-77.6686
+Lynbrook,NY,40.6548,-73.6718
+Macedon,NY,43.0692,-77.2989
+Manlius,NY,43.002,-75.9769
+Manorville,NY,40.8737,-72.8079
+Marcellus,NY,42.9828,-76.3405
+Marion,NY,43.1434,-77.1891
+Massapequa,NY,40.6807,-73.4743
+Massapequa Park,NY,40.6804,-73.4551
+Medford,NY,40.8176,-73.0001
+Medina,NY,43.2201,-78.387
+Montrose,NY,41.2523,-73.9315
+Niagara Falls,NY,43.0945,-79.0567
+North Tonawanda,NY,43.0387,-78.8642
+Oneida,NY,43.0926,-75.6513
+Oneonta,NY,42.4529,-75.0638
+Onondaga Nation,NY,42.9265,-76.1532
+Orchard Park,NY,42.7676,-78.7439
+Oswego,NY,43.4554,-76.5105
+Owego,NY,42.1034,-76.2622
+Painted Post,NY,42.162,-77.0941
+Penfield,NY,43.1515,-77.4444
+Penn Yan,NY,42.6609,-77.0539
+Pittsford,NY,43.0906,-77.515
+Plainview,NY,40.7765,-73.4673
+Port Jefferson Station,NY,40.9254,-73.0473
+Queens Village,NY,40.7268,-73.7415
+Ridge,NY,40.894,-72.8959
+Rochester,NY,43.1548,-77.6156
+Sandy Creek,NY,43.6442,-76.086
+Scotia,NY,42.8265,-73.9643
+Scottsville,NY,43.0259,-77.7453
+Selden,NY,40.8665,-73.0357
+Smithtown,NY,40.8559,-73.2007
+Syracuse,NY,43.0481,-76.1474
+Verplanck,NY,41.2529,-73.9599
+Wantagh,NY,40.6837,-73.5101
+Warwick,NY,41.2565,-74.3599
+Webster,NY,43.2123,-77.43
+West Babylon,NY,40.7182,-73.3543
+West Henrietta,NY,43.0401,-77.6617
+West Seneca,NY,42.8501,-78.7998
+Westhampton,NY,40.8245,-72.6662
+Yaphank,NY,40.8368,-72.9171
+Ada,OH,40.7695,-83.8227
+Akron,OH,41.0814,-81.519
+Alliance,OH,40.9153,-81.1059
+Amelia,OH,39.0284,-84.2177
+Amherst,OH,41.3978,-82.2224
+Anna,OH,40.3945,-84.1727
+Apple Creek,OH,40.7517,-81.8393
+Ashland,OH,40.8687,-82.3182
+Athens,OH,39.3292,-82.1013
+Attica,OH,41.0648,-82.8877
+Aurora,OH,41.3175,-81.3454
+Avon,OH,41.4517,-82.0354
+Avon Lake,OH,41.5053,-82.0282
+Baltimore,OH,39.8453,-82.6007
+Barberton,OH,41.0128,-81.6051
+Barnesville,OH,39.9881,-81.1765
+Belle Center,OH,40.5067,-83.748
+Bellevue,OH,41.2737,-82.8416
+Bellville,OH,40.6201,-82.5107
+Berea,OH,41.3662,-81.8543
+Berkey,OH,41.7084,-83.8383
+Berlin,OH,40.5612,-81.7943
+Bethesda,OH,40.0162,-81.0726
+Blacklick,OH,39.9956,-82.8113
+Boardman,OH,41.0242,-80.6629
+Bolivar,OH,40.6501,-81.4521
+Botkins,OH,40.4678,-84.1805
+Bowling Green,OH,41.3748,-83.6513
+Brecksville,OH,41.3198,-81.6268
+Broadview Heights,OH,41.3139,-81.6851
+Brookville,OH,39.8367,-84.4113
+Bucyrus,OH,40.8084,-82.9755
+Byesville,OH,39.9698,-81.5365
+Caldwell,OH,39.7478,-81.5165
+Cambridge,OH,40.0312,-81.5885
+Canal Winchester,OH,39.8428,-82.8046
+Canton,OH,40.7989,-81.3785
+Carlisle,OH,39.582,-84.3202
+Carroll,OH,39.7989,-82.701
+Castalia,OH,41.4001,-82.8085
+Cecil,OH,41.2191,-84.6016
+Celina,OH,40.5489,-84.5702
+Centerville,OH,39.6284,-84.1594
+Chagrin Falls,OH,41.4362,-81.3865
+Chardon,OH,41.6142,-81.149
+Chillicothe,OH,39.3331,-82.9824
+Cincinnati,OH,39.1271,-84.5144
+Circleville,OH,39.6006,-82.946
+Cleveland,OH,41.4995,-81.6954
+Clyde,OH,41.3042,-82.9752
+Coldwater,OH,40.4798,-84.6283
+Columbus,OH,39.9612,-82.9988
+Columbus Grove,OH,40.9195,-84.0569
+Crooksville,OH,39.769,-82.0921
+Cuyahoga Falls,OH,41.1339,-81.4846
+Cuyahoga Heights,OH,41.4353,-81.6573
+Dayton,OH,39.7589,-84.1916
+Defiance,OH,41.2845,-84.3558
+Delphos,OH,40.8434,-84.3416
+Delta,OH,41.5737,-84.0052
+Dover,OH,40.5206,-81.474
+Dresden,OH,40.1215,-82.0107
+Dublin,OH,40.0992,-83.1141
+East Sparta,OH,40.6673,-81.3548
+Eastlake,OH,41.6539,-81.4504
+Eaton,OH,39.7439,-84.6366
+Elyria,OH,41.3684,-82.1077
+Fairborn,OH,39.8209,-84.0194
+Fairview Park,OH,41.4414,-81.8643
+Findlay,OH,41.0442,-83.6499
+Fort Loramie,OH,40.3514,-84.3738
+Gahanna,OH,40.0192,-82.8793
+Galena,OH,40.2151,-82.8799
+Galloway,OH,39.9131,-83.1624
+Glenford,OH,39.8862,-82.3197
+Granville,OH,40.0681,-82.5196
+Green,OH,40.9459,-81.4832
+Grove City,OH,39.8815,-83.093
+Hartville,OH,40.9637,-81.3312
+Heath,OH,40.0228,-82.4446
+Hilliard,OH,40.0334,-83.1582
+Hinckley,OH,41.2491,-81.7379
+Holland,OH,41.6217,-83.7116
+Homeworth,OH,40.8361,-81.0651
+Howell,OH,38.4459,-82.5041
+Hudson,OH,41.2401,-81.4407
+Huntsville,OH,40.4423,-83.8045
+Huron,OH,41.395,-82.5552
+Independence,OH,41.3687,-81.6379
+Jackson,OH,39.052,-82.6365
+Jackson Center,OH,40.4395,-84.0402
+Johnstown,OH,40.1537,-82.6852
+Kimbolton,OH,40.1509,-81.5758
+Kirtland,OH,41.6289,-81.3615
+LaGrange,OH,41.2373,-82.1199
+Lancaster,OH,39.7137,-82.5993
+Lebanon,OH,39.4353,-84.203
+Lewis Center,OH,40.1984,-83.0102
+Liberty Center,OH,41.4434,-84.0088
+Lima,OH,40.7426,-84.1052
+Little Hocking,OH,39.2585,-81.703
+Lodi,OH,41.0334,-82.0121
+Lorain,OH,41.4528,-82.1824
+Lore City,OH,39.9832,-81.4601
+Louisville,OH,40.8373,-81.2596
+Loveland,OH,39.2689,-84.2638
+Madison,OH,41.7712,-81.0498
+Maineville,OH,39.3151,-84.2208
+Malvern,OH,40.6917,-81.1812
+Mansfield,OH,40.7584,-82.5155
+Maple Heights,OH,41.4153,-81.566
+Marengo,OH,40.4008,-82.811
+Maria Stein,OH,40.4003,-84.4792
+Marion,OH,40.5887,-83.1285
+Marysville,OH,40.2364,-83.3671
+Mason,OH,39.3601,-84.3099
+Massillon,OH,40.7967,-81.5215
+McComb,OH,41.1076,-83.7927
+Mechanicsburg,OH,40.072,-83.5563
+Medina,OH,41.1384,-81.8637
+Mentor,OH,41.6662,-81.3396
+Milan,OH,41.2976,-82.6055
+Milford,OH,39.1753,-84.2944
+Milford Center,OH,40.1787,-83.4355
+Millersport,OH,39.9001,-82.534
+Mineral City,OH,40.6012,-81.3612
+Mineral Ridge,OH,41.1401,-80.769
+Minster,OH,40.3931,-84.3761
+Mogadore,OH,41.0465,-81.3979
+Monroeville,OH,41.2442,-82.6963
+Mount Gilead,OH,40.5492,-82.8274
+Mt. Gilead,OH,40.5492,-82.8274
+Nashport,OH,40.0729,-82.167
+Navarre,OH,40.7245,-81.5221
+New Albany,OH,40.0812,-82.8088
+New Carlisle,OH,39.9362,-84.0255
+New Concord,OH,39.9937,-81.734
+New Knoxville,OH,40.4937,-84.3147
+New Lexington,OH,39.714,-82.2085
+New London,OH,41.0851,-82.3999
+New Philadelphia,OH,40.4898,-81.4457
+New Richmond,OH,38.9487,-84.2799
+Newark,OH,40.0581,-82.4013
+Newbury,OH,41.4548,-81.2292
+North Lima,OH,40.9474,-80.664
+North Olmsted,OH,41.4156,-81.9235
+North Ridgeville,OH,41.3895,-82.019
+North Royalton,OH,41.3137,-81.7246
+Northfield,OH,41.3451,-81.5285
+Norwalk,OH,41.2426,-82.6157
+Novelty,OH,41.4948,-81.3407
+Oakwood Village,OH,41.3673,-81.5037
+Olmsted Falls,OH,41.3751,-81.9082
+Oregonia,OH,39.4509,-84.0961
+Orrville,OH,40.8437,-81.764
+Painesville,OH,41.7245,-81.2457
+Paris,OH,40.2484,-83.3804
+Parma,OH,41.4048,-81.7229
+Paulding,OH,41.1381,-84.5805
+Pemberville,OH,41.4109,-83.461
+Peninsula,OH,41.2412,-81.5526
+Perry,OH,41.7603,-81.1409
+Perrysburg,OH,41.557,-83.6272
+Pickerington,OH,39.8842,-82.7535
+Plain City,OH,40.1076,-83.2674
+Pleasant City,OH,39.9033,-81.5438
+Port Clinton,OH,41.512,-82.9377
+Portsmouth,OH,38.7317,-82.9977
+Powell,OH,40.1578,-83.0752
+Racine,OH,38.9712,-81.9143
+Raymond,OH,40.3405,-83.4681
+Rossford,OH,41.6098,-83.5644
+Saint Henry,OH,40.4175,-84.6397
+Salem,OH,40.9009,-80.8568
+Sarahsville,OH,39.8071,-81.4695
+Sebring,OH,40.9228,-81.019
+Seven Hills,OH,41.3953,-81.6762
+Seville,OH,41.0101,-81.8624
+Shaker Heights,OH,41.4739,-81.5371
+Sherrodsville,OH,40.4945,-81.2441
+Silver Lake,OH,41.1589,-81.4543
+Smithville,OH,40.8623,-81.8618
+Somerset,OH,39.807,-82.2971
+South Vienna,OH,39.9293,-83.6139
+South Webster,OH,38.8134,-82.7268
+Springboro,OH,39.5523,-84.2333
+Springfield,OH,39.9242,-83.8088
+St. Clairsville,OH,40.0806,-80.9001
+St. Marys,OH,40.5423,-84.3894
+Stow,OH,41.1595,-81.4404
+Strongsville,OH,41.3145,-81.8357
+Sugar Grove,OH,39.6304,-82.5448
+Sullivan,OH,41.0211,-82.2147
+Sunbury,OH,40.2426,-82.8591
+Swanton,OH,41.5887,-83.8911
+Sycamore,OH,40.9498,-83.1707
+Sylvania,OH,41.7189,-83.713
+Syracuse,OH,38.9976,-81.974
+Tallmadge,OH,41.1014,-81.4418
+Thornville,OH,39.8965,-82.4202
+Tiffin,OH,41.1145,-83.178
+Toledo,OH,41.6639,-83.5552
+Troy,OH,40.0395,-84.2033
+Tuscarawas,OH,40.3948,-81.4071
+Union,OH,39.8978,-84.3063
+Uniontown,OH,40.9751,-81.4082
+University Heights,OH,41.4978,-81.5374
+Urbana,OH,40.1084,-83.7524
+Vermilion,OH,41.422,-82.3646
+Versailles,OH,40.2225,-84.4844
+Wadsworth,OH,41.0256,-81.7298
+Warren,OH,41.2376,-80.8184
+Warsaw,OH,40.3353,-82.0068
+Waterford,OH,39.5386,-81.6442
+West Jefferson,OH,39.9448,-83.2688
+West Lafayette,OH,40.2754,-81.751
+West Milton,OH,39.9626,-84.328
+West Salem,OH,40.9714,-82.1099
+Westerville,OH,40.1262,-82.9291
+Westlake,OH,41.4553,-81.9179
+Weston,OH,41.3448,-83.7972
+Wheelersburg,OH,38.7304,-82.8555
+Willard,OH,41.0531,-82.7263
+Willoughby,OH,41.6398,-81.4065
+Willowick,OH,41.6331,-81.4687
+Wintersville,OH,40.3753,-80.7037
+Woodsfield,OH,39.7626,-81.1154
+Wooster,OH,40.8052,-81.9365
+Worthington,OH,40.0931,-83.018
+Youngstown,OH,41.0998,-80.6495
+Zanesville,OH,39.9404,-82.0132
+HOMETOWN BROKEN ARROW,OK,36.0526,-95.7908
+Oklahoma City,OK,35.4676,-97.5164
+Philadelphia,PA,39.9524,-75.1636
+Beckville,TX,32.2429,-94.4555
+Corpus Christi,TX,27.8006,-97.3964
+Fredericksburg,TX,30.2752,-98.872
+Grand Prairie,TX,32.746,-96.9978
+Houston,TX,29.7633,-95.3633
+Mansfield,TX,32.5632,-97.1417
+Pearland,TX,29.5636,-95.2861
+Pflugerville,TX,30.4394,-97.62
+Rockwall,TX,32.9312,-96.4597
+San Antonio,TX,29.4241,-98.4936
+Seguin,TX,29.5688,-97.9647
+The Woodlands,TX,30.158,-95.4894
+American Fork,UT,40.3769,-111.796
+Bluffdale,UT,40.4897,-111.939
+Bountiful,UT,40.8894,-111.881
+Central,UT,37.4166,-113.624
+Heber,UT,40.5416,-111.388
+Herriman,UT,40.5141,-112.033
+Highland,UT,40.4255,-111.794
+Layton,UT,41.0602,-111.971
+Orem,UT,40.2969,-111.695
+Pleasant Grove,UT,40.3641,-111.739
+Santa Clara,UT,37.133,-113.654
+South Jordan,UT,40.5622,-111.93
+West Jordan,UT,40.6097,-111.939
+Midlothian,VA,37.506,-77.6492
+Stafford,VA,38.4221,-77.4083
+Abrams,WI,44.7796,-88.0604
+Albany,WI,42.7078,-89.4371
+Altoona,WI,44.8047,-91.4432
+Appleton,WI,44.2619,-88.4154
+Benton,WI,42.5697,-90.3807
+Berlin,WI,43.968,-88.9434
+Black Creek,WI,44.4775,-88.4507
+Brookfield,WI,43.0606,-88.1065
+Burlington,WI,42.6781,-88.2762
+Cadott,WI,44.948,-91.1507
+Cameron,WI,45.4086,-91.7441
+Cedarburg,WI,43.2967,-87.9876
+Chippewa Falls,WI,44.9369,-91.3929
+Cobb,WI,42.9667,-90.3285
+Colfax,WI,44.9975,-91.7271
+Cottage Grove,WI,43.0761,-89.1996
+De Pere,WI,44.4489,-88.0604
+Deforest,WI,43.2478,-89.3437
+East Troy,WI,42.7853,-88.4051
+Eau Claire,WI,44.8113,-91.4985
+Elm Grove,WI,43.0431,-88.079
+Fond du Lac,WI,43.775,-88.4388
+Franklin,WI,42.8886,-88.0384
+Grantsburg,WI,45.7763,-92.6827
+Green Bay,WI,44.5192,-88.0198
+Hartland,WI,43.105,-88.342
+Hillsdale,WI,45.3158,-91.8596
+Holmen,WI,43.9633,-91.2562
+Hortonville,WI,44.3347,-88.6382
+Hudson,WI,44.9747,-92.7569
+Kenosha,WI,42.5847,-87.8212
+Kimberly,WI,44.2722,-88.339
+Kronenwetter,WI,44.8222,-89.5904
+La Crosse,WI,43.8014,-91.2396
+Lake Mills,WI,43.0814,-88.9118
+Lena,WI,44.9511,-88.0468
+Little Suamico,WI,44.7106,-88.0596
+Lodi,WI,43.3139,-89.5265
+Luck,WI,45.5761,-92.4827
+Luxemburg,WI,44.5386,-87.704
+Maplewood,WI,44.7475,-87.4793
+Marathon,WI,44.9291,-89.8404
+Marshfield,WI,44.6688,-90.1718
+McFarland,WI,43.0125,-89.2898
+Menomonee Falls,WI,43.1789,-88.1173
+Middleton,WI,43.0972,-89.5043
+Milton,WI,42.7756,-88.944
+Minocqua,WI,45.8792,-89.7036
+Mosinee,WI,44.793,-89.7032
+Mount Horeb,WI,43.0086,-89.7385
+Mukwonago,WI,42.8667,-88.3334
+Muskego,WI,42.9059,-88.139
+Neenah,WI,44.1858,-88.4626
+New Berlin,WI,42.9764,-88.1084
+New Glarus,WI,42.8145,-89.6351
+New London,WI,44.3928,-88.7398
+New Richmond,WI,45.123,-92.5366
+Oak Creek,WI,42.8858,-87.8631
+Oconomowoc,WI,43.1117,-88.4993
+Oconto,WI,44.8872,-87.8645
+Oconto Falls,WI,44.8739,-88.1429
+Oneida,WI,44.4986,-88.1829
+Oshkosh,WI,44.0247,-88.5426
+Reedsville,WI,44.1536,-87.9568
+Reeseville,WI,43.305,-88.8448
+River Falls,WI,44.8614,-92.6238
+Rochester,WI,42.7414,-88.2243
+Salem,WI,42.5547,-88.1109
+Seymour,WI,44.515,-88.3304
+Sheboygan Falls,WI,43.732,-87.8221
+Sister Bay,WI,45.1872,-87.1209
+Sparta,WI,43.9441,-90.8129
+Spencer,WI,44.7577,-90.2968
+Spring Green,WI,43.1753,-90.0679
+Stevens Point,WI,44.5236,-89.5746
+Stoughton,WI,42.9169,-89.2179
+Sturgeon Bay,WI,44.8342,-87.377
+Sullivan,WI,43.0128,-88.5882
+Sussex,WI,43.1339,-88.222
+Taylor,WI,44.3218,-91.1205
+Tomahawk,WI,45.4711,-89.7299
+Verona,WI,42.9908,-89.5332
+Watertown,WI,43.1947,-88.729
+Waukesha,WI,43.0117,-88.2315
+Waunakee,WI,43.1919,-89.4557
+Waupun,WI,43.6333,-88.7296
+Wausau,WI,44.9591,-89.6301
+Wautoma,WI,44.0747,-89.2879
+Wauwatosa,WI,43.0495,-88.0076
+West Bend,WI,43.4253,-88.1834
+Weston,WI,44.8908,-89.5476
+Winneconne,WI,44.1108,-88.7126
+Wisconsin Rapids,WI,44.3836,-89.8174
+Zenda,WI,42.512,-88.4818
+Charleston,WV,38.3498,-81.6326

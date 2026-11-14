@@ -4104,24 +4104,6 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 260,Gonzaga,,Kaylie Loewen,Jr.,"Penticton, British Columbia",Penticton,,6' 1'',Middle Blocker/Outside Hitter,18,/sports/womens-volleyball/roster/kaylie-loewen/2434,2016
 260,Gonzaga,,Morgan Douglass,Sr.,"Spokane, Wash.",Mead,,5' 7'',Libero,19,/sports/womens-volleyball/roster/morgan-douglass/2390,2016
 260,Gonzaga,,Marit Thorkildsen,So.,"Lynnwood, Wash.",Washington State,,5' 7'',Libero,20,/sports/womens-volleyball/roster/marit-thorkildsen/2425,2016
-5,Akron,,Madi Baer,RS,"Stow, Ohio",Stow-Munroe Falls HS,AVC,R-So.,6' 2'',11,//gozips.com/sports/womens-volleyball/roster/madi-baer/4879,2016
-5,Akron,,Amanda Bedell,RS,"Hudson, Ohio",Hudson HS,,Sr.,6' 0'',10,//gozips.com/sports/womens-volleyball/roster/amanda-bedell/4880,2016
-5,Akron,,Patience Brown,MB,"Bloomington, Ill.",University HS,,So.,5' 9'',1,//gozips.com/sports/womens-volleyball/roster/patience-brown/4881,2016
-5,Akron,,Kayla Gwozdz,LS,"Temperance, Mich.",Bedford Senior HS,,So.,5' 10'',6,//gozips.com/sports/womens-volleyball/roster/kayla-gwozdz/5764,2016
-5,Akron,,Elya Karsner,LS,"Frankfort, Ky.",Home schooled,Lexington United,Fr.,6' 1'',4,//gozips.com/sports/womens-volleyball/roster/elya-karsner/6349,2016
-5,Akron,,Jessica Kloehn,MB,"Milwaukee, Wis.",Nicolet HS,Wisconsin Juniors,Jr.,6' 0'',15,//gozips.com/sports/womens-volleyball/roster/jessica-kloehn/5281,2016
-5,Akron,,Aubrey Kozer,DS,"Norton, Ohio",Our Lady of the Elms HS,Varisty Elite,Jr.,5' 9'',16,//gozips.com/sports/womens-volleyball/roster/aubrey-kozer/5282,2016
-5,Akron,,Karley Kusan,S,"Columbus, Ohio",Bishop Ready HS,,Sr.,5' 11'',5,//gozips.com/sports/womens-volleyball/roster/karley-kusan/4886,2016
-5,Akron,,Brenna Mack,DS,"Mound, Minn.",Mound Westonka HS,,Sr.,5' 7'',13,//gozips.com/sports/womens-volleyball/roster/brenna-mack/4887,2016
-5,Akron,,Callie Mack,DS,"Mound, Minn.",Mound Westonka HS,,Sr.,5' 7'',2,//gozips.com/sports/womens-volleyball/roster/callie-mack/4888,2016
-5,Akron,,Cara Park,S,"Millersburg, Ohio",West Holmes HS,,Fr.,5' 9'',7,//gozips.com/sports/womens-volleyball/roster/cara-park/4889,2016
-5,Akron,,Abbey Pawlak,DS,"Sylvania, Ohio",Sylvania Northview HS,Premier Volleyball,So.,5' 4'',8,//gozips.com/sports/womens-volleyball/roster/abbey-pawlak/5767,2016
-5,Akron,,Ashley Richardson,MB,"Doylestown, Ohio",Chippewa HS,NOVA,Fr.,6' 1'',9,//gozips.com/sports/womens-volleyball/roster/ashley-richardson/6353,2016
-5,Akron,,Julie Shallman,MB,"Holt, Mich.",Holt HS,Michigan Elite,R-Jr.,6' 3'',12,//gozips.com/sports/womens-volleyball/roster/julie-shallman/5287,2016
-5,Akron,,Julia Smagacz,LS,"Libertyville, Ill.",Libertyville HS,,Sr.,6' 0'',3,//gozips.com/sports/womens-volleyball/roster/julia-smagacz/4893,2016
-5,Akron,,Tom Hanna,Head Coach,,,,thanna@uakron.edu,(330) 972-7338,,//gozips.com/sports/womens-volleyball/roster/coaches/tom-hanna/780,2016
-5,Akron,,Kacie Ehinger,Assistant Coach,,,,kehinger@uakron.edu,(330) 972-7438,,//gozips.com/sports/womens-volleyball/roster/coaches/kacie-ehinger/394,2016
-5,Akron,,Jordan Armstrong,Assistant Coach,,,,jarmstrong@uakron.edu,(330) 972-7435,,//gozips.com/sports/womens-volleyball/roster/coaches/jordan-armstrong/523,2016
 100,Cal State LA,2268,Makayla Taylor,Senior,Downey,Downey HS,Cypress College,"5'9""",L,1,//www.lagoldeneagles.com/sports/womens-volleyball/roster/makayla-taylor/2268,2016
 100,Cal State LA,2269,Cynthia Giron,Sophomore,Rancho Cucamonga,Rancho Cucamonga HS,,"5'5""",L,2,//www.lagoldeneagles.com/sports/womens-volleyball/roster/cynthia-giron/2269,2016
 100,Cal State LA,2270,Alma Serna,Junior,Mission Viejo,Capistrano Valley HS,Long Beach State,"6'4""",MB,3,//www.lagoldeneagles.com/sports/womens-volleyball/roster/alma-serna/2270,2016
@@ -13648,3 +13630,18 @@ ncaa_id,team,player_id,name,year,hometown,high_school,previous_school,height,pos
 817,Youngstown St.,,Lori Vanbeek,Sr.,"Paw Paw, Ill.",Paw Paw,,6' 2'',Middle,18,/sports/womens-volleyball/roster/lori-vanbeek/4800,2016-17
 817,Youngstown St.,,Sam Brown,Jr.,"Chicago, Ill.",Nazareth Academy,,6' 1'',Outside Hitter,20,/sports/womens-volleyball/roster/sam-brown/4805,2016-17
 817,Youngstown St.,,Paige Saunders,So.,"Streetsboro, Ohio",Streetsboro,,5' 10'',Opposite,23,/sports/womens-volleyball/roster/paige-saunders/4813,2016-17
+5,Akron,,Madi Baer,R-So.,"Stow, Ohio",Stow-Munroe Falls HS,,6' 2'',RS,11,/sports/womens-volleyball/roster/madi-baer/4879,2016-17
+5,Akron,,Amanda Bedell,Sr.,"Hudson, Ohio",Hudson HS,,6' 0'',RS,10,/sports/womens-volleyball/roster/amanda-bedell/4880,2016-17
+5,Akron,,Patience Brown,So.,"Bloomington, Ill.",University HS,,5' 9'',MB,1,/sports/womens-volleyball/roster/patience-brown/4881,2016-17
+5,Akron,,Kayla Gwozdz,So.,"Temperance, Mich.",Bedford Senior HS,,5' 10'',LS,6,/sports/womens-volleyball/roster/kayla-gwozdz/5764,2016-17
+5,Akron,,Elya Karsner,Fr.,"Frankfort, Ky.",Home schooled,,6' 1'',LS,4,/sports/womens-volleyball/roster/elya-karsner/6349,2016-17
+5,Akron,,Jessica Kloehn,Jr.,"Milwaukee, Wis.",Nicolet HS,,6' 0'',MB,15,/sports/womens-volleyball/roster/jessica-kloehn/5281,2016-17
+5,Akron,,Aubrey Kozer,Jr.,"Norton, Ohio",Our Lady of the Elms HS,,5' 9'',DS,16,/sports/womens-volleyball/roster/aubrey-kozer/5282,2016-17
+5,Akron,,Karley Kusan,Sr.,"Columbus, Ohio",Bishop Ready HS,,5' 11'',S,5,/sports/womens-volleyball/roster/karley-kusan/4886,2016-17
+5,Akron,,Brenna Mack,Sr.,"Mound, Minn.",Mound Westonka HS,,5' 7'',DS,13,/sports/womens-volleyball/roster/brenna-mack/4887,2016-17
+5,Akron,,Callie Mack,Sr.,"Mound, Minn.",Mound Westonka HS,,5' 7'',DS,2,/sports/womens-volleyball/roster/callie-mack/4888,2016-17
+5,Akron,,Cara Park,Fr.,"Millersburg, Ohio",West Holmes HS,,5' 9'',S,7,/sports/womens-volleyball/roster/cara-park/4889,2016-17
+5,Akron,,Abbey Pawlak,So.,"Sylvania, Ohio",Sylvania Northview HS,,5' 4'',DS,8,/sports/womens-volleyball/roster/abbey-pawlak/5767,2016-17
+5,Akron,,Ashley Richardson,Fr.,"Doylestown, Ohio",Chippewa HS,,6' 1'',MB,9,/sports/womens-volleyball/roster/ashley-richardson/6353,2016-17
+5,Akron,,Julie Shallman,R-Jr.,"Holt, Mich.",Holt HS,,6' 3'',MB,12,/sports/womens-volleyball/roster/julie-shallman/5287,2016-17
+5,Akron,,Julia Smagacz,Sr.,"Libertyville, Ill.",Libertyville HS,,6' 0'',LS,3,/sports/womens-volleyball/roster/julia-smagacz/4893,2016-17
