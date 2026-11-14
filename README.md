@@ -153,6 +153,43 @@ A full-season run writes `data/rosters_<season>.csv` using the full academic-yea
 
 Pages fetched at a current-roster URL (e.g. bare `/roster` on JavaScript-rendered sites, which a `/roster/<season>` path 404s on) are checked for year evidence in the page title and headings. A page that positively identifies a *different* season is rejected rather than scraped under the requested season's label; pages with no year evidence are accepted. This prevents, say, a November run for `2026-27` from silently recording a site's stale `2025-26` roster as current.
 
+## The `vb` CLI
+
+`vb` wraps the scraper (modeled on the `wbb` CLI in `~/code/wbb`) and adds a game-JSON downloader:
+
+```bash
+uv sync                       # installs the `vb` entry point
+uv run vb --help              # scrape | games | list-teams
+```
+
+```bash
+# Rosters (wraps src/rosters.py; same flags and season canonicalization -
+# a year-only season is written with the full academic-year label)
+uv run vb scrape -season 2026-27
+uv run vb scrape -season 2026-27 -teams 721 5 -resume
+
+# Single-team roster by URL (plain-HTML sites only; JS sites need their
+# teams.json scraper entry and a bulk run; players print as JSON on stdout)
+uv run vb scrape -season 2026-27 -url https://belmontbruins.com/sports/womens-volleyball
+
+# Game livestats JSON (box score, players, play-by-play) into
+# ../volleyball-game-data/<ncaa_id>-<slug>/<season>/<game_id>.json,
+# the same layout wbb-game-data uses
+uv run vb games -season 2026-27
+uv run vb games -season 2026-27 --skip-existing
+uv run vb games -season 2026 -teams 14927
+
+# Game log CSVs from the archive, one file per season and division
+uv run vb logs -s 2026-27 -d I        # -> data/game-logs/vblogs27_i.csv
+uv run vb logs -s 2026-27 -d III
+```
+
+`games` discovery is Sidearm-only (wmt.games does not carry volleyball): boxscore ids come from the site's `/stats/<season>` page, then its season schedule pages; JS-rendered sites fall back to Playwright. Game JSON comes from each site's `/api/livestats?game_id=…&detail=full` endpoint. Because many volleyball sites ignore the season slug and serve the current season whatever slug is requested, every fetched JSON is date-checked (`Game.Date`) against the requested season's window (Aug 1 → Jun 30); games dated outside the season are counted "outside season" in the summary and never saved. `--data-dir` (or `$VB_GAME_DATA_DIR`) overrides the output directory; `list-teams` prints the teams table offline.
+
+**Game logs** (`logs`) build one row per team per game from the archive — the
+[NCAAWomensVolleyballData matchstats](https://github.com/dwillis/NCAAWomensVolleyballData/blob/main/data/ncaa_womens_volleyball_matchstats_2026.csv)
+schema (kills/errors/attacks/hitting pct/assists/aces/service errors/digs/solo+assist blocks/points, the opponent's block under `defensive_` prefixes, sets-won scores), plus extras: per-set scores, total blocks, opponent `ncaa_id`, attendance, location, officials, the game id and its archive URL, and a per-team game number. `hit_pct` is recomputed from `(kills − errors)/attempts`; `retatt` has no livestats counterpart and stays blank. Divisions come from `data/vb_teams.csv`. The builder scans the archive directly and applies the same date-window guard as `games`, so slug-ignoring sites' wrong-season files cannot leak into a season's log; a team's side is resolved by name (archive slug and manifest name), and an unresolved side produces a boxless row rather than a guess. Unlike the reference matchstats CSV — whose same-date defensive merge collapses to the first game of a doubleheader — each row here carries its own game's defensive block.
+
 ### Season-URL sweep and echo rejection
 
 The JS-render sweep (`_scrape_js_render`) probes every season-URL form: the
