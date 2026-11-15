@@ -402,6 +402,7 @@ class GameScraper:
             # Phase 2: Playwright discovery, sequential (one shared browser).
             if need_browser:
                 logger.info(f"discovering (browser): {len(need_browser)} teams, sequential")
+            browser_broken: Optional[str] = None
             for j, i in enumerate(need_browser, 1):
                 try:
                     refs, method = self.discover(teams[i], season)
@@ -413,6 +414,16 @@ class GameScraper:
                         discovered[i] = ([], 'playwright')
                     else:
                         outcomes[i].error = str(e).splitlines()[0] if str(e) else type(e).__name__
+                        # A launch failure (missing browser build, driver crash)
+                        # repeats for every team and its retry error masks the
+                        # cause, so log it once and skip the rest of the queue.
+                        if self._pw is not None and self._browser is None:
+                            if browser_broken is None:
+                                browser_broken = outcomes[i].error
+                                logger.error(f"browser unavailable; {len(need_browser) - j + 1} "
+                                             f"teams left undiscovered: {browser_broken}")
+                            else:
+                                outcomes[i].error = browser_broken
                 if discovered[i]:
                     pending[pool.submit(fetch_job, i)] = i
                     if pending:
