@@ -20,6 +20,7 @@ Layout is identical to wbb-game-data:
 <game_data_dir>/<slug>/<season>/<game_id>.json
 """
 
+import csv
 import json
 import logging
 import os
@@ -308,6 +309,12 @@ class GameScraper:
 
     def _fetch_one(self, team, season, game_id, out_dir) -> Tuple[str, Optional[Path]]:
         """('saved'|'skipped'|'stale'|'failed', path) for one game fetch."""
+        path = out_dir / f"{game_id}.json"
+        if self.skip_existing and path.exists():
+            # Check before the network fetch: a rerun with --skip-existing then
+            # only pays requests for games not already on disk (a failed fetch
+            # from the original run, or an id the first run never discovered).
+            return 'skipped', None
         domain = urlparse(team['url']).netloc
         try:
             game_json = fetch_game_json(domain, game_id)
@@ -321,9 +328,6 @@ class GameScraper:
             logger.debug(f"game {game_id} ({game_date_from_json(game_json)}) outside "
                          f"{season}; not saved")
             return 'stale', None
-        path = out_dir / f"{game_id}.json"
-        if self.skip_existing and path.exists():
-            return 'skipped', None
         out_dir.mkdir(parents=True, exist_ok=True)
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(game_json, f, ensure_ascii=False, indent=4)
@@ -449,3 +453,36 @@ class GameScraper:
     def scrape_team(self, team, season) -> GameOutcome:
         """Sequential single-team convenience path."""
         return self.scrape_all([team], season)[0]
+
+
+OUTCOME_FIELDS = ('season', 'ncaa_id', 'team', 'method', 'status', 'found',
+                  'saved', 'stale', 'skipped', 'failed', 'error')
+
+
+def outcome_rows(results, season: str):
+    """Per-team outcome dicts for a finished run, one row per attempted team.
+
+    The only durable record of what a run did (CLI summaries aggregate away
+    the per-team detail, and stale/failed counts are needed post-run to target
+    retries without refetching the whole season). Rows are sorted by team so
+    runs are comparable and greppable.
+    """
+    rows = []
+    for o in sorted(results, key=lambda o: (o.team.casefold(), o.team_id)):
+        rows.append({'season': season, 'ncaa_id': o.team_id, 'team': o.team,
+                     'method': o.method, 'status': o.status, 'found': o.found,
+                     'saved': o.saved, 'stale': o.stale, 'skipped': o.skipped,
+                     'failed': o.failed, 'error': o.error or ''})
+    return rows
+
+
+def write_outcome_csv(path, results, season: str):
+    """Write a finished run's per-team outcomes to CSV; returns the count."""
+    rows = outcome_rows(results, season)
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=OUTCOME_FIELDS)
+        writer.writeheader()
+        writer.writerows(rows)
+    return len(rows)

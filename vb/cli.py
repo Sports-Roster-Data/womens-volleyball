@@ -142,6 +142,16 @@ def cmd_games(args) -> int:
     teams = [t for t in teams if t.get('url')]
     if args.scraper:
         teams = [t for t in teams if t.get('scraper', 'default') == args.scraper]
+    # Sites whose livestats endpoint is gone (newer Sidearm builds) can't
+    # serve game JSON at all; every run would just redo their failures unless
+    # they're dropped here. An explicit -teams list overrides the flag.
+    n_no_livestats = 0
+    if not team_ids:
+        excluded = [t for t in teams if t.get('no_livestats')]
+        n_no_livestats = len(excluded)
+        if excluded:
+            excluded_ids = {int(t['ncaa_id']) for t in excluded}
+            teams = [t for t in teams if int(t['ncaa_id']) not in excluded_ids]
     if not teams:
         sys.stderr.write("No matching teams.\n")
         return 1
@@ -200,6 +210,19 @@ def cmd_games(args) -> int:
     errors = [o for o in results if o.error]
     if errors:
         lines.append(f"  team errors         {len(errors)}")
+    if n_no_livestats:
+        lines.append(f"  no-livestats teams  {n_no_livestats} (excluded)")
+
+    # Per-team outcomes: the durable record of what this run did, so retries
+    # and post-run diagnosis don't have to reverse-engineer the archive.
+    if args.outcomes:
+        outcome_file = Path(args.outcomes)
+    else:
+        stamp = time.strftime('%Y%m%dT%H%M%S')
+        outcome_file = (REPO_ROOT / "data" / "outcomes"
+                        / f"games_{label}_{stamp}.csv")
+    n_rows = vb_games.write_outcome_csv(outcome_file, results, label)
+    lines.append(f"  game outcomes       {_fmt_path(outcome_file)} ({n_rows} rows)")
     lines.append(f"  data dir            {_fmt_path(scraper.data_dir)}")
     _print_summary(lines[0], lines[1:], elapsed=time.monotonic() - start)
     return 0 if saved >= 1 else 1
@@ -321,6 +344,9 @@ def build_parser() -> argparse.ArgumentParser:
                          help='Parallel discovery/fetch workers (default: 6)')
     p_games.add_argument('--teams-file', default=None,
                          help='Path to teams.json (default: data/teams.json)')
+    p_games.add_argument('--outcomes', default=None, metavar='FILE',
+                         help='Per-team outcome CSV path (default: '
+                              'data/outcomes/games_<season>_<stamp>.csv)')
     p_games.set_defaults(func=cmd_games)
 
     p_logs = sub.add_parser('logs',

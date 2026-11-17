@@ -105,7 +105,8 @@
     "url": "https://miamihurricanes.com/sports/wvball/",
     "ncaa_id": 415,
     "stats_name": "Miami (FL)",
-    "scraper": "miami"
+    "scraper": "miami",
+    "no_livestats": true
   },
   {
     "team": "California Baptist",
@@ -258,7 +259,8 @@
     "url": "https://hokiesports.com/sports/volleyball",
     "ncaa_id": 742,
     "stats_name": "Virginia Tech",
-    "scraper": "js_render"
+    "scraper": "js_render",
+    "no_livestats": true
   },
   {
     "team": "Nebraska",
@@ -266,7 +268,8 @@
     "url": "https://huskers.com/sports/volleyball",
     "ncaa_id": 463,
     "stats_name": "Nebraska",
-    "scraper": "nebraska"
+    "scraper": "nebraska",
+    "no_livestats": true
   },
   {
     "team": "Illinois",
@@ -297,7 +300,8 @@
     "url": "https://hawkeyesports.com/sports/wvball",
     "ncaa_id": 312,
     "stats_name": "Iowa",
-    "scraper": "js_render"
+    "scraper": "js_render",
+    "no_livestats": true
   },
   {
     "team": "Kentucky",
@@ -376,7 +380,8 @@
     "url": "https://mutigers.com/sports/womens-volleyball",
     "ncaa_id": 434,
     "stats_name": "Missouri",
-    "scraper": "js_render"
+    "scraper": "js_render",
+    "no_livestats": true
   },
   {
     "team": "Middle Tennessee",
@@ -399,7 +404,8 @@
     "url": "https://und.com/sports/wvball",
     "ncaa_id": 513,
     "stats_name": "Notre Dame",
-    "scraper": "js_render"
+    "scraper": "js_render",
+    "no_livestats": true
   },
   {
     "team": "Nevada",
@@ -475,7 +481,8 @@
     "ncaa_id": 559,
     "stats_name": "Purdue",
     "scraper": "js_render",
-    "wait_ms": 15000
+    "wait_ms": 15000,
+    "no_livestats": true
   },
   {
     "team": "Arkansas",
@@ -565,7 +572,8 @@
     "twitter": "ucf_wbb",
     "url": "https://ucfknights.com/sports/volleyball",
     "ncaa_id": 128,
-    "stats_name": "Ucf"
+    "stats_name": "Ucf",
+    "no_livestats": true
   },
   {
     "team": "UCLA",
@@ -573,7 +581,8 @@
     "url": "https://uclabruins.com/sports/womens-volleyball",
     "ncaa_id": 110,
     "stats_name": "Ucla",
-    "scraper": "js_render"
+    "scraper": "js_render",
+    "no_livestats": true
   },
   {
     "team": "UConn",
@@ -662,7 +671,8 @@
     "twitter": "wsucougarwbb",
     "url": "https://wsucougars.com/sports/womens-volleyball",
     "ncaa_id": 754,
-    "stats_name": "Washington St."
+    "stats_name": "Washington St.",
+    "no_livestats": true
   },
   {
     "team": "Wyoming",
@@ -820,7 +830,8 @@
     "url": "https://byucougars.com/sports/womens-volleyball",
     "ncaa_id": 77,
     "stats_name": "Byu",
-    "scraper": "byu"
+    "scraper": "byu",
+    "no_livestats": true
   },
   {
     "team": "Cal Poly",
@@ -1071,7 +1082,8 @@
     "url": "https://gobearcats.com/sports/womens-volleyball",
     "ncaa_id": 140,
     "stats_name": "Cincinnati",
-    "scraper": "js_render"
+    "scraper": "js_render",
+    "no_livestats": true
   },
   {
     "team": "Campbell",
@@ -1137,7 +1149,8 @@
     "url": "https://ramblinwreck.com/sports/w-volley/",
     "ncaa_id": 255,
     "stats_name": "Georgia Tech",
-    "scraper": "js_render"
+    "scraper": "js_render",
+    "no_livestats": true
   },
   {
     "team": "Hartford",
@@ -1304,7 +1317,8 @@
     "twitter": "littlerockwbb",
     "url": "https://lrtrojans.com/sports/womens-volleyball",
     "ncaa_id": 32,
-    "stats_name": "Little Rock"
+    "stats_name": "Little Rock",
+    "no_livestats": true
   },
   {
     "team": "Long Island",
@@ -1493,7 +1507,8 @@
     "url": "https://nusports.com/sports/womens-volleyball",
     "ncaa_id": 509,
     "stats_name": "Northwestern",
-    "scraper": "js_render"
+    "scraper": "js_render",
+    "no_livestats": true
   },
   {
     "team": "Old Dominion",
@@ -1555,7 +1570,8 @@
     "url": "https://gopsusports.com/sports/womens-volleyball",
     "ncaa_id": 539,
     "stats_name": "Penn St.",
-    "scraper": "js_render"
+    "scraper": "js_render",
+    "no_livestats": true
   },
   {
     "team": "Portland",
@@ -1689,7 +1705,8 @@
     "url": "https://sjsuspartans.com/sports/womens-volleyball",
     "ncaa_id": 630,
     "stats_name": "San Jose St.",
-    "scraper": "sanjose"
+    "scraper": "sanjose",
+    "no_livestats": true
   },
   {
     "team": "Santa Clara",
@@ -1756,7 +1773,8 @@
     "url": "https://gostanford.com/sports/womens-volleyball",
     "ncaa_id": 674,
     "stats_name": "Stanford",
-    "scraper": "js_render"
+    "scraper": "js_render",
+    "no_livestats": true
   },
   {
     "team": "Stetson",
@@ -1779,7 +1797,8 @@
     "ncaa_id": 1356,
     "private": false,
     "stats_name": "Seattle U",
-    "scraper": "js_render"
+    "scraper": "js_render",
+    "no_livestats": true
   },
   {
     "team": "Texas Christian",
@@ -1973,7 +1992,8 @@
     "url": "https://golobos.com/sports/wvball/",
     "ncaa_id": 473,
     "stats_name": "New Mexico",
-    "scraper": "js_render"
+    "scraper": "js_render",
+    "no_livestats": true
   },
   {
     "team": "Southern Cal",
@@ -2018,7 +2038,8 @@
     "url": "https://goutsa.com/sports/volleyball",
     "ncaa_id": 706,
     "stats_name": "Utsa",
-    "scraper": "js_render"
+    "scraper": "js_render",
+    "no_livestats": true
   },
   {
     "team": "Utah Valley",
@@ -2049,7 +2070,8 @@
     "url": "https://vucommodores.com/sports/wvolley",
     "ncaa_id": 736,
     "stats_name": "Vanderbilt",
-    "scraper": "vandy"
+    "scraper": "vandy",
+    "no_livestats": true
   },
   {
     "team": "Weber State",
@@ -4528,7 +4550,8 @@
     "url": "https://lsusports.net/sports/vb/",
     "ncaa_id": 365,
     "stats_name": "Lsu",
-    "scraper": "js_render"
+    "scraper": "js_render",
+    "no_livestats": true
   },
   {
     "team": "Louisiana Tech",
@@ -5820,7 +5843,8 @@
     "url": "https://virginiasports.com/sports/wvball/",
     "ncaa_id": 746,
     "stats_name": "Virginia",
-    "scraper": "js_render"
+    "scraper": "js_render",
+    "no_livestats": true
   },
   {
     "team": "Bridgewater (VA)",
